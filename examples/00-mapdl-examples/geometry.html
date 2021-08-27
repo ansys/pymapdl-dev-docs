@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plotting and Mesh Access &#8212; ansys.mapdl.core 0.59.dev0 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MAPDL 3D Beam Example" href="mapdl_3d_beam.html" />
+    <link rel="prev" title="Contact Element Example" href="contact_elements.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../getting_started/index.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../user_guide/index.html">
+  User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../mapdl_commands/index.html">
+  MAPDL Commands
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../contributing.html">
+  Contributing
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/PyMAPDL" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2d_plate_with_a_hole.html">
+   MAPDL 2D Plane Stress Concentration Analysis
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="3d_notch.html">
+   3D Stress Concentration Analysis for a Notched Plate
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="3d_plate_thermal.html">
+   Basic Thermal Analysis with pyMAPDL
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="contact_elements.html">
+   Contact Element Example
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mapdl_3d_beam.html">
+   MAPDL 3D Beam Example
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mapdl_beam.html">
+   MAPDL 2D Beam Example
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="path_operations.html">
+   Path Operations within pyMAPDL and MAPDL
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="pyvista_mesh.html">
+   PyVista Mesh Integration
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="statically_indeterminate_reaction_force_analysis.html">
+   Statically Indeterminate Reaction Force Analysis
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="transient_thermal.html">
+   Example Thermal Transient Analysis
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-apdlmath-examples/basic_operations.html">
+   PyMAPDL APDLMath Basic Operations
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-apdlmath-examples/eigen_solve.html">
+   Using APDLMath to solve Eigenproblems
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-apdlmath-examples/explore_mapdl_files.html">
+   Binary MAPDL File Explorer
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-apdlmath-examples/mapdl_vs_scipy.html">
+   Compute Eigenvalues using MAPDL or SciPy
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-apdlmath-examples/scipy_sparse_matrix.html">
+   Transfer APDLMath Sparse Matrices to and from SciPy Sparse Matrices
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-apdlmath-examples/solve_dense_matrix.html">
+   Use APDLMath to Solve a Dense Matrix Linear System
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-apdlmath-examples/solve_sparse_matrix.html">
+   Use APDLMath To Perform Sparse Factorization and Solve Operations
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-apdlmath-examples/use_numpy_arrays.html">
+   Manipulate APDLMath vectors or dense matrices as NumPy Arrays
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-geometry/00-keypoints.html">
+   Keypoints
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-geometry/01-lines.html">
+   Lines
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-geometry/02-areas.html">
+   Areas
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-geometry/03-volumes.html">
+   Volumes
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-geometry/04-primitives.html">
+   Primitives
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-tips-n-tricks/00-example-template.html">
+   Adding a New Gallery Example
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-tips-n-tricks/01-smoothing-element-size-transitions.html">
+   MAPDL Element Size Transition Example
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-tips-n-tricks/03-using_inline_functions_and_Query.html">
+   Using Inline Functions (Query)
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-tips-n-tricks/04-rotational-displacement.html">
+   Generating and Extracting Rotational Displacement
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-geometry">
+   Load Geometry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting">
+   Plotting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessesing-element-and-nodes-pythonically">
+   Accessesing Element and Nodes Pythonically
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-examples-00-mapdl-examples-geometry-py"><span class="std std-ref">here</span></a>
+to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="plotting-and-mesh-access">
+<span id="ref-3d-bracket-example"></span><span id="sphx-glr-examples-00-mapdl-examples-geometry-py"></span><h1>Plotting and Mesh Access<a class="headerlink" href="#plotting-and-mesh-access" title="Permalink to this headline">¶</a></h1>
+<p>PyMAPDL can load basic IGES geometry for analysis.</p>
+<p>This example demonstrates loading basic geometry into MAPDL for
+analysis and demonstrates how to use the built-in Python specific
+plotting functionality.</p>
+<p>This example also demonstrates some of the more advanced features of
+PyMAPDL including direct mesh access through VTK.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 3</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">core</span> <span class="k">as</span> <span class="n">pymapdl</span>
+
+<span class="n">mapdl</span> <span class="o">=</span> <span class="n">pymapdl</span><span class="o">.</span><span class="n">launch_mapdl</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="load-geometry">
+<h2>Load Geometry<a class="headerlink" href="#load-geometry" title="Permalink to this headline">¶</a></h2>
+<p>Here we download a simple example bracket IGES file and load it into
+MAPDL.  Since <code class="docutils literal notranslate"><span class="pre">igesin</span></code> must be in the AUX15 process</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># note that this method just returns a file path</span>
+<span class="n">bracket_file</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bracket</span><span class="p">()</span>
+
+<span class="c1"># load the bracket and then print out the geometry</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">aux15</span><span class="p">()</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">igesin</span><span class="p">(</span><span class="n">bracket_file</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>MAPDL Selected Geometry
+Keypoints:  188
+Lines:      185
+Areas:      73
+Volumes:    1
+</pre></div>
+</div>
+</div>
+<div class="section" id="plotting">
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
+<p>PyMAPDL uses VTK and pyvista as a plotting backend to enable
+remotable (with 2021R1 and newer) interactive plotting.  The common
+plotting methods (<code class="docutils literal notranslate"><span class="pre">kplot</span></code>, <code class="docutils literal notranslate"><span class="pre">lplot</span></code>, <code class="docutils literal notranslate"><span class="pre">aplot</span></code>, <code class="docutils literal notranslate"><span class="pre">eplot</span></code>, etc.)
+all have compatible commands that use the
+<a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a> function.  You can
+configure this method with a variety of keyword arguments.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">show_line_numbering</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">background</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
+            <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span>
+            <span class="n">show_axes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">show_bounds</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xz&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="geometry" class="sphx-glr-single-img" src="../../_images/sphx_glr_geometry_001.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(-2.3621999999390297e-06, -10.642040667497753, 0.057141257263860545),
+ (-2.3621999999390297e-06, -0.11811023622050003, 0.057141257263860545),
+ (0.0, 0.0, 1.0)]
+</pre></div>
+</div>
+<p>You can also configure a theme to enable consistent plotting across
+multiple plots.  These theme parameters override any unset keyword
+arguments.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_theme</span> <span class="o">=</span> <span class="n">pymapdl</span><span class="o">.</span><span class="n">MapdlTheme</span><span class="p">()</span>
+<span class="n">my_theme</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
+<span class="n">my_theme</span><span class="o">.</span><span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span>  <span class="c1"># colormap</span>
+<span class="n">my_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">show</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">my_theme</span><span class="o">.</span><span class="n">show_scalar_bar</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="n">my_theme</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="geometry" class="sphx-glr-single-img" src="../../_images/sphx_glr_geometry_002.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(6.075874627412874, 5.957766753392409, 6.133076559944261),
+ (-2.3622000049350333e-06, -0.11811023622047002, 0.05719957033138079),
+ (0.0, 0.0, 1.0)]
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessesing-element-and-nodes-pythonically">
+<h2>Accessesing Element and Nodes Pythonically<a class="headerlink" href="#accessesing-element-and-nodes-pythonically" title="Permalink to this headline">¶</a></h2>
+<p>PyMAPDL also supports element and nodal plotting using <code class="docutils literal notranslate"><span class="pre">eplot</span></code> and
+<code class="docutils literal notranslate"><span class="pre">nplot</span></code>.  First, mesh the bracket using SOLID187 elements.  These
+are well suited to this geometry and the static structural analyses.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># set the preprocessor, element type and size, and mesh the volume</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;SOLID187&#39;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">esize</span><span class="p">(</span><span class="mf">0.075</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">vmesh</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+
+<span class="c1"># print out the mesh characteristics</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>ANSYS Mesh
+  Number of Nodes:              50686
+  Number of Elements:           32198
+  Number of Element Types:      1
+  Number of Node Components:    0
+  Number of Element Components: 0
+</pre></div>
+</div>
+<p>You can access the underlying finite element mesh as a VTK grid
+through the <code class="docutils literal notranslate"><span class="pre">mesh.grid</span></code> attribute.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">grid</span>
+<span class="n">grid</span>
+</pre></div>
+</div>
+<div class="output_subarea output_html rendered_html output_result">
+<table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+<table>
+<tr><th>UnstructuredGrid</th><th>Information</th></tr>
+<tr><td>N Cells</td><td>32198</td></tr>
+<tr><td>N Points</td><td>50686</td></tr>
+<tr><td>X Bounds</td><td>-1.181e+00, 1.181e+00</td></tr>
+<tr><td>Y Bounds</td><td>-2.362e-01, 0.000e+00</td></tr>
+<tr><td>Z Bounds</td><td>-2.394e+00, 2.509e+00</td></tr>
+<tr><td>N Arrays</td><td>10</td></tr>
+</table>
+
+</td><td>
+<table>
+<tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
+<tr><td><b>ansys_node_num</b></td><td>Points</td><td>int32</td><td>1</td><td>1.000e+00</td><td>5.069e+04</td></tr>
+<tr><td>vtkOriginalPointIds</td><td>Points</td><td>int64</td><td>1</td><td>0.000e+00</td><td>5.068e+04</td></tr>
+<tr><td>origid</td><td>Points</td><td>int64</td><td>1</td><td>0.000e+00</td><td>5.068e+04</td></tr>
+<tr><td>VTKorigID</td><td>Points</td><td>int64</td><td>1</td><td>0.000e+00</td><td>5.068e+04</td></tr>
+<tr><td>ansys_elem_num</td><td>Cells</td><td>int32</td><td>1</td><td>1.000e+00</td><td>3.220e+04</td></tr>
+<tr><td>ansys_real_constant</td><td>Cells</td><td>int32</td><td>1</td><td>1.000e+00</td><td>1.000e+00</td></tr>
+<tr><td>ansys_material_type</td><td>Cells</td><td>int32</td><td>1</td><td>1.000e+00</td><td>1.000e+00</td></tr>
+<tr><td>ansys_etype</td><td>Cells</td><td>int32</td><td>1</td><td>1.000e+00</td><td>1.000e+00</td></tr>
+<tr><td>ansys_elem_type_num</td><td>Cells</td><td>int32</td><td>1</td><td>1.870e+02</td><td>1.870e+02</td></tr>
+<tr><td>vtkOriginalCellIds</td><td>Cells</td><td>int64</td><td>1</td><td>0.000e+00</td><td>3.220e+04</td></tr>
+</table>
+
+</td></tr> </table>
+</div>
+<br />
+<br /><p>This UnstructuredGrid contains a powerful API, including the ability
+to access the nodes, elements, original node numbers, all with the
+ability to plot the mesh and add new attributes and data to the
+grid.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">.</span><span class="n">points</span>  <span class="c1"># same as mapdl.mesh.nodes</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[-2.03111884e-01, -5.87401575e-02,  4.44426114e-04],
+                 [-2.03111884e-01,  0.00000000e+00,  4.44426114e-04],
+                 [-2.03111884e-01, -2.93700787e-02,  4.44426114e-04],
+                 ...,
+                 [-3.75851169e-01, -1.85457803e-01, -2.53642976e-01],
+                 [ 4.87955026e-02, -1.81666560e-01, -4.74114746e-01],
+                 [-5.38861990e-01, -1.81771018e-01, -7.19734818e-01]])
+</pre></div>
+</div>
+<p>cell representation in VTK format</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">.</span><span class="n">cells</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([   10,  4237, 15212, ..., 35361, 36457, 35354])
+</pre></div>
+</div>
+<p>Obtain node numbers of the grid</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span><span class="p">[</span><span class="s1">&#39;ansys_node_num&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([    1,     2,     3, ..., 50684, 50685, 50686],
+                dtype=int32)
+</pre></div>
+</div>
+<p>Save arbitrary data to the grid</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># must be sized to the number of points</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span><span class="p">[</span><span class="s1">&#39;my_data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">n_points</span><span class="p">)</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista DataSetAttributes
+Association: POINT
+Contains keys:
+    ansys_node_num
+    vtkOriginalPointIds
+    origid
+    VTKorigID
+    my_data
+</pre></div>
+</div>
+<p>Plot this mesh with scalars of your choosing.  You can apply the
+same MapdlTheme when plotting as it’s compatible with the grid plotter.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># make interesting scalars</span>
+<span class="n">scalars</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>  <span class="c1"># z coordinates</span>
+
+<span class="n">sbar_kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Z Coord&#39;</span><span class="p">}</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scalars</span><span class="o">=</span><span class="n">scalars</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+          <span class="n">scalar_bar_args</span><span class="o">=</span><span class="n">sbar_kwargs</span><span class="p">,</span>
+          <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+          <span class="n">theme</span><span class="o">=</span><span class="n">my_theme</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="geometry" class="sphx-glr-single-img" src="../../_images/sphx_glr_geometry_003.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(6.075990886368283, 5.957883012347818, 6.133134913688173),
+ (-2.3622000049350333e-06, -0.11811023622047004, 0.057141665119885277),
+ (0.0, 0.0, 1.0)]
+</pre></div>
+</div>
+<p>This grid can be also saved to disk in the compact cross-platform VTK
+format and loaded again with <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> or ParaView.</p>
+<p>..code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;my_mesh.vtk&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">imported_mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_mesh.vtk&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  18.930 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-geometry-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/fdbbd4d59c8d4597316514cebc4a75d5/geometry.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">geometry.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/97d46e13eaf03b212fd03e71a01d5d21/geometry.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">geometry.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

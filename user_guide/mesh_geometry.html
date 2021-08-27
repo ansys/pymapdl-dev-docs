@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesh and Geometry &#8212; ansys.mapdl.core 0.59.dev0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Post-Processing" href="post.html" />
+    <link rel="prev" title="Interactive Plotting" href="plotting.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../getting_started/index.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../mapdl_commands/index.html">
+  MAPDL Commands
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../examples/index.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../contributing.html">
+  Contributing
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/PyMAPDL" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="launcher.html">
+   Initial Setup and Launching MAPDL Locally
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mapdl.html">
+   PyMAPDL Language and Usage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mapdl_examples.html">
+   ANSYS APDL Interactive Control Examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plotting.html">
+   Interactive Plotting
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Mesh and Geometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="post.html">
+   Post-Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="parameters.html">
+   Setting and Retrieving Parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="convert.html">
+   Translating Scripts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="math.html">
+   APDL Math Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pool.html">
+   Create a Pool of MAPDL Instances
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="xpl.html">
+   File Explorer Overview
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometry-commands">
+   Geometry Commands
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-reference">
+   API Reference
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="mesh-and-geometry">
+<h1>Mesh and Geometry<a class="headerlink" href="#mesh-and-geometry" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code> class allows you to access
+the mesh and geometry without writing to an intermediate file or
+interpreting the text output from various MAPDL commands.  For
+example, to access the nodes and elements of a model, normally one
+would list the nodes within MAPDL <code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.nlist()</span>
+<span class="pre">&lt;ansys.mapdl.core.Mapdl.nlist()</span></code>, but this generates a string and array
+access either requires cumbersome MAPDL GET commands, or requires the
+nodes be written to a archive file and then read in within other
+software.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">NLIST</span>
+
+<span class="n">LIST</span> <span class="n">ALL</span> <span class="n">SELECTED</span> <span class="n">NODES</span><span class="o">.</span>   <span class="n">DSYS</span><span class="o">=</span>      <span class="mi">0</span>
+
+   <span class="n">NODE</span>        <span class="n">X</span>             <span class="n">Y</span>             <span class="n">Z</span>           <span class="n">THXY</span>     <span class="n">THYZ</span>     <span class="n">THZX</span>
+       <span class="mi">1</span>   <span class="mf">0.0000</span>        <span class="mf">0.0000</span>        <span class="mf">0.0000</span>          <span class="mf">0.00</span>     <span class="mf">0.00</span>     <span class="mf">0.00</span>
+       <span class="mi">2</span>   <span class="mf">1.0000</span>        <span class="mf">0.0000</span>        <span class="mf">0.0000</span>          <span class="mf">0.00</span>     <span class="mf">0.00</span>     <span class="mf">0.00</span>
+       <span class="mi">3</span>   <span class="mf">0.2500</span>        <span class="mf">0.0000</span>        <span class="mf">0.0000</span>          <span class="mf">0.00</span>     <span class="mf">0.00</span>     <span class="mf">0.00</span>
+</pre></div>
+</div>
+<p>However, with <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl.mesh</span></code>
+possible to interface with a current instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code> and access the current nodes coordinates
+with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">nodes</span>
+<span class="go">[[0.   0.   0.  ]</span>
+<span class="go"> [1.   0.   0.  ]</span>
+<span class="go"> [0.25 0.   0.  ]</span>
+<span class="go"> ...,</span>
+<span class="go"> [0.75 0.5  3.5 ]</span>
+<span class="go"> [0.75 0.5  4.  ]</span>
+<span class="go"> [0.75 0.5  4.5 ]]</span>
+</pre></div>
+</div>
+<p>Both the <code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.geometry</span> <span class="pre">&lt;ansys.mapdl.core.Mapdl.geometry</span></code> and
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.mesh</span> <span class="pre">&lt;ansys.mapdl.core.Mapdl.mesh</span></code> attributes support
+additional, lower level access to MAPDL data.  Access them with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span>
+</pre></div>
+</div>
+<p>View the current mesh status with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span>
+<span class="go"> ANSYS Mesh</span>
+<span class="go">   Number of Nodes:              7217</span>
+<span class="go">   Number of Elements:           2080</span>
+<span class="go">   Number of Element Types:      2</span>
+<span class="go">   Number of Node Components:    0</span>
+<span class="go">   Number of Element Components: 0</span>
+</pre></div>
+</div>
+<div class="section" id="geometry-commands">
+<h2>Geometry Commands<a class="headerlink" href="#geometry-commands" title="Permalink to this headline">¶</a></h2>
+<p>See the <a class="reference internal" href="../mapdl_commands/index.html#ref-prep-commands"><span class="std std-ref">Preprocessing</span></a> commands for additional MAPDL
+commands for creating geometries.</p>
+</div>
+<div class="section" id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
+<p>For a full description of the <code class="docutils literal notranslate"><span class="pre">Mesh</span></code> and <code class="docutils literal notranslate"><span class="pre">Geometry</span></code> classes, please
+see <a class="reference internal" href="../api/mesh.html#ref-mesh-api"><span class="std std-ref">Mesh</span></a> and <a class="reference internal" href="../api/geometry.html#ref-geometry-api"><span class="std std-ref">Geometry</span></a>.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
