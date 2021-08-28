@@ -100,7 +100,7 @@ graph of the sparse matrix
  .. code-block:: none
 
 
-    <matplotlib.lines.Line2D object at 0x7f1e0b85ccd0>
+    <matplotlib.lines.Line2D object at 0x7efdb6c8ec50>
 
 
 
@@ -238,9 +238,9 @@ Printing the list of objects in the MAPDL space, we find:
 
       Name                   Type            Mem. (MB)       Dims            Workspace
 
-       KLGHCP                SMAT            0.011           [126:126]               1
        MY_MAT                SMAT            0.000           [126:126]               1
-       RHVNLN                SMAT            0.011           [126:126]               1
+       WKSCOD                SMAT            0.011           [126:126]               1
+       ZPFVGJ                SMAT            0.011           [126:126]               1
        MY_MAT_DATA           VEC             0.006           738             1
        MY_MAT_IND            VEC             0.001           127             1
        MY_MAT_PTR            VEC             0.003           738             1
@@ -274,9 +274,9 @@ access the id property of the Python object.
 
  .. code-block:: none
 
-    name(k)=KLGHCP
+    name(k)=WKSCOD
     name(my_mat)=my_mat
-    name(msub)=RHVNLN
+    name(msub)=ZPFVGJ
 
 
 
@@ -284,7 +284,7 @@ access the id property of the Python object.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.734 seconds)
+   **Total running time of the script:** ( 0 minutes  0.731 seconds)
 
 
 .. _sphx_glr_download_examples_01-apdlmath-examples_scipy_sparse_matrix.py:
