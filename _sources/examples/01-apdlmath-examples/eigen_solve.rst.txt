@@ -159,7 +159,7 @@ properties (e.g. scalar, storage, symmetry...)
  .. code-block:: none
 
     Calling MAPDL to solve the eigenproblem...
-    Elapsed time to solve this problem: 0.038244009017944336
+    Elapsed time to solve this problem: 0.029935836791992188
 
 
 
@@ -184,7 +184,7 @@ This is the vector of eigenfrequencies.
 
  .. code-block:: none
 
-    YDUJMY :
+    QKOATV :
      Size : 10
       3.381e+02   3.381e+02   6.266e+02   6.266e+02   9.283e+02      <       5
       9.283e+02   1.250e+03   1.250e+03   1.424e+03   1.424e+03      <       10
@@ -301,7 +301,7 @@ factor and finally compute the normalized residual value
 
  .. code-block:: none
 
-    1.9643824125640783e-11
+    2.9534569731991034e-11
 
 
 
@@ -364,16 +364,16 @@ This residual can be computed for all eigenmodes
 
  .. code-block:: none
 
-    [0] : Freq = 338.06666355063646  - Residual = 1.9643824125640783e-11
-    [1] : Freq = 338.0666635506367   - Residual = 3.823262124751944e-11
-    [2] : Freq = 626.645098092703    - Residual = 1.4837624834410274e-11
-    [3] : Freq = 626.6450980927036   - Residual = 1.6175537119529002e-11
-    [4] : Freq = 928.2598500574518   - Residual = 1.1941979136568206e-11
-    [5] : Freq = 928.2598500574526   - Residual = 1.4378934483989766e-11
-    [6] : Freq = 1249.8421074363498  - Residual = 1.9997571751488994e-11
-    [7] : Freq = 1249.842107436351   - Residual = 2.2663005079658707e-11
-    [8] : Freq = 1423.993890941668   - Residual = 9.777503231707924e-10
-    [9] : Freq = 1423.9938909416692  - Residual = 8.556802318843714e-10
+    [0] : Freq = 338.06666355063663  - Residual = 2.9534569731991034e-11
+    [1] : Freq = 338.06666355063663  - Residual = 4.564805390695102e-11
+    [2] : Freq = 626.6450980927036   - Residual = 1.90415377671148e-11
+    [3] : Freq = 626.6450980927038   - Residual = 2.852052469385008e-11
+    [4] : Freq = 928.2598500574524   - Residual = 1.0752827509626478e-11
+    [5] : Freq = 928.2598500574527   - Residual = 1.3585091202551112e-11
+    [6] : Freq = 1249.8421074363498  - Residual = 2.2431196089118635e-11
+    [7] : Freq = 1249.842107436352   - Residual = 1.705946082895602e-11
+    [8] : Freq = 1423.9938909416674  - Residual = 5.757311769795177e-10
+    [9] : Freq = 1423.9938909416683  - Residual = 1.1622574971715991e-09
 
 
 
@@ -418,7 +418,7 @@ Plot Accuracy of Eigenresults
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.278 seconds)
+   **Total running time of the script:** ( 0 minutes  1.074 seconds)
 
 
 .. _sphx_glr_download_examples_01-apdlmath-examples_eigen_solve.py:
