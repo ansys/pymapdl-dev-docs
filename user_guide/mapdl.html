@@ -319,6 +319,11 @@
      GUI Commands
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#environment-variables">
+     Environment Variables
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -987,11 +992,15 @@ supported.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">*REPEAT</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">*RETURN</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">*VWRITE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CMATRIX</span></code></p></li>
 </ul>
 <p>Note, many of these commands do not make sense in a Python context.
 For example the <code class="docutils literal notranslate"><span class="pre">*ASK</span></code> can be replaced with a Python <code class="docutils literal notranslate"><span class="pre">input</span></code>,
 <code class="docutils literal notranslate"><span class="pre">*IF</span></code> with a Python <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, and instead of <code class="docutils literal notranslate"><span class="pre">*CREATE</span></code> and
 <code class="docutils literal notranslate"><span class="pre">*USE</span></code> can simply call another Python function or module.</p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">CMATRIX</span></code> does not kill the server, however when it is
+run on interactive mode does not make any effect. This command needs to
+be run in non_interactive mode (<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a>).</p>
 </div>
 <div class="section" id="gui-commands">
 <h3>GUI Commands<a class="headerlink" href="#gui-commands" title="Permalink to this headline">¶</a></h3>
@@ -1000,6 +1009,42 @@ applicable to a “headless” interactive session.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">*DEL</span></code></p></li>
 </ul>
+</div>
+<div class="section" id="environment-variables">
+<h3>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h3>
+<p>There are several PyMAPDL specific environment variables that can be
+used to control the behavior or launching of PyMAPDL and MAPDL.  These
+include:</p>
+<table class="table">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>ANSYSLMD_LICENSE_FILE</p></td>
+<td><p>License file or IP address (e.g. 192.168.0.16).
+This is helpful for supplying licencing for
+docker.</p></td>
+</tr>
+<tr class="row-even"><td><p>PYMAPDL_MAX_MESSAGE_LENGTH</p></td>
+<td><p>Maximum gRPC message length.  If your
+connection terminates when running
+PRNSOL or NLIST, raise this.  In bytes,
+defaults to 256 MB</p></td>
+</tr>
+<tr class="row-odd"><td><p>PYMAPDL_PORT</p></td>
+<td><p>Default port to look for when connecting
+PyMAPDL.  Normally used for unit testing.</p></td>
+</tr>
+<tr class="row-even"><td><p>PYMAPDL_START_INSTANCE</p></td>
+<td><p>Override the behavior of
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.launch_mapdl()</span></code></a> to only
+attempt to connect to existing
+instances of PyMAPDL.  Generally used
+in combination with <code class="docutils literal notranslate"><span class="pre">PYMAPDL_PORT</span></code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>

@@ -134,6 +134,8 @@ configure this method with a variety of keyword arguments.  For example:
 
  .. code-block:: none
 
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      PyvistaDeprecationWarning
 
     [(-2.3621999999390297e-06, -10.642040667497753, 0.057141257263860545),
      (-2.3621999999390297e-06, -0.11811023622050003, 0.057141257263860545),
@@ -175,6 +177,10 @@ arguments.  For example:
 
  .. code-block:: none
 
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      PyvistaDeprecationWarning
 
     [(6.075874627412874, 5.957766753392409, 6.133076559944261),
      (-2.3622000049350333e-06, -0.11811023622047002, 0.05719957033138079),
@@ -244,6 +250,17 @@ through the ``mesh.grid`` attribute.
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      PyvistaDeprecationWarning
+
 
 .. raw:: html
 
@@ -262,10 +279,10 @@ through the ``mesh.grid`` attribute.
     </td><td>
     <table>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
-    <tr><td><b>ansys_node_num</b></td><td>Points</td><td>int32</td><td>1</td><td>1.000e+00</td><td>5.069e+04</td></tr>
+    <tr><td>ansys_node_num</td><td>Points</td><td>int32</td><td>1</td><td>1.000e+00</td><td>5.069e+04</td></tr>
     <tr><td>vtkOriginalPointIds</td><td>Points</td><td>int64</td><td>1</td><td>0.000e+00</td><td>5.068e+04</td></tr>
     <tr><td>origid</td><td>Points</td><td>int64</td><td>1</td><td>0.000e+00</td><td>5.068e+04</td></tr>
-    <tr><td>VTKorigID</td><td>Points</td><td>int64</td><td>1</td><td>0.000e+00</td><td>5.068e+04</td></tr>
+    <tr><td><b>VTKorigID</b></td><td>Points</td><td>int64</td><td>1</td><td>0.000e+00</td><td>5.068e+04</td></tr>
     <tr><td>ansys_elem_num</td><td>Cells</td><td>int32</td><td>1</td><td>1.000e+00</td><td>3.220e+04</td></tr>
     <tr><td>ansys_real_constant</td><td>Cells</td><td>int32</td><td>1</td><td>1.000e+00</td><td>1.000e+00</td></tr>
     <tr><td>ansys_material_type</td><td>Cells</td><td>int32</td><td>1</td><td>1.000e+00</td><td>1.000e+00</td></tr>
@@ -364,6 +381,8 @@ Obtain node numbers of the grid
 
  .. code-block:: none
 
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      PyvistaDeprecationWarning
 
     pyvista_ndarray([    1,     2,     3, ..., 50684, 50685, 50686],
                     dtype=int32)
@@ -394,15 +413,21 @@ Save arbitrary data to the grid
 
  .. code-block:: none
 
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      PyvistaDeprecationWarning
 
     pyvista DataSetAttributes
-    Association: POINT
-    Contains keys:
-    	ansys_node_num
-    	vtkOriginalPointIds
-    	origid
-    	VTKorigID
-    	my_data
+    Association     : POINT
+    Active Scalars  : my_data
+    Active Vectors  : None
+    Active Texture  : None
+    Active Normals  : None
+    Contains arrays :
+        ansys_node_num          int32    (50686,)
+        vtkOriginalPointIds     int64    (50686,)
+        origid                  int64    (50686,)
+        VTKorigID               int64    (50686,)
+        my_data                 int64    (50686,)             SCALARS
 
 
 
@@ -434,16 +459,6 @@ same MapdlTheme when plotting as it's compatible with the grid plotter.
     :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-
-    [(6.075990886368283, 5.957883012347818, 6.133134913688173),
-     (-2.3622000049350333e-06, -0.11811023622047004, 0.057141665119885277),
-     (0.0, 0.0, 1.0)]
 
 
 
@@ -461,7 +476,7 @@ format and loaded again with ``pyvista`` or ParaView.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  20.184 seconds)
+   **Total running time of the script:** ( 0 minutes  20.525 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_geometry.py:

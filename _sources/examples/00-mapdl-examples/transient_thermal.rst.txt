@@ -109,6 +109,10 @@ Create a block 5x1x1 inches in size and mesh it
 
  .. code-block:: none
 
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      PyvistaDeprecationWarning
 
     [(8.29555495773441, 6.295554957734411, 6.295554957734411),
      (2.5, 0.5, 0.5),
@@ -329,10 +333,11 @@ for more details visit <https://docs.pyvista.org/>`_.
 
  .. code-block:: none
 
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      PyvistaDeprecationWarning
 
-    [(8.187217274930124, 6.187217274930123, 6.187217274930123),
-     (2.5, 0.5, 0.5),
-     (0.0, 0.0, 1.0)]
 
 
 
@@ -374,10 +379,11 @@ This shows how you can visualize a series of slices through a dataset
 
  .. code-block:: none
 
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      PyvistaDeprecationWarning
 
-    [(8.291303324594558, 6.291303324594559, 6.291303324594559),
-     (2.5, 0.5, 0.5),
-     (0.0, 0.0, 1.0)]
 
 
 
@@ -414,7 +420,7 @@ python accessible variable, rather than storing it to a MAPDL value.
  .. code-block:: none
 
 
-    251.05408986663693
+    251.05408986663673
 
 
 
@@ -446,7 +452,7 @@ Here, we extract the temperature of the node across for each solution
  .. code-block:: none
 
 
-    [76.27707675716556, 76.81799224351983, 77.42151540097551, 79.0483883556124, 81.19108300049334, 83.56709007016171, 85.35125295387651, 86.23266429275361, 86.97754017604876, 88.3127558988445]
+    [76.27707675716555, 76.81799224351983, 77.42151540097551, 79.04838835561239, 81.19108300049322, 83.56709007016163, 85.35125295387645, 86.23266429275351, 86.97754017604868, 88.31275589884446]
 
 
 
@@ -484,7 +490,7 @@ sent back for each result.
  .. code-block:: none
 
 
-    [76.27707675716556, 76.81799224351983, 77.42151540097551, 79.0483883556124, 81.19108300049334, 83.56709007016171, 85.35125295387651, 86.23266429275361, 86.97754017604876, 88.3127558988445]
+    [76.27707675716555, 76.81799224351983, 77.42151540097551, 79.04838835561239, 81.19108300049322, 83.56709007016163, 85.35125295387645, 86.23266429275351, 86.97754017604868, 88.31275589884446]
 
 
 
@@ -517,7 +523,7 @@ Plot the temperature as a function of time
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  10.864 seconds)
+   **Total running time of the script:** ( 0 minutes  10.446 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_transient_thermal.py:

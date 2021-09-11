@@ -470,7 +470,10 @@ configure this method with a variety of keyword arguments.  For example:</p>
 </div>
 <img alt="geometry" class="sphx-glr-single-img" src="../../_images/sphx_glr_geometry_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(-2.3621999999390297e-06, -10.642040667497753, 0.057141257263860545),
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+  PyvistaDeprecationWarning
+
+[(-2.3621999999390297e-06, -10.642040667497753, 0.057141257263860545),
  (-2.3621999999390297e-06, -0.11811023622050003, 0.057141257263860545),
  (0.0, 0.0, 1.0)]
 </pre></div>
@@ -489,7 +492,12 @@ arguments.  For example:</p>
 </div>
 <img alt="geometry" class="sphx-glr-single-img" src="../../_images/sphx_glr_geometry_002.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(6.075874627412874, 5.957766753392409, 6.133076559944261),
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+  PyvistaDeprecationWarning
+/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+  PyvistaDeprecationWarning
+
+[(6.075874627412874, 5.957766753392409, 6.133076559944261),
  (-2.3622000049350333e-06, -0.11811023622047002, 0.05719957033138079),
  (0.0, 0.0, 1.0)]
 </pre></div>
@@ -525,6 +533,13 @@ through the <code class="docutils literal notranslate"><span class="pre">mesh.gr
 <span class="n">grid</span>
 </pre></div>
 </div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+  PyvistaDeprecationWarning
+/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+  PyvistaDeprecationWarning
+</pre></div>
+</div>
 <div class="output_subarea output_html rendered_html output_result">
 <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
 <table>
@@ -540,10 +555,10 @@ through the <code class="docutils literal notranslate"><span class="pre">mesh.gr
 </td><td>
 <table>
 <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
-<tr><td><b>ansys_node_num</b></td><td>Points</td><td>int32</td><td>1</td><td>1.000e+00</td><td>5.069e+04</td></tr>
+<tr><td>ansys_node_num</td><td>Points</td><td>int32</td><td>1</td><td>1.000e+00</td><td>5.069e+04</td></tr>
 <tr><td>vtkOriginalPointIds</td><td>Points</td><td>int64</td><td>1</td><td>0.000e+00</td><td>5.068e+04</td></tr>
 <tr><td>origid</td><td>Points</td><td>int64</td><td>1</td><td>0.000e+00</td><td>5.068e+04</td></tr>
-<tr><td>VTKorigID</td><td>Points</td><td>int64</td><td>1</td><td>0.000e+00</td><td>5.068e+04</td></tr>
+<tr><td><b>VTKorigID</b></td><td>Points</td><td>int64</td><td>1</td><td>0.000e+00</td><td>5.068e+04</td></tr>
 <tr><td>ansys_elem_num</td><td>Cells</td><td>int32</td><td>1</td><td>1.000e+00</td><td>3.220e+04</td></tr>
 <tr><td>ansys_real_constant</td><td>Cells</td><td>int32</td><td>1</td><td>1.000e+00</td><td>1.000e+00</td></tr>
 <tr><td>ansys_material_type</td><td>Cells</td><td>int32</td><td>1</td><td>1.000e+00</td><td>1.000e+00</td></tr>
@@ -585,7 +600,10 @@ grid.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([    1,     2,     3, ..., 50684, 50685, 50686],
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+  PyvistaDeprecationWarning
+
+pyvista_ndarray([    1,     2,     3, ..., 50684, 50685, 50686],
                 dtype=int32)
 </pre></div>
 </div>
@@ -596,14 +614,21 @@ grid.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista DataSetAttributes
-Association: POINT
-Contains keys:
-    ansys_node_num
-    vtkOriginalPointIds
-    origid
-    VTKorigID
-    my_data
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+  PyvistaDeprecationWarning
+
+pyvista DataSetAttributes
+Association     : POINT
+Active Scalars  : my_data
+Active Vectors  : None
+Active Texture  : None
+Active Normals  : None
+Contains arrays :
+    ansys_node_num          int32    (50686,)
+    vtkOriginalPointIds     int64    (50686,)
+    origid                  int64    (50686,)
+    VTKorigID               int64    (50686,)
+    my_data                 int64    (50686,)             SCALARS
 </pre></div>
 </div>
 <p>Plot this mesh with scalars of your choosing.  You can apply the
@@ -619,12 +644,6 @@ same MapdlTheme when plotting as it’s compatible with the grid plotter.</p>
 </pre></div>
 </div>
 <img alt="geometry" class="sphx-glr-single-img" src="../../_images/sphx_glr_geometry_003.png" />
-<p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(6.075990886368283, 5.957883012347818, 6.133134913688173),
- (-2.3622000049350333e-06, -0.11811023622047004, 0.057141665119885277),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
 <p>This grid can be also saved to disk in the compact cross-platform VTK
 format and loaded again with <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> or ParaView.</p>
 <p>..code:</p>
@@ -633,7 +652,7 @@ format and loaded again with <code class="docutils literal notranslate"><span cl
 <span class="gp">&gt;&gt;&gt; </span><span class="n">imported_mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_mesh.vtk&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  20.184 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  20.525 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-geometry-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/fdbbd4d59c8d4597316514cebc4a75d5/geometry.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">geometry.py</span></code></a></p>
