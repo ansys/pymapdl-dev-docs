@@ -233,6 +233,13 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="vm-003-thermally_loaded_support_structure.html">
+   Thermally Loaded Support Structure
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="../01-apdlmath-examples/basic_operations.html">
    PyMAPDL APDLMath Basic Operations
   </a>
@@ -476,12 +483,12 @@ pyMAPDL.</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =      54.945   TIME= 04:17:02
+ *** NOTE ***                            CP =      70.865   TIME= 04:17:44
  There is no title defined for this analysis.
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:17:02  SEP 14, 2021 CP=     54.946
+ 00000000  VERSION=LINUX x64     04:17:44  SEP 15, 2021 CP=     70.866
 
 
 
@@ -497,11 +504,11 @@ pyMAPDL.</p>
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =      54.947   TIME= 04:17:02
+ *** NOTE ***                            CP =      70.866   TIME= 04:17:44
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =      54.947   TIME= 04:17:02
+ *** NOTE ***                            CP =      70.866   TIME= 04:17:44
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -526,8 +533,8 @@ pyMAPDL.</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       450  SOLID90       0.033   0.000074
- Time at end of element matrix formulation CP = 54.9884605.
+        1       450  SOLID90       0.047   0.000105
+ Time at end of element matrix formulation CP = 70.9216003.
 
  SPARSE MATRIX DIRECT SOLVER.
   Number of equations =        2606,    Maximum wavefront =     72
@@ -535,7 +542,7 @@ pyMAPDL.</p>
   Memory required for in-core solution     =     4.639 MB
   Memory required for out-of-core solution =     2.499 MB
 
- *** NOTE ***                            CP =      55.072   TIME= 04:17:02
+ *** NOTE ***                            CP =      71.009   TIME= 04:17:44
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
@@ -550,12 +557,12 @@ pyMAPDL.</p>
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       450  SOLID90       0.024   0.000054
+        1       450  SOLID90       0.041   0.000090
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       450  SOLID90       0.014   0.000031
+        1       450  SOLID90       0.029   0.000065
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -604,7 +611,7 @@ result file using pyansys</p>
 [    1     2     3 ... 12715 12716 12717] [ 0.  0.  0. ... nan nan nan]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.182 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.496 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-3d-plate-thermal-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/91c538c5ed71a5605ff4467121a37338/3d_plate_thermal.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">3d_plate_thermal.py</span></code></a></p>

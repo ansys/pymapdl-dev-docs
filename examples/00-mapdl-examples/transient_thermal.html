@@ -40,7 +40,7 @@
     <script src="../../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="PyMAPDL APDLMath Basic Operations" href="../01-apdlmath-examples/basic_operations.html" />
+    <link rel="next" title="Thermally Loaded Support Structure" href="vm-003-thermally_loaded_support_structure.html" />
     <link rel="prev" title="Statically Indeterminate Reaction Force Analysis" href="statically_indeterminate_reaction_force_analysis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -228,6 +228,13 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Example Thermal Transient Analysis
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vm-003-thermally_loaded_support_structure.html">
+   Thermally Loaded Support Structure
   </a>
  </li>
 </ul>
@@ -680,7 +687,7 @@ python accessible variable, rather than storing it to a MAPDL value.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>251.05408986663673
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>251.05408986663667
 </pre></div>
 </div>
 <p>Here, we extract the temperature of the node across for each solution</p>
@@ -695,7 +702,7 @@ python accessible variable, rather than storing it to a MAPDL value.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561239, 81.19108300049325, 83.56709007016165, 85.3512529538765, 86.23266429275353, 86.97754017604865, 88.31275589884444]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561243, 81.19108300049325, 83.5670900701616, 85.35125295387645, 86.23266429275347, 86.97754017604862, 88.31275589884442]
 </pre></div>
 </div>
 <p>Alternatively, you can simply grab the data for the node from the
@@ -715,7 +722,7 @@ sent back for each result.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561239, 81.19108300049325, 83.56709007016165, 85.3512529538765, 86.23266429275353, 86.97754017604865, 88.31275589884444]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561243, 81.19108300049325, 83.5670900701616, 85.35125295387645, 86.23266429275347, 86.97754017604862, 88.31275589884442]
 </pre></div>
 </div>
 <p>Plot the temperature as a function of time</p>
@@ -729,7 +736,7 @@ sent back for each result.</p>
 </pre></div>
 </div>
 <img alt="transient thermal" class="sphx-glr-single-img" src="../../_images/sphx_glr_transient_thermal_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.455 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.876 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-transient-thermal-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/7ca8535b20d8877db405e6e19e52b510/transient_thermal.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">transient_thermal.py</span></code></a></p>
