@@ -28,11 +28,11 @@ on the ``mapdl.inline_functions.Query`` object. In this example we set
 up a simple simulation and use ``Query`` to demonstrate some of its
 functionality.
 
-First, create an instance of
+First, get an instance of
 :class:`ansys.mapdl.core.inline_functions.Query` below, using the
-``mapdl`` instance as a required argument.
+``mapdl`` property ``queries``.
 
-.. GENERATED FROM PYTHON SOURCE LINES 16-27
+.. GENERATED FROM PYTHON SOURCE LINES 17-28
 
 .. code-block:: default
 
@@ -45,7 +45,7 @@ First, create an instance of
     # clear at the start and enter the preprocessing routine
     mapdl.clear()
     mapdl.prep7()
-    q = Query(mapdl)
+    q = mapdl.queries
 
 
 
@@ -54,7 +54,7 @@ First, create an instance of
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-35
+.. GENERATED FROM PYTHON SOURCE LINES 29-36
 
 Setup Mesh
 ~~~~~~~~~~
@@ -64,7 +64,7 @@ Setup Mesh
 - Mesh the block
 - Plot the elements created
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-42
+.. GENERATED FROM PYTHON SOURCE LINES 36-43
 
 .. code-block:: default
 
@@ -100,7 +100,7 @@ Setup Mesh
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-52
+.. GENERATED FROM PYTHON SOURCE LINES 44-53
 
 Setup Boundary Conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -112,7 +112,7 @@ Setup Boundary Conditions
 - Apply a x-direction force of 10000 to all of these
 - Finish preprocessing
 
-.. GENERATED FROM PYTHON SOURCE LINES 52-63
+.. GENERATED FROM PYTHON SOURCE LINES 53-64
 
 .. code-block:: default
 
@@ -142,7 +142,7 @@ Setup Boundary Conditions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 64-71
+.. GENERATED FROM PYTHON SOURCE LINES 65-72
 
 Setup Boundary Conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -152,7 +152,7 @@ Setup Boundary Conditions
 - Solve the model
 - Finish solution
 
-.. GENERATED FROM PYTHON SOURCE LINES 71-78
+.. GENERATED FROM PYTHON SOURCE LINES 72-79
 
 .. code-block:: default
 
@@ -178,7 +178,7 @@ Setup Boundary Conditions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 79-85
+.. GENERATED FROM PYTHON SOURCE LINES 80-86
 
 Post-Processing
 ~~~~~~~~~~~~~~~
@@ -187,7 +187,7 @@ Post-Processing
   - Show the edges so that we can see the element boundaries
   - Use the "plasma" colormap because it is perceptually uniform
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-92
+.. GENERATED FROM PYTHON SOURCE LINES 86-93
 
 .. code-block:: default
 
@@ -220,7 +220,7 @@ Post-Processing
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 93-98
+.. GENERATED FROM PYTHON SOURCE LINES 94-99
 
 Using ``Query``
 ~~~~~~~~~~~~~~~
@@ -228,7 +228,7 @@ Using ``Query``
 - Use the ``Query`` instance to examine the x, y, and z displacement.
 - Print the results in a formatted string.
 
-.. GENERATED FROM PYTHON SOURCE LINES 98-118
+.. GENERATED FROM PYTHON SOURCE LINES 99-119
 
 .. code-block:: default
 
@@ -276,7 +276,7 @@ Using ``Query``
         Displacement at Node 49:
         ************************
         X | 1.761241768e-05
-        Y | 1.226449834e-19
+        Y | 1.241041042e-19
         Z | 8.070989839e-07
     
     
@@ -287,7 +287,7 @@ Using ``Query``
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.721 seconds)
+   **Total running time of the script:** ( 0 minutes  1.617 seconds)
 
 
 .. _sphx_glr_download_examples_03-tips-n-tricks_03-using_inline_functions_and_Query.py:

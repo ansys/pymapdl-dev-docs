@@ -41,8 +41,8 @@
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="PyMAPDL APDLMath Basic Operations" href="../01-apdlmath-examples/basic_operations.html" />
-    <link rel="prev" title="Example Thermal Transient Analysis" href="transient_thermal.html" />
+    <link rel="next" title="Deflection of a Hinged Support" href="vm-004-deflection_of_a_hinged_support.html" />
+    <link rel="prev" title="Statically Indeterminate Reaction Force Analysis" href="vm-001-statically_indeterminate_reaction_force_analysis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -220,15 +220,15 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="statically_indeterminate_reaction_force_analysis.html">
-   Statically Indeterminate Reaction Force Analysis
+  <a class="reference internal" href="transient_thermal.html">
+   Example Thermal Transient Analysis
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="transient_thermal.html">
-   Example Thermal Transient Analysis
+  <a class="reference internal" href="vm-001-statically_indeterminate_reaction_force_analysis.html">
+   Statically Indeterminate Reaction Force Analysis
   </a>
  </li>
 </ul>
@@ -236,6 +236,20 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Thermally Loaded Support Structure
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vm-004-deflection_of_a_hinged_support.html">
+   Deflection of a Hinged Support
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vm-005-laterally_loaded_tapered_support_structure.html">
+   Statically Indeterminate Reaction Force Analysis
   </a>
  </li>
 </ul>
@@ -621,13 +635,13 @@ between the first 2 that is parallel to them.</p>
 <div class="section" id="post-processing">
 <h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Get a query instance</p></li>
+<li><p>Access the queries functions</p></li>
 <li><p>Find a steel node and a copper node</p></li>
 <li><p>Then use these to get the steel and copper elements</p></li>
 <li><p>Finally we extract the stress experienced by each element</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
-<span class="n">q</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">query</span><span class="p">()</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">queries</span>
 <span class="n">steel_n</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">copper_n</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">steel_e</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">enearn</span><span class="p">(</span><span class="n">steel_n</span><span class="p">)</span>
@@ -674,7 +688,7 @@ expected stresses of 19695 and 10152 respectively.</p>
 ----------------------------------------------------------------
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.008 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.920 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-vm-003-thermally-loaded-support-structure-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/45500f6612ef63213bae9c64a9b84812/vm-003-thermally_loaded_support_structure.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-003-thermally_loaded_support_structure.py</span></code></a></p>

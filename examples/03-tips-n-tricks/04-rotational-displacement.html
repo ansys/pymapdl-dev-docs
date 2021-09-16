@@ -219,13 +219,6 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/statically_indeterminate_reaction_force_analysis.html">
-   Statically Indeterminate Reaction Force Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/transient_thermal.html">
    Example Thermal Transient Analysis
   </a>
@@ -233,8 +226,29 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/vm-001-statically_indeterminate_reaction_force_analysis.html">
+   Statically Indeterminate Reaction Force Analysis
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/vm-003-thermally_loaded_support_structure.html">
    Thermally Loaded Support Structure
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/vm-004-deflection_of_a_hinged_support.html">
+   Deflection of a Hinged Support
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/vm-005-laterally_loaded_tapered_support_structure.html">
+   Statically Indeterminate Reaction Force Analysis
   </a>
  </li>
 </ul>
@@ -533,12 +547,13 @@ freedom. Following this we:</p>
 <div class="section" id="extracting-rotational-displacements">
 <h2>Extracting Rotational Displacements<a class="headerlink" href="#extracting-rotational-displacements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Create a <a class="reference internal" href="../../api/inline.html#ansys.mapdl.core.inline_functions.Query" title="ansys.mapdl.core.inline_functions.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.mapdl.core.inline_functions.Query</span></code></a> instance</p></li>
+<li><p>Get a <a class="reference internal" href="../../api/inline.html#ansys.mapdl.core.inline_functions.Query" title="ansys.mapdl.core.inline_functions.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.mapdl.core.inline_functions.Query</span></code></a> instance from the
+<code class="docutils literal notranslate"><span class="pre">queries</span></code> property</p></li>
 <li><p>Locate the nodes at the four corners of the square</p></li>
 <li><p>Extract all 3 rotational displacement components for each one</p></li>
 <li><p>Print them all</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">Query</span><span class="p">(</span><span class="n">mapdl</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">queries</span>
 
 <span class="n">node1</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">node2</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -585,7 +600,7 @@ C |   -0.000996,   0.155360,   0.000000
 D |    0.000996,   0.155360,   0.000000
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.085 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.067 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-03-tips-n-tricks-04-rotational-displacement-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/6445cff5c2820a6bd062989184006d79/04-rotational-displacement.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">04-rotational-displacement.py</span></code></a></p>

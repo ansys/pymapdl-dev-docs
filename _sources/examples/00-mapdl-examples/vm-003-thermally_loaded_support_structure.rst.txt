@@ -295,7 +295,7 @@ Solve
 
 Post-processing
 ~~~~~~~~~~~~~~~
-- Get a query instance
+- Access the queries functions
 - Find a steel node and a copper node
 - Then use these to get the steel and copper elements
 - Finally we extract the stress experienced by each element
@@ -306,7 +306,7 @@ Post-processing
 
 
     mapdl.post1()
-    q = mapdl.query()
+    q = mapdl.queries
     steel_n = q.node(0, 0, 0)
     copper_n = q.node(10, 0, 0)
     steel_e = q.enearn(steel_n)
@@ -382,7 +382,7 @@ expected stresses of 19695 and 10152 respectively.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.008 seconds)
+   **Total running time of the script:** ( 0 minutes  0.920 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_vm-003-thermally_loaded_support_structure.py:

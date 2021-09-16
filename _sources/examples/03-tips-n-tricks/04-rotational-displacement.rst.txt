@@ -198,21 +198,22 @@ Plotting Stresses
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-91
+.. GENERATED FROM PYTHON SOURCE LINES 85-92
 
 Extracting Rotational Displacements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Create a :class:`ansys.mapdl.core.inline_functions.Query` instance
+- Get a :class:`ansys.mapdl.core.inline_functions.Query` instance from the
+  ``queries`` property
 - Locate the nodes at the four corners of the square
 - Extract all 3 rotational displacement components for each one
 - Print them all
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-121
+.. GENERATED FROM PYTHON SOURCE LINES 92-122
 
 .. code-block:: default
 
 
-    q = Query(mapdl)
+    q = mapdl.queries
 
     node1 = q.node(0, 0, 0)
     node2 = q.node(0, 1, 0)
@@ -274,7 +275,7 @@ Extracting Rotational Displacements
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.085 seconds)
+   **Total running time of the script:** ( 0 minutes  1.067 seconds)
 
 
 .. _sphx_glr_download_examples_03-tips-n-tricks_04-rotational-displacement.py:
