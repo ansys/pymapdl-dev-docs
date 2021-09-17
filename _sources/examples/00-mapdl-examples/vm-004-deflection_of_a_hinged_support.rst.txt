@@ -196,9 +196,9 @@ along the equal sides, forming a hinge.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
     [(155.88457268119893, -45.0, 626.8851170964283),
@@ -292,7 +292,7 @@ data.
         cmap='magma',
         line_width=5,
         cpos='xy',
-        scalar_bar_args={'title':'Displacement', 'vertical': False},
+        scalar_bar_args={'title': 'Displacement', 'vertical': False},
     )
 
 
@@ -309,9 +309,9 @@ data.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
     [(155.88457268119893, -45.0, 626.8851170964283),
@@ -426,7 +426,7 @@ stress experienced by node 2 to the known quantities 10000 psi and
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.965 seconds)
+   **Total running time of the script:** ( 0 minutes  0.817 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_vm-004-deflection_of_a_hinged_support.py:

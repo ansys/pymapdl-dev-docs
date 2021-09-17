@@ -157,7 +157,7 @@ approximate this.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
 
@@ -210,9 +210,9 @@ Line numbers can be identified through inspection using ``lplot``
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
 
@@ -297,7 +297,7 @@ Solve the static analysis
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =       2.132   TIME= 04:16:55
+     *** NOTE ***                            CP =       1.845   TIME= 04:16:01
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -310,7 +310,7 @@ Solve the static analysis
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:16:55  SEP 16, 2021 CP=      2.138
+     00000000  VERSION=LINUX x64     04:16:01  SEP 17, 2021 CP=      1.851
 
                                                                                
 
@@ -326,11 +326,11 @@ Solve the static analysis
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =       2.150   TIME= 04:16:55
+     *** NOTE ***                            CP =       1.853   TIME= 04:16:01
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =       2.152   TIME= 04:16:55
+     *** NOTE ***                            CP =       1.854   TIME= 04:16:01
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -379,8 +379,8 @@ Solve the static analysis
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.138   0.000141
-     Time at end of element matrix formulation CP = 2.28659415.              
+            1       977  PLANE183      0.097   0.000099
+     Time at end of element matrix formulation CP = 1.93725502.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =        6124,    Maximum wavefront =     48
@@ -388,7 +388,7 @@ Solve the static analysis
       Memory required for in-core solution     =     8.134 MB
       Memory required for out-of-core solution =     4.318 MB
 
-     *** NOTE ***                            CP =       2.451   TIME= 04:16:55
+     *** NOTE ***                            CP =       2.125   TIME= 04:16:01
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -403,12 +403,12 @@ Solve the static analysis
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.056   0.000058
+            1       977  PLANE183      0.094   0.000096
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.017   0.000017
+            1       977  PLANE183      0.042   0.000043
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -461,11 +461,11 @@ result reader.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
 
 
@@ -561,7 +561,7 @@ The above script can be placed within a function to compute the
 stress concentration for a variety of hole diameters.  For each
 batch, MAPDL is reset and the geometry is generated from scratch.
 
-.. GENERATED FROM PYTHON SOURCE LINES 218-331
+.. GENERATED FROM PYTHON SOURCE LINES 218-330
 
 .. code-block:: default
 
@@ -656,7 +656,6 @@ batch, MAPDL is reset and the geometry is generated from scratch.
         mapdl.antype('STATIC')
         mapdl.solve()
 
-
         # Post-Processing
         # ~~~~~~~~~~~~~~~
         # grab the stress from the result
@@ -685,11 +684,11 @@ batch, MAPDL is reset and the geometry is generated from scratch.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 332-333
+.. GENERATED FROM PYTHON SOURCE LINES 331-332
 
 Run the batch and record the stress concentration
 
-.. GENERATED FROM PYTHON SOURCE LINES 333-342
+.. GENERATED FROM PYTHON SOURCE LINES 332-341
 
 .. code-block:: default
 
@@ -713,9 +712,9 @@ Run the batch and record the stress concentration
  .. code-block:: none
 
         Ratio  : Stress Concentration (K_t)
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
         0.0100 :     2.9660
         0.0450 :     2.8619
@@ -736,7 +735,7 @@ Run the batch and record the stress concentration
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 343-362
+.. GENERATED FROM PYTHON SOURCE LINES 342-361
 
 Analytical Comparison
 ~~~~~~~~~~~~~~~~~~~~~
@@ -758,7 +757,7 @@ result for this geometry remarkably well using PLANE183 elements.
 The fit to the results may vary depending on the ratio between the
 height and width of the plate.
 
-.. GENERATED FROM PYTHON SOURCE LINES 362-372
+.. GENERATED FROM PYTHON SOURCE LINES 361-371
 
 .. code-block:: default
 
@@ -786,7 +785,7 @@ height and width of the plate.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  54.561 seconds)
+   **Total running time of the script:** ( 0 minutes  46.502 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_2d_plate_with_a_hole.py:

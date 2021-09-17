@@ -90,9 +90,9 @@ Create a simple triangle in the XY plane using three keypoints.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
     [(0.5, 0.5, 2.7320508075688776),
@@ -139,9 +139,9 @@ Create an area from four lines.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
     [(0.5, 0.5, 2.7320508075688776),
@@ -186,9 +186,9 @@ Drag a circle between two keypoints to create an area
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
     [(2.431851652578137, 2.431851652578137, 2.431851652578137),
@@ -229,9 +229,9 @@ Subtract a ``0.5 x 0.5`` rectangle from a ``1 x 1`` rectangle.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
     [(0.5, 0.5, 2.7320508075688776),
@@ -298,12 +298,12 @@ individual meshes.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
-    [UnstructuredGrid (0x7ff5e6b518a0)
+    [UnstructuredGrid (0x7f735f5c6590)
       N Cells:	12
       N Points:	24
       X Bounds:	0.000e+00, 1.000e+00
@@ -341,9 +341,9 @@ Merged Area Geometry
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
 
@@ -549,13 +549,13 @@ camera direction from the following:
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
-    [(12.029289924521212, 13.199616057285546, 7.523764948901213),
-     (4.50552497562, 5.675851108384334, 0.0),
+    [(10.146809172070032, 12.25502745500679, 7.064026626281749),
+     (3.082782545788278, 5.191000828725041, 0.0),
      (0.0, 0.0, 1.0)]
 
 
@@ -563,7 +563,7 @@ camera direction from the following:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.206 seconds)
+   **Total running time of the script:** ( 0 minutes  2.681 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_02-areas.py:

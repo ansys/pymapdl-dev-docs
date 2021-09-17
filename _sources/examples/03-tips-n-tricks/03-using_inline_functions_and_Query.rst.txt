@@ -89,9 +89,9 @@ Setup Mesh
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
     [(46.73276542716538, 51.73276542716538, 56.73276542716538),
@@ -212,9 +212,9 @@ Post-Processing
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
 
@@ -228,7 +228,7 @@ Using ``Query``
 - Use the ``Query`` instance to examine the x, y, and z displacement.
 - Print the results in a formatted string.
 
-.. GENERATED FROM PYTHON SOURCE LINES 99-119
+.. GENERATED FROM PYTHON SOURCE LINES 99-118
 
 .. code-block:: default
 
@@ -255,7 +255,6 @@ Using ``Query``
 
 
 
-
 .. rst-class:: sphx-glr-script-out
 
  Out:
@@ -276,7 +275,7 @@ Using ``Query``
         Displacement at Node 49:
         ************************
         X | 1.761241768e-05
-        Y | 1.241041042e-19
+        Y | 1.210906573e-19
         Z | 8.070989839e-07
     
     
@@ -287,7 +286,7 @@ Using ``Query``
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.617 seconds)
+   **Total running time of the script:** ( 0 minutes  1.383 seconds)
 
 
 .. _sphx_glr_download_examples_03-tips-n-tricks_03-using_inline_functions_and_Query.py:
