@@ -154,6 +154,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="2d_plate_with_a_hole.html">
@@ -372,6 +373,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
             </div>
@@ -454,11 +456,11 @@ PyMAPDL including direct mesh access through VTK.</p>
 <p>Here we download a simple example bracket IGES file and load it into
 MAPDL.  Since <code class="docutils literal notranslate"><span class="pre">igesin</span></code> must be in the AUX15 process</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># note that this method just returns a file path</span>
-<span class="n">bracket_file</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bracket</span><span class="p">()</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">bracket_file</span></a> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bracket</span><span class="p">()</span>
 
 <span class="c1"># load the bracket and then print out the geometry</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">aux15</span><span class="p">()</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">igesin</span><span class="p">(</span><span class="n">bracket_file</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">igesin</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">bracket_file</span></a><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -479,14 +481,16 @@ plotting methods (<code class="docutils literal notranslate"><span class="pre">k
 all have compatible commands that use the
 <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a> function.  You can
 configure this method with a variety of keyword arguments.  For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">show_line_numbering</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-            <span class="n">background</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
-            <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-            <span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span>
-            <span class="n">show_axes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-            <span class="n">show_bounds</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-            <span class="n">title</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
-            <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xz&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span>
+    <span class="n">show_line_numbering</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">background</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span>
+    <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span>
+    <span class="n">show_axes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">show_bounds</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xz&quot;</span><span class="p">,</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <img alt="geometry" class="sphx-glr-single-img" src="../../_images/sphx_glr_geometry_001.png" />
@@ -502,11 +506,11 @@ configure this method with a variety of keyword arguments.  For example:</p>
 <p>You can also configure a theme to enable consistent plotting across
 multiple plots.  These theme parameters override any unset keyword
 arguments.  For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_theme</span> <span class="o">=</span> <span class="n">pymapdl</span><span class="o">.</span><span class="n">MapdlTheme</span><span class="p">()</span>
-<span class="n">my_theme</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
-<span class="n">my_theme</span><span class="o">.</span><span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span>  <span class="c1"># colormap</span>
-<span class="n">my_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">show</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">my_theme</span><span class="o">.</span><span class="n">show_scalar_bar</span> <span class="o">=</span> <span class="kc">False</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_theme</span> <span class="o">=</span> <a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.themes.DefaultTheme.html#pyvista.themes.DefaultTheme" title="pyvista.themes.DefaultTheme" class="sphx-glr-backref-module-pyvista-themes sphx-glr-backref-type-py-class"><span class="n">pymapdl</span><span class="o">.</span><span class="n">MapdlTheme</span></a><span class="p">()</span>
+<a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.themes.DefaultTheme.background.html#pyvista.themes.DefaultTheme.background" title="pyvista.themes.DefaultTheme.background" class="sphx-glr-backref-module-pyvista-themes sphx-glr-backref-type-py-property"><span class="n">my_theme</span><span class="o">.</span><span class="n">background</span></a> <span class="o">=</span> <span class="s2">&quot;white&quot;</span>
+<a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.themes.DefaultTheme.cmap.html#pyvista.themes.DefaultTheme.cmap" title="pyvista.themes.DefaultTheme.cmap" class="sphx-glr-backref-module-pyvista-themes sphx-glr-backref-type-py-property"><span class="n">my_theme</span><span class="o">.</span><span class="n">cmap</span></a> <span class="o">=</span> <span class="s2">&quot;jet&quot;</span>  <span class="c1"># colormap</span>
+<a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.themes.DefaultTheme.axes.html#pyvista.themes.DefaultTheme.axes" title="pyvista.themes.DefaultTheme.axes" class="sphx-glr-backref-module-pyvista-themes sphx-glr-backref-type-py-property"><span class="n">my_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">show</span></a> <span class="o">=</span> <span class="kc">False</span>
+<a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.themes.DefaultTheme.show_scalar_bar.html#pyvista.themes.DefaultTheme.show_scalar_bar" title="pyvista.themes.DefaultTheme.show_scalar_bar" class="sphx-glr-backref-module-pyvista-themes sphx-glr-backref-type-py-property"><span class="n">my_theme</span><span class="o">.</span><span class="n">show_scalar_bar</span></a> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="n">my_theme</span><span class="p">)</span>
 </pre></div>
@@ -531,9 +535,9 @@ arguments.  For example:</p>
 are well suited to this geometry and the static structural analyses.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># set the preprocessor, element type and size, and mesh the volume</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;SOLID187&#39;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;SOLID187&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">esize</span><span class="p">(</span><span class="mf">0.075</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">vmesh</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">vmesh</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
 
 <span class="c1"># print out the mesh characteristics</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="p">)</span>
@@ -550,8 +554,8 @@ are well suited to this geometry and the static structural analyses.</p>
 </div>
 <p>You can access the underlying finite element mesh as a VTK grid
 through the <code class="docutils literal notranslate"><span class="pre">mesh.grid</span></code> attribute.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">grid</span>
-<span class="n">grid</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grid</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grid</span></a>
+<a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grid</span></a>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -595,7 +599,7 @@ through the <code class="docutils literal notranslate"><span class="pre">mesh.gr
 to access the nodes, elements, original node numbers, all with the
 ability to plot the mesh and add new attributes and data to the
 grid.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">.</span><span class="n">points</span>  <span class="c1"># same as mapdl.mesh.nodes</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.points.html#pyvista.UnstructuredGrid.points" title="pyvista.UnstructuredGrid.points" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-property"><span class="n">grid</span><span class="o">.</span><span class="n">points</span></a>  <span class="c1"># same as mapdl.mesh.nodes</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -609,7 +613,7 @@ grid.</p>
 </pre></div>
 </div>
 <p>cell representation in VTK format</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">.</span><span class="n">cells</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.cells.html#pyvista.UnstructuredGrid.cells" title="pyvista.UnstructuredGrid.cells" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-property"><span class="n">grid</span><span class="o">.</span><span class="n">cells</span></a>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -617,7 +621,7 @@ grid.</p>
 </pre></div>
 </div>
 <p>Obtain node numbers of the grid</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span><span class="p">[</span><span class="s1">&#39;ansys_node_num&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.point_arrays.html#pyvista.UnstructuredGrid.point_arrays" title="pyvista.UnstructuredGrid.point_arrays" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-property"><span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span></a><span class="p">[</span><span class="s2">&quot;ansys_node_num&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -630,8 +634,8 @@ pyvista_ndarray([    1,     2,     3, ..., 50684, 50685, 50686],
 </div>
 <p>Save arbitrary data to the grid</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># must be sized to the number of points</span>
-<span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span><span class="p">[</span><span class="s1">&#39;my_data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">n_points</span><span class="p">)</span>
-<span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span>
+<a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.point_arrays.html#pyvista.UnstructuredGrid.point_arrays" title="pyvista.UnstructuredGrid.point_arrays" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-property"><span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span></a><span class="p">[</span><span class="s2">&quot;my_data&quot;</span><span class="p">]</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.n_points.html#pyvista.UnstructuredGrid.n_points" title="pyvista.UnstructuredGrid.n_points" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-property"><span class="n">grid</span><span class="o">.</span><span class="n">n_points</span></a><span class="p">)</span>
+<a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.point_arrays.html#pyvista.UnstructuredGrid.point_arrays" title="pyvista.UnstructuredGrid.point_arrays" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-property"><span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span></a>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -655,25 +659,28 @@ Contains arrays :
 <p>Plot this mesh with scalars of your choosing.  You can apply the
 same MapdlTheme when plotting as it’s compatible with the grid plotter.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># make interesting scalars</span>
-<span class="n">scalars</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>  <span class="c1"># z coordinates</span>
+<span class="n">scalars</span> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.points.html#pyvista.UnstructuredGrid.points" title="pyvista.UnstructuredGrid.points" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-property"><span class="n">grid</span><span class="o">.</span><span class="n">points</span></a><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>  <span class="c1"># z coordinates</span>
 
-<span class="n">sbar_kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Z Coord&#39;</span><span class="p">}</span>
-<span class="n">grid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scalars</span><span class="o">=</span><span class="n">scalars</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-          <span class="n">scalar_bar_args</span><span class="o">=</span><span class="n">sbar_kwargs</span><span class="p">,</span>
-          <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-          <span class="n">theme</span><span class="o">=</span><span class="n">my_theme</span><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sbar_kwargs</span></a> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Z Coord&quot;</span><span class="p">}</span>
+<a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.plot.html#pyvista.UnstructuredGrid.plot" title="pyvista.UnstructuredGrid.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">grid</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span>
+    <span class="n">scalars</span><span class="o">=</span><span class="n">scalars</span><span class="p">,</span>
+    <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">scalar_bar_args</span><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sbar_kwargs</span></a><span class="p">,</span>
+    <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">theme</span><span class="o">=</span><span class="n">my_theme</span><span class="p">,</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <img alt="geometry" class="sphx-glr-single-img" src="../../_images/sphx_glr_geometry_003.png" />
 <p>This grid can be also saved to disk in the compact cross-platform VTK
 format and loaded again with <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> or ParaView.</p>
 <p>..code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;my_mesh.vtk&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grid</span></a><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;my_mesh.vtk&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">imported_mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_mesh.vtk&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  15.654 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  15.861 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-geometry-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/fdbbd4d59c8d4597316514cebc4a75d5/geometry.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">geometry.py</span></code></a></p>

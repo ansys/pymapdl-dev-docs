@@ -144,9 +144,9 @@ and generate contact elements.
 .. code-block:: default
 
 
-    mapdl.nsel('s', 'loc', 'z', 0.5, 0.50001)
-    mapdl.esln('s')
-    output = mapdl.gcgen('NEW', splitkey='SPLIT', selopt='SELECT')
+    mapdl.nsel("s", "loc", "z", 0.5, 0.50001)
+    mapdl.esln("s")
+    output = mapdl.gcgen("NEW", splitkey="SPLIT", selopt="SELECT")
     print(output)
 
 
@@ -184,8 +184,8 @@ contact pairs overlap.
 .. code-block:: default
 
 
-    mapdl.esel('S', 'SEC', vmin=5, vmax=6)
-    mapdl.eplot(style='wireframe', line_width=3)
+    mapdl.esel("S", "SEC", vmin=5, vmax=6)
+    mapdl.eplot(style="wireframe", line_width=3)
 
 
 
@@ -214,7 +214,7 @@ contact pairs overlap.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.598 seconds)
+   **Total running time of the script:** ( 0 minutes  1.602 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_contact_elements.py:

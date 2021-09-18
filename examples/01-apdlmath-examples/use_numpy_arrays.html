@@ -154,6 +154,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/2d_plate_with_a_hole.html">
@@ -372,6 +373,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
             </div>
@@ -457,7 +459,7 @@ Python via numpy arrays.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>XQQHJA :
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>ZAPLWD :
  Size : 10
   1.000e+00   1.000e+00   1.000e+00   1.000e+00   1.000e+00      &lt;       5
   1.000e+00   1.000e+00   1.000e+00   1.000e+00   1.000e+00      &lt;       10
@@ -466,8 +468,8 @@ Python via numpy arrays.</p>
 <p>Then create an numpy array from this APDLMath vector.</p>
 <p>Note that these are two separate objects: memory is
 duplicated. Modifying one object does not modify its clone.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span> <span class="o">=</span> <span class="n">apdl_vec</span><span class="o">.</span><span class="n">asarray</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pv</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pv</span></a> <span class="o">=</span> <span class="n">apdl_vec</span><span class="o">.</span><span class="n">asarray</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pv</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -476,8 +478,8 @@ duplicated. Modifying one object does not modify its clone.</p>
 </div>
 <p>You can then manipulate this numpy array with all existing numpy
 features</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span> <span class="o">=</span> <span class="p">(</span><span class="n">pv</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pv</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pv</span></a> <span class="o">=</span> <span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pv</span></a> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pv</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -487,7 +489,7 @@ features</p>
 <p>Alternatively, the APDLMath object can be operated on directly with
 numpy with the numpy methods.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">apdl_vec</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">apdl_vec</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.linalg.norm.html#numpy.linalg.norm" title="numpy.linalg.norm" class="sphx-glr-backref-module-numpy-linalg sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span></a><span class="p">(</span><span class="n">apdl_vec</span><span class="p">))</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -498,7 +500,7 @@ numpy with the numpy methods.</p>
 <p>Note that some methods have APDL correlaries, and these methods are
 more efficient if performed within MAPDL.</p>
 <p>For example, the norm method can be performed within MAPDL</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">apdl_vec</span><span class="o">.</span><span class="n">norm</span><span class="p">(),</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">apdl_vec</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">apdl_vec</span><span class="o">.</span><span class="n">norm</span><span class="p">(),</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.linalg.norm.html#numpy.linalg.norm" title="numpy.linalg.norm" class="sphx-glr-backref-module-numpy-linalg sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span></a><span class="p">(</span><span class="n">apdl_vec</span><span class="p">))</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -510,7 +512,7 @@ more efficient if performed within MAPDL.</p>
 <h2>Copy a NumPy Array to an APDLMath vector<a class="headerlink" href="#copy-a-numpy-array-to-an-apdlmath-vector" title="Permalink to this headline">¶</a></h2>
 <p>You can push back any numpy vector or 2D array to MAPDL.  This
 creates a new APDLMath, which in this case is named <code class="docutils literal notranslate"><span class="pre">'NewVec'</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mm</span><span class="o">.</span><span class="n">set_vec</span><span class="p">(</span><span class="n">pv</span><span class="p">,</span> <span class="s1">&#39;NewVec&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mm</span><span class="o">.</span><span class="n">set_vec</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pv</span></a><span class="p">,</span> <span class="s2">&quot;NewVec&quot;</span><span class="p">)</span>
 
 <span class="c1"># verify this vector exists</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mm</span><span class="p">)</span>
@@ -522,11 +524,11 @@ creates a new APDLMath, which in this case is named <code class="docutils litera
   Name                   Type            Mem. (MB)       Dims            Workspace
 
    NEWVEC                VEC             0.000           10              1
-   XQQHJA                VEC             0.000           10              1
+   ZAPLWD                VEC             0.000           10              1
 </pre></div>
 </div>
 <p>Create a Python handle to this vector by specifying its name</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v2</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">vec</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;NewVec&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v2</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">vec</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;NewVec&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -544,15 +546,15 @@ creates a new APDLMath, which in this case is named <code class="docutils litera
 <p>Allow allocate an APDLMath Dense Matrix and convert it to a numpy
 array</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apdl_mat</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">np_arr</span> <span class="o">=</span> <span class="n">apdl_mat</span><span class="o">.</span><span class="n">asarray</span><span class="p">()</span>
+<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np_arr</span></a> <span class="o">=</span> <span class="n">apdl_mat</span><span class="o">.</span><span class="n">asarray</span><span class="p">()</span>
 
-<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">apdl_mat</span><span class="p">,</span> <span class="n">np_arr</span><span class="p">)</span>
+<span class="k">assert</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.allclose.html#numpy.allclose" title="numpy.allclose" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">allclose</span></a><span class="p">(</span><span class="n">apdl_mat</span><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np_arr</span></a><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">apdl_mat</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np_arr</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np_arr</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>FSOHEA:
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>QSHWEB:
  [1,1]: 4.170e-01 [1,2]: 9.326e-01 [1,3]: 3.023e-01
  [2,1]: 9.972e-01 [2,2]: 1.144e-04 [2,3]: 9.990e-01
  [3,1]: 7.203e-01 [3,2]: 1.281e-01 [3,3]: 1.468e-01
@@ -562,27 +564,27 @@ array</p>
 </pre></div>
 </div>
 <p>You can load numpy array to APDL with the matrix method</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np_rand</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">ans_mat</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np_rand</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np_rand</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span></a><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">ans_mat</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np_rand</span></a><span class="p">)</span>
 
 <span class="c1"># print the autogenerated name of the this matrix</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ans_mat</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ans_mat</span><span class="o">.</span><span class="n">id</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>TMUTVN
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>HRPQUK
 </pre></div>
 </div>
 <p>Load this matrix from APDL and verify it is identical</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">from_ans</span> <span class="o">=</span> <span class="n">ans_mat</span><span class="o">.</span><span class="n">asarray</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">from_ans</span><span class="p">,</span> <span class="n">np_rand</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">from_ans</span></a> <span class="o">=</span> <span class="n">ans_mat</span><span class="o">.</span><span class="n">asarray</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.allclose.html#numpy.allclose" title="numpy.allclose" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">allclose</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">from_ans</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np_rand</span></a><span class="p">))</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.166 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.168 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-apdlmath-examples-use-numpy-arrays-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/6d1f6f9f0c59543b1a9a7d1f68adad86/use_numpy_arrays.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">use_numpy_arrays.py</span></code></a></p>

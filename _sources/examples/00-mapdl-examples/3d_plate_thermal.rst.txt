@@ -29,7 +29,7 @@ pyMAPDL.
 
 First, start MAPDL as a service and disable all but error messages.
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-19
+.. GENERATED FROM PYTHON SOURCE LINES 13-20
 
 .. code-block:: default
 
@@ -37,6 +37,7 @@ First, start MAPDL as a service and disable all but error messages.
     # sphinx_gallery_thumbnail_number = 2
 
     from ansys.mapdl.core import launch_mapdl
+
     mapdl = launch_mapdl()
 
 
@@ -46,18 +47,18 @@ First, start MAPDL as a service and disable all but error messages.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 20-23
+.. GENERATED FROM PYTHON SOURCE LINES 21-24
 
 Geometry and Material Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Create a simple beam, specify the material properties, and mesh it.
 
-.. GENERATED FROM PYTHON SOURCE LINES 23-31
+.. GENERATED FROM PYTHON SOURCE LINES 24-32
 
 .. code-block:: default
 
     mapdl.prep7()
-    mapdl.mp('kxx', 1, 45)
+    mapdl.mp("kxx", 1, 45)
     mapdl.et(1, 90)
     mapdl.block(-0.3, 0.3, -0.46, 1.34, -0.2, -0.2 + 0.02)
     mapdl.vsweep(1)
@@ -89,22 +90,22 @@ Create a simple beam, specify the material properties, and mesh it.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-35
+.. GENERATED FROM PYTHON SOURCE LINES 33-36
 
 Boundary Conditions
 ~~~~~~~~~~~~~~~~~~~
 Set the thermal boundary conditions
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-44
+.. GENERATED FROM PYTHON SOURCE LINES 36-45
 
 .. code-block:: default
 
-    mapdl.asel('S', vmin=3)
+    mapdl.asel("S", vmin=3)
     mapdl.nsla()
-    mapdl.d('all', 'temp', 5)
-    mapdl.asel('S', vmin=4)
+    mapdl.d("all", "temp", 5)
+    mapdl.asel("S", vmin=4)
     mapdl.nsla()
-    mapdl.d('all', 'temp', 100)
+    mapdl.d("all", "temp", 100)
     out = mapdl.allsel()
 
 
@@ -115,18 +116,18 @@ Set the thermal boundary conditions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-48
+.. GENERATED FROM PYTHON SOURCE LINES 46-49
 
 Solve
 ~~~~~
 Solve the thermal static analysis and print the results
 
-.. GENERATED FROM PYTHON SOURCE LINES 48-54
+.. GENERATED FROM PYTHON SOURCE LINES 49-55
 
 .. code-block:: default
 
     mapdl.vsweep(1)
-    mapdl.run('/SOLU')
+    mapdl.run("/SOLU")
     print(mapdl.solve())
     out = mapdl.finish()
 
@@ -143,12 +144,12 @@ Solve the thermal static analysis and print the results
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =      54.230   TIME= 04:16:56
+     *** NOTE ***                            CP =      53.737   TIME= 04:16:57
      There is no title defined for this analysis.                            
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:16:56  SEP 17, 2021 CP=     54.232
+     00000000  VERSION=LINUX x64     04:16:57  SEP 18, 2021 CP=     53.740
 
                                                                                
 
@@ -164,11 +165,11 @@ Solve the thermal static analysis and print the results
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =      54.233   TIME= 04:16:56
+     *** NOTE ***                            CP =      53.740   TIME= 04:16:57
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =      54.233   TIME= 04:16:56
+     *** NOTE ***                            CP =      53.740   TIME= 04:16:57
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -193,8 +194,8 @@ Solve the thermal static analysis and print the results
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       450  SOLID90       0.033   0.000073
-     Time at end of element matrix formulation CP = 54.2761269.              
+            1       450  SOLID90       0.032   0.000071
+     Time at end of element matrix formulation CP = 53.7829857.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =        2606,    Maximum wavefront =     72
@@ -202,7 +203,7 @@ Solve the thermal static analysis and print the results
       Memory required for in-core solution     =     4.639 MB
       Memory required for out-of-core solution =     2.499 MB
 
-     *** NOTE ***                            CP =      54.356   TIME= 04:16:56
+     *** NOTE ***                            CP =      53.858   TIME= 04:16:57
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -222,7 +223,7 @@ Solve the thermal static analysis and print the results
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       450  SOLID90       0.014   0.000031
+            1       450  SOLID90       0.013   0.000030
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -235,14 +236,14 @@ Solve the thermal static analysis and print the results
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 55-59
+.. GENERATED FROM PYTHON SOURCE LINES 56-60
 
 Post-Processing using MAPDL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 View the thermal solution of the beam by getting the results
 directly through MAPDL.
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-64
+.. GENERATED FROM PYTHON SOURCE LINES 60-65
 
 .. code-block:: default
 
@@ -276,12 +277,12 @@ directly through MAPDL.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-67
+.. GENERATED FROM PYTHON SOURCE LINES 66-68
 
 Alternatively you could also use the result object that reads in the
 result file using pyansys
 
-.. GENERATED FROM PYTHON SOURCE LINES 67-72
+.. GENERATED FROM PYTHON SOURCE LINES 68-73
 
 .. code-block:: default
 
@@ -312,7 +313,7 @@ result file using pyansys
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.159 seconds)
+   **Total running time of the script:** ( 0 minutes  1.167 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_3d_plate_thermal.py:

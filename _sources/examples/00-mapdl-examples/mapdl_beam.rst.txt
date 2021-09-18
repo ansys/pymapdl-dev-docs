@@ -29,11 +29,12 @@ This is an example from FINITE ELEMENT ANALYSIS USING ANSYS 11.0
 
 Launch MAPDL with interactive plotting
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-16
+.. GENERATED FROM PYTHON SOURCE LINES 13-17
 
 .. code-block:: default
 
     from ansys.mapdl.core import launch_mapdl
+
     mapdl = launch_mapdl()
 
 
@@ -43,26 +44,26 @@ Launch MAPDL with interactive plotting
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-18
+.. GENERATED FROM PYTHON SOURCE LINES 18-19
 
 Define an I-beam
 
-.. GENERATED FROM PYTHON SOURCE LINES 18-32
+.. GENERATED FROM PYTHON SOURCE LINES 19-33
 
 .. code-block:: default
 
     mapdl.prep7()
-    mapdl.et(1, 'BEAM188')
+    mapdl.et(1, "BEAM188")
     mapdl.keyopt(1, 4, 1)  # transverse shear stress output
 
-    #material properties
-    mapdl.mp('EX', 1, 2E7)  # N/cm2
-    mapdl.mp('PRXY', 1, 0.27)  #  Poisson's ratio
+    # material properties
+    mapdl.mp("EX", 1, 2e7)  # N/cm2
+    mapdl.mp("PRXY", 1, 0.27)  #  Poisson's ratio
 
     # beam properties in centimeters
     sec_num = 1
-    mapdl.sectype(sec_num, 'BEAM', 'I', 'ISection', 3)
-    mapdl.secoffset('CENT')
+    mapdl.sectype(sec_num, "BEAM", "I", "ISection", 3)
+    mapdl.secoffset("CENT")
     beam_info = mapdl.secdata(15, 15, 29, 2, 2, 1)  # dimensions are in centimeters
 
 
@@ -72,11 +73,11 @@ Define an I-beam
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-34
+.. GENERATED FROM PYTHON SOURCE LINES 34-35
 
 Create nodes within MAPDL
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-49
+.. GENERATED FROM PYTHON SOURCE LINES 35-50
 
 .. code-block:: default
 
@@ -93,7 +94,7 @@ Create nodes within MAPDL
     print(mapdl.mesh.nnum)
 
     # plot the nodes using VTK
-    mapdl.nplot(vtk=True, nnum=True, cpos='xy', show_bounds=True, point_size=10)
+    mapdl.nplot(vtk=True, nnum=True, cpos="xy", show_bounds=True, point_size=10)
 
 
 
@@ -140,13 +141,13 @@ Create nodes within MAPDL
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 50-53
+.. GENERATED FROM PYTHON SOURCE LINES 51-54
 
 create elements between the nodes
 we can just manually create elements since we know that the elements
 are sequential
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-59
+.. GENERATED FROM PYTHON SOURCE LINES 54-60
 
 .. code-block:: default
 
@@ -170,7 +171,7 @@ are sequential
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:17:20  SEP 17, 2021 CP=     71.863
+     00000000  VERSION=LINUX x64     04:17:21  SEP 18, 2021 CP=     70.984
 
                                                                                
 
@@ -207,13 +208,13 @@ are sequential
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 60-63
+.. GENERATED FROM PYTHON SOURCE LINES 61-64
 
 Access them as a list of arrays
 See the documentation on ``mapdl.mesh.elem`` for interperting the
 individual elements
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-66
+.. GENERATED FROM PYTHON SOURCE LINES 64-67
 
 .. code-block:: default
 
@@ -256,25 +257,25 @@ individual elements
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 67-68
+.. GENERATED FROM PYTHON SOURCE LINES 68-69
 
 Define the boundary conditions
 
-.. GENERATED FROM PYTHON SOURCE LINES 68-81
+.. GENERATED FROM PYTHON SOURCE LINES 69-82
 
 .. code-block:: default
 
 
     # Allow movement only in the X and Z direction
-    for const in ['UX', 'UY', 'ROTX', 'ROTZ']:
-        mapdl.d('all', const)
+    for const in ["UX", "UY", "ROTX", "ROTZ"]:
+        mapdl.d("all", const)
 
     # constrain just nodes 1 and 23 in the Z direction
-    mapdl.d(1, 'UZ')
-    mapdl.d(23, 'UZ')
+    mapdl.d(1, "UZ")
+    mapdl.d(23, "UZ")
 
     # apply a -Z force at node 12
-    mapdl.f(12, 'FZ', -22840)
+    mapdl.f(12, "FZ", -22840)
 
 
 
@@ -292,16 +293,16 @@ Define the boundary conditions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 82-83
+.. GENERATED FROM PYTHON SOURCE LINES 83-84
 
 run the static analysis
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-86
+.. GENERATED FROM PYTHON SOURCE LINES 84-87
 
 .. code-block:: default
 
-    mapdl.run('/solu')
-    mapdl.antype('static')
+    mapdl.run("/solu")
+    mapdl.antype("static")
     print(mapdl.solve())
 
 
@@ -315,7 +316,7 @@ run the static analysis
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =      71.868   TIME= 04:17:20
+     *** NOTE ***                            CP =      70.990   TIME= 04:17:21
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -330,7 +331,7 @@ run the static analysis
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:17:20  SEP 17, 2021 CP=     71.869
+     00000000  VERSION=LINUX x64     04:17:21  SEP 18, 2021 CP=     70.990
 
                                                                                
 
@@ -346,11 +347,11 @@ run the static analysis
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =      71.869   TIME= 04:17:20
+     *** NOTE ***                            CP =      70.991   TIME= 04:17:21
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =      71.869   TIME= 04:17:20
+     *** NOTE ***                            CP =      70.991   TIME= 04:17:21
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -367,7 +368,7 @@ run the static analysis
 
      SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr                                                                                                                                                                                                                                                           
 
-     *** NOTE ***                            CP =      71.874   TIME= 04:17:20
+     *** NOTE ***                            CP =      70.996   TIME= 04:17:21
      Predictor is ON by default for structural elements with rotational      
      degrees of freedom.  Use the PRED,OFF command to turn the predictor     
      OFF if it adversely affects the convergence.                            
@@ -380,8 +381,8 @@ run the static analysis
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        22  BEAM188       0.009   0.000388
-     Time at end of element matrix formulation CP = 71.8797455.              
+            1        22  BEAM188       0.008   0.000384
+     Time at end of element matrix formulation CP = 71.000946.               
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =          44,    Maximum wavefront =     12
@@ -389,14 +390,14 @@ run the static analysis
       Memory required for in-core solution     =     0.062 MB
       Memory required for out-of-core solution =     0.062 MB
 
-     *** NOTE ***                            CP =      71.884   TIME= 04:17:20
+     *** NOTE ***                            CP =      71.004   TIME= 04:17:21
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
      results in the fastest solution time.  This mode is recommended if      
      enough physical memory is present to accommodate all of the solver      
      data.                                                                   
-     Sparse solver maximum pivot= 5.009534302E+10 at node 16 ROTY.           
+     Sparse solver maximum pivot= 5.009534302E+10 at node 8 ROTY.            
      Sparse solver minimum pivot= 2691965.06 at node 12 UZ.                  
      Sparse solver minimum pivot in absolute value= 2691965.06 at node 12    
      UZ.                                                                     
@@ -404,12 +405,12 @@ run the static analysis
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        22  BEAM188       0.028   0.001277
+            1        22  BEAM188       0.027   0.001221
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        22  BEAM188       0.001   0.000049
+            1        22  BEAM188       0.001   0.000045
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -425,7 +426,7 @@ run the static analysis
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.509 seconds)
+   **Total running time of the script:** ( 0 minutes  0.514 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_mapdl_beam.py:

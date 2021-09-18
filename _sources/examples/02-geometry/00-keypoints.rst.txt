@@ -71,7 +71,7 @@ value is an empty string to allow MAPDL to pick the keypoint number.
 
 .. code-block:: default
 
-    k0 = mapdl.k('', 0, 0, 0)
+    k0 = mapdl.k("", 0, 0, 0)
     print(k0)
 
 
@@ -162,7 +162,7 @@ Note that we first clear mapdl before generating this geometry
     k0 = mapdl.k("", 0, 1, 0)
     k1 = mapdl.k("", 1, 0, 0)
     k2 = mapdl.k("", 0, -1, 0)
-    k3 = mapdl.kcenter('KP', k0, k1, k2)
+    k3 = mapdl.kcenter("KP", k0, k1, k2)
     print([k0, k1, k2, k3])
 
 
@@ -283,15 +283,16 @@ useful for selecting keypoints in a pythonic manner.
 
 This example generates a series of random keypoints and selects them
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-104
+.. GENERATED FROM PYTHON SOURCE LINES 94-105
 
 .. code-block:: default
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
     # create 20 random keypoints
     for _ in range(20):
-        mapdl.k('', *np.random.random(3))
+        mapdl.k("", *np.random.random(3))
 
     # Print the keypoint numbers
     print(mapdl.geometry.knum)
@@ -312,15 +313,15 @@ This example generates a series of random keypoints and selects them
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 105-106
+.. GENERATED FROM PYTHON SOURCE LINES 106-107
 
 Select every other keypoint with the old style command.
 
-.. GENERATED FROM PYTHON SOURCE LINES 106-110
+.. GENERATED FROM PYTHON SOURCE LINES 107-111
 
 .. code-block:: default
 
-    mapdl.ksel('S', 'KP', '', 1, 20, 2)
+    mapdl.ksel("S", "KP", "", 1, 20, 2)
     print(mapdl.geometry.knum)
 
 
@@ -339,14 +340,14 @@ Select every other keypoint with the old style command.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 111-115
+.. GENERATED FROM PYTHON SOURCE LINES 112-116
 
 Select every other keypoint with the new style command.
 
 Note that the item IDs are 1 based in MAPDL, while Python ranges are
 0 based.
 
-.. GENERATED FROM PYTHON SOURCE LINES 115-119
+.. GENERATED FROM PYTHON SOURCE LINES 116-120
 
 .. code-block:: default
 
@@ -369,7 +370,7 @@ Note that the item IDs are 1 based in MAPDL, while Python ranges are
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 120-127
+.. GENERATED FROM PYTHON SOURCE LINES 121-128
 
 Select keypoints from a list
 
@@ -379,7 +380,7 @@ areas.
 
 Note that you could use a numpy array here as well.
 
-.. GENERATED FROM PYTHON SOURCE LINES 127-131
+.. GENERATED FROM PYTHON SOURCE LINES 128-132
 
 .. code-block:: default
 
@@ -402,7 +403,7 @@ Note that you could use a numpy array here as well.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 132-138
+.. GENERATED FROM PYTHON SOURCE LINES 133-139
 
 APDL Command: KPLOT
 ~~~~~~~~~~~~~~~~~~~
@@ -411,14 +412,13 @@ Plot the keypoints while displaying the keypoint numbers
 There are a variety of plotting options available for all the common
 plotting methods.
 
-.. GENERATED FROM PYTHON SOURCE LINES 138-142
+.. GENERATED FROM PYTHON SOURCE LINES 139-142
 
 .. code-block:: default
 
-    mapdl.kplot(show_keypoint_numbering=True,
-                background='black',
-                show_bounds=True,
-                font_size=26)
+    mapdl.kplot(
+        show_keypoint_numbering=True, background="black", show_bounds=True, font_size=26
+    )
 
 
 
@@ -434,8 +434,8 @@ plotting methods.
  .. code-block:: none
 
 
-    [(1.8651227020969856, 2.0271852080853856, 1.9751497601256356),
-     (0.3809773279036, 0.543039833892, 0.49100438593225),
+    [(1.7657265909698545, 1.5304853356268544, 1.8327376663763546),
+     (0.59210777593, 0.35686652058699997, 0.6591188513365001),
      (0.0, 0.0, 1.0)]
 
 
@@ -443,7 +443,7 @@ plotting methods.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.594 seconds)
+   **Total running time of the script:** ( 0 minutes  0.620 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_00-keypoints.py:

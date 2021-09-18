@@ -155,6 +155,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="2d_plate_with_a_hole.html">
@@ -373,6 +374,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
             </div>
@@ -543,11 +545,11 @@ ratio is set to 0.0 to agree with beam theory.</p></li>
 <p>Set up the material using PLANE182 with a thickness of 2 (using real
 constants), and create a material with a Young’s modulus of 30e6,
 and a poisson’s ratio of 0.0 to agree with beam theory.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s1">&#39;STATIC&#39;</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;PLANE182&#39;</span><span class="p">,</span> <span class="n">kop1</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">kop3</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s2">&quot;STATIC&quot;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;PLANE182&quot;</span><span class="p">,</span> <span class="n">kop1</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">kop3</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">r</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s1">&#39;EX&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">30e6</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s1">&#39;NUXY&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;EX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">30e6</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;NUXY&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -567,7 +569,7 @@ problem setup.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">fill</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">e</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">egen</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="vm 005 laterally loaded tapered support structure" class="sphx-glr-single-img" src="../../_images/sphx_glr_vm-005-laterally_loaded_tapered_support_structure_001.png" />
@@ -588,10 +590,10 @@ problem setup.</p>
 <p>Fix the nodes at the larger end (the “wall” end) and apply a vertical force
 to the whole structure.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># constrain nodes at fixed end</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;LOC&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s1">&#39;ALL&#39;</span><span class="p">,</span> <span class="s1">&#39;ALL&#39;</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s1">&#39;ALL&#39;</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;FY&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">4000</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;LOC&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;FY&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">4000</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -603,7 +605,7 @@ to the whole structure.</p>
 <div class="section" id="solve">
 <h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">¶</a></h2>
 <p>Enter solution mode and solve the system.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;/SOLU&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 </pre></div>
@@ -621,14 +623,14 @@ We’ve gathered the code into a function because we’ll have use for it later.
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fetch_mid_and_end_stress</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
     <span class="n">q</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">queries</span>
     <span class="n">m</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
-    <span class="n">end</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mf">75.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)</span>
-    <span class="n">fixed_end_stress</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s1">&#39;NODE&#39;</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span>
-    <span class="n">mid</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mf">50.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)</span>
-    <span class="n">mid_stress</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s1">&#39;NODE&#39;</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;EQV&#39;</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mf">75.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">fixed_end_stress</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">)</span>
+    <span class="n">mid</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mf">50.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">mid_stress</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;EQV&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fixed_end_stress</span><span class="p">,</span> <span class="n">mid_stress</span>
 
 
-<span class="n">fixed_end_stress_182</span><span class="p">,</span> <span class="n">mid_stress_182</span> <span class="o">=</span> <span class="n">fetch_mid_and_end_stress</span><span class="p">(</span><span class="n">mapdl</span><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fixed_end_stress_182</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mid_stress_182</span></a> <span class="o">=</span> <span class="n">fetch_mid_and_end_stress</span><span class="p">(</span><span class="n">mapdl</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -638,13 +640,15 @@ We’ve gathered the code into a function because we’ll have use for it later.
 <code class="docutils literal notranslate"><span class="pre">displacement_factor</span></code> of 26 to scale up the deformation to a visible
 amount.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">result</span>
-<span class="n">result</span><span class="o">.</span><span class="n">plot_principal_nodal_stress</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>
-                                   <span class="s1">&#39;SEQV&#39;</span><span class="p">,</span>
-                                   <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                                   <span class="n">show_displacement</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                                   <span class="n">displacement_factor</span><span class="o">=</span><span class="mf">26.</span><span class="p">,</span>
-                                   <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Oranges&#39;</span><span class="p">,</span>
-                                   <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
+<span class="n">result</span><span class="o">.</span><span class="n">plot_principal_nodal_stress</span><span class="p">(</span>
+    <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;SEQV&quot;</span><span class="p">,</span>
+    <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">show_displacement</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">displacement_factor</span><span class="o">=</span><span class="mf">26.0</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Oranges&quot;</span><span class="p">,</span>
+    <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <img alt="vm 005 laterally loaded tapered support structure" class="sphx-glr-single-img" src="../../_images/sphx_glr_vm-005-laterally_loaded_tapered_support_structure_002.png" />
@@ -661,31 +665,33 @@ amount.</p>
 <p>Now we need to perform the simulation again but this time using the PLANE183
 element type. We additionally remove midside nodes with <code class="docutils literal notranslate"><span class="pre">emid</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;PLANE183&#39;</span><span class="p">,</span> <span class="n">kop3</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;PLANE183&quot;</span><span class="p">,</span> <span class="n">kop3</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">emid</span><span class="p">()</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;LOC&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;LOC&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.5</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;LOC&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;LOC&quot;</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.5</span><span class="p">)</span>
 
-<span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s1">&#39;ALL&#39;</span><span class="p">,</span> <span class="s1">&#39;ALL&#39;</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s1">&#39;ALL&#39;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;/SOLU&#39;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 
 <span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
 <span class="c1"># reuse our function from earlier</span>
-<span class="n">fixed_end_stress_183</span><span class="p">,</span> <span class="n">mid_stress_183</span> <span class="o">=</span> <span class="n">fetch_mid_and_end_stress</span><span class="p">(</span><span class="n">mapdl</span><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fixed_end_stress_183</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mid_stress_183</span></a> <span class="o">=</span> <span class="n">fetch_mid_and_end_stress</span><span class="p">(</span><span class="n">mapdl</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 
 <span class="n">result</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">result</span>
-<span class="n">result</span><span class="o">.</span><span class="n">plot_principal_nodal_stress</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>
-                                   <span class="s1">&#39;SEQV&#39;</span><span class="p">,</span>
-                                   <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                                   <span class="n">show_displacement</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                                   <span class="n">displacement_factor</span><span class="o">=</span><span class="mf">26.</span><span class="p">,</span>
-                                   <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span>
-                                   <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
+<span class="n">result</span><span class="o">.</span><span class="n">plot_principal_nodal_stress</span><span class="p">(</span>
+    <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;SEQV&quot;</span><span class="p">,</span>
+    <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">show_displacement</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">displacement_factor</span><span class="o">=</span><span class="mf">26.0</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span>
+    <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <img alt="vm 005 laterally loaded tapered support structure" class="sphx-glr-single-img" src="../../_images/sphx_glr_vm-005-laterally_loaded_tapered_support_structure_003.png" />
@@ -702,23 +708,23 @@ element type. We additionally remove midside nodes with <code class="docutils li
 <p>Now that we have the stresses we can compare them to the expected values
 of stress at the midpoint (8333) and the fixed end (7407) for both
 simulations.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">results_182</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">results_182</span></a> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">-----------------  PLANE 182 RESULTS COMPARISON  ----------------</span>
 <span class="s2">|    LABEL    |   TARGET   |   Mechanical APDL   |   RATIO</span>
-<span class="s2">   mid stress      8333        </span><span class="si">{</span><span class="n">mid_stress_182</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">               </span><span class="si">{</span><span class="n">mid_stress_182</span> <span class="o">/</span> <span class="mi">8333</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">   end stress      7407        </span><span class="si">{</span><span class="n">fixed_end_stress_182</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">               </span><span class="si">{</span><span class="n">fixed_end_stress_182</span> <span class="o">/</span> <span class="mi">7407</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">   mid stress      8333        </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mid_stress_182</span></a><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">               </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mid_stress_182</span></a> <span class="o">/</span> <span class="mi">8333</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">   end stress      7407        </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fixed_end_stress_182</span></a><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">               </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fixed_end_stress_182</span></a> <span class="o">/</span> <span class="mi">7407</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"></span>
 <span class="s2">----------------------------------------------------------------</span>
 <span class="s2">&quot;&quot;&quot;</span>
 
-<span class="n">results_183</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">results_183</span></a> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">-----------------  PLANE 183 RESULTS COMPARISON  ----------------</span>
 <span class="s2">|    LABEL    |   TARGET   |   Mechanical APDL   |   RATIO</span>
-<span class="s2">   mid stress      8333        </span><span class="si">{</span><span class="n">mid_stress_183</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">               </span><span class="si">{</span><span class="n">mid_stress_183</span> <span class="o">/</span> <span class="mi">8333</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">   end stress      7407        </span><span class="si">{</span><span class="n">fixed_end_stress_183</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">               </span><span class="si">{</span><span class="n">fixed_end_stress_183</span> <span class="o">/</span> <span class="mi">7407</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">   mid stress      8333        </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mid_stress_183</span></a><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">               </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mid_stress_183</span></a> <span class="o">/</span> <span class="mi">8333</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">   end stress      7407        </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fixed_end_stress_183</span></a><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">               </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fixed_end_stress_183</span></a> <span class="o">/</span> <span class="mi">7407</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"></span>
 <span class="s2">----------------------------------------------------------------</span>
 <span class="s2">&quot;&quot;&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">results_182</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">results_183</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">results_182</span></a><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">results_183</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -736,7 +742,7 @@ simulations.</p>
 ----------------------------------------------------------------
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.185 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.199 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-vm-005-laterally-loaded-tapered-support-structure-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/8331ced8d606251be254157aaeeeb870/vm-005-laterally_loaded_tapered_support_structure.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-005-laterally_loaded_tapered_support_structure.py</span></code></a></p>

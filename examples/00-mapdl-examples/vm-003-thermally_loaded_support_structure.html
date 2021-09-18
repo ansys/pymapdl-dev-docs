@@ -155,6 +155,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="2d_plate_with_a_hole.html">
@@ -373,6 +374,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
             </div>
@@ -530,14 +532,14 @@ by nodal coupling.</p></li>
 steel here.
 - <cite>EX</cite> - X-direction elastic modulus
 - <cite>ALPX</cite> - Secant x - coefficient of thermal expansion</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s1">&#39;STATIC&#39;</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;LINK180&#39;</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">sectype</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;LINK&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s2">&quot;STATIC&quot;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;LINK180&quot;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">sectype</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;LINK&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">secdata</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s1">&#39;EX&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">16e6</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s1">&#39;ALPX&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">92e-7</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s1">&#39;EX&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">30e6</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s1">&#39;ALPX&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">70e-7</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;EX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">16e6</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;ALPX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">92e-7</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;EX&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">30e6</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;ALPX&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">70e-7</span><span class="p">)</span>
 <span class="c1"># Define the reference temperature for the thermal strain calculations.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">tref</span><span class="p">(</span><span class="mi">70</span><span class="p">)</span>
 </pre></div>
@@ -558,7 +560,7 @@ mid-point nodes to two opposite sides.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">fill</span><span class="p">()</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">nplot</span><span class="p">(</span><span class="n">nnum</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">nplot</span><span class="p">(</span><span class="n">nnum</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="vm 003 thermally loaded support structure" class="sphx-glr-single-img" src="../../_images/sphx_glr_vm-003-thermally_loaded_support_structure_001.png" />
@@ -578,7 +580,7 @@ between the first 2 that is parallel to them.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">e</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">e</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="vm 003 thermally loaded support structure" class="sphx-glr-single-img" src="../../_images/sphx_glr_vm-003-thermally_loaded_support_structure_002.png" />
@@ -597,16 +599,17 @@ between the first 2 that is parallel to them.</p>
 <div class="section" id="define-boundary-conditions">
 <h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Couple the degrees of freedom in y-displacement across nodes 5, 4,</p></li>
+<li><p>Couple the degrees of freedom in y-displacement across nodes 5, 4,
+and 6.</p></li>
+<li><p>Fix nodes 1, 2, and 3 in place.</p></li>
+<li><p>Apply a force of -4000 in the y-direction to node 5</p></li>
+<li><p>Apply a uniform temperature of 80 to the whole body</p></li>
+<li><p>Finally, exit the post-processor.</p></li>
 </ul>
-<p>and 6.
-- Fix nodes 1, 2, and 3 in place.
-- Apply a force of -4000 in the y-direction to node 5
-- Apply a uniform temperature of 80 to the whole body</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">cp</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;UY&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;ALL&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;FY&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">4000</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">bfunif</span><span class="p">(</span><span class="s1">&#39;TEMP&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">cp</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;UY&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;FY&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">4000</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">bfunif</span><span class="p">(</span><span class="s2">&quot;TEMP&quot;</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -619,10 +622,10 @@ between the first 2 that is parallel to them.</p>
 <h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Enter solution mode</p></li>
-<li><p>Specify 1 timestep to be used for this load step</p></li>
+<li><p>Specify a timestep of 1 to be used for this load step</p></li>
 <li><p>Solve the system.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;/SOLU&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">nsubst</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 </pre></div>
@@ -638,19 +641,19 @@ between the first 2 that is parallel to them.</p>
 <li><p>Access the queries functions</p></li>
 <li><p>Find a steel node and a copper node</p></li>
 <li><p>Then use these to get the steel and copper elements</p></li>
-<li><p>Finally we extract the stress experienced by each element</p></li>
+<li><p>Finally extract the stress experienced by each element</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
 <span class="n">q</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">queries</span>
-<span class="n">steel_n</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">copper_n</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">steel_e</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">enearn</span><span class="p">(</span><span class="n">steel_n</span><span class="p">)</span>
-<span class="n">copper_e</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">enearn</span><span class="p">(</span><span class="n">copper_n</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">etable</span><span class="p">(</span><span class="s1">&#39;STRS_ST&#39;</span><span class="p">,</span> <span class="s1">&#39;LS&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">etable</span><span class="p">(</span><span class="s1">&#39;STRS_CO&#39;</span><span class="p">,</span> <span class="s1">&#39;LS&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel_n</span></a> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">copper_n</span></a> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel_e</span></a> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">enearn</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel_n</span></a><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">copper_e</span></a> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">enearn</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">copper_n</span></a><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">etable</span><span class="p">(</span><span class="s2">&quot;STRS_ST&quot;</span><span class="p">,</span> <span class="s2">&quot;LS&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">etable</span><span class="p">(</span><span class="s2">&quot;STRS_CO&quot;</span><span class="p">,</span> <span class="s2">&quot;LS&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="n">stress_steel</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;ELEM&#39;</span><span class="p">,</span> <span class="n">steel_e</span><span class="p">,</span> <span class="s1">&#39;ETAB&#39;</span><span class="p">,</span> <span class="s1">&#39;STRS_ST&#39;</span><span class="p">)</span>
-<span class="n">stress_copper</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;ELEM&#39;</span><span class="p">,</span> <span class="n">copper_e</span><span class="p">,</span> <span class="s1">&#39;ETAB&#39;</span><span class="p">,</span> <span class="s1">&#39;STRS_CO&#39;</span><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stress_steel</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;ELEM&quot;</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel_e</span></a><span class="p">,</span> <span class="s2">&quot;ETAB&quot;</span><span class="p">,</span> <span class="s2">&quot;STRS_ST&quot;</span><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stress_copper</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;ELEM&quot;</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">copper_e</span></a><span class="p">,</span> <span class="s2">&quot;ETAB&quot;</span><span class="p">,</span> <span class="s2">&quot;STRS_CO&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -658,23 +661,23 @@ between the first 2 that is parallel to them.</p>
 <h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">¶</a></h2>
 <p>Now that we have the response we can compare the values to the
 expected stresses of 19695 and 10152 respectively.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">steel_target</span> <span class="o">=</span> <span class="mi">19695</span>
-<span class="n">steel_ratio</span> <span class="o">=</span> <span class="n">stress_steel</span><span class="o">/</span><span class="n">steel_target</span>
-<span class="n">copper_target</span> <span class="o">=</span> <span class="mi">10152</span>
-<span class="n">copper_ratio</span> <span class="o">=</span> <span class="n">stress_copper</span><span class="o">/</span><span class="n">copper_target</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel_target</span></a> <span class="o">=</span> <span class="mi">19695</span>
+<a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel_ratio</span></a> <span class="o">=</span> <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stress_steel</span></a> <span class="o">/</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel_target</span></a>
+<a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">copper_target</span></a> <span class="o">=</span> <span class="mi">10152</span>
+<a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">copper_ratio</span></a> <span class="o">=</span> <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stress_copper</span></a> <span class="o">/</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">copper_target</span></a>
 
-<span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">------------------- VM3 RESULTS COMPARISON ---------------------</span>
 
 <span class="s2">             |   TARGET   |   Mechanical APDL   |   RATIO</span>
 <span class="s2">----------------------------------------------------------------</span>
-<span class="s2">    Steel        </span><span class="si">{</span><span class="n">steel_target</span><span class="si">}</span><span class="s2">        </span><span class="si">{</span><span class="n">stress_steel</span><span class="si">}</span><span class="s2">            </span><span class="si">{</span><span class="n">steel_ratio</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">    Copper       </span><span class="si">{</span><span class="n">copper_target</span><span class="si">}</span><span class="s2">        </span><span class="si">{</span><span class="n">stress_copper</span><span class="si">}</span><span class="s2">            </span><span class="si">{</span><span class="n">copper_ratio</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">    Steel        </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel_target</span></a><span class="si">}</span><span class="s2">        </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stress_steel</span></a><span class="si">}</span><span class="s2">            </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel_ratio</span></a><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">    Copper       </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">copper_target</span></a><span class="si">}</span><span class="s2">        </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stress_copper</span></a><span class="si">}</span><span class="s2">            </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">copper_ratio</span></a><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"></span>
 
 <span class="s2">----------------------------------------------------------------</span>
 
 <span class="s2">&quot;&quot;&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -688,7 +691,7 @@ expected stresses of 19695 and 10152 respectively.</p>
 ----------------------------------------------------------------
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.770 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.785 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-vm-003-thermally-loaded-support-structure-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/45500f6612ef63213bae9c64a9b84812/vm-003-thermally_loaded_support_structure.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-003-thermally_loaded_support_structure.py</span></code></a></p>

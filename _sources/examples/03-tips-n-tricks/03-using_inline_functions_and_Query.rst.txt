@@ -32,13 +32,12 @@ First, get an instance of
 :class:`ansys.mapdl.core.inline_functions.Query` below, using the
 ``mapdl`` property ``queries``.
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-28
+.. GENERATED FROM PYTHON SOURCE LINES 17-27
 
 .. code-block:: default
 
 
     from ansys.mapdl.core import launch_mapdl
-    from ansys.mapdl.core.inline_functions import Query
 
     mapdl = launch_mapdl()
 
@@ -54,7 +53,7 @@ First, get an instance of
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-36
+.. GENERATED FROM PYTHON SOURCE LINES 28-35
 
 Setup Mesh
 ~~~~~~~~~~
@@ -64,15 +63,15 @@ Setup Mesh
 - Mesh the block
 - Plot the elements created
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-43
+.. GENERATED FROM PYTHON SOURCE LINES 35-42
 
 .. code-block:: default
 
 
-    mapdl.et(1, 'SOLID5')
+    mapdl.et(1, "SOLID5")
     mapdl.block(0, 10, 0, 20, 0, 30)
     mapdl.esize(2)
-    mapdl.vmesh('ALL')
+    mapdl.vmesh("ALL")
     mapdl.eplot()
 
 
@@ -100,7 +99,7 @@ Setup Mesh
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 44-53
+.. GENERATED FROM PYTHON SOURCE LINES 43-52
 
 Setup Boundary Conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -112,19 +111,19 @@ Setup Boundary Conditions
 - Apply a x-direction force of 10000 to all of these
 - Finish preprocessing
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-64
+.. GENERATED FROM PYTHON SOURCE LINES 52-63
 
 .. code-block:: default
 
 
-    mapdl.mp('EX', 1, 210E9)
-    mapdl.mp('PRXY', 1, 0.3)
-    mapdl.nsel('S', 'LOC', 'Z', 30)
-    mapdl.d('ALL', 'UX')
-    mapdl.d('ALL', 'UY')
-    mapdl.d('ALL', 'UZ')
-    mapdl.nsel('S', 'LOC', 'Z', 0)
-    mapdl.f('ALL', 'FX', 10000)
+    mapdl.mp("EX", 1, 210e9)
+    mapdl.mp("PRXY", 1, 0.3)
+    mapdl.nsel("S", "LOC", "Z", 30)
+    mapdl.d("ALL", "UX")
+    mapdl.d("ALL", "UY")
+    mapdl.d("ALL", "UZ")
+    mapdl.nsel("S", "LOC", "Z", 0)
+    mapdl.f("ALL", "FX", 10000)
     mapdl.finish()
 
 
@@ -142,7 +141,7 @@ Setup Boundary Conditions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-72
+.. GENERATED FROM PYTHON SOURCE LINES 64-71
 
 Setup Boundary Conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -152,14 +151,14 @@ Setup Boundary Conditions
 - Solve the model
 - Finish solution
 
-.. GENERATED FROM PYTHON SOURCE LINES 72-79
+.. GENERATED FROM PYTHON SOURCE LINES 71-78
 
 .. code-block:: default
 
 
-    mapdl.run('/SOLU')
-    mapdl.antype('STATIC')
-    mapdl.nsel('ALL')
+    mapdl.run("/SOLU")
+    mapdl.antype("STATIC")
+    mapdl.nsel("ALL")
     mapdl.solve()
     mapdl.finish()
 
@@ -178,7 +177,7 @@ Setup Boundary Conditions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-86
+.. GENERATED FROM PYTHON SOURCE LINES 79-85
 
 Post-Processing
 ~~~~~~~~~~~~~~~
@@ -187,16 +186,13 @@ Post-Processing
   - Show the edges so that we can see the element boundaries
   - Use the "plasma" colormap because it is perceptually uniform
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-93
+.. GENERATED FROM PYTHON SOURCE LINES 85-89
 
 .. code-block:: default
 
 
     result = mapdl.result
-    result.plot_principal_nodal_stress(0,
-                                       'SEQV',
-                                       show_edges=True,
-                                       cmap='plasma')
+    result.plot_principal_nodal_stress(0, "SEQV", show_edges=True, cmap="plasma")
 
 
 
@@ -220,7 +216,7 @@ Post-Processing
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-99
+.. GENERATED FROM PYTHON SOURCE LINES 90-95
 
 Using ``Query``
 ~~~~~~~~~~~~~~~
@@ -228,13 +224,13 @@ Using ``Query``
 - Use the ``Query`` instance to examine the x, y, and z displacement.
 - Print the results in a formatted string.
 
-.. GENERATED FROM PYTHON SOURCE LINES 99-118
+.. GENERATED FROM PYTHON SOURCE LINES 95-114
 
 .. code-block:: default
 
 
-    node1 = q.node(5., 0., 0.)
-    node2 = q.node(5., 10., 0.)
+    node1 = q.node(5.0, 0.0, 0.0)
+    node2 = q.node(5.0, 10.0, 0.0)
 
     for node in [node1, node2]:
         x_displacement = q.ux(node)
@@ -248,7 +244,7 @@ Using ``Query``
         X | {x_displacement}
         Y | {y_displacement}
         Z | {z_displacement}
-    
+
         """
         print(message)
 
@@ -268,16 +264,16 @@ Using ``Query``
         X | 1.757716378e-05
         Y | 3.036257547e-09
         Z | -7.982690758e-07
-    
+
     
 
         ************************
         Displacement at Node 49:
         ************************
         X | 1.761241768e-05
-        Y | 1.210906573e-19
+        Y | 1.176480058e-19
         Z | 8.070989839e-07
-    
+
     
 
 
@@ -286,7 +282,7 @@ Using ``Query``
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.383 seconds)
+   **Total running time of the script:** ( 0 minutes  1.384 seconds)
 
 
 .. _sphx_glr_download_examples_03-tips-n-tricks_03-using_inline_functions_and_Query.py:

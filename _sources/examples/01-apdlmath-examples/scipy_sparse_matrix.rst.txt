@@ -25,7 +25,7 @@ This tutorial will show how to get APDLMath sparse matrices (typically
 stiffness or mass matrices extracted from APDL .Full Files) into SciPy
 Sparse Matrices.
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-18
+.. GENERATED FROM PYTHON SOURCE LINES 10-19
 
 .. code-block:: default
 
@@ -33,6 +33,7 @@ Sparse Matrices.
 
     from ansys.mapdl.core.examples import vmfiles
     from ansys.mapdl.core import launch_mapdl
+
     mapdl = launch_mapdl()
     mm = mapdl.math
 
@@ -44,16 +45,16 @@ Sparse Matrices.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 19-21
+.. GENERATED FROM PYTHON SOURCE LINES 20-22
 
 Load and solve verification manual example 153.  Then load the
 stiffness matrix into APDLmath.
 
-.. GENERATED FROM PYTHON SOURCE LINES 21-25
+.. GENERATED FROM PYTHON SOURCE LINES 22-26
 
 .. code-block:: default
 
-    out = mapdl.input(vmfiles['vm153'])
+    out = mapdl.input(vmfiles["vm153"])
     k = mm.stiff(fname="PRSMEMB.full")
     k
 
@@ -72,12 +73,12 @@ stiffness matrix into APDLmath.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-28
+.. GENERATED FROM PYTHON SOURCE LINES 27-29
 
 Copy this APDLMath Sparse Matrix to a SciPy CSR matrix and plot the
 graph of the sparse matrix
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-32
+.. GENERATED FROM PYTHON SOURCE LINES 29-33
 
 .. code-block:: default
 
@@ -100,11 +101,11 @@ graph of the sparse matrix
  .. code-block:: none
 
 
-    <matplotlib.lines.Line2D object at 0x7f735fc215d0>
+    <matplotlib.lines.Line2D object at 0x7f7112d17d50>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-40
+.. GENERATED FROM PYTHON SOURCE LINES 34-41
 
 You can access the 3 vectors that describe this sparse matrix with.
 
@@ -114,7 +115,7 @@ You can access the 3 vectors that describe this sparse matrix with.
 
 See the ``scipy`` documentation of the csr matrix at `scipy.sparse.csr_matrix <https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csr_matrix.html>`_ for additional details.
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-46
+.. GENERATED FROM PYTHON SOURCE LINES 41-47
 
 .. code-block:: default
 
@@ -142,7 +143,7 @@ See the ``scipy`` documentation of the csr matrix at `scipy.sparse.csr_matrix <h
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-52
+.. GENERATED FROM PYTHON SOURCE LINES 48-53
 
 ### Create a APDLMath Sparse Matrix from a SciPy Sparse CSR Matrix
 
@@ -150,12 +151,12 @@ Here, we transfer the ``scipy`` CSR matrix back to MAPDL.  While
 this example uses a matrix that was originally within MAPDL, you can
 load any CSR matrix to MAPDL.
 
-.. GENERATED FROM PYTHON SOURCE LINES 52-56
+.. GENERATED FROM PYTHON SOURCE LINES 53-57
 
 .. code-block:: default
 
 
-    my_mat = mm.matrix(pk, 'my_mat', triu=True)
+    my_mat = mm.matrix(pk, "my_mat", triu=True)
     my_mat
 
 
@@ -173,12 +174,12 @@ load any CSR matrix to MAPDL.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 57-59
+.. GENERATED FROM PYTHON SOURCE LINES 58-60
 
 Check initial matrix ``k`` and ``my_mat`` are exactly the sames:
 We compute the norm of the difference, should be zero
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-64
+.. GENERATED FROM PYTHON SOURCE LINES 60-65
 
 .. code-block:: default
 
@@ -202,7 +203,7 @@ We compute the norm of the difference, should be zero
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-76
+.. GENERATED FROM PYTHON SOURCE LINES 66-77
 
 CSR Representation in MAPDL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -216,7 +217,7 @@ Printing the list of objects in the MAPDL space, we find:
 - the 3 vectors of the CSR my_mat structure: ``MY_MAT_PTR``, ``MY_MAT_IND``
 - and ``MY_MAT_DATA``
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-80
+.. GENERATED FROM PYTHON SOURCE LINES 77-81
 
 .. code-block:: default
 
@@ -238,9 +239,9 @@ Printing the list of objects in the MAPDL space, we find:
 
       Name                   Type            Mem. (MB)       Dims            Workspace
 
-       AIBIPD                SMAT            0.011           [126:126]               1
+       KMOQGL                SMAT            0.011           [126:126]               1
        MY_MAT                SMAT            0.000           [126:126]               1
-       VXQMTQ                SMAT            0.011           [126:126]               1
+       STHIXV                SMAT            0.011           [126:126]               1
        MY_MAT_DATA           VEC             0.006           738             1
        MY_MAT_IND            VEC             0.001           127             1
        MY_MAT_PTR            VEC             0.003           738             1
@@ -248,7 +249,7 @@ Printing the list of objects in the MAPDL space, we find:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-86
+.. GENERATED FROM PYTHON SOURCE LINES 82-87
 
 MAPDL Python Matrix Correspondence
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -256,7 +257,7 @@ MAPDL Python Matrix Correspondence
 To determine which MAPDL object corresponds to which Python object,
 access the id property of the Python object.
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-90
+.. GENERATED FROM PYTHON SOURCE LINES 87-91
 
 .. code-block:: default
 
@@ -274,9 +275,9 @@ access the id property of the Python object.
 
  .. code-block:: none
 
-    name(k)=AIBIPD
+    name(k)=KMOQGL
     name(my_mat)=my_mat
-    name(msub)=VXQMTQ
+    name(msub)=STHIXV
 
 
 
@@ -284,7 +285,7 @@ access the id property of the Python object.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.651 seconds)
+   **Total running time of the script:** ( 0 minutes  0.649 seconds)
 
 
 .. _sphx_glr_download_examples_01-apdlmath-examples_scipy_sparse_matrix.py:

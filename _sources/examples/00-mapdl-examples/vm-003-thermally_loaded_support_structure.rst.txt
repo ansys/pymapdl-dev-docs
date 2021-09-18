@@ -96,7 +96,7 @@ Notes:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-69
+.. GENERATED FROM PYTHON SOURCE LINES 63-70
 
 Define Material
 ~~~~~~~~~~~~~~~
@@ -105,19 +105,20 @@ steel here.
 - `EX` - X-direction elastic modulus
 - `ALPX` - Secant x - coefficient of thermal expansion
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-81
+
+.. GENERATED FROM PYTHON SOURCE LINES 70-82
 
 .. code-block:: default
 
 
-    mapdl.antype('STATIC')
-    mapdl.et(1, 'LINK180')
-    mapdl.sectype(1, 'LINK')
+    mapdl.antype("STATIC")
+    mapdl.et(1, "LINK180")
+    mapdl.sectype(1, "LINK")
     mapdl.secdata(0.1)
-    mapdl.mp('EX', 1, 16e6)
-    mapdl.mp('ALPX', 1, 92e-7)
-    mapdl.mp('EX', 2, 30e6)
-    mapdl.mp('ALPX', 2, 70e-7)
+    mapdl.mp("EX", 1, 16e6)
+    mapdl.mp("ALPX", 1, 92e-7)
+    mapdl.mp("EX", 2, 30e6)
+    mapdl.mp("ALPX", 2, 70e-7)
     # Define the reference temperature for the thermal strain calculations.
     mapdl.tref(70)
 
@@ -136,7 +137,7 @@ steel here.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 82-87
+.. GENERATED FROM PYTHON SOURCE LINES 83-88
 
 Define Geometry: Nodes
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -144,7 +145,7 @@ Set up the nodes and elements.  This creates a mesh just like in the
 problem setup. We create a square of nodes and use `fill` to add
 mid-point nodes to two opposite sides.
 
-.. GENERATED FROM PYTHON SOURCE LINES 87-96
+.. GENERATED FROM PYTHON SOURCE LINES 88-97
 
 .. code-block:: default
 
@@ -155,7 +156,7 @@ mid-point nodes to two opposite sides.
     mapdl.n(4, -10, -20)
     mapdl.n(6, 10, -20)
     mapdl.fill()
-    mapdl.nplot(nnum=True, cpos='xy')
+    mapdl.nplot(nnum=True, cpos="xy")
 
 
 
@@ -178,7 +179,7 @@ mid-point nodes to two opposite sides.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 97-102
+.. GENERATED FROM PYTHON SOURCE LINES 98-103
 
 Define Geometry: Elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -186,7 +187,7 @@ Create two elements (using material #1) that are two sides of our
 square, as links. Then create a single element using material #2
 between the first 2 that is parallel to them.
 
-.. GENERATED FROM PYTHON SOURCE LINES 102-109
+.. GENERATED FROM PYTHON SOURCE LINES 103-110
 
 .. code-block:: default
 
@@ -195,7 +196,7 @@ between the first 2 that is parallel to them.
     mapdl.e(3, 6)
     mapdl.mat(2)
     mapdl.e(2, 5)
-    mapdl.eplot(show_node_numbering=True, cpos='xy')
+    mapdl.eplot(show_node_numbering=True, cpos="xy")
 
 
 
@@ -222,25 +223,26 @@ between the first 2 that is parallel to them.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-117
+.. GENERATED FROM PYTHON SOURCE LINES 111-119
 
 Define Boundary Conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Couple the degrees of freedom in y-displacement across nodes 5, 4,
-and 6.
+  and 6.
 - Fix nodes 1, 2, and 3 in place.
 - Apply a force of -4000 in the y-direction to node 5
 - Apply a uniform temperature of 80 to the whole body
+- Finally, exit the post-processor.
 
-.. GENERATED FROM PYTHON SOURCE LINES 117-125
+.. GENERATED FROM PYTHON SOURCE LINES 119-127
 
 .. code-block:: default
 
 
-    mapdl.cp(1, 'UY', 5, 4, 6)
-    mapdl.d(1, 'ALL', '', '', 3)
-    mapdl.f(5, 'FY', -4000)
-    mapdl.bfunif('TEMP', 80)
+    mapdl.cp(1, "UY", 5, 4, 6)
+    mapdl.d(1, "ALL", "", "", 3)
+    mapdl.f(5, "FY", -4000)
+    mapdl.bfunif("TEMP", 80)
     mapdl.finish()
 
 
@@ -259,20 +261,21 @@ and 6.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 126-131
+.. GENERATED FROM PYTHON SOURCE LINES 128-134
 
 Solve
 ~~~~~
 - Enter solution mode
-- Specify 1 timestep to be used for this load step
+- Specify a timestep of 1 to be used for this load step
 - Solve the system.
 
-.. GENERATED FROM PYTHON SOURCE LINES 131-136
+
+.. GENERATED FROM PYTHON SOURCE LINES 134-139
 
 .. code-block:: default
 
 
-    mapdl.run('/SOLU')
+    mapdl.run("/SOLU")
     mapdl.nsubst(1)
     mapdl.solve()
 
@@ -291,16 +294,17 @@ Solve
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 137-143
+.. GENERATED FROM PYTHON SOURCE LINES 140-147
 
 Post-processing
 ~~~~~~~~~~~~~~~
 - Access the queries functions
 - Find a steel node and a copper node
 - Then use these to get the steel and copper elements
-- Finally we extract the stress experienced by each element
+- Finally extract the stress experienced by each element
 
-.. GENERATED FROM PYTHON SOURCE LINES 143-156
+
+.. GENERATED FROM PYTHON SOURCE LINES 147-160
 
 .. code-block:: default
 
@@ -311,20 +315,20 @@ Post-processing
     copper_n = q.node(10, 0, 0)
     steel_e = q.enearn(steel_n)
     copper_e = q.enearn(copper_n)
-    mapdl.etable('STRS_ST', 'LS', 1)
-    mapdl.etable('STRS_CO', 'LS', 1)
+    mapdl.etable("STRS_ST", "LS", 1)
+    mapdl.etable("STRS_CO", "LS", 1)
 
-    stress_steel = mapdl.get('_', 'ELEM', steel_e, 'ETAB', 'STRS_ST')
-    stress_copper = mapdl.get('_', 'ELEM', copper_e, 'ETAB', 'STRS_CO')
-
-
+    stress_steel = mapdl.get("_", "ELEM", steel_e, "ETAB", "STRS_ST")
+    stress_copper = mapdl.get("_", "ELEM", copper_e, "ETAB", "STRS_CO")
 
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 157-162
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 161-166
 
 Check Results
 ~~~~~~~~~~~~~
@@ -332,15 +336,15 @@ Now that we have the response we can compare the values to the
 expected stresses of 19695 and 10152 respectively.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-180
+.. GENERATED FROM PYTHON SOURCE LINES 166-184
 
 .. code-block:: default
 
 
     steel_target = 19695
-    steel_ratio = stress_steel/steel_target
+    steel_ratio = stress_steel / steel_target
     copper_target = 10152
-    copper_ratio = stress_copper/copper_target
+    copper_ratio = stress_copper / copper_target
 
     message = f"""
     ------------------- VM3 RESULTS COMPARISON ---------------------
@@ -382,7 +386,7 @@ expected stresses of 19695 and 10152 respectively.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.770 seconds)
+   **Total running time of the script:** ( 0 minutes  0.785 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_vm-003-thermally_loaded_support_structure.py:

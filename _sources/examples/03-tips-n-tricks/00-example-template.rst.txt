@@ -79,7 +79,7 @@ After this preamble is complete, the first code block begins.
  .. code-block:: none
 
 
-    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f735fb6e650>
+    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f7111430410>
 
 
 
@@ -124,7 +124,7 @@ printed to the screen according to its ``__repr__``.  Otherwise, you can use ``p
     ansys.mapdl Version: 0.59.dev0
 
 
-    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f735fb6e650>
+    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f7111430410>
 
 
 
@@ -184,10 +184,10 @@ Matplotlib plots will also be rendered in the html.
     fig = plt.figure()
     ax = fig.add_subplot(111)
     x = list(range(10))
-    y = [i**2 + 3*i - 1 for i in x]
+    y = [i ** 2 + 3 * i - 1 for i in x]
     ax.plot(x, y)
-    ax.set_xlabel('x')
-    ax.set_ylabel('y')
+    ax.set_xlabel("x")
+    ax.set_ylabel("y")
 
 
 
@@ -222,13 +222,13 @@ Once your example is complete and you've verified builds locally, you can make a
 Branches containing examples should be prefixed with `doc/` as per the branch
 naming conventions found here: :ref:`contributing`.
 
-Note that you only need to create the python source example (*.py).  The jupyter
+Note that you only need to create the python source example (.py).  The jupyter
 notebook, the example html and the demo script will all be auto-generated via ``sphinx-gallery``.
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.646 seconds)
+   **Total running time of the script:** ( 0 minutes  0.645 seconds)
 
 
 .. _sphx_glr_download_examples_03-tips-n-tricks_00-example-template.py:

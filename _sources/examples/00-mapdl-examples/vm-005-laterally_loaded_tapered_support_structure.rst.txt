@@ -127,11 +127,11 @@ and a poisson's ratio of 0.0 to agree with beam theory.
 .. code-block:: default
 
 
-    mapdl.antype('STATIC')
-    mapdl.et(1, 'PLANE182', kop1=2, kop3=3)
+    mapdl.antype("STATIC")
+    mapdl.et(1, "PLANE182", kop1=2, kop3=3)
     mapdl.r(1, 2)
-    mapdl.mp('EX', 1, 30e6)
-    mapdl.mp('NUXY', 1, 0.)
+    mapdl.mp("EX", 1, 30e6)
+    mapdl.mp("NUXY", 1, 0.0)
 
 
 
@@ -169,7 +169,7 @@ problem setup.
     mapdl.fill()
     mapdl.e(2, 1, 8, 9)
     mapdl.egen(6, 1, 1)
-    mapdl.eplot(show_node_numbering=True, cpos='xy')
+    mapdl.eplot(show_node_numbering=True, cpos="xy")
 
 
 
@@ -210,10 +210,10 @@ to the whole structure.
 
 
     # constrain nodes at fixed end
-    mapdl.nsel('S', 'LOC', 'X', 75)
-    mapdl.d('ALL', 'ALL')
-    mapdl.nsel('ALL')
-    mapdl.f(1, 'FY', -4000)
+    mapdl.nsel("S", "LOC", "X", 75)
+    mapdl.d("ALL", "ALL")
+    mapdl.nsel("ALL")
+    mapdl.f(1, "FY", -4000)
     mapdl.finish()
 
 
@@ -243,7 +243,7 @@ Enter solution mode and solve the system.
 .. code-block:: default
 
 
-    mapdl.run('/SOLU')
+    mapdl.run("/SOLU")
     mapdl.solve()
     mapdl.finish()
 
@@ -279,10 +279,10 @@ We've gathered the code into a function because we'll have use for it later.
     def fetch_mid_and_end_stress(m):
         q = m.queries
         m.post1()
-        end = q.node(75., 0., 0.)
-        fixed_end_stress = m.get_value('NODE', end, 'S', 'X')
-        mid = q.node(50., 0., 0.)
-        mid_stress = m.get_value('NODE', mid, 'S', 'EQV')
+        end = q.node(75.0, 0.0, 0.0)
+        fixed_end_stress = m.get_value("NODE", end, "S", "X")
+        mid = q.node(50.0, 0.0, 0.0)
+        mid_stress = m.get_value("NODE", mid, "S", "EQV")
         return fixed_end_stress, mid_stress
 
 
@@ -303,19 +303,21 @@ View the equivalent stress, and displacement, of the cantilever with a
 ``displacement_factor`` of 26 to scale up the deformation to a visible
 amount.
 
-.. GENERATED FROM PYTHON SOURCE LINES 147-157
+.. GENERATED FROM PYTHON SOURCE LINES 147-159
 
 .. code-block:: default
 
 
     result = mapdl.result
-    result.plot_principal_nodal_stress(0,
-                                       'SEQV',
-                                       show_edges=True,
-                                       show_displacement=True,
-                                       displacement_factor=26.,
-                                       cmap='Oranges',
-                                       cpos='xy')
+    result.plot_principal_nodal_stress(
+        0,
+        "SEQV",
+        show_edges=True,
+        show_displacement=True,
+        displacement_factor=26.0,
+        cmap="Oranges",
+        cpos="xy",
+    )
 
 
 
@@ -339,28 +341,28 @@ amount.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 158-162
+.. GENERATED FROM PYTHON SOURCE LINES 160-164
 
 Redo with Plane 183
 ~~~~~~~~~~~~~~~~~~~
 Now we need to perform the simulation again but this time using the PLANE183
 element type. We additionally remove midside nodes with ``emid``.
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-190
+.. GENERATED FROM PYTHON SOURCE LINES 164-194
 
 .. code-block:: default
 
 
     mapdl.prep7()
-    mapdl.et(1, 'PLANE183', kop3=3)
+    mapdl.et(1, "PLANE183", kop3=3)
     mapdl.emid()
-    mapdl.nsel('R', 'LOC', 'X', 75)
-    mapdl.nsel('R', 'LOC', 'Y', -4.5)
+    mapdl.nsel("R", "LOC", "X", 75)
+    mapdl.nsel("R", "LOC", "Y", -4.5)
 
-    mapdl.d('ALL', 'ALL')
-    mapdl.nsel('ALL')
+    mapdl.d("ALL", "ALL")
+    mapdl.nsel("ALL")
     mapdl.finish()
-    mapdl.run('/SOLU')
+    mapdl.run("/SOLU")
     mapdl.solve()
     mapdl.finish()
 
@@ -370,13 +372,15 @@ element type. We additionally remove midside nodes with ``emid``.
     mapdl.finish()
 
     result = mapdl.result
-    result.plot_principal_nodal_stress(0,
-                                       'SEQV',
-                                       show_edges=True,
-                                       show_displacement=True,
-                                       displacement_factor=26.,
-                                       cmap='Blues',
-                                       cpos='xy')
+    result.plot_principal_nodal_stress(
+        0,
+        "SEQV",
+        show_edges=True,
+        show_displacement=True,
+        displacement_factor=26.0,
+        cmap="Blues",
+        cpos="xy",
+    )
 
 
 
@@ -400,7 +404,7 @@ element type. We additionally remove midside nodes with ``emid``.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 191-196
+.. GENERATED FROM PYTHON SOURCE LINES 195-200
 
 Check Results
 ~~~~~~~~~~~~~
@@ -408,7 +412,7 @@ Now that we have the stresses we can compare them to the expected values
 of stress at the midpoint (8333) and the fixed end (7407) for both
 simulations.
 
-.. GENERATED FROM PYTHON SOURCE LINES 196-215
+.. GENERATED FROM PYTHON SOURCE LINES 200-219
 
 .. code-block:: default
 
@@ -462,7 +466,7 @@ simulations.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.185 seconds)
+   **Total running time of the script:** ( 0 minutes  1.199 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_vm-005-laterally_loaded_tapered_support_structure.py:

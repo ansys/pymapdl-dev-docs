@@ -73,7 +73,7 @@ Create a simple triangle in the XY plane using three keypoints.
     k1 = mapdl.k("", 1, 0, 0)
     k2 = mapdl.k("", 0, 1, 0)
     a0 = mapdl.a(k0, k1, k2)
-    mapdl.aplot(show_lines=True, line_width=5, show_bounds=True, cpos='xy')
+    mapdl.aplot(show_lines=True, line_width=5, show_bounds=True, cpos="xy")
 
 
 
@@ -107,11 +107,12 @@ APDL Command: AL
 ~~~~~~~~~~~~~~~~
 Create an area from four lines.
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-51
+.. GENERATED FROM PYTHON SOURCE LINES 37-52
 
 .. code-block:: default
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
     k0 = mapdl.k("", 0, 0, 0)
     k1 = mapdl.k("", 1, 0, 0)
@@ -122,7 +123,7 @@ Create an area from four lines.
     l2 = mapdl.l(k2, k3)
     l3 = mapdl.l(k3, k0)
     anum = mapdl.al(l0, l1, l2, l3)
-    mapdl.aplot(show_lines=True, line_width=5, show_bounds=True, cpos='xy')
+    mapdl.aplot(show_lines=True, line_width=5, show_bounds=True, cpos="xy")
 
 
 
@@ -150,7 +151,7 @@ Create an area from four lines.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 52-57
+.. GENERATED FROM PYTHON SOURCE LINES 53-58
 
 APDL Command: ADRAG
 ~~~~~~~~~~~~~~~~~~~
@@ -158,11 +159,12 @@ Generate areas by dragging a line pattern along a path.
 
 Drag a circle between two keypoints to create an area
 
-.. GENERATED FROM PYTHON SOURCE LINES 57-67
+.. GENERATED FROM PYTHON SOURCE LINES 58-69
 
 .. code-block:: default
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
     k0 = mapdl.k("", 0, 0, 0)
     k1 = mapdl.k("", 0, 0, 1)
@@ -197,22 +199,23 @@ Drag a circle between two keypoints to create an area
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 68-71
+.. GENERATED FROM PYTHON SOURCE LINES 70-73
 
 APDL Command: ASBA
 ~~~~~~~~~~~~~~~~~~
 Subtract a ``0.5 x 0.5`` rectangle from a ``1 x 1`` rectangle.
 
-.. GENERATED FROM PYTHON SOURCE LINES 71-79
+.. GENERATED FROM PYTHON SOURCE LINES 73-82
 
 .. code-block:: default
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
     anum0 = mapdl.blc4(0, 0, 1, 1)
     anum1 = mapdl.blc4(0.25, 0.25, 0.5, 0.5)
     aout = mapdl.asba(anum0, anum1)
-    mapdl.aplot(show_lines=True, line_width=5, show_bounds=True, cpos='xy')
+    mapdl.aplot(show_lines=True, line_width=5, show_bounds=True, cpos="xy")
 
 
 
@@ -240,13 +243,13 @@ Subtract a ``0.5 x 0.5`` rectangle from a ``1 x 1`` rectangle.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-83
+.. GENERATED FROM PYTHON SOURCE LINES 83-86
 
 Area IDs
 ~~~~~~~~
 Return an array of the area IDs
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-87
+.. GENERATED FROM PYTHON SOURCE LINES 86-90
 
 .. code-block:: default
 
@@ -269,7 +272,7 @@ Return an array of the area IDs
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 88-96
+.. GENERATED FROM PYTHON SOURCE LINES 91-99
 
 Area Geometry
 ~~~~~~~~~~~~~
@@ -280,7 +283,7 @@ Note that this is a method so you can select the quality of the
 areas (mesh density), and if you would like a merged output or
 individual meshes.
 
-.. GENERATED FROM PYTHON SOURCE LINES 96-100
+.. GENERATED FROM PYTHON SOURCE LINES 99-103
 
 .. code-block:: default
 
@@ -303,7 +306,7 @@ individual meshes.
     /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
-    [UnstructuredGrid (0x7f735f5c6590)
+    [UnstructuredGrid (0x7f71113857c0)
       N Cells:	12
       N Points:	24
       X Bounds:	0.000e+00, 1.000e+00
@@ -314,12 +317,12 @@ individual meshes.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 101-103
+.. GENERATED FROM PYTHON SOURCE LINES 104-106
 
 Merged Area Geometry
 ~~~~~~~~~~~~~~~~~~~~
 
-.. GENERATED FROM PYTHON SOURCE LINES 103-111
+.. GENERATED FROM PYTHON SOURCE LINES 106-114
 
 .. code-block:: default
 
@@ -372,7 +375,7 @@ Merged Area Geometry
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 112-120
+.. GENERATED FROM PYTHON SOURCE LINES 115-123
 
 Area Selection
 ~~~~~~~~~~~~~~
@@ -383,16 +386,18 @@ useful for selecting areas in a pythonic manner.
 
 This example generates a series of random squares and selects them
 
-.. GENERATED FROM PYTHON SOURCE LINES 120-135
+.. GENERATED FROM PYTHON SOURCE LINES 123-140
 
 .. code-block:: default
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
 
     def generate_random_area():
         start_x, start_y, height, width = np.random.random(4)
-        mapdl.blc4(start_x*10, start_y*10, height, width)
+        mapdl.blc4(start_x * 10, start_y * 10, height, width)
+
 
     # create 20 random rectangles
     for i in range(20):
@@ -417,15 +422,15 @@ This example generates a series of random squares and selects them
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 136-137
+.. GENERATED FROM PYTHON SOURCE LINES 141-142
 
 Select every other area with the old style command.
 
-.. GENERATED FROM PYTHON SOURCE LINES 137-141
+.. GENERATED FROM PYTHON SOURCE LINES 142-146
 
 .. code-block:: default
 
-    mapdl.asel('S', 'AREA', '', 1, 20, 2)
+    mapdl.asel("S", "AREA", "", 1, 20, 2)
     print(mapdl.geometry.anum)
 
 
@@ -444,13 +449,13 @@ Select every other area with the old style command.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 142-145
+.. GENERATED FROM PYTHON SOURCE LINES 147-150
 
 Select every other area with the new style command.
 
 Note that the Area IDs are 1 based in MAPDL, while Python ranges are 0 based.
 
-.. GENERATED FROM PYTHON SOURCE LINES 145-149
+.. GENERATED FROM PYTHON SOURCE LINES 150-154
 
 .. code-block:: default
 
@@ -473,7 +478,7 @@ Note that the Area IDs are 1 based in MAPDL, while Python ranges are 0 based.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 150-155
+.. GENERATED FROM PYTHON SOURCE LINES 155-160
 
 Select areas from a list
 
@@ -481,7 +486,7 @@ Note that you can ``return_selected`` if you want to see what you
 have selected.  This is helpful when reselecting from existing
 areas.
 
-.. GENERATED FROM PYTHON SOURCE LINES 155-159
+.. GENERATED FROM PYTHON SOURCE LINES 160-164
 
 .. code-block:: default
 
@@ -504,7 +509,7 @@ areas.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 160-179
+.. GENERATED FROM PYTHON SOURCE LINES 165-184
 
 APDL Command: APLOT
 ~~~~~~~~~~~~~~~~~~~
@@ -526,15 +531,12 @@ camera direction from the following:
 - 'zx' - ZX Plane view
 - 'zy' - ZY Plane view
 
-.. GENERATED FROM PYTHON SOURCE LINES 179-184
+.. GENERATED FROM PYTHON SOURCE LINES 184-186
 
 .. code-block:: default
 
 
-    mapdl.aplot(quality=1,
-                show_bounds=True,
-                cpos='iso',
-                show_lines=True)
+    mapdl.aplot(quality=1, show_bounds=True, cpos="iso", show_lines=True)
 
 
 
@@ -554,8 +556,8 @@ camera direction from the following:
     /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       PyvistaDeprecationWarning
 
-    [(10.146809172070032, 12.25502745500679, 7.064026626281749),
-     (3.082782545788278, 5.191000828725041, 0.0),
+    [(18.043828849104372, 16.814156264288272, 12.045128318609372),
+     (5.998700530495, 4.7690279456789, 0.0),
      (0.0, 0.0, 1.0)]
 
 
@@ -563,7 +565,7 @@ camera direction from the following:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.681 seconds)
+   **Total running time of the script:** ( 0 minutes  2.729 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_02-areas.py:

@@ -154,6 +154,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="launcher.html">
@@ -212,6 +213,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
             </div>
@@ -317,7 +319,7 @@ PyMAPDL Math API.  For additional PyMAPDL Math examples, visit
 <h2>MAPDL Matrix Example<a class="headerlink" href="#mapdl-matrix-example" title="Permalink to this headline">¶</a></h2>
 <p>This example demonstrates how to send an MAPDL Math matrix from MAPDL
 to Python and then send it back to be solved.  While this example runs
-<a class="reference internal" href="../api/_autosummary/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> on mass
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> on mass
 and stiffness matrices generated from MAPDL, you could instead use
 mass and stiffness matrices generated from an external FEM tool, or
 even modify the mass and stiffness matrices within Python.</p>
@@ -394,7 +396,7 @@ transferred them to a different MAPDL session to be solved.</p>
 </pre></div>
 </div>
 <p>As expected, the natural frequencies obtained from
-<a class="reference internal" href="../api/_autosummary/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> is
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> is
 identical to the result from <a class="reference internal" href="../mapdl_commands/solution/_autosummary/ansys.mapdl.core.Mapdl.solve.html#ansys.mapdl.core.Mapdl.solve" title="ansys.mapdl.core.Mapdl.solve"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.solve()</span></code></a>
 within MAPDL.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">1475.1333421</span>  <span class="mf">1475.1333426</span>  <span class="mf">2018.83737064</span> <span class="mf">2018.83737109</span> <span class="mf">2018.83737237</span>
@@ -403,7 +405,7 @@ within MAPDL.</p>
 </div>
 <p>If you wish to obtain the eigenvectors as well as the eigenvalues,
 initialize a matrix <code class="docutils literal notranslate"><span class="pre">eigvec</span></code> and send that to
-<a class="reference internal" href="../api/_autosummary/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a>:</p>
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nmode</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">eigvec</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">my_stiff</span><span class="o">.</span><span class="n">nrow</span><span class="p">,</span> <span class="n">nmode</span><span class="p">)</span>  <span class="c1"># for eigenvectors</span>
 <span class="n">val</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">eigs</span><span class="p">(</span><span class="n">nmode</span><span class="p">,</span> <span class="n">my_stiff</span><span class="p">,</span> <span class="n">my_mass</span><span class="p">,</span> <span class="n">fmin</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>

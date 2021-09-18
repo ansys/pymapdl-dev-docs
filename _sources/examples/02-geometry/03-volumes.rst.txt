@@ -112,11 +112,12 @@ Define a volume through keypoints.
 
 Create a triangular prism
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-56
+.. GENERATED FROM PYTHON SOURCE LINES 42-57
 
 .. code-block:: default
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
     k0 = mapdl.k("", 0, 0, 0)
     k1 = mapdl.k("", 1, 0, 0)
@@ -155,15 +156,16 @@ Create a triangular prism
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 57-58
+.. GENERATED FROM PYTHON SOURCE LINES 58-59
 
 Create a triangular prism
 
-.. GENERATED FROM PYTHON SOURCE LINES 58-68
+.. GENERATED FROM PYTHON SOURCE LINES 59-70
 
 .. code-block:: default
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
     k0 = mapdl.k("", 0, 0, 0)
     k1 = mapdl.k("", 1, 0, 0)
@@ -198,7 +200,7 @@ Create a triangular prism
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-74
+.. GENERATED FROM PYTHON SOURCE LINES 71-76
 
 APDL Command: VA
 ~~~~~~~~~~~~~~~~
@@ -206,16 +208,17 @@ Generate a volume bounded by existing areas.
 
 Create a simple tetrahedral bounded by 4 areas
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-92
+.. GENERATED FROM PYTHON SOURCE LINES 76-95
 
 .. code-block:: default
 
 
-    mapdl.clear(); mapdl.prep7()
-    k0 = mapdl.k('', -1, 0, 0)
-    k1 = mapdl.k('', 1, 0,  0)
-    k2 = mapdl.k('', 1, 1, 0)
-    k3 = mapdl.k('', 1, 0.5, 1)
+    mapdl.clear()
+    mapdl.prep7()
+    k0 = mapdl.k("", -1, 0, 0)
+    k1 = mapdl.k("", 1, 0, 0)
+    k2 = mapdl.k("", 1, 1, 0)
+    k3 = mapdl.k("", 1, 0.5, 1)
 
     # create faces
     a0 = mapdl.a(k0, k1, k2)
@@ -253,7 +256,7 @@ Create a simple tetrahedral bounded by 4 areas
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 93-98
+.. GENERATED FROM PYTHON SOURCE LINES 96-101
 
 APDL Command: VDRAG
 ~~~~~~~~~~~~~~~~~~~
@@ -261,11 +264,12 @@ Generate volumes by dragging an area pattern along a path.
 
 Create a square with a hole in it and drag it along an arc.
 
-.. GENERATED FROM PYTHON SOURCE LINES 98-113
+.. GENERATED FROM PYTHON SOURCE LINES 101-117
 
 .. code-block:: default
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
     # create a square with a hole in it.
     anum0 = mapdl.blc4(0, 0, 1, 1)
@@ -305,7 +309,7 @@ Create a square with a hole in it and drag it along an arc.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-119
+.. GENERATED FROM PYTHON SOURCE LINES 118-123
 
 APDL Command: VEXT
 ~~~~~~~~~~~~~~~~~~
@@ -313,11 +317,12 @@ Generate additional volumes by extruding areas.
 
 Create a basic cylinder by extruding a circle.
 
-.. GENERATED FROM PYTHON SOURCE LINES 119-133
+.. GENERATED FROM PYTHON SOURCE LINES 123-138
 
 .. code-block:: default
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
     # first, create an area from a circle
     k0 = mapdl.k("", 0, 0, 0)
@@ -356,15 +361,15 @@ Create a basic cylinder by extruding a circle.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 134-135
+.. GENERATED FROM PYTHON SOURCE LINES 139-140
 
 Create a tapered cylinder by using the ``rx`` and ``ry`` parameters.
 
-.. GENERATED FROM PYTHON SOURCE LINES 135-140
+.. GENERATED FROM PYTHON SOURCE LINES 140-145
 
 .. code-block:: default
 
-    mapdl.vdele('all')
+    mapdl.vdele("all")
     mapdl.vext(a0, dz=4, rx=0.3, ry=0.3, rz=1)
     mapdl.vplot(show_lines=True, quality=5)
 
@@ -394,7 +399,7 @@ Create a tapered cylinder by using the ``rx`` and ``ry`` parameters.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 141-147
+.. GENERATED FROM PYTHON SOURCE LINES 146-152
 
 APDL Command: VROTAT
 ~~~~~~~~~~~~~~~~~~~~
@@ -403,11 +408,12 @@ axis.
 
 Rotate a circle about the Z axis to create a hoop
 
-.. GENERATED FROM PYTHON SOURCE LINES 147-167
+.. GENERATED FROM PYTHON SOURCE LINES 152-173
 
 .. code-block:: default
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
     # first, create an area from a circle
     hoop_radius = 10
@@ -452,7 +458,7 @@ Rotate a circle about the Z axis to create a hoop
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 168-174
+.. GENERATED FROM PYTHON SOURCE LINES 174-180
 
 APDL Command: VSYMM
 ~~~~~~~~~~~~~~~~~~~~
@@ -461,15 +467,16 @@ Generate volumes from a volume pattern by symmetry reflection.
 Create four blocks by reflecting a single block across the YZ and
 then XZ planes.
 
-.. GENERATED FROM PYTHON SOURCE LINES 174-183
+.. GENERATED FROM PYTHON SOURCE LINES 180-190
 
 .. code-block:: default
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
     vnum = mapdl.blc4(1, 1, 1, 1, depth=1)
-    mapdl.vsymm('X', vnum)
-    mapdl.vsymm('Y', 'ALL')
+    mapdl.vsymm("X", vnum)
+    mapdl.vsymm("Y", "ALL")
 
     mapdl.vplot(show_lines=True, show_bounds=True)
 
@@ -499,13 +506,13 @@ then XZ planes.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 184-187
+.. GENERATED FROM PYTHON SOURCE LINES 191-194
 
 Volume IDs
 ~~~~~~~~~~
 Return an array of the volume numbers.
 
-.. GENERATED FROM PYTHON SOURCE LINES 187-191
+.. GENERATED FROM PYTHON SOURCE LINES 194-198
 
 .. code-block:: default
 
@@ -528,13 +535,13 @@ Return an array of the volume numbers.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 192-195
+.. GENERATED FROM PYTHON SOURCE LINES 199-202
 
 Volume Geometry
 ~~~~~~~~~~~~~~~
 Volume geometry can be accessed from the ``geometry.areas`` method.
 
-.. GENERATED FROM PYTHON SOURCE LINES 195-199
+.. GENERATED FROM PYTHON SOURCE LINES 202-206
 
 .. code-block:: default
 
@@ -583,7 +590,7 @@ Volume geometry can be accessed from the ``geometry.areas`` method.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 200-208
+.. GENERATED FROM PYTHON SOURCE LINES 207-215
 
 Volume Selection
 ~~~~~~~~~~~~~~~~
@@ -594,16 +601,18 @@ useful for selecting volumes in a pythonic manner.
 
 This example generates a series of random volumes and selects them
 
-.. GENERATED FROM PYTHON SOURCE LINES 208-223
+.. GENERATED FROM PYTHON SOURCE LINES 215-232
 
 .. code-block:: default
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
 
     def generate_random_volume():
         start_x, start_y, height, width, depth = np.random.random(5)
-        mapdl.blc4(start_x*10, start_y*10, height, width, depth)
+        mapdl.blc4(start_x * 10, start_y * 10, height, width, depth)
+
 
     # create 20 random volumes
     for _ in range(20):
@@ -628,15 +637,15 @@ This example generates a series of random volumes and selects them
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 224-225
+.. GENERATED FROM PYTHON SOURCE LINES 233-234
 
 Select every other volume with the old style command.
 
-.. GENERATED FROM PYTHON SOURCE LINES 225-229
+.. GENERATED FROM PYTHON SOURCE LINES 234-238
 
 .. code-block:: default
 
-    mapdl.vsel('S', 'VOLU', '', 1, 20, 2)
+    mapdl.vsel("S", "VOLU", "", 1, 20, 2)
     print(mapdl.geometry.vnum)
 
 
@@ -655,14 +664,14 @@ Select every other volume with the old style command.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 230-234
+.. GENERATED FROM PYTHON SOURCE LINES 239-243
 
 Select every other volume with the new style command.
 
 Note that the item IDs are 1 based in MAPDL, while Python ranges are
 0 based.
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-238
+.. GENERATED FROM PYTHON SOURCE LINES 243-247
 
 .. code-block:: default
 
@@ -685,7 +694,7 @@ Note that the item IDs are 1 based in MAPDL, while Python ranges are
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 239-246
+.. GENERATED FROM PYTHON SOURCE LINES 248-255
 
 Select volumes from a list
 
@@ -695,7 +704,7 @@ areas.
 
 Note that you could use a numpy array here as well.
 
-.. GENERATED FROM PYTHON SOURCE LINES 246-250
+.. GENERATED FROM PYTHON SOURCE LINES 255-259
 
 .. code-block:: default
 
@@ -718,7 +727,7 @@ Note that you could use a numpy array here as well.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 251-257
+.. GENERATED FROM PYTHON SOURCE LINES 260-266
 
 APDL Command: VPLOT
 ~~~~~~~~~~~~~~~~~~~
@@ -727,21 +736,20 @@ Plot colored volumes while displaying the keypoint numbers.
 There are a variety of plotting options available for all the common
 plotting methods.
 
-.. GENERATED FROM PYTHON SOURCE LINES 257-268
+.. GENERATED FROM PYTHON SOURCE LINES 266-276
 
 .. code-block:: default
 
 
-    mapdl.clear(); mapdl.prep7()
+    mapdl.clear()
+    mapdl.prep7()
 
     # Create basic demo geometry
     mapdl.cyl4(xcenter=0, ycenter=0, rad1=1, theta1=0, rad2=2, depth=1)
-    mapdl.vsymm('Y', 'ALL')
+    mapdl.vsymm("Y", "ALL")
 
     # Plot while showing bounds and disabling extra line plotting.
-    mapdl.vplot(show_bounds=True,
-                show_lines=False,
-                quality=5)
+    mapdl.vplot(show_bounds=True, show_lines=False, quality=5)
 
 
 
@@ -770,7 +778,7 @@ plotting methods.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  12.662 seconds)
+   **Total running time of the script:** ( 2 minutes  10.822 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_03-volumes.py:

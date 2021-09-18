@@ -136,16 +136,16 @@ ease of use later on.
 .. code-block:: default
 
 
-    length_bar = 15*12
+    length_bar = 15 * 12
     theta = 30
-    theta_rad = theta*pi/180.
+    theta_rad = theta * pi / 180.0
     node3_x = 2 * length_bar * cos(theta_rad)
     node2_y = length_bar * sin(theta_rad)
 
-    mapdl.et(1, 'LINK180')
-    mapdl.sectype(1, 'LINK')
+    mapdl.et(1, "LINK180")
+    mapdl.sectype(1, "LINK")
     mapdl.secdata(0.5)
-    mapdl.mp('EX', 1, 30e6)
+    mapdl.mp("EX", 1, 30e6)
 
 
 
@@ -180,7 +180,7 @@ along the equal sides, forming a hinge.
 
     mapdl.e(n1, n2)
     mapdl.e(n2, n3)
-    mapdl.eplot(show_node_numbering=True, line_width=5, cpos='xy')
+    mapdl.eplot(show_node_numbering=True, line_width=5, cpos="xy")
 
 
 
@@ -220,8 +220,8 @@ Define Boundary Conditions
 .. code-block:: default
 
 
-    mapdl.d(1, 'ALL', '', '', 3, 2)
-    mapdl.f(2, 'FY', -5000)
+    mapdl.d(1, "ALL", "", "", 3, 2)
+    mapdl.f(2, "FY", -5000)
     mapdl.finish()
 
 
@@ -251,7 +251,7 @@ Enter solution mode and solve the system.
 .. code-block:: default
 
 
-    mapdl.run('/SOLU')
+    mapdl.run("/SOLU")
     out = mapdl.solve()
     mapdl.finish()
 
@@ -288,11 +288,11 @@ data.
 
     mapdl.post1()
     mapdl.post_processing.plot_nodal_displacement(
-        'Y',
-        cmap='magma',
+        "Y",
+        cmap="magma",
         line_width=5,
-        cpos='xy',
-        scalar_bar_args={'title': 'Displacement', 'vertical': False},
+        cpos="xy",
+        scalar_bar_args={"title": "Displacement", "vertical": False},
     )
 
 
@@ -342,7 +342,7 @@ stress as an array.
 
     # print out the nodes
     for i, nnum in enumerate(mapdl.mesh.nnum):
-        print(f'Node {nnum} : {seqv[i]} psi')
+        print(f"Node {nnum} : {seqv[i]} psi")
 
     # Which is identical to:
     # print(mapdl.prnsol('S', 'PRIN'))
@@ -386,10 +386,10 @@ stress experienced by node 2 to the known quantities 10000 psi and
 
     q = mapdl.queries
     mid_node = q.node(node3_x * 0.5, -node2_y, 0)
-    displacement = mapdl.get_value('NODE', mid_node, 'U', 'Y')
+    displacement = mapdl.get_value("NODE", mid_node, "U", "Y")
     left_element = q.enearn(mid_node)
-    mapdl.etable('STRS', 'LS', 1)
-    stress = mapdl.get_value('ELEM', left_element, 'ETAB', 'STRS')
+    mapdl.etable("STRS", "LS", 1)
+    stress = mapdl.get_value("ELEM", left_element, "ETAB", "STRS")
 
     results = f"""
     ---------------------  RESULTS COMPARISON  -----------------------
@@ -426,7 +426,7 @@ stress experienced by node 2 to the known quantities 10000 psi and
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.817 seconds)
+   **Total running time of the script:** ( 0 minutes  0.821 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_vm-004-deflection_of_a_hinged_support.py:

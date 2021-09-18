@@ -65,16 +65,16 @@ This example will use SI units.
 
 
     mapdl.prep7()
-    mapdl.units('SI')  # SI - International system (m, kg, s, K).
+    mapdl.units("SI")  # SI - International system (m, kg, s, K).
 
     # define a PLANE183 element type with thickness
     mapdl.et(1, "PLANE183", kop3=3)
     mapdl.r(1, 0.001)  # thickness of 0.001 meters)
 
     # Define a material (nominal steel in SI)
-    mapdl.mp('EX', 1, 210E9)  # Elastic moduli in Pa (kg/(m*s**2))
-    mapdl.mp('DENS', 1, 7800)  # Density in kg/m3
-    mapdl.mp('NUXY', 1, 0.3)  # Poisson's Ratio
+    mapdl.mp("EX", 1, 210e9)  # Elastic moduli in Pa (kg/(m*s**2))
+    mapdl.mp("DENS", 1, 7800)  # Density in kg/m3
+    mapdl.mp("NUXY", 1, 0.3)  # Poisson's Ratio
 
     # list currently defined material properties
     print(mapdl.mplist())
@@ -115,7 +115,7 @@ approximate an infinite plate, the maximum stress must occur far
 away from the edges of the plate.  A length to width factor can
 approximate this.
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-77
+.. GENERATED FROM PYTHON SOURCE LINES 53-76
 
 .. code-block:: default
 
@@ -124,15 +124,15 @@ approximate this.
     width = 0.1
 
     ratio = 0.3  # diameter/width
-    diameter = width*ratio
-    radius = diameter*0.5
+    diameter = width * ratio
+    radius = diameter * 0.5
 
 
     # create the rectangle
     rect_anum = mapdl.blc4(width=length, height=width)
 
     # create a circle in the middle of the rectangle
-    circ_anum = mapdl.cyl4(length/2, width/2, radius)
+    circ_anum = mapdl.cyl4(length / 2, width / 2, radius)
 
     # Note how pymapdl parses the output and returns the area numbers
     # created by each command.  This can be used to execute a boolean
@@ -140,8 +140,7 @@ approximate this.
     plate_with_hole_anum = mapdl.asba(rect_anum, circ_anum)
 
     # finally, plot the lines of the plate
-    _ = mapdl.lplot(cpos='xy', line_width=3, font_size=26,
-                    color_lines=True, background='w')
+    _ = mapdl.lplot(cpos="xy", line_width=3, font_size=26, color_lines=True, background="w")
 
 
 
@@ -163,7 +162,7 @@ approximate this.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-85
+.. GENERATED FROM PYTHON SOURCE LINES 77-84
 
 Meshing
 ~~~~~~~
@@ -173,28 +172,29 @@ lines nearby the hole and ``ESIZE`` for the mesh global size.
 
 Line numbers can be identified through inspection using ``lplot``
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-104
+.. GENERATED FROM PYTHON SOURCE LINES 84-104
 
 .. code-block:: default
 
 
     # ensure there are at 50 elements around the hole
-    hole_esize = np.pi*diameter/50  # 0.0002
+    hole_esize = np.pi * diameter / 50  # 0.0002
     plate_esize = 0.01
 
     # increased the density of the mesh at the center
-    mapdl.lsel('S', 'LINE', vmin=5, vmax=8)
-    mapdl.lesize('ALL', hole_esize, kforc=1)
-    mapdl.lsel('ALL')
+    mapdl.lsel("S", "LINE", vmin=5, vmax=8)
+    mapdl.lesize("ALL", hole_esize, kforc=1)
+    mapdl.lsel("ALL")
 
     # Decrease the area mesh expansion.  This ensures that the mesh
     # remains fine nearby the hole
-    mapdl.mopt('EXPND', 0.7)  # default 1
+    mapdl.mopt("EXPND", 0.7)  # default 1
 
     mapdl.esize(plate_esize)
     mapdl.amesh(plate_with_hole_anum)
-    _ = mapdl.eplot(vtk=True, cpos='xy', show_edges=True, show_axes=False,
-                    line_width=2, background='w')
+    _ = mapdl.eplot(
+        vtk=True, cpos="xy", show_edges=True, show_axes=False, line_width=2, background="w"
+    )
 
 
 
@@ -232,19 +232,19 @@ force of 1 kN in the positive X direction.
 
 
     # Fix the left-hand side.
-    mapdl.nsel('S', 'LOC', 'X', 0)
-    mapdl.d('ALL', 'UX')
+    mapdl.nsel("S", "LOC", "X", 0)
+    mapdl.d("ALL", "UX")
 
     # Fix a single node on the left-hand side of the plate in the Y
     # direction.  Otherwise, the mesh would be allowed to move in the y
     # direction and would be an improperly constrained mesh.
-    mapdl.nsel('R', 'LOC', 'Y', width/2)
+    mapdl.nsel("R", "LOC", "Y", width / 2)
     assert mapdl.mesh.n_node == 1
-    mapdl.d('ALL', 'UY')
+    mapdl.d("ALL", "UY")
 
     # Apply a force on the right-hand side of the plate.  For this
     # example, we select the nodes at the right-most side of the plate.
-    mapdl.nsel('S', 'LOC', 'X', length)
+    mapdl.nsel("S", "LOC", "X", length)
 
     # Verify that only the nodes at length have been selected:
     assert np.allclose(mapdl.mesh.nodes[:, 0], length)
@@ -252,12 +252,12 @@ force of 1 kN in the positive X direction.
     # Next, couple the DOF for these nodes.  This lets us provide a force
     # to one node that will be spread throughout all nodes in this coupled
     # set.
-    mapdl.cp(5, 'UX', 'ALL')
+    mapdl.cp(5, "UX", "ALL")
 
     # Select a single node in this set and apply a force to it
     # We use "R" to re-select from the current node group
-    mapdl.nsel('R', 'LOC', 'Y', width/2)
-    mapdl.f('ALL', 'FX', 1000)
+    mapdl.nsel("R", "LOC", "Y", width / 2)
+    mapdl.f("ALL", "FX", 1000)
 
     # finally, be sure to select all nodes again to solve the entire solution
     _ = mapdl.allsel()
@@ -280,8 +280,8 @@ Solve the static analysis
 
 .. code-block:: default
 
-    mapdl.run('/SOLU')
-    mapdl.antype('STATIC')
+    mapdl.run("/SOLU")
+    mapdl.antype("STATIC")
     output = mapdl.solve()
     print(output)
 
@@ -297,7 +297,7 @@ Solve the static analysis
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =       1.845   TIME= 04:16:01
+     *** NOTE ***                            CP =       1.884   TIME= 04:16:02
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -310,7 +310,7 @@ Solve the static analysis
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:16:01  SEP 17, 2021 CP=      1.851
+     00000000  VERSION=LINUX x64     04:16:02  SEP 18, 2021 CP=      1.888
 
                                                                                
 
@@ -326,11 +326,11 @@ Solve the static analysis
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =       1.853   TIME= 04:16:01
+     *** NOTE ***                            CP =       1.890   TIME= 04:16:02
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =       1.854   TIME= 04:16:01
+     *** NOTE ***                            CP =       1.891   TIME= 04:16:02
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -379,8 +379,8 @@ Solve the static analysis
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.097   0.000099
-     Time at end of element matrix formulation CP = 1.93725502.              
+            1       977  PLANE183      0.092   0.000094
+     Time at end of element matrix formulation CP = 1.96832204.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =        6124,    Maximum wavefront =     48
@@ -388,7 +388,7 @@ Solve the static analysis
       Memory required for in-core solution     =     8.134 MB
       Memory required for out-of-core solution =     4.318 MB
 
-     *** NOTE ***                            CP =       2.125   TIME= 04:16:01
+     *** NOTE ***                            CP =       2.110   TIME= 04:16:02
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -403,12 +403,12 @@ Solve the static analysis
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.094   0.000096
+            1       977  PLANE183      0.085   0.000087
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.042   0.000043
+            1       977  PLANE183      0.043   0.000044
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -437,9 +437,9 @@ result reader.
 
     # grab the result from the ``mapdl`` instance
     result = mapdl.result
-    result.plot_principal_nodal_stress(0, 'SEQV', lighting=False,
-                                       cpos='xy', background='w',
-                                       text_color='k', add_text=False)
+    result.plot_principal_nodal_stress(
+        0, "SEQV", lighting=False, cpos="xy", background="w", text_color="k", add_text=False
+    )
 
     nnum, stress = result.principal_nodal_stress(0)
     von_mises = stress[:, -1]  # von-Mises stress is the right most column
@@ -499,7 +499,7 @@ the right-most side of the plate.
     # We use nanmean here because mid-side nodes have no stress
     mask = result.mesh.nodes[:, 0] == length
     far_field_stress = np.nanmean(von_mises[mask])
-    print('Far field von mises stress: %e' % far_field_stress)
+    print("Far field von mises stress: %e" % far_field_stress)
     # Which almost exactly equals the analytical value of 10000000.0 Pa
 
 
@@ -529,13 +529,13 @@ width over the modified cross section width.
 
 .. code-block:: default
 
-    adj = width/(width - diameter)
-    stress_adj = far_field_stress*adj
+    adj = width / (width - diameter)
+    stress_adj = far_field_stress * adj
 
     # The stress concentration is then simply the maximum stress divided
     # by the adjusted far-field stress.
-    stress_con = (max_stress/stress_adj)
-    print('Stress Concentration: %.2f' % stress_con)
+    stress_con = max_stress / stress_adj
+    print("Stress Concentration: %.2f" % stress_con)
 
 
 
@@ -561,40 +561,41 @@ The above script can be placed within a function to compute the
 stress concentration for a variety of hole diameters.  For each
 batch, MAPDL is reset and the geometry is generated from scratch.
 
-.. GENERATED FROM PYTHON SOURCE LINES 218-330
+.. GENERATED FROM PYTHON SOURCE LINES 218-331
 
 .. code-block:: default
+
 
 
     def compute_stress_con(ratio):
         """Compute the stress concentration for plate with a hole loaded
         with a uniaxial force.
         """
-        mapdl.clear('NOSTART')
+        mapdl.clear("NOSTART")
         mapdl.prep7()
-        mapdl.units('SI')  # SI - International system (m, kg, s, K).
+        mapdl.units("SI")  # SI - International system (m, kg, s, K).
 
         # define a PLANE183 element type with thickness
         mapdl.et(1, "PLANE183", kop3=3)
         mapdl.r(1, 0.001)  # thickness of 0.001 meters)
 
         # Define a material (nominal steel in SI)
-        mapdl.mp('EX', 1, 210E9)  # Elastic moduli in Pa (kg/(m*s**2))
-        mapdl.mp('DENS', 1, 7800)  # Density in kg/m3
-        mapdl.mp('NUXY', 1, 0.3)  # Poisson's Ratio
-        mapdl.emodif('ALL', 'MAT', 1)
+        mapdl.mp("EX", 1, 210e9)  # Elastic moduli in Pa (kg/(m*s**2))
+        mapdl.mp("DENS", 1, 7800)  # Density in kg/m3
+        mapdl.mp("NUXY", 1, 0.3)  # Poisson's Ratio
+        mapdl.emodif("ALL", "MAT", 1)
 
         # Geometry
         # ~~~~~~~~
         # Create a rectangular area with the hole in the middle
-        diameter = width*ratio
-        radius = diameter*0.5
+        diameter = width * ratio
+        radius = diameter * 0.5
 
         # create the rectangle
         rect_anum = mapdl.blc4(width=length, height=width)
 
         # create a circle in the middle of the rectangle
-        circ_anum = mapdl.cyl4(length/2, width/2, radius)
+        circ_anum = mapdl.cyl4(length / 2, width / 2, radius)
 
         # Note how pyansys parses the output and returns the area numbers
         # created by each command.  This can be used to execute a boolean
@@ -606,20 +607,20 @@ batch, MAPDL is reset and the geometry is generated from scratch.
         # Mesh the plate using a higher density near the hole and a lower
         # density for the remainder of the plate
 
-        mapdl.aclear('all')
+        mapdl.aclear("all")
 
         # ensure there are at least 100 elements around the hole
-        hole_esize = np.pi*diameter/100  # 0.0002
+        hole_esize = np.pi * diameter / 100  # 0.0002
         plate_esize = 0.01
 
         # increased the density of the mesh at the center
-        mapdl.lsel('S', 'LINE', vmin=5, vmax=8)
-        mapdl.lesize('ALL', hole_esize, kforc=1)
-        mapdl.lsel('ALL')
+        mapdl.lsel("S", "LINE", vmin=5, vmax=8)
+        mapdl.lesize("ALL", hole_esize, kforc=1)
+        mapdl.lsel("ALL")
 
         # Decrease the area mesh expansion.  This ensures that the mesh
         # remains fine nearby the hole
-        mapdl.mopt('EXPND', 0.7)  # default 1
+        mapdl.mopt("EXPND", 0.7)  # default 1
 
         mapdl.esize(plate_esize)
         mapdl.amesh(plate_with_hole_anum)
@@ -628,32 +629,32 @@ batch, MAPDL is reset and the geometry is generated from scratch.
         # Boundary Conditions
         # ~~~~~~~~~~~~~~~~~~~
         # Fix the left-hand side of the plate in the X direction
-        mapdl.nsel('S', 'LOC', 'X', 0)
-        mapdl.d('ALL', 'UX')
+        mapdl.nsel("S", "LOC", "X", 0)
+        mapdl.d("ALL", "UX")
 
         # Fix a single node on the left-hand side of the plate in the Y direction
-        mapdl.nsel('R', 'LOC', 'Y', width/2)
+        mapdl.nsel("R", "LOC", "Y", width / 2)
         assert mapdl.mesh.n_node == 1
-        mapdl.d('ALL', 'UY')
+        mapdl.d("ALL", "UY")
 
         # Apply a force on the right-hand side of the plate.  For this
         # example, we select the right-hand side of the plate.
-        mapdl.nsel('S', 'LOC', 'X', length)
+        mapdl.nsel("S", "LOC", "X", length)
 
         # Next, couple the DOF for these nodes
-        mapdl.cp(5, 'UX', 'ALL')
+        mapdl.cp(5, "UX", "ALL")
 
         # Again, select a single node in this set and apply a force to it
-        mapdl.nsel('r', 'loc', 'y', width/2)
-        mapdl.f('ALL', 'FX', 1000)
+        mapdl.nsel("r", "loc", "y", width / 2)
+        mapdl.f("ALL", "FX", 1000)
 
         # finally, be sure to select all nodes again to solve the entire solution
         mapdl.allsel()
 
         # Solve the Static Problem
         # ~~~~~~~~~~~~~~~~~~~~~~~~
-        mapdl.run('/SOLU')
-        mapdl.antype('STATIC')
+        mapdl.run("/SOLU")
+        mapdl.antype("STATIC")
         mapdl.solve()
 
         # Post-Processing
@@ -670,11 +671,11 @@ batch, MAPDL is reset and the geometry is generated from scratch.
         far_field_stress = np.nanmean(von_mises[mask])
 
         # adjust by the cross sectional area at the hole
-        adj = width/(width - diameter)
-        stress_adj = far_field_stress*adj
+        adj = width / (width - diameter)
+        stress_adj = far_field_stress * adj
 
         # finally, compute the stress concentration
-        return max_stress/stress_adj
+        return max_stress / stress_adj
 
 
 
@@ -684,20 +685,20 @@ batch, MAPDL is reset and the geometry is generated from scratch.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 331-332
+.. GENERATED FROM PYTHON SOURCE LINES 332-333
 
 Run the batch and record the stress concentration
 
-.. GENERATED FROM PYTHON SOURCE LINES 332-341
+.. GENERATED FROM PYTHON SOURCE LINES 333-342
 
 .. code-block:: default
 
     k_t_exp = []
     ratios = np.linspace(0.01, 0.5, 15)
-    print('    Ratio  : Stress Concentration (K_t)')
+    print("    Ratio  : Stress Concentration (K_t)")
     for ratio in ratios:
         stress_con = compute_stress_con(ratio)
-        print('%10.4f : %10.4f' % (ratio, stress_con))
+        print("%10.4f : %10.4f" % (ratio, stress_con))
         k_t_exp.append(stress_con)
 
 
@@ -735,7 +736,7 @@ Run the batch and record the stress concentration
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 342-361
+.. GENERATED FROM PYTHON SOURCE LINES 343-362
 
 Analytical Comparison
 ~~~~~~~~~~~~~~~~~~~~~
@@ -757,19 +758,19 @@ result for this geometry remarkably well using PLANE183 elements.
 The fit to the results may vary depending on the ratio between the
 height and width of the plate.
 
-.. GENERATED FROM PYTHON SOURCE LINES 361-371
+.. GENERATED FROM PYTHON SOURCE LINES 362-372
 
 .. code-block:: default
 
 
     # where ratio is (d/h)
-    k_t_anl = 3 - 3.14*ratios + 3.667*ratios**2 - 1.527*ratios**3
+    k_t_anl = 3 - 3.14 * ratios + 3.667 * ratios ** 2 - 1.527 * ratios ** 3
 
-    plt.plot(ratios, k_t_anl, label=r'$K_t$ Analytical')
-    plt.plot(ratios, k_t_exp, label=r'$K_t$ ANSYS')
+    plt.plot(ratios, k_t_anl, label=r"$K_t$ Analytical")
+    plt.plot(ratios, k_t_exp, label=r"$K_t$ ANSYS")
     plt.legend()
-    plt.xlabel('Ratio of Hole Diameter to Width of Plate')
-    plt.ylabel('Stress Concentration')
+    plt.xlabel("Ratio of Hole Diameter to Width of Plate")
+    plt.ylabel("Stress Concentration")
     plt.show()
 
 
@@ -785,7 +786,7 @@ height and width of the plate.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  46.502 seconds)
+   **Total running time of the script:** ( 0 minutes  45.977 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_2d_plate_with_a_hole.py:
