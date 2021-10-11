@@ -891,6 +891,16 @@ These are not supported in APDL.</p>
 <p>After issuing the /CWD command, all new files opened with no default
 directory specified (via the FILE, /COPY, or RESUME commands, for
 example) default to the new <code class="docutils literal notranslate"><span class="pre">dirpath</span></code> directory.</p>
+<p class="rubric">Examples</p>
+<p>Change MAPDL’s working directory to <code class="docutils literal notranslate"><span class="pre">&quot;C:/temp&quot;</span></code>.  This
+assumes that MAPDL running on Windows.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="s2">&quot;C:/temp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>MAPDL on Linux example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="s2">&quot;/tmp/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>
