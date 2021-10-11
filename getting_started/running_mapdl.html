@@ -25,10 +25,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -62,11 +62,9 @@
   <div id="navbar-start">
     
     
-
 <a class="navbar-brand" href="../index.html">
-  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+<p class="title">ansys.mapdl.core</p>
 </a>
-
 
     
   </div>
@@ -130,7 +128,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/PyMAPDL" rel="noopener" target="_blank" title="GitHub">
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
             <span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label>
           </a>
@@ -206,6 +204,23 @@
   <a class="reference internal nav-link" href="#launching-mapdl">
    Launching MAPDL
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#launching-mapdl-locally">
+     Launching MAPDL locally
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lunching-a-grpc-mapdl-session">
+     Lunching a gRPC MAPDL session
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#connecting-to-a-grpc-mapdl-session">
+     Connecting to a gRPC MAPDL session
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#debugging-launching-mapdl">
@@ -291,8 +306,9 @@ figure.</p>
 </div>
 <div class="section" id="launching-mapdl">
 <h2>Launching MAPDL<a class="headerlink" href="#launching-mapdl" title="Permalink to this headline">¶</a></h2>
-<p>There are two ways to launch MAPDL to use it with pymapdl.  First, you
-can use the <code class="docutils literal notranslate"><span class="pre">launch_mapdl</span></code> function to have Python startup MAPDL and
+<div class="section" id="launching-mapdl-locally">
+<h3>Launching MAPDL locally<a class="headerlink" href="#launching-mapdl-locally" title="Permalink to this headline">¶</a></h3>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">launch_mapdl</span></code> function to have Python startup MAPDL and
 automatically connect to it:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
@@ -303,15 +319,20 @@ automatically connect to it:</p>
 <span class="go">PyMAPDL Version:     Version: 0.57.0</span>
 </pre></div>
 </div>
-<p>The second approach is to start MAPDL from the command line and then
-connect to it.  First, launch MAPDL with:</p>
+<p>This is the easiest and fastest way to get PyMAPDL up and running.
+But you need to have an ANSYS license server installed locally.</p>
+</div>
+<div class="section" id="lunching-a-grpc-mapdl-session">
+<h3>Lunching a gRPC MAPDL session<a class="headerlink" href="#lunching-a-grpc-mapdl-session" title="Permalink to this headline">¶</a></h3>
+<p>You can start MAPDL from the command line and then connect to it.
+To launch MAPDL on Windows (assuming a <code class="docutils literal notranslate"><span class="pre">C:/Program</span> <span class="pre">Files/ANSYS</span> <span class="pre">Inc/v211</span></code> installation) use:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">Program</span> <span class="n">Files</span><span class="o">/</span><span class="n">ANSYS</span> <span class="n">Inc</span><span class="o">/</span><span class="n">v211</span><span class="o">/</span><span class="n">ansys</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">winx64</span><span class="o">/</span><span class="n">ANSYS211</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">grpc</span>
 </pre></div>
 </div>
-<p>Or on Linux with (assuming a <code class="docutils literal notranslate"><span class="pre">/usr/ansys_inc</span></code> install:</p>
-<blockquote>
-<div><p>/usr/ansys_inc/v211/ansys/bin/ansys211 -grpc</p>
-</div></blockquote>
+<p>Or on Linux (assuming a <code class="docutils literal notranslate"><span class="pre">/usr/ansys_inc</span></code> installation):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ansys_inc</span><span class="o">/</span><span class="n">v211</span><span class="o">/</span><span class="n">ansys</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ansys211</span> <span class="o">-</span><span class="n">grpc</span>
+</pre></div>
+</div>
 <p>This starts up MAPDL in gRPC mode, and MAPDL should output:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Start</span> <span class="n">GRPC</span> <span class="n">Server</span>
 
@@ -329,35 +350,44 @@ port 50005 with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ansys_inc</span><span class="o">/</span><span class="n">v211</span><span class="o">/</span><span class="n">ansys</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ansys211</span> <span class="o">-</span><span class="n">port</span> <span class="mi">50005</span> <span class="o">-</span><span class="n">grpc</span>
 </pre></div>
 </div>
-<p>This server can be connected to either from the same host, or from an
+<p>You can also configure the IP.
+However because of an ANSYS limitation to receive
+strings from command line, the IP needs to be read from an external file
+called <code class="docutils literal notranslate"><span class="pre">mylocal.ip</span></code>. This file is read automatically from the directory where
+MAPDL is running.</p>
+<p>You can then setup the IP in Windows (Powershell and CMD) with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;127.0.0.1&quot;</span> <span class="o">&gt;</span> <span class="n">mylocal</span><span class="o">.</span><span class="n">ip</span>
+<span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">Program</span> <span class="n">Files</span><span class="o">/</span><span class="n">ANSYS</span> <span class="n">Inc</span><span class="o">/</span><span class="n">v211</span><span class="o">/</span><span class="n">ansys</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">winx64</span><span class="o">/</span><span class="n">ANSYS211</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">grpc</span>
+</pre></div>
+</div>
+<p>or in Linux with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;127.0.0.1&quot;</span> <span class="o">&gt;</span> <span class="n">mylocal</span><span class="o">.</span><span class="n">ip</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ansys_inc</span><span class="o">/</span><span class="n">v211</span><span class="o">/</span><span class="n">ansys</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ansys211</span> <span class="o">-</span><span class="n">grpc</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="connecting-to-a-grpc-mapdl-session">
+<h3>Connecting to a gRPC MAPDL session<a class="headerlink" href="#connecting-to-a-grpc-mapdl-session" title="Permalink to this headline">¶</a></h3>
+<p>A MAPDL gRPC server can be connected to either from the same host, or from an
 external host.  For example, you can connect to a MAPDL service
-running locally with:</p>
+running <strong>locally</strong> with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">Mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">Mapdl</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>This assumes that your MAPDL service is running locally on the default
-port of 50052.  If you want to connect to a remote instance of MAPDL
-and you know the IP address of that instance, you can connect to it.
+<p>This assumes that your MAPDL service is running locally on the default ip
+(127.0.0.1) and on the default port (50052).</p>
+<p>If you want to connect to a <strong>remote</strong> instance of MAPDL and you know the IP
+address of that instance, you can connect to it.
 For example, if on your local network at IP <code class="docutils literal notranslate"><span class="pre">192.168.0.1</span></code> there is a
-computer running MAPDL, you can connect to it with</p>
+computer running MAPDL on the port 50052, you can connect to it with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">Mapdl</span><span class="p">(</span><span class="s1">&#39;192.168.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">50052</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Please note that you must have started MAPDL for both of these code
-blocks to work.  If you have MAPDL installed on your local host, you
+<p>Please note that you must have started MAPDL in gRPC mode in the PC with
+the mentioned IP for this to work.
+If you have MAPDL installed on your local host, you
 can use <code class="docutils literal notranslate"><span class="pre">launch_mapdl</span></code> to both start and connect to MAPDL.</p>
-<p>If you need to specify the network adapter to open up the gRPC interface
-on, you need to provide a file named <code class="docutils literal notranslate"><span class="pre">&quot;mylocal.ip&quot;</span></code> in the same
-directory that runs MAPDL.  For example, if one of your network
-adapters has an IP address of <code class="docutils literal notranslate"><span class="pre">192.168.0.16</span></code>, then create a file
-named <code class="docutils literal notranslate"><span class="pre">&quot;mylocal.ip&quot;</span></code> containing:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">192.168.0.16</span>
-</pre></div>
-</div>
-<p>Then start the instance with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ansys_inc</span><span class="o">/</span><span class="n">v211</span><span class="o">/</span><span class="n">ansys</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ansys211</span> <span class="o">-</span><span class="n">grpc</span>
-</pre></div>
 </div>
 </div>
 <div class="section" id="debugging-launching-mapdl">
@@ -500,7 +530,7 @@ then installs it via <code class="docutils literal notranslate"><span class="pre
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
 </p>
     </div>
     

@@ -25,10 +25,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -62,11 +62,9 @@
   <div id="navbar-start">
     
     
-
 <a class="navbar-brand" href="../../index.html">
-  <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+<p class="title">ansys.mapdl.core</p>
 </a>
-
 
     
   </div>
@@ -130,7 +128,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/PyMAPDL" rel="noopener" target="_blank" title="GitHub">
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
             <span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label>
           </a>
@@ -951,7 +949,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.frqscl.html#ansys.mapdl.core.Mapdl.frqscl" title="ansys.mapdl.core.Mapdl.frqscl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.frqscl</span></code></a>([scaling])</p></td>
 <td><p>Turns on automatic scaling of the entire mass matrix and frequency</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.harfrq.html#ansys.mapdl.core.Mapdl.harfrq" title="ansys.mapdl.core.Mapdl.harfrq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.harfrq</span></code></a>([freqb, freqe, logopt, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.harfrq.html#ansys.mapdl.core.Mapdl.harfrq" title="ansys.mapdl.core.Mapdl.harfrq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.harfrq</span></code></a>([freqb, freqe, logopt, ...])</p></td>
 <td><p>Defines the frequency range in a harmonic analysis.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hrexp.html#ansys.mapdl.core.Mapdl.hrexp" title="ansys.mapdl.core.Mapdl.hrexp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.hrexp</span></code></a>([angle])</p></td>
@@ -960,7 +958,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hrocean.html#ansys.mapdl.core.Mapdl.hrocean" title="ansys.mapdl.core.Mapdl.hrocean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.hrocean</span></code></a>([type_, nphase])</p></td>
 <td><p>Perform the harmonic ocean wave procedure (HOWP).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hropt.html#ansys.mapdl.core.Mapdl.hropt" title="ansys.mapdl.core.Mapdl.hropt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.hropt</span></code></a>([method, maxmode, minmode, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hropt.html#ansys.mapdl.core.Mapdl.hropt" title="ansys.mapdl.core.Mapdl.hropt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.hropt</span></code></a>([method, maxmode, minmode, ...])</p></td>
 <td><p>Specifies harmonic analysis options.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hrout.html#ansys.mapdl.core.Mapdl.hrout" title="ansys.mapdl.core.Mapdl.hrout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.hrout</span></code></a>([reimky, clust, mcont])</p></td>
@@ -984,13 +982,13 @@
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.modcont.html#ansys.mapdl.core.Mapdl.modcont" title="ansys.mapdl.core.Mapdl.modcont"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.modcont</span></code></a>([mlskey, enforcedkey])</p></td>
 <td><p>Specify additional modal analysis options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.modseloption.html#ansys.mapdl.core.Mapdl.modseloption" title="ansys.mapdl.core.Mapdl.modseloption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.modseloption</span></code></a>([dir1, dir2, dir3, dir4, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.modseloption.html#ansys.mapdl.core.Mapdl.modseloption" title="ansys.mapdl.core.Mapdl.modseloption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.modseloption</span></code></a>([dir1, dir2, dir3, dir4, ...])</p></td>
 <td><p>APDL Command: MODSELOPTION</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.modopt.html#ansys.mapdl.core.Mapdl.modopt" title="ansys.mapdl.core.Mapdl.modopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.modopt</span></code></a>([method, nmode, freqb, freqe, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.modopt.html#ansys.mapdl.core.Mapdl.modopt" title="ansys.mapdl.core.Mapdl.modopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.modopt</span></code></a>([method, nmode, freqb, freqe, ...])</p></td>
 <td><p>Specifies modal analysis options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mxpand.html#ansys.mapdl.core.Mapdl.mxpand" title="ansys.mapdl.core.Mapdl.mxpand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mxpand</span></code></a>([nmode, freqb, freqe, elcalc, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mxpand.html#ansys.mapdl.core.Mapdl.mxpand" title="ansys.mapdl.core.Mapdl.mxpand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mxpand</span></code></a>([nmode, freqb, freqe, elcalc, ...])</p></td>
 <td><p>Specifies the number of modes to expand and write for a modal or</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.qrdopt.html#ansys.mapdl.core.Mapdl.qrdopt" title="ansys.mapdl.core.Mapdl.qrdopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.qrdopt</span></code></a>([reusekey, symmeth, cmccoutkey])</p></td>
@@ -1005,10 +1003,10 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.timint.html#ansys.mapdl.core.Mapdl.timint" title="ansys.mapdl.core.Mapdl.timint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.timint</span></code></a>([key, lab])</p></td>
 <td><p>Turns on transient effects.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.tintp.html#ansys.mapdl.core.Mapdl.tintp" title="ansys.mapdl.core.Mapdl.tintp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.tintp</span></code></a>([gamma, alpha, delta, theta, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.tintp.html#ansys.mapdl.core.Mapdl.tintp" title="ansys.mapdl.core.Mapdl.tintp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.tintp</span></code></a>([gamma, alpha, delta, theta, ...])</p></td>
 <td><p>Defines transient integration parameters.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.trnopt.html#ansys.mapdl.core.Mapdl.trnopt" title="ansys.mapdl.core.Mapdl.trnopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.trnopt</span></code></a>([method, maxmode, minmode, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.trnopt.html#ansys.mapdl.core.Mapdl.trnopt" title="ansys.mapdl.core.Mapdl.trnopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.trnopt</span></code></a>([method, maxmode, minmode, ...])</p></td>
 <td><p>Specifies transient analysis options.</p></td>
 </tr>
 </tbody>
@@ -1038,7 +1036,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
 </p>
     </div>
     

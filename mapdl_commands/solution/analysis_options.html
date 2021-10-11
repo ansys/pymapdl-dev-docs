@@ -25,10 +25,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -62,11 +62,9 @@
   <div id="navbar-start">
     
     
-
 <a class="navbar-brand" href="../../index.html">
-  <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+<p class="title">ansys.mapdl.core</p>
 </a>
-
 
     
   </div>
@@ -130,7 +128,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/PyMAPDL" rel="noopener" target="_blank" title="GitHub">
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
             <span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label>
           </a>
@@ -1075,7 +1073,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.adams.html#ansys.mapdl.core.Mapdl.adams" title="ansys.mapdl.core.Mapdl.adams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.adams</span></code></a>([nmodes, kstress, kshell])</p></td>
 <td><p>Performs solutions and writes flexible body information to a modal</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.antype.html#ansys.mapdl.core.Mapdl.antype" title="ansys.mapdl.core.Mapdl.antype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.antype</span></code></a>([antype, status, ldstep, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.antype.html#ansys.mapdl.core.Mapdl.antype" title="ansys.mapdl.core.Mapdl.antype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.antype</span></code></a>([antype, status, ldstep, ...])</p></td>
 <td><p>Specifies the analysis type and restart status.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ascres.html#ansys.mapdl.core.Mapdl.ascres" title="ansys.mapdl.core.Mapdl.ascres"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ascres</span></code></a>([opt])</p></td>
@@ -1084,19 +1082,19 @@
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.asol.html#ansys.mapdl.core.Mapdl.asol" title="ansys.mapdl.core.Mapdl.asol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.asol</span></code></a>([lab, opt])</p></td>
 <td><p>Specifies the output type of an acoustic scattering analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bcsoption.html#ansys.mapdl.core.Mapdl.bcsoption" title="ansys.mapdl.core.Mapdl.bcsoption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bcsoption</span></code></a>([memory_option, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bcsoption.html#ansys.mapdl.core.Mapdl.bcsoption" title="ansys.mapdl.core.Mapdl.bcsoption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bcsoption</span></code></a>([memory_option, ...])</p></td>
 <td><p>Sets memory option for the sparse solver.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cgrow.html#ansys.mapdl.core.Mapdl.cgrow" title="ansys.mapdl.core.Mapdl.cgrow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cgrow</span></code></a>([action, par1, par2])</p></td>
 <td><p>Defines crack-growth information</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmatrix.html#ansys.mapdl.core.Mapdl.cmatrix" title="ansys.mapdl.core.Mapdl.cmatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmatrix</span></code></a>([symfac, condname, numcond, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmatrix.html#ansys.mapdl.core.Mapdl.cmatrix" title="ansys.mapdl.core.Mapdl.cmatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmatrix</span></code></a>([symfac, condname, numcond, ...])</p></td>
 <td><p>Performs electrostatic field solutions and calculates the self and mutual capacitances between multiple conductors.x</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmsopt.html#ansys.mapdl.core.Mapdl.cmsopt" title="ansys.mapdl.core.Mapdl.cmsopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmsopt</span></code></a>([cmsmeth, nmode, freqb, freqe, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmsopt.html#ansys.mapdl.core.Mapdl.cmsopt" title="ansys.mapdl.core.Mapdl.cmsopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmsopt</span></code></a>([cmsmeth, nmode, freqb, freqe, ...])</p></td>
 <td><p>Specifies component mode synthesis (CMS) analysis options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cncheck.html#ansys.mapdl.core.Mapdl.cncheck" title="ansys.mapdl.core.Mapdl.cncheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cncheck</span></code></a>([option, rid1, rid2, rinc, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cncheck.html#ansys.mapdl.core.Mapdl.cncheck" title="ansys.mapdl.core.Mapdl.cncheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cncheck</span></code></a>([option, rid1, rid2, rinc, ...])</p></td>
 <td><p>Provides and/or adjusts the initial status of contact pairs.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cnkmod.html#ansys.mapdl.core.Mapdl.cnkmod" title="ansys.mapdl.core.Mapdl.cnkmod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cnkmod</span></code></a>([itype, knum, value])</p></td>
@@ -1111,16 +1109,16 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ddoption.html#ansys.mapdl.core.Mapdl.ddoption" title="ansys.mapdl.core.Mapdl.ddoption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ddoption</span></code></a>([decomp])</p></td>
 <td><p>Sets domain decomposer option for Distributed ANSYS.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dmpext.html#ansys.mapdl.core.Mapdl.dmpext" title="ansys.mapdl.core.Mapdl.dmpext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dmpext</span></code></a>([smode, tmode, dmpname, freqb, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dmpext.html#ansys.mapdl.core.Mapdl.dmpext" title="ansys.mapdl.core.Mapdl.dmpext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dmpext</span></code></a>([smode, tmode, dmpname, freqb, ...])</p></td>
 <td><p>Extracts modal damping coefficients in a specified frequency range.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dmpoption.html#ansys.mapdl.core.Mapdl.dmpoption" title="ansys.mapdl.core.Mapdl.dmpoption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dmpoption</span></code></a>([filetype, combine])</p></td>
 <td><p>Specifies distributed memory parallel (Distributed ANSYS) file</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dspoption.html#ansys.mapdl.core.Mapdl.dspoption" title="ansys.mapdl.core.Mapdl.dspoption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dspoption</span></code></a>([reord_option, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dspoption.html#ansys.mapdl.core.Mapdl.dspoption" title="ansys.mapdl.core.Mapdl.dspoption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dspoption</span></code></a>([reord_option, ...])</p></td>
 <td><p>Sets memory option for the distributed sparse solver.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.exbopt.html#ansys.mapdl.core.Mapdl.exbopt" title="ansys.mapdl.core.Mapdl.exbopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.exbopt</span></code></a>([outinv2, outtcms, outsub, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.exbopt.html#ansys.mapdl.core.Mapdl.exbopt" title="ansys.mapdl.core.Mapdl.exbopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.exbopt</span></code></a>([outinv2, outtcms, outsub, ...])</p></td>
 <td><p>Specifies .EXB file output options in a CMS generation pass.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ematwrite.html#ansys.mapdl.core.Mapdl.ematwrite" title="ansys.mapdl.core.Mapdl.ematwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ematwrite</span></code></a>([key])</p></td>
@@ -1135,7 +1133,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.escheck.html#ansys.mapdl.core.Mapdl.escheck" title="ansys.mapdl.core.Mapdl.escheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.escheck</span></code></a>([sele, levl, defkey])</p></td>
 <td><p>Perform element shape checking for a selected element set.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.essolv.html#ansys.mapdl.core.Mapdl.essolv" title="ansys.mapdl.core.Mapdl.essolv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.essolv</span></code></a>([electit, strutit, dimn, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.essolv.html#ansys.mapdl.core.Mapdl.essolv" title="ansys.mapdl.core.Mapdl.essolv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.essolv</span></code></a>([electit, strutit, dimn, ...])</p></td>
 <td><p>Performs a coupled electrostatic-structural analysis.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.expass.html#ansys.mapdl.core.Mapdl.expass" title="ansys.mapdl.core.Mapdl.expass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.expass</span></code></a>([key])</p></td>
@@ -1144,7 +1142,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.gauge.html#ansys.mapdl.core.Mapdl.gauge" title="ansys.mapdl.core.Mapdl.gauge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.gauge</span></code></a>([opt, freq])</p></td>
 <td><p>Gauges the problem domain for a magnetic edge-element formulation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.gmatrix.html#ansys.mapdl.core.Mapdl.gmatrix" title="ansys.mapdl.core.Mapdl.gmatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.gmatrix</span></code></a>([symfac, condname, numcond, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.gmatrix.html#ansys.mapdl.core.Mapdl.gmatrix" title="ansys.mapdl.core.Mapdl.gmatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.gmatrix</span></code></a>([symfac, condname, numcond, ...])</p></td>
 <td><p>Performs electric field solutions and calculates the self and mutual</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.lanboption.html#ansys.mapdl.core.Mapdl.lanboption" title="ansys.mapdl.core.Mapdl.lanboption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.lanboption</span></code></a>([strmck])</p></td>
@@ -1174,10 +1172,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ovcheck.html#ansys.mapdl.core.Mapdl.ovcheck" title="ansys.mapdl.core.Mapdl.ovcheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ovcheck</span></code></a>([method, frequency, set_])</p></td>
 <td><p>Checks for overconstraint among constraint equations and Lagrange</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.pcgopt.html#ansys.mapdl.core.Mapdl.pcgopt" title="ansys.mapdl.core.Mapdl.pcgopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.pcgopt</span></code></a>([lev_diff, reduceio, strmck, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.pcgopt.html#ansys.mapdl.core.Mapdl.pcgopt" title="ansys.mapdl.core.Mapdl.pcgopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.pcgopt</span></code></a>([lev_diff, reduceio, strmck, ...])</p></td>
 <td><p>Controls PCG solver options.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.perturb.html#ansys.mapdl.core.Mapdl.perturb" title="ansys.mapdl.core.Mapdl.perturb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.perturb</span></code></a>([type_, matkey, contkey, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.perturb.html#ansys.mapdl.core.Mapdl.perturb" title="ansys.mapdl.core.Mapdl.perturb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.perturb</span></code></a>([type_, matkey, contkey, ...])</p></td>
 <td><p>Sets linear perturbation analysis options.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.prscontrol.html#ansys.mapdl.core.Mapdl.prscontrol" title="ansys.mapdl.core.Mapdl.prscontrol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.prscontrol</span></code></a>([key])</p></td>
@@ -1201,22 +1199,22 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.seexp.html#ansys.mapdl.core.Mapdl.seexp" title="ansys.mapdl.core.Mapdl.seexp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.seexp</span></code></a>([sename, usefil, imagky, expopt])</p></td>
 <td><p>Specifies options for the substructure expansion pass.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.seopt.html#ansys.mapdl.core.Mapdl.seopt" title="ansys.mapdl.core.Mapdl.seopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.seopt</span></code></a>([sename, sematr, sepr, sesst, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.seopt.html#ansys.mapdl.core.Mapdl.seopt" title="ansys.mapdl.core.Mapdl.seopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.seopt</span></code></a>([sename, sematr, sepr, sesst, ...])</p></td>
 <td><p>Specifies substructure analysis options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.snoption.html#ansys.mapdl.core.Mapdl.snoption" title="ansys.mapdl.core.Mapdl.snoption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.snoption</span></code></a>([rangefact, blocksize, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.snoption.html#ansys.mapdl.core.Mapdl.snoption" title="ansys.mapdl.core.Mapdl.snoption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.snoption</span></code></a>([rangefact, blocksize, ...])</p></td>
 <td><p>Specifies Supernode (SNODE) eigensolver options.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.solve.html#ansys.mapdl.core.Mapdl.solve" title="ansys.mapdl.core.Mapdl.solve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.solve</span></code></a>([action])</p></td>
 <td><p>Starts a solution.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.stabilize.html#ansys.mapdl.core.Mapdl.stabilize" title="ansys.mapdl.core.Mapdl.stabilize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.stabilize</span></code></a>([key, method, value, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.stabilize.html#ansys.mapdl.core.Mapdl.stabilize" title="ansys.mapdl.core.Mapdl.stabilize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.stabilize</span></code></a>([key, method, value, ...])</p></td>
 <td><p>Activates stabilization for all elements that support nonlinear</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.thexpand.html#ansys.mapdl.core.Mapdl.thexpand" title="ansys.mapdl.core.Mapdl.thexpand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.thexpand</span></code></a>([key])</p></td>
 <td><p>Enables or disables thermal loading</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.thopt.html#ansys.mapdl.core.Mapdl.thopt" title="ansys.mapdl.core.Mapdl.thopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.thopt</span></code></a>([refopt, reformtol, ntabpoints, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.thopt.html#ansys.mapdl.core.Mapdl.thopt" title="ansys.mapdl.core.Mapdl.thopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.thopt</span></code></a>([refopt, reformtol, ntabpoints, ...])</p></td>
 <td><p>Specifies nonlinear transient thermal solution options.</p></td>
 </tr>
 </tbody>
@@ -1246,7 +1244,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
 </p>
     </div>
     

@@ -89,9 +89,10 @@ graph of the sparse matrix
 
 
 
-.. image:: /examples/01-apdlmath-examples/images/sphx_glr_scipy_sparse_matrix_001.png
-    :alt: scipy sparse matrix
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/01-apdlmath-examples/images/sphx_glr_scipy_sparse_matrix_001.png
+   :alt: scipy sparse matrix
+   :srcset: /examples/01-apdlmath-examples/images/sphx_glr_scipy_sparse_matrix_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -101,7 +102,7 @@ graph of the sparse matrix
  .. code-block:: none
 
 
-    <matplotlib.lines.Line2D object at 0x7f7112d17d50>
+    <matplotlib.lines.Line2D object at 0x7fe009065280>
 
 
 
@@ -239,9 +240,9 @@ Printing the list of objects in the MAPDL space, we find:
 
       Name                   Type            Mem. (MB)       Dims            Workspace
 
-       KMOQGL                SMAT            0.011           [126:126]               1
+       JYWXOX                SMAT            0.011           [126:126]               1
        MY_MAT                SMAT            0.000           [126:126]               1
-       STHIXV                SMAT            0.011           [126:126]               1
+       RMQGOJ                SMAT            0.011           [126:126]               1
        MY_MAT_DATA           VEC             0.006           738             1
        MY_MAT_IND            VEC             0.001           127             1
        MY_MAT_PTR            VEC             0.003           738             1
@@ -275,9 +276,9 @@ access the id property of the Python object.
 
  .. code-block:: none
 
-    name(k)=KMOQGL
+    name(k)=RMQGOJ
     name(my_mat)=my_mat
-    name(msub)=STHIXV
+    name(msub)=JYWXOX
 
 
 
@@ -285,7 +286,7 @@ access the id property of the Python object.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.649 seconds)
+   **Total running time of the script:** ( 0 minutes  0.601 seconds)
 
 
 .. _sphx_glr_download_examples_01-apdlmath-examples_scipy_sparse_matrix.py:

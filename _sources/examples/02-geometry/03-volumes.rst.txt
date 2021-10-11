@@ -86,9 +86,10 @@ Define a volume through keypoints.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_03-volumes_001.png
-    :alt: 03 volumes
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_03-volumes_001.png
+   :alt: 03 volumes
+   :srcset: /examples/02-geometry/images/sphx_glr_03-volumes_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -97,10 +98,10 @@ Define a volume through keypoints.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(2.431851652578137, 2.431851652578137, 2.431851652578137),
      (0.5, 0.5, 0.5),
@@ -134,9 +135,10 @@ Create a triangular prism
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_03-volumes_002.png
-    :alt: 03 volumes
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_03-volumes_002.png
+   :alt: 03 volumes
+   :srcset: /examples/02-geometry/images/sphx_glr_03-volumes_002.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -145,10 +147,10 @@ Create a triangular prism
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(2.431851652578137, 2.431851652578137, 2.431851652578137),
      (0.5, 0.5, 0.5),
@@ -178,9 +180,10 @@ Create a triangular prism
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_03-volumes_003.png
-    :alt: 03 volumes
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_03-volumes_003.png
+   :alt: 03 volumes
+   :srcset: /examples/02-geometry/images/sphx_glr_03-volumes_003.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -189,10 +192,10 @@ Create a triangular prism
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(2.431851652578137, 2.431851652578137, 2.431851652578137),
      (0.5, 0.5, 0.5),
@@ -234,9 +237,10 @@ Create a simple tetrahedral bounded by 4 areas
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_03-volumes_004.png
-    :alt: 03 volumes
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_03-volumes_004.png
+   :alt: 03 volumes
+   :srcset: /examples/02-geometry/images/sphx_glr_03-volumes_004.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -245,10 +249,10 @@ Create a simple tetrahedral bounded by 4 areas
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(2.7320508075688776, 3.2320508075688776, 3.2320508075688776),
      (0.0, 0.5, 0.5),
@@ -287,9 +291,10 @@ Create a square with a hole in it and drag it along an arc.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_03-volumes_005.png
-    :alt: 03 volumes
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_03-volumes_005.png
+   :alt: 03 volumes
+   :srcset: /examples/02-geometry/images/sphx_glr_03-volumes_005.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -298,10 +303,10 @@ Create a square with a hole in it and drag it along an arc.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(3.3845489112134257, 3.0095489112134253, 3.009548911213425),
      (0.8750000000000004, 0.5, 0.5000000000000001),
@@ -339,9 +344,10 @@ Create a basic cylinder by extruding a circle.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_03-volumes_006.png
-    :alt: 03 volumes
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_03-volumes_006.png
+   :alt: 03 volumes
+   :srcset: /examples/02-geometry/images/sphx_glr_03-volumes_006.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -350,10 +356,10 @@ Create a basic cylinder by extruding a circle.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(5.464101615137755, 5.464101615137755, 7.464101615137755),
      (0.0, 0.0, 2.0),
@@ -377,9 +383,10 @@ Create a tapered cylinder by using the ``rx`` and ``ry`` parameters.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_03-volumes_007.png
-    :alt: 03 volumes
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_03-volumes_007.png
+   :alt: 03 volumes
+   :srcset: /examples/02-geometry/images/sphx_glr_03-volumes_007.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -388,10 +395,10 @@ Create a tapered cylinder by using the ``rx`` and ``ry`` parameters.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(5.464101615137755, 5.464101615137755, 7.464101615137755),
      (0.0, 0.0, 2.0),
@@ -436,9 +443,10 @@ Rotate a circle about the Z axis to create a hoop
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_03-volumes_008.png
-    :alt: 03 volumes
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_03-volumes_008.png
+   :alt: 03 volumes
+   :srcset: /examples/02-geometry/images/sphx_glr_03-volumes_008.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -447,10 +455,10 @@ Rotate a circle about the Z axis to create a hoop
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(34.77332974640647, 34.77332974640647, 34.77332974640647),
      (0.0, 0.0, 0.0),
@@ -484,9 +492,10 @@ then XZ planes.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_03-volumes_009.png
-    :alt: 03 volumes
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_03-volumes_009.png
+   :alt: 03 volumes
+   :srcset: /examples/02-geometry/images/sphx_glr_03-volumes_009.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -495,10 +504,10 @@ then XZ planes.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(6.407227082229696, 6.407227082229696, 6.907227082229696),
      (0.0, 0.0, 0.5),
@@ -559,10 +568,10 @@ Volume geometry can be accessed from the ``geometry.areas`` method.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
 
 .. raw:: html
@@ -753,9 +762,10 @@ plotting methods.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_03-volumes_010.png
-    :alt: 03 volumes
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_03-volumes_010.png
+   :alt: 03 volumes
+   :srcset: /examples/02-geometry/images/sphx_glr_03-volumes_010.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -764,10 +774,10 @@ plotting methods.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(6.407227082229696, 6.407227082229696, 6.907227082229696),
      (0.0, 0.0, 0.5),
@@ -778,7 +788,7 @@ plotting methods.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  10.822 seconds)
+   **Total running time of the script:** ( 2 minutes  12.230 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_03-volumes.py:

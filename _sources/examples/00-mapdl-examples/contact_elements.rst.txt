@@ -66,9 +66,10 @@ elements.
 
 
 
-.. image:: /examples/00-mapdl-examples/images/sphx_glr_contact_elements_001.png
-    :alt: contact elements
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_contact_elements_001.png
+   :alt: contact elements
+   :srcset: /examples/00-mapdl-examples/images/sphx_glr_contact_elements_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -77,10 +78,10 @@ elements.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(2.173032607475616, 2.173032607475616, 1.923032607475616),
      (0.5, 0.5, 0.25),
@@ -112,9 +113,10 @@ Note how these two blocks do not touch and the mesh is non-conformal.
 
 
 
-.. image:: /examples/00-mapdl-examples/images/sphx_glr_contact_elements_002.png
-    :alt: contact elements
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_contact_elements_002.png
+   :alt: contact elements
+   :srcset: /examples/00-mapdl-examples/images/sphx_glr_contact_elements_002.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -123,10 +125,10 @@ Note how these two blocks do not touch and the mesh is non-conformal.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(2.431851652578137, 2.431851652578137, 2.431851652578137),
      (0.5, 0.5, 0.5),
@@ -189,9 +191,10 @@ contact pairs overlap.
 
 
 
-.. image:: /examples/00-mapdl-examples/images/sphx_glr_contact_elements_003.png
-    :alt: contact elements
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_contact_elements_003.png
+   :alt: contact elements
+   :srcset: /examples/00-mapdl-examples/images/sphx_glr_contact_elements_003.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -200,10 +203,10 @@ contact pairs overlap.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(2.07735026922906, 2.07735026922906, 2.07735526922906),
      (0.5, 0.5, 0.500005),
@@ -214,7 +217,7 @@ contact pairs overlap.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.602 seconds)
+   **Total running time of the script:** ( 0 minutes  1.622 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_contact_elements.py:

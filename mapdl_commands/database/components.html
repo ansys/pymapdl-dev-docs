@@ -25,10 +25,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -62,11 +62,9 @@
   <div id="navbar-start">
     
     
-
 <a class="navbar-brand" href="../../index.html">
-  <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+<p class="title">ansys.mapdl.core</p>
 </a>
-
 
     
   </div>
@@ -130,7 +128,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/PyMAPDL" rel="noopener" target="_blank" title="GitHub">
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
             <span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label>
           </a>
@@ -863,10 +861,10 @@ as components for easy selection later on.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmdele.html#ansys.mapdl.core.Mapdl.cmdele" title="ansys.mapdl.core.Mapdl.cmdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmdele</span></code></a>([name])</p></td>
 <td><p>Deletes a component or assembly definition.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmedit.html#ansys.mapdl.core.Mapdl.cmedit" title="ansys.mapdl.core.Mapdl.cmedit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmedit</span></code></a>([aname, oper, cnam1, cnam2, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmedit.html#ansys.mapdl.core.Mapdl.cmedit" title="ansys.mapdl.core.Mapdl.cmedit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmedit</span></code></a>([aname, oper, cnam1, cnam2, ...])</p></td>
 <td><p>Edits an existing assembly.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmgrp.html#ansys.mapdl.core.Mapdl.cmgrp" title="ansys.mapdl.core.Mapdl.cmgrp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmgrp</span></code></a>([aname, cnam1, cnam2, cnam3, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmgrp.html#ansys.mapdl.core.Mapdl.cmgrp" title="ansys.mapdl.core.Mapdl.cmgrp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmgrp</span></code></a>([aname, cnam1, cnam2, cnam3, ...])</p></td>
 <td><p>Groups components and assemblies into an assembly.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmlist.html#ansys.mapdl.core.Mapdl.cmlist" title="ansys.mapdl.core.Mapdl.cmlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmlist</span></code></a>([name, key, entity])</p></td>
@@ -881,7 +879,7 @@ as components for easy selection later on.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmsel.html#ansys.mapdl.core.Mapdl.cmsel" title="ansys.mapdl.core.Mapdl.cmsel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmsel</span></code></a>([type_, name, entity])</p></td>
 <td><p>Selects a subset of components and assemblies.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmwrite.html#ansys.mapdl.core.Mapdl.cmwrite" title="ansys.mapdl.core.Mapdl.cmwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmwrite</span></code></a>([option, fname, ext, fnamei, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cmwrite.html#ansys.mapdl.core.Mapdl.cmwrite" title="ansys.mapdl.core.Mapdl.cmwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cmwrite</span></code></a>([option, fname, ext, fnamei, ...])</p></td>
 <td><p>Writes node and element components and assemblies to a file.</p></td>
 </tr>
 </tbody>
@@ -911,7 +909,7 @@ as components for easy selection later on.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
 </p>
     </div>
     

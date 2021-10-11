@@ -25,10 +25,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -62,11 +62,9 @@
   <div id="navbar-start">
     
     
-
 <a class="navbar-brand" href="../../index.html">
-  <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+<p class="title">ansys.mapdl.core</p>
 </a>
-
 
     
   </div>
@@ -130,7 +128,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/PyMAPDL" rel="noopener" target="_blank" title="GitHub">
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
             <span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label>
           </a>
@@ -867,7 +865,7 @@ plane, which is used for picking operations.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.kwpave.html#ansys.mapdl.core.Mapdl.kwpave" title="ansys.mapdl.core.Mapdl.kwpave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.kwpave</span></code></a>([p1, p2, p3, p4, p5, p6, p7, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.kwpave.html#ansys.mapdl.core.Mapdl.kwpave" title="ansys.mapdl.core.Mapdl.kwpave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.kwpave</span></code></a>([p1, p2, p3, p4, p5, p6, p7, ...])</p></td>
 <td><p>Moves the working plane origin to the average location of keypoints.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.kwplan.html#ansys.mapdl.core.Mapdl.kwplan" title="ansys.mapdl.core.Mapdl.kwplan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.kwplan</span></code></a>([wn, korig, kxax, kplan])</p></td>
@@ -876,7 +874,7 @@ plane, which is used for picking operations.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.lwplan.html#ansys.mapdl.core.Mapdl.lwplan" title="ansys.mapdl.core.Mapdl.lwplan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.lwplan</span></code></a>([wn, nl1, ratio])</p></td>
 <td><p>Defines the working plane normal to a location on a line.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nwpave.html#ansys.mapdl.core.Mapdl.nwpave" title="ansys.mapdl.core.Mapdl.nwpave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nwpave</span></code></a>([n1, n2, n3, n4, n5, n6, n7, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nwpave.html#ansys.mapdl.core.Mapdl.nwpave" title="ansys.mapdl.core.Mapdl.nwpave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nwpave</span></code></a>([n1, n2, n3, n4, n5, n6, n7, ...])</p></td>
 <td><p>Moves the working plane origin to the average location of nodes.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nwplan.html#ansys.mapdl.core.Mapdl.nwplan" title="ansys.mapdl.core.Mapdl.nwplan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nwplan</span></code></a>([wn, norig, nxax, nplan])</p></td>
@@ -888,7 +886,7 @@ plane, which is used for picking operations.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.wpcsys.html#ansys.mapdl.core.Mapdl.wpcsys" title="ansys.mapdl.core.Mapdl.wpcsys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.wpcsys</span></code></a>([wn, kcn])</p></td>
 <td><p>Defines the working plane location based on a coordinate system.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.wplane.html#ansys.mapdl.core.Mapdl.wplane" title="ansys.mapdl.core.Mapdl.wplane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.wplane</span></code></a>([wn, xorig, yorig, zorig, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.wplane.html#ansys.mapdl.core.Mapdl.wplane" title="ansys.mapdl.core.Mapdl.wplane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.wplane</span></code></a>([wn, xorig, yorig, zorig, ...])</p></td>
 <td><p>Defines a working plane to assist in picking operations.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.wpoffs.html#ansys.mapdl.core.Mapdl.wpoffs" title="ansys.mapdl.core.Mapdl.wpoffs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.wpoffs</span></code></a>([xoff, yoff, zoff])</p></td>
@@ -897,7 +895,7 @@ plane, which is used for picking operations.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.wprota.html#ansys.mapdl.core.Mapdl.wprota" title="ansys.mapdl.core.Mapdl.wprota"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.wprota</span></code></a>([thxy, thyz, thzx])</p></td>
 <td><p>Rotates the working plane.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.wpstyl.html#ansys.mapdl.core.Mapdl.wpstyl" title="ansys.mapdl.core.Mapdl.wpstyl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.wpstyl</span></code></a>([snap, grspac, grmin, grmax, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.wpstyl.html#ansys.mapdl.core.Mapdl.wpstyl" title="ansys.mapdl.core.Mapdl.wpstyl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.wpstyl</span></code></a>([snap, grspac, grmin, grmax, ...])</p></td>
 <td><p>Controls the display and style of the working plane.</p></td>
 </tr>
 </tbody>
@@ -927,7 +925,7 @@ plane, which is used for picking operations.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
 </p>
     </div>
     

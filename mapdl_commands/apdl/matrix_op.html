@@ -25,10 +25,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -62,11 +62,9 @@
   <div id="navbar-start">
     
     
-
 <a class="navbar-brand" href="../../index.html">
-  <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+<p class="title">ansys.mapdl.core</p>
 </a>
-
 
     
   </div>
@@ -130,7 +128,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/PyMAPDL" rel="noopener" target="_blank" title="GitHub">
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
             <span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label>
           </a>
@@ -947,19 +945,19 @@ interacting with APDLMath.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.comp.html#ansys.mapdl.core.Mapdl.comp" title="ansys.mapdl.core.Mapdl.comp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.comp</span></code></a>([matrix, algorithm, threshold])</p></td>
 <td><p>Compresses the columns of a matrix using a specified algorithm.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dmat.html#ansys.mapdl.core.Mapdl.dmat" title="ansys.mapdl.core.Mapdl.dmat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dmat</span></code></a>([matrix, type_, method, val1, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dmat.html#ansys.mapdl.core.Mapdl.dmat" title="ansys.mapdl.core.Mapdl.dmat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dmat</span></code></a>([matrix, type_, method, val1, ...])</p></td>
 <td><p>Creates a dense matrix.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dot.html#ansys.mapdl.core.Mapdl.dot" title="ansys.mapdl.core.Mapdl.dot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dot</span></code></a>([vector1, vector2, par_real, par_imag])</p></td>
 <td><p>Computes the dot (or inner) product of two vectors.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.eigen.html#ansys.mapdl.core.Mapdl.eigen" title="ansys.mapdl.core.Mapdl.eigen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.eigen</span></code></a>([kmatrix, mmatrix, cmatrix, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.eigen.html#ansys.mapdl.core.Mapdl.eigen" title="ansys.mapdl.core.Mapdl.eigen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.eigen</span></code></a>([kmatrix, mmatrix, cmatrix, ...])</p></td>
 <td><p>Performs a modal solution with unsymmetric or damping matrices.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.export.html#ansys.mapdl.core.Mapdl.export" title="ansys.mapdl.core.Mapdl.export"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.export</span></code></a>([matrix, format_, fname, val1, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.export.html#ansys.mapdl.core.Mapdl.export" title="ansys.mapdl.core.Mapdl.export"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.export</span></code></a>([matrix, format_, fname, val1, ...])</p></td>
 <td><p>Exports a matrix to a file in the specified format.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.fft.html#ansys.mapdl.core.Mapdl.fft" title="ansys.mapdl.core.Mapdl.fft"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.fft</span></code></a>([type_, inputdata, outputdata, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.fft.html#ansys.mapdl.core.Mapdl.fft" title="ansys.mapdl.core.Mapdl.fft"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.fft</span></code></a>([type_, inputdata, outputdata, ...])</p></td>
 <td><p>Computes the fast Fourier transformation of a specified matrix or</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.free.html#ansys.mapdl.core.Mapdl.free" title="ansys.mapdl.core.Mapdl.free"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.free</span></code></a>([name])</p></td>
@@ -968,7 +966,7 @@ interacting with APDLMath.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.init.html#ansys.mapdl.core.Mapdl.init" title="ansys.mapdl.core.Mapdl.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.init</span></code></a>([name, method, val1, val2, val3])</p></td>
 <td><p>Initializes a vector or dense matrix.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.itengine.html#ansys.mapdl.core.Mapdl.itengine" title="ansys.mapdl.core.Mapdl.itengine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.itengine</span></code></a>([type_, enginename, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.itengine.html#ansys.mapdl.core.Mapdl.itengine" title="ansys.mapdl.core.Mapdl.itengine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.itengine</span></code></a>([type_, enginename, ...])</p></td>
 <td><p>Performs a solution using an iterative solver.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.lsbac.html#ansys.mapdl.core.Mapdl.lsbac" title="ansys.mapdl.core.Mapdl.lsbac"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.lsbac</span></code></a>([enginename, rhsvector, solvector])</p></td>
@@ -977,7 +975,7 @@ interacting with APDLMath.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.lsdump.html#ansys.mapdl.core.Mapdl.lsdump" title="ansys.mapdl.core.Mapdl.lsdump"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.lsdump</span></code></a>([enginename, filename])</p></td>
 <td><p>Dumps a linear solver engine to a binary File.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.lsengine.html#ansys.mapdl.core.Mapdl.lsengine" title="ansys.mapdl.core.Mapdl.lsengine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.lsengine</span></code></a>([type_, enginename, matrix, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.lsengine.html#ansys.mapdl.core.Mapdl.lsengine" title="ansys.mapdl.core.Mapdl.lsengine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.lsengine</span></code></a>([type_, enginename, matrix, ...])</p></td>
 <td><p>Creates a linear solver engine.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.lsfactor.html#ansys.mapdl.core.Mapdl.lsfactor" title="ansys.mapdl.core.Mapdl.lsfactor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.lsfactor</span></code></a>([enginename, option])</p></td>
@@ -1001,16 +999,16 @@ interacting with APDLMath.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.scal.html#ansys.mapdl.core.Mapdl.scal" title="ansys.mapdl.core.Mapdl.scal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.scal</span></code></a>([name, val1, val2])</p></td>
 <td><p>Scales a vector or matrix by a constant.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.smat.html#ansys.mapdl.core.Mapdl.smat" title="ansys.mapdl.core.Mapdl.smat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.smat</span></code></a>([matrix, type_, method, val1, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.smat.html#ansys.mapdl.core.Mapdl.smat" title="ansys.mapdl.core.Mapdl.smat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.smat</span></code></a>([matrix, type_, method, val1, ...])</p></td>
 <td><p>Creates a sparse matrix.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.starprint.html#ansys.mapdl.core.Mapdl.starprint" title="ansys.mapdl.core.Mapdl.starprint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.starprint</span></code></a>([matrix, fname])</p></td>
 <td><p>Prints the matrix values to a file.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.sort.html#ansys.mapdl.core.Mapdl.sort" title="ansys.mapdl.core.Mapdl.sort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.sort</span></code></a>(**kwargs)</p></td>
-<td><p>Specifies “Sort settings” as the subsequent status topic.</p></td>
+<td><p>Specifies &quot;Sort settings&quot; as the subsequent status topic.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vec.html#ansys.mapdl.core.Mapdl.vec" title="ansys.mapdl.core.Mapdl.vec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vec</span></code></a>([vector, type_, method, val1, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vec.html#ansys.mapdl.core.Mapdl.vec" title="ansys.mapdl.core.Mapdl.vec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vec</span></code></a>([vector, type_, method, val1, ...])</p></td>
 <td><p>Creates a vector.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.wrk.html#ansys.mapdl.core.Mapdl.wrk" title="ansys.mapdl.core.Mapdl.wrk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.wrk</span></code></a>([num])</p></td>
@@ -1043,7 +1041,7 @@ interacting with APDLMath.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
 </p>
     </div>
     

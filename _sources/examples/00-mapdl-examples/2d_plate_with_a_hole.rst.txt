@@ -145,9 +145,10 @@ approximate this.
 
 
 
-.. image:: /examples/00-mapdl-examples/images/sphx_glr_2d_plate_with_a_hole_001.png
-    :alt: 2d plate with a hole
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_2d_plate_with_a_hole_001.png
+   :alt: 2d plate with a hole
+   :srcset: /examples/00-mapdl-examples/images/sphx_glr_2d_plate_with_a_hole_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -156,8 +157,8 @@ approximate this.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
 
 
@@ -199,9 +200,10 @@ Line numbers can be identified through inspection using ``lplot``
 
 
 
-.. image:: /examples/00-mapdl-examples/images/sphx_glr_2d_plate_with_a_hole_002.png
-    :alt: 2d plate with a hole
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_2d_plate_with_a_hole_002.png
+   :alt: 2d plate with a hole
+   :srcset: /examples/00-mapdl-examples/images/sphx_glr_2d_plate_with_a_hole_002.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -210,10 +212,10 @@ Line numbers can be identified through inspection using ``lplot``
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
 
 
@@ -297,7 +299,7 @@ Solve the static analysis
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =       1.884   TIME= 04:16:02
+     *** NOTE ***                            CP =       1.818   TIME= 19:28:49
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -310,7 +312,7 @@ Solve the static analysis
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:16:02  SEP 18, 2021 CP=      1.888
+     00000000  VERSION=LINUX x64     19:28:49  OCT 11, 2021 CP=      1.821
 
                                                                                
 
@@ -326,11 +328,11 @@ Solve the static analysis
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =       1.890   TIME= 04:16:02
+     *** NOTE ***                            CP =       1.823   TIME= 19:28:49
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =       1.891   TIME= 04:16:02
+     *** NOTE ***                            CP =       1.823   TIME= 19:28:49
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -379,8 +381,8 @@ Solve the static analysis
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.092   0.000094
-     Time at end of element matrix formulation CP = 1.96832204.              
+            1       977  PLANE183      0.076   0.000078
+     Time at end of element matrix formulation CP = 1.89728785.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =        6124,    Maximum wavefront =     48
@@ -388,7 +390,7 @@ Solve the static analysis
       Memory required for in-core solution     =     8.134 MB
       Memory required for out-of-core solution =     4.318 MB
 
-     *** NOTE ***                            CP =       2.110   TIME= 04:16:02
+     *** NOTE ***                            CP =       2.084   TIME= 19:28:49
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -403,12 +405,12 @@ Solve the static analysis
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.085   0.000087
+            1       977  PLANE183      0.102   0.000105
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.043   0.000044
+            1       977  PLANE183      0.022   0.000023
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -450,9 +452,10 @@ result reader.
 
 
 
-.. image:: /examples/00-mapdl-examples/images/sphx_glr_2d_plate_with_a_hole_003.png
-    :alt: 2d plate with a hole
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_2d_plate_with_a_hole_003.png
+   :alt: 2d plate with a hole
+   :srcset: /examples/00-mapdl-examples/images/sphx_glr_2d_plate_with_a_hole_003.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -461,12 +464,12 @@ result reader.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
 
 
 
@@ -713,10 +716,10 @@ Run the batch and record the stress concentration
  .. code-block:: none
 
         Ratio  : Stress Concentration (K_t)
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
         0.0100 :     2.9660
         0.0450 :     2.8619
         0.0800 :     2.7690
@@ -775,9 +778,10 @@ height and width of the plate.
 
 
 
-.. image:: /examples/00-mapdl-examples/images/sphx_glr_2d_plate_with_a_hole_004.png
-    :alt: 2d plate with a hole
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_2d_plate_with_a_hole_004.png
+   :alt: 2d plate with a hole
+   :srcset: /examples/00-mapdl-examples/images/sphx_glr_2d_plate_with_a_hole_004.png
+   :class: sphx-glr-single-img
 
 
 
@@ -786,7 +790,7 @@ height and width of the plate.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  45.977 seconds)
+   **Total running time of the script:** ( 0 minutes  45.682 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_2d_plate_with_a_hole.py:

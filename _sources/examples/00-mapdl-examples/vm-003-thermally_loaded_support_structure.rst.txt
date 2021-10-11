@@ -161,9 +161,10 @@ mid-point nodes to two opposite sides.
 
 
 
-.. image:: /examples/00-mapdl-examples/images/sphx_glr_vm-003-thermally_loaded_support_structure_001.png
-    :alt: vm 003 thermally loaded support structure
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_vm-003-thermally_loaded_support_structure_001.png
+   :alt: vm 003 thermally loaded support structure
+   :srcset: /examples/00-mapdl-examples/images/sphx_glr_vm-003-thermally_loaded_support_structure_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -201,9 +202,10 @@ between the first 2 that is parallel to them.
 
 
 
-.. image:: /examples/00-mapdl-examples/images/sphx_glr_vm-003-thermally_loaded_support_structure_002.png
-    :alt: vm 003 thermally loaded support structure
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_vm-003-thermally_loaded_support_structure_002.png
+   :alt: vm 003 thermally loaded support structure
+   :srcset: /examples/00-mapdl-examples/images/sphx_glr_vm-003-thermally_loaded_support_structure_002.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -212,10 +214,10 @@ between the first 2 that is parallel to them.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(0.0, -10.0, 54.64101615137755),
      (0.0, -10.0, 0.0),
@@ -386,7 +388,7 @@ expected stresses of 19695 and 10152 respectively.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.785 seconds)
+   **Total running time of the script:** ( 0 minutes  0.780 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_vm-003-thermally_loaded_support_structure.py:

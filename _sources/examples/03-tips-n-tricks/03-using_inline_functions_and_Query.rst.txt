@@ -77,9 +77,10 @@ Setup Mesh
 
 
 
-.. image:: /examples/03-tips-n-tricks/images/sphx_glr_03-using_inline_functions_and_Query_001.png
-    :alt: 03 using inline functions and Query
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/03-tips-n-tricks/images/sphx_glr_03-using_inline_functions_and_Query_001.png
+   :alt: 03 using inline functions and Query
+   :srcset: /examples/03-tips-n-tricks/images/sphx_glr_03-using_inline_functions_and_Query_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -88,10 +89,10 @@ Setup Mesh
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(46.73276542716538, 51.73276542716538, 56.73276542716538),
      (5.000000000000002, 10.0, 15.0),
@@ -197,9 +198,10 @@ Post-Processing
 
 
 
-.. image:: /examples/03-tips-n-tricks/images/sphx_glr_03-using_inline_functions_and_Query_002.png
-    :alt: 03 using inline functions and Query
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/03-tips-n-tricks/images/sphx_glr_03-using_inline_functions_and_Query_002.png
+   :alt: 03 using inline functions and Query
+   :srcset: /examples/03-tips-n-tricks/images/sphx_glr_03-using_inline_functions_and_Query_002.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -208,10 +210,10 @@ Post-Processing
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
 
 
@@ -261,18 +263,18 @@ Using ``Query``
         ************************
         Displacement at Node 28:
         ************************
-        X | 1.757716378e-05
-        Y | 3.036257547e-09
-        Z | -7.982690758e-07
+        X | 1.757716378392645e-05
+        Y | 3.0362575469000526e-09
+        Z | -7.982690758480551e-07
 
     
 
         ************************
         Displacement at Node 49:
         ************************
-        X | 1.761241768e-05
-        Y | 1.176480058e-19
-        Z | 8.070989839e-07
+        X | 1.7612417675184542e-05
+        Y | 1.2466876021068352e-19
+        Z | 8.070989838529146e-07
 
     
 
@@ -282,7 +284,7 @@ Using ``Query``
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.384 seconds)
+   **Total running time of the script:** ( 0 minutes  1.360 seconds)
 
 
 .. _sphx_glr_download_examples_03-tips-n-tricks_03-using_inline_functions_and_Query.py:

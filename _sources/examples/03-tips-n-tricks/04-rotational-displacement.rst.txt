@@ -92,9 +92,10 @@ freedom. Following this we:
 
 
 
-.. image:: /examples/03-tips-n-tricks/images/sphx_glr_04-rotational-displacement_001.png
-    :alt: 04 rotational displacement
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/03-tips-n-tricks/images/sphx_glr_04-rotational-displacement_001.png
+   :alt: 04 rotational displacement
+   :srcset: /examples/03-tips-n-tricks/images/sphx_glr_04-rotational-displacement_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -103,10 +104,10 @@ freedom. Following this we:
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(2.077350269189626, 2.077350269189626, 1.5773502691896262),
      (0.5, 0.5, 0.0),
@@ -177,9 +178,10 @@ Plotting Stresses
 
 
 
-.. image:: /examples/03-tips-n-tricks/images/sphx_glr_04-rotational-displacement_002.png
-    :alt: 04 rotational displacement
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/03-tips-n-tricks/images/sphx_glr_04-rotational-displacement_002.png
+   :alt: 04 rotational displacement
+   :srcset: /examples/03-tips-n-tricks/images/sphx_glr_04-rotational-displacement_002.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -188,10 +190,10 @@ Plotting Stresses
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
 
 
@@ -273,7 +275,7 @@ Extracting Rotational Displacements
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.868 seconds)
+   **Total running time of the script:** ( 0 minutes  0.851 seconds)
 
 
 .. _sphx_glr_download_examples_03-tips-n-tricks_04-rotational-displacement.py:

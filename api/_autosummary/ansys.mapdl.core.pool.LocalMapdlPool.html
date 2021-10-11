@@ -25,10 +25,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -62,11 +62,9 @@
   <div id="navbar-start">
     
     
-
 <a class="navbar-brand" href="../../index.html">
-  <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+<p class="title">ansys.mapdl.core</p>
 </a>
-
 
     
   </div>
@@ -130,7 +128,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/PyMAPDL" rel="noopener" target="_blank" title="GitHub">
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
             <span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label>
           </a>
@@ -335,7 +333,7 @@ listing of all additional keyword arguments.</p>
 directory.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">LocalMapdlPool</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">LocalMapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="go">Creating Pool: 100%|████████| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
+<span class="go">Creating Pool: 100%|########| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
 </pre></div>
 </div>
 <p>Create several instances with 1 CPU each running at the current
@@ -343,19 +341,19 @@ directory within their own isolated directories.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcmd</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">LocalMapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">nproc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">run_location</span><span class="o">=</span><span class="n">my_path</span><span class="p">)</span>
-<span class="go">Creating Pool: 100%|████████| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
+<span class="go">Creating Pool: 100%|########| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
 </pre></div>
 </div>
 <p>Create a pool while specifying the MAPDL executable in Windows.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exec_file</span> <span class="o">=</span> <span class="s1">&#39;C:/Program Files/ANSYS Inc/v212/ansys/bin/win64/ANSYS212.exe&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">LocalMapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">exec_file</span><span class="o">=</span><span class="n">exec_file</span><span class="p">)</span>
-<span class="go">Creating Pool: 100%|████████| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
+<span class="go">Creating Pool: 100%|########| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
 </pre></div>
 </div>
 <p>Create a pool while specifying the MAPDL executable in Linux.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exec_file</span> <span class="o">=</span> <span class="s1">&#39;/ansys_inc/v211/ansys/bin/ansys211&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">LocalMapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">exec_file</span><span class="o">=</span><span class="n">exec_file</span><span class="p">)</span>
-<span class="go">Creating Pool: 100%|████████| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
+<span class="go">Creating Pool: 100%|########| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
@@ -368,13 +366,13 @@ directory within their own isolated directories.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.LocalMapdlPool.exit.html#ansys.mapdl.core.pool.LocalMapdlPool.exit" title="ansys.mapdl.core.pool.LocalMapdlPool.exit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalMapdlPool.exit</span></code></a>([block])</p></td>
 <td><p>Close out all instances in the pool.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.LocalMapdlPool.map.html#ansys.mapdl.core.pool.LocalMapdlPool.map" title="ansys.mapdl.core.pool.LocalMapdlPool.map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalMapdlPool.map</span></code></a>(func[, iterable, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.LocalMapdlPool.map.html#ansys.mapdl.core.pool.LocalMapdlPool.map" title="ansys.mapdl.core.pool.LocalMapdlPool.map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalMapdlPool.map</span></code></a>(func[, iterable, ...])</p></td>
 <td><p>Run a function for each instance of mapdl within the pool</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.LocalMapdlPool.next_available.html#ansys.mapdl.core.pool.LocalMapdlPool.next_available" title="ansys.mapdl.core.pool.LocalMapdlPool.next_available"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalMapdlPool.next_available</span></code></a>([return_index])</p></td>
 <td><p>Wait until an instance of mapdl is available and return that instance.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.LocalMapdlPool.run_batch.html#ansys.mapdl.core.pool.LocalMapdlPool.run_batch" title="ansys.mapdl.core.pool.LocalMapdlPool.run_batch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalMapdlPool.run_batch</span></code></a>(files[, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.LocalMapdlPool.run_batch.html#ansys.mapdl.core.pool.LocalMapdlPool.run_batch" title="ansys.mapdl.core.pool.LocalMapdlPool.run_batch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalMapdlPool.run_batch</span></code></a>(files[, ...])</p></td>
 <td><p>Run a batch of input files on the pool.</p></td>
 </tr>
 </tbody>
@@ -406,7 +404,7 @@ directory within their own isolated directories.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
 </p>
     </div>
     

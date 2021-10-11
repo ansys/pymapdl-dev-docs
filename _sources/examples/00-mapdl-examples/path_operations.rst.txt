@@ -104,9 +104,10 @@ Create a beam, apply a load, and solve for the static solution.
 
 
 
-.. image:: /examples/00-mapdl-examples/images/sphx_glr_path_operations_001.png
-    :alt: path operations
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_path_operations_001.png
+   :alt: path operations
+   :srcset: /examples/00-mapdl-examples/images/sphx_glr_path_operations_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -115,10 +116,10 @@ Create a beam, apply a load, and solve for the static solution.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(11.638097539230095, 12.388097539230095, 16.388097539230095),
      (0.25, 1.0, 5.0),
@@ -250,9 +251,10 @@ identical interpolations).  The underlying algorithm of VTK is:
 
 
 
-.. image:: /examples/00-mapdl-examples/images/sphx_glr_path_operations_002.png
-    :alt: path operations
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_path_operations_002.png
+   :alt: path operations
+   :srcset: /examples/00-mapdl-examples/images/sphx_glr_path_operations_002.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -261,10 +263,10 @@ identical interpolations).  The underlying algorithm of VTK is:
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
 
 
@@ -304,9 +306,10 @@ extrapolated to the edge nodes of ANSYS FEMs.
 
 
 
-.. image:: /examples/00-mapdl-examples/images/sphx_glr_path_operations_003.png
-    :alt: path operations
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_path_operations_003.png
+   :alt: path operations
+   :srcset: /examples/00-mapdl-examples/images/sphx_glr_path_operations_003.png
+   :class: sphx-glr-single-img
 
 
 
@@ -315,7 +318,7 @@ extrapolated to the edge nodes of ANSYS FEMs.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.263 seconds)
+   **Total running time of the script:** ( 0 minutes  4.219 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_path_operations.py:

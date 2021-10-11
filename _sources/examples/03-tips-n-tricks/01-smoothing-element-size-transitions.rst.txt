@@ -53,7 +53,7 @@ First, start MAPDL as a service.
  .. code-block:: none
 
 
-    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f711289ad90>
+    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7fe00902c4f0>
 
 
 
@@ -126,9 +126,10 @@ for a quadrilateral mesh.
 
 
 
-.. image:: /examples/03-tips-n-tricks/images/sphx_glr_01-smoothing-element-size-transitions_001.png
-    :alt: 01 smoothing element size transitions
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/03-tips-n-tricks/images/sphx_glr_01-smoothing-element-size-transitions_001.png
+   :alt: 01 smoothing element size transitions
+   :srcset: /examples/03-tips-n-tricks/images/sphx_glr_01-smoothing-element-size-transitions_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -137,10 +138,10 @@ for a quadrilateral mesh.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(10.465228416603692, 10.465228416603692, 8.465228416603692),
      (2.5, 2.5, 0.5),
@@ -181,9 +182,10 @@ are self-evident.
 
 
 
-.. image:: /examples/03-tips-n-tricks/images/sphx_glr_01-smoothing-element-size-transitions_002.png
-    :alt: 01 smoothing element size transitions
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/03-tips-n-tricks/images/sphx_glr_01-smoothing-element-size-transitions_002.png
+   :alt: 01 smoothing element size transitions
+   :srcset: /examples/03-tips-n-tricks/images/sphx_glr_01-smoothing-element-size-transitions_002.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -192,10 +194,10 @@ are self-evident.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(10.465228416603692, 10.465228416603692, 8.465228416603692),
      (2.5, 2.5, 0.5),
@@ -227,9 +229,10 @@ shift the main location of the size transition to within the face of ``a2``.
 
 
 
-.. image:: /examples/03-tips-n-tricks/images/sphx_glr_01-smoothing-element-size-transitions_003.png
-    :alt: 01 smoothing element size transitions
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/03-tips-n-tricks/images/sphx_glr_01-smoothing-element-size-transitions_003.png
+   :alt: 01 smoothing element size transitions
+   :srcset: /examples/03-tips-n-tricks/images/sphx_glr_01-smoothing-element-size-transitions_003.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -238,10 +241,10 @@ shift the main location of the size transition to within the face of ``a2``.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
 
 
@@ -249,7 +252,7 @@ shift the main location of the size transition to within the face of ``a2``.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.807 seconds)
+   **Total running time of the script:** ( 0 minutes  1.779 seconds)
 
 
 .. _sphx_glr_download_examples_03-tips-n-tricks_01-smoothing-element-size-transitions.py:

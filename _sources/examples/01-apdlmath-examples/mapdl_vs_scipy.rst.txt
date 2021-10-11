@@ -156,9 +156,10 @@ Plot and mesh using the ``eplot`` method.
 
 
 
-.. image:: /examples/01-apdlmath-examples/images/sphx_glr_mapdl_vs_scipy_001.png
-    :alt: mapdl vs scipy
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/01-apdlmath-examples/images/sphx_glr_mapdl_vs_scipy_001.png
+   :alt: mapdl vs scipy
+   :srcset: /examples/01-apdlmath-examples/images/sphx_glr_mapdl_vs_scipy_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -167,10 +168,10 @@ Plot and mesh using the ``eplot`` method.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1195: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      PyvistaDeprecationWarning
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(3.933687241492801, 3.0105415922331633, 3.21223669211588),
      (1.1499194488984512, 0.22677379963881444, 0.4284688995215311),
@@ -272,7 +273,7 @@ Solve the eigenproblem using PyMapdl with APDLMath.
  .. code-block:: none
 
 
-    Elapsed time to solve this problem :  0.5116329193115234
+    Elapsed time to solve this problem :  0.47667884826660156
 
 
 
@@ -362,9 +363,10 @@ matrices.
 
 
 
-.. image:: /examples/01-apdlmath-examples/images/sphx_glr_mapdl_vs_scipy_002.png
-    :alt: K and M Matrix profiles, K Matrix, M Matrix
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/01-apdlmath-examples/images/sphx_glr_mapdl_vs_scipy_002.png
+   :alt: K and M Matrix profiles, K Matrix, M Matrix
+   :srcset: /examples/01-apdlmath-examples/images/sphx_glr_mapdl_vs_scipy_002.png
+   :class: sphx-glr-single-img
 
 
 
@@ -416,9 +418,10 @@ Plot Matrices
 
 
 
-.. image:: /examples/01-apdlmath-examples/images/sphx_glr_mapdl_vs_scipy_003.png
-    :alt: K and M Matrix profiles, K Matrix, M Matrix
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/01-apdlmath-examples/images/sphx_glr_mapdl_vs_scipy_003.png
+   :alt: K and M Matrix profiles, K Matrix, M Matrix
+   :srcset: /examples/01-apdlmath-examples/images/sphx_glr_mapdl_vs_scipy_003.png
+   :class: sphx-glr-single-img
 
 
 
@@ -451,7 +454,7 @@ Solve the eigenproblem
  .. code-block:: none
 
 
-    Elapsed time to solve this problem :  2.9381730556488037
+    Elapsed time to solve this problem :  2.5901432037353516
 
 
 
@@ -553,9 +556,10 @@ MAPDL is more accurate than SciPy.
 
 
 
-.. image:: /examples/01-apdlmath-examples/images/sphx_glr_mapdl_vs_scipy_004.png
-    :alt: Residual Error
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/01-apdlmath-examples/images/sphx_glr_mapdl_vs_scipy_004.png
+   :alt: Residual Error
+   :srcset: /examples/01-apdlmath-examples/images/sphx_glr_mapdl_vs_scipy_004.png
+   :class: sphx-glr-single-img
 
 
 
@@ -582,7 +586,7 @@ MAPDL is faster than SciPy.
 
  .. code-block:: none
 
-    Mapdl is 5.74 times faster
+    Mapdl is 5.43 times faster
 
 
 
@@ -590,7 +594,7 @@ MAPDL is faster than SciPy.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.805 seconds)
+   **Total running time of the script:** ( 0 minutes  5.424 seconds)
 
 
 .. _sphx_glr_download_examples_01-apdlmath-examples_mapdl_vs_scipy.py:

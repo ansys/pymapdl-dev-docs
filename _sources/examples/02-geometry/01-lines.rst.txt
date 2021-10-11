@@ -115,9 +115,10 @@ Create a circular arc that travels between ``(0, 0, 0)`` and
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_01-lines_001.png
-    :alt: 01 lines
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_001.png
+   :alt: 01 lines
+   :srcset: /examples/02-geometry/images/sphx_glr_01-lines_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -126,8 +127,8 @@ Create a circular arc that travels between ``(0, 0, 0)`` and
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(0.5, 0.5, 2.7320508075688776),
      (0.5, 0.5, 0.0),
@@ -160,9 +161,10 @@ Create two circles and join them with a line.  Plot the result.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_01-lines_002.png
-    :alt: 01 lines
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_002.png
+   :alt: 01 lines
+   :srcset: /examples/02-geometry/images/sphx_glr_01-lines_002.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -171,8 +173,8 @@ Create two circles and join them with a line.  Plot the result.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(3.203613541114848, 3.203613541114848, 3.453613541114848),
      (0.0, 0.0, 0.25),
@@ -206,9 +208,10 @@ Create two circular arcs and connect them with a spline.  Plot the result.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_01-lines_003.png
-    :alt: 01 lines
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_003.png
+   :alt: 01 lines
+   :srcset: /examples/02-geometry/images/sphx_glr_01-lines_003.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -217,8 +220,8 @@ Create two circular arcs and connect them with a spline.  Plot the result.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(-0.25, 1.25, 6.830127018922194),
      (-0.25, 1.25, 0.0),
@@ -251,9 +254,10 @@ keypoint at ``(1, 1, 1)`` at an angle of 60 degrees.  Plot the result.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_01-lines_004.png
-    :alt: 01 lines
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_004.png
+   :alt: 01 lines
+   :srcset: /examples/02-geometry/images/sphx_glr_01-lines_004.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -262,8 +266,8 @@ keypoint at ``(1, 1, 1)`` at an angle of 60 degrees.  Plot the result.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(0.5, 0.5, 2.7320508075688776),
      (0.5, 0.5, 0.0),
@@ -296,9 +300,10 @@ Generate a line on a square between its two corners.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_01-lines_005.png
-    :alt: 01 lines
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_005.png
+   :alt: 01 lines
+   :srcset: /examples/02-geometry/images/sphx_glr_01-lines_005.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -307,8 +312,8 @@ Generate a line on a square between its two corners.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(0.50000000015, 0.50000000015, 2.7320508083884927),
      (0.50000000015, 0.50000000015, 0.0),
@@ -365,9 +370,10 @@ Create a single line and divide it into 5 pieces.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_01-lines_006.png
-    :alt: 01 lines
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_006.png
+   :alt: 01 lines
+   :srcset: /examples/02-geometry/images/sphx_glr_01-lines_006.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -376,8 +382,8 @@ Create a single line and divide it into 5 pieces.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(0.5, 0.0, 1.9318516525781368),
      (0.5, 0.0, 0.0),
@@ -408,9 +414,10 @@ Create a circular arc and extend it at one of its keypoints.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_01-lines_007.png
-    :alt: 01 lines
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_007.png
+   :alt: 01 lines
+   :srcset: /examples/02-geometry/images/sphx_glr_01-lines_007.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -419,8 +426,8 @@ Create a circular arc and extend it at one of its keypoints.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(0.5, 0.0, 4.319751617610021),
      (0.5, 0.0, 0.0),
@@ -454,9 +461,10 @@ fillet between them.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_01-lines_008.png
-    :alt: 01 lines
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_008.png
+   :alt: 01 lines
+   :srcset: /examples/02-geometry/images/sphx_glr_01-lines_008.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -465,8 +473,8 @@ fillet between them.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(0.5, 0.5, 2.7320508075688776),
      (0.5, 0.5, 0.0),
@@ -499,9 +507,10 @@ directed to a new keypoint.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_01-lines_009.png
-    :alt: 01 lines
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_009.png
+   :alt: 01 lines
+   :srcset: /examples/02-geometry/images/sphx_glr_01-lines_009.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -510,8 +519,8 @@ directed to a new keypoint.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(0.0, 0.75, 4.8296291314453415),
      (0.0, 0.75, 0.0),
@@ -544,9 +553,10 @@ Generate a segmented spline through 5 keypoints.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_01-lines_010.png
-    :alt: 01 lines
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_010.png
+   :alt: 01 lines
+   :srcset: /examples/02-geometry/images/sphx_glr_01-lines_010.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -555,8 +565,8 @@ Generate a segmented spline through 5 keypoints.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(0.4, 0.25208733064211125, 1.8267923549699552),
      (0.4, 0.25208733064211125, 0.0),
@@ -591,9 +601,10 @@ single line rather than multiple lines.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_01-lines_011.png
-    :alt: 01 lines
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_011.png
+   :alt: 01 lines
+   :srcset: /examples/02-geometry/images/sphx_glr_01-lines_011.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -602,8 +613,8 @@ single line rather than multiple lines.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
     [(0.45194711247094027, 1.0, 4.405912813957279),
      (0.45194711247094027, 1.0, 0.0),
@@ -665,8 +676,8 @@ saved or plotted.  For more details, visit https://docs.pyvista.com
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
 
 .. raw:: html
@@ -859,9 +870,10 @@ plotting methods.
 
 
 
-.. image:: /examples/02-geometry/images/sphx_glr_01-lines_012.png
-    :alt: 01 lines
-    :class: sphx-glr-single-img
+.. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_012.png
+   :alt: 01 lines
+   :srcset: /examples/02-geometry/images/sphx_glr_01-lines_012.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -870,11 +882,11 @@ plotting methods.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pyvista/core/dataset.py:1335: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      PyvistaDeprecationWarning
+    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+      warnings.warn(
 
-    [(0.4879295192658901, 0.39056939445436, 3.088503318223505),
-     (0.4879295192658901, 0.39056939445436, 0.49276359751820564),
+    [(0.41000220738351345, 0.5726766139268875, 3.0572790299081234),
+     (0.41000220738351345, 0.5726766139268875, 0.5066106356680393),
      (0.0, 1.0, 0.0)]
 
 
@@ -882,7 +894,7 @@ plotting methods.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.390 seconds)
+   **Total running time of the script:** ( 0 minutes  4.310 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_01-lines.py:
