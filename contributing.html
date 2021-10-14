@@ -212,23 +212,6 @@
      Guidelines
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#logging-in-pymapdl">
-     Logging in PyMAPDL
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#global-logger">
-       Global logger
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#instance-logger">
-       Instance logger
-      </a>
-     </li>
-    </ul>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -431,79 +414,6 @@ each new method, class, or function has reasonable (&gt;90%) coverage.</p></li>
 <p>Additionally, please do not include any data sets for which a license
 is not available or commercial use is prohibited.</p>
 <p>Finally, please take a look at our <a class="reference external" href="https://github.com/pyansys/pymapdl/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a></p>
-</div>
-<div class="section" id="logging-in-pymapdl">
-<h3>Logging in PyMAPDL<a class="headerlink" href="#logging-in-pymapdl" title="Permalink to this headline">¶</a></h3>
-<p>A specific logging architecture has been introduced in PyMAPDL 0.60 in order to make consistent the logging of events.
-There are two main logging level: global and instance.</p>
-<p>For both type of loggers, the default log message format is:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">_log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;This is an useful message&#39;</span><span class="p">)</span>
-<span class="go">  LEVEL - INSTANCE NAME - MODULE - FUNCTION - MESSAGE</span>
-<span class="go">  INFO - GRPC_127.0.0.1:50052 -  test - &lt;module&gt; - This is an useful message</span>
-</pre></div>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">instance_name</span></code> field depends on the name of the MAPDL instance which might be not set yet when the log record is created (for example during the initialization of the library),
-therefore in some cases, this field might be empty if there is no instance created yet.</p>
-<p>Since both type of loggers are based in the python module <code class="docutils literal notranslate"><span class="pre">logging</span></code> you can use any of the tools provided in this module to extend or modify these loggers.</p>
-<p>More information can be found in the module <code class="docutils literal notranslate"><span class="pre">logging</span></code> under <code class="docutils literal notranslate"><span class="pre">ansys.mapdl.core</span></code>.</p>
-<div class="section" id="global-logger">
-<h4>Global logger<a class="headerlink" href="#global-logger" title="Permalink to this headline">¶</a></h4>
-<p>There is a global logger called <code class="docutils literal notranslate"><span class="pre">pymapdl_global</span></code> which is initialized when PyMAPDL is imported.
-This logger can be retrieved using:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">LOG</span>
-</pre></div>
-</div>
-<p>This <code class="docutils literal notranslate"><span class="pre">Logger</span></code> is a custom class which wraps a <code class="docutils literal notranslate"><span class="pre">logging.Logger</span></code> object and give extra functionalities such a pre-defined file and stdout handlers and pointers.
-You can access the underlying <code class="docutils literal notranslate"><span class="pre">logging.Logger</span></code> object using <code class="docutils literal notranslate"><span class="pre">LOG.logger</span></code>.</p>
-<p>You can use this logger anywhere in the code using:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">LOG</span>
-<span class="n">LOG</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;This is an useful debug message&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>It should be noticed that the default logging level of <code class="docutils literal notranslate"><span class="pre">LOG</span></code> is <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>.
-To change this and output lower level messages you can use the next snippet:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LOG</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="s1">&#39;DEBUG&#39;</span><span class="p">)</span>
-<span class="n">LOG</span><span class="o">.</span><span class="n">file_handler</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="s1">&#39;DEBUG&#39;</span><span class="p">)</span>  <span class="c1"># If present.</span>
-<span class="n">LOG</span><span class="o">.</span><span class="n">stdout_handler</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="s1">&#39;DEBUG&#39;</span><span class="p">)</span>  <span class="c1"># If present.</span>
-</pre></div>
-</div>
-<p>Alternatively, you can do:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LOG</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="s1">&#39;DEBUG&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>This way ensures all the handlers are set to the input log level.</p>
-<p>By default, this logger does not log to a file. If you wish to do so, you can add a file handler using:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;pymapdl.log&#39;</span><span class="p">)</span>
-<span class="n">LOG</span><span class="o">.</span><span class="n">log_to_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>This sets the logger to be redirected also to that file.
-If you wish to change the characteristics of this global logger from the beginning of the execution,
-you must edit the file <code class="docutils literal notranslate"><span class="pre">__init__</span></code> in the directory <code class="docutils literal notranslate"><span class="pre">ansys.mapdl.core</span></code>.</p>
-</div>
-<div class="section" id="instance-logger">
-<h4>Instance logger<a class="headerlink" href="#instance-logger" title="Permalink to this headline">¶</a></h4>
-<p>Additionally, there is also another type of logger provided within PyMAPDL.
-This is a logger specially designed for instances, hence it tracks the the MAPDL instance by pointing to its name (which should be unique)
-and it is stored in <code class="docutils literal notranslate"><span class="pre">_MapdlCore._log</span></code>.
-You can access it using:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
-<span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
-<span class="n">instance_logger</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">_log</span>
-</pre></div>
-</div>
-<p>This logger is a completely independent from the global logger.
-However when it is initialized, it copies the handlers from the global logger to centralize the logs in a terminal or file.
-You can access the underlying <code class="docutils literal notranslate"><span class="pre">logging.Logger</span></code> using:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span> <span class="o">=</span> <span class="n">instance_logger</span><span class="o">.</span><span class="n">logger</span>
-</pre></div>
-</div>
-<p>The way this logger works is very similar to the global logger.
-You can add a file handler if you wish using the method <code class="docutils literal notranslate"><span class="pre">log_to_file</span></code> or change the log level using <code class="docutils literal notranslate"><span class="pre">setLevel</span></code> method.</p>
-</div>
 </div>
 </div>
 <div class="section" id="contributing-to-pymapdl-through-github">
