@@ -310,7 +310,7 @@ individual meshes.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [UnstructuredGrid (0x7fbb993afd00)
+    [UnstructuredGrid (0x7fe3eec5d820)
       N Cells:	12
       N Points:	24
       X Bounds:	0.000e+00, 1.000e+00
@@ -561,8 +561,8 @@ camera direction from the following:
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(14.525173826921876, 17.173413179793133, 11.881388576786987),
-     (2.6437852501348877, 5.292024603006146, 0.0),
+    [(16.047579065680832, 16.68429008570925, 11.491996432699251),
+     (4.55558263298158, 5.19229365301, 0.0),
      (0.0, 0.0, 1.0)]
 
 
@@ -570,7 +570,7 @@ camera direction from the following:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.842 seconds)
+   **Total running time of the script:** ( 0 minutes  2.873 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_02-areas.py:
