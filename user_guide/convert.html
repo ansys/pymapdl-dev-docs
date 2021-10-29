@@ -334,6 +334,18 @@ using <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.M
 <span class="n">pymapdl</span><span class="o">.</span><span class="n">convert_script</span><span class="p">(</span><span class="n">inputfile</span><span class="p">,</span> <span class="n">pyscript</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Or additionally, you can convert code in form of strings for later processing
+using <code class="xref py py-func docutils literal notranslate"><span class="pre">convert_apdl_block()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core.convert</span> <span class="kn">import</span> <span class="n">convert_apdl_block</span>
+
+<span class="n">apdl_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;/com, This is a block of APDL commands.</span>
+<span class="s2">/PREP7</span>
+<span class="s2">N,,0,0,0</span>
+<span class="s2">N,,0,0,1</span>
+<span class="s2">FINISH&quot;&quot;&quot;</span>
+<span class="n">pycode</span> <span class="o">=</span> <span class="n">convert_apdl_block</span><span class="p">(</span><span class="n">apdl_string</span><span class="p">)</span> <span class="c1"># apdl_string can be also a list of strings.</span>
+</pre></div>
+</div>
 <p>Of particular note in the following examples is how most of the
 commands can be called as a method to the ansys object rather than
 sending a string as a command.  Additionally, take note that some
