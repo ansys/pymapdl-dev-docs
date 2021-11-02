@@ -907,50 +907,30 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.pretab">
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">pretab</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lab1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lab2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lab3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lab4</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lab5</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lab6</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lab7</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lab8</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lab9</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.pretab" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print the element table items.</p>
+<dd><p>Prints the element table items.</p>
 <p>APDL Command: PRETAB</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>lab1, lab2, lab3, … , lab9</strong></dt><dd><p>Print selected items.  Valid labels are <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> or any
-label as specified with the ETABLE command.  Convenience
-labels may be used for Lab1 to select groups of labels (10
-labels maximum): GRP1 for first 10 stored items; GRP2 for
-items 11 to 20; GRP3 for items 21 to 30; GRP4 for items 31
-to 40; GRP5 for items 41 to 50.  Run <code class="docutils literal notranslate"><span class="pre">etable(&quot;stat&quot;)</span></code>
-command to list stored item order.  If all labels are
+<dt><strong>lab1, lab2, lab3, … , lab9</strong></dt><dd><p>Print selected items.  Valid labels are (blank) or any label as
+specified with the ETABLE command.  Convenience labels may be used
+for Lab1 to select groups of labels (10 labels maximum):  GRP1 for
+first 10 stored items; GRP2 for items 11 to 20; GRP3 for items 21
+to 30; GRP4 for items 31 to 40; GRP5 for items 41 to 50.  Enter
+ETABLE,STAT command to list stored item order.  If all labels are
 blank, print first 10 stored items (GRP1).</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>Prints the items stored in the table defined with the
-<a class="reference internal" href="ansys.mapdl.core.Mapdl.etable.html#ansys.mapdl.core.Mapdl.etable" title="ansys.mapdl.core.Mapdl.etable"><code class="xref py py-func docutils literal notranslate"><span class="pre">etable()</span></code></a> command.
-Item values will be listed for the selected elements in the
-sorted sequence [ESORT].  <a class="reference internal" href="../../post26/_autosummary/ansys.mapdl.core.Mapdl.force.html#ansys.mapdl.core.Mapdl.force" title="ansys.mapdl.core.Mapdl.force"><code class="xref py py-func docutils literal notranslate"><span class="pre">force()</span></code></a> can be used to define which
-component of the nodal load is to be used (static, damping,
-inertia, or total).</p>
-<p class="rubric">Examples</p>
-<p>Print out element displacement results.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">etable</span><span class="p">(</span><span class="s2">&quot;values&quot;</span><span class="p">,</span> <span class="s2">&quot;U&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">)</span>
-<span class="go">STORE VALUES   FROM ITEM=U    COMP=X     FOR ALL SELECTED ELEMENTS</span>
-</pre></div>
-</div>
-<p>Now print out the table.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">pretab</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[:</span><span class="mi">4</span><span class="p">]</span>
-<span class="go">[&#39;PRINT ELEMENT TABLE ITEMS PER ELEMENT&#39;,</span>
-<span class="go"> &#39;       1   0.1073961540E-005  0.1073961540E-005&#39;,</span>
-<span class="go"> &#39;       2   0.3156317304E-005  0.3156317304E-005&#39;,</span>
-<span class="go"> &#39;       3   0.5125435148E-005  0.5125435148E-005&#39;]</span>
-</pre></div>
-</div>
-<p>Note that can access the array directly from APDL:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">get_array</span><span class="p">(</span><span class="s2">&quot;elem&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;ETAB&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">)</span>
-<span class="go">array([1.07396154e-06, 3.15631730e-06, 5.12543515e-06, ...,</span>
-<span class="go">       5.41204700e-06, 3.33649806e-06, 1.13836132e-06])</span>
-</pre></div>
-</div>
+<p>Prints the items stored in the table defined with the ETABLE command.
+Item values will be listed for the selected elements in the sorted
+sequence [ESORT].  The FORCE command can be used to define which
+component of the nodal load is to be used (static,  damping, inertia,
+or total).</p>
+<p>Portions of this command are not supported by PowerGraphics
+[/GRAPHICS,POWER].</p>
 </dd></dl>
 
 </div>
