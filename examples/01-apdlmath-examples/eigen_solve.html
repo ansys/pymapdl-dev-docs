@@ -24,6 +24,8 @@
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
@@ -36,8 +38,11 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/thebelab-helper.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -228,34 +233,6 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/vm-001-statically_indeterminate_reaction_force_analysis.html">
-   Statically Indeterminate Reaction Force Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/vm-003-thermally_loaded_support_structure.html">
-   Thermally Loaded Support Structure
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/vm-004-deflection_of_a_hinged_support.html">
-   Deflection of a Hinged Support
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/vm-005-laterally_loaded_tapered_support_structure.html">
-   Statically Indeterminate Reaction Force Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
   <a class="reference internal" href="basic_operations.html">
    PyMAPDL APDLMath Basic Operations
   </a>
@@ -373,6 +350,34 @@
   </a>
  </li>
 </ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-verif-manual/vm-001-statically_indeterminate_reaction_force_analysis.html">
+   Statically Indeterminate Reaction Force Analysis
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-verif-manual/vm-003-thermally_loaded_support_structure.html">
+   Thermally Loaded Support Structure
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-verif-manual/vm-004-deflection_of_a_hinged_support.html">
+   Deflection of a Hinged Support
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-verif-manual/vm-005-laterally_loaded_tapered_support_structure.html">
+   Statically Indeterminate Reaction Force Analysis
+  </a>
+ </li>
+</ul>
 
     
   </div>
@@ -482,7 +487,7 @@ properties (e.g. scalar, storage, symmetry…)</p>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Calling MAPDL to solve the eigenproblem...
-Elapsed time to solve this problem: 0.031150102615356445
+Elapsed time to solve this problem: 0.028812170028686523
 </pre></div>
 </div>
 <p>This is the vector of eigenfrequencies.</p>
@@ -490,7 +495,7 @@ Elapsed time to solve this problem: 0.031150102615356445
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>JMNRLL :
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>VZKSKO :
  Size : 10
   3.381e+02   3.381e+02   6.266e+02   6.266e+02   9.283e+02      &lt;       5
   9.283e+02   1.250e+03   1.250e+03   1.424e+03   1.424e+03      &lt;       10
@@ -543,7 +548,7 @@ factor and finally compute the normalized residual value
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>3.520693793123936e-11
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>3.503338761293556e-11
 </pre></div>
 </div>
 <p>This residual can be computed for all eigenmodes</p>
@@ -587,16 +592,16 @@ factor and finally compute the normalized residual value
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.0666635506368   - Residual = 3.520693793123936e-11
-[1] : Freq = 338.0666635506368   - Residual = 2.7062151568495982e-11
-[2] : Freq = 626.6450980927034   - Residual = 1.3356209405652108e-11
-[3] : Freq = 626.6450980927036   - Residual = 1.5190144398216816e-11
-[4] : Freq = 928.2598500574526   - Residual = 1.0287209580460744e-11
-[5] : Freq = 928.2598500574531   - Residual = 1.0651203113104694e-11
-[6] : Freq = 1249.8421074363505  - Residual = 2.316923853280487e-11
-[7] : Freq = 1249.8421074363514  - Residual = 1.0004130175185296e-11
-[8] : Freq = 1423.9938909416662  - Residual = 8.959953745914094e-10
-[9] : Freq = 1423.993890941669   - Residual = 9.378901132131705e-10
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.0666635506364   - Residual = 3.503338761293556e-11
+[1] : Freq = 338.06666355063646  - Residual = 5.095765571157227e-11
+[2] : Freq = 626.6450980927036   - Residual = 1.7852148894677666e-11
+[3] : Freq = 626.645098092704    - Residual = 2.17372918531887e-11
+[4] : Freq = 928.2598500574518   - Residual = 1.72025442075496e-11
+[5] : Freq = 928.2598500574528   - Residual = 6.747910207805831e-12
+[6] : Freq = 1249.8421074363514  - Residual = 2.815524037478371e-11
+[7] : Freq = 1249.8421074363525  - Residual = 7.546271373844357e-12
+[8] : Freq = 1423.993890941669   - Residual = 4.5372004789272195e-10
+[9] : Freq = 1423.9938909416699  - Residual = 1.2160010951553228e-09
 </pre></div>
 </div>
 <p>Plot Accuracy of Eigenresults</p>
@@ -615,7 +620,7 @@ factor and finally compute the normalized residual value
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 10 artists&gt;
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.064 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.053 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-apdlmath-examples-eigen-solve-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ef9fd55df8801750a912151e4ce1ff42/eigen_solve.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eigen_solve.py</span></code></a></p>

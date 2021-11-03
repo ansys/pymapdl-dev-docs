@@ -24,6 +24,8 @@
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
@@ -36,8 +38,11 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="MAPDL 2D Plane Stress Concentration Analysis" href="00-mapdl-examples/2d_plate_with_a_hole.html" />
@@ -227,34 +232,6 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="00-mapdl-examples/vm-001-statically_indeterminate_reaction_force_analysis.html">
-   Statically Indeterminate Reaction Force Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="00-mapdl-examples/vm-003-thermally_loaded_support_structure.html">
-   Thermally Loaded Support Structure
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="00-mapdl-examples/vm-004-deflection_of_a_hinged_support.html">
-   Deflection of a Hinged Support
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="00-mapdl-examples/vm-005-laterally_loaded_tapered_support_structure.html">
-   Statically Indeterminate Reaction Force Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
   <a class="reference internal" href="01-apdlmath-examples/basic_operations.html">
    PyMAPDL APDLMath Basic Operations
   </a>
@@ -372,6 +349,34 @@
   </a>
  </li>
 </ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-verif-manual/vm-001-statically_indeterminate_reaction_force_analysis.html">
+   Statically Indeterminate Reaction Force Analysis
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-verif-manual/vm-003-thermally_loaded_support_structure.html">
+   Thermally Loaded Support Structure
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-verif-manual/vm-004-deflection_of_a_hinged_support.html">
+   Deflection of a Hinged Support
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-verif-manual/vm-005-laterally_loaded_tapered_support_structure.html">
+   Statically Indeterminate Reaction Force Analysis
+  </a>
+ </li>
+</ul>
 
     
   </div>
@@ -420,6 +425,13 @@
   <ul class="nav section-nav flex-column">
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verification-manual-examples">
+   Verification Manual Examples
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
 </ul>
 
 </nav>
@@ -444,6 +456,8 @@
   <div class="section" id="examples">
 <span id="ref-example-gallery"></span><span id="sphx-glr-examples"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
 <p>Here are a series of examples using MAPDL with <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>.</p>
+<div class="toctree-wrapper compound">
+</div>
 <div class="sphx-glr-clear"></div><div class="section" id="full-examples-using-pymapdl">
 <span id="sphx-glr-examples-00-mapdl-examples"></span><h2>Full Examples Using PyMAPDL<a class="headerlink" href="#full-examples-using-pymapdl" title="Permalink to this headline">¶</a></h2>
 <p>These examples demonstrate full examples using the PyMAPDL module.</p>
@@ -507,80 +521,56 @@
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Reference:  - S. Timoshenko, Strength of Materials, Part I, Elementary Theory and    Problems, ..."><div class="figure align-default" id="id11">
-<img alt="Statically Indeterminate Reaction Force Analysis" src="../_images/sphx_glr_vm-001-statically_indeterminate_reaction_force_analysis_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="00-mapdl-examples/vm-001-statically_indeterminate_reaction_force_analysis.html#sphx-glr-examples-00-mapdl-examples-vm-001-statically-indeterminate-reaction-force-analysis-py"><span class="std std-ref">Statically Indeterminate Reaction Force Analysis</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="Reference:  - S. Timoshenko, Strength of Materials, Part I, Elementary Theory and    Problems, ..."><div class="figure align-default" id="id12">
-<img alt="Thermally Loaded Support Structure" src="../_images/sphx_glr_vm-003-thermally_loaded_support_structure_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="00-mapdl-examples/vm-003-thermally_loaded_support_structure.html#sphx-glr-examples-00-mapdl-examples-vm-003-thermally-loaded-support-structure-py"><span class="std std-ref">Thermally Loaded Support Structure</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="Reference:  - S. Timoshenko, Strength of Materials, Part I, Elementary Theory and    Problems, ..."><div class="figure align-default" id="id13">
-<img alt="Deflection of a Hinged Support" src="../_images/sphx_glr_vm-004-deflection_of_a_hinged_support_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="00-mapdl-examples/vm-004-deflection_of_a_hinged_support.html#sphx-glr-examples-00-mapdl-examples-vm-004-deflection-of-a-hinged-support-py"><span class="std std-ref">Deflection of a Hinged Support</span></a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-thumbcontainer" tooltip="Reference:  - S. H. Crandall, N. C. Dahl, An Introduction to the Mechanics    of Solids, McGraw..."><div class="figure align-default" id="id14">
-<img alt="Statically Indeterminate Reaction Force Analysis" src="../_images/sphx_glr_vm-005-laterally_loaded_tapered_support_structure_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="00-mapdl-examples/vm-005-laterally_loaded_tapered_support_structure.html#sphx-glr-examples-00-mapdl-examples-vm-005-laterally-loaded-tapered-support-structure-py"><span class="std std-ref">Statically Indeterminate Reaction Force Analysis</span></a></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="toctree-wrapper compound">
-</div>
 <div class="sphx-glr-clear"></div></div>
 <div class="section" id="pymapdl-math-examples">
 <span id="ref-apdl-math-examples"></span><span id="sphx-glr-examples-01-apdlmath-examples"></span><h2>PyMapdl Math Examples<a class="headerlink" href="#pymapdl-math-examples" title="Permalink to this headline">¶</a></h2>
 <p>These examples demonstrate using APDL Math and the PyAnsys module
 together within the PyMapdl module.</p>
-<div class="sphx-glr-thumbcontainer" tooltip="This tutorial shows how you can use pymapdl to use APDL math for basic operations on APDLMath v..."><div class="figure align-default" id="id15">
+<div class="sphx-glr-thumbcontainer" tooltip="This tutorial shows how you can use pymapdl to use APDL math for basic operations on APDLMath v..."><div class="figure align-default" id="id11">
 <img alt="PyMAPDL APDLMath Basic Operations" src="../_images/sphx_glr_basic_operations_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/basic_operations.html#sphx-glr-examples-01-apdlmath-examples-basic-operations-py"><span class="std std-ref">PyMAPDL APDLMath Basic Operations</span></a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/basic_operations.html#sphx-glr-examples-01-apdlmath-examples-basic-operations-py"><span class="std std-ref">PyMAPDL APDLMath Basic Operations</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="This example uses a verification manual input file, but you can use your own sparse or dense ma..."><div class="figure align-default" id="id16">
+<div class="sphx-glr-thumbcontainer" tooltip="This example uses a verification manual input file, but you can use your own sparse or dense ma..."><div class="figure align-default" id="id12">
 <img alt="Using APDLMath to solve Eigenproblems" src="../_images/sphx_glr_eigen_solve_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/eigen_solve.html#sphx-glr-examples-01-apdlmath-examples-eigen-solve-py"><span class="std std-ref">Using APDLMath to solve Eigenproblems</span></a></span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/eigen_solve.html#sphx-glr-examples-01-apdlmath-examples-eigen-solve-py"><span class="std std-ref">Using APDLMath to solve Eigenproblems</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="These files include most of the binary files generated by APDL (e.g. .RST, .FULL, etc.)."><div class="figure align-default" id="id17">
+<div class="sphx-glr-thumbcontainer" tooltip="These files include most of the binary files generated by APDL (e.g. .RST, .FULL, etc.)."><div class="figure align-default" id="id13">
 <img alt="Binary MAPDL File Explorer" src="../_images/sphx_glr_explore_mapdl_files_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/explore_mapdl_files.html#sphx-glr-examples-01-apdlmath-examples-explore-mapdl-files-py"><span class="std std-ref">Binary MAPDL File Explorer</span></a></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/explore_mapdl_files.html#sphx-glr-examples-01-apdlmath-examples-explore-mapdl-files-py"><span class="std std-ref">Binary MAPDL File Explorer</span></a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="This example shows:"><div class="figure align-default" id="id18">
+<div class="sphx-glr-thumbcontainer" tooltip="This example shows:"><div class="figure align-default" id="id14">
 <img alt="Compute Eigenvalues using MAPDL or SciPy" src="../_images/sphx_glr_mapdl_vs_scipy_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/mapdl_vs_scipy.html#sphx-glr-examples-01-apdlmath-examples-mapdl-vs-scipy-py"><span class="std std-ref">Compute Eigenvalues using MAPDL or SciPy</span></a></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/mapdl_vs_scipy.html#sphx-glr-examples-01-apdlmath-examples-mapdl-vs-scipy-py"><span class="std std-ref">Compute Eigenvalues using MAPDL or SciPy</span></a></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="This tutorial will show how to get APDLMath sparse matrices (typically stiffness or mass matric..."><div class="figure align-default" id="id19">
+<div class="sphx-glr-thumbcontainer" tooltip="This tutorial will show how to get APDLMath sparse matrices (typically stiffness or mass matric..."><div class="figure align-default" id="id15">
 <img alt="Transfer APDLMath Sparse Matrices to and from SciPy Sparse Matrices" src="../_images/sphx_glr_scipy_sparse_matrix_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/scipy_sparse_matrix.html#sphx-glr-examples-01-apdlmath-examples-scipy-sparse-matrix-py"><span class="std std-ref">Transfer APDLMath Sparse Matrices to and from SciPy Sparse Matrices</span></a></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/scipy_sparse_matrix.html#sphx-glr-examples-01-apdlmath-examples-scipy-sparse-matrix-py"><span class="std std-ref">Transfer APDLMath Sparse Matrices to and from SciPy Sparse Matrices</span></a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Use APDLMath to Solve a Dense Matrix Linear System"><div class="figure align-default" id="id20">
+<div class="sphx-glr-thumbcontainer" tooltip="Use APDLMath to Solve a Dense Matrix Linear System"><div class="figure align-default" id="id16">
 <img alt="Use APDLMath to Solve a Dense Matrix Linear System" src="../_images/sphx_glr_solve_dense_matrix_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/solve_dense_matrix.html#sphx-glr-examples-01-apdlmath-examples-solve-dense-matrix-py"><span class="std std-ref">Use APDLMath to Solve a Dense Matrix Linear System</span></a></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/solve_dense_matrix.html#sphx-glr-examples-01-apdlmath-examples-solve-dense-matrix-py"><span class="std std-ref">Use APDLMath to Solve a Dense Matrix Linear System</span></a></span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Using APDLMath, you can solve linear systems of equations based on sparse or dense matrices."><div class="figure align-default" id="id21">
+<div class="sphx-glr-thumbcontainer" tooltip="Using APDLMath, you can solve linear systems of equations based on sparse or dense matrices."><div class="figure align-default" id="id17">
 <img alt="Use APDLMath To Perform Sparse Factorization and Solve Operations" src="../_images/sphx_glr_solve_sparse_matrix_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/solve_sparse_matrix.html#sphx-glr-examples-01-apdlmath-examples-solve-sparse-matrix-py"><span class="std std-ref">Use APDLMath To Perform Sparse Factorization and Solve Operations</span></a></span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/solve_sparse_matrix.html#sphx-glr-examples-01-apdlmath-examples-solve-sparse-matrix-py"><span class="std std-ref">Use APDLMath To Perform Sparse Factorization and Solve Operations</span></a></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Manipulate APDLMath vectors or dense matrices as NumPy Arrays"><div class="figure align-default" id="id22">
+<div class="sphx-glr-thumbcontainer" tooltip="Manipulate APDLMath vectors or dense matrices as NumPy Arrays"><div class="figure align-default" id="id18">
 <img alt="Manipulate APDLMath vectors or dense matrices as NumPy Arrays" src="../_images/sphx_glr_use_numpy_arrays_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/use_numpy_arrays.html#sphx-glr-examples-01-apdlmath-examples-use-numpy-arrays-py"><span class="std std-ref">Manipulate APDLMath vectors or dense matrices as NumPy Arrays</span></a></span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="01-apdlmath-examples/use_numpy_arrays.html#sphx-glr-examples-01-apdlmath-examples-use-numpy-arrays-py"><span class="std std-ref">Manipulate APDLMath vectors or dense matrices as NumPy Arrays</span></a></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
@@ -588,33 +578,33 @@ together within the PyMapdl module.</p>
 <div class="section" id="geometry-examples">
 <span id="ref-pymapdl-geometry-examples"></span><span id="sphx-glr-examples-02-geometry"></span><h2>Geometry Examples<a class="headerlink" href="#geometry-examples" title="Permalink to this headline">¶</a></h2>
 <p>These examples demonstrate using PyMAPDL to create basic geometry.</p>
-<div class="sphx-glr-thumbcontainer" tooltip="This section is focused on creating keypoints."><div class="figure align-default" id="id23">
+<div class="sphx-glr-thumbcontainer" tooltip="This section is focused on creating keypoints."><div class="figure align-default" id="id19">
 <img alt="Keypoints" src="../_images/sphx_glr_00-keypoints_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-geometry/00-keypoints.html#sphx-glr-examples-02-geometry-00-keypoints-py"><span class="std std-ref">Keypoints</span></a></span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-geometry/00-keypoints.html#sphx-glr-examples-02-geometry-00-keypoints-py"><span class="std std-ref">Keypoints</span></a></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Lines"><div class="figure align-default" id="id24">
+<div class="sphx-glr-thumbcontainer" tooltip="Lines"><div class="figure align-default" id="id20">
 <img alt="Lines" src="../_images/sphx_glr_01-lines_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-geometry/01-lines.html#sphx-glr-examples-02-geometry-01-lines-py"><span class="std std-ref">Lines</span></a></span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-geometry/01-lines.html#sphx-glr-examples-02-geometry-01-lines-py"><span class="std std-ref">Lines</span></a></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Areas"><div class="figure align-default" id="id25">
+<div class="sphx-glr-thumbcontainer" tooltip="Areas"><div class="figure align-default" id="id21">
 <img alt="Areas" src="../_images/sphx_glr_02-areas_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-geometry/02-areas.html#sphx-glr-examples-02-geometry-02-areas-py"><span class="std std-ref">Areas</span></a></span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-geometry/02-areas.html#sphx-glr-examples-02-geometry-02-areas-py"><span class="std std-ref">Areas</span></a></span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Volumes"><div class="figure align-default" id="id26">
+<div class="sphx-glr-thumbcontainer" tooltip="Volumes"><div class="figure align-default" id="id22">
 <img alt="Volumes" src="../_images/sphx_glr_03-volumes_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-geometry/03-volumes.html#sphx-glr-examples-02-geometry-03-volumes-py"><span class="std std-ref">Volumes</span></a></span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-geometry/03-volumes.html#sphx-glr-examples-02-geometry-03-volumes-py"><span class="std std-ref">Volumes</span></a></span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Primitives"><div class="figure align-default" id="id27">
+<div class="sphx-glr-thumbcontainer" tooltip="Primitives"><div class="figure align-default" id="id23">
 <img alt="Primitives" src="../_images/sphx_glr_04-primitives_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="02-geometry/04-primitives.html#sphx-glr-examples-02-geometry-04-primitives-py"><span class="std std-ref">Primitives</span></a></span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="02-geometry/04-primitives.html#sphx-glr-examples-02-geometry-04-primitives-py"><span class="std std-ref">Primitives</span></a></span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
@@ -622,27 +612,60 @@ together within the PyMapdl module.</p>
 <div class="section" id="miscellaneous-examples">
 <span id="ref-miscellaneous-examples"></span><span id="sphx-glr-examples-03-tips-n-tricks"></span><h2>Miscellaneous Examples<a class="headerlink" href="#miscellaneous-examples" title="Permalink to this headline">¶</a></h2>
 <p>These examples demonstrate miscellaneous tips and tricks for using PyMAPDL.</p>
-<div class="sphx-glr-thumbcontainer" tooltip="This block comment should be included at the top of any new example. Each example should have a..."><div class="figure align-default" id="id28">
+<div class="sphx-glr-thumbcontainer" tooltip="This block comment should be included at the top of any new example. Each example should have a..."><div class="figure align-default" id="id24">
 <img alt="Adding a New Gallery Example" src="../_images/sphx_glr_00-example-template_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="03-tips-n-tricks/00-example-template.html#sphx-glr-examples-03-tips-n-tricks-00-example-template-py"><span class="std std-ref">Adding a New Gallery Example</span></a></span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="03-tips-n-tricks/00-example-template.html#sphx-glr-examples-03-tips-n-tricks-00-example-template-py"><span class="std std-ref">Adding a New Gallery Example</span></a></span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="There are many cases in which you will want to control the density of the mesh nearby a region ..."><div class="figure align-default" id="id29">
+<div class="sphx-glr-thumbcontainer" tooltip="There are many cases in which you will want to control the density of the mesh nearby a region ..."><div class="figure align-default" id="id25">
 <img alt="MAPDL Element Size Transition Example" src="../_images/sphx_glr_01-smoothing-element-size-transitions_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="03-tips-n-tricks/01-smoothing-element-size-transitions.html#sphx-glr-examples-03-tips-n-tricks-01-smoothing-element-size-transitions-py"><span class="std std-ref">MAPDL Element Size Transition Example</span></a></span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="03-tips-n-tricks/01-smoothing-element-size-transitions.html#sphx-glr-examples-03-tips-n-tricks-01-smoothing-element-size-transitions-py"><span class="std std-ref">MAPDL Element Size Transition Example</span></a></span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Inline functions like UX have been implemented in PyMAPDL as methods on the mapdl.inline_functi..."><div class="figure align-default" id="id30">
+<div class="sphx-glr-thumbcontainer" tooltip="Inline functions like UX have been implemented in PyMAPDL as methods on the mapdl.inline_functi..."><div class="figure align-default" id="id26">
 <img alt="Using Inline Functions (Query)" src="../_images/sphx_glr_03-using_inline_functions_and_Query_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="03-tips-n-tricks/03-using_inline_functions_and_Query.html#sphx-glr-examples-03-tips-n-tricks-03-using-inline-functions-and-query-py"><span class="std std-ref">Using Inline Functions (Query)</span></a></span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="03-tips-n-tricks/03-using_inline_functions_and_Query.html#sphx-glr-examples-03-tips-n-tricks-03-using-inline-functions-and-query-py"><span class="std std-ref">Using Inline Functions (Query)</span></a></span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Not all element types have rotational degrees of freedom, but generally, &quot;shell&quot; ones do. In th..."><div class="figure align-default" id="id31">
+<div class="sphx-glr-thumbcontainer" tooltip="Not all element types have rotational degrees of freedom, but generally, &quot;shell&quot; ones do. In th..."><div class="figure align-default" id="id27">
 <img alt="Generating and Extracting Rotational Displacement" src="../_images/sphx_glr_04-rotational-displacement_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="03-tips-n-tricks/04-rotational-displacement.html#sphx-glr-examples-03-tips-n-tricks-04-rotational-displacement-py"><span class="std std-ref">Generating and Extracting Rotational Displacement</span></a></span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="03-tips-n-tricks/04-rotational-displacement.html#sphx-glr-examples-03-tips-n-tricks-04-rotational-displacement-py"><span class="std std-ref">Generating and Extracting Rotational Displacement</span></a></span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-clear"></div></div>
+<div class="section" id="verification-manual-examples">
+<span id="sphx-glr-examples-06-verif-manual"></span><h2>Verification Manual Examples<a class="headerlink" href="#verification-manual-examples" title="Permalink to this headline">¶</a></h2>
+<p>This section demonstrates a range of Mechanical APDL elements and
+capabilities in straightforward problems which have “classical” or
+readily-obtainable theoretical solutions using PyMAPDL.</p>
+<p>These problems may then serve as the basis for additional validation
+and qualification of Mechanical APDL capabilities for specific
+applications that may be of interest.</p>
+<div class="sphx-glr-thumbcontainer" tooltip="Reference:  - S. Timoshenko, Strength of Materials, Part I, Elementary Theory and    Problems, ..."><div class="figure align-default" id="id28">
+<img alt="Statically Indeterminate Reaction Force Analysis" src="../_images/sphx_glr_vm-001-statically_indeterminate_reaction_force_analysis_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="06-verif-manual/vm-001-statically_indeterminate_reaction_force_analysis.html#sphx-glr-examples-06-verif-manual-vm-001-statically-indeterminate-reaction-force-analysis-py"><span class="std std-ref">Statically Indeterminate Reaction Force Analysis</span></a></span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Reference:  - S. Timoshenko, Strength of Materials, Part I, Elementary Theory and    Problems, ..."><div class="figure align-default" id="id29">
+<img alt="Thermally Loaded Support Structure" src="../_images/sphx_glr_vm-003-thermally_loaded_support_structure_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="06-verif-manual/vm-003-thermally_loaded_support_structure.html#sphx-glr-examples-06-verif-manual-vm-003-thermally-loaded-support-structure-py"><span class="std std-ref">Thermally Loaded Support Structure</span></a></span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Reference:  - S. Timoshenko, Strength of Materials, Part I, Elementary Theory and    Problems, ..."><div class="figure align-default" id="id30">
+<img alt="Deflection of a Hinged Support" src="../_images/sphx_glr_vm-004-deflection_of_a_hinged_support_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="06-verif-manual/vm-004-deflection_of_a_hinged_support.html#sphx-glr-examples-06-verif-manual-vm-004-deflection-of-a-hinged-support-py"><span class="std std-ref">Deflection of a Hinged Support</span></a></span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Reference:  - S. H. Crandall, N. C. Dahl, An Introduction to the Mechanics    of Solids, McGraw..."><div class="figure align-default" id="id31">
+<img alt="Statically Indeterminate Reaction Force Analysis" src="../_images/sphx_glr_vm-005-laterally_loaded_tapered_support_structure_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="06-verif-manual/vm-005-laterally_loaded_tapered_support_structure.html#sphx-glr-examples-06-verif-manual-vm-005-laterally-loaded-tapered-support-structure-py"><span class="std std-ref">Statically Indeterminate Reaction Force Analysis</span></a></span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>

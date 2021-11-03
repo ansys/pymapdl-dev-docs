@@ -24,6 +24,8 @@
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
@@ -36,8 +38,11 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/thebelab-helper.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Keypoints" href="../02-geometry/00-keypoints.html" />
@@ -227,34 +232,6 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/vm-001-statically_indeterminate_reaction_force_analysis.html">
-   Statically Indeterminate Reaction Force Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/vm-003-thermally_loaded_support_structure.html">
-   Thermally Loaded Support Structure
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/vm-004-deflection_of_a_hinged_support.html">
-   Deflection of a Hinged Support
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/vm-005-laterally_loaded_tapered_support_structure.html">
-   Statically Indeterminate Reaction Force Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
   <a class="reference internal" href="basic_operations.html">
    PyMAPDL APDLMath Basic Operations
   </a>
@@ -372,6 +349,34 @@
   </a>
  </li>
 </ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-verif-manual/vm-001-statically_indeterminate_reaction_force_analysis.html">
+   Statically Indeterminate Reaction Force Analysis
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-verif-manual/vm-003-thermally_loaded_support_structure.html">
+   Thermally Loaded Support Structure
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-verif-manual/vm-004-deflection_of_a_hinged_support.html">
+   Deflection of a Hinged Support
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-verif-manual/vm-005-laterally_loaded_tapered_support_structure.html">
+   Statically Indeterminate Reaction Force Analysis
+  </a>
+ </li>
+</ul>
 
     
   </div>
@@ -459,7 +464,7 @@ Python via numpy arrays.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>SGLWHW :
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>ZPDRTQ :
  Size : 10
   1.000e+00   1.000e+00   1.000e+00   1.000e+00   1.000e+00      &lt;       5
   1.000e+00   1.000e+00   1.000e+00   1.000e+00   1.000e+00      &lt;       10
@@ -524,7 +529,7 @@ creates a new APDLMath, which in this case is named <code class="docutils litera
   Name                   Type            Mem. (MB)       Dims            Workspace
 
    NEWVEC                VEC             0.000           10              1
-   SGLWHW                VEC             0.000           10              1
+   ZPDRTQ                VEC             0.000           10              1
 </pre></div>
 </div>
 <p>Create a Python handle to this vector by specifying its name</p>
@@ -554,7 +559,7 @@ array</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>CMYBNH:
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>NGBSXC:
  [1,1]: 4.170e-01 [1,2]: 9.326e-01 [1,3]: 3.023e-01
  [2,1]: 9.972e-01 [2,2]: 1.144e-04 [2,3]: 9.990e-01
  [3,1]: 7.203e-01 [3,2]: 1.281e-01 [3,3]: 1.468e-01
@@ -572,7 +577,7 @@ array</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>LGWIXU
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>JFFCZV
 </pre></div>
 </div>
 <p>Load this matrix from APDL and verify it is identical</p>
@@ -584,7 +589,7 @@ array</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.162 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.159 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-apdlmath-examples-use-numpy-arrays-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/6d1f6f9f0c59543b1a9a7d1f68adad86/use_numpy_arrays.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">use_numpy_arrays.py</span></code></a></p>
