@@ -155,8 +155,6 @@ Create a rectangular area with two notches at the top and bottom.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      warnings.warn(
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1192: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
       warnings.warn(
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
@@ -355,7 +353,7 @@ Solve the static analysis
  .. code-block:: none
 
 
-    'FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =        54.788'
+    'FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =        53.699'
 
 
 
@@ -549,7 +547,7 @@ width over the modified cross section width.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.288 seconds)
+   **Total running time of the script:** ( 0 minutes  6.109 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_3d_notch.py:

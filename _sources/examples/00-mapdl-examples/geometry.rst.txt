@@ -137,8 +137,6 @@ configure this method with a variety of keyword arguments.  For example:
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1332: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      warnings.warn(
 
     [(-2.3621999999390297e-06, -10.642040667497753, 0.057141257263860545),
      (-2.3621999999390297e-06, -0.11811023622050003, 0.057141257263860545),
@@ -484,7 +482,7 @@ format and loaded again with ``pyvista`` or ParaView.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  15.860 seconds)
+   **Total running time of the script:** ( 0 minutes  15.997 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_geometry.py:
