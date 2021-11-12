@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Frequently Asked Questions &#8212; ansys.mapdl.core 0.60.dev0 documentation</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +24,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -32,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -48,7 +49,10 @@
     <link rel="next" title="User Guide" href="../user_guide/index.html" />
     <link rel="prev" title="Using MAPDL Through Docker" href="docker.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -248,18 +252,18 @@
               
               <div>
                 
-  <div class="section" id="frequently-asked-questions">
+  <section id="frequently-asked-questions">
 <span id="faq"></span><h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
 <p>A collection of frequently asked questions and their answers.</p>
-<div class="section" id="how-should-i-report-issues">
+<section id="how-should-i-report-issues">
 <h2>How should I report issues?<a class="headerlink" href="#how-should-i-report-issues" title="Permalink to this headline">¶</a></h2>
 <p>Issues with pyansys such as bugs, feature requests, and documentation
 errors can be reported on the <a class="reference external" href="https://github.com/pyansys/PyMAPDL/issues">GitHub page</a> as new issues.</p>
 <p>If you wish to ask more open-ended questions or wish to pick the
 brains of the community you can visit the <a class="reference external" href="https://github.com/pyansys/PyMAPDL/discussions">Discussions section</a> of our GitHub
 repository.</p>
-</div>
-<div class="section" id="what-are-the-pros-and-cons-of-pyansys-vs-ansys-act">
+</section>
+<section id="what-are-the-pros-and-cons-of-pyansys-vs-ansys-act">
 <h2>What are the pros and cons of pyansys vs Ansys ACT?<a class="headerlink" href="#what-are-the-pros-and-cons-of-pyansys-vs-ansys-act" title="Permalink to this headline">¶</a></h2>
 <p>It depends on your pipeline and software approach. Ansys Act is a
 workbench dependent approach where extensions are built from within
@@ -284,8 +288,8 @@ compatible with IronPython (Python 2)</p></li>
 </div></blockquote>
 <p>The best approach will depend on your workflow needs and how you’d
 like to develop software.</p>
-</div>
-<div class="section" id="i-ve-heard-apdl-has-been-deprecated-by-ansys-what-does-that-mean-for-pymapdl">
+</section>
+<section id="i-ve-heard-apdl-has-been-deprecated-by-ansys-what-does-that-mean-for-pymapdl">
 <h2>I’ve heard APDL has been “deprecated” by Ansys, what does that mean for PyMAPDL?<a class="headerlink" href="#i-ve-heard-apdl-has-been-deprecated-by-ansys-what-does-that-mean-for-pymapdl" title="Permalink to this headline">¶</a></h2>
 <p>APDL isn’t going anywhere. In fact, whenever you call Mechanical Workbench, it’s generating an input file
 (look for “ds.dat”) that’s fed into MAPDL. However, what’s changed over the past several years is where the geometry,
@@ -293,8 +297,8 @@ meshing, and post-processing is occurring. Geometry generation can take place wi
 and meshing is done using a variety of new and powerful meshers within Workbench. I can attest that these tools are
 far superior to the ones in MAPDL, but the biggest limitation to them is that they’re difficult to script
 (especially externally) and as a result there are still users who choose to generate geometry and mesh within MAPDL.</p>
-</div>
-<div class="section" id="what-are-the-main-reasons-to-use-this-over-other-ansys-products-like-workbench">
+</section>
+<section id="what-are-the-main-reasons-to-use-this-over-other-ansys-products-like-workbench">
 <h2>What are the main reasons to use this over other Ansys products like Workbench?<a class="headerlink" href="#what-are-the-main-reasons-to-use-this-over-other-ansys-products-like-workbench" title="Permalink to this headline">¶</a></h2>
 <p>There will always be tasks where it’s better to use one or the
 other. Workbench is great tool to rapidly prototype, mesh, set
@@ -307,8 +311,8 @@ use packages such as <code class="docutils literal notranslate"><span class="pre
 to have a fully parametric workflow that leverages these machine
 learning tools or allows for advanced plotting with <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> or
 <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
-</div>
-<div class="section" id="script-restart">
+</section>
+<section id="script-restart">
 <h2>Script Restart<a class="headerlink" href="#script-restart" title="Permalink to this headline">¶</a></h2>
 <p><strong>Question</strong></p>
 <p>Sometimes I have difficulty to terminate the simulation. I
@@ -325,8 +329,8 @@ previous data such as the mesh.  Is there a better way?</p>
 since if you kill the original process nothing should be in the new
 python process. As for clearing out mapdl, it’s just
 <code class="docutils literal notranslate"><span class="pre">mapdl.clear()</span></code> or existing and restarting MAPDL.</p>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -338,20 +342,19 @@ python process. As for clearing out mapdl, it’s just
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br/>
+    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0.<br>
 </p>
     </div>
     

@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Deflection of a Hinged Support &#8212; ansys.mapdl.core 0.60.dev0 documentation</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +24,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -32,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,13 +44,16 @@
     <script src="../../_static/copybutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Statically Indeterminate Reaction Force Analysis" href="vm-005-laterally_loaded_tapered_support_structure.html" />
     <link rel="prev" title="Thermally Loaded Support Structure" href="vm-003-thermally_loaded_support_structure.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -464,7 +468,7 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-06-verif-manual-vm-004-deflection-of-a-hinged-support-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="deflection-of-a-hinged-support">
+<section class="sphx-glr-example-title" id="deflection-of-a-hinged-support">
 <span id="ref-deflection-of-a-hinged-support"></span><span id="sphx-glr-examples-06-verif-manual-vm-004-deflection-of-a-hinged-support-py"></span><h1>Deflection of a Hinged Support<a class="headerlink" href="#deflection-of-a-hinged-support" title="Permalink to this headline">¶</a></h1>
 <dl class="simple">
 <dt>Problem Description:</dt><dd><ul class="simple">
@@ -529,7 +533,7 @@ calculated parametrically in the input as follows:
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_path = &#39;_static/vm4_setup.png&#39;</span>
 </pre></div>
 </div>
-<div class="section" id="start-mapdl">
+<section id="start-mapdl">
 <h2>Start MAPDL<a class="headerlink" href="#start-mapdl" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <a href="https://docs.python.org/dev/library/math.html#math.sin" title="math.sin" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><span class="n">sin</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/math.html#math.cos" title="math.cos" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><span class="n">cos</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pi</span></a>
 <span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
@@ -547,8 +551,8 @@ calculated parametrically in the input as follows:
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;*****ANSYS VERIFICATION RUN ONLY*****\n     DO NOT USE RESULTS FOR PRODUCTION\n\n          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****&#39;
 </pre></div>
 </div>
-</div>
-<div class="section" id="define-material">
+</section>
+<section id="define-material">
 <h2>Define Material<a class="headerlink" href="#define-material" title="Permalink to this headline">¶</a></h2>
 <p>Create a simple hinge geometry.
 We use the <cite>LINK180</cite> element type to model this and an elastic modulus
@@ -571,8 +575,8 @@ ease of use later on.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;MATERIAL          1     EX   =  0.3000000E+08&#39;
 </pre></div>
 </div>
-</div>
-<div class="section" id="define-geometry">
+</section>
+<section id="define-geometry">
 <h2>Define Geometry<a class="headerlink" href="#define-geometry" title="Permalink to this headline">¶</a></h2>
 <p>We create three nodes in an isosceles triangle shape, with elements
 along the equal sides, forming a hinge.</p>
@@ -596,8 +600,8 @@ along the equal sides, forming a hinge.</p>
  (0.0, 1.0, 0.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="define-boundary-conditions">
+</section>
+<section id="define-boundary-conditions">
 <h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Fix nodes 1 and 3 in place</p></li>
@@ -613,8 +617,8 @@ along the equal sides, forming a hinge.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;***** ROUTINE COMPLETED *****  CP =         0.000&#39;
 </pre></div>
 </div>
-</div>
-<div class="section" id="solve">
+</section>
+<section id="solve">
 <h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">¶</a></h2>
 <p>Enter solution mode and solve the system.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
@@ -626,8 +630,8 @@ along the equal sides, forming a hinge.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =         0.000&#39;
 </pre></div>
 </div>
-</div>
-<div class="section" id="post-processing">
+</section>
+<section id="post-processing">
 <h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
 <p>Enter post-processing, get the results and view the nodal displacement
 as well as the equivalent stress on the nodes.</p>
@@ -655,8 +659,8 @@ data.</p>
  (0.0, 1.0, 0.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="principal-nodal-stress">
+</section>
+<section id="principal-nodal-stress">
 <h2>Principal nodal stress<a class="headerlink" href="#principal-nodal-stress" title="Permalink to this headline">¶</a></h2>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">post_processing</span></code> attribute to get the principal nodal
 stress as an array.</p>
@@ -681,8 +685,8 @@ Node 2 : 10000.0 psi
 Node 3 : 10000.0 psi
 </pre></div>
 </div>
-</div>
-<div class="section" id="check-results">
+</section>
+<section id="check-results">
 <h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">¶</a></h2>
 <p>Now that we have the results we can compare the nodal displacement and
 stress experienced by node 2 to the known quantities 10000 psi and
@@ -722,7 +726,7 @@ Displacement [in]     -0.12          -0.12                 1.00
 ------------------------------------------------------------------
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.976 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.879 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-06-verif-manual-vm-004-deflection-of-a-hinged-support-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/8c13d5b58a1d5c1fd1339996df74a6b3/vm-004-deflection_of_a_hinged_support.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-004-deflection_of_a_hinged_support.py</span></code></a></p>
@@ -732,8 +736,8 @@ Displacement [in]     -0.12          -0.12                 1.00
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -745,20 +749,19 @@ Displacement [in]     -0.12          -0.12                 1.00
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br/>
+    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0.<br>
 </p>
     </div>
     

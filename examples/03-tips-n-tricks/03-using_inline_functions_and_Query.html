@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Using Inline Functions (Query) &#8212; ansys.mapdl.core 0.60.dev0 documentation</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +24,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -32,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -48,7 +49,10 @@
     <link rel="next" title="Generating and Extracting Rotational Displacement" href="04-rotational-displacement.html" />
     <link rel="prev" title="MAPDL Element Size Transition Example" href="01-smoothing-element-size-transitions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -453,7 +457,7 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-03-tips-n-tricks-03-using-inline-functions-and-query-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="using-inline-functions-query">
+<section class="sphx-glr-example-title" id="using-inline-functions-query">
 <span id="ref-how-to-use-query"></span><span id="sphx-glr-examples-03-tips-n-tricks-03-using-inline-functions-and-query-py"></span><h1>Using Inline Functions (Query)<a class="headerlink" href="#using-inline-functions-query" title="Permalink to this headline">¶</a></h1>
 <p>Inline functions like <code class="docutils literal notranslate"><span class="pre">UX</span></code> have been implemented in PyMAPDL as methods
 on the <code class="docutils literal notranslate"><span class="pre">mapdl.inline_functions.Query</span></code> object. In this example we set
@@ -472,7 +476,7 @@ functionality.</p>
 <span class="n">q</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">queries</span>
 </pre></div>
 </div>
-<div class="section" id="setup-mesh">
+<section id="setup-mesh">
 <h2>Setup Mesh<a class="headerlink" href="#setup-mesh" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Assign element type <code class="docutils literal notranslate"><span class="pre">SOLID5</span></code> to element type 1</p></li>
@@ -499,8 +503,8 @@ functionality.</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="setup-boundary-conditions">
+</section>
+<section id="setup-boundary-conditions">
 <h2>Setup Boundary Conditions<a class="headerlink" href="#setup-boundary-conditions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Assign an Elastic modulus in the x-direction to material 1 of 21e9</p></li>
@@ -526,8 +530,8 @@ functionality.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;***** ROUTINE COMPLETED *****  CP =         0.000&#39;
 </pre></div>
 </div>
-</div>
-<div class="section" id="id1">
+</section>
+<section id="id1">
 <h2>Setup Boundary Conditions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Enter solution (<code class="docutils literal notranslate"><span class="pre">mapdl.slashsolu</span></code> also works)</p></li>
@@ -547,8 +551,8 @@ functionality.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =         0.000&#39;
 </pre></div>
 </div>
-</div>
-<div class="section" id="post-processing">
+</section>
+<section id="post-processing">
 <h2>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Get the result from the <code class="docutils literal notranslate"><span class="pre">mapdl</span></code> instance</p></li>
@@ -567,8 +571,8 @@ functionality.</p>
   warnings.warn(
 </pre></div>
 </div>
-</div>
-<div class="section" id="using-query">
+</section>
+<section id="using-query">
 <h2>Using <code class="docutils literal notranslate"><span class="pre">Query</span></code><a class="headerlink" href="#using-query" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">Query</span></code> to get the nodes nearest to (5, 0, 0) and (5, 10, 0)</p></li>
@@ -599,21 +603,21 @@ functionality.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>************************
 Displacement at Node 28:
 ************************
-X | 1.7577163783926418e-05
-Y | 3.0362575469000878e-09
-Z | -7.982690758480552e-07
+X | 1.7577163783926506e-05
+Y | 3.036257546899792e-09
+Z | -7.982690758480565e-07
 
 
 
 ************************
 Displacement at Node 49:
 ************************
-X | 1.7612417675184498e-05
-Y | 1.2586960578657025e-19
-Z | 8.070989838529129e-07
+X | 1.7612417675184576e-05
+Y | 1.2847564217252188e-19
+Z | 8.070989838529148e-07
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.471 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.513 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-03-tips-n-tricks-03-using-inline-functions-and-query-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/4ea91bcad1afa01191b26a6ed2b68bf9/03-using_inline_functions_and_Query.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">03-using_inline_functions_and_Query.py</span></code></a></p>
@@ -623,8 +627,8 @@ Z | 8.070989838529129e-07
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -636,20 +640,19 @@ Z | 8.070989838529129e-07
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br/>
+    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0.<br>
 </p>
     </div>
     

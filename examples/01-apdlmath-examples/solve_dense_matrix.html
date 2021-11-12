@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Use APDLMath to Solve a Dense Matrix Linear System &#8212; ansys.mapdl.core 0.60.dev0 documentation</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +24,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -32,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -48,7 +49,10 @@
     <link rel="next" title="Use APDLMath To Perform Sparse Factorization and Solve Operations" href="solve_sparse_matrix.html" />
     <link rel="prev" title="Transfer APDLMath Sparse Matrices to and from SciPy Sparse Matrices" href="scipy_sparse_matrix.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -418,7 +422,7 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-01-apdlmath-examples-solve-dense-matrix-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="use-apdlmath-to-solve-a-dense-matrix-linear-system">
+<section class="sphx-glr-example-title" id="use-apdlmath-to-solve-a-dense-matrix-linear-system">
 <span id="sphx-glr-examples-01-apdlmath-examples-solve-dense-matrix-py"></span><h1>Use APDLMath to Solve a Dense Matrix Linear System<a class="headerlink" href="#use-apdlmath-to-solve-a-dense-matrix-linear-system" title="Permalink to this headline">¶</a></h1>
 <p>Use the APDLMath module to solve a Dense Matrix Linear System.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -456,7 +460,7 @@ factorization call</p>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Solving a (10000 x 10000) dense linear system using MAPDL...
-Elapsed time to solve the linear system using Mapdl: 4.863566160202026 seconds
+Elapsed time to solve the linear system using Mapdl: 9.852252006530762 seconds
 </pre></div>
 </div>
 <p>Norm of the MAPDL Solution</p>
@@ -478,7 +482,7 @@ Elapsed time to solve the linear system using Mapdl: 4.863566160202026 seconds
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Solving a (10000 x 10000) dense linear system using numpy...
-Elapsed time to solve the linear system using numpy: 5.788719177246094 seconds
+Elapsed time to solve the linear system using numpy: 10.438557863235474 seconds
 </pre></div>
 </div>
 <p>Norm of the numpy Solution</p>
@@ -486,10 +490,10 @@ Elapsed time to solve the linear system using numpy: 5.788719177246094 seconds
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1.0000000000000022
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1.0000000000000042
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  14.227 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  24.309 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-apdlmath-examples-solve-dense-matrix-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/a40b01a34905c256377338bd413938c0/solve_dense_matrix.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">solve_dense_matrix.py</span></code></a></p>
@@ -499,7 +503,7 @@ Elapsed time to solve the linear system using numpy: 5.788719177246094 seconds
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
+</section>
 
 
               </div>
@@ -511,20 +515,19 @@ Elapsed time to solve the linear system using numpy: 5.788719177246094 seconds
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br/>
+    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0.<br>
 </p>
     </div>
     

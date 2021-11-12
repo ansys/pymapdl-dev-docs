@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Statically Indeterminate Reaction Force Analysis &#8212; ansys.mapdl.core 0.60.dev0 documentation</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +24,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -32,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,13 +44,16 @@
     <script src="../../_static/copybutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Thermally Loaded Support Structure" href="vm-003-thermally_loaded_support_structure.html" />
     <link rel="prev" title="Generating and Extracting Rotational Displacement" href="../03-tips-n-tricks/04-rotational-displacement.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -454,7 +458,7 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-06-verif-manual-vm-001-statically-indeterminate-reaction-force-analysis-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="statically-indeterminate-reaction-force-analysis">
+<section class="sphx-glr-example-title" id="statically-indeterminate-reaction-force-analysis">
 <span id="ref-statically-indeterminate-example"></span><span id="sphx-glr-examples-06-verif-manual-vm-001-statically-indeterminate-reaction-force-analysis-py"></span><h1>Statically Indeterminate Reaction Force Analysis<a class="headerlink" href="#statically-indeterminate-reaction-force-analysis" title="Permalink to this headline">¶</a></h1>
 <dl class="simple">
 <dt>Problem Description:</dt><dd><ul class="simple">
@@ -518,7 +522,7 @@ the load and the wall.</p></li>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;*****ANSYS VERIFICATION RUN ONLY*****\n     DO NOT USE RESULTS FOR PRODUCTION\n\n          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****&#39;
 </pre></div>
 </div>
-<div class="section" id="define-material">
+<section id="define-material">
 <h2>Define Material<a class="headerlink" href="#define-material" title="Permalink to this headline">¶</a></h2>
 <p>Set up the material and its type (a single material, with a linking-type
 section and a Young’s modulus of 30e6).</p>
@@ -533,8 +537,8 @@ section and a Young’s modulus of 30e6).</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;MATERIAL          1     EX   =  0.3000000E+08&#39;
 </pre></div>
 </div>
-</div>
-<div class="section" id="define-geometry">
+</section>
+<section id="define-geometry">
 <h2>Define Geometry<a class="headerlink" href="#define-geometry" title="Permalink to this headline">¶</a></h2>
 <p>Set up the nodes and elements.  This creates a mesh just like in the
 problem setup.</p>
@@ -550,8 +554,8 @@ problem setup.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;GENERATE       3 TOTAL SETS OF ELEMENTS WITH NODE INCREMENT OF         1\n   SET IS SELECTED ELEMENTS IN RANGE         1 TO         1 IN STEPS OF       1\n\n MAXIMUM ELEMENT NUMBER=         3&#39;
 </pre></div>
 </div>
-</div>
-<div class="section" id="define-boundary-conditions">
+</section>
+<section id="define-boundary-conditions">
 <h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this headline">¶</a></h2>
 <p>Full constrain nodes 1 and 4, by incrementing from node 1 to node 4
 in steps of 3. Apply y-direction forces to nodes 2 and 3, with
@@ -568,8 +572,8 @@ values of -500 lb and -1000 lb respectively. Then exit prep7.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;***** ROUTINE COMPLETED *****  CP =         0.000&#39;
 </pre></div>
 </div>
-</div>
-<div class="section" id="solve">
+</section>
+<section id="solve">
 <h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">¶</a></h2>
 <p>Enter solution mode and solve the system.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
@@ -581,8 +585,8 @@ values of -500 lb and -1000 lb respectively. Then exit prep7.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =         0.000&#39;
 </pre></div>
 </div>
-</div>
-<div class="section" id="post-processing">
+</section>
+<section id="post-processing">
 <h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
 <p>Enter post-processing. Select the nodes at <code class="docutils literal notranslate"><span class="pre">y=10</span></code> and <code class="docutils literal notranslate"><span class="pre">y=0</span></code>, and
 sum the forces there. Then store the y-components in two variables:
@@ -596,8 +600,8 @@ sum the forces there. Then store the y-components in two variables:
 <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">reaction_2</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;REAC_2&quot;</span><span class="p">,</span> <span class="s2">&quot;FSUM&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;ITEM&quot;</span><span class="p">,</span> <span class="s2">&quot;FY&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="check-results">
+</section>
+<section id="check-results">
 <h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">¶</a></h2>
 <p>Now that we have the reaction forces we can compare them to the
 expected values of 900 lbs and 600 lbs for reactions 1 and 2 respectively.</p>
@@ -625,7 +629,7 @@ R2, lb          600.0       600.0   1.0
 ----------------------------------------------------------------
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.160 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.159 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-06-verif-manual-vm-001-statically-indeterminate-reaction-force-analysis-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/83a8ba65a4cc0fe288426c53a861e970/vm-001-statically_indeterminate_reaction_force_analysis.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-001-statically_indeterminate_reaction_force_analysis.py</span></code></a></p>
@@ -635,8 +639,8 @@ R2, lb          600.0       600.0   1.0
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -648,20 +652,19 @@ R2, lb          600.0       600.0   1.0
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br/>
+    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0.<br>
 </p>
     </div>
     

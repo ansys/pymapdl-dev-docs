@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Plotting and Mesh Access &#8212; ansys.mapdl.core 0.60.dev0 documentation</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +24,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -32,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -48,7 +49,10 @@
     <link rel="next" title="MAPDL 3D Beam Example" href="mapdl_3d_beam.html" />
     <link rel="prev" title="Contact Element Example" href="contact_elements.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -438,7 +442,7 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-00-mapdl-examples-geometry-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="plotting-and-mesh-access">
+<section class="sphx-glr-example-title" id="plotting-and-mesh-access">
 <span id="ref-3d-bracket-example"></span><span id="sphx-glr-examples-00-mapdl-examples-geometry-py"></span><h1>Plotting and Mesh Access<a class="headerlink" href="#plotting-and-mesh-access" title="Permalink to this headline">¶</a></h1>
 <p>PyMAPDL can load basic IGES geometry for analysis.</p>
 <p>This example demonstrates loading basic geometry into MAPDL for
@@ -456,7 +460,7 @@ PyMAPDL including direct mesh access through VTK.</p>
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">pymapdl</span><span class="o">.</span><span class="n">launch_mapdl</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="section" id="load-geometry">
+<section id="load-geometry">
 <h2>Load Geometry<a class="headerlink" href="#load-geometry" title="Permalink to this headline">¶</a></h2>
 <p>Here we download a simple example bracket IGES file and load it into
 MAPDL.  Since <code class="docutils literal notranslate"><span class="pre">igesin</span></code> must be in the AUX15 process</p>
@@ -477,8 +481,8 @@ Areas:      73
 Volumes:    1
 </pre></div>
 </div>
-</div>
-<div class="section" id="plotting">
+</section>
+<section id="plotting">
 <h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
 <p>PyMAPDL uses VTK and pyvista as a plotting backend to enable
 remotable (with 2021R1 and newer) interactive plotting.  The common
@@ -527,8 +531,8 @@ arguments.  For example:</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="accessesing-element-and-nodes-pythonically">
+</section>
+<section id="accessesing-element-and-nodes-pythonically">
 <h2>Accessesing Element and Nodes Pythonically<a class="headerlink" href="#accessesing-element-and-nodes-pythonically" title="Permalink to this headline">¶</a></h2>
 <p>PyMAPDL also supports element and nodal plotting using <code class="docutils literal notranslate"><span class="pre">eplot</span></code> and
 <code class="docutils literal notranslate"><span class="pre">nplot</span></code>.  First, mesh the bracket using SOLID187 elements.  These
@@ -679,7 +683,7 @@ format and loaded again with <code class="docutils literal notranslate"><span cl
 <span class="gp">&gt;&gt;&gt; </span><span class="n">imported_mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_mesh.vtk&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  15.936 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  18.677 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-geometry-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/fdbbd4d59c8d4597316514cebc4a75d5/geometry.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">geometry.py</span></code></a></p>
@@ -689,8 +693,8 @@ format and loaded again with <code class="docutils literal notranslate"><span cl
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -702,20 +706,19 @@ format and loaded again with <code class="docutils literal notranslate"><span cl
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br/>
+    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0.<br>
 </p>
     </div>
     

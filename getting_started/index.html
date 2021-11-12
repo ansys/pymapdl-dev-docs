@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Getting Started &#8212; ansys.mapdl.core 0.60.dev0 documentation</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +24,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -32,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -48,7 +49,10 @@
     <link rel="next" title="Using PyMAPDL from the Standard Install" href="running_mapdl.html" />
     <link rel="prev" title="PyMAPDL Documentation" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -250,7 +254,7 @@
               
               <div>
                 
-  <div class="section" id="getting-started">
+  <section id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <p>To use PyMAPDL, you need to have a local installation of Ansys.  The
 version of Ansys installed will dictate the interface and features
@@ -259,9 +263,9 @@ available to you.</p>
 getting a licensed copy of Ansys.</p>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="installation">
+<section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="python-module">
+<section id="python-module">
 <h3>Python Module<a class="headerlink" href="#python-module" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">ansys.mapdl.core</span></code> package currently supports Python 3.6 through
 Python 3.9 on Windows, Mac OS, and Linux.</p>
@@ -282,8 +286,8 @@ Python 3.9 on Windows, Mac OS, and Linux.</p>
 <p>This will allow you to install the pymapdl <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> module
 and modify it locally and have the changes reflected in your setup
 after restarting the Python kernel.</p>
-</div>
-<div class="section" id="offline-installation">
+</section>
+<section id="offline-installation">
 <h3>Offline Installation<a class="headerlink" href="#offline-installation" title="Permalink to this headline">¶</a></h3>
 <p>If you would like to install <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> on a computer
 without access to the internet, you can create a <code class="docutils literal notranslate"><span class="pre">wheelhouse</span></code> that
@@ -310,8 +314,8 @@ within the <code class="docutils literal notranslate"><span class="pre">pyansys_
 <p>The OS and version of Python used to generate the wheelhouse must
 match the offline machine.</p>
 </div>
-</div>
-<div class="section" id="ansys-software-requirements">
+</section>
+<section id="ansys-software-requirements">
 <h3>ANSYS Software Requirements<a class="headerlink" href="#ansys-software-requirements" title="Permalink to this headline">¶</a></h3>
 <p>For the latest features, you will need a copy of ANSYS 2021R1
 installed locally, but PyMAPDL is compatible with ANSYS 17.0 and newer
@@ -322,8 +326,8 @@ on Windows and 13.0 on Linux.</p>
 and features.  Certain features will not be supported by earlier
 versions of ANSYS (e.g. APDL Math).</p>
 </div>
-</div>
-<div class="section" id="verify-your-installation">
+</section>
+<section id="verify-your-installation">
 <h3>Verify Your Installation<a class="headerlink" href="#verify-your-installation" title="Permalink to this headline">¶</a></h3>
 <p>Check that you can start MAPDL from Python by running:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
@@ -338,9 +342,9 @@ versions of ANSYS (e.g. APDL Math).</p>
 <p>If you see a response from the server, congratulations!  You’re ready
 to get started using MAPDL as a service.  For details regarding the
 PyMAPDL interface, see <a class="reference internal" href="../user_guide/mapdl.html#ref-mapdl-user-guide"><span class="std std-ref">PyMAPDL Language and Usage</span></a>.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>
@@ -352,20 +356,19 @@ PyMAPDL interface, see <a class="reference internal" href="../user_guide/mapdl.h
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br/>
+    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0.<br>
 </p>
     </div>
     

@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Primitives &#8212; ansys.mapdl.core 0.60.dev0 documentation</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +24,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -32,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -48,7 +49,10 @@
     <link rel="next" title="Adding a New Gallery Example" href="../03-tips-n-tricks/00-example-template.html" />
     <link rel="prev" title="Volumes" href="03-volumes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -493,7 +497,7 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-geometry-04-primitives-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="primitives">
+<section class="sphx-glr-example-title" id="primitives">
 <span id="ref-basic-geometry-primitives"></span><span id="sphx-glr-examples-02-geometry-04-primitives-py"></span><h1>Primitives<a class="headerlink" href="#primitives" title="Permalink to this headline">¶</a></h1>
 <p>This example shows how you can use PyMAPDL to create basic geometry
 using Pythonic PREP7 volume commands.</p>
@@ -512,7 +516,7 @@ MAPDL Version:       21.2
 ansys.mapdl Version: 0.60.dev0
 </pre></div>
 </div>
-<div class="section" id="apdl-command-blc4">
+<section id="apdl-command-blc4">
 <h2>APDL Command: BLC4<a class="headerlink" href="#apdl-command-blc4" title="Permalink to this headline">¶</a></h2>
 <p>Create a rectangular area or block volume by corner points.</p>
 <p>Create a <code class="docutils literal notranslate"><span class="pre">0.5</span> <span class="pre">x</span> <span class="pre">0.5</span></code> rectangle starting at <code class="docutils literal notranslate"><span class="pre">(0.25,</span> <span class="pre">0.25)</span></code></p>
@@ -555,8 +559,8 @@ the block at <code class="docutils literal notranslate"><span class="pre">(0,</s
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-blc5">
+</section>
+<section id="apdl-command-blc5">
 <h2>APDL Command: BLC5<a class="headerlink" href="#apdl-command-blc5" title="Permalink to this headline">¶</a></h2>
 <p>Create a rectangular area or block volume by center and corner points.</p>
 <p>This differs from BLC4 since this describes the center rather than
@@ -602,8 +606,8 @@ height of 0.5</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-block">
+</section>
+<section id="apdl-command-block">
 <h2>APDL Command: BLOCK<a class="headerlink" href="#apdl-command-block" title="Permalink to this headline">¶</a></h2>
 <p>Create a block volume based on working plane coordinates with the
 size <code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">x</span> <span class="pre">2</span> <span class="pre">x</span> <span class="pre">3)</span></code></p>
@@ -630,8 +634,8 @@ size <code class="docutils literal notranslate"><span class="pre">(1</span> <spa
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-con4">
+</section>
+<section id="apdl-command-con4">
 <h2>APDL Command: CON4<a class="headerlink" href="#apdl-command-con4" title="Permalink to this headline">¶</a></h2>
 <p>Create a conical volume anywhere on the working plane.</p>
 <p>Create a cone with a bottom radius of 3 and a height of 10.</p>
@@ -653,8 +657,8 @@ size <code class="docutils literal notranslate"><span class="pre">(1</span> <spa
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-cone">
+</section>
+<section id="apdl-command-cone">
 <h2>APDL Command: CONE<a class="headerlink" href="#apdl-command-cone" title="Permalink to this headline">¶</a></h2>
 <p>Create a conical volume centered about the working plane origin.</p>
 <p>Create a quarter cone with a bottom radius of 3, top radius of 1 and
@@ -677,8 +681,8 @@ a height of 10 centered at <code class="docutils literal notranslate"><span clas
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-cyl4">
+</section>
+<section id="apdl-command-cyl4">
 <h2>APDL Command: CYL4<a class="headerlink" href="#apdl-command-cyl4" title="Permalink to this headline">¶</a></h2>
 <p>Creates a circular area or cylindrical volume anywhere on the working plane.</p>
 <p>Create a half arc centered at the origin with an outer radius
@@ -726,8 +730,8 @@ radius of 2 and an inner radius of 1, and a thickness of 0.55.</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-cyl5">
+</section>
+<section id="apdl-command-cyl5">
 <h2>APDL Command: CYL5<a class="headerlink" href="#apdl-command-cyl5" title="Permalink to this headline">¶</a></h2>
 <p>Creates a circular area or cylindrical volume by end points.</p>
 <p>Create a circular with one point of the circle at <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1)</span></code> and the
@@ -770,8 +774,8 @@ and the other point at <code class="docutils literal notranslate"><span class="p
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-cylind">
+</section>
+<section id="apdl-command-cylind">
 <h2>APDL Command: CYLIND<a class="headerlink" href="#apdl-command-cylind" title="Permalink to this headline">¶</a></h2>
 <p>Create a cylindrical volume centered about the working plane origin.</p>
 <p>Create a hollow cylinder with an inner radius of 0.9 and an
@@ -794,8 +798,8 @@ outer radius of 1.0 with a height of 5</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-pcirc">
+</section>
+<section id="apdl-command-pcirc">
 <h2>APDL Command: PCIRC<a class="headerlink" href="#apdl-command-pcirc" title="Permalink to this headline">¶</a></h2>
 <p>Create a circular area centered about the working plane origin.</p>
 <p>In this example a circular area with an inner radius of 0.95 and an
@@ -818,8 +822,8 @@ outer radius of 1 is created.</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-rectng">
+</section>
+<section id="apdl-command-rectng">
 <h2>APDL Command: RECTNG<a class="headerlink" href="#apdl-command-rectng" title="Permalink to this headline">¶</a></h2>
 <p>Create a rectangular area anywhere on the working plane.</p>
 <p>In this example a rectangle with one corner at <code class="docutils literal notranslate"><span class="pre">(0.5,</span> <span class="pre">0.5)</span></code> and
@@ -842,8 +846,8 @@ another at <code class="docutils literal notranslate"><span class="pre">(1.5,</s
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-sph4">
+</section>
+<section id="apdl-command-sph4">
 <h2>APDL Command: SPH4<a class="headerlink" href="#apdl-command-sph4" title="Permalink to this headline">¶</a></h2>
 <p>Create a spherical volume anywhere on the working plane.</p>
 <p>This example creates a hollow sphere with an inner radius of 0.9 and
@@ -866,8 +870,8 @@ an outer radius of 1.0 centered at <code class="docutils literal notranslate"><s
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-sphere">
+</section>
+<section id="apdl-command-sphere">
 <h2>APDL Command: SPHERE<a class="headerlink" href="#apdl-command-sphere" title="Permalink to this headline">¶</a></h2>
 <p>Create a spherical volume anywhere on the working plane.</p>
 <p>This example creates a half hollow sphere with an inner radius of 0.9 and
@@ -890,8 +894,8 @@ an outer radius of 1.0.</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-sph5">
+</section>
+<section id="apdl-command-sph5">
 <h2>APDL Command: SPH5<a class="headerlink" href="#apdl-command-sph5" title="Permalink to this headline">¶</a></h2>
 <p>Create a spherical volume anywhere on the working plane.</p>
 <p>This example creates a sphere with one point at <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1)</span></code> and one
@@ -914,8 +918,8 @@ point at <code class="docutils literal notranslate"><span class="pre">(2,</span>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="apdl-command-torus">
+</section>
+<section id="apdl-command-torus">
 <h2>APDL Command: TORUS<a class="headerlink" href="#apdl-command-torus" title="Permalink to this headline">¶</a></h2>
 <p>Create a toroidal volume.</p>
 <p>This example creates a torus with an inner minor radius of 1, an
@@ -939,7 +943,7 @@ and 180 define the starting and ending angles of the torus.</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  18.075 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  19.555 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-geometry-04-primitives-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/6aaeeb2dc18f0caf7d4cdcd52b64aa7b/04-primitives.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">04-primitives.py</span></code></a></p>
@@ -949,8 +953,8 @@ and 180 define the starting and ending angles of the torus.</p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -962,20 +966,19 @@ and 180 define the starting and ending angles of the torus.</p>
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br/>
+    &copy; Copyright (c) 2021 ANSYS, Inc. All rights reserved.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0.<br>
 </p>
     </div>
     
