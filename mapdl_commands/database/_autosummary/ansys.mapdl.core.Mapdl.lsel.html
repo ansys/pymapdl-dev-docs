@@ -956,6 +956,35 @@
 <p>INVE - Invert the current set (selected becomes unselected and vice versa).</p>
 <p>STAT - Display the current select status.</p>
 </dd>
+<dt><strong>The following fields are used only with Type = S, R, A, or U:</strong></dt><dd></dd>
+<dt><strong>Item</strong></dt><dd><p>Label identifying data. Valid item labels are shown in the table below. Some items also require a
+component label. If Item = PICK (or simply “P”), graphical picking is enabled and all remaining
+command fields are ignored (valid only in the GUI). Defaults to LINE.</p>
+</dd>
+<dt><strong>Comp</strong></dt><dd><p>Component of the item (if required). Valid component labels are shown in the table below.</p>
+</dd>
+<dt><strong>VMIN</strong></dt><dd><p>Minimum value of item range. Ranges are line numbers, coordinate values, attribute numbers, etc.,
+as appropriate for the item. If VMIN = 0.0, a tolerance of ±1.0E-6 is used, or ±0.005 x VMIN if VMIN
+= VMAX. A component name (as specified on the CM (p. 338) command) may also be substituted
+for VMIN (VMAX and VINC are ignored). If Item = MAT, TYPE, REAL, ESYS, or NDIV and if VMIN is
+positive, the absolute value of Item is compared against the range for selection; if VMIN is negative,
+the signed value of Item is compared. See the LLIST (p. 1011) command for a discussion of signed
+attributes.</p>
+</dd>
+<dt><strong>VMAX</strong></dt><dd><p>Maximum value of item range. VMAX defaults to VMIN.</p>
+</dd>
+<dt><strong>VINC</strong></dt><dd><p>Value increment within range. Used only with integer ranges (such as for line numbers). Defaults
+to 1. VINC cannot be negative.</p>
+</dd>
+<dt><strong>KSWP</strong></dt><dd><p>Specifies whether only lines are to be selected:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>kswp = 0</cite> - Select lines only.</p></li>
+<li><p><cite>kswp = 1</cite> - Select lines, as well as keypoints, nodes, and elements associated with selected lines. Valid</p></li>
+</ul>
+</div></blockquote>
+<p>only with Type = S.</p>
+</dd>
 </dl>
 </dd>
 </dl>

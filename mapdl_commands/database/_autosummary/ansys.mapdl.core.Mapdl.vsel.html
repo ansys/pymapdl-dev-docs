@@ -956,6 +956,32 @@
 <p>INVE - Invert the current set (selected becomes unselected and vice versa).</p>
 <p>STAT - Display the current select status.</p>
 </dd>
+<dt><strong>The following fields are used only with Type = S, R, A, or U:</strong></dt><dd></dd>
+<dt><strong>Item</strong></dt><dd><p>Label identifying data. Valid item labels are shown in the table below. Some items also require a
+component label. If Item = PICK (or simply “P”), graphical picking is enabled and all remaining
+command fields are ignored (valid only in the GUI). Defaults to VOLU.</p>
+</dd>
+<dt><strong>Comp</strong></dt><dd><p>Component of the item (if required). Valid component labels are shown in the table below.</p>
+</dd>
+<dt><strong>VMIN</strong></dt><dd><p>Minimum value of item range. Ranges are volume numbers, coordinate values, attribute numbers,
+etc., as appropriate for the item. A component name (as specified on the CM (p. 338) command)
+may also be substituted for VMIN (VMAX and VINC are ignored). If Item = MAT, TYPE, REAL, or
+ESYS and if VMIN is positive, the absolute value of Item is compared against the range for selection;
+if VMIN is negative, the signed value of Item is compared. See the VLIST (p. 2050) command for a
+discussion of signed attributes.</p>
+</dd>
+<dt><strong>VMAX</strong></dt><dd><p>Maximum value of item range. VMAX defaults to VMIN.</p>
+</dd>
+<dt><strong>VINC</strong></dt><dd><p>Value increment within range. Used only with integer ranges (such as for volume numbers). Defaults
+to 1. VINC cannot be negative.</p>
+</dd>
+<dt><strong>KSWP</strong></dt><dd><p>Specifies whether only volumes are to be selected:</p>
+<ul class="simple">
+<li><p><cite>kswp = 0</cite> - Select volumes only.</p></li>
+<li><p><cite>kswp = 1</cite> - Select volumes, as well as keypoints, lines, areas,</p></li>
+</ul>
+<p>nodes, and elements associated with selected volumes. Valid only with Type = S.</p>
+</dd>
 </dl>
 </dd>
 </dl>

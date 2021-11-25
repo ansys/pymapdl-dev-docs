@@ -413,9 +413,11 @@
 <h1>load_table<a class="headerlink" href="#load-table" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.load_table">
-<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">load_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.load_table" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">load_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csysid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.load_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load a table from Python to MAPDL.</p>
-<p>Uses TREAD to transfer the table.</p>
+<p>Uses TREAD to transfer the table.
+It should be noticed that PyMAPDL when query a table, it will return
+the table but not its axis (meaning it will return <code class="docutils literal notranslate"><span class="pre">table[1:,1:]</span></code>).</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
@@ -426,7 +428,9 @@ Examples: <code class="docutils literal notranslate"><span class="pre">&quot;ABC
 </dd>
 <dt><strong>array</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.23.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.ndarray</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">List</span></code></span></dt><dd><p>List as a table or <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array.</p>
 </dd>
-<dt><strong>var1</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>A primary variable (listed below) or can be an independent
+<dt><strong>var1</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Variable name corresponding to the first dimension (row).
+Default Row</p>
+<p>A primary variable (listed below) or can be an independent
 parameter. If specifying an independent parameter, then
 you must define an additional table for the independent
 parameter. The additional table must have the same name as
@@ -442,7 +446,7 @@ primary variable.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;Z&quot;</span></code>: Z-coordinate location</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;TEMP&quot;</span></code>: Temperature</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;VELOCITY&quot;</span></code>: Velocity</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;1&quot;</span></code>]: Pressure        PRESSURE [</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;PRESSURE&quot;</span></code>: Pressure</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;GAP&quot;</span></code>: Geometric gap/penetration</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;SECTOR&quot;</span></code>: Cyclic sector number</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;OMEGS&quot;</span></code>: Amplitude of the rotational velocity vector</p></li>
@@ -453,9 +457,14 @@ primary variable.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;CONC&quot;</span></code>: Concentration</p></li>
 </ul>
 </dd>
-<dt><strong>var2</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>See <code class="docutils literal notranslate"><span class="pre">var1</span></code></p>
+<dt><strong>var2</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Variable name corresponding to the first dimension (column).
+See <code class="docutils literal notranslate"><span class="pre">var1</span></code>.  Default column.</p>
 </dd>
-<dt><strong>var3</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>See <code class="docutils literal notranslate"><span class="pre">var1</span></code></p>
+<dt><strong>var3</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Variable name corresponding to the first dimension (plane).
+See <code class="docutils literal notranslate"><span class="pre">var1</span></code>. Default Plane.</p>
+</dd>
+<dt><strong>csysid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>An integer corresponding to the coordinate system ID number.
+APDL Default = 0 (global Cartesian)</p>
 </dd>
 </dl>
 </dd>

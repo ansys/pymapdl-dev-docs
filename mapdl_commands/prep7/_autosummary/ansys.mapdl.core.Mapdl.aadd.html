@@ -1007,6 +1007,15 @@ operations.  Element attributes and solid model boundary
 conditions assigned to the original entities will not be
 transferred to the new entities generated.  Concatenated entities
 are not valid with this command.</p>
+<p class="rubric">Examples</p>
+<p>Generate two areas and combine them.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a1</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">rectng</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a2</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">cyl4</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a_comb</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">aadd</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a_comb</span>
+<span class="go">3</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
