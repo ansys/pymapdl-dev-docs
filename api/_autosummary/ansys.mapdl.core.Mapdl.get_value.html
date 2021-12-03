@@ -414,29 +414,38 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.get_value">
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entnum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">it1num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">it2num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.get_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Runs the GET command and returns a Python value.</p>
-<p>This method uses <code class="xref py py-func docutils literal notranslate"><span class="pre">_MapdlCore.get()</span></code>.</p>
+<dd><p>Runs the MAPDL GET command and returns a Python value.</p>
+<p>This method uses <a class="reference internal" href="ansys.mapdl.core.Mapdl.get.html#ansys.mapdl.core.Mapdl.get" title="ansys.mapdl.core.Mapdl.get"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.get()</span></code></a>.</p>
 <p>See the full MADPL command documentation at <a class="reference external" href="https://www.mm.bme.hu/~gyebro/files/ans_help_v182/ans_cmd/Hlp_C_GET.html">*GET</a></p>
-<dl class="field-list simple">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method is not available when within the
+<a class="reference internal" href="ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.non_interactive()</span></code></a>
+context manager.</p>
+</div>
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>entity</strong></dt><dd><p>Entity keyword. Valid keywords are NODE, ELEM, KP, LINE, AREA,
-VOLU, PDS, etc.</p>
+<dd class="field-odd"><dl>
+<dt><strong>entity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Entity keyword. Valid keywords are <code class="docutils literal notranslate"><span class="pre">&quot;NODE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ELEM&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;KP&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;LINE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;AREA&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;VOLU&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;PDS&quot;</span></code>,
+etc.</p>
 </dd>
-<dt><strong>entnum</strong></dt><dd><p>The number or label for the entity (as shown for ENTNUM = in the
-tables below). In some cases, a zero (or blank) ENTNUM represents
-all entities of the set.</p>
+<dt><strong>entnum</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The number or label for the entity. In some cases, a zero
+(or blank <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) <code class="docutils literal notranslate"><span class="pre">entnum</span></code> represents all entities of
+the set.</p>
 </dd>
-<dt><strong>item1</strong></dt><dd><p>The name of a particular item for the given entity. Valid items are
-as shown in the Item1 columns of the tables below.</p>
+<dt><strong>item1</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The name of a particular item for the given entity.</p>
 </dd>
-<dt><strong>it1num</strong></dt><dd><p>The number (or label) for the specified Item1 (if any). Valid
-IT1NUM values are as shown in the IT1NUM columns of the tables
-below. Some Item1 labels do not require an IT1NUM value.</p>
+<dt><strong>it1num</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The number (or label) for the specified Item1 (if
+any). Some Item1 labels do not require an IT1NUM value.</p>
 </dd>
-<dt><strong>item2, it2num</strong></dt><dd><p>A second set of item labels and numbers to further qualify the item
+<dt><strong>item2</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>A second set of item labels and numbers to further qualify the item
 for which data are to be retrieved. Most items do not require this
 level of information.</p>
+</dd>
+<dt><strong>it2num</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The number (or label) for the specified <code class="docutils literal notranslate"><span class="pre">item2</span></code> (if
+any). Some <code class="docutils literal notranslate"><span class="pre">item2</span></code> labels do not require an <code class="docutils literal notranslate"><span class="pre">it2num</span></code>
+value.</p>
 </dd>
 </dl>
 </dd>
