@@ -244,16 +244,16 @@
 </div>
 <section id="introduction-and-purpose">
 <h2>Introduction and Purpose<a class="headerlink" href="#introduction-and-purpose" title="Permalink to this headline">¶</a></h2>
-<p>PyMAPDL is part of the larger PyAnsys effort to facilitate the use
-of Ansys technologies directly from Python. Its primary package,
-<code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>, provides:</p>
+<p>PyMAPDL is part of the larger <a class="reference external" href="https://docs.pyansys.com">PyAnsys</a>
+effort to facilitate the use of Ansys technologies directly from
+Python. Its primary package, <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>, provides:</p>
 <ul class="simple">
-<li><p>scripting of MAPDL through both Python and Ansys Parametric Design
-Language (APDL) syntax</p></li>
-<li><p>plotting of MAPDL geometry and meshes using VTK from within a Python
-script or an interactive Jupyter notebook</p></li>
-<li><p>access to MAPDL arrays as Python objects (e.g. nodes, elements,
-solution matrices, and results)</p></li>
+<li><p>Scripting of MAPDL through both Python and Ansys Parametric Design
+Language (APDL) syntax.</p></li>
+<li><p>Plotting of MAPDL geometry and meshes using <a class="reference external" href="https://docs.pyvista.org">PyVista</a> from within a Python script or an
+interactive <a class="reference external" href="https://jupyter.org/">Jupyter notebook</a>.</p></li>
+<li><p>Access to MAPDL arrays as Python objects (e.g. nodes, elements,
+solution matrices, and results).</p></li>
 </ul>
 <p>With PyMAPDL it is easier than ever to integrate the simulation capabilities
 of the Ansys MAPDL multi-physics solver directly into novel applications
@@ -270,9 +270,10 @@ application. It is now open source: Enjoy it! Contributions are welcome.</p>
 </section>
 <section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
-<p>PyMAPDL, based on gRPC, represents an improvement over its predecessor based
-on CORBA. These technologies allow the MAPDL solver to function as a server,
-ready to respond to connecting clients.</p>
+<p>PyMAPDL, based on <a class="reference external" href="https://grpc.io/">gRPC</a>, represents an
+improvement over its predecessor based on CORBA. These technologies
+allow the MAPDL solver to function as a server, ready to respond to
+connecting clients.</p>
 <p>Google remote procedure calls, or gRPC, are used to establish secure
 connections so that a client application can directly call methods on
 a potentially remote MAPDL instance as if it were a local object. The
@@ -314,17 +315,16 @@ stored to the logging module or can be immediately printed out with
 <code class="docutils literal notranslate"><span class="pre">print(mapdl.run)</span></code>.  Errors are caught immediately and pythonically.</p>
 <section id="calling-mapdl-pythonically">
 <h3>Calling MAPDL Pythonically<a class="headerlink" href="#calling-mapdl-pythonically" title="Permalink to this headline">¶</a></h3>
-<p>MAPDL functions can be called directly from an <code class="docutils literal notranslate"><span class="pre">Mapdl</span></code> instance in a
-pythonic manner.  This is to simplify calling MAPDL, especially when
-inputs are variables within Python.  For example, the following two
-commands are equivalent:</p>
+<p>MAPDL functions can be called directly from an <a class="reference internal" href="api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> instance in a pythonic manner.  This is to
+simplify calling MAPDL, especially when inputs are variables within
+Python.  For example, the following two commands are equivalent:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;K, 1, 0, 0, 0&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This approach takes care of the string formatting for you.  For
 example, inputting points from a numpy array:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># make 10 random keypoints in ANSYS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># make 10 random keypoints in MAPDL</span>
 <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">points</span><span class="p">):</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
