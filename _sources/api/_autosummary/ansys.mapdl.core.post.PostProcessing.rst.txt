@@ -63,6 +63,9 @@
       PostProcessing.nodal_total_principal_strain
       
       
+      PostProcessing.nodal_values
+      
+      
       PostProcessing.plot_element_displacement
       
       
@@ -76,6 +79,9 @@
       
       
       PostProcessing.plot_nodal_component_stress
+      
+      
+      PostProcessing.plot_nodal_contact_friction_stress
       
       
       PostProcessing.plot_nodal_displacement
@@ -149,6 +155,9 @@
       
       PostProcessing.plot_nodal_voltage
       
+      
+      PostProcessing.plot_node_values
+      
    
    
 
@@ -167,6 +176,9 @@
       
       
       PostProcessing.load_step
+      
+      
+      PostProcessing.nodal_contact_friction_stress
       
       
       PostProcessing.nodal_elastic_eqv_strain

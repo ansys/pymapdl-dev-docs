@@ -912,6 +912,11 @@ using <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.M
 <p>The execution time on this generally 4 to 10 times faster than running
 each command individually.  You can then view the final response of
 the chained commands with <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.last_response.html#ansys.mapdl.core.Mapdl.last_response" title="ansys.mapdl.core.Mapdl.last_response"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.last_response</span></code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Command chaining is not supported in distributed MAPDL.  To improve
+performances, use <code class="docutils literal notranslate"><span class="pre">mute=True</span></code> or <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a>.</p>
+</div>
 </section>
 <section id="sending-arrays-to-mapdl">
 <h2>Sending Arrays to MAPDL<a class="headerlink" href="#sending-arrays-to-mapdl" title="Permalink to this headline">¶</a></h2>

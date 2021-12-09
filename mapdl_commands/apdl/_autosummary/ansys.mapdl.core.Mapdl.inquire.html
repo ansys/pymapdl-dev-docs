@@ -870,13 +870,26 @@
 <h1>inquire<a class="headerlink" href="#inquire" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.inquire">
-<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">inquire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.inquire" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">inquire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.inquire" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns system information.</p>
+<p>By default, with no arguments, it returns the working directory.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">inquire</span><span class="p">()</span>
+<span class="go">C:\Users\user\AppData\Local\Temp\ansys_nynvxsaooh</span>
+</pre></div>
+</div>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>func</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Specifies the type of system information returned.  See the
+<dt><strong>strarray</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the string array or parameter that will hold the returned values.
+Normally, if used in a python script you should just work with the
+return value from this method.</p>
+</dd>
+<dt><strong>func</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Specifies the type of system information returned.  See the
 notes section for more information.</p>
+</dd>
+<dt><strong>arg1</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>First argument. See notes for <code class="docutils literal notranslate"><span class="pre">arg1</span></code> definition.</p>
+</dd>
+<dt><strong>arg2</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Second argument. See notes for <code class="docutils literal notranslate"><span class="pre">arg1</span></code> definition.</p>
 </dd>
 </dl>
 </dd>
@@ -888,31 +901,108 @@ notes section for more information.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>Allowable func entries
-LOGIN - Returns the pathname of the login directory on Linux
-systems or the pathname of the default directory (including
-drive letter) on Windows systems.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">/INQUIRE</span></code> command is valid in any processor.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Take note that from version 0.60.4 and later, the command behaviour
+has been changed.
+Previously, the <code class="docutils literal notranslate"><span class="pre">StrArray</span></code> argument was omitted. For example:
+&gt;&gt;&gt; mapdl.inquire(‘DIRECTORY’)
+C:UsersuserAppDataLocalTempansys_nynvxsaooh</p>
+<p>Now this will raise an exception.
+The default behaviour now, requires to input <code class="docutils literal notranslate"><span class="pre">StrArray</span></code>:
+&gt;&gt;&gt; mapdl.inquire(‘’, ‘DIRECTORY’)
+C:UsersuserAppDataLocalTempansys_nynvxsaooh</p>
+</div>
+<p><strong>GENERAL FUNC OPTIONS</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">DOCU</span></code> - Pathname of the ANSYS docu directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOGIN</span></code> - Returns the pathname of the login directory on Linux
+systems or the pathname of the default directory (including
+drive letter) on Windows systems.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DOCU</span></code> - Pathname of the ANSYS documentation directory.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">APDL</span></code> - Pathname of the ANSYS APDL directory.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">PROG</span></code> - Pathname of the ANSYS executable directory.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">AUTH</span></code> - Pathname of the directory in which the license file resides.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">USER</span></code> - Name of the user currently logged-in.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">DIRECTORY</span></code> - Pathname of the current directory.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">JOBNAME</span></code> - Current Jobname.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">RSTDIR</span></code> - Result file directory</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">RSTFILE</span></code> - Result file name</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">RSTEXT</span></code> - Result file extension</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">OUTPUT</span></code> - Current output file name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RSTDIR</span></code> - Result file directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RSTFILE</span></code> - Result file name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RSTEXT</span></code> - Result file extension.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OUTPUT</span></code> - Current output file name.</p></li>
 </ul>
+<p><strong>RETURNING THE VALUE OF AN ENVIRONMENT VARIABLE TO A PARAMETER</strong></p>
+<p>If <code class="docutils literal notranslate"><span class="pre">FUNC=ENV</span></code>, the command format is <code class="docutils literal notranslate"><span class="pre">/INQUIRE,StrArray,ENV,ENVNAME,Substring</span></code>.
+In this instance, ENV specifies that the command should return the
+value of an environment variable.
+The following defines the remaining fields:</p>
+<dl class="simple">
+<dt>Envname:</dt><dd><p>Specifies the name of the environment variable.</p>
+</dd>
+<dt>Substring:</dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">Substring</span> <span class="pre">=</span> <span class="pre">1</span></code>, the first substring (up to the first colon (:)) is returned.
+If <code class="docutils literal notranslate"><span class="pre">Substring</span> <span class="pre">=</span> <span class="pre">2</span></code>, the second substring is returned, etc. For Windows platforms,
+the separating character is semicolon (;).
+If this argument is either blank or 0, the entire value of the environment
+variable is returned.</p>
+</dd>
+</dl>
+<p><strong>RETURNING THE VALUE OF A TITLE TO A PARAMETER</strong></p>
+<p>If <code class="docutils literal notranslate"><span class="pre">FUNC</span> <span class="pre">=</span> <span class="pre">TITLE</span></code>, the command format is <code class="docutils literal notranslate"><span class="pre">/INQUIRE,StrArray,TITLE,Title_num</span></code>.
+In this context, the value of Title_num can be blank or <code class="docutils literal notranslate"><span class="pre">1</span></code> through <code class="docutils literal notranslate"><span class="pre">5</span></code>. If the
+value is <code class="docutils literal notranslate"><span class="pre">1</span></code> or blank, the title is returned. If the value is <code class="docutils literal notranslate"><span class="pre">2</span></code> through <code class="docutils literal notranslate"><span class="pre">5</span></code>,
+a corresponding subtitle is returned (<code class="docutils literal notranslate"><span class="pre">2</span></code> denoting the first subtitle, and so on).</p>
+<p><strong>RETURNING INFORMATION ABOUT A FILE TO A PARAMETER</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">/INQUIRE</span></code> command can also return information about specified files
+within the file system.
+For these capabilities, the format is <code class="docutils literal notranslate"><span class="pre">/INQUIRE,Parameter,FUNC,Fname,</span> <span class="pre">Ext,</span> <span class="pre">--</span></code>.
+The following defines the fields:</p>
+<dl>
+<dt>Parameter:</dt><dd><p>Name of the parameter that will hold the returned values.</p>
+</dd>
+<dt>Func:</dt><dd><p>Specifies the type of file information returned:</p>
+<dl class="simple">
+<dt>EXIST:</dt><dd><p>Returns a <code class="docutils literal notranslate"><span class="pre">1</span></code> if the specified file exists, and <code class="docutils literal notranslate"><span class="pre">0</span></code> if it does not.</p>
+</dd>
+<dt>DATE:</dt><dd><p>Returns the date stamp of the specified file in the format <code class="docutils literal notranslate"><span class="pre">*yyyymmdd.hhmmss*</span></code>.</p>
+</dd>
+<dt>SIZE:</dt><dd><p>Returns the size of the specified file in MB.</p>
+</dd>
+<dt>WRITE:</dt><dd><p>Returns the status of the write attribute. A <code class="docutils literal notranslate"><span class="pre">0</span></code> denotes no write permission while a <code class="docutils literal notranslate"><span class="pre">1</span></code> denotes
+write permission.</p>
+</dd>
+<dt>READ:</dt><dd><p>Returns the status of the read attribute. A <code class="docutils literal notranslate"><span class="pre">0</span></code> denotes no read permission while a <code class="docutils literal notranslate"><span class="pre">1</span></code> denotes read
+permission.</p>
+</dd>
+<dt>EXEC:</dt><dd><p>Returns the status of the execute attribute (this has meaning only on Linux). A <code class="docutils literal notranslate"><span class="pre">0</span></code> denotes no
+execute permission while a <code class="docutils literal notranslate"><span class="pre">1</span></code> denotes execute permission.</p>
+</dd>
+<dt>LINES:</dt><dd><p>Returns the number of lines in an ASCII file.</p>
+</dd>
+</dl>
+</dd>
+<dt>Fname:</dt><dd><p>File name and directory path (248 characters maximum, including the characters needed for the
+directory path). An unspecified directory path defaults to the working directory; in this case, you
+can use all 248 characters for the file name.</p>
+</dd>
+<dt>Ext:</dt><dd><p>Filename extension (eight-character maximum).</p>
+</dd>
+</dl>
 <p class="rubric">Examples</p>
+<p>Return the MAPDL working directory
+&gt;&gt;&gt; mapdl.inquire(‘’, ‘DIRECTORY’)
+C:UsersgayusoAppDataLocalTempansys_nynvxsaooh</p>
+<p>Or</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">inquire</span><span class="p">()</span>
+<span class="go">C:\Users\gayuso\AppData\Local\Temp\ansys_nynvxsaooh</span>
+</pre></div>
+</div>
 <p>Return the job name</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">inquire</span><span class="p">(</span><span class="s1">&#39;JOBNAME&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">inquire</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;JOBNAME&#39;</span><span class="p">)</span>
 <span class="go">file</span>
 </pre></div>
 </div>
 <p>Return the result file name</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">inquire</span><span class="p">(</span><span class="s1">&#39;RSTFILE&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">inquire</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;RSTFILE&#39;</span><span class="p">)</span>
 <span class="go">&#39;file.rst&#39;</span>
 </pre></div>
 </div>

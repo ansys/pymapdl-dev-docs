@@ -236,6 +236,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.numcpu.html">
+       numcpu
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.platform.html">
        platform
       </a>
@@ -348,7 +353,7 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.parameters.</span></span><span class="sig-name descname"><span class="pre">Parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapdl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.parameters.Parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Collection of MAPDL parameters obtainable from the <a class="reference internal" href="ansys.mapdl.core.Mapdl.get.html#ansys.mapdl.core.Mapdl.get" title="ansys.mapdl.core.Mapdl.get"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.Mapdl.get()</span></code></a> command.</p>
 <p class="rubric">Examples</p>
-<p>Simply list all parameters except for MAPDL MATH parameters</p>
+<p>Simply list all parameters except for MAPDL MATH parameters.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span>
 <span class="go">ARR                              : ARRAY DIM (3, 1, 1)</span>
 <span class="go">PARM_FLOAT                       : 20.0</span>
@@ -396,28 +401,31 @@
 <tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.material.html#ansys.mapdl.core.parameters.Parameters.material" title="ansys.mapdl.core.parameters.Parameters.material"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.material</span></code></a></p></td>
 <td><p>Active material</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.platform.html#ansys.mapdl.core.parameters.Parameters.platform" title="ansys.mapdl.core.parameters.Parameters.platform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.platform</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.numcpu.html#ansys.mapdl.core.parameters.Parameters.numcpu" title="ansys.mapdl.core.parameters.Parameters.numcpu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.numcpu</span></code></a></p></td>
+<td><p>Number of Distributed MAPDL processes being used.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.platform.html#ansys.mapdl.core.parameters.Parameters.platform" title="ansys.mapdl.core.parameters.Parameters.platform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.platform</span></code></a></p></td>
 <td><p>The current platform.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.real.html#ansys.mapdl.core.parameters.Parameters.real" title="ansys.mapdl.core.parameters.Parameters.real"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.real</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.real.html#ansys.mapdl.core.parameters.Parameters.real" title="ansys.mapdl.core.parameters.Parameters.real"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.real</span></code></a></p></td>
 <td><p>Active real constant set</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.revision.html#ansys.mapdl.core.parameters.Parameters.revision" title="ansys.mapdl.core.parameters.Parameters.revision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.revision</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.revision.html#ansys.mapdl.core.parameters.Parameters.revision" title="ansys.mapdl.core.parameters.Parameters.revision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.revision</span></code></a></p></td>
 <td><p>MAPDL revision version.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.routine.html#ansys.mapdl.core.parameters.Parameters.routine" title="ansys.mapdl.core.parameters.Parameters.routine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.routine</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.routine.html#ansys.mapdl.core.parameters.Parameters.routine" title="ansys.mapdl.core.parameters.Parameters.routine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.routine</span></code></a></p></td>
 <td><p>Current routine string as a string.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.rsys.html#ansys.mapdl.core.parameters.Parameters.rsys" title="ansys.mapdl.core.parameters.Parameters.rsys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.rsys</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.rsys.html#ansys.mapdl.core.parameters.Parameters.rsys" title="ansys.mapdl.core.parameters.Parameters.rsys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.rsys</span></code></a></p></td>
 <td><p>Active result coordinate system</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.section.html#ansys.mapdl.core.parameters.Parameters.section" title="ansys.mapdl.core.parameters.Parameters.section"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.section</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.section.html#ansys.mapdl.core.parameters.Parameters.section" title="ansys.mapdl.core.parameters.Parameters.section"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.section</span></code></a></p></td>
 <td><p>Active section number</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.type.html#ansys.mapdl.core.parameters.Parameters.type" title="ansys.mapdl.core.parameters.Parameters.type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.type</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.type.html#ansys.mapdl.core.parameters.Parameters.type" title="ansys.mapdl.core.parameters.Parameters.type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.type</span></code></a></p></td>
 <td><p>Active element type</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.units.html#ansys.mapdl.core.parameters.Parameters.units" title="ansys.mapdl.core.parameters.Parameters.units"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.units</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.units.html#ansys.mapdl.core.parameters.Parameters.units" title="ansys.mapdl.core.parameters.Parameters.units"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters.units</span></code></a></p></td>
 <td><p>Units specified by /UNITS command.</p></td>
 </tr>
 </tbody>

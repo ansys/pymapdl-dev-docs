@@ -423,6 +423,9 @@ MAPDL with:</p>
 for easy chaining of PyMAPDL commands to speed up sending
 commands to MAPDL.</p>
 <p>View the response from MAPDL with <a class="reference internal" href="ansys.mapdl.core.Mapdl.last_response.html#ansys.mapdl.core.Mapdl.last_response" title="ansys.mapdl.core.Mapdl.last_response"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.last_response</span></code></a>.</p>
+<p class="rubric">Notes</p>
+<p>Distributed Ansys cannot properly handle condensed data input
+and chained commands are not permitted in distributed ansys.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">chain_commands</span><span class="p">:</span>
 <span class="go">    mapdl.prep7()</span>
