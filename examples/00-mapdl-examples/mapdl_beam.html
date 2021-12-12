@@ -524,7 +524,7 @@ are sequential</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:06:42  DEC 11, 2021 CP=     72.724
+ 00000000  VERSION=LINUX x64     04:06:51  DEC 12, 2021 CP=     72.730
 
 
 
@@ -617,7 +617,7 @@ individual elements</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =      72.730   TIME= 04:06:42
+ *** NOTE ***                            CP =      72.735   TIME= 04:06:51
  There is no title defined for this analysis.
 
  *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -632,7 +632,7 @@ individual elements</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:06:42  DEC 11, 2021 CP=     72.731
+ 00000000  VERSION=LINUX x64     04:06:51  DEC 12, 2021 CP=     72.736
 
 
 
@@ -648,11 +648,11 @@ individual elements</p>
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =      72.731   TIME= 04:06:42
+ *** NOTE ***                            CP =      72.736   TIME= 04:06:51
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =      72.731   TIME= 04:06:42
+ *** NOTE ***                            CP =      72.736   TIME= 04:06:51
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -669,21 +669,21 @@ individual elements</p>
 
  SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr
 
- *** NOTE ***                            CP =      72.736   TIME= 04:06:42
+ *** NOTE ***                            CP =      72.742   TIME= 04:06:51
  Predictor is ON by default for structural elements with rotational
  degrees of freedom.  Use the PRED,OFF command to turn the predictor
  OFF if it adversely affects the convergence.
 
 
  Range of element maximum matrix coefficients in global coordinates
- Maximum = 2.504767151E+10 at element 22.
- Minimum = 2.504767151E+10 at element 22.
+ Maximum = 2.504767151E+10 at element 21.
+ Minimum = 2.504767151E+10 at element 21.
 
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.009   0.000403
- Time at end of element matrix formulation CP = 72.7416229.
+        1        22  BEAM188       0.009   0.000392
+ Time at end of element matrix formulation CP = 72.7471313.
 
  SPARSE MATRIX DIRECT SOLVER.
   Number of equations =          44,    Maximum wavefront =     12
@@ -691,14 +691,14 @@ individual elements</p>
   Memory required for in-core solution     =     0.062 MB
   Memory required for out-of-core solution =     0.062 MB
 
- *** NOTE ***                            CP =      72.745   TIME= 04:06:42
+ *** NOTE ***                            CP =      72.751   TIME= 04:06:51
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
  results in the fastest solution time.  This mode is recommended if
  enough physical memory is present to accommodate all of the solver
  data.
- Sparse solver maximum pivot= 5.009534302E+10 at node 8 ROTY.
+ Sparse solver maximum pivot= 5.009534302E+10 at node 16 ROTY.
  Sparse solver minimum pivot= 2691965.06 at node 12 UZ.
  Sparse solver minimum pivot in absolute value= 2691965.06 at node 12
  UZ.
@@ -706,12 +706,12 @@ individual elements</p>
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.028   0.001276
+        1        22  BEAM188       0.027   0.001222
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.001   0.000062
+        1        22  BEAM188       0.002   0.000078
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -722,7 +722,7 @@ individual elements</p>
         0.625 MB WRITTEN ON RESULTS FILE: file.rst
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.526 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.519 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-mapdl-beam-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/66374d1a80ad5170be03b29ae6cc7f1c/mapdl_beam.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mapdl_beam.py</span></code></a></p>
