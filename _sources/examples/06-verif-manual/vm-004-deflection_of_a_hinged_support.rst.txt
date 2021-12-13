@@ -340,7 +340,7 @@ stress as an array.
 
 
 
-    seqv = mapdl.post_processing.nodal_eqv_stress
+    seqv = mapdl.post_processing.nodal_eqv_stress()
 
     # print out the nodes
     for i, nnum in enumerate(mapdl.mesh.nnum):
@@ -428,7 +428,7 @@ stress experienced by node 2 to the known quantities 10000 psi and
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.839 seconds)
+   **Total running time of the script:** ( 0 minutes  0.857 seconds)
 
 
 .. _sphx_glr_download_examples_06-verif-manual_vm-004-deflection_of_a_hinged_support.py:
