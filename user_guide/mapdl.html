@@ -420,6 +420,10 @@ these commands (e.g. <code class="docutils literal notranslate"><span class="pre
 <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 </pre></div>
 </div>
+<p>You can use the alternative:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>Some commands can only be run non-interactively from within in a
 script.  PyMAPDL gets around this restriction by writing the commands
 to a temporary input file and then reading the input file.  To run a
@@ -502,73 +506,55 @@ running MAPDL in gRPC mode.</p>
 <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.run_multiline.html#ansys.mapdl.core.Mapdl.run_multiline" title="ansys.mapdl.core.Mapdl.run_multiline"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.run_multiline()</span></code></a>.
 This is useful when using PyMAPDL with older MAPDL scripts.  For
 example:</p>
-<blockquote>
-<div><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmd</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;/prep7</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmd</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;/prep7</span>
 <span class="go">! Mat</span>
 <span class="go">MP,EX,1,200000</span>
 <span class="go">MP,NUXY,1,0.3</span>
 <span class="go">MP,DENS,1,7.85e-09</span>
 <span class="go">! Elements</span>
 <span class="go">et,1,186</span>
-<span class="go">et,2,154</span>
 <span class="go">! Geometry</span>
 <span class="go">BLC4,0,0,1000,100,10</span>
 <span class="go">! Mesh</span>
 <span class="go">esize,5</span>
 <span class="go">vmesh,all</span>
-<span class="go">nsel,s,loc,x,0</span>
-<span class="go">d,all,all</span>
-<span class="go">nsel,s,loc,x,999,1001</span>
-<span class="go">type,2</span>
-<span class="go">esurf</span>
-<span class="go">esel,s,type,,2</span>
-<span class="go">nsle</span>
-<span class="go">sfe,all,3,pres,,-10</span>
-<span class="go">allsel</span>
-<span class="go">/solu</span>
-<span class="go">antype,0</span>
-<span class="go">solve</span>
-<span class="go">/post1</span>
-<span class="go">set,last</span>
-<span class="go">plnsol,u,sum</span>
 <span class="go">&#39;&#39;&#39;</span>
+
 <span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">run_multiline</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span>
+
+<span class="go">You have already entered the general preprocessor (PREP7).</span>
+
+<span class="go">MATERIAL          1     EX   =   200000.0</span>
+
+<span class="go">MATERIAL          1     NUXY =  0.3000000</span>
+
+<span class="go">MATERIAL          1     DENS =  0.7850000E-08</span>
+
+<span class="go">ELEMENT TYPE          1 IS SOLID186     3-D 20-NODE STRUCTURAL SOLID</span>
+<span class="go">KEYOPT( 1- 6)=        0      0      0        0      0      0</span>
+<span class="go">KEYOPT( 7-12)=        0      0      0        0      0      0</span>
+<span class="go">KEYOPT(13-18)=        0      0      0        0      0      0</span>
+
+<span class="go">CURRENT NODAL DOF SET IS  UX    UY    UZ</span>
+<span class="go">THREE-DIMENSIONAL MODEL</span>
+
+<span class="go">CREATE A HEXAHEDRAL VOLUME WITH</span>
+<span class="go">X-DISTANCES FROM      0.000000000     TO      1000.000000</span>
+<span class="go">Y-DISTANCES FROM      0.000000000     TO      100.0000000</span>
+<span class="go">Z-DISTANCES FROM      0.000000000     TO      10.00000000</span>
+
+<span class="go">    OUTPUT VOLUME =     1</span>
+
+<span class="go">DEFAULT ELEMENT DIVISIONS PER LINE BASED ON ELEMENT SIZE =   5.00</span>
+
+<span class="go">GENERATE NODES AND ELEMENTS   IN  ALL  SELECTED VOLUMES</span>
+
+<span class="go">NUMBER OF VOLUMES MESHED   =         1</span>
+<span class="go">MAXIMUM NODE NUMBER        =     45765</span>
+<span class="go">MAXIMUM ELEMENT NUMBER     =      8000</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>You have already entered the general preprocessor (PREP7).</p>
-<p>MATERIAL          1     EX   =   200000.0</p>
-<p>MATERIAL          1     NUXY =  0.3000000</p>
-<p>MATERIAL          1     DENS =  0.7850000E-08</p>
-<dl class="simple">
-<dt>ELEMENT TYPE          1 IS SOLID186     3-D 20-NODE STRUCTURAL SOLID</dt><dd><p>KEYOPT( 1- 6)=        0      0      0        0      0      0
-KEYOPT( 7-12)=        0      0      0        0      0      0
-KEYOPT(13-18)=        0      0      0        0      0      0</p>
-</dd>
-<dt>CURRENT NODAL DOF SET IS  UX    UY    UZ</dt><dd><p>THREE-DIMENSIONAL MODEL</p>
-</dd>
-<dt>ELEMENT TYPE          2 IS SURF154      3-D STRUCTURAL SURFACE</dt><dd><p>KEYOPT( 1- 6)=        0      0      0        0      0      0
-KEYOPT( 7-12)=        0      0      0        0      0      0
-KEYOPT(13-18)=        0      0      0        0      0      0</p>
-</dd>
-<dt>CURRENT NODAL DOF SET IS  UX    UY    UZ</dt><dd><p>THREE-DIMENSIONAL MODEL</p>
-</dd>
-</dl>
-<p>CREATE A HEXAHEDRAL VOLUME WITH
-X-DISTANCES FROM      0.000000000     TO      1000.000000
-Y-DISTANCES FROM      0.000000000     TO      100.0000000
-Z-DISTANCES FROM      0.000000000     TO      10.00000000</p>
-<blockquote>
-<div><p>OUTPUT VOLUME =     1</p>
-</div></blockquote>
-<p>DEFAULT ELEMENT DIVISIONS PER LINE BASED ON ELEMENT SIZE =   5.00</p>
-<p>GENERATE NODES AND ELEMENTS   IN  ALL  SELECTED VOLUMES</p>
-<p>NUMBER OF VOLUMES MESHED   =         1
-MAXIMUM NODE NUMBER        =     45765
-MAXIMUM ELEMENT NUMBER     =      8000</p>
-</div></blockquote>
-</div></blockquote>
 <p>Alternatively, you can simply write the commands to a file and then
 run it using <a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.input.html#ansys.mapdl.core.Mapdl.input" title="ansys.mapdl.core.Mapdl.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.input()</span></code></a>.  For
 example, if you have a <code class="docutils literal notranslate"><span class="pre">&quot;ds.dat&quot;</span></code> generated from Ansys Mechanical,
@@ -1119,7 +1105,7 @@ in combination with <code class="docutils literal notranslate"><span class="pre"
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
 </p>
     </div>
     

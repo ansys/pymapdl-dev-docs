@@ -531,13 +531,13 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="ansys.mapdl.core.post.PostProcessing.plot_nodal_voltage.html">
-       plot_nodal_voltage
+      <a class="reference internal" href="ansys.mapdl.core.post.PostProcessing.plot_nodal_values.html">
+       plot_nodal_values
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="ansys.mapdl.core.post.PostProcessing.plot_node_values.html">
-       plot_node_values
+      <a class="reference internal" href="ansys.mapdl.core.post.PostProcessing.plot_nodal_voltage.html">
+       plot_nodal_voltage
       </a>
      </li>
      <li class="toctree-l3">
@@ -643,8 +643,14 @@
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PostProcessing.</span></span><span class="sig-name descname"><span class="pre">selected_nodes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.23.dev0)"><span class="pre">numpy.ndarray</span></a></em><a class="headerlink" href="#ansys.mapdl.core.post.PostProcessing.selected_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mask of the selected nodes.</p>
 <p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">node_selection</span>
+<p>The mask of the selected nodes.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">selected_nodes</span>
 <span class="go">array([False, False, False, ..., True, True, True])</span>
+</pre></div>
+</div>
+<p>If you want the node numbers of the selected nodes.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">selected_nodes</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="go">array([1, 2, 3, 4, 5, 6, 7, 8, 9])</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -678,7 +684,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
 </p>
     </div>
     
