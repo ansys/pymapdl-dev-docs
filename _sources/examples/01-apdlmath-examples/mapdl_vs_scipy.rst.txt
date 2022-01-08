@@ -273,7 +273,7 @@ Solve the eigenproblem using PyMapdl with APDLMath.
  .. code-block:: none
 
 
-    Elapsed time to solve this problem :  0.5229227542877197
+    Elapsed time to solve this problem :  0.49221181869506836
 
 
 
@@ -319,16 +319,16 @@ Accuracy : :math:`\frac{||(K-\lambda.M).\phi||_2}{||K.\phi||_2}`
 
  .. code-block:: none
 
-    [0] : Freq =   352.40 Hz         Residual = 1.4982e-08
-    [1] : Freq =   385.20 Hz         Residual = 4.8711e-09
-    [2] : Freq =   656.81 Hz         Residual = 3.7802e-09
-    [3] : Freq =   764.73 Hz         Residual = 5.6614e-09
-    [4] : Freq =   825.47 Hz         Residual = 5.7766e-09
-    [5] : Freq =  1039.28 Hz         Residual = 6.3173e-09
-    [6] : Freq =  1143.61 Hz         Residual = 1.131e-08
-    [7] : Freq =  1258.00 Hz         Residual = 4.8712e-08
-    [8] : Freq =  1334.23 Hz         Residual = 4.0966e-08
-    [9] : Freq =  1352.10 Hz         Residual = 3.0062e-08
+    [0] : Freq =   352.40 Hz         Residual = 1.0336e-08
+    [1] : Freq =   385.20 Hz         Residual = 1.3135e-08
+    [2] : Freq =   656.81 Hz         Residual = 6.7427e-09
+    [3] : Freq =   764.73 Hz         Residual = 3.8156e-09
+    [4] : Freq =   825.47 Hz         Residual = 6.5397e-09
+    [5] : Freq =  1039.28 Hz         Residual = 8.7285e-10
+    [6] : Freq =  1143.61 Hz         Residual = 8.7739e-09
+    [7] : Freq =  1258.00 Hz         Residual = 4.6196e-08
+    [8] : Freq =  1334.23 Hz         Residual = 4.7141e-08
+    [9] : Freq =  1352.10 Hz         Residual = 3.3302e-08
 
 
 
@@ -454,7 +454,7 @@ Solve the eigenproblem
  .. code-block:: none
 
 
-    Elapsed time to solve this problem :  2.8086767196655273
+    Elapsed time to solve this problem :  2.521850824356079
 
 
 
@@ -586,7 +586,7 @@ MAPDL is faster than SciPy.
 
  .. code-block:: none
 
-    Mapdl is 5.37 times faster
+    Mapdl is 5.12 times faster
 
 
 
@@ -594,7 +594,7 @@ MAPDL is faster than SciPy.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.654 seconds)
+   **Total running time of the script:** ( 0 minutes  5.389 seconds)
 
 
 .. _sphx_glr_download_examples_01-apdlmath-examples_mapdl_vs_scipy.py:
