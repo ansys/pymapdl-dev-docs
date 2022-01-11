@@ -276,6 +276,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="ansys.mapdl.core.Mapdl.input_strings.html">
+     input_strings
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="ansys.mapdl.core.Mapdl.set_log_level.html">
      set_log_level
     </a>
@@ -415,7 +420,7 @@
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.run">
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_to_log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run single APDL command.</p>
-<p>For multiple commands, use <code class="docutils literal notranslate"><span class="pre">run_multiline</span></code>.</p>
+<p>For multiple commands, use <a class="reference internal" href="ansys.mapdl.core.Mapdl.input_strings.html#ansys.mapdl.core.Mapdl.input_strings" title="ansys.mapdl.core.Mapdl.input_strings"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.input_strings()</span></code></a>.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
@@ -445,7 +450,7 @@ command logging is enabled.</p>
 </pre></div>
 </div>
 <p>Alternatively, you can simply run a block of commands with:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">run_multiline</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">input_strings</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="rubric">Examples</p>

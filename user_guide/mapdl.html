@@ -503,7 +503,7 @@ running MAPDL in gRPC mode.</p>
 <section id="running-several-commands-or-an-input-file">
 <h3>Running Several Commands or an Input File<a class="headerlink" href="#running-several-commands-or-an-input-file" title="Permalink to this headline">¶</a></h3>
 <p>You can run several MAPDL commands as a unified block using
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.run_multiline.html#ansys.mapdl.core.Mapdl.run_multiline" title="ansys.mapdl.core.Mapdl.run_multiline"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.run_multiline()</span></code></a>.
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.input_strings.html#ansys.mapdl.core.Mapdl.input_strings" title="ansys.mapdl.core.Mapdl.input_strings"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.input_strings()</span></code></a>.
 This is useful when using PyMAPDL with older MAPDL scripts.  For
 example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmd</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;/prep7</span>
@@ -520,7 +520,7 @@ example:</p>
 <span class="go">vmesh,all</span>
 <span class="go">&#39;&#39;&#39;</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">run_multiline</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">input_strings</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span>
 
 <span class="go">You have already entered the general preprocessor (PREP7).</span>
