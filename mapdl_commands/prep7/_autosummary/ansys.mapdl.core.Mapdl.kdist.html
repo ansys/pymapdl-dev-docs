@@ -915,13 +915,6 @@
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">kdist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kp1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kp2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.kdist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates and lists the distance between two keypoints.</p>
 <p>APDL Command: KDIST</p>
-<p>KDIST lists the distance between keypoints KP1 and KP2, as
-well as the current coordinate system offsets from KP1 to KP2,
-where the X, Y, and Z locations of KP1 are subtracted from the
-X, Y, and Z locations of KP2 (respectively) to determine the
-offsets.  KDIST is valid in any coordinate system except
-toroidal [CSYS,3].</p>
-<p>This command is valid in any processor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
@@ -933,11 +926,19 @@ toroidal [CSYS,3].</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">[X,</span> <span class="pre">Y,</span> <span class="pre">Z]</span></code> distance between two keypoints.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">[DIST,</span> <span class="pre">X,</span> <span class="pre">Y,</span> <span class="pre">Z]</span></code> distance between two keypoints.</p>
 </dd>
 </dl>
 </dd>
 </dl>
+<p class="rubric">Notes</p>
+<p>KDIST lists the distance between keypoints KP1 and KP2, as
+well as the current coordinate system offsets from KP1 to KP2,
+where the X, Y, and Z locations of KP1 are subtracted from the
+X, Y, and Z locations of KP2 (respectively) to determine the
+offsets.  KDIST is valid in any coordinate system except
+toroidal [CSYS,3].
+This command is valid in any processor.</p>
 <p class="rubric">Examples</p>
 <p>Compute the distance between two keypoints.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">kp0</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
@@ -946,7 +947,7 @@ toroidal [CSYS,3].</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">knum1</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">kp1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dist</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">kdist</span><span class="p">(</span><span class="n">knum0</span><span class="p">,</span> <span class="n">knum1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dist</span>
-<span class="go">[1.0, -5.0, 13.0]</span>
+<span class="go">[13.96424004376894, 1.0, -5.0, 13.0]</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

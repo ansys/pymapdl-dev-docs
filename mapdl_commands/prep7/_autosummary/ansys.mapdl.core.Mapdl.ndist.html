@@ -951,20 +951,37 @@ in the GUI).</p>
 </dd>
 </dl>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">[DIST,</span> <span class="pre">X,</span> <span class="pre">Y,</span> <span class="pre">Z]</span></code> distance between two nodes.</p>
+</dd>
+</dl>
+</dd>
 </dl>
 <p class="rubric">Notes</p>
 <p>NDIST lists the distance between nodes ND1 and ND2, as well as the
 current coordinate system offsets from ND1 to ND2, where the X, Y, and
 Z locations of ND1 are subtracted from the X, Y, and Z locations of ND2
 (respectively) to determine the offsets.  NDIST is valid in any
-coordinate system except toroidal [CSYS,3].</p>
-<p>NDIST returns a variable, called “_RETURN,” which contains the distance
+coordinate system except toroidal [CSYS,3].
+NDIST returns a variable, called “_RETURN,” which contains the distance
 value. You can use this value for various purposes, such as the
 calculation of distributed loads. In interactive mode, you can access
 this command by using the Model Query Picker (Utility Menu&gt; List&gt;
 Picked Entities), where you can also access automatic annotation
-functions and display the value on your model.</p>
-<p>This command is valid in any processor.</p>
+functions and display the value on your model.
+This command is valid in any processor.</p>
+<p class="rubric">Examples</p>
+<p>Compute the distance between two nodes.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">node1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node_num1</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">node1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node_num2</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">node2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node_dist</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">ndist</span><span class="p">(</span><span class="n">node_num1</span><span class="p">,</span> <span class="n">node_num2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node_dist</span>
+<span class="go">[16.673332000533065, 13.0, -3.0, 10.0]</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
