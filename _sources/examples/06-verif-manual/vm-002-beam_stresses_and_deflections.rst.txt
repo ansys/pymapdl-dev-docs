@@ -22,72 +22,69 @@
 
 Beam Stresses and Deflections
 -----------------------------
-Problem Description:
- - A standard 30 inch WF beam, with a cross-sectional area :math:`A`,
-   is supported as shown below and loaded on the overhangs by a
-   uniformly distributed load :math:`w`. Determine the maximum bending
-   stress, :math:`\sigma_max`, in the middle portion of the beam and
-   the deflection, :math:`\delta`, at the middle of the beam.
+**Problem Description**
 
-Reference:
- -  S. Timoshenko, Strength of Material, Part I, Elementary Theory and
-   Problems, 3rd Edition, D. Van Nostrand Co., Inc., New York, NY, 1955,
-   pg. 98, problem 4.
+A standard 30 inch WF beam, with a cross-sectional area :math:`A`,
+is supported as shown below and loaded on the overhangs by a
+uniformly distributed load :math:`w`. Determine the maximum bending
+stress, :math:`\sigma_max`, in the middle portion of the beam and
+the deflection, :math:`\delta`, at the middle of the beam.
 
-Analysis Type(s):
- - Static Analysis ``ANTYPE=0``
+**Reference**
 
-Element Type(s):
- - 3-D 2 Node Beam (BEAM188)
+S. Timoshenko, Strength of Material, Part I, Elementary Theory and
+Problems, 3rd Edition, D. Van Nostrand Co., Inc., New York, NY, 1955,
+pg. 98, problem 4.
+
+**Analysis Type(s)**
+
+Static Analysis ``ANTYPE=0``
+
+**Element Type(s):**
+
+3-D 2 Node Beam (BEAM188)
 
 .. image:: ../../_static/vm2_setup.png
    :width: 400
    :alt: VM2 Problem Sketch
 
-Material Properties
- - :math:`E = 30 \cdot 10^6 psi`
+**Material Properties**
 
-Geometric Properties:
- - :math:`a = 120 in`
- - :math:`l = 240 in`
- - :math:`h = 30 in`
- - :math:`A = 50.65 in^2`
- - :math:`I_z = 7892 in^4`
+:math:`E = 30 \cdot 10^6 psi`
 
-Loading:
- - :math:`w = (10000/12) lb/in`
+**Geometric Properties**
 
-Analytical Equations:
- - :math:`M` is the bending moment for the middle portion of the beam:
-   :math:`M = 10000 \cdot 10 \cdot 60 = 6 \cdot 10^6 lb \cdot in`
- - Determination of the maximum stress in the middle portion of the beam is:
-   :math:`\sigma_max = \frac{M h}{2 I_z}`
- - The deflection, :math:`\delta`, at the middle of the beam can be defined
-   by the formulas of the transversally loaded beam:
-   :math:`\delta = 0.182 in`
+:math:`a = 120 in`
+:math:`l = 240 in`
+:math:`h = 30 in`
+:math:`A = 50.65 in^2`
+:math:`I_z = 7892 in^4`
 
-.. GENERATED FROM PYTHON SOURCE LINES 51-53
+**Loading**
 
-.. code-block:: default
+:math:`w = (10000/12) lb/in`
 
-    # sphinx_gallery_thumbnail_path = '_static/vm2_setup.png'
+**Analytical Equations**
 
+- :math:`M` is the bending moment for the middle portion of the beam:
+  :math:`M = 10000 \cdot 10 \cdot 60 = 6 \cdot 10^6 lb \cdot in`
+- Determination of the maximum stress in the middle portion of the beam is
+  :math:`\sigma_max = \frac{M h}{2 I_z}`
+- The deflection, :math:`\delta`, at the middle of the beam can be defined
+  by the formulas of the transversally loaded beam:
+  :math:`\delta = 0.182 in`
 
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 54-56
+.. GENERATED FROM PYTHON SOURCE LINES 61-63
 
 Start MAPDL
 ~~~~~~~~~~~
 
-.. GENERATED FROM PYTHON SOURCE LINES 56-68
+.. GENERATED FROM PYTHON SOURCE LINES 63-77
 
 .. code-block:: default
 
+
+    # sphinx_gallery_thumbnail_path = '_static/vm2_setup.png'
 
     from ansys.mapdl.core import launch_mapdl
 
@@ -115,13 +112,13 @@ Start MAPDL
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-72
+.. GENERATED FROM PYTHON SOURCE LINES 78-81
 
 Define Element Type
 ~~~~~~~~~~~~~~~~~~~
 Set up the element type (a beam-type).
 
-.. GENERATED FROM PYTHON SOURCE LINES 72-93
+.. GENERATED FROM PYTHON SOURCE LINES 81-102
 
 .. code-block:: default
 
@@ -153,13 +150,13 @@ Set up the element type (a beam-type).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-97
+.. GENERATED FROM PYTHON SOURCE LINES 103-106
 
 Define Material
 ~~~~~~~~~~~~~~~
 Set up the material.
 
-.. GENERATED FROM PYTHON SOURCE LINES 97-103
+.. GENERATED FROM PYTHON SOURCE LINES 106-112
 
 .. code-block:: default
 
@@ -190,13 +187,13 @@ Set up the material.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 104-107
+.. GENERATED FROM PYTHON SOURCE LINES 113-116
 
 Define Section
 ~~~~~~~~~~~~~~
 Set up the cross-section properties for a beam element.
 
-.. GENERATED FROM PYTHON SOURCE LINES 107-115
+.. GENERATED FROM PYTHON SOURCE LINES 116-124
 
 .. code-block:: default
 
@@ -223,14 +220,14 @@ Set up the cross-section properties for a beam element.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 116-120
+.. GENERATED FROM PYTHON SOURCE LINES 125-129
 
 Define Geometry
 ~~~~~~~~~~~~~~~
 Set up the nodes and elements. Create nodes then create elements
 between nodes.
 
-.. GENERATED FROM PYTHON SOURCE LINES 120-131
+.. GENERATED FROM PYTHON SOURCE LINES 129-140
 
 .. code-block:: default
 
@@ -265,11 +262,11 @@ between nodes.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 132-133
+.. GENERATED FROM PYTHON SOURCE LINES 141-142
 
 Define elements
 
-.. GENERATED FROM PYTHON SOURCE LINES 133-144
+.. GENERATED FROM PYTHON SOURCE LINES 142-153
 
 .. code-block:: default
 
@@ -315,13 +312,13 @@ Define elements
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 145-148
+.. GENERATED FROM PYTHON SOURCE LINES 154-157
 
 Define Boundary Conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Application of boundary conditions (BC).
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-160
+.. GENERATED FROM PYTHON SOURCE LINES 157-169
 
 .. code-block:: default
 
@@ -352,14 +349,14 @@ Application of boundary conditions (BC).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 161-165
+.. GENERATED FROM PYTHON SOURCE LINES 170-174
 
 Define Distributed Loads
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Apply a distributed force of :math:`w = (10000/12) lb/in`
 in the y-direction.
 
-.. GENERATED FROM PYTHON SOURCE LINES 165-175
+.. GENERATED FROM PYTHON SOURCE LINES 174-184
 
 .. code-block:: default
 
@@ -388,13 +385,13 @@ in the y-direction.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 176-179
+.. GENERATED FROM PYTHON SOURCE LINES 185-188
 
 Solve
 ~~~~~
 Enter solution mode and solve the system. Print the solver output.
 
-.. GENERATED FROM PYTHON SOURCE LINES 179-186
+.. GENERATED FROM PYTHON SOURCE LINES 188-195
 
 .. code-block:: default
 
@@ -502,7 +499,7 @@ Enter solution mode and solve the system. Print the solver output.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 187-192
+.. GENERATED FROM PYTHON SOURCE LINES 196-201
 
 Post-processing
 ~~~~~~~~~~~~~~~
@@ -510,7 +507,7 @@ Enter post-processing. To get the stress and deflection results
 from the middle node and cross-section of the beam we can use
 :meth:`Mapdl.get_value <ansys.mapdl.core.Mapdl.get_value>`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 192-204
+.. GENERATED FROM PYTHON SOURCE LINES 201-213
 
 .. code-block:: default
 
@@ -533,7 +530,7 @@ from the middle node and cross-section of the beam we can use
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 205-210
+.. GENERATED FROM PYTHON SOURCE LINES 214-219
 
 Check Results
 ~~~~~~~~~~~~~
@@ -541,7 +538,7 @@ Now that we have the results we can compare the nodal displacement and stress
 experienced by middle node of the beam to the known stresses -11,400 psi and
 0.182 inches of the deflection.
 
-.. GENERATED FROM PYTHON SOURCE LINES 210-229
+.. GENERATED FROM PYTHON SOURCE LINES 219-238
 
 .. code-block:: default
 
@@ -589,7 +586,7 @@ experienced by middle node of the beam to the known stresses -11,400 psi and
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.559 seconds)
+   **Total running time of the script:** ( 0 minutes  0.684 seconds)
 
 
 .. _sphx_glr_download_examples_06-verif-manual_vm-002-beam_stresses_and_deflections.py:

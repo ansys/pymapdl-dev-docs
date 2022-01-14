@@ -363,6 +363,13 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../04-general-fea/00-how_finite_element_works.html">
+   Build a Finite Element
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="vm-001-statically_indeterminate_reaction_force_analysis.html">
    Statically Indeterminate Reaction Force Analysis
   </a>
@@ -508,70 +515,46 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="beam-stresses-and-deflections">
 <span id="ref-vm2-example"></span><span id="sphx-glr-examples-06-verif-manual-vm-002-beam-stresses-and-deflections-py"></span><h1>Beam Stresses and Deflections<a class="headerlink" href="#beam-stresses-and-deflections" title="Permalink to this headline">¶</a></h1>
-<dl>
-<dt>Problem Description:</dt><dd><ul class="simple">
-<li><p>A standard 30 inch WF beam, with a cross-sectional area <span class="math notranslate nohighlight">\(A\)</span>,
+<p><strong>Problem Description</strong></p>
+<p>A standard 30 inch WF beam, with a cross-sectional area <span class="math notranslate nohighlight">\(A\)</span>,
 is supported as shown below and loaded on the overhangs by a
 uniformly distributed load <span class="math notranslate nohighlight">\(w\)</span>. Determine the maximum bending
 stress, <span class="math notranslate nohighlight">\(\sigma_max\)</span>, in the middle portion of the beam and
-the deflection, <span class="math notranslate nohighlight">\(\delta\)</span>, at the middle of the beam.</p></li>
-</ul>
-</dd>
-<dt>Reference:</dt><dd><ul class="simple">
-<li><ol class="upperalpha simple" start="19">
-<li><p>Timoshenko, Strength of Material, Part I, Elementary Theory and</p></li>
-</ol>
-</li>
-</ul>
-<blockquote>
-<div><p>Problems, 3rd Edition, D. Van Nostrand Co., Inc., New York, NY, 1955,
+the deflection, <span class="math notranslate nohighlight">\(\delta\)</span>, at the middle of the beam.</p>
+<p><strong>Reference</strong></p>
+<p>S. Timoshenko, Strength of Material, Part I, Elementary Theory and
+Problems, 3rd Edition, D. Van Nostrand Co., Inc., New York, NY, 1955,
 pg. 98, problem 4.</p>
-</div></blockquote>
-</dd>
-<dt>Analysis Type(s):</dt><dd><ul class="simple">
-<li><p>Static Analysis <code class="docutils literal notranslate"><span class="pre">ANTYPE=0</span></code></p></li>
-</ul>
-</dd>
-<dt>Element Type(s):</dt><dd><ul class="simple">
-<li><p>3-D 2 Node Beam (BEAM188)</p></li>
-</ul>
-</dd>
-</dl>
+<p><strong>Analysis Type(s)</strong></p>
+<p>Static Analysis <code class="docutils literal notranslate"><span class="pre">ANTYPE=0</span></code></p>
+<p><strong>Element Type(s):</strong></p>
+<p>3-D 2 Node Beam (BEAM188)</p>
 <a class="reference internal image-reference" href="../../_images/vm2_setup.png"><img alt="VM2 Problem Sketch" src="../../_images/vm2_setup.png" style="width: 400px;" /></a>
-<dl class="simple">
-<dt>Material Properties</dt><dd><ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(E = 30 \cdot 10^6 psi\)</span></p></li>
-</ul>
-</dd>
-<dt>Geometric Properties:</dt><dd><ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(a = 120 in\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(l = 240 in\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(h = 30 in\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(A = 50.65 in^2\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(I_z = 7892 in^4\)</span></p></li>
-</ul>
-</dd>
-<dt>Loading:</dt><dd><ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(w = (10000/12) lb/in\)</span></p></li>
-</ul>
-</dd>
-<dt>Analytical Equations:</dt><dd><ul class="simple">
+<p><strong>Material Properties</strong></p>
+<p><span class="math notranslate nohighlight">\(E = 30 \cdot 10^6 psi\)</span></p>
+<p><strong>Geometric Properties</strong></p>
+<p><span class="math notranslate nohighlight">\(a = 120 in\)</span>
+<span class="math notranslate nohighlight">\(l = 240 in\)</span>
+<span class="math notranslate nohighlight">\(h = 30 in\)</span>
+<span class="math notranslate nohighlight">\(A = 50.65 in^2\)</span>
+<span class="math notranslate nohighlight">\(I_z = 7892 in^4\)</span></p>
+<p><strong>Loading</strong></p>
+<p><span class="math notranslate nohighlight">\(w = (10000/12) lb/in\)</span></p>
+<p><strong>Analytical Equations</strong></p>
+<ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(M\)</span> is the bending moment for the middle portion of the beam:
 <span class="math notranslate nohighlight">\(M = 10000 \cdot 10 \cdot 60 = 6 \cdot 10^6 lb \cdot in\)</span></p></li>
-<li><p>Determination of the maximum stress in the middle portion of the beam is:
+<li><p>Determination of the maximum stress in the middle portion of the beam is
 <span class="math notranslate nohighlight">\(\sigma_max = \frac{M h}{2 I_z}\)</span></p></li>
 <li><p>The deflection, <span class="math notranslate nohighlight">\(\delta\)</span>, at the middle of the beam can be defined
 by the formulas of the transversally loaded beam:
 <span class="math notranslate nohighlight">\(\delta = 0.182 in\)</span></p></li>
 </ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_path = &#39;_static/vm2_setup.png&#39;</span>
-</pre></div>
-</div>
 <section id="start-mapdl">
 <h2>Start MAPDL<a class="headerlink" href="#start-mapdl" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_path = &#39;_static/vm2_setup.png&#39;</span>
+
+<span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="c1"># Start mapdl and clear it.</span>
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
@@ -882,7 +865,7 @@ experienced by middle node of the beam to the known stresses -11,400 psi and
 ----------------------------------------------------------------------------------
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.559 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.684 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-06-verif-manual-vm-002-beam-stresses-and-deflections-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/18a1191ceed763ef060bbea88ec8aad8/vm-002-beam_stresses_and_deflections.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-002-beam_stresses_and_deflections.py</span></code></a></p>

@@ -279,10 +279,9 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. _ref_apdl_math_examples:
 
-PyMapdl Math Examples
+PyMAPDL Math Examples
 =====================
-These examples demonstrate using APDL Math and the PyAnsys module
-together within the PyMapdl module.
+These examples demonstrate using APDL Math from the PyMAPDL library.
 
 
 
@@ -678,6 +677,42 @@ These examples demonstrate miscellaneous tips and tricks for using PyMAPDL.
 
 
 
+.. _sphx_glr_examples_04-general-fea:
+
+Academic Finite Element Examples
+================================
+These examples demonstrate finite element method as applicable to
+Python and MAPDL while emphasising Python libaries such as `matplotlib
+<https://matplotlib.org/>`_
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="To illustrate it with a concrete example, we take a 2D element described by the following (x, y...">
+
+.. only:: html
+
+ .. figure:: /examples/04-general-fea/images/thumb/sphx_glr_00-how_finite_element_works_thumb.png
+     :alt: Build a Finite Element
+
+     :ref:`sphx_glr_examples_04-general-fea_00-how_finite_element_works.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/04-general-fea/00-how_finite_element_works
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
 .. _sphx_glr_examples_06-verif-manual:
 
 Verification Manual Examples
@@ -715,7 +750,7 @@ applications that may be of interest.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Reference:  -  S. Timoshenko, Strength of Material, Part I, Elementary Theory and    Problems, ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="A standard 30 inch WF beam, with a cross-sectional area A, is supported as shown below and load...">
 
 .. only:: html
 
