@@ -430,6 +430,13 @@
   </a>
  </li>
 </ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-verif-manual/vm-010-bending_of_a_t-shaped_beam.html">
+   Bending of a Tee-Shaped Beam
+  </a>
+ </li>
+</ul>
 
     
   </div>
@@ -557,12 +564,12 @@ pyMAPDL.</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =      54.994   TIME= 04:06:14
+ *** NOTE ***                            CP =      71.920   TIME= 04:07:19
  There is no title defined for this analysis.
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:06:14  JAN 27, 2022 CP=     54.997
+ 00000000  VERSION=LINUX x64     04:07:19  JAN 28, 2022 CP=     71.923
 
 
 
@@ -578,11 +585,11 @@ pyMAPDL.</p>
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =      54.998   TIME= 04:06:14
+ *** NOTE ***                            CP =      71.924   TIME= 04:07:19
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =      54.998   TIME= 04:06:14
+ *** NOTE ***                            CP =      71.924   TIME= 04:07:19
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -607,8 +614,8 @@ pyMAPDL.</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       450  SOLID90       0.031   0.000069
- Time at end of element matrix formulation CP = 55.0409813.
+        1       450  SOLID90       0.047   0.000104
+ Time at end of element matrix formulation CP = 71.9857178.
 
  SPARSE MATRIX DIRECT SOLVER.
   Number of equations =        2606,    Maximum wavefront =     72
@@ -616,7 +623,7 @@ pyMAPDL.</p>
   Memory required for in-core solution     =     4.639 MB
   Memory required for out-of-core solution =     2.499 MB
 
- *** NOTE ***                            CP =      55.123   TIME= 04:06:14
+ *** NOTE ***                            CP =      72.075   TIME= 04:07:19
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
@@ -631,12 +638,12 @@ pyMAPDL.</p>
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       450  SOLID90       0.023   0.000052
+        1       450  SOLID90       0.042   0.000094
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       450  SOLID90       0.013   0.000029
+        1       450  SOLID90       0.022   0.000048
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -684,7 +691,7 @@ result file using pyansys</p>
 [    1     2     3 ... 12715 12716 12717] [ 0.  0.  0. ... nan nan nan]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.156 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.555 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-3d-plate-thermal-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/91c538c5ed71a5605ff4467121a37338/3d_plate_thermal.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">3d_plate_thermal.py</span></code></a></p>
