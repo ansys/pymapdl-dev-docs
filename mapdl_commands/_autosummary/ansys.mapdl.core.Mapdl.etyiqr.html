@@ -935,33 +935,29 @@ It should be 0 for key=11, <code class="docutils literal notranslate"><span clas
 <code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code></p>
 </dd>
 <dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Information flag.</p>
+<ul>
+<li><p>DB_SELECTED    - return select status:</p>
 <ul class="simple">
-<li><p>DB_SELECTED    - return select status:</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
 <li><p>0 - element type is undefined.</p></li>
 <li><p>-1 - element type is unselected.</p></li>
 <li><p>1 - element type is selected.</p></li>
 </ul>
-</div></blockquote>
-<ul class="simple">
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">DB_NUMDEFINED</span></code>  - return number of defined element types</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">DB_NUMSELECTED</span></code> - return number of selected element types</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED</span></code>  - return highest element type number defined</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code>  - return maximum record length (int words)</p></li>
-<li><p>-n, return element characteristic n from <code class="docutils literal notranslate"><span class="pre">etycom</span></code> for element</p></li>
-</ul>
-<blockquote>
-<div><p>type itype.
-<code class="docutils literal notranslate"><span class="pre">n</span></code> is correlated to the parameter names in <code class="docutils literal notranslate"><span class="pre">echprm</span></code>.
-see <code class="docutils literal notranslate"><span class="pre">elccmt</span></code> for definitions of element characteristics.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">-n</span></code>, return element characteristic n from <code class="docutils literal notranslate"><span class="pre">etycom</span></code> for
+element type itype. <code class="docutils literal notranslate"><span class="pre">n</span></code> is correlated to the parameter names in
+<code class="docutils literal notranslate"><span class="pre">echprm</span></code>.  see <code class="docutils literal notranslate"><span class="pre">elccmt</span></code> for definitions of element
+characteristics.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This will not overwrite the current setting of
 <code class="docutils literal notranslate"><span class="pre">etycom</span></code>.</p>
 </div>
-</div></blockquote>
+</li>
+</ul>
 </dd>
 <dt><strong>pname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the variable where the queried value is stored.</p>
 </dd>

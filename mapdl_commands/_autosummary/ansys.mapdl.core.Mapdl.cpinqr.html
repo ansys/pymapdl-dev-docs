@@ -929,53 +929,33 @@ Hence its support is limited and it use is not encouraged.
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>ncp</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Coupled set number</p>
+<dt><strong>ncp</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Coupled set number.</p>
 </dd>
 <dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Inquiry key. It should be zero for key=11, <code class="docutils literal notranslate"><span class="pre">DB_NUMDEFINED</span></code>,
 <code class="docutils literal notranslate"><span class="pre">DB_NUMSELECTED</span></code>, <code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED</span></code>, and <code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code></p>
 <ul class="simple">
-<li><p>DB_SELECTED    - return select status</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_SELECTED</span></code> - return select status:</p>
+<ul>
 <li><p>1 - coupled set is selected</p></li>
 <li><p>0 - coupled set in undefined</p></li>
 <li><p>-1 - coupled set in unselected</p></li>
 </ul>
-</div></blockquote>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">DB_NUMDEFINED</span></code>  - return number of defined coupled sets</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">DB_NUMSELECTED</span></code> - return number of selected coupled sets</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED</span></code>  - return the number of the highest numbered</p></li>
-</ul>
-<blockquote>
-<div><p>coupled set</p>
-</div></blockquote>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code>  - return length of largest coupled set record</p></li>
-</ul>
-<blockquote>
-<div><p>(max record length)</p>
-</div></blockquote>
-<ul>
-<li><p>2  - return length (data units)</p></li>
-<li><p>3  - return layer number</p></li>
-<li><p>4  - return address of first data word</p></li>
-<li><p>5  - return number of values stored for ncp</p></li>
-<li><p>11  - return void percent (integer)</p></li>
-<li><p>16  - return location of next record</p></li>
-<li><dl class="option-list">
-<dt><kbd><span class="option">-1</span></kbd></dt>
-<dd><ul class="simple">
-<li><p>return master node for this eqn (this is</p></li>
-</ul>
-</dd>
-</dl>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_NUMDEFINED</span></code> - return number of defined coupled sets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_NUMSELECTED</span></code> - return number of selected coupled sets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED</span></code> - return the number of the highest numbered
+coupled set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code> - return length of largest coupled set record
+(max record length)</p></li>
+<li><p>2 - return length (data units)</p></li>
+<li><p>3 - return layer number</p></li>
+<li><p>4 - return address of first data word</p></li>
+<li><p>5 - return number of values stored for ncp</p></li>
+<li><p>11 - return void percent (integer)</p></li>
+<li><p>16 - return location of next record</p></li>
+<li><p>-1 - return master node for this eqn (this is
+currently only used by solution DB object)</p></li>
 </ul>
-<blockquote>
-<div><p>currently only used by solution DB object)</p>
-</div></blockquote>
 </dd>
 <dt><strong>pname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the variable where the queried value is stored.</p>
 </dd>

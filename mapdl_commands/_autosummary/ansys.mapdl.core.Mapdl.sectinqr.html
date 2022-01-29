@@ -935,10 +935,10 @@ should be 0 for key=11, <code class="docutils literal notranslate"><span class="
 <code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code>.</p>
 </dd>
 <dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Information flag.
-*  DB_SELECTED - return select status</p>
+* DB_SELECTED - return select status</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>0 - ection id table is undefined.</p></li>
+<li><p>0 - section id table is undefined.</p></li>
 <li><p>-1 - section id table is unselected.</p></li>
 <li><p>1 - section id table is selected</p></li>
 </ul>
@@ -949,46 +949,28 @@ should be 0 for key=11, <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED</span></code>  - return highest section id table defined</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code>  - return maximum record length (dp words)</p></li>
 <li><p>2 - return length (dp words)</p></li>
-<li><p>3 - return layer number (for cross reference files return number</p></li>
-</ul>
-<blockquote>
-<div><p>of entities)</p>
-</div></blockquote>
-<ul class="simple">
+<li><p>3 - return layer number (for cross reference files return number
+of entities)</p></li>
 <li><p>4 - return address of first data word</p></li>
 <li><p>5 - return length (in record type units)</p></li>
 <li><p>6 - return compressed record number.</p></li>
 <li><p>11 - return void percent (integer)</p></li>
-<li><p>16 - return location of next record (this increments the next</p></li>
+<li><p>16 - return location of next record (this increments the next
+record count)</p></li>
+<li><p>18 - return type of file.
+* 0 - integer
+* 1 - double precision
+* 2 - real
+* 3 - complex
+* 4 - character*8
+* 7 - index</p></li>
+<li><p>19 - return virtual type of file.
+* 0 - fixed length (4.4 form)
+* 1 - indexed variable length (layer data)
+* 2 - xref data tables
+* 3 - bitmap data (for 32 data item packed records)
+* 4 - data tables (three dimensional arrays)</p></li>
 </ul>
-<blockquote>
-<div><p>record count)</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>18 - return type of file.</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li><p>0 - integer</p></li>
-<li><p>1 - double precision</p></li>
-<li><p>2 - real</p></li>
-<li><p>3 - complex</p></li>
-<li><p>4 - character*8</p></li>
-<li><p>7 - index</p></li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>19 - return virtual type of file.</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li><p>0 - fixed length (4.4 form)</p></li>
-<li><p>1 - indexed variable length (layer data)</p></li>
-<li><p>2 - xref data tables</p></li>
-<li><p>3 - bitmap data (for 32 data item packed records)</p></li>
-<li><p>4 - data tables (three dimensional arrays)</p></li>
-</ul>
-</div></blockquote>
 </dd>
 <dt><strong>pname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the variable where the queried value is stored.</p>
 </dd>
