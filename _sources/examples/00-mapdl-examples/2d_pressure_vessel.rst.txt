@@ -295,9 +295,6 @@ Resume results from last analysis from mesh convergence study
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(100.0, 100.0, 546.4101615137755),
-     (100.0, 100.0, 0.0),
-     (0.0, 1.0, 0.0)]
 
 
 
@@ -338,9 +335,6 @@ Plot nodal displacement
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(100.0, 100.0, 546.4101615137755),
-     (100.0, 100.0, 0.0),
-     (0.0, 1.0, 0.0)]
 
 
 
@@ -362,23 +356,13 @@ Plot nodal equivalent stress
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-
-    [(100.0, 100.0, 546.4101615137755),
-     (100.0, 100.0, 0.0),
-     (0.0, 1.0, 0.0)]
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.877 seconds)
+   **Total running time of the script:** ( 0 minutes  7.025 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_2d_pressure_vessel.py:

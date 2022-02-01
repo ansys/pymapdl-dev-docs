@@ -167,16 +167,6 @@ mid-point nodes to two opposite sides.
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-
-    [(0.0, -10.0, 54.64101615137755),
-     (0.0, -10.0, 0.0),
-     (0.0, 1.0, 0.0)]
 
 
 
@@ -219,9 +209,6 @@ between the first 2 that is parallel to them.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(0.0, -10.0, 54.64101615137755),
-     (0.0, -10.0, 0.0),
-     (0.0, 1.0, 0.0)]
 
 
 
@@ -388,7 +375,7 @@ expected stresses of 19695 and 10152 respectively.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.811 seconds)
+   **Total running time of the script:** ( 0 minutes  0.846 seconds)
 
 
 .. _sphx_glr_download_examples_06-verif-manual_vm-003-thermally_loaded_support_structure.py:

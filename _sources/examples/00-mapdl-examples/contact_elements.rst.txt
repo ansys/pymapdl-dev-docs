@@ -83,9 +83,6 @@ elements.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(2.173032607475616, 2.173032607475616, 1.923032607475616),
-     (0.5, 0.5, 0.25),
-     (0.0, 0.0, 1.0)]
 
 
 
@@ -130,9 +127,6 @@ Note how these two blocks do not touch and the mesh is non-conformal.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(2.431851652578137, 2.431851652578137, 2.431851652578137),
-     (0.5, 0.5, 0.5),
-     (0.0, 0.0, 1.0)]
 
 
 
@@ -208,16 +202,13 @@ contact pairs overlap.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(2.07735026922906, 2.07735026922906, 2.07735526922906),
-     (0.5, 0.5, 0.500005),
-     (0.0, 0.0, 1.0)]
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.648 seconds)
+   **Total running time of the script:** ( 0 minutes  1.593 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_contact_elements.py:

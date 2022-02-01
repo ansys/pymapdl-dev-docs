@@ -131,16 +131,6 @@ configure this method with a variety of keyword arguments.  For example:
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-
-    [(-2.3621999999390297e-06, -10.642040667497753, 0.057141257263860545),
-     (-2.3621999999390297e-06, -0.11811023622050003, 0.057141257263860545),
-     (0.0, 0.0, 1.0)]
 
 
 
@@ -184,9 +174,6 @@ arguments.  For example:
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(6.075874627412874, 5.957766753392409, 6.133076559944261),
-     (-2.3622000049350333e-06, -0.11811023622047002, 0.05719957033138079),
-     (0.0, 0.0, 1.0)]
 
 
 
@@ -478,7 +465,7 @@ format and loaded again with ``pyvista`` or ParaView.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  16.213 seconds)
+   **Total running time of the script:** ( 0 minutes  15.969 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_geometry.py:

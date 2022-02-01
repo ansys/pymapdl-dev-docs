@@ -308,7 +308,7 @@
 <h1>launch_mapdl<a class="headerlink" href="#launch-mapdl" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="ansys.mapdl.core.launch_mapdl">
-<span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.</span></span><span class="sig-name descname"><span class="pre">launch_mapdl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exec_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jobname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'file'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nproc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ram</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loglevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ERROR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_switches</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">120</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cleanup_on_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_instance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'127.0.0.1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_on_connect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_apdl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose_mapdl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license_server_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.launch_mapdl" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.</span></span><span class="sig-name descname"><span class="pre">launch_mapdl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exec_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jobname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'file'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nproc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ram</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loglevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ERROR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_switches</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">120</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cleanup_on_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_instance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'127.0.0.1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_on_connect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_apdl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose_mapdl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license_server_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_com</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.launch_mapdl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start MAPDL locally in gRPC mode.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -411,6 +411,9 @@ also raise a warning. If it is not used (<code class="docutils literal notransla
 will be requested, being up to the license server to provide a specific
 license type. Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd>
+<dt><strong>print_com</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Print the command <code class="docutils literal notranslate"><span class="pre">/COM</span></code> arguments to the standard output.
+Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -425,64 +428,81 @@ license type. Default is <code class="docutils literal notranslate"><span class=
 running MAPDL as a service via gRPC.  Excluded switches such as
 <code class="docutils literal notranslate"><span class="pre">&quot;-j&quot;</span></code> either not applicable or are set via keyword arguments.</p>
 <dl class="simple">
-<dt>-acc &lt;device&gt;<span class="classifier">Enables the use of GPU hardware.  See GPU</span></dt><dd><p>Accelerator Capability in the Parallel Processing Guide for more
+<dt>-acc &lt;device&gt;</dt><dd><p>Enables the use of GPU hardware.  See GPU
+Accelerator Capability in the Parallel Processing Guide for more
 information.</p>
 </dd>
-<dt>-amfg<span class="classifier">Enables the additive manufacturing capability.  Requires</span></dt><dd><p>an additive manufacturing license. For general information about
+<dt>-amfg</dt><dd><p>Enables the additive manufacturing capability.  Requires
+an additive manufacturing license. For general information about
 this feature, see AM Process Simulation in ANSYS Workbench.</p>
 </dd>
-<dt>-ansexe &lt;executable&gt;<span class="classifier">Activates a custom mechanical APDL executable.</span></dt><dd><p>In the ANSYS Workbench environment, activates a custom
+<dt>-ansexe &lt;executable&gt;</dt><dd><p>Activates a custom mechanical APDL executable.
+In the ANSYS Workbench environment, activates a custom
 Mechanical APDL executable.</p>
 </dd>
-<dt>-custom &lt;executable&gt;<span class="classifier">Calls a custom Mechanical APDL executable</span></dt><dd><p>See Running Your Custom Executable in the Programmer’s Reference
+<dt>-custom &lt;executable&gt;</dt><dd><p>Calls a custom Mechanical APDL executable
+See Running Your Custom Executable in the Programmer’s Reference
 for more information.</p>
 </dd>
-<dt>-db value<span class="classifier">Initial memory allocation</span></dt><dd><p>Defines the portion of workspace (memory) to be used as the
+<dt>-db value</dt><dd><p>Initial memory allocation
+Defines the portion of workspace (memory) to be used as the
 initial allocation for the database. The default is 1024
 MB. Specify a negative number to force a fixed size throughout
 the run; useful on small memory systems.</p>
 </dd>
-<dt>-dis<span class="classifier">Enables Distributed ANSYS</span></dt><dd><p>See the Parallel Processing Guide for more information.</p>
+<dt>-dis</dt><dd><p>Enables Distributed ANSYS
+See the Parallel Processing Guide for more information.</p>
 </dd>
-<dt>-dvt<span class="classifier">Enables ANSYS DesignXplorer advanced task (add-on).</span></dt><dd><p>Requires DesignXplorer.</p>
+<dt>-dvt</dt><dd><p>Enables ANSYS DesignXplorer advanced task (add-on).
+Requires DesignXplorer.</p>
 </dd>
-<dt>-l &lt;language&gt;<span class="classifier">Specifies a language file to use other than English</span></dt><dd><p>This option is valid only if you have a translated message file
+<dt>-l &lt;language&gt;</dt><dd><p>Specifies a language file to use other than English
+This option is valid only if you have a translated message file
 in an appropriately named subdirectory in
 <code class="docutils literal notranslate"><span class="pre">/ansys_inc/v201/ansys/docu</span></code> or
 <code class="docutils literal notranslate"><span class="pre">Program</span> <span class="pre">Files\ANSYS\Inc\V201\ANSYS\docu</span></code></p>
 </dd>
-<dt>-m &lt;workspace&gt;<span class="classifier">Specifies the total size of the workspace</span></dt><dd><p>Workspace (memory) in megabytes used for the initial
+<dt>-m &lt;workspace&gt;</dt><dd><p>Specifies the total size of the workspace
+Workspace (memory) in megabytes used for the initial
 allocation. If you omit the <code class="docutils literal notranslate"><span class="pre">-m</span></code> option, the default is 2 GB
 (2048 MB). Specify a negative number to force a fixed size
 throughout the run.</p>
 </dd>
-<dt>-machines &lt;IP&gt;<span class="classifier">Specifies the distributed machines</span></dt><dd><p>Machines on which to run a Distributed ANSYS analysis. See
+<dt>-machines &lt;IP&gt;</dt><dd><p>Specifies the distributed machines
+Machines on which to run a Distributed ANSYS analysis. See
 Starting Distributed ANSYS in the Parallel Processing Guide for
 more information.</p>
 </dd>
-<dt>-mpi &lt;value&gt;<span class="classifier">Specifies the type of MPI to use.</span></dt><dd><p>See the Parallel Processing Guide for more information.</p>
+<dt>-mpi &lt;value&gt;</dt><dd><p>Specifies the type of MPI to use.
+See the Parallel Processing Guide for more information.</p>
 </dd>
-<dt>-mpifile &lt;appfile&gt;<span class="classifier">Specifies an existing MPI file</span></dt><dd><p>Specifies an existing MPI file (appfile) to be used in a
+<dt>-mpifile &lt;appfile&gt;</dt><dd><p>Specifies an existing MPI file
+Specifies an existing MPI file (appfile) to be used in a
 Distributed ANSYS run. See Using MPI Files in the Parallel
 Processing Guide for more information.</p>
 </dd>
-<dt>-na &lt;value&gt;: Specifies the number of GPU accelerator devices</dt><dd><p>Number of GPU devices per machine or compute node when running
+<dt>-na &lt;value&gt;</dt><dd><p>Specifies the number of GPU accelerator devices
+Number of GPU devices per machine or compute node when running
 with the GPU accelerator feature. See GPU Accelerator Capability
 in the Parallel Processing Guide for more information.</p>
 </dd>
-<dt>-name &lt;value&gt;<span class="classifier">Defines Mechanical APDL parameters</span></dt><dd><p>Set mechanical APDL parameters at program start-up. The parameter
+<dt>-name &lt;value&gt;</dt><dd><p>Defines Mechanical APDL parameters
+Set mechanical APDL parameters at program start-up. The parameter
 name must be at least two characters long. For details about
 parameters, see the ANSYS Parametric Design Language Guide.</p>
 </dd>
-<dt>-p &lt;productname&gt;<span class="classifier">ANSYS session product</span></dt><dd><p>Defines the ANSYS session product that will run during the
+<dt>-p &lt;productname&gt;</dt><dd><p>ANSYS session product
+Defines the ANSYS session product that will run during the
 session. For more detailed information about the <code class="docutils literal notranslate"><span class="pre">-p</span></code> option,
 see Selecting an ANSYS Product via the Command Line.</p>
 </dd>
-<dt>-ppf &lt;license feature name&gt;<span class="classifier">HPC license</span></dt><dd><p>Specifies which HPC license to use during a parallel processing
+<dt>-ppf &lt;license feature name&gt;</dt><dd><p>HPC license
+Specifies which HPC license to use during a parallel processing
 run. See HPC Licensing in the Parallel Processing Guide for more
 information.</p>
 </dd>
-<dt>-smp<span class="classifier">Enables shared-memory parallelism.</span></dt><dd><p>See the Parallel Processing Guide for more information.</p>
+<dt>-smp</dt><dd><p>Enables shared-memory parallelism.
+See the Parallel Processing Guide for more information.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>

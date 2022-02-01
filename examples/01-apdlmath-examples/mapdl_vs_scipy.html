@@ -572,10 +572,6 @@ after MODMSH.
   warnings.warn(
 /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
   warnings.warn(
-
-[(3.933687241492801, 3.0105415922331633, 3.21223669211588),
- (1.1499194488984512, 0.22677379963881444, 0.4284688995215311),
- (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
 <p>Next, setup a modal Analysis and request the <span class="math notranslate nohighlight">\(K\)</span> and math:<cite>M</cite>
@@ -621,7 +617,7 @@ STOP SOLUTION AFTER FULL FILE HAS BEEN WRITTEN
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Elapsed time to solve this problem :  0.48355555534362793
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Elapsed time to solve this problem :  0.4889037609100342
 </pre></div>
 </div>
 <p>Print eigenfrequencies and accuracy.</p>
@@ -647,16 +643,16 @@ STOP SOLUTION AFTER FULL FILE HAS BEEN WRITTEN
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq =   352.40 Hz         Residual = 1.3156e-08
-[1] : Freq =   385.20 Hz         Residual = 7.9613e-09
-[2] : Freq =   656.81 Hz         Residual = 5.8082e-09
-[3] : Freq =   764.73 Hz         Residual = 1.0815e-08
-[4] : Freq =   825.47 Hz         Residual = 1.3218e-08
-[5] : Freq =  1039.28 Hz         Residual = 5.3595e-09
-[6] : Freq =  1143.61 Hz         Residual = 1.521e-08
-[7] : Freq =  1258.00 Hz         Residual = 4.3684e-08
-[8] : Freq =  1334.23 Hz         Residual = 5.0475e-08
-[9] : Freq =  1352.10 Hz         Residual = 3.552e-08
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq =   352.40 Hz         Residual = 6.4363e-09
+[1] : Freq =   385.20 Hz         Residual = 5.6669e-09
+[2] : Freq =   656.81 Hz         Residual = 6.2898e-09
+[3] : Freq =   764.73 Hz         Residual = 6.6152e-09
+[4] : Freq =   825.47 Hz         Residual = 5.4891e-09
+[5] : Freq =  1039.28 Hz         Residual = 6.2336e-09
+[6] : Freq =  1143.61 Hz         Residual = 2.6386e-08
+[7] : Freq =  1258.00 Hz         Residual = 4.5162e-08
+[8] : Freq =  1334.23 Hz         Residual = 5.2739e-08
+[9] : Freq =  1352.10 Hz         Residual = 3.6164e-08
 </pre></div>
 </div>
 <section id="use-scipy-to-solve-the-same-eigenproblem">
@@ -705,7 +701,7 @@ are memory inefficient.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Elapsed time to solve this problem :  2.513274908065796
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Elapsed time to solve this problem :  2.524803400039673
 </pre></div>
 </div>
 <p>Convert Lambda values to Frequency values:
@@ -766,10 +762,10 @@ are memory inefficient.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Mapdl is 5.2 times faster
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Mapdl is 5.16 times faster
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.326 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.462 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-apdlmath-examples-mapdl-vs-scipy-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/096b46526b2b4ee2fd41989798894bd1/mapdl_vs_scipy.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mapdl_vs_scipy.py</span></code></a></p>

@@ -121,9 +121,6 @@ Create a beam, apply a load, and solve for the static solution.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(11.638097539230095, 12.388097539230095, 16.388097539230095),
-     (0.25, 1.0, 5.0),
-     (0.0, 0.0, 1.0)]
 
 
 
@@ -320,7 +317,7 @@ extrapolated to the edge nodes of ANSYS FEMs.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.096 seconds)
+   **Total running time of the script:** ( 0 minutes  4.425 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_path_operations.py:

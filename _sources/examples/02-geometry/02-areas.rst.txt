@@ -96,9 +96,6 @@ Create a simple triangle in the XY plane using three keypoints.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(0.5, 0.5, 2.7320508075688776),
-     (0.5, 0.5, 0.0),
-     (0.0, 1.0, 0.0)]
 
 
 
@@ -147,9 +144,6 @@ Create an area from four lines.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(0.5, 0.5, 2.7320508075688776),
-     (0.5, 0.5, 0.0),
-     (0.0, 1.0, 0.0)]
 
 
 
@@ -196,9 +190,6 @@ Drag a circle between two keypoints to create an area
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(2.431851652578137, 2.431851652578137, 2.431851652578137),
-     (0.5, 0.5, 0.5),
-     (0.0, 0.0, 1.0)]
 
 
 
@@ -241,9 +232,6 @@ Subtract a ``0.5 x 0.5`` rectangle from a ``1 x 1`` rectangle.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(0.5, 0.5, 2.7320508075688776),
-     (0.5, 0.5, 0.0),
-     (0.0, 1.0, 0.0)]
 
 
 
@@ -310,7 +298,7 @@ individual meshes.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [UnstructuredGrid (0x7f6d28e8a0a0)
+    [UnstructuredGrid (0x7feaf67fc5e0)
       N Cells:	12
       N Points:	24
       X Bounds:	0.000e+00, 1.000e+00
@@ -561,16 +549,13 @@ camera direction from the following:
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [(17.44115804567443, 18.186570409589628, 11.88800786339443),
-     (5.553150182280001, 6.2985625461952, 0.0),
-     (0.0, 0.0, 1.0)]
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.197 seconds)
+   **Total running time of the script:** ( 0 minutes  3.116 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_02-areas.py:
