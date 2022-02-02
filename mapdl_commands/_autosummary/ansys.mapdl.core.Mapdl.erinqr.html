@@ -930,147 +930,159 @@ Hence its support is limited and it use is not encouraged.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
 <dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Item to be returned.</p>
-<ul class="simple">
-<li><p>1 = keyerr (ER_ERRORFLAG)
-Master error flag.</p></li>
-<li><p>2 = errfil (ER_ERRORFILE)
-Errors file unit number.</p></li>
-<li><p>3 = numnot (ER_NUMNOTE)
-Total number of notes displayed.</p></li>
-<li><p>4 = numwrn (ER_NUMWARNING)
-Total number of warnings displayed.</p></li>
-<li><p>5 = numerr (ER_NUMERROR)
-Total number of errors displayed.</p></li>
-<li><p>6 = numfat (ER_NUMFATAL)
-Total number of fatals displayed.</p></li>
-<li><p>7 = maxmsg (ER_MAXMESSAGE)
-Max allowed number of displayed messages before abort.</p></li>
-<li><p>8 = lvlerr (ER_ERRORLEVEL)
-Used basically in solution (from <code class="docutils literal notranslate"><span class="pre">cnvr</span></code> command.)</p>
 <ul>
+<li><p>1 = keyerr (<code class="docutils literal notranslate"><span class="pre">ER_ERRORFLAG</span></code>)</p>
+<p>Master error flag.</p>
+</li>
+<li><p>2 = errfil (<code class="docutils literal notranslate"><span class="pre">ER_ERRORFILE</span></code>)</p>
+<p>Errors file unit number.</p>
+</li>
+<li><p>3 = numnot (<code class="docutils literal notranslate"><span class="pre">ER_NUMNOTE</span></code>)</p>
+<p>Total number of notes displayed.</p>
+</li>
+<li><p>4 = numwrn (<code class="docutils literal notranslate"><span class="pre">ER_NUMWARNING</span></code>)</p>
+<p>Total number of warnings displayed.</p>
+</li>
+<li><p>5 = numerr (<code class="docutils literal notranslate"><span class="pre">ER_NUMERROR</span></code>)</p>
+<p>Total number of errors displayed.</p>
+</li>
+<li><p>6 = numfat (<code class="docutils literal notranslate"><span class="pre">ER_NUMFATAL</span></code>)</p>
+<p>Total number of fatals displayed.</p>
+</li>
+<li><p>7 = maxmsg (<code class="docutils literal notranslate"><span class="pre">ER_MAXMESSAGE</span></code>)</p>
+<p>Max allowed number of displayed messages before abort.</p>
+</li>
+<li><p>8 = lvlerr (<code class="docutils literal notranslate"><span class="pre">ER_ERRORLEVEL</span></code>)</p>
+<p>Used basically in solution (from <code class="docutils literal notranslate"><span class="pre">cnvr</span></code> command.)</p>
+<ul class="simple">
 <li><p>-1 = do not set keyerr for notes/errors/warnings.</p></li>
 <li><p>-2 = same as -1 but do not display message either.</p></li>
 </ul>
 </li>
-<li><p>9 = mxpcmd (ER_MAXCOMMAND)
-Maximum number of messages allowed per command.</p></li>
-<li><p>10 = nercmd (ER_NUMCOMMAND)
-Number of messages displayed for any one command.</p></li>
-<li><p>11 = nertim (ER_UICLEAR)
-Key as to how message cleared from u/i pop-up (only for “info”
+<li><p>9 = mxpcmd (<code class="docutils literal notranslate"><span class="pre">ER_MAXCOMMAND</span></code>)</p>
+<p>Maximum number of messages allowed per command.</p>
+</li>
+<li><p>10 = nercmd (<code class="docutils literal notranslate"><span class="pre">ER_NUMCOMMAND</span></code>)</p>
+<p>Number of messages displayed for any one command.</p>
+</li>
+<li><p>11 = nertim (<code class="docutils literal notranslate"><span class="pre">ER_UICLEAR</span></code>)</p>
+<p>Key as to how message cleared from u/i pop-up (only for “info”
 calls)</p>
-<ul>
+<ul class="simple">
 <li><p>-1 = message is timed before removal</p></li>
 <li><p>0 = message needs pick or keyboard before removal</p></li>
 <li><p>1 = message stays up until replaced by another message</p></li>
 </ul>
 </li>
-<li><p>12 = nomore  (ER_NOMOREMSG)
-Display no more messages</p>
-<ul>
+<li><p>12 = nomore (<code class="docutils literal notranslate"><span class="pre">ER_NOMOREMSG</span></code>)</p>
+<p>Display no more messages</p>
+<ul class="simple">
 <li><p>0 = display messages</p></li>
 <li><p>1 = display discontinue message and stop displaying</p></li>
 </ul>
 </li>
-<li><p>13 = eropen   (ER_FILEOPEN)</p>
-<ul>
+<li><p>13 = eropen (<code class="docutils literal notranslate"><span class="pre">ER_FILEOPEN</span></code>)</p>
+<ul class="simple">
 <li><p>0 = errors file is closed</p></li>
 <li><p>1 = errors file is opened</p></li>
 </ul>
 </li>
-<li><p>14 = ikserr (ER_INTERERROR)</p>
-<ul>
+<li><p>14 = ikserr (<code class="docutils literal notranslate"><span class="pre">ER_INTERERROR</span></code>)</p>
+<ul class="simple">
 <li><p>0 = if interactive do not set keyerr.</p></li>
 <li><p>-1 = if interactive set keyerr (used by mesher and tessalation)</p></li>
 </ul>
 </li>
-<li><p>15 = kystat (ER_KEYOPTTEST)
-Flag to bypass keyopt tests in the elcxx routines associated with
+<li><p>15 = kystat (<code class="docutils literal notranslate"><span class="pre">ER_KEYOPTTEST</span></code>)</p>
+<p>Flag to bypass keyopt tests in the elcxx routines associated with
 status/panel info inquiries.</p>
-<ul>
+<ul class="simple">
 <li><p>0 = do not bypass keyopt tests</p></li>
 <li><p>1 = perform all keyopt tests also flag to bypass setting of
-_STATUS upon resume</p></li>
+<code class="docutils literal notranslate"><span class="pre">_STATUS</span></code> upon resume</p></li>
 </ul>
 </li>
-<li><p>16 = mxr4r5   (ER_MIXEDREV)
-mixed rev4-rev5 input logic (*do,*if, *go, *if-go)</p>
-<ul>
-<li><p>1 = rev5 found (*do,*fi-then-*endif)</p></li>
-<li><p>2 = rev4 found (*go,:xxx,*if, …., :xxx)</p></li>
+<li><p>16 = mxr4r5 (<code class="docutils literal notranslate"><span class="pre">ER_MIXEDREV</span></code>)</p>
+<p>Mixed rev4-rev5 input logic (<code class="docutils literal notranslate"><span class="pre">*do</span></code>, <code class="docutils literal notranslate"><span class="pre">*if</span></code> , <code class="docutils literal notranslate"><span class="pre">*go</span></code> , <code class="docutils literal notranslate"><span class="pre">*if-go</span></code>)</p>
+<ul class="simple">
+<li><p>1 = rev5 found (<code class="docutils literal notranslate"><span class="pre">*do</span></code>, <code class="docutils literal notranslate"><span class="pre">*fi-then-*endif</span></code>)</p></li>
+<li><p>2 = rev4 found (<code class="docutils literal notranslate"><span class="pre">*go</span></code>, <code class="docutils literal notranslate"><span class="pre">:xxx</span></code> , <code class="docutils literal notranslate"><span class="pre">*if</span></code>, …., <code class="docutils literal notranslate"><span class="pre">:xxx</span></code>)</p></li>
 <li><p>3 = warning printed. do not issue any more.</p></li>
 </ul>
 </li>
-<li><p>17 = mshkey    (ER_MESHING)
-CPU intensive meshing etc.
-This will cause “nertim (11)” to be set to -1 for “notes”, 1 for
-“warnings”,and 0 for “errors”.
-Checking of this key is done in “anserr”.</p>
-<ul>
+<li><p>17 = mshkey (<code class="docutils literal notranslate"><span class="pre">ER_MESHING</span></code>)</p>
+<p>CPU intensive meshing etc.
+This will cause <code class="docutils literal notranslate"><span class="pre">nertim</span> <span class="pre">(11)</span></code> to be set to <code class="docutils literal notranslate"><span class="pre">-1</span></code> for “notes”, <code class="docutils literal notranslate"><span class="pre">1</span></code> for
+“warnings”,and <code class="docutils literal notranslate"><span class="pre">0</span></code> for “errors”.
+Checking of this key is done in <code class="docutils literal notranslate"><span class="pre">anserr</span></code>.</p>
+<ul class="simple">
 <li><p>0 = not meshing or cpu intensive</p></li>
 <li><p>1 = yes, meshing or cpu intensive</p></li>
 </ul>
 </li>
-<li><p>18 = syerro            (18)
-systop error code. read by anserr if set.</p></li>
-<li><p>19 = opterr (ER_OPTLOOPING)</p>
-<ul>
+<li><p>18 = syerro (18)</p>
+<p>Systop error code. read by anserr if set.</p>
+</li>
+<li><p>19 = opterr (<code class="docutils literal notranslate"><span class="pre">ER_OPTLOOPING</span></code>)</p>
+<ul class="simple">
 <li><p>0 = no error in main ansys during opt looping</p></li>
 <li><p>1 = an error has happened in main ansys during opt looping</p></li>
 </ul>
 </li>
-<li><p>20 = flowrn            (20)
-Flag used by “floqa” as to list <code class="docutils literal notranslate"><span class="pre">floqa.ans</span></code>.</p>
-<ul>
+<li><p>20 = flowrn (20)</p>
+<p>Flag used by “floqa” as to list <code class="docutils literal notranslate"><span class="pre">floqa.ans</span></code>.</p>
+<ul class="simple">
 <li><p>0 = list <code class="docutils literal notranslate"><span class="pre">floqa.ans</span></code></p></li>
 <li><p>1 = <code class="docutils literal notranslate"><span class="pre">floqa.ans</span></code> has been listed. do not list again.</p></li>
 </ul>
 </li>
-<li><p>22 = noreport (22)
-Used in GUI for turning off errors due to strsub calls.</p>
-<ul>
+<li><p>22 = noreport (22)</p>
+<p>Used in GUI for turning off errors due to strsub calls.</p>
+<ul class="simple">
 <li><p>0 = process errors as usual</p></li>
-<li><p>1 = do NOT report errors</p></li>
+<li><p>1 = do <strong>NOT</strong> report errors</p></li>
 </ul>
 </li>
-<li><p>23 = pdserr (ER_PDSLOOPING)</p>
-<ul>
+<li><p>23 = pdserr (<code class="docutils literal notranslate"><span class="pre">ER_PDSLOOPING</span></code>)</p>
+<ul class="simple">
 <li><p>0 = no error in main ansys during pds looping</p></li>
 <li><p>1 = an error has happened in main ansys during pds looping</p></li>
 </ul>
 </li>
-<li><p>24 = mxpcmdw (24)
-Number of messages written to file.err for any command</p>
-<ul>
+<li><p>24 = mxpcmdw (24)</p>
+<p>Number of messages written to file.err for any command</p>
+<ul class="simple">
 <li><p>0 = write all errors to file.err</p></li>
 <li><p>1 = only write displayed errors to file.err</p></li>
 </ul>
 </li>
-<li><p>25 = kystop
-No information is provided.</p></li>
-<li><p>26 = icloads (26)
-K key to forbid the <code class="docutils literal notranslate"><span class="pre">iclist</span></code> command from listing solution data
+<li><p>25 = kystop</p>
+<p>No information is provided.</p>
+</li>
+<li><p>26 = icloads (26)</p>
+<p>Key to forbid the <code class="docutils literal notranslate"><span class="pre">iclist</span></code> command from listing solution data
 instead of the input data.</p>
-<ul>
+<ul class="simple">
 <li><p>0 = <code class="docutils literal notranslate"><span class="pre">iclist</span></code> is OK</p></li>
 <li><p>1 = do not permit <code class="docutils literal notranslate"><span class="pre">iclist</span></code></p></li>
 </ul>
 </li>
-<li><p>27 = ifkey   error     (27)
-key on whether or not to abort during <code class="docutils literal notranslate"><span class="pre">/input</span></code> on error.</p>
-<ul>
+<li><p>27 = ifkey error (27)</p>
+<p>key on whether or not to abort during <a class="reference internal" href="../session/_autosummary/ansys.mapdl.core.Mapdl.input.html#ansys.mapdl.core.Mapdl.input" title="ansys.mapdl.core.Mapdl.input"><code class="xref py py-meth docutils literal notranslate"><span class="pre">/input</span></code></a> on error.</p>
+<ul class="simple">
 <li><p>0 = do not abort</p></li>
 <li><p>1 = abort</p></li>
 </ul>
 </li>
-<li><p>28 = intrupt  (ER_INTERRUPT)
-Interrupt button, so executable returns no error.</p></li>
+<li><p>28 = intrupt (<code class="docutils literal notranslate"><span class="pre">ER_INTERRUPT</span></code>)</p>
+<p>Interrupt button, so executable returns no error.</p>
+</li>
 <li><p>spare - spare integer variables</p></li>
 </ul>
 </dd>
 <dt><strong>pname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the variable where the queried value is stored.</p>
 </dd>
-<dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <code class="docutils literal notranslate"><span class="pre">Mapdl.run</span></code>.</p>
+<dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.run</span></code></a>.</p>
 </dd>
 </dl>
 </dd>

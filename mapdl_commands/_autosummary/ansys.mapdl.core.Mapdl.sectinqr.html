@@ -934,20 +934,19 @@ should be 0 for key=11, <code class="docutils literal notranslate"><span class="
 <code class="docutils literal notranslate"><span class="pre">DB_NUMSELECTED</span></code>, <code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code>.</p>
 </dd>
-<dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Information flag.
-* DB_SELECTED - return select status</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>0 - section id table is undefined.</p></li>
+<dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Information flag.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_SELECTED</span></code> - return select status</p>
+<ul>
+<li><p>0 - ection id table is undefined.</p></li>
 <li><p>-1 - section id table is unselected.</p></li>
 <li><p>1 - section id table is selected</p></li>
 </ul>
-</div></blockquote>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">DB_NUMDEFINED</span></code>  - return number of defined section id tables</p></li>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_NUMDEFINED</span></code> - return number of defined section id tables</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">DB_NUMSELECTED</span></code> - return number of selected section id tables</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED</span></code>  - return highest section id table defined</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code>  - return maximum record length (dp words)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED</span></code> - return highest section id table defined</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code> - return maximum record length (dp words)</p></li>
 <li><p>2 - return length (dp words)</p></li>
 <li><p>3 - return layer number (for cross reference files return number
 of entities)</p></li>
@@ -957,24 +956,30 @@ of entities)</p></li>
 <li><p>11 - return void percent (integer)</p></li>
 <li><p>16 - return location of next record (this increments the next
 record count)</p></li>
-<li><p>18 - return type of file.
-* 0 - integer
-* 1 - double precision
-* 2 - real
-* 3 - complex
-* 4 - character*8
-* 7 - index</p></li>
-<li><p>19 - return virtual type of file.
-* 0 - fixed length (4.4 form)
-* 1 - indexed variable length (layer data)
-* 2 - xref data tables
-* 3 - bitmap data (for 32 data item packed records)
-* 4 - data tables (three dimensional arrays)</p></li>
+<li><p>18 - return type of file.</p>
+<ul>
+<li><p>0 - integer</p></li>
+<li><p>1 - double precision</p></li>
+<li><p>2 - real</p></li>
+<li><p>3 - complex</p></li>
+<li><p>4 - character*8</p></li>
+<li><p>7 - index</p></li>
+</ul>
+</li>
+<li><p>19 - return virtual type of file.</p>
+<ul>
+<li><p>0 - fixed length (4.4 form)</p></li>
+<li><p>1 - indexed variable length (layer data)</p></li>
+<li><p>2 - xref data tables</p></li>
+<li><p>3 - bitmap data (for 32 data item packed records)</p></li>
+<li><p>4 - data tables (three dimensional arrays)</p></li>
+</ul>
+</li>
 </ul>
 </dd>
 <dt><strong>pname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the variable where the queried value is stored.</p>
 </dd>
-<dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <code class="docutils literal notranslate"><span class="pre">Mapdl.run</span></code>.</p>
+<dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.run</span></code></a>.</p>
 </dd>
 </dl>
 </dd>

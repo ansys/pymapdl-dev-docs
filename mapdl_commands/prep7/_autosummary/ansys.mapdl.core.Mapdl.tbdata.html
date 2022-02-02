@@ -889,25 +889,28 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>stloc</strong></dt><dd><p>Starting location in table for entering data.  For example, if
-STLOC = 1, data input in the C1 field applies to the first table
-constant, C2 applies to the second table constant, etc.  If
-STLOC=5, data input in the C1 field applies to the fifth table
+<code class="docutils literal notranslate"><span class="pre">STLOC</span></code> = 1, data input in the C1 field applies to the first table
+constant, C2 applies to the second table constant, etc.  If <code class="docutils literal notranslate"><span class="pre">STLOC</span></code> = 5,
+data input in the C1 field applies to the fifth table
 constant, etc.  Defaults to the last location filled + 1.  The last
-location is reset to 1 with each TB or TBTEMP command.</p>
+location is reset to 1 with each <a class="reference internal" href="ansys.mapdl.core.Mapdl.tb.html#ansys.mapdl.core.Mapdl.tb" title="ansys.mapdl.core.Mapdl.tb"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TB</span></code></a> or
+<a class="reference internal" href="ansys.mapdl.core.Mapdl.tbtemp.html#ansys.mapdl.core.Mapdl.tbtemp" title="ansys.mapdl.core.Mapdl.tbtemp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TBTEMP</span></code></a> command.</p>
 </dd>
-<dt><strong>c1, c2, c3, … , c6</strong></dt><dd><p>Data values assigned to six locations starting with STLOC.  If a
+<dt><strong>c1, c2, c3, … , c6</strong></dt><dd><p>Data values assigned to six locations starting with <code class="docutils literal notranslate"><span class="pre">STLOC</span></code>.  If a
 value is already in this location, it is redefined.  A blank value
 leaves the existing value unchanged.</p>
+</dd>
+<dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.run</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>Defines data for the table specified on the last TB command at the
-temperature specified on the last TBTEMP command (if applicable). The
-type of data table specified in the last TB command determines the
-number of data values needed in TBDATA. Data values are linearly
-interpolated for temperatures that fall between user defined TBTEMP
+<p>Defines data for the table specified on the last <a class="reference internal" href="ansys.mapdl.core.Mapdl.tb.html#ansys.mapdl.core.Mapdl.tb" title="ansys.mapdl.core.Mapdl.tb"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TB</span></code></a> command at the
+temperature specified on the last <a class="reference internal" href="ansys.mapdl.core.Mapdl.tbtemp.html#ansys.mapdl.core.Mapdl.tbtemp" title="ansys.mapdl.core.Mapdl.tbtemp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TBTEMP</span></code></a>
+command (if applicable). The type of data table specified in the last <a class="reference internal" href="ansys.mapdl.core.Mapdl.tb.html#ansys.mapdl.core.Mapdl.tb" title="ansys.mapdl.core.Mapdl.tb"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TB</span></code></a> command determines the
+number of data values needed in <code class="docutils literal notranslate"><span class="pre">TBDATA</span></code>. Data values are linearly
+interpolated for temperatures that fall between user defined <a class="reference internal" href="ansys.mapdl.core.Mapdl.tbtemp.html#ansys.mapdl.core.Mapdl.tbtemp" title="ansys.mapdl.core.Mapdl.tbtemp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TBTEMP</span></code></a>
 values. See Material Models in the Material Reference for the number of
 data values required for different material behavior options.</p>
 <p>This command is also valid in SOLUTION.</p>

@@ -890,62 +890,178 @@ input.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
 <dt><strong>lab</strong></dt><dd><p>Material model data table type:</p>
-<p>AFDM - Acoustic frequency-dependent material.</p>
-<p>AHYPER - Anisotropic hyperelasticity.</p>
-<p>ANEL - Anisotropic elasticity.</p>
-<p>ANISO - Anisotropic plasticity.</p>
-<p>BB - Bergstrom-Boyce.</p>
-<p>BH - Magnetic field data.</p>
-<p>BISO - Bilinear isotropic hardening using von Mises or Hill plasticity.</p>
-<p>BKIN - Bilinear kinematic hardening using von Mises or Hill plasticity.</p>
-<p>CAST - Cast iron.</p>
-<p>CDM - Mullins effect (for isotropic hyperelasticity models).</p>
-<p>CGCR - Fracture criterion for crack-growth simulation (CGROW).</p>
-<p>CHABOCHE - Chaboche nonlinear kinematic hardening using von Mises or Hill plasticity.</p>
-<p>COMP - Composite damage (explicit dynamic analysis).</p>
-<p>CONCR - Concrete element data.</p>
-<dl class="simple">
-<dt>CREEP - Creep. Pure creep, creep with isotropic hardening plasticity, or creep with</dt><dd><p>kinematic hardening plasticity using both von Mises or Hill
+<dl>
+<dt>AFDM</dt><dd><p>Acoustic frequency-dependent material.</p>
+</dd>
+<dt>AHYPER</dt><dd><p>Anisotropic hyperelasticity.</p>
+</dd>
+<dt>ANEL</dt><dd><p>Anisotropic elasticity.</p>
+</dd>
+<dt>ANISO</dt><dd><p>Anisotropic plasticity.</p>
+</dd>
+<dt>BB</dt><dd><p>Bergstrom-Boyce.</p>
+</dd>
+<dt>BH</dt><dd><p>Magnetic field data.</p>
+</dd>
+<dt>BISO</dt><dd><p>Bilinear isotropic hardening using von Mises or Hill plasticity.</p>
+</dd>
+<dt>BKIN</dt><dd><p>Bilinear kinematic hardening using von Mises or Hill plasticity.</p>
+</dd>
+<dt>CAST</dt><dd><p>Cast iron.</p>
+</dd>
+<dt>CDM</dt><dd><p>Mullins effect (for isotropic hyperelasticity models).</p>
+</dd>
+<dt>CGCR</dt><dd><p>Fracture criterion for crack-growth simulation (<code class="docutils literal notranslate"><span class="pre">CGROW</span></code>).</p>
+</dd>
+<dt>CHABOCHE</dt><dd><p>Chaboche nonlinear kinematic hardening using von Mises or Hill plasticity.</p>
+</dd>
+<dt>COMP</dt><dd><p>Composite damage (explicit dynamic analysis).</p>
+</dd>
+<dt>CONCR</dt><dd><p>Concrete element data.</p>
+</dd>
+<dt>CREEP</dt><dd><p>Creep. Pure creep, creep with isotropic hardening plasticity, or creep with
+kinematic hardening plasticity using both von Mises or Hill
 potentials.</p>
 </dd>
-</dl>
-<p>CTE - Secant coefficient of thermal expansion.</p>
-<p>CZM - Cohesive zone.</p>
-<p>DISCRETE - Explicit spring-damper (discrete).</p>
-<p>DMGE - Damage evolution law.</p>
-<p>DMGI - Damage initiation criteria.</p>
-<p>DP - Classic Drucker-Prager plasticity.</p>
-<p>DPER - Anisotropic electric permittivity.</p>
-<dl class="simple">
-<dt>EDP - Extended Drucker-Prager (for granular materials such as rock, concrete, soil,</dt><dd><p>ceramics and other pressure-dependent materials).</p>
+<dt>CTE</dt><dd><p>Secant coefficient of thermal expansion.</p>
 </dd>
-<dt>ELASTIC - Elasticity. For full harmonic analyses, properties can be defined as frequency-</dt><dd><p>or temperature-dependent (TBFIELD).</p>
+<dt>CZM</dt><dd><p>Cohesive zone.</p>
 </dd>
-</dl>
-<p>EOS - Equation of state (explicit dynamic analysis).</p>
-<p>EVISC - Viscoelastic element data (explicit dynamic analysis).</p>
-<p>EXPE - Experimental data.</p>
-<p>FCON - Fluid conductance data (explicit dynamic analysis).</p>
-<p>FCLI - Material strength limits for calculating failure criteria.</p>
-<p>FLUID - Fluid.</p>
-<p>FOAM - Foam (explicit dynamic analysis).</p>
-<p>FRIC - Coefficient of friction based on Coulomb’s Law or user-defined friction.</p>
-<p>GASKET - Gasket.</p>
-<p>GCAP - Geological cap (explicit dynamic analysis).</p>
-<p>GURSON - Gurson pressure-dependent plasticity for porous metals.</p>
-<p>HFLM - Film coefficient data.</p>
-<dl class="simple">
-<dt>HILL - Hill anisotropy. When combined with other material options, simulates</dt><dd><p>plasticity, viscoplasticity, and creep – all with the Hill
+<dt>DISCRETE</dt><dd><p>Explicit spring-damper (discrete).</p>
+</dd>
+<dt>DMGE</dt><dd><p>Damage evolution law.</p>
+</dd>
+<dt>DMGI</dt><dd><p>Damage initiation criteria.</p>
+</dd>
+<dt>DP</dt><dd><p>Classic Drucker-Prager plasticity.</p>
+</dd>
+<dt>DPER</dt><dd><p>Anisotropic electric permittivity.</p>
+</dd>
+<dt>EDP</dt><dd><p>Extended Drucker-Prager (for granular materials such as rock, concrete, soil,
+ceramics and other pressure-dependent materials).</p>
+</dd>
+<dt>ELASTIC</dt><dd><p>Elasticity. For full harmonic analyses, properties can be defined as frequency-
+or temperature-dependent (<a class="reference internal" href="ansys.mapdl.core.Mapdl.tbfield.html#ansys.mapdl.core.Mapdl.tbfield" title="ansys.mapdl.core.Mapdl.tbfield"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TBFIELD</span></code></a>).</p>
+</dd>
+<dt>EOS</dt><dd><p>Equation of state (explicit dynamic analysis).</p>
+</dd>
+<dt>EVISC</dt><dd><p>Viscoelastic element data (explicit dynamic analysis).</p>
+</dd>
+<dt>EXPE</dt><dd><p>Experimental data.</p>
+</dd>
+<dt>FCON</dt><dd><p>Fluid conductance data (explicit dynamic analysis).</p>
+</dd>
+<dt>FCLI</dt><dd><p>Material strength limits for calculating failure criteria.</p>
+</dd>
+<dt>FLUID</dt><dd><p>Fluid.</p>
+</dd>
+<dt>FOAM</dt><dd><p>Foam (explicit dynamic analysis).</p>
+</dd>
+<dt>FRIC</dt><dd><p>Coefficient of friction based on Coulomb’s Law or user-defined friction.</p>
+</dd>
+<dt>GASKET</dt><dd><p>Gasket.</p>
+</dd>
+<dt>GCAP</dt><dd><p>Geological cap (explicit dynamic analysis).</p>
+</dd>
+<dt>GURSON</dt><dd><p>Gurson pressure-dependent plasticity for porous metals.</p>
+</dd>
+<dt>HFLM</dt><dd><p>Film coefficient data.</p>
+</dd>
+<dt>HILL</dt><dd><p>Hill anisotropy. When combined with other material options, simulates
+plasticity, viscoplasticity, and creep – all with the Hill
 potential.</p>
 </dd>
-</dl>
-<p>HONEY - Honeycomb (explicit dynamic analysis).</p>
-<dl class="simple">
-<dt>HYPER - Hyperelasticity material models (Arruda-Boyce, Blatz-Ko, Extended Tube, Gent,</dt><dd><p>Mooney-Rivlin [default], Neo-Hookean, Ogden, Ogden Foam,
+<dt>HONEY</dt><dd><p>Honeycomb (explicit dynamic analysis).</p>
+</dd>
+<dt>HYPER</dt><dd><p>Hyperelasticity material models (Arruda-Boyce, Blatz-Ko, Extended Tube, Gent,
+Mooney-Rivlin [default], Neo-Hookean, Ogden, Ogden Foam,
 Polynomial Form, Response Function, Yeoh, and user-
 defined).</p>
 </dd>
+<dt>INTER</dt><dd><p>Contact interaction.</p>
+</dd>
+<dt>JOIN</dt><dd><p>Joint (linear and nonlinear elastic stiffness, linear and nonlinear damping, and frictional behavior).</p>
+</dd>
+<dt>JROCK</dt><dd><p>Jointed rock.</p>
+</dd>
+<dt>MC</dt><dd><p>Mohr-Coulomb.</p>
+</dd>
+<dt>MELAS</dt><dd><p>Multilinear elasticity .</p>
+</dd>
+<dt>MIGR</dt><dd><p>Migration.</p>
+</dd>
+<dt>MPLANE</dt><dd><p>Microplane.</p>
+</dd>
+<dt>NLISO</dt><dd><p>Voce isotropic hardening law (or power law) for modeling nonlinear isotropic
+hardening using von Mises or Hill plasticity.</p>
+</dd>
+<dt>PELAS</dt><dd><p>Porous elasticity.</p>
+</dd>
+<dt>PERF</dt><dd><p>Perforated material for acoustics; equivalent fluid model of perforated media,
+poroelastic material model, and transfer admittance matrix.</p>
+</dd>
+<dt>PIEZ</dt><dd><p>Piezoelectric matrix.</p>
+</dd>
+<dt>PLASTIC</dt><dd><p>Nonlinear plasticity.</p>
+</dd>
+<dt>PM</dt><dd><p>Porous media. Coupled pore-fluid diffusion and structural model of porous media.</p>
+</dd>
+<dt>PRONY</dt><dd><p>Prony series constants for viscoelastic materials.</p>
+</dd>
+<dt>PZRS</dt><dd><p>Piezoresistivity.</p>
+</dd>
+<dt>RATE</dt><dd><p>Rate-dependent plasticity (viscoplasticity) when combined with the <code class="docutils literal notranslate"><span class="pre">BISO</span></code>, <code class="docutils literal notranslate"><span class="pre">NLISO</span></code> or
+<code class="docutils literal notranslate"><span class="pre">PLASTIC</span></code> material options, or rate-dependent anisotropic plasticity (anisotropic viscoplasticity)
+when combined with the HILL and <code class="docutils literal notranslate"><span class="pre">BISO</span></code>, <code class="docutils literal notranslate"><span class="pre">NLISO</span></code> or <code class="docutils literal notranslate"><span class="pre">PLASTIC</span></code> material options.</p>
+<p>The exponential visco-hardening option includes an explicit function for directly defining
+static yield stresses of materials.
+The Anand unified plasticity option requires no combination with other material models.</p>
+</dd>
+<dt>SDAMP</dt><dd><p>Material damping coefficients.</p>
+</dd>
+<dt>SHIFT</dt><dd><p>Shift function for viscoelastic materials.</p>
+</dd>
+<dt>SMA</dt><dd><p>Shape memory alloy for simulating hysteresis superelastic behavior with no performance degradation.
+Plane stress is not supported.</p>
+</dd>
+<dt>SOIL</dt><dd><p>Soil models.</p>
+</dd>
+<dt>STATE</dt><dd><p>User-defined state variables. Valid with <code class="docutils literal notranslate"><span class="pre">TB,USER</span></code> and used with either the UserMat
+or UserMatTh subroutine. Also valid with <code class="docutils literal notranslate"><span class="pre">TB,CREEP</span></code> (when <code class="docutils literal notranslate"><span class="pre">TBOPT</span></code> = 100) and used with
+the UserCreep subroutine.</p>
+</dd>
+<dt>SWELL</dt><dd><p>Swelling strain function.</p>
+</dd>
+<dt>TNM</dt><dd><p>Three-network model for viscoplastic materials.</p>
+</dd>
+<dt>THERM</dt><dd><p>Thermal properties.</p>
+</dd>
+<dt>USER</dt><dd><p>User-defined material model (general-purpose except for incompressible material
+models) or thermal material model.</p>
+</dd>
+<dt>WEAR</dt><dd><p>Contact surface wear.</p>
+</dd>
+<dt>XTAL</dt><dd><p>Crystal plasticity for elasto-viscoplastic crystalline materials.</p>
+</dd>
 </dl>
+</dd>
+<dt><strong>MATID</strong></dt><dd><p>Material reference identification number. Valid value is any number <code class="docutils literal notranslate"><span class="pre">n</span></code>, where 0 &lt; <code class="docutils literal notranslate"><span class="pre">n</span></code> &lt; 100,000. Default
+= 1.</p>
+</dd>
+<dt><strong>NTEMP</strong></dt><dd><p>The number of temperatures for which data will be provided (if applicable). Specify temperatures
+via the <a class="reference internal" href="ansys.mapdl.core.Mapdl.tbtemp.html#ansys.mapdl.core.Mapdl.tbtemp" title="ansys.mapdl.core.Mapdl.tbtemp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TBTEMP</span></code></a> command.</p>
+</dd>
+<dt><strong>NPTS</strong></dt><dd><p>For most labels where <code class="docutils literal notranslate"><span class="pre">NPTS</span></code> is defined, the number of data points to be specified for a given
+temperature. Define data points via the <a class="reference internal" href="ansys.mapdl.core.Mapdl.tbdata.html#ansys.mapdl.core.Mapdl.tbdata" title="ansys.mapdl.core.Mapdl.tbdata"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TBDATA</span></code></a> or <a class="reference internal" href="ansys.mapdl.core.Mapdl.tbpt.html#ansys.mapdl.core.Mapdl.tbpt" title="ansys.mapdl.core.Mapdl.tbpt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TBPT</span></code></a>
+commands.</p>
+</dd>
+<dt><strong>FuncName</strong></dt><dd><p>The name of the function to be used (entered as %tabname%, where tabname is the name of
+the table created by the Function Tool). Valid only when Lab = <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> (joint element material) and
+nonlinear stiffness or damping are specified on the <code class="docutils literal notranslate"><span class="pre">TBOPT</span></code> field (see “JOIN – Joint Element Specifications”).
+The function must be predefined via the Function Tool. To learn more about how
+to create a function, see Using the Function Tool in the Basic Analysis Guide</p>
+</dd>
+<dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.run</span></code></a>.</p>
 </dd>
 </dl>
 </dd>

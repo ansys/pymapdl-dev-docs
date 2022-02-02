@@ -902,12 +902,14 @@
 <dt><strong>value</strong></dt><dd><p>The field value to be referenced (use this command multiple times
 to enter values of different field variables).</p>
 </dd>
+<dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.run</span></code></a>.</p>
+</dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
 <p>Define your data tables as field-variable-dependent (via the
-appropriate TB command shown below), then issue the TBFIELD command to
+appropriate <a class="reference internal" href="ansys.mapdl.core.Mapdl.tb.html#ansys.mapdl.core.Mapdl.tb" title="ansys.mapdl.core.Mapdl.tb"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TB</span></code></a> command shown below), then issue the TBFIELD command to
 define the field values.</p>
 <p>Define data values in ascending order for all field quantities. If a
 field value is to be held constant, define it only once; subsequent

@@ -44,6 +44,7 @@
     <script src="../../../_static/copybutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="mpamod" href="ansys.mapdl.core.Mapdl.mpamod.html" />
@@ -923,67 +924,104 @@ temperature.</p>
 “Material Properties” in the input table for each element type in
 the Element Reference.  See Linear Material Properties in the
 Material Reference for more complete property label definitions:</p>
-<p>ALPD - Mass matrix multiplier for damping.</p>
-<p>ALPX - Secant coefficients of thermal expansion (also ALPY, ALPZ).</p>
-<p>BETD - Stiffness matrix multiplier for damping.</p>
-<p>Note: If used in an explicit dynamic analysis, the value corresponds to the percentage of damping in the high
+<dl>
+<dt>ALPD</dt><dd><p>Mass matrix multiplier for damping.</p>
+</dd>
+<dt>ALPX</dt><dd><p>Secant coefficients of thermal expansion (also <code class="docutils literal notranslate"><span class="pre">ALPY</span></code>, <code class="docutils literal notranslate"><span class="pre">ALPZ</span></code>).</p>
+</dd>
+<dt>BETD</dt><dd><p>Stiffness matrix multiplier for damping.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If used in an explicit dynamic analysis, the value corresponds to the percentage of damping in the high
 frequency domain. For example, 0.1 roughly corresponds to 10% damping in the high frequency domain.</p>
-<p>BETX - Coefficient of diffusion expansion (also BETY, BETZ)</p>
-<p>BVIS - Bulk viscosity</p>
-<p>C - Specific heat</p>
-<p>CREF - Reference concentration (may not be temperature dependent)</p>
-<p>CSAT - Saturated concentration</p>
-<p>CTEX - Instantaneous coefficients of thermal expansion (also CTEY, CTEZ)</p>
-<p>CVH - Heat coefficient at constant volume per unit of mass</p>
-<p>DENS - Mass density.</p>
-<dl class="simple">
-<dt>DMPR - Constant structural damping coefficient in full harmonic analysis or damping ratio in mode-superposition</dt><dd><p>analysis.</p>
+</div>
 </dd>
-</dl>
-<p>DXX - Diffusivity coefficients (also DYY, DZZ)</p>
-<p>EMIS - Emissivity.</p>
-<p>ENTH - Enthalpy.</p>
-<p>EX - Elastic moduli (also EY, EZ)</p>
-<p>GXY - Shear moduli (also GYZ, GXZ)</p>
-<p>HF - Convection or film coefficient</p>
-<p>KXX - Thermal conductivities (also KYY, KZZ)</p>
-<p>LSST - Electric loss tangent</p>
-<p>LSSM - Magnetic loss tangent</p>
-<p>MGXX - Magnetic coercive forces (also MGYY, MGZZ)</p>
-<p>MURX - Magnetic relative permeabilities (also MURY, MURZ)</p>
-<p>MU - Coefficient of friction</p>
-<dl class="simple">
-<dt>NUXY - Minor Poisson’s ratios (also NUYZ, NUXZ) (NUXY = νyx, as described in Stress-Strain Relationships in the</dt><dd><p>Mechanical APDL Theory Reference)</p>
+<dt>BETX</dt><dd><p>Coefficient of diffusion expansion (also <code class="docutils literal notranslate"><span class="pre">BETY</span></code>, <code class="docutils literal notranslate"><span class="pre">BETZ</span></code>)</p>
 </dd>
-</dl>
-<p>PERX - Electric relative permittivities (also PERY, PERZ)</p>
-<p>Note:  If you enter permittivity values less than 1 for SOLID5, PLANE13, or SOLID98, the program interprets
-the values as absolute permittivity. Values input for PLANE223, SOLID226, or SOLID227 are always interpreted as
+<dt>BVIS</dt><dd><p>Bulk viscosity</p>
+</dd>
+<dt>C</dt><dd><p>Specific heat</p>
+</dd>
+<dt>CREF</dt><dd><p>Reference concentration (may not be temperature dependent)</p>
+</dd>
+<dt>CSAT</dt><dd><p>Saturated concentration</p>
+</dd>
+<dt>CTEX</dt><dd><p>Instantaneous coefficients of thermal expansion (also <code class="docutils literal notranslate"><span class="pre">CTEY</span></code>, <code class="docutils literal notranslate"><span class="pre">CTEZ</span></code>)</p>
+</dd>
+<dt>CVH</dt><dd><p>Heat coefficient at constant volume per unit of mass</p>
+</dd>
+<dt>DENS</dt><dd><p>Mass density.</p>
+</dd>
+<dt>DMPR</dt><dd><p>Constant structural damping coefficient in full harmonic analysis or damping ratio in mode-superposition
+analysis.</p>
+</dd>
+<dt>DXX</dt><dd><p>Diffusivity coefficients (also <code class="docutils literal notranslate"><span class="pre">DYY</span></code>, <code class="docutils literal notranslate"><span class="pre">DZZ</span></code>)</p>
+</dd>
+<dt>EMIS</dt><dd><p>Emissivity.</p>
+</dd>
+<dt>ENTH</dt><dd><p>Enthalpy.</p>
+</dd>
+<dt>EX</dt><dd><p>Elastic moduli (also <code class="docutils literal notranslate"><span class="pre">EY</span></code>, <code class="docutils literal notranslate"><span class="pre">EZ</span></code>)</p>
+</dd>
+<dt>GXY</dt><dd><p>Shear moduli (also <code class="docutils literal notranslate"><span class="pre">GYZ</span></code>, <code class="docutils literal notranslate"><span class="pre">GXZ</span></code>)</p>
+</dd>
+<dt>HF</dt><dd><p>Convection or film coefficient</p>
+</dd>
+<dt>KXX</dt><dd><p>Thermal conductivities (also <code class="docutils literal notranslate"><span class="pre">KYY</span></code>, <code class="docutils literal notranslate"><span class="pre">KZZ</span></code>)</p>
+</dd>
+<dt>LSST</dt><dd><p>Electric loss tangent</p>
+</dd>
+<dt>LSSM</dt><dd><p>Magnetic loss tangent</p>
+</dd>
+<dt>MGXX</dt><dd><p>Magnetic coercive forces (also <code class="docutils literal notranslate"><span class="pre">MGYY</span></code>, <code class="docutils literal notranslate"><span class="pre">MGZZ</span></code>)</p>
+</dd>
+<dt>MURX</dt><dd><p>Magnetic relative permeabilities (also <code class="docutils literal notranslate"><span class="pre">MURY</span></code>, <code class="docutils literal notranslate"><span class="pre">MURZ</span></code>)</p>
+</dd>
+<dt>MU</dt><dd><p>Coefficient of friction</p>
+</dd>
+<dt>NUXY</dt><dd><p>Minor Poisson’s ratios (also <code class="docutils literal notranslate"><span class="pre">NUYZ</span></code>, <code class="docutils literal notranslate"><span class="pre">NUXZ</span></code>) (<code class="docutils literal notranslate"><span class="pre">NUXY</span></code> = νyx, as described in Stress-Strain Relationships in the
+Mechanical APDL Theory Reference)</p>
+</dd>
+<dt>PERX</dt><dd><p>Electric relative permittivities (also <code class="docutils literal notranslate"><span class="pre">PERY</span></code>, <code class="docutils literal notranslate"><span class="pre">PERZ</span></code>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you enter permittivity values less than 1 for <code class="docutils literal notranslate"><span class="pre">SOLID5</span></code>, <code class="docutils literal notranslate"><span class="pre">PLANE13</span></code>, or <code class="docutils literal notranslate"><span class="pre">SOLID98</span></code>, the program interprets
+the values as absolute permittivity. Values input for <code class="docutils literal notranslate"><span class="pre">PLANE223</span></code>, <code class="docutils literal notranslate"><span class="pre">SOLID226</span></code>, or <code class="docutils literal notranslate"><span class="pre">SOLID227</span></code> are always interpreted as
 relative permittivity.</p>
-<dl class="simple">
-<dt>PRXY - Major Poisson’s ratios (also PRYZ, PRXZ) (PRXY = νxy, as described in Stress-</dt><dd><p>Strain Relationships in the Mechanical APDL Theory
+</div>
+</dd>
+<dt>PRXY</dt><dd><p>Major Poisson’s ratios (also <code class="docutils literal notranslate"><span class="pre">PRYZ</span></code>, <code class="docutils literal notranslate"><span class="pre">PRXZ</span></code>) (<code class="docutils literal notranslate"><span class="pre">PRXY</span></code> = νxy, as described in Stress-
+Strain Relationships in the Mechanical APDL Theory
 Reference)</p>
 </dd>
-<dt>QRATE - Heat generation rate for thermal mass element MASS71. Fraction of plastic work</dt><dd><p>converted to heat (Taylor-Quinney coefficient) for coupled-
-field elements PLANE223, SOLID226, and SOLID227.</p>
+<dt>QRATE</dt><dd><p>Heat generation rate for thermal mass element MASS71. Fraction of plastic work
+converted to heat (Taylor-Quinney coefficient) for coupled-
+field elements <code class="docutils literal notranslate"><span class="pre">PLANE223</span></code>, <code class="docutils literal notranslate"><span class="pre">SOLID226</span></code>, and <code class="docutils literal notranslate"><span class="pre">SOLID227</span></code>.</p>
 </dd>
-<dt>REFT - Reference temperature.  Must be defined as a constant; C1 through C4 are</dt><dd><p>ignored.</p>
+<dt>REFT</dt><dd><p>Reference temperature.  Must be defined as a constant; <code class="docutils literal notranslate"><span class="pre">C1</span></code> through <code class="docutils literal notranslate"><span class="pre">C4</span></code> are
+ignored.</p>
+</dd>
+<dt>RH</dt><dd><p>Hall Coefficient.</p>
+</dd>
+<dt>RSVX</dt><dd><p>Electrical resistivities (also <code class="docutils literal notranslate"><span class="pre">RSVY</span></code>, <code class="docutils literal notranslate"><span class="pre">RSVZ</span></code>).</p>
+</dd>
+<dt>SBKX</dt><dd><p>Seebeck coefficients (also <code class="docutils literal notranslate"><span class="pre">SBKY</span></code>, <code class="docutils literal notranslate"><span class="pre">SBKZ</span></code>).</p>
+</dd>
+<dt>SONC</dt><dd><p>Sonic velocity.</p>
+</dd>
+<dt>THSX</dt><dd><p>Thermal strain (also <code class="docutils literal notranslate"><span class="pre">THSY</span></code>, <code class="docutils literal notranslate"><span class="pre">THSZ</span></code>).</p>
+</dd>
+<dt>VISC</dt><dd><p>Viscosity.</p>
 </dd>
 </dl>
-<p>RH - Hall Coefficient.</p>
-<p>RSVX - Electrical resistivities (also RSVY, RSVZ).</p>
-<p>SBKX - Seebeck coefficients (also SBKY, SBKZ).</p>
-<p>SONC - Sonic velocity.</p>
-<p>THSX - Thermal strain (also THSY, THSZ).</p>
-<p>VISC - Viscosity.</p>
 </dd>
 <dt><strong>mat</strong></dt><dd><p>Material reference number to be associated with the elements
 (defaults to the current MAT setting [MAT]).</p>
 </dd>
 <dt><strong>c0</strong></dt><dd><p>Material property value, or if a property-versus-temperature
 polynomial is being defined, the constant term in the polynomial.
-C0 can also be a table name (%tabname%); if C0 is a table name, C1
-through C4 are ignored.</p>
+<code class="docutils literal notranslate"><span class="pre">C0</span></code> can also be a table name (<code class="docutils literal notranslate"><span class="pre">%tabname%</span></code>); if <code class="docutils literal notranslate"><span class="pre">C0</span></code> is a table name, <code class="docutils literal notranslate"><span class="pre">C1</span></code>
+through <code class="docutils literal notranslate"><span class="pre">C4</span></code> are ignored.</p>
 </dd>
 <dt><strong>c1, c2, c3, c4</strong></dt><dd><p>Coefficients of the linear, quadratic, cubic, and quartic terms,
 respectively, in the property-versus-temperature polynomial.  Leave
@@ -999,21 +1037,25 @@ command for nonlinear material property input.) Linear material
 properties typically require a single substep for solution, whereas
 nonlinear material properties require multiple substeps;  see Linear
 Material Properties in the Material Reference for details.</p>
-<p>If the constants C1 - C4 are input, the polynomial</p>
-<p>Property = C0 + C1(T) + C2(T)2 + C3(T)3 + C4(T)4</p>
+<p>If the constants <code class="docutils literal notranslate"><span class="pre">C1</span></code> - <code class="docutils literal notranslate"><span class="pre">C4</span></code> are input, the polynomial</p>
+<div class="math notranslate nohighlight">
+\[Property = C_0 + C_1(T) + C_2(T)^2 + C_3(T)^3 + C_4(T)^4\]</div>
 <p>is evaluated at discrete temperature points with linear interpolation
 between points (that is, a piecewise linear representation) and a
 constant-valued extrapolation beyond the extreme points. First-order
-properties use two discrete points (±9999°). The MPTEMP or MPTGEN
+properties use two discrete points (±9999°).
+The <a class="reference internal" href="ansys.mapdl.core.Mapdl.mptemp.html#ansys.mapdl.core.Mapdl.mptemp" title="ansys.mapdl.core.Mapdl.mptemp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MPTEMP</span></code></a> or
+<a class="reference internal" href="ansys.mapdl.core.Mapdl.mptgen.html#ansys.mapdl.core.Mapdl.mptgen" title="ansys.mapdl.core.Mapdl.mptgen"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MPTGEN</span></code></a>
 commands must be used for second and higher order properties to define
 appropriate temperature steps. To ensure that the number of
-temperatures defined via the MPTEMP and MPTGEN commands is minimally
+temperatures defined via the <a class="reference internal" href="ansys.mapdl.core.Mapdl.mptemp.html#ansys.mapdl.core.Mapdl.mptemp" title="ansys.mapdl.core.Mapdl.mptemp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MPTEMP</span></code></a>
+and <a class="reference internal" href="ansys.mapdl.core.Mapdl.mptgen.html#ansys.mapdl.core.Mapdl.mptgen" title="ansys.mapdl.core.Mapdl.mptgen"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MPTGEN</span></code></a> commands is minimally
 sufficient for a reasonable representation of the curve, ANSYS
-generates an error message if the number is less than N, and a warning
-message if the number is less than 2N. The value N represents the
-highest coefficient used; for example, if C3 is nonzero and C4 is zero,
+generates an error message if the number is less than <code class="docutils literal notranslate"><span class="pre">N</span></code>, and a warning
+message if the number is less than <code class="docutils literal notranslate"><span class="pre">2N</span></code>. The value <code class="docutils literal notranslate"><span class="pre">N</span></code> represents the
+highest coefficient used; for example, if <code class="docutils literal notranslate"><span class="pre">C3</span></code> is nonzero and <code class="docutils literal notranslate"><span class="pre">C4</span></code> is zero,
 a cubic curve is being used which is defined using 4 coefficients so
-that N = 4.</p>
+that <code class="docutils literal notranslate"><span class="pre">N</span></code> = 4.</p>
 </dd></dl>
 
 </section>

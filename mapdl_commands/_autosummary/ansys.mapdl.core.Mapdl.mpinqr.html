@@ -933,29 +933,13 @@ Hence its support is limited and it use is not encouraged.
 should be 0 for key=11, <code class="docutils literal notranslate"><span class="pre">DB_NUMDEFINED(12)</span></code>,
 <code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED(14)</span></code>, and <code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG(15)</span></code>.</p>
 </dd>
-<dt><strong>iprop</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Property reference number (See notes).</p>
+<dt><strong>iprop</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Property reference number (See <a class="reference internal" href="#table-1">Table-1</a> in the Notes section).</p>
 <p>If iprop = 0, test for existence of any material property with this
-material number (with key = DB_SELECTED(1)).</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><strong>MP command labels</strong></p>
-<p>EX  = 1, EY  = 2, EZ  = 3, NUXY= 4, NUYZ= 5, NUXZ= 6, GXY = 7, GYZ = 8</p>
-<p>GXZ = 9, ALPX=10, ALPY=11, ALPZ=12, DENS=13, MU  =14, DAMP=15, KXX =16</p>
-<p>KYY =17, KZZ =18, RSVX=19, RSVY=20, RSVZ=21,     =22, HF  =23, VISC=24</p>
-<p>EMIS=25, ENTH=26, LSST=27, PRXY=28, PRYZ=29, PRXZ=30, MURX=31, MURY=32</p>
-<p>MURZ=33, PERX=34, PERY=35, PERZ=36, MGXX=37, MGYY=38, MGZZ=39, EGXX=40</p>
-<p>EGYY=41, EGZZ=42, SBKX=43, SBKY=44, SBKZ=45, SONC=46, DMPS=47, ELIM=48</p>
-<p>USR1=49, USR2=50, USR3=51, USR4=51, FLUI=53, ORTH=54, CABL=55, RIGI=56</p>
-<p>HGLS=57, BVIS=58, QRAT=59, REFT=60, CTEX=61, CTEY=62, CTEZ=63, THSX=64,</p>
-<p>THSY=65, THSZ=66, DMPR=67, LSSM=68, BETD=69, ALPD=70, RH  =71, DXX =72,</p>
-<p>DYY =73, DZZ =74, BETX=75, BETY=76, BETZ=77, CSAT=78, CREF=79, CVH =80,</p>
-<p>UMID=81, UVID=82</p>
-<p>(see <code class="docutils literal notranslate"><span class="pre">TB</span></code> command for more information)</p>
-</div>
+material number (with key = <code class="docutils literal notranslate"><span class="pre">DB_SELECTED(1)</span></code>).</p>
 </dd>
 <dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Key as to the information needed about material property.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">DB_SELECTED(1)</span></code>- return select status:</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_SELECTED(1)</span></code> - return select status:</p>
 <ul>
 <li><p>0 - material prop is undefined.</p></li>
 <li><p>1 - material prop is selected.</p></li>
@@ -971,7 +955,7 @@ material number (with key = DB_SELECTED(1)).</p>
 </dd>
 <dt><strong>pname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the variable where the queried value is stored.</p>
 </dd>
-<dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <code class="docutils literal notranslate"><span class="pre">Mapdl.run</span></code>.</p>
+<dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.run</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
@@ -982,6 +966,226 @@ material number (with key = DB_SELECTED(1)).</p>
 </dl>
 </dd>
 </dl>
+<p class="rubric">Notes</p>
+<p>The material properties are obtained from the <a class="reference internal" href="../prep7/_autosummary/ansys.mapdl.core.Mapdl.mp.html#ansys.mapdl.core.Mapdl.mp" title="ansys.mapdl.core.Mapdl.mp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MP</span></code></a> command labels,
+which are detailed below:</p>
+<p><strong>MP command labels</strong></p>
+<table class="table" id="table-1">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 6%" />
+<col style="width: 11%" />
+<col style="width: 6%" />
+<col style="width: 11%" />
+<col style="width: 6%" />
+<col style="width: 11%" />
+<col style="width: 6%" />
+<col style="width: 11%" />
+<col style="width: 6%" />
+<col style="width: 11%" />
+<col style="width: 6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Key</p></th>
+<th class="head"><p>Property</p></th>
+<th class="head"><p>Key</p></th>
+<th class="head"><p>Property</p></th>
+<th class="head"><p>Key</p></th>
+<th class="head"><p>Property</p></th>
+<th class="head"><p>Key</p></th>
+<th class="head"><p>Property</p></th>
+<th class="head"><p>Key</p></th>
+<th class="head"><p>Property</p></th>
+<th class="head"><p>Key</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>EX</p></td>
+<td><p>1</p></td>
+<td><p>DAMP</p></td>
+<td><p>15</p></td>
+<td><p>PRYZ</p></td>
+<td><p>29</p></td>
+<td><p>SBKX</p></td>
+<td><p>43</p></td>
+<td><p>HGLS</p></td>
+<td><p>57</p></td>
+<td><p>RH</p></td>
+<td><p>71</p></td>
+</tr>
+<tr class="row-odd"><td><p>EY</p></td>
+<td><p>2</p></td>
+<td><p>KXX</p></td>
+<td><p>16</p></td>
+<td><p>PRXZ</p></td>
+<td><p>30</p></td>
+<td><p>SBKY</p></td>
+<td><p>44</p></td>
+<td><p>BVIS</p></td>
+<td><p>58</p></td>
+<td><p>DXX</p></td>
+<td><p>72</p></td>
+</tr>
+<tr class="row-even"><td><p>EZ</p></td>
+<td><p>3</p></td>
+<td><p>KYY</p></td>
+<td><p>17</p></td>
+<td><p>MURX</p></td>
+<td><p>31</p></td>
+<td><p>SBKZ</p></td>
+<td><p>45</p></td>
+<td><p>QRAT</p></td>
+<td><p>59</p></td>
+<td><p>DYY</p></td>
+<td><p>73</p></td>
+</tr>
+<tr class="row-odd"><td><p>NUXY</p></td>
+<td><p>4</p></td>
+<td><p>KZZ</p></td>
+<td><p>18</p></td>
+<td><p>MURY</p></td>
+<td><p>32</p></td>
+<td><p>SONC</p></td>
+<td><p>46</p></td>
+<td><p>REFT</p></td>
+<td><p>60</p></td>
+<td><p>DZZ</p></td>
+<td><p>74</p></td>
+</tr>
+<tr class="row-even"><td><p>NUYZ</p></td>
+<td><p>5</p></td>
+<td><p>RSVX</p></td>
+<td><p>19</p></td>
+<td><p>MURZ</p></td>
+<td><p>33</p></td>
+<td><p>DMPS</p></td>
+<td><p>47</p></td>
+<td><p>CTEX</p></td>
+<td><p>61</p></td>
+<td><p>BETX</p></td>
+<td><p>75</p></td>
+</tr>
+<tr class="row-odd"><td><p>NUXZ</p></td>
+<td><p>6</p></td>
+<td><p>RSVY</p></td>
+<td><p>20</p></td>
+<td><p>PERX</p></td>
+<td><p>34</p></td>
+<td><p>ELIM</p></td>
+<td><p>48</p></td>
+<td><p>CTEY</p></td>
+<td><p>62</p></td>
+<td><p>BETY</p></td>
+<td><p>76</p></td>
+</tr>
+<tr class="row-even"><td><p>GXY</p></td>
+<td><p>7</p></td>
+<td><p>RSVZ</p></td>
+<td><p>21</p></td>
+<td><p>PERY</p></td>
+<td><p>35</p></td>
+<td><p>USR1</p></td>
+<td><p>49</p></td>
+<td><p>CTEZ</p></td>
+<td><p>63</p></td>
+<td><p>BETZ</p></td>
+<td><p>77</p></td>
+</tr>
+<tr class="row-odd"><td><p>GYZ</p></td>
+<td><p>8</p></td>
+<td></td>
+<td><p>22</p></td>
+<td><p>PERZ</p></td>
+<td><p>36</p></td>
+<td><p>USR2</p></td>
+<td><p>50</p></td>
+<td><p>THSX</p></td>
+<td><p>64</p></td>
+<td><p>CSAT</p></td>
+<td><p>78</p></td>
+</tr>
+<tr class="row-even"><td><p>GXZ</p></td>
+<td><p>9</p></td>
+<td><p>HF</p></td>
+<td><p>23</p></td>
+<td><p>MGXX</p></td>
+<td><p>37</p></td>
+<td><p>USR3</p></td>
+<td><p>51</p></td>
+<td><p>THSY</p></td>
+<td><p>65</p></td>
+<td><p>CREF</p></td>
+<td><p>79</p></td>
+</tr>
+<tr class="row-odd"><td><p>ALPX</p></td>
+<td><p>10</p></td>
+<td><p>VISC</p></td>
+<td><p>24</p></td>
+<td><p>MGYY</p></td>
+<td><p>38</p></td>
+<td><p>USR4</p></td>
+<td><p>51</p></td>
+<td><p>THSZ</p></td>
+<td><p>66</p></td>
+<td><p>CVH</p></td>
+<td><p>80</p></td>
+</tr>
+<tr class="row-even"><td><p>ALPY</p></td>
+<td><p>11</p></td>
+<td><p>EMIS</p></td>
+<td><p>25</p></td>
+<td><p>MGZZ</p></td>
+<td><p>39</p></td>
+<td><p>FLUI</p></td>
+<td><p>53</p></td>
+<td><p>DMPR</p></td>
+<td><p>67</p></td>
+<td><p>UMID</p></td>
+<td><p>81</p></td>
+</tr>
+<tr class="row-odd"><td><p>ALPZ</p></td>
+<td><p>12</p></td>
+<td><p>ENTH</p></td>
+<td><p>26</p></td>
+<td><p>EGXX</p></td>
+<td><p>40</p></td>
+<td><p>ORTH</p></td>
+<td><p>54</p></td>
+<td><p>LSSM</p></td>
+<td><p>68</p></td>
+<td><p>UVID</p></td>
+<td><p>82</p></td>
+</tr>
+<tr class="row-even"><td><p>DENS</p></td>
+<td><p>13</p></td>
+<td><p>LSST</p></td>
+<td><p>27</p></td>
+<td><p>EGYY</p></td>
+<td><p>41</p></td>
+<td><p>CABL</p></td>
+<td><p>55</p></td>
+<td><p>BETD</p></td>
+<td><p>69</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>MU</p></td>
+<td><p>14</p></td>
+<td><p>PRXY</p></td>
+<td><p>28</p></td>
+<td><p>EGZZ</p></td>
+<td><p>42</p></td>
+<td><p>RIGI</p></td>
+<td><p>56</p></td>
+<td><p>ALPD</p></td>
+<td><p>70</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>see <a class="reference internal" href="../prep7/_autosummary/ansys.mapdl.core.Mapdl.tb.html#ansys.mapdl.core.Mapdl.tb" title="ansys.mapdl.core.Mapdl.tb"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TB</span></code></a> command for more information.</p>
 </dd></dl>
 
 </section>

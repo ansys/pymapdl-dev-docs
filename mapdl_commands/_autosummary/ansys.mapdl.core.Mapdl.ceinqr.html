@@ -936,20 +936,20 @@ It should be zero for key=11, <code class="docutils literal notranslate"><span c
 <code class="docutils literal notranslate"><span class="pre">DB_NUMSELECTED</span></code>, <code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code></p>
 <ul class="simple">
-<li><p>DB_SELECTED - return select status</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_SELECTED</span></code> - return select status</p>
 <ul>
 <li><p>1 - equation is selected</p></li>
 <li><p>0 - equation is undefined</p></li>
 <li><p>-1 - equation is unselected</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">DB_NUMDEFINED</span></code>  - return number of defined constraint
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_NUMDEFINED</span></code> - return number of defined constraint
 equations.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">DB_NUMSELECTED</span></code> - return number of selected constraint
 equations.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED</span></code>  - return number of highest numbered
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED</span></code> - return number of highest numbered
 constraint equation defined.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code>  - return length of longest constraint
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG</span></code> - return length of longest constraint
 equation set (max record length)</p></li>
 <li><p>2 - return length (data units)</p></li>
 <li><p>3 - return layer number</p></li>
@@ -957,13 +957,13 @@ equation set (max record length)</p></li>
 <li><p>5 - return number of values stored for nce</p></li>
 <li><p>11 - return void percent (integer)</p></li>
 <li><p>16 - return location of next record</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CE_NONLINEAR</span></code>   - return 1 if CE is nonlinear</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CE_ELEMNUMBER</span></code>  - return associated element number</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CE_NONLINEAR</span></code> - return 1 if CE is nonlinear</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CE_ELEMNUMBER</span></code> - return associated element number</p></li>
 </ul>
 </dd>
 <dt><strong>pname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the variable where the queried value is stored.</p>
 </dd>
-<dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <code class="docutils literal notranslate"><span class="pre">Mapdl.run</span></code>.</p>
+<dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.run</span></code></a>.</p>
 </dd>
 </dl>
 </dd>

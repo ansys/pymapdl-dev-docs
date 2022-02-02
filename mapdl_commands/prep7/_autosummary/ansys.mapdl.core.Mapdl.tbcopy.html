@@ -888,23 +888,25 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>lab</strong></dt><dd><p>Data table label. See the TB command for valid labels, and see
+<dt><strong>lab</strong></dt><dd><p>Data table label. See the <a class="reference internal" href="ansys.mapdl.core.Mapdl.tb.html#ansys.mapdl.core.Mapdl.tb" title="ansys.mapdl.core.Mapdl.tb"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TB</span></code></a> command for valid labels, and see
 “Notes” for Lab = ALL.</p>
 </dd>
 <dt><strong>matf</strong></dt><dd><p>Material reference number where data table is to be copied from.</p>
 </dd>
 <dt><strong>matt</strong></dt><dd><p>Material reference number where data table is to be copied to.</p>
 </dd>
+<dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.run</span></code></a>.</p>
+</dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
 <p>The TBCOPY command, with Lab = ALL, copies all of the nonlinear data
-defined by the TB command. If you copy a model that includes both yield
+defined by the <a class="reference internal" href="ansys.mapdl.core.Mapdl.tb.html#ansys.mapdl.core.Mapdl.tb" title="ansys.mapdl.core.Mapdl.tb"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TB</span></code></a> command. If you copy a model that includes both yield
 behavior constants and linear constants (for example, a BKIN model),
 TBCOPY,ALL and MPCOPY are used together to copy the entire model. All
 input data associated with the model is copied, that is, all data
-defined through the TB and MP commands.</p>
+defined through the <a class="reference internal" href="ansys.mapdl.core.Mapdl.tb.html#ansys.mapdl.core.Mapdl.tb" title="ansys.mapdl.core.Mapdl.tb"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TB</span></code></a> and MP commands.</p>
 <p>Also, if you copy a material model using the Material Model Interface
 (Edit&gt; Copy), both the commands TBCOPY,ALL and MPCOPY are issued,
 regardless of whether the model includes linear constants only, or if
