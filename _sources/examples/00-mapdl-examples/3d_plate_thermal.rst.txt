@@ -142,12 +142,12 @@ Solve the thermal static analysis and print the results
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =      71.615   TIME= 04:07:05
+     *** NOTE ***                            CP =      81.636   TIME= 04:07:53
      There is no title defined for this analysis.                            
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:07:05  FEB 02, 2022 CP=     71.618
+     00000000  VERSION=LINUX x64     04:07:53  FEB 03, 2022 CP=     81.638
 
                                                                                
 
@@ -163,11 +163,11 @@ Solve the thermal static analysis and print the results
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =      71.619   TIME= 04:07:05
+     *** NOTE ***                            CP =      81.639   TIME= 04:07:53
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =      71.619   TIME= 04:07:05
+     *** NOTE ***                            CP =      81.639   TIME= 04:07:53
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -192,8 +192,8 @@ Solve the thermal static analysis and print the results
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       450  SOLID90       0.036   0.000081
-     Time at end of element matrix formulation CP = 71.6700745.              
+            1       450  SOLID90       0.041   0.000091
+     Time at end of element matrix formulation CP = 81.6911926.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =        2606,    Maximum wavefront =     72
@@ -201,7 +201,7 @@ Solve the thermal static analysis and print the results
       Memory required for in-core solution     =     4.639 MB
       Memory required for out-of-core solution =     2.499 MB
 
-     *** NOTE ***                            CP =      71.756   TIME= 04:07:05
+     *** NOTE ***                            CP =      81.781   TIME= 04:07:53
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -216,12 +216,12 @@ Solve the thermal static analysis and print the results
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       450  SOLID90       0.026   0.000057
+            1       450  SOLID90       0.033   0.000074
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       450  SOLID90       0.016   0.000037
+            1       450  SOLID90       0.022   0.000049
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -309,7 +309,7 @@ result file using pyansys
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.213 seconds)
+   **Total running time of the script:** ( 0 minutes  1.250 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_3d_plate_thermal.py:
