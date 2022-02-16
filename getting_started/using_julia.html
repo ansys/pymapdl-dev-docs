@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Using PyMAPDL in Julia &#8212; ansys.mapdl.core 0.60.dev0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Frequently Asked Questions" href="faq.html" />
+    <link rel="prev" title="Using MAPDL Through Docker" href="docker.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../user_guide/index.html">
+  User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../mapdl_commands/index.html">
+  MAPDL Commands
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../examples/index.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../contributing.html">
+  Contributing
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="running_mapdl.html">
+   Using PyMAPDL from the Standard Install
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="versioning.html">
+   Versioning and Interfaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="docker.html">
+   Using MAPDL Through Docker
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Using PyMAPDL in Julia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="faq.html">
+   Frequently Asked Questions
+  </a>
+ </li>
+</ul>
+
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-julia">
+   Installing Julia
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-julia-environment">
+   Setting Julia Environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-pymapdl-in-julia">
+   Installing PyMAPDL in Julia
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Using PyMAPDL in Julia
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="using-pymapdl-in-julia">
+<span id="using-julia"></span><h1>Using PyMAPDL in Julia<a class="headerlink" href="#using-pymapdl-in-julia" title="Permalink to this headline">¶</a></h1>
+<p>If you like to work with Julia, you can use Python libraries as if they were Julia packages.</p>
+<section id="installing-julia">
+<h2>Installing Julia<a class="headerlink" href="#installing-julia" title="Permalink to this headline">¶</a></h2>
+<p>To install Julia go to their website <a class="reference external" href="https://julialang.org/">https://julialang.org/</a> and follow the instructions given in the <em>Download</em> section.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://julialang.org/downloads/platform/#windows">Windows</a></p></li>
+<li><p><a class="reference external" href="https://julialang.org/downloads/platform/#linux_and_freebsd">Linux</a></p></li>
+<li><p><a class="reference external" href="https://julialang.org/downloads/platform/#macos">MacOS</a></p></li>
+</ul>
+</section>
+<section id="setting-julia-environment">
+<h2>Setting Julia Environment<a class="headerlink" href="#setting-julia-environment" title="Permalink to this headline">¶</a></h2>
+<p>To have access to Python libraries within Julia, you must install the [PyCall](<a class="reference external" href="https://github.com/JuliaPy/PyCall.jl">https://github.com/JuliaPy/PyCall.jl</a>) Julia package.
+To install it, run Julia and switch to the package manager by pressing  the``”]”`` key.</p>
+<p>If you need to work with different package versions or applications, it is beneficial to create a virtual environment in Julia.
+To create a virtual environment, use the <code class="docutils literal notranslate"><span class="pre">activate</span></code> command with the name of the new environment that you want to create or activate.</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span>(@1.7) pkg&gt; activate julia_test
+  Activating project at `C:\Users\USER\julia_test`
+</pre></div>
+</div>
+<p>A message should appear, indicating that the new package (<code class="docutils literal notranslate"><span class="pre">julia_test</span></code>) has been activated. This environment name will now precede the command line.</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">julia_test</span><span class="p">)</span> <span class="n">pkg</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Next install the <em>PyCall</em> package by typing:</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">julia_test</span><span class="p">)</span> <span class="n">pkg</span><span class="o">&gt;</span> <span class="n">add</span> <span class="n">PyCall</span>
+</pre></div>
+</div>
+<p>To use <em>PyCall</em>, press the backspace key to go to the Julia command line.
+The command line will now be precede by the name <code class="docutils literal notranslate"><span class="pre">Julia</span></code>.</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Next use the <em>PyCall</em> package with:</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="k">using</span> <span class="n">PyCall</span>
+</pre></div>
+</div>
+<p>This should be enough to use packages included in a basic Python distribution.</p>
+<p>For example:</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="n">math</span> <span class="o">=</span> <span class="n">pyimport</span><span class="p">(</span><span class="s">&quot;math&quot;</span><span class="p">)</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="nb">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="c"># returns ≈ 1/√2 = 0.70710678..</span>
+</pre></div>
+</div>
+</section>
+<section id="installing-pymapdl-in-julia">
+<h2>Installing PyMAPDL in Julia<a class="headerlink" href="#installing-pymapdl-in-julia" title="Permalink to this headline">¶</a></h2>
+<p><em>PyCall</em> includes a lightweight Python environment that uses <a class="reference external" href="https://conda.io">Conda</a> to manage and access Python packages.
+This environment, currently based on Python 3.9.7, includes the standard basic Python libraries.
+However, because it is a fully working Python environment, you can still use it from outside the Julia command line and install Python packages using <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
+<p>To install PyMAPDL, first locate the Python executable with:</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="n">PyCall</span><span class="o">.</span><span class="n">python</span>
+<span class="s">&quot;C:</span><span class="se">\\</span><span class="s">Users</span><span class="se">\\</span><span class="s">USER</span><span class="se">\\</span><span class="s">.julia</span><span class="se">\\</span><span class="s">conda</span><span class="se">\\</span><span class="s">3</span><span class="se">\\</span><span class="s">python.exe&quot;</span>
+</pre></div>
+</div>
+<p>In Linux, the above code prints the following, where <code class="docutils literal notranslate"><span class="pre">python3</span></code> is the default Python3 installation for the operating system.</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="n">PyCall</span><span class="o">.</span><span class="n">python</span>
+<span class="s">&quot;python3&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Linux, there are no specific installation steps. You only need to add the Julia executable to the path.
+Hence, Julia’s Python installation path can differ from user to user.
+For example, if you uncompress the source files in <code class="docutils literal notranslate"><span class="pre">/home/USER/Julia</span></code>, Julia’s path will be
+<code class="docutils literal notranslate"><span class="pre">/home/USER/Julia/julia-1.7.2/bin</span></code></p>
+</div>
+<p>You would use this Python executable to install PyMAPDL:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:<span class="se">\U</span>sers<span class="se">\U</span>SER<span class="se">\.</span>julia<span class="se">\c</span>onda<span class="se">\3\p</span>ython.exe -m pip install ansys-mapdl-core
+</pre></div>
+</div>
+<p>In Linux:, you would install with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m pip install ansys-mapdl-core
+</pre></div>
+</div>
+<p>Finally, after restarting Julia, you can import PyMAPDL using the same procedure as described above:</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span>julia&gt; using PyCall
+julia&gt; pymapdl = pyimport(&quot;ansys.mapdl.core&quot;)
+PyObject &lt;module &#39;ansys.mapdl.core&#39; from &#39;C:\\Users\\USER\\.julia\\conda\\3\\lib\\site-packages\\ansys\\mapdl\\core\\__init__.py&#39;&gt;
+julia&gt; mapdl = pymapdl.launch_mapdl()
+julia&gt; print(mapdl.__str__())
+Product:             Ansys Mechanical Enterprise
+MAPDL Version:       21.2
+ansys.mapdl Version: 0.60.6
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you experience errors when using <em>PyCall</em>, you can try to rebuild the package by pressing <code class="docutils literal notranslate"><span class="pre">&quot;]&quot;</span></code> to go to the package manager and typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkg</span><span class="o">&gt;</span> <span class="n">build</span> <span class="n">PyCall</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>Using PyMAPDL in Julia<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Here is a simple example of using PyMAPDL in Julia:</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="k">using</span> <span class="n">PyCall</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">pymapdl</span> <span class="o">=</span> <span class="n">pyimport</span><span class="p">(</span><span class="s">&quot;ansys.mapdl.core&quot;</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span> <span class="o">=</span> <span class="n">pymapdl</span><span class="o">.</span><span class="n">launch_mapdl</span><span class="p">()</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">np</span> <span class="o">=</span> <span class="n">pyimport</span><span class="p">(</span><span class="s">&quot;numpy&quot;</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="c"># define cylinder and mesh parameters</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">torque</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">radius</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">h_tip</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">elemsize</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="nb">pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">force</span> <span class="o">=</span> <span class="mi">100</span><span class="o">/</span><span class="n">radius</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">pressure</span> <span class="o">=</span> <span class="n">force</span><span class="o">/</span><span class="p">(</span><span class="n">h_tip</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="nb">pi</span><span class="o">*</span><span class="n">radius</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="c"># Define higher-order SOLID186</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="c"># Define surface effect elements SURF154 to apply torque</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="c"># as a tangential pressure</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">186</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">154</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">r</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">r</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="c"># Aluminum properties (or something)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s">&quot;ex&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">10e6</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s">&quot;nuxy&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s">&quot;dens&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="o">/</span><span class="mf">386.1</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s">&quot;dens&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="c"># Simple cylinder</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">5</span>
+            <span class="n">mapdl</span><span class="o">.</span><span class="n">cylind</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="mi">90</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="mi">90</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="k">end</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">nummrg</span><span class="p">(</span><span class="s">&quot;kp&quot;</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="c"># interactive volume plot (optional)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">vplot</span><span class="p">()</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="c"># mesh cylinder</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">lsel</span><span class="p">(</span><span class="s">&quot;s&quot;</span><span class="p">,</span> <span class="s">&quot;loc&quot;</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">lsel</span><span class="p">(</span><span class="s">&quot;r&quot;</span><span class="p">,</span> <span class="s">&quot;loc&quot;</span><span class="p">,</span> <span class="s">&quot;y&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">lsel</span><span class="p">(</span><span class="s">&quot;r&quot;</span><span class="p">,</span> <span class="s">&quot;loc&quot;</span><span class="p">,</span> <span class="s">&quot;z&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">height</span> <span class="o">-</span> <span class="n">h_tip</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">lesize</span><span class="p">(</span><span class="s">&quot;all&quot;</span><span class="p">,</span> <span class="n">elemsize</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">mshape</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">mshkey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">esize</span><span class="p">(</span><span class="n">elemsize</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">allsel</span><span class="p">(</span><span class="s">&quot;all&quot;</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">vsweep</span><span class="p">(</span><span class="s">&quot;ALL&quot;</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">csys</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">asel</span><span class="p">(</span><span class="s">&quot;s&quot;</span><span class="p">,</span> <span class="s">&quot;loc&quot;</span><span class="p">,</span> <span class="s">&quot;z&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">height</span> <span class="o">-</span> <span class="n">h_tip</span> <span class="o">+</span> <span class="mf">0.0001</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">asel</span><span class="p">(</span><span class="s">&quot;r&quot;</span><span class="p">,</span> <span class="s">&quot;loc&quot;</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="k">local</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">csys</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">aatt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">amesh</span><span class="p">(</span><span class="s">&quot;all&quot;</span><span class="p">)</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="c"># plot elements</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do notice the changes in the strings (only <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> strings are allowed) and the loops.</p>
+</div>
+</section>
+</section>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
