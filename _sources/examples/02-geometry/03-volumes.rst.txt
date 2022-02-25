@@ -718,7 +718,7 @@ Plot colored volumes while displaying the keypoint numbers.
 There are a variety of plotting options available for all the common
 plotting methods.
 
-.. GENERATED FROM PYTHON SOURCE LINES 266-276
+.. GENERATED FROM PYTHON SOURCE LINES 266-278
 
 .. code-block:: default
 
@@ -732,6 +732,8 @@ plotting methods.
 
     # Plot while showing bounds and disabling extra line plotting.
     mapdl.vplot(show_bounds=True, show_lines=False, quality=5)
+
+
 
 
 
@@ -755,10 +757,26 @@ plotting methods.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 279-280
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 280-281
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  11.915 seconds)
+   **Total running time of the script:** ( 2 minutes  14.805 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_03-volumes.py:

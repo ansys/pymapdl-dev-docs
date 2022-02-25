@@ -678,11 +678,13 @@ Then we read the Nodal solution vector `"NSL"` into a numpy array
 
 Close an opened file
 
-.. GENERATED FROM PYTHON SOURCE LINES 107-108
+.. GENERATED FROM PYTHON SOURCE LINES 107-110
 
 .. code-block:: default
 
     print(xpl.close())
+
+
 
 
 
@@ -698,10 +700,26 @@ Close an opened file
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 111-112
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 112-113
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.271 seconds)
+   **Total running time of the script:** ( 0 minutes  0.273 seconds)
 
 
 .. _sphx_glr_download_examples_01-apdlmath-examples_explore_mapdl_files.py:

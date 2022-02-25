@@ -279,7 +279,7 @@ Note that this slice occurs between the edge nodes of this beam,
 necessitating interpolation as stress/strain is (in general)
 extrapolated to the edge nodes of ANSYS FEMs.
 
-.. GENERATED FROM PYTHON SOURCE LINES 171-190
+.. GENERATED FROM PYTHON SOURCE LINES 171-191
 
 .. code-block:: default
 
@@ -305,6 +305,7 @@ extrapolated to the edge nodes of ANSYS FEMs.
 
 
 
+
 .. image-sg:: /examples/00-mapdl-examples/images/sphx_glr_path_operations_003.png
    :alt: path operations
    :srcset: /examples/00-mapdl-examples/images/sphx_glr_path_operations_003.png
@@ -314,10 +315,26 @@ extrapolated to the edge nodes of ANSYS FEMs.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 192-193
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 193-194
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.168 seconds)
+   **Total running time of the script:** ( 0 minutes  4.269 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_path_operations.py:

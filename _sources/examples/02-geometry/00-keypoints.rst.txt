@@ -412,13 +412,14 @@ Plot the keypoints while displaying the keypoint numbers
 There are a variety of plotting options available for all the common
 plotting methods.
 
-.. GENERATED FROM PYTHON SOURCE LINES 139-142
+.. GENERATED FROM PYTHON SOURCE LINES 139-143
 
 .. code-block:: default
 
     mapdl.kplot(
         show_keypoint_numbering=True, background="black", show_bounds=True, font_size=26
     )
+
 
 
 
@@ -431,10 +432,26 @@ plotting methods.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 144-145
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 145-146
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.796 seconds)
+   **Total running time of the script:** ( 0 minutes  0.769 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_00-keypoints.py:

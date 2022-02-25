@@ -205,7 +205,7 @@ Extracting Rotational Displacements
 - Extract all 3 rotational displacement components for each one
 - Print them all
 
-.. GENERATED FROM PYTHON SOURCE LINES 90-120
+.. GENERATED FROM PYTHON SOURCE LINES 90-122
 
 .. code-block:: default
 
@@ -243,6 +243,8 @@ Extracting Rotational Displacements
 
 
 
+
+
 .. rst-class:: sphx-glr-script-out
 
  Out:
@@ -269,10 +271,26 @@ Extracting Rotational Displacements
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 123-124
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 124-125
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.869 seconds)
+   **Total running time of the script:** ( 0 minutes  0.891 seconds)
 
 
 .. _sphx_glr_download_examples_03-tips-n-tricks_04-rotational-displacement.py:

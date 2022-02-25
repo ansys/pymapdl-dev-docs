@@ -342,11 +342,12 @@ Plot nodal displacement
 
 Plot nodal equivalent stress
 
-.. GENERATED FROM PYTHON SOURCE LINES 184-185
+.. GENERATED FROM PYTHON SOURCE LINES 184-186
 
 .. code-block:: default
 
     mapdl.post_processing.plot_nodal_eqv_stress(cpos="xy", cmap="magma")
+
 
 
 
@@ -359,10 +360,26 @@ Plot nodal equivalent stress
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 187-188
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 188-189
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.939 seconds)
+   **Total running time of the script:** ( 0 minutes  7.142 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_2d_pressure_vessel.py:

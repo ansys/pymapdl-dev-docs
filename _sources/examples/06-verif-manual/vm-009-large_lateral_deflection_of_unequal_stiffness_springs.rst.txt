@@ -611,7 +611,7 @@ expected target values:
 For better representation of the results we can use ``pandas`` dataframe
 with following settings below:
 
-.. GENERATED FROM PYTHON SOURCE LINES 357-386
+.. GENERATED FROM PYTHON SOURCE LINES 357-387
 
 .. code-block:: default
 
@@ -644,6 +644,7 @@ with following settings below:
 
     # Apply settings for the dataframe.
     df2.head()
+
 
 
 
@@ -701,10 +702,26 @@ with following settings below:
     <br />
     <br />
 
+.. GENERATED FROM PYTHON SOURCE LINES 388-389
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 389-390
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.287 seconds)
+   **Total running time of the script:** ( 0 minutes  0.295 seconds)
 
 
 .. _sphx_glr_download_examples_06-verif-manual_vm-009-large_lateral_deflection_of_unequal_stiffness_springs.py:

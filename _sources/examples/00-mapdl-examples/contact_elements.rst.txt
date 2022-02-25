@@ -175,13 +175,14 @@ that the section IDs are 5 and 6.
 Here, we plot the element mesh as a wire-frame to show that the
 contact pairs overlap.
 
-.. GENERATED FROM PYTHON SOURCE LINES 61-64
+.. GENERATED FROM PYTHON SOURCE LINES 61-65
 
 .. code-block:: default
 
 
     mapdl.esel("S", "SEC", vmin=5, vmax=6)
     mapdl.eplot(style="wireframe", line_width=3)
+
 
 
 
@@ -205,10 +206,26 @@ contact pairs overlap.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 66-67
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 67-68
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.653 seconds)
+   **Total running time of the script:** ( 0 minutes  1.650 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_contact_elements.py:

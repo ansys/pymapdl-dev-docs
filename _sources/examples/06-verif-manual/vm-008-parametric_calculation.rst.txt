@@ -320,7 +320,7 @@ which can be compared with expected target values:
 For better representation of the results we can use ``pandas`` dataframe
 with following settings below:
 
-.. GENERATED FROM PYTHON SOURCE LINES 205-233
+.. GENERATED FROM PYTHON SOURCE LINES 205-234
 
 .. code-block:: default
 
@@ -352,6 +352,7 @@ with following settings below:
 
     # Apply settings for the dataframe.
     df2.head()
+
 
 
 
@@ -403,10 +404,26 @@ with following settings below:
     <br />
     <br />
 
+.. GENERATED FROM PYTHON SOURCE LINES 235-236
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 236-237
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.848 seconds)
+   **Total running time of the script:** ( 0 minutes  0.853 seconds)
 
 
 .. _sphx_glr_download_examples_06-verif-manual_vm-008-parametric_calculation.py:

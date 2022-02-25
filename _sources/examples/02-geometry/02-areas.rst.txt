@@ -298,7 +298,7 @@ individual meshes.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [UnstructuredGrid (0x7f5eea799ca0)
+    [UnstructuredGrid (0x7ff6077af640)
       N Cells:	12
       N Points:	24
       X Bounds:	0.000e+00, 1.000e+00
@@ -523,12 +523,13 @@ camera direction from the following:
 - 'zx' - ZX Plane view
 - 'zy' - ZY Plane view
 
-.. GENERATED FROM PYTHON SOURCE LINES 184-186
+.. GENERATED FROM PYTHON SOURCE LINES 184-187
 
 .. code-block:: default
 
 
     mapdl.aplot(quality=1, show_bounds=True, cpos="iso", show_lines=True)
+
 
 
 
@@ -552,10 +553,26 @@ camera direction from the following:
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 188-189
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 189-190
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.190 seconds)
+   **Total running time of the script:** ( 0 minutes  3.137 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_02-areas.py:

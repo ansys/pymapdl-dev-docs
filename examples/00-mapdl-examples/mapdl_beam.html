@@ -599,7 +599,7 @@ are sequential</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:07:05  FEB 23, 2022 CP=     82.674
+ 00000000  VERSION=LINUX x64     04:06:57  FEB 25, 2022 CP=     84.083
 
 
 
@@ -692,7 +692,7 @@ individual elements</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =      82.679   TIME= 04:07:05
+ *** NOTE ***                            CP =      84.088   TIME= 04:06:57
  There is no title defined for this analysis.
 
  *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -707,7 +707,7 @@ individual elements</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:07:05  FEB 23, 2022 CP=     82.680
+ 00000000  VERSION=LINUX x64     04:06:57  FEB 25, 2022 CP=     84.089
 
 
 
@@ -723,11 +723,11 @@ individual elements</p>
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =      82.680   TIME= 04:07:05
+ *** NOTE ***                            CP =      84.089   TIME= 04:06:57
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =      82.680   TIME= 04:07:05
+ *** NOTE ***                            CP =      84.089   TIME= 04:06:57
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -744,7 +744,7 @@ individual elements</p>
 
  SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr
 
- *** NOTE ***                            CP =      82.685   TIME= 04:07:05
+ *** NOTE ***                            CP =      84.093   TIME= 04:06:57
  Predictor is ON by default for structural elements with rotational
  degrees of freedom.  Use the PRED,OFF command to turn the predictor
  OFF if it adversely affects the convergence.
@@ -757,8 +757,8 @@ individual elements</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.008   0.000359
- Time at end of element matrix formulation CP = 82.6901321.
+        1        22  BEAM188       0.008   0.000358
+ Time at end of element matrix formulation CP = 84.0981598.
 
  SPARSE MATRIX DIRECT SOLVER.
   Number of equations =          44,    Maximum wavefront =     12
@@ -766,7 +766,7 @@ individual elements</p>
   Memory required for in-core solution     =     0.062 MB
   Memory required for out-of-core solution =     0.062 MB
 
- *** NOTE ***                            CP =      82.693   TIME= 04:07:05
+ *** NOTE ***                            CP =      84.101   TIME= 04:06:57
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
@@ -781,12 +781,12 @@ individual elements</p>
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.027   0.001249
+        1        22  BEAM188       0.026   0.001189
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.000   0.000022
+        1        22  BEAM188       0.001   0.000051
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -797,7 +797,11 @@ individual elements</p>
         0.625 MB WRITTEN ON RESULTS FILE: file.rst
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.536 seconds)</p>
+<p>stop mapdl</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.532 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-mapdl-beam-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/66374d1a80ad5170be03b29ae6cc7f1c/mapdl_beam.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mapdl_beam.py</span></code></a></p>

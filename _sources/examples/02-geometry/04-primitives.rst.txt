@@ -795,7 +795,7 @@ This example creates a torus with an inner minor radius of 1, an
 intermediate radii of 2, and a major radius of 5.  The values 0
 and 180 define the starting and ending angles of the torus.
 
-.. GENERATED FROM PYTHON SOURCE LINES 263-268
+.. GENERATED FROM PYTHON SOURCE LINES 263-270
 
 .. code-block:: default
 
@@ -804,6 +804,8 @@ and 180 define the starting and ending angles of the torus.
 
     vnum = mapdl.torus(rad1=5, rad2=1, rad3=2, theta1=0, theta2=180)
     mapdl.vplot(show_lines=False, show_bounds=True, smooth_shading=False)
+
+
 
 
 
@@ -827,10 +829,26 @@ and 180 define the starting and ending angles of the torus.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 271-272
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 272-273
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  18.211 seconds)
+   **Total running time of the script:** ( 0 minutes  18.425 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_04-primitives.py:

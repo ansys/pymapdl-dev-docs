@@ -561,7 +561,7 @@ Python via numpy arrays.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>VTZLTF :
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>OAMIHH :
  Size : 10
   1.000e+00   1.000e+00   1.000e+00   1.000e+00   1.000e+00      &lt;       5
   1.000e+00   1.000e+00   1.000e+00   1.000e+00   1.000e+00      &lt;       10
@@ -599,7 +599,7 @@ numpy with the numpy methods.</p>
 3.1622776601683795
 </pre></div>
 </div>
-<p>Note that some methods have APDL correlaries, and these methods are
+<p>Note that some methods have APDL corollaries, and these methods are
 more efficient if performed within MAPDL.</p>
 <p>For example, the norm method can be performed within MAPDL</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">apdl_vec</span><span class="o">.</span><span class="n">norm</span><span class="p">(),</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.linalg.norm.html#numpy.linalg.norm" title="numpy.linalg.norm" class="sphx-glr-backref-module-numpy-linalg sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span></a><span class="p">(</span><span class="n">apdl_vec</span><span class="p">))</span>
@@ -626,7 +626,7 @@ creates a new APDLMath, which in this case is named <code class="docutils litera
   Name                   Type            Mem. (MB)       Dims            Workspace
 
    NEWVEC                VEC             0.000           10              1
-   VTZLTF                VEC             0.000           10              1
+   OAMIHH                VEC             0.000           10              1
 </pre></div>
 </div>
 <p>Create a Python handle to this vector by specifying its name</p>
@@ -656,7 +656,7 @@ array</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>RMIKGZ:
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>VMVKKK:
  [1,1]: 4.170e-01 [1,2]: 9.326e-01 [1,3]: 3.023e-01
  [2,1]: 9.972e-01 [2,2]: 1.144e-04 [2,3]: 9.990e-01
  [3,1]: 7.203e-01 [3,2]: 1.281e-01 [3,3]: 1.468e-01
@@ -674,7 +674,7 @@ array</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>NDUQFR
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>JKPISQ
 </pre></div>
 </div>
 <p>Load this matrix from APDL and verify it is identical</p>
@@ -684,6 +684,10 @@ array</p>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+<p>stop mapdl</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.211 seconds)</p>

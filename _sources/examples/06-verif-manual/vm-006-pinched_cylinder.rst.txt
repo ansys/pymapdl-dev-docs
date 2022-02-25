@@ -1337,7 +1337,7 @@ of radial deflection at the node where force :math:`F` was applied
 for both simulations. The expected value for :math:`\delta_{\mathrm{shell181}}` is 0.1139,
 and :math:`\delta_{\mathrm{shell281}}` is 0.1139.
 
-.. GENERATED FROM PYTHON SOURCE LINES 399-420
+.. GENERATED FROM PYTHON SOURCE LINES 399-421
 
 .. code-block:: default
 
@@ -1366,6 +1366,7 @@ and :math:`\delta_{\mathrm{shell281}}` is 0.1139.
 
 
 
+
 .. rst-class:: sphx-glr-script-out
 
  Out:
@@ -1386,10 +1387,26 @@ and :math:`\delta_{\mathrm{shell281}}` is 0.1139.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 422-423
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 423-424
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.252 seconds)
+   **Total running time of the script:** ( 0 minutes  3.301 seconds)
 
 
 .. _sphx_glr_download_examples_06-verif-manual_vm-006-pinched_cylinder.py:

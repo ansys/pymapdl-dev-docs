@@ -375,7 +375,7 @@ stress experienced by node 2 to the known quantities 10000 psi and
 - Get the stress on this element
 - Compare
 
-.. GENERATED FROM PYTHON SOURCE LINES 182-200
+.. GENERATED FROM PYTHON SOURCE LINES 182-201
 
 .. code-block:: default
 
@@ -401,6 +401,7 @@ stress experienced by node 2 to the known quantities 10000 psi and
 
 
 
+
 .. rst-class:: sphx-glr-script-out
 
  Out:
@@ -419,10 +420,26 @@ stress experienced by node 2 to the known quantities 10000 psi and
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 202-203
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 203-204
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.856 seconds)
+   **Total running time of the script:** ( 0 minutes  0.866 seconds)
 
 
 .. _sphx_glr_download_examples_06-verif-manual_vm-004-deflection_of_a_hinged_support.py:

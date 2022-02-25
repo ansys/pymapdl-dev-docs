@@ -711,7 +711,7 @@ Plot colored lines while displaying the keypoint numbers.
 There are a variety of plotting options available for all the common
 plotting methods.
 
-.. GENERATED FROM PYTHON SOURCE LINES 299-310
+.. GENERATED FROM PYTHON SOURCE LINES 299-312
 
 .. code-block:: default
 
@@ -729,6 +729,8 @@ plotting methods.
 
 
 
+
+
 .. image-sg:: /examples/02-geometry/images/sphx_glr_01-lines_012.png
    :alt: 01 lines
    :srcset: /examples/02-geometry/images/sphx_glr_01-lines_012.png
@@ -738,10 +740,26 @@ plotting methods.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 313-314
+
+stop mapdl
+
+.. GENERATED FROM PYTHON SOURCE LINES 314-315
+
+.. code-block:: default
+
+    mapdl.exit()
+
+
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.645 seconds)
+   **Total running time of the script:** ( 0 minutes  4.746 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_01-lines.py:
