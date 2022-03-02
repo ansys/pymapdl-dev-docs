@@ -706,7 +706,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Steel material model.</span>
 <span class="c1"># Define Young&#39;s moulus and Poisson ratio for Steel.</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;EX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">30E6</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;EX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">30e6</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;PRXY&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
 
 <span class="c1"># Print the list of material properties.</span>
@@ -805,14 +805,13 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 <span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">elist</span><span class="p">())</span>
 
 <span class="c1"># Display elements with their nodes numbers.</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a> <span class="o">=</span> <span class="p">[(</span><span class="mf">162.20508123980457</span><span class="p">,</span> <span class="mf">109.41124535475498</span><span class="p">,</span> <span class="mf">112.95887397446565</span><span class="p">),</span>
-        <span class="p">(</span><span class="mf">50.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span>
-        <span class="p">(</span><span class="o">-</span><span class="mf">0.4135015240403764</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4134577015789461</span><span class="p">,</span> <span class="mf">0.8112146563156641</span><span class="p">)]</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mf">162.20508123980457</span><span class="p">,</span> <span class="mf">109.41124535475498</span><span class="p">,</span> <span class="mf">112.95887397446565</span><span class="p">),</span>
+    <span class="p">(</span><span class="mf">50.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span>
+    <span class="p">(</span><span class="o">-</span><span class="mf">0.4135015240403764</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4134577015789461</span><span class="p">,</span> <span class="mf">0.8112146563156641</span><span class="p">),</span>
+<span class="p">]</span>
 
-<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
-                <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">,</span>
-                <span class="n">font_size</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_vm-010-bending_of_a_t-shaped_beam_001.png" srcset="../../_images/sphx_glr_vm-010-bending_of_a_t-shaped_beam_001.png" alt="vm 010 bending of a t shaped beam" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
@@ -875,16 +874,12 @@ an unsymmetric <cite>T-beam</cite> with <a class="reference internal" href="../.
 <span class="n">mapdl</span><span class="o">.</span><span class="n">etable</span><span class="p">(</span><span class="n">lab</span><span class="o">=</span><span class="s2">&quot;STRS_T&quot;</span><span class="p">,</span> <span class="n">item</span><span class="o">=</span><span class="s2">&quot;LS&quot;</span><span class="p">,</span> <span class="n">comp</span><span class="o">=</span><span class="mi">31</span><span class="p">)</span>
 
 <span class="c1"># Get the value of the maximum compressive stress.</span>
-<a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">strss_top_compr</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">entity</span><span class="o">=</span><span class="s2">&quot;ELEM&quot;</span><span class="p">,</span>
-                                  <span class="n">entnum</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                                  <span class="n">item1</span><span class="o">=</span><span class="s2">&quot;ETAB&quot;</span><span class="p">,</span>
-                                  <span class="n">it1num</span><span class="o">=</span><span class="s2">&quot;STRS_T&quot;</span><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">strss_top_compr</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span>
+    <span class="n">entity</span><span class="o">=</span><span class="s2">&quot;ELEM&quot;</span><span class="p">,</span> <span class="n">entnum</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">item1</span><span class="o">=</span><span class="s2">&quot;ETAB&quot;</span><span class="p">,</span> <span class="n">it1num</span><span class="o">=</span><span class="s2">&quot;STRS_T&quot;</span>
+<span class="p">)</span>
 
 <span class="c1"># Get the value of the maximum tensile bending stress.</span>
-<a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">strss_bot_tens</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">entity</span><span class="o">=</span><span class="s2">&quot;ELEM&quot;</span><span class="p">,</span>
-                                 <span class="n">entnum</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                                 <span class="n">item1</span><span class="o">=</span><span class="s2">&quot;ETAB&quot;</span><span class="p">,</span>
-                                 <span class="n">it1num</span><span class="o">=</span><span class="s2">&quot;STRS_B&quot;</span><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">strss_bot_tens</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">entity</span><span class="o">=</span><span class="s2">&quot;ELEM&quot;</span><span class="p">,</span> <span class="n">entnum</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">item1</span><span class="o">=</span><span class="s2">&quot;ETAB&quot;</span><span class="p">,</span> <span class="n">it1num</span><span class="o">=</span><span class="s2">&quot;STRS_B&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -900,13 +895,13 @@ values:</p>
 <p>For better representation of the results we can use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframe
 with following settings below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the names of the rows.</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">row_names</span></a> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$$Stress - \sigma_{\mathrm{(B,Bot)}},\,psi$$&#39;</span><span class="p">,</span>
-             <span class="s1">&#39;$$Stress - \sigma_{\mathrm{(B,Top)}},\,psi$$&#39;</span><span class="p">]</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">row_names</span></a> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;$$Stress - \sigma_{\mathrm{(B,Bot)}},\,psi$$&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;$$Stress - \sigma_{\mathrm{(B,Top)}},\,psi$$&quot;</span><span class="p">,</span>
+<span class="p">]</span>
 
 <span class="c1"># Define the names of the columns.</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">col_names</span></a> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Target&#39;</span><span class="p">,</span>
-             <span class="s1">&#39;Mechanical APDL&#39;</span><span class="p">,</span>
-             <span class="s1">&#39;RATIO&#39;</span><span class="p">]</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">col_names</span></a> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Target&quot;</span><span class="p">,</span> <span class="s2">&quot;Mechanical APDL&quot;</span><span class="p">,</span> <span class="s2">&quot;RATIO&quot;</span><span class="p">]</span>
 
 <span class="c1"># Define the values of the target results.</span>
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.asarray.html#numpy.asarray" title="numpy.asarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">asarray</span></a><span class="p">([</span><span class="mi">300</span><span class="p">,</span> <span class="o">-</span><span class="mi">700</span><span class="p">])</span>
@@ -918,7 +913,7 @@ with following settings below:</p>
 <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">main_columns</span></a> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Target&quot;</span><span class="p">:</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a><span class="p">,</span>
     <span class="s2">&quot;Mechanical APDL&quot;</span><span class="p">:</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_res</span></a><span class="p">,</span>
-    <span class="s2">&quot;Ratio&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">divide</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_res</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a><span class="p">))</span>
+    <span class="s2">&quot;Ratio&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">divide</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_res</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a><span class="p">)),</span>
 <span class="p">}</span>
 
 <span class="c1"># Create and fill the output dataframe with pandas.</span>
@@ -974,7 +969,7 @@ with following settings below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.588 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.662 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-06-verif-manual-vm-010-bending-of-a-t-shaped-beam-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/aa744f3081c6bc4ac53b9a4335dace05/vm-010-bending_of_a_t-shaped_beam.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-010-bending_of_a_t-shaped_beam.py</span></code></a></p>

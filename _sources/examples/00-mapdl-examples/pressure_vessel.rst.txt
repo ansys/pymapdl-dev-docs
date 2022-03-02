@@ -30,11 +30,12 @@ Also shown here:
 - Comparison between PRNSOL, VGET (efficient wrapping), and the legacy reader.
 - Notes regarding FULL vs. POWER graphics when using PRNSOL.
 
-.. GENERATED FROM PYTHON SOURCE LINES 15-28
+.. GENERATED FROM PYTHON SOURCE LINES 15-29
 
 .. code-block:: default
 
     import numpy as np
+
     from ansys.mapdl.core import launch_mapdl
 
     # start mapdl, enter the preprocessor, and set the units
@@ -44,7 +45,7 @@ Also shown here:
     mapdl.prep7()
 
     # US Customary system using inches (in, lbf*s2/in, s, °F).
-    mapdl.units('BIN')
+    mapdl.units("BIN")
 
 
 
@@ -62,11 +63,11 @@ Also shown here:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-30
+.. GENERATED FROM PYTHON SOURCE LINES 30-31
 
 Set the materials and element type
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-38
+.. GENERATED FROM PYTHON SOURCE LINES 31-39
 
 .. code-block:: default
 
@@ -102,11 +103,11 @@ Set the materials and element type
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 39-40
+.. GENERATED FROM PYTHON SOURCE LINES 40-41
 
 Create the Geometry
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-57
+.. GENERATED FROM PYTHON SOURCE LINES 41-58
 
 .. code-block:: default
 
@@ -120,11 +121,11 @@ Create the Geometry
 
     # combine areas
     a_comb = mapdl.aadd(1, 2)
-    mapdl.aplot(color='grey', background='w', show_area_numbering=True)
+    mapdl.aplot(color="grey", background="w", show_area_numbering=True)
 
     # Generate a cylindrical volume by rotating an area pattern about an axis
     mapdl.vrotat(a_comb, pax1=6, arc=90)
-    mapdl.vplot(color='grey', background='w', show_area_numbering=True, cpos='zy')
+    mapdl.vplot(color="grey", background="w", show_area_numbering=True, cpos="zy")
 
 
 
@@ -166,11 +167,11 @@ Create the Geometry
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 58-59
+.. GENERATED FROM PYTHON SOURCE LINES 59-60
 
 Create the mesh
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-67
+.. GENERATED FROM PYTHON SOURCE LINES 60-68
 
 .. code-block:: default
 
@@ -179,7 +180,7 @@ Create the mesh
     mapdl.mshape(1, "3D")
     mapdl.mshkey(0)
     mapdl.vmesh("ALL")
-    mapdl.eplot(color='grey', background='w')
+    mapdl.eplot(color="grey", background="w")
 
 
 
@@ -205,11 +206,11 @@ Create the mesh
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 68-69
+.. GENERATED FROM PYTHON SOURCE LINES 69-70
 
 Solve
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-89
+.. GENERATED FROM PYTHON SOURCE LINES 70-90
 
 .. code-block:: default
 
@@ -244,11 +245,11 @@ Solve
  .. code-block:: none
 
 
-    'FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =        95.339'
+    'FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =       121.276'
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 90-96
+.. GENERATED FROM PYTHON SOURCE LINES 91-97
 
 Post-Processing
 ~~~~~~~~~~~~~~~
@@ -257,7 +258,7 @@ von-mises stress for the single static solution. Here, we use MAPDL
 directly to obtain the results using a wrapper around the VGET
 method to efficiently obtain results without outputting to disk.
 
-.. GENERATED FROM PYTHON SOURCE LINES 96-121
+.. GENERATED FROM PYTHON SOURCE LINES 97-122
 
 .. code-block:: default
 
@@ -273,18 +274,18 @@ method to efficiently obtain results without outputting to disk.
 
     # we could print out the solution for each node with:
 
-    print(f'\nNode  Stress (psi)')
+    print(f"\nNode  Stress (psi)")
     for node_num, stress_value in zip(nnum[:5], von_mises_mapdl[:5]):
-        print(f'{node_num:<5d} {stress_value:.3f}')
-    print('...')
+        print(f"{node_num:<5d} {stress_value:.3f}")
+    print("...")
 
     # or simply get the maximum stress value and corresponding node
     idx = np.argmax(von_mises_mapdl)
     node_num = nnum[idx]
     stress_value = von_mises_mapdl[idx]
-    print(f'\nMaximum Stress')
-    print(f'Node  Stress (psi)')
-    print(f'{node_num:<5d} {stress_value:.3f}')
+    print(f"\nMaximum Stress")
+    print(f"Node  Stress (psi)")
+    print(f"{node_num:<5d} {stress_value:.3f}")
 
 
 
@@ -312,16 +313,16 @@ method to efficiently obtain results without outputting to disk.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 122-123
+.. GENERATED FROM PYTHON SOURCE LINES 123-124
 
 Plot the results
 
-.. GENERATED FROM PYTHON SOURCE LINES 123-127
+.. GENERATED FROM PYTHON SOURCE LINES 124-128
 
 .. code-block:: default
 
 
-    mapdl.post_processing.plot_nodal_eqv_stress(cpos='zy')
+    mapdl.post_processing.plot_nodal_eqv_stress(cpos="zy")
 
 
 
@@ -347,13 +348,13 @@ Plot the results
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 128-131
+.. GENERATED FROM PYTHON SOURCE LINES 129-132
 
 We could, alternatively, get the exact same results by directly
 accessing the result file using the legacy file reader
 `ansys-mapdl-reader <https://github.com/pyansys/pymapdl-reader>`_.
 
-.. GENERATED FROM PYTHON SOURCE LINES 131-142
+.. GENERATED FROM PYTHON SOURCE LINES 132-143
 
 .. code-block:: default
 
@@ -366,7 +367,7 @@ accessing the result file using the legacy file reader
     nnum, stress = result.principal_nodal_stress(0)
     von_mises = stress[:, -1]  # von-Mises stress is the right most column
     min_von_mises, max_von_mises = np.min(von_mises), np.max(von_mises)
-    print('All close:', np.allclose(von_mises, von_mises_mapdl))
+    print("All close:", np.allclose(von_mises, von_mises_mapdl))
 
 
 
@@ -387,7 +388,7 @@ accessing the result file using the legacy file reader
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 143-148
+.. GENERATED FROM PYTHON SOURCE LINES 144-149
 
 That these results are equivalent to results from PRNSOL.
 
@@ -395,23 +396,23 @@ That these results are equivalent to results from PRNSOL.
    Enabling POWER GRAPHICS with ``mapdl.graphics('POWER')`` will
    change the averaging scheme.
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-162
+.. GENERATED FROM PYTHON SOURCE LINES 149-163
 
 .. code-block:: default
 
 
-    mapdl.header('OFF', 'OFF', 'OFF', 'OFF', 'OFF', 'OFF')
-    table = mapdl.prnsol('S', 'PRIN').splitlines()[1:]
+    mapdl.header("OFF", "OFF", "OFF", "OFF", "OFF", "OFF")
+    table = mapdl.prnsol("S", "PRIN").splitlines()[1:]
     prnsol_eqv = np.genfromtxt(table)[:, -1]  # eqv is the last column
 
     # show these are equivalent (RTOL due to rounding within PRNSOL)
-    print('All close:', np.allclose(von_mises, prnsol_eqv, rtol=1E-4))
+    print("All close:", np.allclose(von_mises, prnsol_eqv, rtol=1e-4))
 
-    print(f'LEGACY Reader and MAPDL VGET Min: {min_von_mises}')
-    print(f'PRNSOL MAPDL Min:                 {prnsol_eqv.min()}')
+    print(f"LEGACY Reader and MAPDL VGET Min: {min_von_mises}")
+    print(f"PRNSOL MAPDL Min:                 {prnsol_eqv.min()}")
     print()
-    print(f'LEGACY Reader and MAPDL VGET Min: {max_von_mises}')
-    print(f'PRNSOL MAPDL Min:                 {prnsol_eqv.max()}')
+    print(f"LEGACY Reader and MAPDL VGET Min: {max_von_mises}")
+    print(f"PRNSOL MAPDL Min:                 {prnsol_eqv.max()}")
 
 
 
@@ -433,11 +434,11 @@ That these results are equivalent to results from PRNSOL.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 163-164
+.. GENERATED FROM PYTHON SOURCE LINES 164-165
 
 stop mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 164-165
+.. GENERATED FROM PYTHON SOURCE LINES 165-166
 
 .. code-block:: default
 
@@ -452,7 +453,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.096 seconds)
+   **Total running time of the script:** ( 0 minutes  8.639 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_pressure_vessel.py:

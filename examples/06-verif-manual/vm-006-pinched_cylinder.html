@@ -712,10 +712,13 @@ due to symmetry.</p></li>
 
     <span class="k">return</span> <a href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">elem_type</span></a><span class="p">,</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">etlist</span><span class="p">()</span>
 
+
 <span class="c1"># Return the number of the element type.</span>
 <a href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">elem_type</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">elem_type_list</span></a> <span class="o">=</span> <span class="n">define_element</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">elem_type</span></a><span class="o">=</span><span class="s2">&quot;SHELL181&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Selected element type is: </span><span class="si">{</span><a href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">elem_type</span></a><span class="si">}</span><span class="s2">,</span><span class="se">\n</span><span class="s2">&quot;</span>
-      <span class="sa">f</span><span class="s2">&quot;Printout the element list with its own properties:</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">elem_type_list</span></a><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;Selected element type is: </span><span class="si">{</span><a href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">elem_type</span></a><span class="si">}</span><span class="s2">,</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;Printout the element list with its own properties:</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">elem_type_list</span></a><span class="si">}</span><span class="s2">&quot;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -742,9 +745,10 @@ Poisson’s ratio is <span class="math notranslate nohighlight">\(\nu = 0.3125\)
 <span class="c1"># Define material properties.</span>
 <span class="k">def</span> <span class="nf">define_material</span><span class="p">():</span>
     <span class="c1"># Define material properties.</span>
-    <span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;EX&quot;</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mat_num</span></a><span class="p">,</span> <span class="mf">10.5E6</span><span class="p">)</span>
+    <span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;EX&quot;</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mat_num</span></a><span class="p">,</span> <span class="mf">10.5e6</span><span class="p">)</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;NUXY&quot;</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mat_num</span></a><span class="p">,</span> <span class="mf">0.3125</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">mplist</span><span class="p">()</span>
+
 
 <a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">material_list</span></a> <span class="o">=</span> <span class="n">define_material</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">material_list</span></a><span class="p">)</span>
@@ -774,6 +778,7 @@ Poisson’s ratio is <span class="math notranslate nohighlight">\(\nu = 0.3125\)
     <span class="n">mapdl</span><span class="o">.</span><span class="n">sectype</span><span class="p">(</span><span class="n">secid</span><span class="o">=</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sec_num</span></a><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="s2">&quot;SHELL&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;shell181&quot;</span><span class="p">)</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">secdata</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">t</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mat_num</span></a><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">slist</span><span class="p">()</span>
+
 
 <a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">section_list</span></a> <span class="o">=</span> <span class="n">define_section</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">section_list</span></a><span class="p">)</span>
@@ -828,16 +833,19 @@ Poisson’s ratio is <span class="math notranslate nohighlight">\(\nu = 0.3125\)
 
     <span class="k">if</span> <a href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">elem_type</span></a> <span class="o">==</span> <span class="s2">&quot;SHELL181&quot;</span><span class="p">:</span>
         <span class="c1"># Plot the lines.</span>
-        <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">color_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;iso&#39;</span><span class="p">)</span>
+        <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">color_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;iso&quot;</span><span class="p">)</span>
 
         <span class="c1"># Plot the area using PyVista parameters.</span>
-        <span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Display the selected area&quot;</span><span class="p">,</span>
-                    <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;iso&quot;</span><span class="p">,</span>
-                    <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#06C2AC&quot;</span><span class="p">,</span>
-                    <span class="n">show_line_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">show_area_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span>
+            <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Display the selected area&quot;</span><span class="p">,</span>
+            <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;iso&quot;</span><span class="p">,</span>
+            <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#06C2AC&quot;</span><span class="p">,</span>
+            <span class="n">show_line_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">show_area_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+
 
 <span class="n">define_geometry</span><span class="p">()</span>
 
@@ -846,6 +854,7 @@ Poisson’s ratio is <span class="math notranslate nohighlight">\(\nu = 0.3125\)
 <span class="k">def</span> <span class="nf">keypoint_number</span><span class="p">(</span><span class="n">mapdl</span><span class="p">):</span>
     <span class="n">keypoint_num</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">queries</span><span class="o">.</span><span class="n">kp</span><span class="p">(</span><span class="mf">4.953</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">keypoint_num</span>
+
 
 <span class="c1"># Call the function to get the number of keypoint.</span>
 <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">top_keypoint</span></a> <span class="o">=</span> <span class="n">keypoint_number</span><span class="p">(</span><span class="n">mapdl</span><span class="p">)</span>
@@ -871,7 +880,7 @@ The number of the keypoint where F is applied: 3
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define mesh properties and create the mesh with shell elements.</span>
 <span class="k">def</span> <span class="nf">meshing</span><span class="p">():</span>
     <span class="c1"># Specify the default number of line divisions.</span>
-    <span class="n">mapdl</span><span class="o">.</span><span class="n">esize</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ndiv</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+    <span class="n">mapdl</span><span class="o">.</span><span class="n">esize</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">ndiv</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 
     <span class="c1"># Mesh the area.</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">amesh</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -881,27 +890,27 @@ The number of the keypoint where F is applied: 3
 
     <span class="k">if</span> <a href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">elem_type</span></a> <span class="o">==</span> <span class="s2">&quot;SHELL181&quot;</span><span class="p">:</span>
         <span class="c1"># Plot the mesh.</span>
-        <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Plot of the currently selected elements&quot;</span><span class="p">,</span>
-                    <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;iso&quot;</span><span class="p">,</span>
-                    <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">edge_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>
-                    <span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;purple&quot;</span><span class="p">)</span>
+        <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span>
+            <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Plot of the currently selected elements&quot;</span><span class="p">,</span>
+            <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;iso&quot;</span><span class="p">,</span>
+            <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">edge_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>
+            <span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="s2">&quot;purple&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
 
     <span class="c1"># Print the list of elements.</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">elist</span><span class="p">())</span>
 
     <span class="c1"># Plot the nodes using VTK.</span>
-    <span class="n">mapdl</span><span class="o">.</span><span class="n">nplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                <span class="n">nnum</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                <span class="n">background</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;iso&quot;</span><span class="p">,</span>
-                <span class="n">show_bounds</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                <span class="n">point_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">mapdl</span><span class="o">.</span><span class="n">nplot</span><span class="p">(</span>
+        <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nnum</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;iso&quot;</span><span class="p">,</span> <span class="n">show_bounds</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">10</span>
+    <span class="p">)</span>
 
     <span class="c1"># Print the list of nodes.</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">nlist</span><span class="p">())</span>
+
 
 <span class="n">meshing</span><span class="p">()</span>
 </pre></div>
@@ -1078,6 +1087,7 @@ LIST ALL SELECTED ELEMENTS.  (LIST NODES)
     <span class="n">mapdl</span><span class="o">.</span><span class="n">dsym</span><span class="p">(</span><span class="s2">&quot;SYMM&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
 
+
 <span class="n">define_bc</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1094,6 +1104,7 @@ LIST ALL SELECTED ELEMENTS.  (LIST NODES)
     <span class="n">mapdl</span><span class="o">.</span><span class="n">fk</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">top_keypoint</span></a><span class="p">,</span> <span class="s2">&quot;FY&quot;</span><span class="p">,</span> <span class="o">-</span><span class="n">force</span><span class="p">)</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 
+
 <span class="n">define_loads</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1106,6 +1117,7 @@ LIST ALL SELECTED ELEMENTS.  (LIST NODES)
     <span class="n">out</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">out</span>
+
 
 <a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_info</span></a> <span class="o">=</span> <span class="n">solve_procedure</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_info</span></a><span class="p">)</span>
@@ -1205,6 +1217,7 @@ Get the the radial displacement at the node where force F is applied.</p>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
+
 <span class="n">post_processing</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1220,8 +1233,9 @@ Get the the radial displacement at the node where force F is applied.</p>
         <span class="n">scalar_bar_args</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Nodal Displacements&quot;</span><span class="p">,</span> <span class="s2">&quot;vertical&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">show_axes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span>
+        <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="p">)</span>
+
 
 <span class="n">plot_nodal_disp</span><span class="p">()</span>
 </pre></div>
@@ -1249,17 +1263,19 @@ where F is applied, we can use <a class="reference internal" href="../../api/_au
     <span class="n">top_node</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;node&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;num&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">))</span>
 
     <span class="c1"># Define radial displacement at the node where F is applied.</span>
-    <span class="n">deflect_shell</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">entity</span><span class="o">=</span><span class="s1">&#39;node&#39;</span><span class="p">,</span>
-                                    <span class="n">entnum</span><span class="o">=</span><span class="n">top_node</span><span class="p">,</span>
-                                    <span class="n">item1</span><span class="o">=</span><span class="s1">&#39;u&#39;</span><span class="p">,</span>
-                                    <span class="n">it1num</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+    <span class="n">deflect_shell</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span>
+        <span class="n">entity</span><span class="o">=</span><span class="s2">&quot;node&quot;</span><span class="p">,</span> <span class="n">entnum</span><span class="o">=</span><span class="n">top_node</span><span class="p">,</span> <span class="n">item1</span><span class="o">=</span><span class="s2">&quot;u&quot;</span><span class="p">,</span> <span class="n">it1num</span><span class="o">=</span><span class="s2">&quot;y&quot;</span>
+    <span class="p">)</span>
 
     <span class="k">return</span> <span class="n">top_node</span><span class="p">,</span> <span class="n">deflect_shell</span>
 
+
 <span class="c1"># Call the function and get the value of the deflection.</span>
 <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">top_node_181</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">deflect_shell_181</span></a> <span class="o">=</span> <span class="n">get_displacements</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of the node attached to the top keypoint: </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">top_node_181</span></a><span class="si">}</span><span class="s2">,</span><span class="se">\n</span><span class="s2">&quot;</span>
-      <span class="sa">f</span><span class="s2">&quot;Radial displacement: </span><span class="si">{</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">deflect_shell_181</span></a><span class="p">,</span> <span class="mi">4</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;Number of the node attached to the top keypoint: </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">top_node_181</span></a><span class="si">}</span><span class="s2">,</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;Radial displacement: </span><span class="si">{</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">deflect_shell_181</span></a><span class="p">,</span> <span class="mi">4</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -1648,7 +1664,7 @@ and <span class="math notranslate nohighlight">\(\delta_{\mathrm{shell281}}\)</s
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.295 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.904 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-06-verif-manual-vm-006-pinched-cylinder-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/80d1bf6abbda798ce91b0e6e10e1daa4/vm-006-pinched_cylinder.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-006-pinched_cylinder.py</span></code></a></p>

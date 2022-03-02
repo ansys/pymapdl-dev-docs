@@ -678,9 +678,9 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 <p>Start MAPDL and import Numpy and Pandas libraries.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_path = &#39;_static/vm7_setup.png&#39;</span>
 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
@@ -771,7 +771,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Steel material model.</span>
 <span class="c1"># Define Young&#39;s moulus and Poisson ratio for Steel.</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;EX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">26.875E6</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;EX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">26.875e6</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;PRXY&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
 
 <span class="c1"># Define non-linear material properties for Steel.</span>
@@ -781,7 +781,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 
 <span class="c1"># Aluminum material model.</span>
 <span class="c1"># Define Young&#39;s moulus and Poisson ratio for Aluminum.</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;EX&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">11E6</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;EX&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">11e6</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;PRXY&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
 
 <span class="c1"># Define non-linear material properties for Aluminum.</span>
@@ -816,42 +816,60 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 <h2>Plot Stress - Strain Curve<a class="headerlink" href="#plot-stress-strain-curve" title="Permalink to this headline">¶</a></h2>
 <p>Use Matplotlib library to plot material model curves of steel and aluminum.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define stress - strain properties of the steel.</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel</span></a> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stress_s&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">86000</span><span class="p">,</span> <span class="mi">86000</span><span class="p">,</span> <span class="mi">86000</span><span class="p">],</span>
-         <span class="s2">&quot;strain_s&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.032</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]}</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel</span></a> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stress_s&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">86000</span><span class="p">,</span> <span class="mi">86000</span><span class="p">,</span> <span class="mi">86000</span><span class="p">],</span> <span class="s2">&quot;strain_s&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.032</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]}</span>
 
 <span class="c1"># Define yielding strength point of the steel on the curve.</span>
 <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">xp</span></a> <span class="o">=</span> <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel</span></a><span class="p">[</span><span class="s2">&quot;strain_s&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">yp</span></a> <span class="o">=</span> <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel</span></a><span class="p">[</span><span class="s2">&quot;stress_s&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="c1"># Set up the settings of the steel curve.</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel</span></a><span class="p">[</span><span class="s2">&quot;strain_s&quot;</span><span class="p">],</span> <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel</span></a><span class="p">[</span><span class="s2">&quot;stress_s&quot;</span><span class="p">],</span>
-         <span class="n">label</span><span class="o">=</span><span class="s2">&quot;1020 CR STEEL&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-         <span class="n">color</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">xp</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">yp</span></a><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span>
+    <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel</span></a><span class="p">[</span><span class="s2">&quot;strain_s&quot;</span><span class="p">],</span>
+    <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel</span></a><span class="p">[</span><span class="s2">&quot;stress_s&quot;</span><span class="p">],</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;1020 CR STEEL&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;steelblue&quot;</span><span class="p">,</span>
+    <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">xp</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">yp</span></a><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">)</span>
 
 <span class="c1"># Annotation settings</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.annotate.html#matplotlib.pyplot.annotate" title="matplotlib.pyplot.annotate" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">annotate</span></a><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;${(\sigma_</span><span class="si">{yp}</span><span class="s1">)_s}$&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">xp</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">yp</span></a><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mi">75000</span><span class="p">),</span>
-             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
-             <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round, pad=1&#39;</span><span class="p">))</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.annotate.html#matplotlib.pyplot.annotate" title="matplotlib.pyplot.annotate" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">annotate</span></a><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;${(\sigma_</span><span class="si">{yp}</span><span class="s2">)_s}$&quot;</span><span class="p">,</span>
+    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">xp</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">yp</span></a><span class="p">),</span>
+    <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mi">75000</span><span class="p">),</span>
+    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;steelblue&quot;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+    <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;steelblue&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;round, pad=1&quot;</span><span class="p">),</span>
+<span class="p">)</span>
 
 <span class="c1"># Define stress - strain properties of the aluminum.</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">aluminum</span></a> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stress_a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">55000</span><span class="p">,</span> <span class="mi">55000</span><span class="p">,</span> <span class="mi">55000</span><span class="p">],</span>
-            <span class="s2">&quot;strain_a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]}</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">aluminum</span></a> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stress_a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">55000</span><span class="p">,</span> <span class="mi">55000</span><span class="p">,</span> <span class="mi">55000</span><span class="p">],</span> <span class="s2">&quot;strain_a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]}</span>
 
 <span class="c1"># Define yielding strength point of the Aluminum on the curve.</span>
 <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">xp</span></a> <span class="o">=</span> <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">aluminum</span></a><span class="p">[</span><span class="s2">&quot;strain_a&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">yp</span></a> <span class="o">=</span> <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">aluminum</span></a><span class="p">[</span><span class="s2">&quot;stress_a&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="c1"># Set up the settings of the aluminum curve.</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">aluminum</span></a><span class="p">[</span><span class="s2">&quot;strain_a&quot;</span><span class="p">],</span> <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">aluminum</span></a><span class="p">[</span><span class="s2">&quot;stress_a&quot;</span><span class="p">],</span>
-         <span class="n">label</span><span class="o">=</span><span class="s2">&quot;2024-T4 Aluminum&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-         <span class="n">color</span><span class="o">=</span><span class="s1">&#39;sandybrown&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">xp</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">yp</span></a><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span>
+    <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">aluminum</span></a><span class="p">[</span><span class="s2">&quot;strain_a&quot;</span><span class="p">],</span>
+    <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">aluminum</span></a><span class="p">[</span><span class="s2">&quot;stress_a&quot;</span><span class="p">],</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;2024-T4 Aluminum&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;sandybrown&quot;</span><span class="p">,</span>
+    <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">xp</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">yp</span></a><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">)</span>
 
 <span class="c1"># Annotation settings</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.annotate.html#matplotlib.pyplot.annotate" title="matplotlib.pyplot.annotate" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">annotate</span></a><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;${(\sigma_</span><span class="si">{yp}</span><span class="s1">)_a}$&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">xp</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">yp</span></a><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.07</span><span class="p">,</span> <span class="mi">45000</span><span class="p">),</span>
-             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;sandybrown&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
-             <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;sandybrown&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round, pad=1&#39;</span><span class="p">))</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.annotate.html#matplotlib.pyplot.annotate" title="matplotlib.pyplot.annotate" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">annotate</span></a><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;${(\sigma_</span><span class="si">{yp}</span><span class="s2">)_a}$&quot;</span><span class="p">,</span>
+    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">xp</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">yp</span></a><span class="p">),</span>
+    <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.07</span><span class="p">,</span> <span class="mi">45000</span><span class="p">),</span>
+    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;sandybrown&quot;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+    <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;sandybrown&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;round, pad=1&quot;</span><span class="p">),</span>
+<span class="p">)</span>
 
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html#matplotlib.pyplot.grid" title="matplotlib.pyplot.grid" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span></a><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend" title="matplotlib.pyplot.legend" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span></a><span class="p">()</span>
@@ -1026,9 +1044,11 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 <span class="n">mapdl</span><span class="o">.</span><span class="n">e</span><span class="p">(</span><span class="mi">204</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">206</span><span class="p">,</span> <span class="mi">208</span><span class="p">)</span>
 
 <span class="c1"># Plot element model to demonstrate the axisymmetric element model.</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a> <span class="o">=</span> <span class="p">[(</span><span class="mf">19.67899462804619</span><span class="p">,</span> <span class="mf">17.856836088414664</span><span class="p">,</span> <span class="mf">22.644135378046194</span><span class="p">),</span>
-        <span class="p">(</span><span class="mf">2.03485925</span><span class="p">,</span> <span class="mf">0.21270071036846988</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">),</span>
-        <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)]</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mf">19.67899462804619</span><span class="p">,</span> <span class="mf">17.856836088414664</span><span class="p">,</span> <span class="mf">22.644135378046194</span><span class="p">),</span>
+    <span class="p">(</span><span class="mf">2.03485925</span><span class="p">,</span> <span class="mf">0.21270071036846988</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">),</span>
+    <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+<span class="p">]</span>
 <a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">_</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">)</span>
 </pre></div>
 </div>
@@ -1170,9 +1190,7 @@ axisymmetric model and convert it to the full model.</p>
     <span class="n">load_181</span> <span class="o">=</span> <span class="n">load_181_theta</span> <span class="o">*</span> <span class="mi">360</span> <span class="o">/</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">theta</span></a>
 
     <span class="c1"># Return load results of each element model.</span>
-    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">load_288</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> \
-           <span class="nb">abs</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">load_185</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> \
-           <span class="nb">abs</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">load_181</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">load_288</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">load_185</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">load_181</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 </div>
 </section>
@@ -1203,114 +1221,127 @@ which can be compared with expected target values for models with <code class="d
 <li><p>2nd Load Step with deflection <span class="math notranslate nohighlight">\(\delta = 0.05 (in)\)</span> has <span class="math notranslate nohighlight">\(load_2 = 1262000\,(lb)\)</span>.</p></li>
 <li><p>3rd Load Step with deflection <span class="math notranslate nohighlight">\(\delta = 0.1 (in)\)</span> has <span class="math notranslate nohighlight">\(load_3 = 1262000\,(lb)\)</span>.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.asarray.html#numpy.asarray" title="numpy.asarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">asarray</span></a><span class="p">([</span><span class="mi">1024400</span><span class="p">,</span> <span class="mi">1262000</span><span class="p">,</span> <span class="mi">1262000</span><span class="p">,</span>
-                         <span class="mi">1024400</span><span class="p">,</span> <span class="mi">1262000</span><span class="p">,</span> <span class="mi">1262000</span><span class="p">,</span>
-                         <span class="mi">1024400</span><span class="p">,</span> <span class="mi">1262000</span><span class="p">,</span> <span class="mi">1262000</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.asarray.html#numpy.asarray" title="numpy.asarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">asarray</span></a><span class="p">(</span>
+    <span class="p">[</span><span class="mi">1024400</span><span class="p">,</span> <span class="mi">1262000</span><span class="p">,</span> <span class="mi">1262000</span><span class="p">,</span> <span class="mi">1024400</span><span class="p">,</span> <span class="mi">1262000</span><span class="p">,</span> <span class="mi">1262000</span><span class="p">,</span> <span class="mi">1024400</span><span class="p">,</span> <span class="mi">1262000</span><span class="p">,</span> <span class="mi">1262000</span><span class="p">]</span>
+<span class="p">)</span>
 
-<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_res</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.asarray.html#numpy.asarray" title="numpy.asarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">asarray</span></a><span class="p">([</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pipe288_ls1</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pipe288_ls2</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pipe288_ls2</span></a><span class="p">,</span>
-                             <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">solid185_ls1</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">solid185_ls2</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">solid185_ls3</span></a><span class="p">,</span>
-                             <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">shell181_ls1</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">shell181_ls2</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">shell181_ls3</span></a><span class="p">])</span>
+<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_res</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.asarray.html#numpy.asarray" title="numpy.asarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">asarray</span></a><span class="p">(</span>
+    <span class="p">[</span>
+        <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pipe288_ls1</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pipe288_ls2</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pipe288_ls2</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">solid185_ls1</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">solid185_ls2</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">solid185_ls3</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">shell181_ls1</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">shell181_ls2</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">shell181_ls3</span></a><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span>
 
 <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">main_columns</span></a> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Target&quot;</span><span class="p">:</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a><span class="p">,</span>
     <span class="s2">&quot;Mechanical APDL&quot;</span><span class="p">:</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_res</span></a><span class="p">,</span>
-    <span class="s2">&quot;Ratio&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">divide</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_res</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a><span class="p">))</span>
+    <span class="s2">&quot;Ratio&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">divide</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_res</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a><span class="p">)),</span>
 <span class="p">}</span>
 
-<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">row_tuple</span></a> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;PIPE288&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.032 in&quot;</span><span class="p">),</span>
-             <span class="p">(</span><span class="s2">&quot;PIPE288&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.05 in&quot;</span><span class="p">),</span>
-             <span class="p">(</span><span class="s2">&quot;PIPE288&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.1 in&quot;</span><span class="p">),</span>
-
-             <span class="p">(</span><span class="s2">&quot;SOLID185&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.032 in&quot;</span><span class="p">),</span>
-             <span class="p">(</span><span class="s2">&quot;SOLID185&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.05 in&quot;</span><span class="p">),</span>
-             <span class="p">(</span><span class="s2">&quot;SOLID185&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.1 in&quot;</span><span class="p">),</span>
-
-             <span class="p">(</span><span class="s2">&quot;SHELL181&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.032 in&quot;</span><span class="p">),</span>
-             <span class="p">(</span><span class="s2">&quot;SHELL181&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.05 in&quot;</span><span class="p">),</span>
-             <span class="p">(</span><span class="s2">&quot;SHELL181&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.1 in&quot;</span><span class="p">)]</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">row_tuple</span></a> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;PIPE288&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.032 in&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;PIPE288&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.05 in&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;PIPE288&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.1 in&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;SOLID185&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.032 in&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;SOLID185&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.05 in&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;SOLID185&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.1 in&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;SHELL181&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.032 in&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;SHELL181&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.05 in&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;SHELL181&quot;</span><span class="p">,</span> <span class="s2">&quot;Load, lb for Deflection = 0.1 in&quot;</span><span class="p">),</span>
+<span class="p">]</span>
 
 <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">index_names</span></a> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Element Type&quot;</span><span class="p">,</span> <span class="s2">&quot;Load Step&quot;</span><span class="p">]</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.MultiIndex.html#pandas.MultiIndex" title="pandas.core.indexes.multi.MultiIndex" class="sphx-glr-backref-module-pandas-core-indexes-multi sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">row_indexing</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.MultiIndex.from_tuples.html#pandas.MultiIndex.from_tuples" title="pandas.MultiIndex.from_tuples" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-method"><span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_tuples</span></a><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">row_tuple</span></a><span class="p">)</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class"><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span></a><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">main_columns</span></a><span class="p">,</span> <span class="n">index</span><span class="o">=</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.MultiIndex.html#pandas.MultiIndex" title="pandas.core.indexes.multi.MultiIndex" class="sphx-glr-backref-module-pandas-core-indexes-multi sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">row_indexing</span></a><span class="p">)</span>
 
-<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.style.html#pandas.DataFrame.style" title="pandas.DataFrame.style" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-property"><span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_caption</span></a><span class="p">(</span><span class="s1">&#39;Results Comparison&#39;</span><span class="p">,</span>
-                     <span class="p">)</span><span class="o">.</span><span class="n">set_table_styles</span><span class="p">([</span>
-                        <span class="p">{</span>
-                            <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;th.col_heading&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;props&quot;</span><span class="p">:</span> <span class="p">[(</span><span class="s2">&quot;background-color&quot;</span><span class="p">,</span> <span class="s2">&quot;#FFEFD5&quot;</span><span class="p">),</span>
-                                      <span class="p">(</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">),</span>
-                                      <span class="p">(</span><span class="s2">&quot;border&quot;</span><span class="p">,</span> <span class="s2">&quot;0.5px solid black&quot;</span><span class="p">),</span>
-                                      <span class="p">(</span><span class="s2">&quot;font-style&quot;</span><span class="p">,</span> <span class="s2">&quot;italic&quot;</span><span class="p">),</span>
-                                      <span class="p">(</span><span class="s2">&quot;text-align&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)]</span>
-                        <span class="p">},</span>
-                        <span class="p">{</span>
-                            <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;th.row_heading&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;props&quot;</span><span class="p">:</span> <span class="p">[(</span><span class="s2">&quot;background-color&quot;</span><span class="p">,</span> <span class="s2">&quot;#FFEFD5&quot;</span><span class="p">),</span>
-                                      <span class="p">(</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">),</span>
-                                      <span class="p">(</span><span class="s2">&quot;border&quot;</span><span class="p">,</span> <span class="s2">&quot;0.5px solid black&quot;</span><span class="p">),</span>
-                                      <span class="p">(</span><span class="s2">&quot;font-style&quot;</span><span class="p">,</span> <span class="s2">&quot;italic&quot;</span><span class="p">),</span>
-                                      <span class="p">(</span><span class="s2">&quot;text-align&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)]</span>
-                        <span class="p">},</span>
-                        <span class="p">{</span>
-                            <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;td:hover&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;props&quot;</span><span class="p">:</span> <span class="p">[(</span><span class="s2">&quot;background-color&quot;</span><span class="p">,</span> <span class="s2">&quot;#FFF8DC&quot;</span><span class="p">)]</span>
-                        <span class="p">},</span>
-                        <span class="p">{</span>
-                            <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;th&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;props&quot;</span><span class="p">:</span> <span class="p">[(</span><span class="s2">&quot;max-width&quot;</span><span class="p">,</span> <span class="s1">&#39;120px&#39;</span><span class="p">)]</span>
-                        <span class="p">},</span>
-                        <span class="p">{</span>
-                            <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;props&quot;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;border&#39;</span><span class="p">,</span> <span class="s1">&#39;0.5px solid black&#39;</span><span class="p">)]</span>
-                        <span class="p">},</span>
-                        <span class="p">{</span>
-                            <span class="s1">&#39;selector&#39;</span><span class="p">:</span> <span class="s1">&#39;caption&#39;</span><span class="p">,</span>
-                            <span class="s1">&#39;props&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">),</span>
-                                      <span class="p">(</span><span class="s2">&quot;font-style&quot;</span><span class="p">,</span> <span class="s2">&quot;italic&quot;</span><span class="p">),</span>
-                                      <span class="p">(</span><span class="s1">&#39;font-size&#39;</span><span class="p">,</span> <span class="s1">&#39;24px&#39;</span><span class="p">),</span>
-                                      <span class="p">(</span><span class="s2">&quot;text-align&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)]</span>
-                        <span class="p">}],</span>
-<span class="p">)</span><span class="o">.</span><span class="n">set_properties</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
-    <span class="s2">&quot;background-color&quot;</span><span class="p">:</span> <span class="s2">&quot;#FFFAFA&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;border-color&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;border-width&quot;</span><span class="p">:</span> <span class="s2">&quot;0.5px&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;border-style&quot;</span><span class="p">:</span> <span class="s2">&quot;solid&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;text-align&quot;</span><span class="p">:</span> <span class="s2">&quot;center&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.style.html#pandas.DataFrame.style" title="pandas.DataFrame.style" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-property"><span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_caption</span></a><span class="p">(</span><span class="s2">&quot;Results Comparison&quot;</span><span class="p">,)</span><span class="o">.</span><span class="n">set_table_styles</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;th.col_heading&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;props&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">(</span><span class="s2">&quot;background-color&quot;</span><span class="p">,</span> <span class="s2">&quot;#FFEFD5&quot;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;border&quot;</span><span class="p">,</span> <span class="s2">&quot;0.5px solid black&quot;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;font-style&quot;</span><span class="p">,</span> <span class="s2">&quot;italic&quot;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;text-align&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">),</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;th.row_heading&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;props&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">(</span><span class="s2">&quot;background-color&quot;</span><span class="p">,</span> <span class="s2">&quot;#FFEFD5&quot;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;border&quot;</span><span class="p">,</span> <span class="s2">&quot;0.5px solid black&quot;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;font-style&quot;</span><span class="p">,</span> <span class="s2">&quot;italic&quot;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;text-align&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">),</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;td:hover&quot;</span><span class="p">,</span> <span class="s2">&quot;props&quot;</span><span class="p">:</span> <span class="p">[(</span><span class="s2">&quot;background-color&quot;</span><span class="p">,</span> <span class="s2">&quot;#FFF8DC&quot;</span><span class="p">)]},</span>
+        <span class="p">{</span><span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;th&quot;</span><span class="p">,</span> <span class="s2">&quot;props&quot;</span><span class="p">:</span> <span class="p">[(</span><span class="s2">&quot;max-width&quot;</span><span class="p">,</span> <span class="s2">&quot;120px&quot;</span><span class="p">)]},</span>
+        <span class="p">{</span><span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;props&quot;</span><span class="p">:</span> <span class="p">[(</span><span class="s2">&quot;border&quot;</span><span class="p">,</span> <span class="s2">&quot;0.5px solid black&quot;</span><span class="p">)]},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;caption&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;props&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">(</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;font-style&quot;</span><span class="p">,</span> <span class="s2">&quot;italic&quot;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;font-size&quot;</span><span class="p">,</span> <span class="s2">&quot;24px&quot;</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;text-align&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">),</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_properties</span><span class="p">(</span>
+    <span class="o">**</span><span class="p">{</span>
+        <span class="s2">&quot;background-color&quot;</span><span class="p">:</span> <span class="s2">&quot;#FFFAFA&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;border-color&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;border-width&quot;</span><span class="p">:</span> <span class="s2">&quot;0.5px&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;border-style&quot;</span><span class="p">:</span> <span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;text-align&quot;</span><span class="p">:</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <div class="output_subarea output_html rendered_html output_result">
 <style type="text/css">
-#T_de0a3 th.col_heading {
+#T_67b59 th.col_heading {
   background-color: #FFEFD5;
   color: black;
   border: 0.5px solid black;
   font-style: italic;
   text-align: center;
 }
-#T_de0a3 th.row_heading {
+#T_67b59 th.row_heading {
   background-color: #FFEFD5;
   color: black;
   border: 0.5px solid black;
   font-style: italic;
   text-align: center;
 }
-#T_de0a3 td:hover {
+#T_67b59 td:hover {
   background-color: #FFF8DC;
 }
-#T_de0a3 th {
+#T_67b59 th {
   max-width: 120px;
 }
-#T_de0a3  {
+#T_67b59  {
   border: 0.5px solid black;
 }
-#T_de0a3 caption {
+#T_67b59 caption {
   color: black;
   font-style: italic;
   font-size: 24px;
   text-align: center;
 }
-#T_de0a3_row0_col0, #T_de0a3_row0_col1, #T_de0a3_row0_col2, #T_de0a3_row1_col0, #T_de0a3_row1_col1, #T_de0a3_row1_col2, #T_de0a3_row2_col0, #T_de0a3_row2_col1, #T_de0a3_row2_col2, #T_de0a3_row3_col0, #T_de0a3_row3_col1, #T_de0a3_row3_col2, #T_de0a3_row4_col0, #T_de0a3_row4_col1, #T_de0a3_row4_col2, #T_de0a3_row5_col0, #T_de0a3_row5_col1, #T_de0a3_row5_col2, #T_de0a3_row6_col0, #T_de0a3_row6_col1, #T_de0a3_row6_col2, #T_de0a3_row7_col0, #T_de0a3_row7_col1, #T_de0a3_row7_col2, #T_de0a3_row8_col0, #T_de0a3_row8_col1, #T_de0a3_row8_col2 {
+#T_67b59_row0_col0, #T_67b59_row0_col1, #T_67b59_row0_col2, #T_67b59_row1_col0, #T_67b59_row1_col1, #T_67b59_row1_col2, #T_67b59_row2_col0, #T_67b59_row2_col1, #T_67b59_row2_col2, #T_67b59_row3_col0, #T_67b59_row3_col1, #T_67b59_row3_col2, #T_67b59_row4_col0, #T_67b59_row4_col1, #T_67b59_row4_col2, #T_67b59_row5_col0, #T_67b59_row5_col1, #T_67b59_row5_col2, #T_67b59_row6_col0, #T_67b59_row6_col1, #T_67b59_row6_col2, #T_67b59_row7_col0, #T_67b59_row7_col1, #T_67b59_row7_col2, #T_67b59_row8_col0, #T_67b59_row8_col1, #T_67b59_row8_col2 {
   background-color: #FFFAFA;
   color: black;
   border-color: black;
@@ -1319,74 +1350,74 @@ which can be compared with expected target values for models with <code class="d
   text-align: center;
 }
 </style>
-<table id="T_de0a3">
+<table id="T_67b59">
   <caption>Results Comparison</caption>
   <thead>
     <tr>
       <th class="blank" >&nbsp;</th>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_de0a3_level0_col0" class="col_heading level0 col0" >Target</th>
-      <th id="T_de0a3_level0_col1" class="col_heading level0 col1" >Mechanical APDL</th>
-      <th id="T_de0a3_level0_col2" class="col_heading level0 col2" >Ratio</th>
+      <th id="T_67b59_level0_col0" class="col_heading level0 col0" >Target</th>
+      <th id="T_67b59_level0_col1" class="col_heading level0 col1" >Mechanical APDL</th>
+      <th id="T_67b59_level0_col2" class="col_heading level0 col2" >Ratio</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_de0a3_level0_row0" class="row_heading level0 row0" rowspan="3">PIPE288</th>
-      <th id="T_de0a3_level1_row0" class="row_heading level1 row0" >Load, lb for Deflection = 0.032 in</th>
-      <td id="T_de0a3_row0_col0" class="data row0 col0" >1024400.000</td>
-      <td id="T_de0a3_row0_col1" class="data row0 col1" >1024400.000</td>
-      <td id="T_de0a3_row0_col2" class="data row0 col2" >1.000</td>
+      <th id="T_67b59_level0_row0" class="row_heading level0 row0" rowspan="3">PIPE288</th>
+      <th id="T_67b59_level1_row0" class="row_heading level1 row0" >Load, lb for Deflection = 0.032 in</th>
+      <td id="T_67b59_row0_col0" class="data row0 col0" >1024400.000</td>
+      <td id="T_67b59_row0_col1" class="data row0 col1" >1024400.000</td>
+      <td id="T_67b59_row0_col2" class="data row0 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_de0a3_level1_row1" class="row_heading level1 row1" >Load, lb for Deflection = 0.05 in</th>
-      <td id="T_de0a3_row1_col0" class="data row1 col0" >1262000.000</td>
-      <td id="T_de0a3_row1_col1" class="data row1 col1" >1262000.000</td>
-      <td id="T_de0a3_row1_col2" class="data row1 col2" >1.000</td>
+      <th id="T_67b59_level1_row1" class="row_heading level1 row1" >Load, lb for Deflection = 0.05 in</th>
+      <td id="T_67b59_row1_col0" class="data row1 col0" >1262000.000</td>
+      <td id="T_67b59_row1_col1" class="data row1 col1" >1262000.000</td>
+      <td id="T_67b59_row1_col2" class="data row1 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_de0a3_level1_row2" class="row_heading level1 row2" >Load, lb for Deflection = 0.1 in</th>
-      <td id="T_de0a3_row2_col0" class="data row2 col0" >1262000.000</td>
-      <td id="T_de0a3_row2_col1" class="data row2 col1" >1262000.000</td>
-      <td id="T_de0a3_row2_col2" class="data row2 col2" >1.000</td>
+      <th id="T_67b59_level1_row2" class="row_heading level1 row2" >Load, lb for Deflection = 0.1 in</th>
+      <td id="T_67b59_row2_col0" class="data row2 col0" >1262000.000</td>
+      <td id="T_67b59_row2_col1" class="data row2 col1" >1262000.000</td>
+      <td id="T_67b59_row2_col2" class="data row2 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_de0a3_level0_row3" class="row_heading level0 row3" rowspan="3">SOLID185</th>
-      <th id="T_de0a3_level1_row3" class="row_heading level1 row3" >Load, lb for Deflection = 0.032 in</th>
-      <td id="T_de0a3_row3_col0" class="data row3 col0" >1024400.000</td>
-      <td id="T_de0a3_row3_col1" class="data row3 col1" >1022529.000</td>
-      <td id="T_de0a3_row3_col2" class="data row3 col2" >0.998</td>
+      <th id="T_67b59_level0_row3" class="row_heading level0 row3" rowspan="3">SOLID185</th>
+      <th id="T_67b59_level1_row3" class="row_heading level1 row3" >Load, lb for Deflection = 0.032 in</th>
+      <td id="T_67b59_row3_col0" class="data row3 col0" >1024400.000</td>
+      <td id="T_67b59_row3_col1" class="data row3 col1" >1022529.000</td>
+      <td id="T_67b59_row3_col2" class="data row3 col2" >0.998</td>
     </tr>
     <tr>
-      <th id="T_de0a3_level1_row4" class="row_heading level1 row4" >Load, lb for Deflection = 0.05 in</th>
-      <td id="T_de0a3_row4_col0" class="data row4 col0" >1262000.000</td>
-      <td id="T_de0a3_row4_col1" class="data row4 col1" >1259695.000</td>
-      <td id="T_de0a3_row4_col2" class="data row4 col2" >0.998</td>
+      <th id="T_67b59_level1_row4" class="row_heading level1 row4" >Load, lb for Deflection = 0.05 in</th>
+      <td id="T_67b59_row4_col0" class="data row4 col0" >1262000.000</td>
+      <td id="T_67b59_row4_col1" class="data row4 col1" >1259695.000</td>
+      <td id="T_67b59_row4_col2" class="data row4 col2" >0.998</td>
     </tr>
     <tr>
-      <th id="T_de0a3_level1_row5" class="row_heading level1 row5" >Load, lb for Deflection = 0.1 in</th>
-      <td id="T_de0a3_row5_col0" class="data row5 col0" >1262000.000</td>
-      <td id="T_de0a3_row5_col1" class="data row5 col1" >1259695.000</td>
-      <td id="T_de0a3_row5_col2" class="data row5 col2" >0.998</td>
+      <th id="T_67b59_level1_row5" class="row_heading level1 row5" >Load, lb for Deflection = 0.1 in</th>
+      <td id="T_67b59_row5_col0" class="data row5 col0" >1262000.000</td>
+      <td id="T_67b59_row5_col1" class="data row5 col1" >1259695.000</td>
+      <td id="T_67b59_row5_col2" class="data row5 col2" >0.998</td>
     </tr>
     <tr>
-      <th id="T_de0a3_level0_row6" class="row_heading level0 row6" rowspan="3">SHELL181</th>
-      <th id="T_de0a3_level1_row6" class="row_heading level1 row6" >Load, lb for Deflection = 0.032 in</th>
-      <td id="T_de0a3_row6_col0" class="data row6 col0" >1024400.000</td>
-      <td id="T_de0a3_row6_col1" class="data row6 col1" >1023932.000</td>
-      <td id="T_de0a3_row6_col2" class="data row6 col2" >1.000</td>
+      <th id="T_67b59_level0_row6" class="row_heading level0 row6" rowspan="3">SHELL181</th>
+      <th id="T_67b59_level1_row6" class="row_heading level1 row6" >Load, lb for Deflection = 0.032 in</th>
+      <td id="T_67b59_row6_col0" class="data row6 col0" >1024400.000</td>
+      <td id="T_67b59_row6_col1" class="data row6 col1" >1023932.000</td>
+      <td id="T_67b59_row6_col2" class="data row6 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_de0a3_level1_row7" class="row_heading level1 row7" >Load, lb for Deflection = 0.05 in</th>
-      <td id="T_de0a3_row7_col0" class="data row7 col0" >1262000.000</td>
-      <td id="T_de0a3_row7_col1" class="data row7 col1" >1261654.000</td>
-      <td id="T_de0a3_row7_col2" class="data row7 col2" >1.000</td>
+      <th id="T_67b59_level1_row7" class="row_heading level1 row7" >Load, lb for Deflection = 0.05 in</th>
+      <td id="T_67b59_row7_col0" class="data row7 col0" >1262000.000</td>
+      <td id="T_67b59_row7_col1" class="data row7 col1" >1261654.000</td>
+      <td id="T_67b59_row7_col2" class="data row7 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_de0a3_level1_row8" class="row_heading level1 row8" >Load, lb for Deflection = 0.1 in</th>
-      <td id="T_de0a3_row8_col0" class="data row8 col0" >1262000.000</td>
-      <td id="T_de0a3_row8_col1" class="data row8 col1" >1261423.000</td>
-      <td id="T_de0a3_row8_col2" class="data row8 col2" >1.000</td>
+      <th id="T_67b59_level1_row8" class="row_heading level1 row8" >Load, lb for Deflection = 0.1 in</th>
+      <td id="T_67b59_row8_col0" class="data row8 col0" >1262000.000</td>
+      <td id="T_67b59_row8_col1" class="data row8 col1" >1261423.000</td>
+      <td id="T_67b59_row8_col2" class="data row8 col2" >1.000</td>
     </tr>
   </tbody>
 </table>
@@ -1397,7 +1428,7 @@ which can be compared with expected target values for models with <code class="d
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.096 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.371 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-06-verif-manual-vm-007-plastic-compression-of-a-pipe-assembly-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/2263cee4500780ad8e6a3a87663ed6d2/vm-007-plastic_compression_of_a_pipe_assembly.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-007-plastic_compression_of_a_pipe_assembly.py</span></code></a></p>

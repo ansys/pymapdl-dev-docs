@@ -992,6 +992,25 @@ example, to list the remote files and download one of them:</p>
 <p class="admonition-title">Note</p>
 <p>This feature is only available for MAPDL 2021R1 or newer.</p>
 </div>
+<p>Alternatively, you can download several files at once using the glob pattern
+or list of file names in <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download.html#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download" title="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.download()</span></code></a>.
+For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using a list of file names</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">([</span><span class="s1">&#39;file0.log&#39;</span><span class="p">,</span> <span class="s1">&#39;file1.out&#39;</span><span class="p">])</span>
+
+<span class="c1"># Using glob pattern to match the list_files</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;file*&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also download all the files in the MAPDL working directory
+(<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.directory.html#ansys.mapdl.core.Mapdl.directory" title="ansys.mapdl.core.Mapdl.directory"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.directory</span></code></a>), using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">download_project</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Or filter by extensions, for example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">download_project</span><span class="p">([</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">],</span> <span class="n">target_dir</span><span class="o">=</span><span class="s1">&#39;myfiles&#39;</span><span class="p">)</span>  <span class="c1"># Download the files to &#39;myfiles&#39; directory</span>
+</pre></div>
+</div>
 </section>
 <section id="uploading-a-local-mapdl-file">
 <h3>Uploading a Local MAPDL File<a class="headerlink" href="#uploading-a-local-mapdl-file" title="Permalink to this headline">¶</a></h3>

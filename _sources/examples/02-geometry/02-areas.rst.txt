@@ -25,12 +25,13 @@ Areas
 This example shows how you can use PyMAPDL to create basic geometry
 using Pythonic PREP7 area commands.
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-21
+.. GENERATED FROM PYTHON SOURCE LINES 10-22
 
 .. code-block:: default
 
 
     import numpy as np
+
     from ansys.mapdl.core import launch_mapdl
 
     # start MAPDL and enter the pre-processing routine
@@ -58,13 +59,13 @@ using Pythonic PREP7 area commands.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 22-25
+.. GENERATED FROM PYTHON SOURCE LINES 23-26
 
 APDL Command: A
 ~~~~~~~~~~~~~~~
 Create a simple triangle in the XY plane using three keypoints.
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-33
+.. GENERATED FROM PYTHON SOURCE LINES 26-34
 
 .. code-block:: default
 
@@ -99,13 +100,13 @@ Create a simple triangle in the XY plane using three keypoints.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-37
+.. GENERATED FROM PYTHON SOURCE LINES 35-38
 
 APDL Command: AL
 ~~~~~~~~~~~~~~~~
 Create an area from four lines.
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-52
+.. GENERATED FROM PYTHON SOURCE LINES 38-53
 
 .. code-block:: default
 
@@ -147,7 +148,7 @@ Create an area from four lines.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-58
+.. GENERATED FROM PYTHON SOURCE LINES 54-59
 
 APDL Command: ADRAG
 ~~~~~~~~~~~~~~~~~~~
@@ -155,7 +156,7 @@ Generate areas by dragging a line pattern along a path.
 
 Drag a circle between two keypoints to create an area
 
-.. GENERATED FROM PYTHON SOURCE LINES 58-69
+.. GENERATED FROM PYTHON SOURCE LINES 59-70
 
 .. code-block:: default
 
@@ -193,13 +194,13 @@ Drag a circle between two keypoints to create an area
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 70-73
+.. GENERATED FROM PYTHON SOURCE LINES 71-74
 
 APDL Command: ASBA
 ~~~~~~~~~~~~~~~~~~
 Subtract a ``0.5 x 0.5`` rectangle from a ``1 x 1`` rectangle.
 
-.. GENERATED FROM PYTHON SOURCE LINES 73-82
+.. GENERATED FROM PYTHON SOURCE LINES 74-83
 
 .. code-block:: default
 
@@ -235,13 +236,13 @@ Subtract a ``0.5 x 0.5`` rectangle from a ``1 x 1`` rectangle.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-86
+.. GENERATED FROM PYTHON SOURCE LINES 84-87
 
 Area IDs
 ~~~~~~~~
 Return an array of the area IDs
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-90
+.. GENERATED FROM PYTHON SOURCE LINES 87-91
 
 .. code-block:: default
 
@@ -264,7 +265,7 @@ Return an array of the area IDs
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-99
+.. GENERATED FROM PYTHON SOURCE LINES 92-100
 
 Area Geometry
 ~~~~~~~~~~~~~
@@ -275,7 +276,7 @@ Note that this is a method so you can select the quality of the
 areas (mesh density), and if you would like a merged output or
 individual meshes.
 
-.. GENERATED FROM PYTHON SOURCE LINES 99-103
+.. GENERATED FROM PYTHON SOURCE LINES 100-104
 
 .. code-block:: default
 
@@ -298,7 +299,7 @@ individual meshes.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
       warnings.warn(
 
-    [UnstructuredGrid (0x7f2e6ae99dc0)
+    [UnstructuredGrid (0x7f6babc22340)
       N Cells:	12
       N Points:	24
       X Bounds:	0.000e+00, 1.000e+00
@@ -309,12 +310,12 @@ individual meshes.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 104-106
+.. GENERATED FROM PYTHON SOURCE LINES 105-107
 
 Merged Area Geometry
 ~~~~~~~~~~~~~~~~~~~~
 
-.. GENERATED FROM PYTHON SOURCE LINES 106-114
+.. GENERATED FROM PYTHON SOURCE LINES 107-115
 
 .. code-block:: default
 
@@ -367,7 +368,7 @@ Merged Area Geometry
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 115-123
+.. GENERATED FROM PYTHON SOURCE LINES 116-124
 
 Area Selection
 ~~~~~~~~~~~~~~
@@ -378,7 +379,7 @@ useful for selecting areas in a pythonic manner.
 
 This example generates a series of random squares and selects them
 
-.. GENERATED FROM PYTHON SOURCE LINES 123-140
+.. GENERATED FROM PYTHON SOURCE LINES 124-141
 
 .. code-block:: default
 
@@ -414,11 +415,11 @@ This example generates a series of random squares and selects them
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 141-142
+.. GENERATED FROM PYTHON SOURCE LINES 142-143
 
 Select every other area with the old style command.
 
-.. GENERATED FROM PYTHON SOURCE LINES 142-146
+.. GENERATED FROM PYTHON SOURCE LINES 143-147
 
 .. code-block:: default
 
@@ -441,13 +442,13 @@ Select every other area with the old style command.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 147-150
+.. GENERATED FROM PYTHON SOURCE LINES 148-151
 
 Select every other area with the new style command.
 
 Note that the Area IDs are 1 based in MAPDL, while Python ranges are 0 based.
 
-.. GENERATED FROM PYTHON SOURCE LINES 150-154
+.. GENERATED FROM PYTHON SOURCE LINES 151-155
 
 .. code-block:: default
 
@@ -470,7 +471,7 @@ Note that the Area IDs are 1 based in MAPDL, while Python ranges are 0 based.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 155-160
+.. GENERATED FROM PYTHON SOURCE LINES 156-161
 
 Select areas from a list
 
@@ -478,7 +479,7 @@ Note that you can ``return_selected`` if you want to see what you
 have selected.  This is helpful when reselecting from existing
 areas.
 
-.. GENERATED FROM PYTHON SOURCE LINES 160-164
+.. GENERATED FROM PYTHON SOURCE LINES 161-165
 
 .. code-block:: default
 
@@ -501,7 +502,7 @@ areas.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 165-184
+.. GENERATED FROM PYTHON SOURCE LINES 166-185
 
 APDL Command: APLOT
 ~~~~~~~~~~~~~~~~~~~
@@ -523,7 +524,7 @@ camera direction from the following:
 - 'zx' - ZX Plane view
 - 'zy' - ZY Plane view
 
-.. GENERATED FROM PYTHON SOURCE LINES 184-187
+.. GENERATED FROM PYTHON SOURCE LINES 185-188
 
 .. code-block:: default
 
@@ -553,11 +554,11 @@ camera direction from the following:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 188-189
+.. GENERATED FROM PYTHON SOURCE LINES 189-190
 
 stop mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 189-190
+.. GENERATED FROM PYTHON SOURCE LINES 190-191
 
 .. code-block:: default
 
@@ -572,7 +573,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.251 seconds)
+   **Total running time of the script:** ( 0 minutes  3.702 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_02-areas.py:

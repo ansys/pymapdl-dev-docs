@@ -25,12 +25,13 @@ Volumes
 This example shows how you can use PyMAPDL to create basic geometry
 using Pythonic PREP7 volume commands.
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-21
+.. GENERATED FROM PYTHON SOURCE LINES 10-22
 
 .. code-block:: default
 
 
     import numpy as np
+
     from ansys.mapdl.core import launch_mapdl
 
     # start MAPDL and enter the pre-processing routine
@@ -58,13 +59,13 @@ using Pythonic PREP7 volume commands.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 22-25
+.. GENERATED FROM PYTHON SOURCE LINES 23-26
 
 APDL Command: V
 ~~~~~~~~~~~~~~~
 Define a volume through keypoints.
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-40
+.. GENERATED FROM PYTHON SOURCE LINES 26-41
 
 .. code-block:: default
 
@@ -106,11 +107,11 @@ Define a volume through keypoints.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-42
+.. GENERATED FROM PYTHON SOURCE LINES 42-43
 
 Create a triangular prism
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-57
+.. GENERATED FROM PYTHON SOURCE LINES 43-58
 
 .. code-block:: default
 
@@ -152,11 +153,11 @@ Create a triangular prism
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 58-59
+.. GENERATED FROM PYTHON SOURCE LINES 59-60
 
 Create a triangular prism
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-70
+.. GENERATED FROM PYTHON SOURCE LINES 60-71
 
 .. code-block:: default
 
@@ -194,7 +195,7 @@ Create a triangular prism
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 71-76
+.. GENERATED FROM PYTHON SOURCE LINES 72-77
 
 APDL Command: VA
 ~~~~~~~~~~~~~~~~
@@ -202,7 +203,7 @@ Generate a volume bounded by existing areas.
 
 Create a simple tetrahedral bounded by 4 areas
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-95
+.. GENERATED FROM PYTHON SOURCE LINES 77-96
 
 .. code-block:: default
 
@@ -248,7 +249,7 @@ Create a simple tetrahedral bounded by 4 areas
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 96-101
+.. GENERATED FROM PYTHON SOURCE LINES 97-102
 
 APDL Command: VDRAG
 ~~~~~~~~~~~~~~~~~~~
@@ -256,7 +257,7 @@ Generate volumes by dragging an area pattern along a path.
 
 Create a square with a hole in it and drag it along an arc.
 
-.. GENERATED FROM PYTHON SOURCE LINES 101-117
+.. GENERATED FROM PYTHON SOURCE LINES 102-118
 
 .. code-block:: default
 
@@ -299,7 +300,7 @@ Create a square with a hole in it and drag it along an arc.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 118-123
+.. GENERATED FROM PYTHON SOURCE LINES 119-124
 
 APDL Command: VEXT
 ~~~~~~~~~~~~~~~~~~
@@ -307,7 +308,7 @@ Generate additional volumes by extruding areas.
 
 Create a basic cylinder by extruding a circle.
 
-.. GENERATED FROM PYTHON SOURCE LINES 123-138
+.. GENERATED FROM PYTHON SOURCE LINES 124-139
 
 .. code-block:: default
 
@@ -349,11 +350,11 @@ Create a basic cylinder by extruding a circle.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 139-140
+.. GENERATED FROM PYTHON SOURCE LINES 140-141
 
 Create a tapered cylinder by using the ``rx`` and ``ry`` parameters.
 
-.. GENERATED FROM PYTHON SOURCE LINES 140-145
+.. GENERATED FROM PYTHON SOURCE LINES 141-146
 
 .. code-block:: default
 
@@ -385,7 +386,7 @@ Create a tapered cylinder by using the ``rx`` and ``ry`` parameters.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 146-152
+.. GENERATED FROM PYTHON SOURCE LINES 147-153
 
 APDL Command: VROTAT
 ~~~~~~~~~~~~~~~~~~~~
@@ -394,7 +395,7 @@ axis.
 
 Rotate a circle about the Z axis to create a hoop
 
-.. GENERATED FROM PYTHON SOURCE LINES 152-173
+.. GENERATED FROM PYTHON SOURCE LINES 153-174
 
 .. code-block:: default
 
@@ -442,7 +443,7 @@ Rotate a circle about the Z axis to create a hoop
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 174-180
+.. GENERATED FROM PYTHON SOURCE LINES 175-181
 
 APDL Command: VSYMM
 ~~~~~~~~~~~~~~~~~~~~
@@ -451,7 +452,7 @@ Generate volumes from a volume pattern by symmetry reflection.
 Create four blocks by reflecting a single block across the YZ and
 then XZ planes.
 
-.. GENERATED FROM PYTHON SOURCE LINES 180-190
+.. GENERATED FROM PYTHON SOURCE LINES 181-191
 
 .. code-block:: default
 
@@ -488,13 +489,13 @@ then XZ planes.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 191-194
+.. GENERATED FROM PYTHON SOURCE LINES 192-195
 
 Volume IDs
 ~~~~~~~~~~
 Return an array of the volume numbers.
 
-.. GENERATED FROM PYTHON SOURCE LINES 194-198
+.. GENERATED FROM PYTHON SOURCE LINES 195-199
 
 .. code-block:: default
 
@@ -517,13 +518,13 @@ Return an array of the volume numbers.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 199-202
+.. GENERATED FROM PYTHON SOURCE LINES 200-203
 
 Volume Geometry
 ~~~~~~~~~~~~~~~
 Volume geometry can be accessed from the ``geometry.areas`` method.
 
-.. GENERATED FROM PYTHON SOURCE LINES 202-206
+.. GENERATED FROM PYTHON SOURCE LINES 203-207
 
 .. code-block:: default
 
@@ -572,7 +573,7 @@ Volume geometry can be accessed from the ``geometry.areas`` method.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 207-215
+.. GENERATED FROM PYTHON SOURCE LINES 208-216
 
 Volume Selection
 ~~~~~~~~~~~~~~~~
@@ -583,7 +584,7 @@ useful for selecting volumes in a pythonic manner.
 
 This example generates a series of random volumes and selects them
 
-.. GENERATED FROM PYTHON SOURCE LINES 215-232
+.. GENERATED FROM PYTHON SOURCE LINES 216-233
 
 .. code-block:: default
 
@@ -619,11 +620,11 @@ This example generates a series of random volumes and selects them
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 233-234
+.. GENERATED FROM PYTHON SOURCE LINES 234-235
 
 Select every other volume with the old style command.
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-238
+.. GENERATED FROM PYTHON SOURCE LINES 235-239
 
 .. code-block:: default
 
@@ -646,14 +647,14 @@ Select every other volume with the old style command.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 239-243
+.. GENERATED FROM PYTHON SOURCE LINES 240-244
 
 Select every other volume with the new style command.
 
 Note that the item IDs are 1 based in MAPDL, while Python ranges are
 0 based.
 
-.. GENERATED FROM PYTHON SOURCE LINES 243-247
+.. GENERATED FROM PYTHON SOURCE LINES 244-248
 
 .. code-block:: default
 
@@ -676,7 +677,7 @@ Note that the item IDs are 1 based in MAPDL, while Python ranges are
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 248-255
+.. GENERATED FROM PYTHON SOURCE LINES 249-256
 
 Select volumes from a list
 
@@ -686,7 +687,7 @@ areas.
 
 Note that you could use a numpy array here as well.
 
-.. GENERATED FROM PYTHON SOURCE LINES 255-259
+.. GENERATED FROM PYTHON SOURCE LINES 256-260
 
 .. code-block:: default
 
@@ -709,7 +710,7 @@ Note that you could use a numpy array here as well.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 260-266
+.. GENERATED FROM PYTHON SOURCE LINES 261-267
 
 APDL Command: VPLOT
 ~~~~~~~~~~~~~~~~~~~
@@ -718,7 +719,7 @@ Plot colored volumes while displaying the keypoint numbers.
 There are a variety of plotting options available for all the common
 plotting methods.
 
-.. GENERATED FROM PYTHON SOURCE LINES 266-278
+.. GENERATED FROM PYTHON SOURCE LINES 267-279
 
 .. code-block:: default
 
@@ -757,11 +758,11 @@ plotting methods.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 279-280
+.. GENERATED FROM PYTHON SOURCE LINES 280-281
 
 stop mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 280-281
+.. GENERATED FROM PYTHON SOURCE LINES 281-282
 
 .. code-block:: default
 
@@ -776,7 +777,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  13.335 seconds)
+   **Total running time of the script:** ( 2 minutes  41.045 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_03-volumes.py:

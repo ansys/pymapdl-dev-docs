@@ -459,29 +459,56 @@
 <h1>download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download">
-<span class="sig-prename descclassname"><span class="pre">MapdlGrpc.</span></span><span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">262144</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download" title="Permalink to this definition">¶</a></dt>
-<dd><p>Download a file from the gRPC instance</p>
+<span class="sig-prename descclassname"><span class="pre">MapdlGrpc.</span></span><span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">262144</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download files from the gRPC instance workind directory</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>target_name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Target file on the server.  File must be in the same
-directory as the mapdl instance.  List current files with
-<code class="docutils literal notranslate"><span class="pre">mapdl.list_files()</span></code></p>
-</dd>
-<dt><strong>out_file_name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Save the filename as a different name other than the
-<code class="docutils literal notranslate"><span class="pre">target_name</span></code>.</p>
+<dt><strong>files</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>] <code class="xref py py-obj docutils literal notranslate"><span class="pre">or</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">Tuple</span></code>(<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>)</span></dt><dd><p>Name of the file on the server. File must be in the same
+directory as the mapdl instance. A list of string names or
+tuples of string names can also be used.
+List current files with <code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.directory</span></code>.</p>
+<p>Alternatively, you can also specify <strong>glob expressions</strong> to
+match file names. For example: <cite>‘file*’</cite> to match every file whose
+name starts with <cite>‘file’</cite>.</p>
 </dd>
 <dt><strong>chunk_size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Chunk size in bytes.  Must be less than 4MB.  Defaults to 256 kB.</p>
 </dd>
-<dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">Display</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">a</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">progress</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">bar</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">using</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">tqdm</span></code> when <code class="docutils literal notranslate"><span class="pre">True</span></code>.  Helpful for showing download
+<dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Display a progress bar using
+<code class="docutils literal notranslate"><span class="pre">tqdm</span></code> when <code class="docutils literal notranslate"><span class="pre">True</span></code>.  Helpful for showing download
 progress.</p>
+</dd>
+<dt><strong>recursive</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>Use recursion when using glob pattern.</p>
+</dd>
+<dt><strong>.. warning::</strong></dt><dd><p>This feature is only available for MAPDL 2021R1 or newer.</p>
+</dd>
+<dt><strong>.. note::</strong></dt><dd><ul class="simple">
+<li><p>The glob pattern search does not search recursively in remote instances.</p></li>
+<li><p>In a remote instance, it is not possible to list or download files in different
+locations than the MAPDL working directory.</p></li>
+<li><p>If you are in local and provide a file path, downloading files
+from a different folder is allowed.
+However it is not a recommended approach.</p></li>
+</ul>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<p>Download the remote result file “file.rst” as “my_result.rst”</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;file.rst&#39;</span><span class="p">,</span> <span class="s1">&#39;my_result.rst&#39;</span><span class="p">)</span>
+<p>Download all the simulation files (‘out’, ‘full’, ‘rst’, ‘cdb’, ‘err’, ‘db’, or ‘log’):</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Download every single file in the MAPDL workind directory:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;everything&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Download a single file:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;file.out&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Download all the files starting with <cite>‘file’</cite>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;file*&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>

@@ -22,13 +22,15 @@ Use APDLMath to Solve a Dense Matrix Linear System
 --------------------------------------------------
 Use the APDLMath module to solve a Dense Matrix Linear System.
 
-.. GENERATED FROM PYTHON SOURCE LINES 7-17
+.. GENERATED FROM PYTHON SOURCE LINES 7-19
 
 .. code-block:: default
 
 
     import time
+
     import numpy.linalg as np
+
     from ansys.mapdl.core import launch_mapdl
 
     # Start MAPDL as a service and create an APDLMath object.
@@ -43,12 +45,12 @@ Use the APDLMath module to solve a Dense Matrix Linear System.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 18-20
+.. GENERATED FROM PYTHON SOURCE LINES 20-22
 
 Allocate a Dense Matrix in the APDLMath workspace
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 20-26
+.. GENERATED FROM PYTHON SOURCE LINES 22-28
 
 .. code-block:: default
 
@@ -65,13 +67,13 @@ Allocate a Dense Matrix in the APDLMath workspace
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 27-30
+.. GENERATED FROM PYTHON SOURCE LINES 29-32
 
 Copy the matrices as numpy arrays before they are modified by
 factorization call
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-33
+.. GENERATED FROM PYTHON SOURCE LINES 32-35
 
 .. code-block:: default
 
@@ -85,12 +87,12 @@ factorization call
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-36
+.. GENERATED FROM PYTHON SOURCE LINES 36-38
 
 Solve using APDLMath
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-44
+.. GENERATED FROM PYTHON SOURCE LINES 38-46
 
 .. code-block:: default
 
@@ -113,16 +115,16 @@ Solve using APDLMath
  .. code-block:: none
 
     Solving a (10000 x 10000) dense linear system using MAPDL...
-    Elapsed time to solve the linear system using Mapdl: 4.974858283996582 seconds
+    Elapsed time to solve the linear system using Mapdl: 9.785322904586792 seconds
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-46
+.. GENERATED FROM PYTHON SOURCE LINES 47-48
 
 Norm of the MAPDL Solution
 
-.. GENERATED FROM PYTHON SOURCE LINES 46-49
+.. GENERATED FROM PYTHON SOURCE LINES 48-51
 
 .. code-block:: default
 
@@ -144,12 +146,12 @@ Norm of the MAPDL Solution
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 50-52
+.. GENERATED FROM PYTHON SOURCE LINES 52-54
 
 Solve the solution using numpy
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 52-59
+.. GENERATED FROM PYTHON SOURCE LINES 54-61
 
 .. code-block:: default
 
@@ -171,17 +173,17 @@ Solve the solution using numpy
  .. code-block:: none
 
     Solving a (10000 x 10000) dense linear system using numpy...
-    Elapsed time to solve the linear system using numpy: 6.007378339767456 seconds
+    Elapsed time to solve the linear system using numpy: 10.61426305770874 seconds
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 60-62
+.. GENERATED FROM PYTHON SOURCE LINES 62-64
 
 Norm of the numpy Solution
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 62-64
+.. GENERATED FROM PYTHON SOURCE LINES 64-66
 
 .. code-block:: default
 
@@ -198,15 +200,15 @@ Norm of the numpy Solution
  .. code-block:: none
 
 
-    1.0000000000000022
+    1.0000000000000042
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-66
+.. GENERATED FROM PYTHON SOURCE LINES 67-68
 
 stop mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 66-67
+.. GENERATED FROM PYTHON SOURCE LINES 68-69
 
 .. code-block:: default
 
@@ -221,7 +223,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  14.074 seconds)
+   **Total running time of the script:** ( 0 minutes  24.529 seconds)
 
 
 .. _sphx_glr_download_examples_01-apdlmath-examples_solve_dense_matrix.py:

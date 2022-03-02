@@ -27,12 +27,13 @@ using Pythonic PREP7 commands.
 
 This section is focused on creating keypoints.
 
-.. GENERATED FROM PYTHON SOURCE LINES 12-23
+.. GENERATED FROM PYTHON SOURCE LINES 12-24
 
 .. code-block:: default
 
 
     import numpy as np
+
     from ansys.mapdl.core import launch_mapdl
 
     # start MAPDL and enter the pre-processing routine
@@ -60,14 +61,14 @@ This section is focused on creating keypoints.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-28
+.. GENERATED FROM PYTHON SOURCE LINES 25-29
 
 APDL Command: K
 ~~~~~~~~~~~~~~~
 Create a single keypoint at ``[0, 0, 0]``.  Note that the first
 value is an empty string to allow MAPDL to pick the keypoint number.
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-32
+.. GENERATED FROM PYTHON SOURCE LINES 29-33
 
 .. code-block:: default
 
@@ -90,11 +91,11 @@ value is an empty string to allow MAPDL to pick the keypoint number.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-34
+.. GENERATED FROM PYTHON SOURCE LINES 34-35
 
 Create keypoint at (10, 11, 12) while specifying the keypoint number.
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-38
+.. GENERATED FROM PYTHON SOURCE LINES 35-39
 
 .. code-block:: default
 
@@ -117,13 +118,13 @@ Create keypoint at (10, 11, 12) while specifying the keypoint number.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 39-42
+.. GENERATED FROM PYTHON SOURCE LINES 40-43
 
 APDL Command: KBETW
 ~~~~~~~~~~~~~~~~~~~
 Create keypoint between two keypoints
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-46
+.. GENERATED FROM PYTHON SOURCE LINES 43-47
 
 .. code-block:: default
 
@@ -146,14 +147,14 @@ Create keypoint between two keypoints
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-51
+.. GENERATED FROM PYTHON SOURCE LINES 48-52
 
 APDL Command: KCENTER
 ~~~~~~~~~~~~~~~~~~~~~
 Create keypoint at the center of a circular arc defined by three locations.
 Note that we first clear mapdl before generating this geometry
 
-.. GENERATED FROM PYTHON SOURCE LINES 51-60
+.. GENERATED FROM PYTHON SOURCE LINES 52-61
 
 .. code-block:: default
 
@@ -181,14 +182,14 @@ Note that we first clear mapdl before generating this geometry
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 61-65
+.. GENERATED FROM PYTHON SOURCE LINES 62-66
 
 Keypoint IDs
 ~~~~~~~~~~~~
 Return an array of the keypoint IDs
 Note that this matches the array ``[k0, k1, k2, k3]`` (due to sorting)
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-68
+.. GENERATED FROM PYTHON SOURCE LINES 66-69
 
 .. code-block:: default
 
@@ -210,13 +211,13 @@ Note that this matches the array ``[k0, k1, k2, k3]`` (due to sorting)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-72
+.. GENERATED FROM PYTHON SOURCE LINES 70-73
 
 Keypoint Coordinates
 ~~~~~~~~~~~~~~~~~~~~
 Return an array of the keypoint locations
 
-.. GENERATED FROM PYTHON SOURCE LINES 72-76
+.. GENERATED FROM PYTHON SOURCE LINES 73-77
 
 .. code-block:: default
 
@@ -242,14 +243,14 @@ Return an array of the keypoint locations
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 77-81
+.. GENERATED FROM PYTHON SOURCE LINES 78-82
 
 APDL Command: KDIST
 ~~~~~~~~~~~~~~~~~~~
 Calculate the distance between two keypoints.  Note that you could
 compute this yourself from ``kloc``
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-85
+.. GENERATED FROM PYTHON SOURCE LINES 82-86
 
 .. code-block:: default
 
@@ -272,7 +273,7 @@ compute this yourself from ``kloc``
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-94
+.. GENERATED FROM PYTHON SOURCE LINES 87-95
 
 Keypoint Selection
 ~~~~~~~~~~~~~~~~~~
@@ -283,7 +284,7 @@ useful for selecting keypoints in a pythonic manner.
 
 This example generates a series of random keypoints and selects them
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-105
+.. GENERATED FROM PYTHON SOURCE LINES 95-106
 
 .. code-block:: default
 
@@ -313,11 +314,11 @@ This example generates a series of random keypoints and selects them
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 106-107
+.. GENERATED FROM PYTHON SOURCE LINES 107-108
 
 Select every other keypoint with the old style command.
 
-.. GENERATED FROM PYTHON SOURCE LINES 107-111
+.. GENERATED FROM PYTHON SOURCE LINES 108-112
 
 .. code-block:: default
 
@@ -340,14 +341,14 @@ Select every other keypoint with the old style command.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 112-116
+.. GENERATED FROM PYTHON SOURCE LINES 113-117
 
 Select every other keypoint with the new style command.
 
 Note that the item IDs are 1 based in MAPDL, while Python ranges are
 0 based.
 
-.. GENERATED FROM PYTHON SOURCE LINES 116-120
+.. GENERATED FROM PYTHON SOURCE LINES 117-121
 
 .. code-block:: default
 
@@ -370,7 +371,7 @@ Note that the item IDs are 1 based in MAPDL, while Python ranges are
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 121-128
+.. GENERATED FROM PYTHON SOURCE LINES 122-129
 
 Select keypoints from a list
 
@@ -380,7 +381,7 @@ areas.
 
 Note that you could use a numpy array here as well.
 
-.. GENERATED FROM PYTHON SOURCE LINES 128-132
+.. GENERATED FROM PYTHON SOURCE LINES 129-133
 
 .. code-block:: default
 
@@ -403,7 +404,7 @@ Note that you could use a numpy array here as well.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 133-139
+.. GENERATED FROM PYTHON SOURCE LINES 134-140
 
 APDL Command: KPLOT
 ~~~~~~~~~~~~~~~~~~~
@@ -412,7 +413,7 @@ Plot the keypoints while displaying the keypoint numbers
 There are a variety of plotting options available for all the common
 plotting methods.
 
-.. GENERATED FROM PYTHON SOURCE LINES 139-143
+.. GENERATED FROM PYTHON SOURCE LINES 140-144
 
 .. code-block:: default
 
@@ -432,11 +433,11 @@ plotting methods.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 144-145
+.. GENERATED FROM PYTHON SOURCE LINES 145-146
 
 stop mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 145-146
+.. GENERATED FROM PYTHON SOURCE LINES 146-147
 
 .. code-block:: default
 
@@ -451,7 +452,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.809 seconds)
+   **Total running time of the script:** ( 0 minutes  0.817 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_00-keypoints.py:

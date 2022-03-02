@@ -104,9 +104,10 @@ Initiate Pre-Processing
 ~~~~~~~~~~~~~~~~~~~~~~~
 Enter verification example mode and the pre-processing routine.
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-73
+.. GENERATED FROM PYTHON SOURCE LINES 63-74
 
 .. code-block:: default
+
 
 
     def start_prep7():
@@ -125,13 +126,13 @@ Enter verification example mode and the pre-processing routine.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-77
+.. GENERATED FROM PYTHON SOURCE LINES 75-78
 
 Define Element Type
 ~~~~~~~~~~~~~~~~~~~
 Set up the element type (a shell-type).
 
-.. GENERATED FROM PYTHON SOURCE LINES 77-111
+.. GENERATED FROM PYTHON SOURCE LINES 78-115
 
 .. code-block:: default
 
@@ -163,10 +164,13 @@ Set up the element type (a shell-type).
 
         return elem_type, mapdl.etlist()
 
+
     # Return the number of the element type.
     elem_type, elem_type_list = define_element(elem_type="SHELL181")
-    print(f"Selected element type is: {elem_type},\n"
-          f"Printout the element list with its own properties:\n {elem_type_list}")
+    print(
+        f"Selected element type is: {elem_type},\n"
+        f"Printout the element list with its own properties:\n {elem_type_list}"
+    )
 
 
 
@@ -192,7 +196,7 @@ Set up the element type (a shell-type).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 112-117
+.. GENERATED FROM PYTHON SOURCE LINES 116-121
 
 Define Material
 ~~~~~~~~~~~~~~~
@@ -200,7 +204,7 @@ Set up the material properties, where:
 Young Modulus is :math:`E = 10.5 \cdot 10^6 psi`,
 Poisson's ratio is :math:`\nu = 0.3125`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 117-132
+.. GENERATED FROM PYTHON SOURCE LINES 121-137
 
 .. code-block:: default
 
@@ -211,9 +215,10 @@ Poisson's ratio is :math:`\nu = 0.3125`.
     # Define material properties.
     def define_material():
         # Define material properties.
-        mapdl.mp("EX", mat_num, 10.5E6)
+        mapdl.mp("EX", mat_num, 10.5e6)
         mapdl.mp("NUXY", mat_num, 0.3125)
         return mapdl.mplist()
+
 
     material_list = define_material()
     print(material_list)
@@ -240,13 +245,13 @@ Poisson's ratio is :math:`\nu = 0.3125`.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 133-136
+.. GENERATED FROM PYTHON SOURCE LINES 138-141
 
 Define Section
 ~~~~~~~~~~~~~~
 Set up the cross-section properties for a shell element.
 
-.. GENERATED FROM PYTHON SOURCE LINES 136-152
+.. GENERATED FROM PYTHON SOURCE LINES 141-158
 
 .. code-block:: default
 
@@ -261,6 +266,7 @@ Set up the cross-section properties for a shell element.
         mapdl.sectype(secid=sec_num, type_="SHELL", name="shell181")
         mapdl.secdata(t, mat_num, 0, 5)
         return mapdl.slist()
+
 
     section_list = define_section()
     print(section_list)
@@ -304,13 +310,13 @@ Set up the cross-section properties for a shell element.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 153-156
+.. GENERATED FROM PYTHON SOURCE LINES 159-162
 
 Define Geometry
 ~~~~~~~~~~~~~~~
 Set up the keypoints and create the area through the keypoints.
 
-.. GENERATED FROM PYTHON SOURCE LINES 156-199
+.. GENERATED FROM PYTHON SOURCE LINES 162-209
 
 .. code-block:: default
 
@@ -333,16 +339,19 @@ Set up the keypoints and create the area through the keypoints.
 
         if elem_type == "SHELL181":
             # Plot the lines.
-            mapdl.lplot(color_lines=True, cpos='iso')
+            mapdl.lplot(color_lines=True, cpos="iso")
 
             # Plot the area using PyVista parameters.
-            mapdl.aplot(title="Display the selected area",
-                        cpos="iso",
-                        vtk=True,
-                        color="#06C2AC",
-                        show_line_numbering=True,
-                        show_area_numbering=True,
-                        show_lines=True)
+            mapdl.aplot(
+                title="Display the selected area",
+                cpos="iso",
+                vtk=True,
+                color="#06C2AC",
+                show_line_numbering=True,
+                show_area_numbering=True,
+                show_lines=True,
+            )
+
 
     define_geometry()
 
@@ -351,6 +360,7 @@ Set up the keypoints and create the area through the keypoints.
     def keypoint_number(mapdl):
         keypoint_num = mapdl.queries.kp(4.953, 90, 0)
         return keypoint_num
+
 
     # Call the function to get the number of keypoint.
     top_keypoint = keypoint_number(mapdl)
@@ -393,13 +403,13 @@ Set up the keypoints and create the area through the keypoints.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 200-203
+.. GENERATED FROM PYTHON SOURCE LINES 210-213
 
 Meshing
 ~~~~~~~
 Define line division of the lines, then mesh the area with shell elements.
 
-.. GENERATED FROM PYTHON SOURCE LINES 203-242
+.. GENERATED FROM PYTHON SOURCE LINES 213-252
 
 .. code-block:: default
 
@@ -407,7 +417,7 @@ Define line division of the lines, then mesh the area with shell elements.
     # Define mesh properties and create the mesh with shell elements.
     def meshing():
         # Specify the default number of line divisions.
-        mapdl.esize(size='', ndiv=8)
+        mapdl.esize(size="", ndiv=8)
 
         # Mesh the area.
         mapdl.amesh(1)
@@ -417,27 +427,27 @@ Define line division of the lines, then mesh the area with shell elements.
 
         if elem_type == "SHELL181":
             # Plot the mesh.
-            mapdl.eplot(title="Plot of the currently selected elements",
-                        vtk=True,
-                        cpos="iso",
-                        show_edges=True,
-                        edge_color="white",
-                        show_node_numbering=True,
-                        color="purple")
+            mapdl.eplot(
+                title="Plot of the currently selected elements",
+                vtk=True,
+                cpos="iso",
+                show_edges=True,
+                edge_color="white",
+                show_node_numbering=True,
+                color="purple",
+            )
 
         # Print the list of elements.
         print(mapdl.elist())
 
         # Plot the nodes using VTK.
-        mapdl.nplot(vtk=True,
-                    nnum=True,
-                    background="",
-                    cpos="iso",
-                    show_bounds=True,
-                    point_size=10)
+        mapdl.nplot(
+            vtk=True, nnum=True, background="", cpos="iso", show_bounds=True, point_size=10
+        )
 
         # Print the list of nodes.
         print(mapdl.nlist())
+
 
     meshing()
 
@@ -623,13 +633,13 @@ Define line division of the lines, then mesh the area with shell elements.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 243-246
+.. GENERATED FROM PYTHON SOURCE LINES 253-256
 
 Define Boundary Conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Application of symmetric boundary conditions for simplified model.
 
-.. GENERATED FROM PYTHON SOURCE LINES 246-261
+.. GENERATED FROM PYTHON SOURCE LINES 256-272
 
 .. code-block:: default
 
@@ -645,6 +655,7 @@ Application of symmetric boundary conditions for simplified model.
         mapdl.dsym("SYMM", "Z", 0)
         mapdl.nsel("ALL")
 
+
     define_bc()
 
 
@@ -655,13 +666,13 @@ Application of symmetric boundary conditions for simplified model.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 262-265
+.. GENERATED FROM PYTHON SOURCE LINES 273-276
 
 Define Distributed Loads
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Apply the force of :math:`F = (100/4) lb` in the y-direction.
 
-.. GENERATED FROM PYTHON SOURCE LINES 265-278
+.. GENERATED FROM PYTHON SOURCE LINES 276-290
 
 .. code-block:: default
 
@@ -675,6 +686,7 @@ Apply the force of :math:`F = (100/4) lb` in the y-direction.
         mapdl.fk(top_keypoint, "FY", -force)
         mapdl.finish()
 
+
     define_loads()
 
 
@@ -685,15 +697,16 @@ Apply the force of :math:`F = (100/4) lb` in the y-direction.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 279-282
+.. GENERATED FROM PYTHON SOURCE LINES 291-294
 
 Solve
 ~~~~~
 Enter solution mode and solve the system. Print the solver output.
 
-.. GENERATED FROM PYTHON SOURCE LINES 282-292
+.. GENERATED FROM PYTHON SOURCE LINES 294-306
 
 .. code-block:: default
+
 
 
     def solve_procedure():
@@ -701,6 +714,7 @@ Enter solution mode and solve the system. Print the solver output.
         out = mapdl.solve()
         mapdl.finish()
         return out
+
 
     simulation_info = solve_procedure()
     print(simulation_info)
@@ -799,7 +813,7 @@ Enter solution mode and solve the system. Print the solver output.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 293-298
+.. GENERATED FROM PYTHON SOURCE LINES 307-312
 
 Post-processing
 ~~~~~~~~~~~~~~~
@@ -807,7 +821,7 @@ Enter post-processing for the model with elements ``shell181``.
 Plotting nodal displacement.
 Get the the radial displacement at the node where force F is applied.
 
-.. GENERATED FROM PYTHON SOURCE LINES 298-307
+.. GENERATED FROM PYTHON SOURCE LINES 312-322
 
 .. code-block:: default
 
@@ -816,6 +830,7 @@ Get the the radial displacement at the node where force F is applied.
     def post_processing():
         mapdl.post1()
         mapdl.set(1)
+
 
     post_processing()
 
@@ -827,15 +842,16 @@ Get the the radial displacement at the node where force F is applied.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 308-311
+.. GENERATED FROM PYTHON SOURCE LINES 323-326
 
 Plotting
 ~~~~~~~~
 Plot nodal displacement using PyVista.
 
-.. GENERATED FROM PYTHON SOURCE LINES 311-326
+.. GENERATED FROM PYTHON SOURCE LINES 326-343
 
 .. code-block:: default
+
 
 
     def plot_nodal_disp():
@@ -846,8 +862,9 @@ Plot nodal displacement using PyVista.
             scalar_bar_args={"title": "Nodal Displacements", "vertical": True},
             show_node_numbering=True,
             show_axes=True,
-            show_edges=True
+            show_edges=True,
         )
+
 
     plot_nodal_disp()
 
@@ -875,16 +892,17 @@ Plot nodal displacement using PyVista.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 327-331
+.. GENERATED FROM PYTHON SOURCE LINES 344-348
 
 Getting the radial displacements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 To determine the radial displacement :math:`\delta` at the point
 where F is applied, we can use :meth:`Mapdl.get_value <ansys.mapdl.core.Mapdl.get_value>`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 331-356
+.. GENERATED FROM PYTHON SOURCE LINES 348-376
 
 .. code-block:: default
+
 
 
     def get_displacements():
@@ -898,17 +916,19 @@ where F is applied, we can use :meth:`Mapdl.get_value <ansys.mapdl.core.Mapdl.ge
         top_node = int(mapdl.get("_", "node", 0, "num", "max"))
 
         # Define radial displacement at the node where F is applied.
-        deflect_shell = mapdl.get_value(entity='node',
-                                        entnum=top_node,
-                                        item1='u',
-                                        it1num='y')
+        deflect_shell = mapdl.get_value(
+            entity="node", entnum=top_node, item1="u", it1num="y"
+        )
 
         return top_node, deflect_shell
 
+
     # Call the function and get the value of the deflection.
     top_node_181, deflect_shell_181 = get_displacements()
-    print(f"Number of the node attached to the top keypoint: {top_node_181},\n"
-          f"Radial displacement: {(round(deflect_shell_181, 4))}")
+    print(
+        f"Number of the node attached to the top keypoint: {top_node_181},\n"
+        f"Radial displacement: {(round(deflect_shell_181, 4))}"
+    )
 
 
 
@@ -927,13 +947,13 @@ where F is applied, we can use :meth:`Mapdl.get_value <ansys.mapdl.core.Mapdl.ge
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 357-360
+.. GENERATED FROM PYTHON SOURCE LINES 377-380
 
 Rerun Model with SHELL281
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Perform the simulation again using the element type SHELL281.
 
-.. GENERATED FROM PYTHON SOURCE LINES 360-372
+.. GENERATED FROM PYTHON SOURCE LINES 380-392
 
 .. code-block:: default
 
@@ -1258,13 +1278,13 @@ Perform the simulation again using the element type SHELL281.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 373-376
+.. GENERATED FROM PYTHON SOURCE LINES 393-396
 
 Solve
 ~~~~~
 Enter solution mode and solve the system. Print the solver output.
 
-.. GENERATED FROM PYTHON SOURCE LINES 376-380
+.. GENERATED FROM PYTHON SOURCE LINES 396-400
 
 .. code-block:: default
 
@@ -1287,7 +1307,7 @@ Enter solution mode and solve the system. Print the solver output.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 381-386
+.. GENERATED FROM PYTHON SOURCE LINES 401-406
 
 Post-processing
 ~~~~~~~~~~~~~~~
@@ -1295,7 +1315,7 @@ Enter post-processing for the model with elements ``shell281``.
 Plotting nodal displacement.
 Get the the radial displacement at the node where force F is applied.
 
-.. GENERATED FROM PYTHON SOURCE LINES 386-392
+.. GENERATED FROM PYTHON SOURCE LINES 406-412
 
 .. code-block:: default
 
@@ -1328,7 +1348,7 @@ Get the the radial displacement at the node where force F is applied.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 393-399
+.. GENERATED FROM PYTHON SOURCE LINES 413-419
 
 Check Results
 ~~~~~~~~~~~~~
@@ -1337,7 +1357,7 @@ of radial deflection at the node where force :math:`F` was applied
 for both simulations. The expected value for :math:`\delta_{\mathrm{shell181}}` is 0.1139,
 and :math:`\delta_{\mathrm{shell281}}` is 0.1139.
 
-.. GENERATED FROM PYTHON SOURCE LINES 399-421
+.. GENERATED FROM PYTHON SOURCE LINES 419-441
 
 .. code-block:: default
 
@@ -1387,11 +1407,11 @@ and :math:`\delta_{\mathrm{shell281}}` is 0.1139.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 422-423
+.. GENERATED FROM PYTHON SOURCE LINES 442-443
 
 stop mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 423-424
+.. GENERATED FROM PYTHON SOURCE LINES 443-444
 
 .. code-block:: default
 
@@ -1406,7 +1426,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.295 seconds)
+   **Total running time of the script:** ( 0 minutes  3.904 seconds)
 
 
 .. _sphx_glr_download_examples_06-verif-manual_vm-006-pinched_cylinder.py:

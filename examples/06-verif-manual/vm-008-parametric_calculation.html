@@ -658,11 +658,13 @@ and nodes.</p>
         <span class="n">dist_kp</span><span class="p">,</span> <span class="n">kx</span><span class="p">,</span> <span class="n">ky</span><span class="p">,</span> <span class="n">kz</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">kdist</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">kp1</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">kp2</span></a><span class="p">)</span>
 
         <span class="c1"># Plot keypoints.</span>
-        <span class="n">mapdl</span><span class="o">.</span><span class="n">kplot</span><span class="p">(</span><span class="n">show_keypoint_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">background</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span>
-                    <span class="n">show_bounds</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">font_size</span><span class="o">=</span><span class="mi">26</span><span class="p">)</span>
+        <span class="n">mapdl</span><span class="o">.</span><span class="n">kplot</span><span class="p">(</span>
+            <span class="n">show_keypoint_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">background</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span>
+            <span class="n">show_bounds</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">font_size</span><span class="o">=</span><span class="mi">26</span><span class="p">,</span>
+        <span class="p">)</span>
         <span class="k">return</span> <span class="n">dist_kp</span>
 
     <span class="k">def</span> <span class="nf">node_distances</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -675,11 +677,7 @@ and nodes.</p>
         <span class="n">dist_node</span><span class="p">,</span> <span class="n">node_x</span><span class="p">,</span> <span class="n">node_y</span><span class="p">,</span> <span class="n">node_z</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">ndist</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">node1</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">node2</span></a><span class="p">)</span>
 
         <span class="c1"># Plot nodes.</span>
-        <span class="n">mapdl</span><span class="o">.</span><span class="n">nplot</span><span class="p">(</span><span class="n">nnum</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span>
-                    <span class="n">show_bounds</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">font_size</span><span class="o">=</span><span class="mi">26</span><span class="p">)</span>
+        <span class="n">mapdl</span><span class="o">.</span><span class="n">nplot</span><span class="p">(</span><span class="n">nnum</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">show_bounds</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">26</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">dist_node</span>
 
     <span class="nd">@property</span>
@@ -694,7 +692,9 @@ and nodes.</p>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The coordinates should be implemented by the list!&quot;</span><span class="p">)</span>
         <span class="c1"># Check the quantity of items:</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_value</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The coordinates should have three items in the list as [X, Y, Z]&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;The coordinates should have three items in the list as [X, Y, Z]&quot;</span>
+            <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_p1</span> <span class="o">=</span> <span class="n">new_value</span>
 
     <span class="nd">@property</span>
@@ -708,7 +708,9 @@ and nodes.</p>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The coordinates should be implemented by the list!&quot;</span><span class="p">)</span>
         <span class="c1"># Check the quantity of items:</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_value</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The coordinates should have three items in the list as [X, Y, Z]&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;The coordinates should have three items in the list as [X, Y, Z]&quot;</span>
+            <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_p2</span> <span class="o">=</span> <span class="n">new_value</span>
 </pre></div>
 </div>
@@ -778,13 +780,10 @@ which can be compared with expected target values:</p>
 <p>For better representation of the results we can use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframe
 with following settings below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the names of the rows.</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">row_names</span></a> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;N1 - N2 distance (LEN2)&quot;</span><span class="p">,</span>
-             <span class="s2">&quot;K3 - K4 distance (LEN1)&quot;</span><span class="p">]</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">row_names</span></a> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;N1 - N2 distance (LEN2)&quot;</span><span class="p">,</span> <span class="s2">&quot;K3 - K4 distance (LEN1)&quot;</span><span class="p">]</span>
 
 <span class="c1"># Define the names of the columns.</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">col_names</span></a> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Target&#39;</span><span class="p">,</span>
-             <span class="s1">&#39;Mechanical APDL&#39;</span><span class="p">,</span>
-             <span class="s1">&#39;RATIO&#39;</span><span class="p">]</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">col_names</span></a> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Target&quot;</span><span class="p">,</span> <span class="s2">&quot;Mechanical APDL&quot;</span><span class="p">,</span> <span class="s2">&quot;RATIO&quot;</span><span class="p">]</span>
 
 <span class="c1"># Define the values of the target results.</span>
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.asarray.html#numpy.asarray" title="numpy.asarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">asarray</span></a><span class="p">([</span><span class="mf">8.5849</span><span class="p">,</span> <span class="mf">305.16</span><span class="p">])</span>
@@ -796,7 +795,7 @@ with following settings below:</p>
 <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">main_columns</span></a> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Target&quot;</span><span class="p">:</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a><span class="p">,</span>
     <span class="s2">&quot;Mechanical APDL&quot;</span><span class="p">:</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_res</span></a><span class="p">,</span>
-    <span class="s2">&quot;Ratio&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">divide</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_res</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a><span class="p">))</span>
+    <span class="s2">&quot;Ratio&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">divide</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">simulation_res</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">target_res</span></a><span class="p">)),</span>
 <span class="p">}</span>
 
 <span class="c1"># Create and fill the output dataframe with pandas.</span>
@@ -852,7 +851,7 @@ with following settings below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.837 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.015 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-06-verif-manual-vm-008-parametric-calculation-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/d101d37f7372d029fd9eade5b1790358/vm-008-parametric_calculation.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-008-parametric_calculation.py</span></code></a></p>

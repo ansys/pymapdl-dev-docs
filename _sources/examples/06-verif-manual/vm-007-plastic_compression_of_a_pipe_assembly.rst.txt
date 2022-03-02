@@ -106,9 +106,9 @@ Start MAPDL and import Numpy and Pandas libraries.
 
     # sphinx_gallery_thumbnail_path = '_static/vm7_setup.png'
 
+    import matplotlib.pyplot as plt
     import numpy as np
     import pandas as pd
-    import matplotlib.pyplot as plt
 
     from ansys.mapdl.core import launch_mapdl
 
@@ -258,7 +258,7 @@ Set up the material properties.
 
     # Steel material model.
     # Define Young's moulus and Poisson ratio for Steel.
-    mapdl.mp("EX", 1, 26.875E6)
+    mapdl.mp("EX", 1, 26.875e6)
     mapdl.mp("PRXY", 1, 0.3)
 
     # Define non-linear material properties for Steel.
@@ -268,7 +268,7 @@ Set up the material properties.
 
     # Aluminum material model.
     # Define Young's moulus and Poisson ratio for Aluminum.
-    mapdl.mp("EX", 2, 11E6)
+    mapdl.mp("EX", 2, 11e6)
     mapdl.mp("PRXY", 2, 0.3)
 
     # Define non-linear material properties for Aluminum.
@@ -315,48 +315,66 @@ Plot Stress - Strain Curve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Use Matplotlib library to plot material model curves of steel and aluminum.
 
-.. GENERATED FROM PYTHON SOURCE LINES 188-233
+.. GENERATED FROM PYTHON SOURCE LINES 188-251
 
 .. code-block:: default
 
 
     # Define stress - strain properties of the steel.
-    steel = {"stress_s": [0, 86000, 86000, 86000],
-             "strain_s": [0, 0.032, 0.1, 0.2]}
+    steel = {"stress_s": [0, 86000, 86000, 86000], "strain_s": [0, 0.032, 0.1, 0.2]}
 
     # Define yielding strength point of the steel on the curve.
     xp = steel["strain_s"][1]
     yp = steel["stress_s"][1]
 
     # Set up the settings of the steel curve.
-    plt.plot(steel["strain_s"], steel["stress_s"],
-             label="1020 CR STEEL", linewidth=2,
-             color='steelblue', linestyle="-", marker="o")
-    plt.plot(xp, yp, marker='o')
+    plt.plot(
+        steel["strain_s"],
+        steel["stress_s"],
+        label="1020 CR STEEL",
+        linewidth=2,
+        color="steelblue",
+        linestyle="-",
+        marker="o",
+    )
+    plt.plot(xp, yp, marker="o")
 
     # Annotation settings
-    plt.annotate(r'${(\sigma_{yp})_s}$', xy=(xp, yp), xytext=(0.05, 75000),
-                 arrowprops=dict(facecolor='steelblue', shrink=0.05),
-                 bbox=dict(facecolor='steelblue', edgecolor='black', boxstyle='round, pad=1'))
+    plt.annotate(
+        r"${(\sigma_{yp})_s}$",
+        xy=(xp, yp),
+        xytext=(0.05, 75000),
+        arrowprops=dict(facecolor="steelblue", shrink=0.05),
+        bbox=dict(facecolor="steelblue", edgecolor="black", boxstyle="round, pad=1"),
+    )
 
     # Define stress - strain properties of the aluminum.
-    aluminum = {"stress_a": [0, 55000, 55000, 55000],
-                "strain_a": [0, 0.05, 0.1, 0.2]}
+    aluminum = {"stress_a": [0, 55000, 55000, 55000], "strain_a": [0, 0.05, 0.1, 0.2]}
 
     # Define yielding strength point of the Aluminum on the curve.
     xp = aluminum["strain_a"][1]
     yp = aluminum["stress_a"][1]
 
     # Set up the settings of the aluminum curve.
-    plt.plot(aluminum["strain_a"], aluminum["stress_a"],
-             label="2024-T4 Aluminum", linewidth=2,
-             color='sandybrown', linestyle="-", marker="o")
-    plt.plot(xp, yp, marker='o')
+    plt.plot(
+        aluminum["strain_a"],
+        aluminum["stress_a"],
+        label="2024-T4 Aluminum",
+        linewidth=2,
+        color="sandybrown",
+        linestyle="-",
+        marker="o",
+    )
+    plt.plot(xp, yp, marker="o")
 
     # Annotation settings
-    plt.annotate(r'${(\sigma_{yp})_a}$', xy=(xp, yp), xytext=(0.07, 45000),
-                 arrowprops=dict(facecolor='sandybrown', shrink=0.05),
-                 bbox=dict(facecolor='sandybrown', edgecolor='black', boxstyle='round, pad=1'))
+    plt.annotate(
+        r"${(\sigma_{yp})_a}$",
+        xy=(xp, yp),
+        xytext=(0.07, 45000),
+        arrowprops=dict(facecolor="sandybrown", shrink=0.05),
+        bbox=dict(facecolor="sandybrown", edgecolor="black", boxstyle="round, pad=1"),
+    )
 
     plt.grid(True)
     plt.legend()
@@ -376,13 +394,13 @@ Use Matplotlib library to plot material model curves of steel and aluminum.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-237
+.. GENERATED FROM PYTHON SOURCE LINES 252-255
 
 Define Section
 ~~~~~~~~~~~~~~
 Set up the cross-section properties for a shell and pipe elements.
 
-.. GENERATED FROM PYTHON SOURCE LINES 237-266
+.. GENERATED FROM PYTHON SOURCE LINES 255-284
 
 .. code-block:: default
 
@@ -495,13 +513,13 @@ Set up the cross-section properties for a shell and pipe elements.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 267-270
+.. GENERATED FROM PYTHON SOURCE LINES 285-288
 
 Define Geometry
 ~~~~~~~~~~~~~~~
 Set up the nodes and create the elements through the nodes.
 
-.. GENERATED FROM PYTHON SOURCE LINES 270-339
+.. GENERATED FROM PYTHON SOURCE LINES 288-359
 
 .. code-block:: default
 
@@ -568,9 +586,11 @@ Set up the nodes and create the elements through the nodes.
     mapdl.e(204, 202, 206, 208)
 
     # Plot element model to demonstrate the axisymmetric element model.
-    cpos = [(19.67899462804619, 17.856836088414664, 22.644135378046194),
-            (2.03485925, 0.21270071036846988, 5.0),
-            (0.0, 0.0, 1.0)]
+    cpos = [
+        (19.67899462804619, 17.856836088414664, 22.644135378046194),
+        (2.03485925, 0.21270071036846988, 5.0),
+        (0.0, 0.0, 1.0),
+    ]
     _ = mapdl.eplot(cpos=cpos)
 
 
@@ -597,13 +617,13 @@ Set up the nodes and create the elements through the nodes.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 340-343
+.. GENERATED FROM PYTHON SOURCE LINES 360-363
 
 Define Boundary Conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Application of boundary conditions (BC) for simplified  axisymmetric model.
 
-.. GENERATED FROM PYTHON SOURCE LINES 343-394
+.. GENERATED FROM PYTHON SOURCE LINES 363-414
 
 .. code-block:: default
 
@@ -665,13 +685,13 @@ Application of boundary conditions (BC) for simplified  axisymmetric model.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 395-398
+.. GENERATED FROM PYTHON SOURCE LINES 415-418
 
 Solve
 ~~~~~
 Enter solution mode and solve the system.
 
-.. GENERATED FROM PYTHON SOURCE LINES 398-422
+.. GENERATED FROM PYTHON SOURCE LINES 418-442
 
 .. code-block:: default
 
@@ -706,13 +726,13 @@ Enter solution mode and solve the system.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 423-426
+.. GENERATED FROM PYTHON SOURCE LINES 443-446
 
 Post-processing
 ~~~~~~~~~~~~~~~
 Enter post-processing.
 
-.. GENERATED FROM PYTHON SOURCE LINES 426-431
+.. GENERATED FROM PYTHON SOURCE LINES 446-451
 
 .. code-block:: default
 
@@ -728,16 +748,17 @@ Enter post-processing.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 432-436
+.. GENERATED FROM PYTHON SOURCE LINES 452-456
 
 Getting loads
 ~~~~~~~~~~~~~
 Set up the function to get load values of each load step of the simplified
 axisymmetric model and convert it to the full model.
 
-.. GENERATED FROM PYTHON SOURCE LINES 436-479
+.. GENERATED FROM PYTHON SOURCE LINES 456-498
 
 .. code-block:: default
+
 
 
     def getload():
@@ -777,9 +798,7 @@ axisymmetric model and convert it to the full model.
         load_181 = load_181_theta * 360 / theta
 
         # Return load results of each element model.
-        return abs(round(load_288, 0)), \
-               abs(round(load_185, 0)), \
-               abs(round(load_181, 0))
+        return abs(round(load_288, 0)), abs(round(load_185, 0)), abs(round(load_181, 0))
 
 
 
@@ -789,13 +808,13 @@ axisymmetric model and convert it to the full model.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 480-483
+.. GENERATED FROM PYTHON SOURCE LINES 499-502
 
 Getting Loads For Each Load Step
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Obtain the loads of the model using :func:`getload()` function.
 
-.. GENERATED FROM PYTHON SOURCE LINES 483-497
+.. GENERATED FROM PYTHON SOURCE LINES 502-516
 
 .. code-block:: default
 
@@ -820,7 +839,7 @@ Obtain the loads of the model using :func:`getload()` function.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 498-507
+.. GENERATED FROM PYTHON SOURCE LINES 517-526
 
 Check Results
 ~~~~~~~~~~~~~
@@ -832,85 +851,98 @@ which can be compared with expected target values for models with ``PIPE288``,
 - 2nd Load Step with deflection :math:`\delta = 0.05 (in)` has :math:`load_2 = 1262000\,(lb)`.
 - 3rd Load Step with deflection :math:`\delta = 0.1 (in)` has :math:`load_3 = 1262000\,(lb)`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 507-583
+.. GENERATED FROM PYTHON SOURCE LINES 526-615
 
 .. code-block:: default
 
 
-    target_res = np.asarray([1024400, 1262000, 1262000,
-                             1024400, 1262000, 1262000,
-                             1024400, 1262000, 1262000])
+    target_res = np.asarray(
+        [1024400, 1262000, 1262000, 1024400, 1262000, 1262000, 1024400, 1262000, 1262000]
+    )
 
-    simulation_res = np.asarray([pipe288_ls1, pipe288_ls2, pipe288_ls2,
-                                 solid185_ls1, solid185_ls2, solid185_ls3,
-                                 shell181_ls1, shell181_ls2, shell181_ls3])
+    simulation_res = np.asarray(
+        [
+            pipe288_ls1,
+            pipe288_ls2,
+            pipe288_ls2,
+            solid185_ls1,
+            solid185_ls2,
+            solid185_ls3,
+            shell181_ls1,
+            shell181_ls2,
+            shell181_ls3,
+        ]
+    )
 
     main_columns = {
         "Target": target_res,
         "Mechanical APDL": simulation_res,
-        "Ratio": list(np.divide(simulation_res, target_res))
+        "Ratio": list(np.divide(simulation_res, target_res)),
     }
 
-    row_tuple = [("PIPE288", "Load, lb for Deflection = 0.032 in"),
-                 ("PIPE288", "Load, lb for Deflection = 0.05 in"),
-                 ("PIPE288", "Load, lb for Deflection = 0.1 in"),
-
-                 ("SOLID185", "Load, lb for Deflection = 0.032 in"),
-                 ("SOLID185", "Load, lb for Deflection = 0.05 in"),
-                 ("SOLID185", "Load, lb for Deflection = 0.1 in"),
-
-                 ("SHELL181", "Load, lb for Deflection = 0.032 in"),
-                 ("SHELL181", "Load, lb for Deflection = 0.05 in"),
-                 ("SHELL181", "Load, lb for Deflection = 0.1 in")]
+    row_tuple = [
+        ("PIPE288", "Load, lb for Deflection = 0.032 in"),
+        ("PIPE288", "Load, lb for Deflection = 0.05 in"),
+        ("PIPE288", "Load, lb for Deflection = 0.1 in"),
+        ("SOLID185", "Load, lb for Deflection = 0.032 in"),
+        ("SOLID185", "Load, lb for Deflection = 0.05 in"),
+        ("SOLID185", "Load, lb for Deflection = 0.1 in"),
+        ("SHELL181", "Load, lb for Deflection = 0.032 in"),
+        ("SHELL181", "Load, lb for Deflection = 0.05 in"),
+        ("SHELL181", "Load, lb for Deflection = 0.1 in"),
+    ]
 
     index_names = ["Element Type", "Load Step"]
     row_indexing = pd.MultiIndex.from_tuples(row_tuple)
     df = pd.DataFrame(main_columns, index=row_indexing)
 
-    df.style.set_caption('Results Comparison',
-                         ).set_table_styles([
-                            {
-                                "selector": "th.col_heading",
-                                "props": [("background-color", "#FFEFD5"),
-                                          ("color", "black"),
-                                          ("border", "0.5px solid black"),
-                                          ("font-style", "italic"),
-                                          ("text-align", "center")]
-                            },
-                            {
-                                "selector": "th.row_heading",
-                                "props": [("background-color", "#FFEFD5"),
-                                          ("color", "black"),
-                                          ("border", "0.5px solid black"),
-                                          ("font-style", "italic"),
-                                          ("text-align", "center")]
-                            },
-                            {
-                                "selector": "td:hover",
-                                "props": [("background-color", "#FFF8DC")]
-                            },
-                            {
-                                "selector": "th",
-                                "props": [("max-width", '120px')]
-                            },
-                            {
-                                "selector": "",
-                                "props": [('border', '0.5px solid black')]
-                            },
-                            {
-                                'selector': 'caption',
-                                'props': [('color', 'black'),
-                                          ("font-style", "italic"),
-                                          ('font-size', '24px'),
-                                          ("text-align", "center")]
-                            }],
-    ).set_properties(**{
-        "background-color": "#FFFAFA",
-        "color": "black",
-        "border-color": "black",
-        "border-width": "0.5px",
-        "border-style": "solid",
-        "text-align": "center"}).format("{:.3f}")
+    df.style.set_caption("Results Comparison",).set_table_styles(
+        [
+            {
+                "selector": "th.col_heading",
+                "props": [
+                    ("background-color", "#FFEFD5"),
+                    ("color", "black"),
+                    ("border", "0.5px solid black"),
+                    ("font-style", "italic"),
+                    ("text-align", "center"),
+                ],
+            },
+            {
+                "selector": "th.row_heading",
+                "props": [
+                    ("background-color", "#FFEFD5"),
+                    ("color", "black"),
+                    ("border", "0.5px solid black"),
+                    ("font-style", "italic"),
+                    ("text-align", "center"),
+                ],
+            },
+            {"selector": "td:hover", "props": [("background-color", "#FFF8DC")]},
+            {"selector": "th", "props": [("max-width", "120px")]},
+            {"selector": "", "props": [("border", "0.5px solid black")]},
+            {
+                "selector": "caption",
+                "props": [
+                    ("color", "black"),
+                    ("font-style", "italic"),
+                    ("font-size", "24px"),
+                    ("text-align", "center"),
+                ],
+            },
+        ],
+    ).set_properties(
+        **{
+            "background-color": "#FFFAFA",
+            "color": "black",
+            "border-color": "black",
+            "border-width": "0.5px",
+            "border-style": "solid",
+            "text-align": "center",
+        }
+    ).format(
+        "{:.3f}"
+    )
 
 
 
@@ -921,36 +953,36 @@ which can be compared with expected target values for models with ``PIPE288``,
 
     <div class="output_subarea output_html rendered_html output_result">
     <style type="text/css">
-    #T_de0a3 th.col_heading {
+    #T_67b59 th.col_heading {
       background-color: #FFEFD5;
       color: black;
       border: 0.5px solid black;
       font-style: italic;
       text-align: center;
     }
-    #T_de0a3 th.row_heading {
+    #T_67b59 th.row_heading {
       background-color: #FFEFD5;
       color: black;
       border: 0.5px solid black;
       font-style: italic;
       text-align: center;
     }
-    #T_de0a3 td:hover {
+    #T_67b59 td:hover {
       background-color: #FFF8DC;
     }
-    #T_de0a3 th {
+    #T_67b59 th {
       max-width: 120px;
     }
-    #T_de0a3  {
+    #T_67b59  {
       border: 0.5px solid black;
     }
-    #T_de0a3 caption {
+    #T_67b59 caption {
       color: black;
       font-style: italic;
       font-size: 24px;
       text-align: center;
     }
-    #T_de0a3_row0_col0, #T_de0a3_row0_col1, #T_de0a3_row0_col2, #T_de0a3_row1_col0, #T_de0a3_row1_col1, #T_de0a3_row1_col2, #T_de0a3_row2_col0, #T_de0a3_row2_col1, #T_de0a3_row2_col2, #T_de0a3_row3_col0, #T_de0a3_row3_col1, #T_de0a3_row3_col2, #T_de0a3_row4_col0, #T_de0a3_row4_col1, #T_de0a3_row4_col2, #T_de0a3_row5_col0, #T_de0a3_row5_col1, #T_de0a3_row5_col2, #T_de0a3_row6_col0, #T_de0a3_row6_col1, #T_de0a3_row6_col2, #T_de0a3_row7_col0, #T_de0a3_row7_col1, #T_de0a3_row7_col2, #T_de0a3_row8_col0, #T_de0a3_row8_col1, #T_de0a3_row8_col2 {
+    #T_67b59_row0_col0, #T_67b59_row0_col1, #T_67b59_row0_col2, #T_67b59_row1_col0, #T_67b59_row1_col1, #T_67b59_row1_col2, #T_67b59_row2_col0, #T_67b59_row2_col1, #T_67b59_row2_col2, #T_67b59_row3_col0, #T_67b59_row3_col1, #T_67b59_row3_col2, #T_67b59_row4_col0, #T_67b59_row4_col1, #T_67b59_row4_col2, #T_67b59_row5_col0, #T_67b59_row5_col1, #T_67b59_row5_col2, #T_67b59_row6_col0, #T_67b59_row6_col1, #T_67b59_row6_col2, #T_67b59_row7_col0, #T_67b59_row7_col1, #T_67b59_row7_col2, #T_67b59_row8_col0, #T_67b59_row8_col1, #T_67b59_row8_col2 {
       background-color: #FFFAFA;
       color: black;
       border-color: black;
@@ -959,74 +991,74 @@ which can be compared with expected target values for models with ``PIPE288``,
       text-align: center;
     }
     </style>
-    <table id="T_de0a3">
+    <table id="T_67b59">
       <caption>Results Comparison</caption>
       <thead>
         <tr>
           <th class="blank" >&nbsp;</th>
           <th class="blank level0" >&nbsp;</th>
-          <th id="T_de0a3_level0_col0" class="col_heading level0 col0" >Target</th>
-          <th id="T_de0a3_level0_col1" class="col_heading level0 col1" >Mechanical APDL</th>
-          <th id="T_de0a3_level0_col2" class="col_heading level0 col2" >Ratio</th>
+          <th id="T_67b59_level0_col0" class="col_heading level0 col0" >Target</th>
+          <th id="T_67b59_level0_col1" class="col_heading level0 col1" >Mechanical APDL</th>
+          <th id="T_67b59_level0_col2" class="col_heading level0 col2" >Ratio</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th id="T_de0a3_level0_row0" class="row_heading level0 row0" rowspan="3">PIPE288</th>
-          <th id="T_de0a3_level1_row0" class="row_heading level1 row0" >Load, lb for Deflection = 0.032 in</th>
-          <td id="T_de0a3_row0_col0" class="data row0 col0" >1024400.000</td>
-          <td id="T_de0a3_row0_col1" class="data row0 col1" >1024400.000</td>
-          <td id="T_de0a3_row0_col2" class="data row0 col2" >1.000</td>
+          <th id="T_67b59_level0_row0" class="row_heading level0 row0" rowspan="3">PIPE288</th>
+          <th id="T_67b59_level1_row0" class="row_heading level1 row0" >Load, lb for Deflection = 0.032 in</th>
+          <td id="T_67b59_row0_col0" class="data row0 col0" >1024400.000</td>
+          <td id="T_67b59_row0_col1" class="data row0 col1" >1024400.000</td>
+          <td id="T_67b59_row0_col2" class="data row0 col2" >1.000</td>
         </tr>
         <tr>
-          <th id="T_de0a3_level1_row1" class="row_heading level1 row1" >Load, lb for Deflection = 0.05 in</th>
-          <td id="T_de0a3_row1_col0" class="data row1 col0" >1262000.000</td>
-          <td id="T_de0a3_row1_col1" class="data row1 col1" >1262000.000</td>
-          <td id="T_de0a3_row1_col2" class="data row1 col2" >1.000</td>
+          <th id="T_67b59_level1_row1" class="row_heading level1 row1" >Load, lb for Deflection = 0.05 in</th>
+          <td id="T_67b59_row1_col0" class="data row1 col0" >1262000.000</td>
+          <td id="T_67b59_row1_col1" class="data row1 col1" >1262000.000</td>
+          <td id="T_67b59_row1_col2" class="data row1 col2" >1.000</td>
         </tr>
         <tr>
-          <th id="T_de0a3_level1_row2" class="row_heading level1 row2" >Load, lb for Deflection = 0.1 in</th>
-          <td id="T_de0a3_row2_col0" class="data row2 col0" >1262000.000</td>
-          <td id="T_de0a3_row2_col1" class="data row2 col1" >1262000.000</td>
-          <td id="T_de0a3_row2_col2" class="data row2 col2" >1.000</td>
+          <th id="T_67b59_level1_row2" class="row_heading level1 row2" >Load, lb for Deflection = 0.1 in</th>
+          <td id="T_67b59_row2_col0" class="data row2 col0" >1262000.000</td>
+          <td id="T_67b59_row2_col1" class="data row2 col1" >1262000.000</td>
+          <td id="T_67b59_row2_col2" class="data row2 col2" >1.000</td>
         </tr>
         <tr>
-          <th id="T_de0a3_level0_row3" class="row_heading level0 row3" rowspan="3">SOLID185</th>
-          <th id="T_de0a3_level1_row3" class="row_heading level1 row3" >Load, lb for Deflection = 0.032 in</th>
-          <td id="T_de0a3_row3_col0" class="data row3 col0" >1024400.000</td>
-          <td id="T_de0a3_row3_col1" class="data row3 col1" >1022529.000</td>
-          <td id="T_de0a3_row3_col2" class="data row3 col2" >0.998</td>
+          <th id="T_67b59_level0_row3" class="row_heading level0 row3" rowspan="3">SOLID185</th>
+          <th id="T_67b59_level1_row3" class="row_heading level1 row3" >Load, lb for Deflection = 0.032 in</th>
+          <td id="T_67b59_row3_col0" class="data row3 col0" >1024400.000</td>
+          <td id="T_67b59_row3_col1" class="data row3 col1" >1022529.000</td>
+          <td id="T_67b59_row3_col2" class="data row3 col2" >0.998</td>
         </tr>
         <tr>
-          <th id="T_de0a3_level1_row4" class="row_heading level1 row4" >Load, lb for Deflection = 0.05 in</th>
-          <td id="T_de0a3_row4_col0" class="data row4 col0" >1262000.000</td>
-          <td id="T_de0a3_row4_col1" class="data row4 col1" >1259695.000</td>
-          <td id="T_de0a3_row4_col2" class="data row4 col2" >0.998</td>
+          <th id="T_67b59_level1_row4" class="row_heading level1 row4" >Load, lb for Deflection = 0.05 in</th>
+          <td id="T_67b59_row4_col0" class="data row4 col0" >1262000.000</td>
+          <td id="T_67b59_row4_col1" class="data row4 col1" >1259695.000</td>
+          <td id="T_67b59_row4_col2" class="data row4 col2" >0.998</td>
         </tr>
         <tr>
-          <th id="T_de0a3_level1_row5" class="row_heading level1 row5" >Load, lb for Deflection = 0.1 in</th>
-          <td id="T_de0a3_row5_col0" class="data row5 col0" >1262000.000</td>
-          <td id="T_de0a3_row5_col1" class="data row5 col1" >1259695.000</td>
-          <td id="T_de0a3_row5_col2" class="data row5 col2" >0.998</td>
+          <th id="T_67b59_level1_row5" class="row_heading level1 row5" >Load, lb for Deflection = 0.1 in</th>
+          <td id="T_67b59_row5_col0" class="data row5 col0" >1262000.000</td>
+          <td id="T_67b59_row5_col1" class="data row5 col1" >1259695.000</td>
+          <td id="T_67b59_row5_col2" class="data row5 col2" >0.998</td>
         </tr>
         <tr>
-          <th id="T_de0a3_level0_row6" class="row_heading level0 row6" rowspan="3">SHELL181</th>
-          <th id="T_de0a3_level1_row6" class="row_heading level1 row6" >Load, lb for Deflection = 0.032 in</th>
-          <td id="T_de0a3_row6_col0" class="data row6 col0" >1024400.000</td>
-          <td id="T_de0a3_row6_col1" class="data row6 col1" >1023932.000</td>
-          <td id="T_de0a3_row6_col2" class="data row6 col2" >1.000</td>
+          <th id="T_67b59_level0_row6" class="row_heading level0 row6" rowspan="3">SHELL181</th>
+          <th id="T_67b59_level1_row6" class="row_heading level1 row6" >Load, lb for Deflection = 0.032 in</th>
+          <td id="T_67b59_row6_col0" class="data row6 col0" >1024400.000</td>
+          <td id="T_67b59_row6_col1" class="data row6 col1" >1023932.000</td>
+          <td id="T_67b59_row6_col2" class="data row6 col2" >1.000</td>
         </tr>
         <tr>
-          <th id="T_de0a3_level1_row7" class="row_heading level1 row7" >Load, lb for Deflection = 0.05 in</th>
-          <td id="T_de0a3_row7_col0" class="data row7 col0" >1262000.000</td>
-          <td id="T_de0a3_row7_col1" class="data row7 col1" >1261654.000</td>
-          <td id="T_de0a3_row7_col2" class="data row7 col2" >1.000</td>
+          <th id="T_67b59_level1_row7" class="row_heading level1 row7" >Load, lb for Deflection = 0.05 in</th>
+          <td id="T_67b59_row7_col0" class="data row7 col0" >1262000.000</td>
+          <td id="T_67b59_row7_col1" class="data row7 col1" >1261654.000</td>
+          <td id="T_67b59_row7_col2" class="data row7 col2" >1.000</td>
         </tr>
         <tr>
-          <th id="T_de0a3_level1_row8" class="row_heading level1 row8" >Load, lb for Deflection = 0.1 in</th>
-          <td id="T_de0a3_row8_col0" class="data row8 col0" >1262000.000</td>
-          <td id="T_de0a3_row8_col1" class="data row8 col1" >1261423.000</td>
-          <td id="T_de0a3_row8_col2" class="data row8 col2" >1.000</td>
+          <th id="T_67b59_level1_row8" class="row_heading level1 row8" >Load, lb for Deflection = 0.1 in</th>
+          <td id="T_67b59_row8_col0" class="data row8 col0" >1262000.000</td>
+          <td id="T_67b59_row8_col1" class="data row8 col1" >1261423.000</td>
+          <td id="T_67b59_row8_col2" class="data row8 col2" >1.000</td>
         </tr>
       </tbody>
     </table>
@@ -1035,11 +1067,11 @@ which can be compared with expected target values for models with ``PIPE288``,
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 584-585
+.. GENERATED FROM PYTHON SOURCE LINES 616-617
 
 stop mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 585-586
+.. GENERATED FROM PYTHON SOURCE LINES 617-618
 
 .. code-block:: default
 
@@ -1054,7 +1086,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.096 seconds)
+   **Total running time of the script:** ( 0 minutes  1.371 seconds)
 
 
 .. _sphx_glr_download_examples_06-verif-manual_vm-007-plastic_compression_of_a_pipe_assembly.py:

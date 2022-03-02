@@ -184,7 +184,7 @@ Set up the material, where:
 
     # Steel material model.
     # Define Young's moulus and Poisson ratio for Steel.
-    mapdl.mp("EX", 1, 30E6)
+    mapdl.mp("EX", 1, 30e6)
     mapdl.mp("PRXY", 1, 0.3)
 
     # Print the list of material properties.
@@ -322,7 +322,7 @@ Define elements
 ~~~~~~~~~~~~~~~
 Create element between nodes 1 and 2 using node 3 as orientational node.
 
-.. GENERATED FROM PYTHON SOURCE LINES 161-179
+.. GENERATED FROM PYTHON SOURCE LINES 161-178
 
 .. code-block:: default
 
@@ -334,14 +334,13 @@ Create element between nodes 1 and 2 using node 3 as orientational node.
     print(mapdl.elist())
 
     # Display elements with their nodes numbers.
-    cpos = [(162.20508123980457, 109.41124535475498, 112.95887397446565),
-            (50.0, 0.0, 0.0),
-            (-0.4135015240403764, -0.4134577015789461, 0.8112146563156641)]
+    cpos = [
+        (162.20508123980457, 109.41124535475498, 112.95887397446565),
+        (50.0, 0.0, 0.0),
+        (-0.4135015240403764, -0.4134577015789461, 0.8112146563156641),
+    ]
 
-    _ = mapdl.eplot(show_node_numbering=True,
-                    line_width=5,
-                    cpos=cpos,
-                    font_size=40)
+    _ = mapdl.eplot(show_node_numbering=True, line_width=5, cpos=cpos, font_size=40)
 
 
 
@@ -369,13 +368,13 @@ Create element between nodes 1 and 2 using node 3 as orientational node.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 180-183
+.. GENERATED FROM PYTHON SOURCE LINES 179-182
 
 Define Boundary Conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Application of boundary conditions (BC).
 
-.. GENERATED FROM PYTHON SOURCE LINES 183-188
+.. GENERATED FROM PYTHON SOURCE LINES 182-187
 
 .. code-block:: default
 
@@ -391,13 +390,13 @@ Application of boundary conditions (BC).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 189-192
+.. GENERATED FROM PYTHON SOURCE LINES 188-191
 
 Define Distributed Loads
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Apply a bending moment :math:`\mathrm{M_{z}}= 100000\,in\,lb`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 192-201
+.. GENERATED FROM PYTHON SOURCE LINES 191-200
 
 .. code-block:: default
 
@@ -417,13 +416,13 @@ Apply a bending moment :math:`\mathrm{M_{z}}= 100000\,in\,lb`.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 202-205
+.. GENERATED FROM PYTHON SOURCE LINES 201-204
 
 Solve
 ~~~~~
 Enter solution mode and run the simulation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 205-214
+.. GENERATED FROM PYTHON SOURCE LINES 204-213
 
 .. code-block:: default
 
@@ -443,13 +442,13 @@ Enter solution mode and run the simulation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 215-218
+.. GENERATED FROM PYTHON SOURCE LINES 214-217
 
 Post-processing
 ~~~~~~~~~~~~~~~
 Enter post-processing.
 
-.. GENERATED FROM PYTHON SOURCE LINES 218-223
+.. GENERATED FROM PYTHON SOURCE LINES 217-222
 
 .. code-block:: default
 
@@ -465,7 +464,7 @@ Enter post-processing.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 224-229
+.. GENERATED FROM PYTHON SOURCE LINES 223-228
 
 Getting Displacements
 ~~~~~~~~~~~~~~~~~~~~~
@@ -473,7 +472,7 @@ Using :meth:`Mapdl.etable <ansys.mapdl.core.Mapdl.etable>` get the results of
 the the maximum tensile and compressive bending stresses in
 an unsymmetric `T-beam` with :meth:`Mapdl.get_value <ansys.mapdl.core.Mapdl.get_value>`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 229-247
+.. GENERATED FROM PYTHON SOURCE LINES 228-242
 
 .. code-block:: default
 
@@ -483,16 +482,12 @@ an unsymmetric `T-beam` with :meth:`Mapdl.get_value <ansys.mapdl.core.Mapdl.get_
     mapdl.etable(lab="STRS_T", item="LS", comp=31)
 
     # Get the value of the maximum compressive stress.
-    strss_top_compr = mapdl.get_value(entity="ELEM",
-                                      entnum=1,
-                                      item1="ETAB",
-                                      it1num="STRS_T")
+    strss_top_compr = mapdl.get_value(
+        entity="ELEM", entnum=1, item1="ETAB", it1num="STRS_T"
+    )
 
     # Get the value of the maximum tensile bending stress.
-    strss_bot_tens = mapdl.get_value(entity="ELEM",
-                                     entnum=1,
-                                     item1="ETAB",
-                                     it1num="STRS_B")
+    strss_bot_tens = mapdl.get_value(entity="ELEM", entnum=1, item1="ETAB", it1num="STRS_B")
 
 
 
@@ -502,7 +497,7 @@ an unsymmetric `T-beam` with :meth:`Mapdl.get_value <ansys.mapdl.core.Mapdl.get_
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 248-259
+.. GENERATED FROM PYTHON SOURCE LINES 243-254
 
 Check Results
 ~~~~~~~~~~~~~
@@ -516,19 +511,19 @@ values:
 For better representation of the results we can use ``pandas`` dataframe
 with following settings below:
 
-.. GENERATED FROM PYTHON SOURCE LINES 259-288
+.. GENERATED FROM PYTHON SOURCE LINES 254-283
 
 .. code-block:: default
 
 
     # Define the names of the rows.
-    row_names = ['$$Stress - \sigma_{\mathrm{(B,Bot)}},\,psi$$',
-                 '$$Stress - \sigma_{\mathrm{(B,Top)}},\,psi$$']
+    row_names = [
+        "$$Stress - \sigma_{\mathrm{(B,Bot)}},\,psi$$",
+        "$$Stress - \sigma_{\mathrm{(B,Top)}},\,psi$$",
+    ]
 
     # Define the names of the columns.
-    col_names = ['Target',
-                 'Mechanical APDL',
-                 'RATIO']
+    col_names = ["Target", "Mechanical APDL", "RATIO"]
 
     # Define the values of the target results.
     target_res = np.asarray([300, -700])
@@ -540,7 +535,7 @@ with following settings below:
     main_columns = {
         "Target": target_res,
         "Mechanical APDL": simulation_res,
-        "Ratio": list(np.divide(simulation_res, target_res))
+        "Ratio": list(np.divide(simulation_res, target_res)),
     }
 
     # Create and fill the output dataframe with pandas.
@@ -600,11 +595,11 @@ with following settings below:
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 289-290
+.. GENERATED FROM PYTHON SOURCE LINES 284-285
 
 stop mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 290-291
+.. GENERATED FROM PYTHON SOURCE LINES 285-286
 
 .. code-block:: default
 
@@ -619,7 +614,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.588 seconds)
+   **Total running time of the script:** ( 0 minutes  0.662 seconds)
 
 
 .. _sphx_glr_download_examples_06-verif-manual_vm-010-bending_of_a_t-shaped_beam.py:

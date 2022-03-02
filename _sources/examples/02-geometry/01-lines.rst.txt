@@ -25,12 +25,13 @@ Lines
 This example shows how you can use PyMAPDL to create basic geometry
 using Pythonic PREP7 line commands.
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-21
+.. GENERATED FROM PYTHON SOURCE LINES 10-22
 
 .. code-block:: default
 
 
     import numpy as np
+
     from ansys.mapdl.core import launch_mapdl
 
     # start MAPDL and enter the pre-processing routine
@@ -58,14 +59,14 @@ using Pythonic PREP7 line commands.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 22-26
+.. GENERATED FROM PYTHON SOURCE LINES 23-27
 
 APDL Command: L
 ~~~~~~~~~~~~~~~
 
 Create a line between the two keypoints ``(0, 0, 0)`` and ``(1, 0, 0)``
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-33
+.. GENERATED FROM PYTHON SOURCE LINES 27-34
 
 .. code-block:: default
 
@@ -91,14 +92,14 @@ Create a line between the two keypoints ``(0, 0, 0)`` and ``(1, 0, 0)``
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-38
+.. GENERATED FROM PYTHON SOURCE LINES 35-39
 
 APDL Command: LARC
 ~~~~~~~~~~~~~~~~~~
 Create a circular arc that travels between ``(0, 0, 0)`` and
 ``(1, 1, 0)`` with a radius of curvature of 2.  Plot the result.
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-48
+.. GENERATED FROM PYTHON SOURCE LINES 39-49
 
 .. code-block:: default
 
@@ -124,13 +125,13 @@ Create a circular arc that travels between ``(0, 0, 0)`` and
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-52
+.. GENERATED FROM PYTHON SOURCE LINES 50-53
 
 APDL Command: L2ANG
 ~~~~~~~~~~~~~~~~~~~
 Create two circles and join them with a line.  Plot the result.
 
-.. GENERATED FROM PYTHON SOURCE LINES 52-64
+.. GENERATED FROM PYTHON SOURCE LINES 53-65
 
 .. code-block:: default
 
@@ -158,13 +159,13 @@ Create two circles and join them with a line.  Plot the result.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-68
+.. GENERATED FROM PYTHON SOURCE LINES 66-69
 
 APDL Command: L2TAN
 ~~~~~~~~~~~~~~~~~~~
 Create two circular arcs and connect them with a spline.  Plot the result.
 
-.. GENERATED FROM PYTHON SOURCE LINES 68-81
+.. GENERATED FROM PYTHON SOURCE LINES 69-82
 
 .. code-block:: default
 
@@ -193,14 +194,14 @@ Create two circular arcs and connect them with a spline.  Plot the result.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 82-86
+.. GENERATED FROM PYTHON SOURCE LINES 83-87
 
 APDL Command: LANG
 ~~~~~~~~~~~~~~~~~~
 Create a line from a line from ``(0, 0, 0)`` to ``(1, 0, 0)`` to a
 keypoint at ``(1, 1, 1)`` at an angle of 60 degrees.  Plot the result.
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-97
+.. GENERATED FROM PYTHON SOURCE LINES 87-98
 
 .. code-block:: default
 
@@ -227,13 +228,13 @@ keypoint at ``(1, 1, 1)`` at an angle of 60 degrees.  Plot the result.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 98-101
+.. GENERATED FROM PYTHON SOURCE LINES 99-102
 
 APDL Command: LAREA
 ~~~~~~~~~~~~~~~~~~~
 Generate a line on a square between its two corners.
 
-.. GENERATED FROM PYTHON SOURCE LINES 101-113
+.. GENERATED FROM PYTHON SOURCE LINES 102-114
 
 .. code-block:: default
 
@@ -261,13 +262,13 @@ Generate a line on a square between its two corners.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-117
+.. GENERATED FROM PYTHON SOURCE LINES 115-118
 
 APDL Command: LCOMB
 ~~~~~~~~~~~~~~~~~~~
 Create two lines and combine them.
 
-.. GENERATED FROM PYTHON SOURCE LINES 117-126
+.. GENERATED FROM PYTHON SOURCE LINES 118-127
 
 .. code-block:: default
 
@@ -287,13 +288,13 @@ Create two lines and combine them.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 127-130
+.. GENERATED FROM PYTHON SOURCE LINES 128-131
 
 APDL Command: LDIV
 ~~~~~~~~~~~~~~~~~~
 Create a single line and divide it into 5 pieces.
 
-.. GENERATED FROM PYTHON SOURCE LINES 130-140
+.. GENERATED FROM PYTHON SOURCE LINES 131-141
 
 .. code-block:: default
 
@@ -319,13 +320,13 @@ Create a single line and divide it into 5 pieces.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 141-144
+.. GENERATED FROM PYTHON SOURCE LINES 142-145
 
 APDL Command: LEXTND
 ~~~~~~~~~~~~~~~~~~~~
 Create a circular arc and extend it at one of its keypoints.
 
-.. GENERATED FROM PYTHON SOURCE LINES 144-154
+.. GENERATED FROM PYTHON SOURCE LINES 145-155
 
 .. code-block:: default
 
@@ -351,14 +352,14 @@ Create a circular arc and extend it at one of its keypoints.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 155-159
+.. GENERATED FROM PYTHON SOURCE LINES 156-160
 
 APDL Command: LFILLT
 ~~~~~~~~~~~~~~~~~~~~
 Create two intersecting lines at a right angle and add a
 fillet between them.
 
-.. GENERATED FROM PYTHON SOURCE LINES 159-171
+.. GENERATED FROM PYTHON SOURCE LINES 160-172
 
 .. code-block:: default
 
@@ -386,14 +387,14 @@ fillet between them.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-176
+.. GENERATED FROM PYTHON SOURCE LINES 173-177
 
 APDL Command: LTAN
 ~~~~~~~~~~~~~~~~~~
 Create a circular arc and generate a tangent spline at the end of it
 directed to a new keypoint.
 
-.. GENERATED FROM PYTHON SOURCE LINES 176-187
+.. GENERATED FROM PYTHON SOURCE LINES 177-188
 
 .. code-block:: default
 
@@ -420,13 +421,13 @@ directed to a new keypoint.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 188-191
+.. GENERATED FROM PYTHON SOURCE LINES 189-192
 
 APDL Command: SPLINE
 ~~~~~~~~~~~~~~~~~~~~
 Generate a segmented spline through 5 keypoints.
 
-.. GENERATED FROM PYTHON SOURCE LINES 191-203
+.. GENERATED FROM PYTHON SOURCE LINES 192-204
 
 .. code-block:: default
 
@@ -454,7 +455,7 @@ Generate a segmented spline through 5 keypoints.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 204-211
+.. GENERATED FROM PYTHON SOURCE LINES 205-212
 
 APDL Command: BSPLIN
 ~~~~~~~~~~~~~~~~~~~~
@@ -464,7 +465,7 @@ Generate through ``(0, 0, 0)``, ``(0, 1, 0)`` and ``(1, 2, 0)``
 This is different than the ``spline`` method as this creates a
 single line rather than multiple lines.
 
-.. GENERATED FROM PYTHON SOURCE LINES 211-221
+.. GENERATED FROM PYTHON SOURCE LINES 212-222
 
 .. code-block:: default
 
@@ -490,13 +491,13 @@ single line rather than multiple lines.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 222-225
+.. GENERATED FROM PYTHON SOURCE LINES 223-226
 
 Line IDs
 ~~~~~~~~
 Return an array of the line IDs
 
-.. GENERATED FROM PYTHON SOURCE LINES 225-229
+.. GENERATED FROM PYTHON SOURCE LINES 226-230
 
 .. code-block:: default
 
@@ -519,14 +520,14 @@ Return an array of the line IDs
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 230-234
+.. GENERATED FROM PYTHON SOURCE LINES 231-235
 
 Line Geometry
 ~~~~~~~~~~~~~
 Get the VTK ``PolyData`` containing lines.  This VTK mesh can be
 saved or plotted.  For more details, visit https://docs.pyvista.com
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-238
+.. GENERATED FROM PYTHON SOURCE LINES 235-239
 
 .. code-block:: default
 
@@ -564,7 +565,7 @@ saved or plotted.  For more details, visit https://docs.pyvista.com
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 239-247
+.. GENERATED FROM PYTHON SOURCE LINES 240-248
 
 Line Selection
 ~~~~~~~~~~~~~~
@@ -575,7 +576,7 @@ useful for selecting lines in a pythonic manner.
 
 This example generates a series of random lines and selects them
 
-.. GENERATED FROM PYTHON SOURCE LINES 247-265
+.. GENERATED FROM PYTHON SOURCE LINES 248-266
 
 .. code-block:: default
 
@@ -612,11 +613,11 @@ This example generates a series of random lines and selects them
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 266-267
+.. GENERATED FROM PYTHON SOURCE LINES 267-268
 
 Select every other line with the old style command.
 
-.. GENERATED FROM PYTHON SOURCE LINES 267-271
+.. GENERATED FROM PYTHON SOURCE LINES 268-272
 
 .. code-block:: default
 
@@ -639,14 +640,14 @@ Select every other line with the old style command.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 272-276
+.. GENERATED FROM PYTHON SOURCE LINES 273-277
 
 Select every other line with the new style command.
 
 Note that the item IDs are 1 based in MAPDL, while Python ranges are
 0 based.
 
-.. GENERATED FROM PYTHON SOURCE LINES 276-280
+.. GENERATED FROM PYTHON SOURCE LINES 277-281
 
 .. code-block:: default
 
@@ -669,7 +670,7 @@ Note that the item IDs are 1 based in MAPDL, while Python ranges are
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 281-288
+.. GENERATED FROM PYTHON SOURCE LINES 282-289
 
 Select lines from a list
 
@@ -679,7 +680,7 @@ areas.
 
 Note that you could use a numpy array here as well.
 
-.. GENERATED FROM PYTHON SOURCE LINES 288-292
+.. GENERATED FROM PYTHON SOURCE LINES 289-293
 
 .. code-block:: default
 
@@ -702,7 +703,7 @@ Note that you could use a numpy array here as well.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 293-299
+.. GENERATED FROM PYTHON SOURCE LINES 294-300
 
 APDL Command: LPLOT
 ~~~~~~~~~~~~~~~~~~~
@@ -711,7 +712,7 @@ Plot colored lines while displaying the keypoint numbers.
 There are a variety of plotting options available for all the common
 plotting methods.
 
-.. GENERATED FROM PYTHON SOURCE LINES 299-312
+.. GENERATED FROM PYTHON SOURCE LINES 300-313
 
 .. code-block:: default
 
@@ -740,11 +741,11 @@ plotting methods.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 313-314
+.. GENERATED FROM PYTHON SOURCE LINES 314-315
 
 stop mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 314-315
+.. GENERATED FROM PYTHON SOURCE LINES 315-316
 
 .. code-block:: default
 
@@ -759,7 +760,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.810 seconds)
+   **Total running time of the script:** ( 0 minutes  5.522 seconds)
 
 
 .. _sphx_glr_download_examples_02-geometry_01-lines.py:

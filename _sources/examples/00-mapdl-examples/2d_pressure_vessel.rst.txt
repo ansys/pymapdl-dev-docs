@@ -50,17 +50,31 @@ Problem Figure
    :width: 400
    :alt: Basic Pressure Vessel
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-39
+.. GENERATED FROM PYTHON SOURCE LINES 35-38
+
+.. code-block:: default
+
+
+    import matplotlib.pyplot as plt
+
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 39-41
 
 Launch MAPDL
 ~~~~~~~~~~~~
 
-.. GENERATED FROM PYTHON SOURCE LINES 39-46
+.. GENERATED FROM PYTHON SOURCE LINES 41-48
 
 .. code-block:: default
 
     import numpy as np
-    import matplotlib.pyplot as plt
+
     from ansys.mapdl.core import launch_mapdl
 
     # start mapdl
@@ -73,14 +87,14 @@ Launch MAPDL
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-51
+.. GENERATED FROM PYTHON SOURCE LINES 49-53
 
 Setup the pipe cross section using Python function
 
 We use a function here so we can rebuild the pipe using parameters rather than
 calling a script several times.
 
-.. GENERATED FROM PYTHON SOURCE LINES 51-123
+.. GENERATED FROM PYTHON SOURCE LINES 53-125
 
 .. code-block:: default
 
@@ -163,12 +177,12 @@ calling a script several times.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-126
+.. GENERATED FROM PYTHON SOURCE LINES 126-128
 
 Perform the mesh convergence study
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. GENERATED FROM PYTHON SOURCE LINES 126-150
+.. GENERATED FROM PYTHON SOURCE LINES 128-152
 
 .. code-block:: default
 
@@ -193,7 +207,7 @@ Perform the mesh convergence study
         dof, eqv_stress = pipe_plane_strain(e, nu, rad1, rad2, pressure, esize)
         num_dof.append(dof)
         max_stress.append(eqv_stress)
-        print(f'DOF: {dof:5d}   Stress: {eqv_stress:.2f} MPa')
+        print(f"DOF: {dof:5d}   Stress: {eqv_stress:.2f} MPa")
 
 
 
@@ -230,22 +244,22 @@ Perform the mesh convergence study
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 151-154
+.. GENERATED FROM PYTHON SOURCE LINES 153-156
 
 Plot mesh convergence results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Draw a dotted line showing the convergence value
 
-.. GENERATED FROM PYTHON SOURCE LINES 154-162
+.. GENERATED FROM PYTHON SOURCE LINES 156-164
 
 .. code-block:: default
 
 
-    plt.plot(num_dof, max_stress, 'b-o')
-    plt.plot([num_dof[0], num_dof[-1]], [max_stress[-1], max_stress[-1]], 'r:')
-    plt.title('Mesh Convergence Study')
-    plt.xlabel('Number of DOF')
-    plt.ylabel('Maximum eqv. Stress (MPa)')
+    plt.plot(num_dof, max_stress, "b-o")
+    plt.plot([num_dof[0], num_dof[-1]], [max_stress[-1], max_stress[-1]], "r:")
+    plt.title("Mesh Convergence Study")
+    plt.xlabel("Number of DOF")
+    plt.ylabel("Maximum eqv. Stress (MPa)")
     plt.show()
 
 
@@ -260,19 +274,22 @@ Draw a dotted line showing the convergence value
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 163-164
+.. GENERATED FROM PYTHON SOURCE LINES 165-166
 
 Resume results from last analysis from mesh convergence study
 
-.. GENERATED FROM PYTHON SOURCE LINES 164-171
+.. GENERATED FROM PYTHON SOURCE LINES 166-176
 
 .. code-block:: default
 
 
     # Plot the final mesh used
-    mapdl.allsel('ALL')
+    mapdl.allsel("ALL")
     mapdl.eplot(
-        title='Element Plot', line_width=1, show_bounds=True, cpos="xy",
+        title="Element Plot",
+        line_width=1,
+        show_bounds=True,
+        cpos="xy",
     )
 
 
@@ -298,11 +315,11 @@ Resume results from last analysis from mesh convergence study
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-173
+.. GENERATED FROM PYTHON SOURCE LINES 177-178
 
 Plot nodal displacement
 
-.. GENERATED FROM PYTHON SOURCE LINES 173-182
+.. GENERATED FROM PYTHON SOURCE LINES 178-189
 
 .. code-block:: default
 
@@ -312,7 +329,9 @@ Plot nodal displacement
     mapdl.set(1, 1)
 
     mapdl.post_processing.plot_nodal_displacement(
-        'NORM', cpos="xy", cmap="magma",
+        "NORM",
+        cpos="xy",
+        cmap="magma",
     )
 
 
@@ -338,11 +357,11 @@ Plot nodal displacement
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 183-184
+.. GENERATED FROM PYTHON SOURCE LINES 190-191
 
 Plot nodal equivalent stress
 
-.. GENERATED FROM PYTHON SOURCE LINES 184-186
+.. GENERATED FROM PYTHON SOURCE LINES 191-193
 
 .. code-block:: default
 
@@ -360,11 +379,11 @@ Plot nodal equivalent stress
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 187-188
+.. GENERATED FROM PYTHON SOURCE LINES 194-195
 
 stop mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 188-189
+.. GENERATED FROM PYTHON SOURCE LINES 195-196
 
 .. code-block:: default
 
@@ -379,7 +398,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.926 seconds)
+   **Total running time of the script:** ( 0 minutes  9.000 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_2d_pressure_vessel.py:
