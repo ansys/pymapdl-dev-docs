@@ -24,6 +24,7 @@ Here are a series of examples using MAPDL with ``ansys-mapdl-core``.
    02-geometry\README.txt
    03-tips-n-tricks\README.txt
    05-Tech_demos\README.txt
+   07-technology-showcase-examples\README.txt
 
 .. raw:: html
 
@@ -957,6 +958,44 @@ applications that may be of interest.
    :hidden:
 
    /examples/06-verif-manual/vm-010-bending_of_a_t-shaped_beam
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_examples_07-technology-showcase-examples:
+
+Technology Showcase Manual Examples
+====================================
+This section demonstrates  the broad simulation capabilities
+of Ansys Mechanical APDL. The problems demonstrate how 
+to use PyMAPDL to effectively and accurately
+solve interdisciplinary problems 
+from a variety of industries and engineering fields.
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This examples shows how to use PyMAPDL to import an existing FE model and to run a modal and PS...">
+
+.. only:: html
+
+ .. figure:: /examples/07-technology-showcase-examples/images/thumb/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_thumb.png
+     :alt: Dynamic simulation of a printed circuit board assembly
+
+     :ref:`sphx_glr_examples_07-technology-showcase-examples_20-example-technology-showcase-dynamic-simulation-PCB.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/07-technology-showcase-examples/20-example-technology-showcase-dynamic-simulation-PCB
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>

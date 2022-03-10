@@ -475,6 +475,13 @@
   </a>
  </li>
 </ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07-technology-showcase-examples/20-example-technology-showcase-dynamic-simulation-PCB.html">
+   Dynamic simulation of a printed circuit board assembly
+  </a>
+ </li>
+</ul>
 
     
   </div>
@@ -734,7 +741,7 @@ force of 1 kN in the positive X direction.</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =       1.857   TIME= 04:05:30
+ *** NOTE ***                            CP =       1.962   TIME= 11:27:33
  There is no title defined for this analysis.
 
  *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -747,7 +754,7 @@ force of 1 kN in the positive X direction.</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:05:30  MAR 10, 2022 CP=      1.863
+ 00000000  VERSION=LINUX x64     11:27:33  MAR 10, 2022 CP=      1.969
 
 
 
@@ -763,11 +770,11 @@ force of 1 kN in the positive X direction.</p>
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =       1.866   TIME= 04:05:30
+ *** NOTE ***                            CP =       1.973   TIME= 11:27:33
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =       1.867   TIME= 04:05:30
+ *** NOTE ***                            CP =       1.974   TIME= 11:27:33
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -816,8 +823,8 @@ force of 1 kN in the positive X direction.</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       977  PLANE183      0.083   0.000085
- Time at end of element matrix formulation CP = 1.94303799.
+        1       977  PLANE183      0.127   0.000130
+ Time at end of element matrix formulation CP = 2.07918501.
 
  SPARSE MATRIX DIRECT SOLVER.
   Number of equations =        6124,    Maximum wavefront =     48
@@ -825,7 +832,7 @@ force of 1 kN in the positive X direction.</p>
   Memory required for in-core solution     =     8.134 MB
   Memory required for out-of-core solution =     4.318 MB
 
- *** NOTE ***                            CP =       2.121   TIME= 04:05:30
+ *** NOTE ***                            CP =       2.307   TIME= 11:27:34
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
@@ -840,12 +847,12 @@ force of 1 kN in the positive X direction.</p>
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       977  PLANE183      0.097   0.000100
+        1       977  PLANE183      0.182   0.000186
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       977  PLANE183      0.028   0.000028
+        1       977  PLANE183      0.050   0.000051
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -1113,7 +1120,7 @@ height and width of the plate.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  45.322 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  48.623 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-2d-plate-with-a-hole-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/d463fc780909323c9509c882e0f755e2/2d_plate_with_a_hole.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">2d_plate_with_a_hole.py</span></code></a></p>
