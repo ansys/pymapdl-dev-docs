@@ -517,8 +517,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-a-modal-analysis">
-   Run a modal analysis
+  <a class="reference internal nav-link" href="#run-modal-analysis">
+   Run modal analysis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -527,13 +527,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-dpf-post">
-   Using DPF-Post
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#psd-analysis">
-   PSD analysis
+  <a class="reference internal nav-link" href="#run-psd-analysis">
+   Run PSD analysis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -542,8 +537,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plot-using-python-libraries">
-   Plot using python libraries
+  <a class="reference internal nav-link" href="#post-process-psd-analysis-in-post1">
+   Post-process PSD analysis in POST1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#post-process-psd-analysis-in-post26-time-history-post-processing">
+   Post-process PSD analysis in POST26 (time-history post-processing)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#post-process-psd-analysis-using-matplotlib">
+   Post-process PSD analysis using Matplotlib
   </a>
  </li>
 </ul>
@@ -630,9 +635,9 @@ ansys.mapdl Version: 0.61.dev0
 <section id="creating-the-complete-layered-model">
 <h2>Creating the complete layered model<a class="headerlink" href="#creating-the-complete-layered-model" title="Permalink to this headline">¶</a></h2>
 <p>The original model will be duplicated to create a layered PCB of three layers
-that are binded together</p>
+that are binded together.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># duplicate single PCB to get three layers</span>
-<span class="c1">#  get the maximum node number for the single layers PCB in the input file</span>
+<span class="c1"># get the maximum node number for the single layers PCB in the input file</span>
 <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_nodenum</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;max_nodenum&quot;</span><span class="p">,</span> <span class="s2">&quot;node&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;num&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">)</span>
 
 <span class="c1"># generate additional PCBs offset by 20 mm in the -y direction</span>
@@ -697,8 +702,11 @@ that are binded together</p>
 </pre></div>
 </div>
 </section>
-<section id="run-a-modal-analysis">
-<h2>Run a modal analysis<a class="headerlink" href="#run-a-modal-analysis" title="Permalink to this headline">¶</a></h2>
+<section id="run-modal-analysis">
+<h2>Run modal analysis<a class="headerlink" href="#run-modal-analysis" title="Permalink to this headline">¶</a></h2>
+<p>A modal analysis is run using Block Lanzos.
+Only 10 modes are extracted for the sake of run times, but using a higher
+number of nodes is recommended (suggestion: 300 modes).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># enter solution processor and define analysis settings</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s2">&quot;modal&quot;</span><span class="p">)</span>
@@ -1842,7 +1850,9 @@ that are binded together</p>
 <p>This sections illustrates different methods to post-process the results of the
 modal analysis : PyMAPDL method, PyMAPDL result reader, PyDPF-Post
 and PyDPF-Core. All methods lead to the same result and are just given as an
-example of how each module can be used.</p>
+example of how each module can be used.
+The methods using DPF modules are commented in the code due to CI/CD issues
+but will run locally if uncommented.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># using MAPDL methods</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -1851,26 +1861,19 @@ example of how each module can be used.</p>
 <span class="c1"># using PyMAPDL result reader</span>
 <span class="n">mapdl_result</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">result</span>
 <span class="n">mapdl_result</span><span class="o">.</span><span class="n">plot_nodal_displacement</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-<img src="../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_003.png" srcset="../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_003.png" alt="20 example technology showcase dynamic simulation PCB" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-  warnings.warn(
-/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-  warnings.warn(
-</pre></div>
-</div>
-</section>
-<section id="using-dpf-post">
-<h2>Using DPF-Post<a class="headerlink" href="#using-dpf-post" title="Permalink to this headline">¶</a></h2>
-<p>from ansys.dpf import post
-solution_path = ‘file.rst’
-solution = post.load_solution(solution_path)
-print(solution)
-displacement = solution.displacement(time_scoping=1)
-total_deformation = displacement.norm
-total_deformation.plot_contour(show_edges=True)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># using DPF-Core</span>
+
+<span class="c1"># Using DPF-Post</span>
+
+<span class="c1"># from ansys.dpf import post</span>
+<span class="c1"># solution_path = &#39;file.rst&#39;</span>
+<span class="c1"># solution = post.load_solution(solution_path)</span>
+<span class="c1"># print(solution)</span>
+<span class="c1"># displacement = solution.displacement(time_scoping=1)</span>
+<span class="c1"># total_deformation = displacement.norm</span>
+<span class="c1"># total_deformation.plot_contour(show_edges=True)</span>
+
+<span class="c1"># Using DPF-Core</span>
+
 <span class="c1"># from ansys.dpf import core</span>
 <span class="c1"># model = core.Model(solution_path)</span>
 <span class="c1"># results = model.results</span>
@@ -1882,10 +1885,17 @@ total_deformation.plot_contour(show_edges=True)</p>
 <span class="c1"># mesh.plot(total_def_container.get_field_by_time_id(1))</span>
 </pre></div>
 </div>
+<img src="../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_003.png" srcset="../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_003.png" alt="20 example technology showcase dynamic simulation PCB" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
+  warnings.warn(
+</pre></div>
+</div>
 </section>
-<section id="psd-analysis">
-<h2>PSD analysis<a class="headerlink" href="#psd-analysis" title="Permalink to this headline">¶</a></h2>
-<p>The response spectrum analysis is defined, solved and post-processed</p>
+<section id="run-psd-analysis">
+<h2>Run PSD analysis<a class="headerlink" href="#run-psd-analysis" title="Permalink to this headline">¶</a></h2>
+<p>The response spectrum analysis is defined, solved and post-processed.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># define PSD analysis with input spectrum</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s2">&quot;spectr&quot;</span><span class="p">)</span>
@@ -1999,15 +2009,30 @@ total_deformation.plot_contour(show_edges=True)</p>
 </section>
 <section id="post-process-psd-analysis">
 <h2>Post-process PSD analysis<a class="headerlink" href="#post-process-psd-analysis" title="Permalink to this headline">¶</a></h2>
-<p>Using MAPDL methods in POST1</p>
+<p>The response spectrum analysis is post-processed. First, the standard
+MAPDL POST1 postprocessor is used. Then, the MAPDL time-history
+POST26 postprocessor is used to generate the response power spectral
+density.
+density.
+.. note:: The graph generated through POST26 is exported as a picture</p>
+<blockquote>
+<div><p>in the working directory. Finally, the results from POST26 are saved to Python
+variables to be plotted in the Python environment with the use of Matplotlib library.</p>
+</div></blockquote>
+</section>
+<section id="post-process-psd-analysis-in-post1">
+<h2>Post-process PSD analysis in POST1<a class="headerlink" href="#post-process-psd-analysis-in-post1" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">plnsol</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;last&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">plnsol</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">)</span>
-
-<span class="c1"># Using MAPDL methods in POST26 (time-history post-processing)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">post26</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="post-process-psd-analysis-in-post26-time-history-post-processing">
+<h2>Post-process PSD analysis in POST26 (time-history post-processing)<a class="headerlink" href="#post-process-psd-analysis-in-post26-time-history-post-processing" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">post26</span><span class="p">()</span>
 
 <span class="c1"># allow storage for 200 variables</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">numvar</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
@@ -2040,10 +2065,10 @@ total_deformation.plot_contour(show_edges=True)</p>
 </pre></div>
 </div>
 </section>
-<section id="plot-using-python-libraries">
-<h2>Plot using python libraries<a class="headerlink" href="#plot-using-python-libraries" title="Permalink to this headline">¶</a></h2>
-<p>store MAPDL results to python variables</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">dim</span><span class="p">(</span><span class="s2">&quot;frequencies&quot;</span><span class="p">,</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<section id="post-process-psd-analysis-using-matplotlib">
+<h2>Post-process PSD analysis using Matplotlib<a class="headerlink" href="#post-process-psd-analysis-using-matplotlib" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># store MAPDL results to python variables</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">dim</span><span class="p">(</span><span class="s2">&quot;frequencies&quot;</span><span class="p">,</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">dim</span><span class="p">(</span><span class="s2">&quot;response&quot;</span><span class="p">,</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">vget</span><span class="p">(</span><span class="s2">&quot;frequencies(1)&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">vget</span><span class="p">(</span><span class="s2">&quot;response(1)&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -2051,7 +2076,6 @@ total_deformation.plot_contour(show_edges=True)</p>
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">response</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">]</span>
 
 <span class="c1"># use Matplotlib to create graph</span>
-
 <a href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">()</span>
 <span class="n">ax</span> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure.add_subplot" title="matplotlib.figure.Figure.add_subplot" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span></a><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xscale.html#matplotlib.pyplot.xscale" title="matplotlib.pyplot.xscale" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">xscale</span></a><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
@@ -2069,7 +2093,7 @@ total_deformation.plot_contour(show_edges=True)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  42.051 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  45.651 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-07-technology-showcase-examples-20-example-technology-showcase-dynamic-simulation-pcb-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/c4ede7a870ebd23031aa64003acee0cd/20-example-technology-showcase-dynamic-simulation-PCB.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">20-example-technology-showcase-dynamic-simulation-PCB.py</span></code></a></p>

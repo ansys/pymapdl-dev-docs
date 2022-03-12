@@ -102,7 +102,7 @@ between the IC packages and the circuit board.
 Creating the complete layered model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The original model will be duplicated to create a layered PCB of three layers
-that are binded together
+that are binded together.
 
 .. GENERATED FROM PYTHON SOURCE LINES 54-112
 
@@ -110,7 +110,7 @@ that are binded together
 
 
     # duplicate single PCB to get three layers
-    #  get the maximum node number for the single layers PCB in the input file
+    # get the maximum node number for the single layers PCB in the input file
     max_nodenum = mapdl.get("max_nodenum", "node", "", "num", "max")
 
     # generate additional PCBs offset by 20 mm in the -y direction
@@ -189,13 +189,16 @@ that are binded together
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 113-116
+.. GENERATED FROM PYTHON SOURCE LINES 113-119
 
-Run a modal analysis
+Run modal analysis
 ~~~~~~~~~~~~~~~~~~~~~~~
+A modal analysis is run using Block Lanzos.
+Only 10 modes are extracted for the sake of run times, but using a higher
+number of nodes is recommended (suggestion: 300 modes).
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 116-130
+.. GENERATED FROM PYTHON SOURCE LINES 119-133
 
 .. code-block:: default
 
@@ -1348,7 +1351,7 @@ Run a modal analysis
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 131-137
+.. GENERATED FROM PYTHON SOURCE LINES 134-142
 
 Post-processing the modal results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1356,8 +1359,10 @@ This sections illustrates different methods to post-process the results of the
 modal analysis : PyMAPDL method, PyMAPDL result reader, PyDPF-Post
 and PyDPF-Core. All methods lead to the same result and are just given as an
 example of how each module can be used.
+The methods using DPF modules are commented in the code due to CI/CD issues
+but will run locally if uncommented.
 
-.. GENERATED FROM PYTHON SOURCE LINES 137-147
+.. GENERATED FROM PYTHON SOURCE LINES 142-174
 
 .. code-block:: default
 
@@ -1370,6 +1375,28 @@ example of how each module can be used.
     # using PyMAPDL result reader
     mapdl_result = mapdl.result
     mapdl_result.plot_nodal_displacement(0)
+
+    # Using DPF-Post
+
+    # from ansys.dpf import post
+    # solution_path = 'file.rst'
+    # solution = post.load_solution(solution_path)
+    # print(solution)
+    # displacement = solution.displacement(time_scoping=1)
+    # total_deformation = displacement.norm
+    # total_deformation.plot_contour(show_edges=True)
+
+    # Using DPF-Core
+
+    # from ansys.dpf import core
+    # model = core.Model(solution_path)
+    # results = model.results
+    # print(results)
+    # displacements = results.displacement()
+    # total_def = core.operators.math.norm_fc(displacements)
+    # total_def_container = total_def.outputs.fields_container()
+    # mesh = model.metadata.meshed_region
+    # mesh.plot(total_def_container.get_field_by_time_id(1))
 
 
 
@@ -1394,48 +1421,13 @@ example of how each module can be used.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-157
+.. GENERATED FROM PYTHON SOURCE LINES 175-178
 
-Using DPF-Post
-~~~~~~~~~~~~~~
-from ansys.dpf import post
-solution_path = 'file.rst'
-solution = post.load_solution(solution_path)
-print(solution)
-displacement = solution.displacement(time_scoping=1)
-total_deformation = displacement.norm
-total_deformation.plot_contour(show_edges=True)
+Run PSD analysis
+~~~~~~~~~~~~~~~~~
+The response spectrum analysis is defined, solved and post-processed.
 
-.. GENERATED FROM PYTHON SOURCE LINES 157-169
-
-.. code-block:: default
-
-
-    # using DPF-Core
-    # from ansys.dpf import core
-    # model = core.Model(solution_path)
-    # results = model.results
-    # print(results)
-    # displacements = results.displacement()
-    # total_def = core.operators.math.norm_fc(displacements)
-    # total_def_container = total_def.outputs.fields_container()
-    # mesh = model.metadata.meshed_region
-    # mesh.plot(total_def_container.get_field_by_time_id(1))
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 170-173
-
-PSD analysis
-~~~~~~~~~~~~~
-The response spectrum analysis is defined, solved and post-processed
-
-.. GENERATED FROM PYTHON SOURCE LINES 173-213
+.. GENERATED FROM PYTHON SOURCE LINES 178-218
 
 .. code-block:: default
 
@@ -1560,15 +1552,28 @@ The response spectrum analysis is defined, solved and post-processed
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 214-217
+.. GENERATED FROM PYTHON SOURCE LINES 219-229
 
 Post-process PSD analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Using MAPDL methods in POST1
+The response spectrum analysis is post-processed. First, the standard
+MAPDL POST1 postprocessor is used. Then, the MAPDL time-history
+POST26 postprocessor is used to generate the response power spectral
+density.
+density.
+.. note:: The graph generated through POST26 is exported as a picture
+   in the working directory. Finally, the results from POST26 are saved to Python
+   variables to be plotted in the Python environment with the use of Matplotlib library.
 
-.. GENERATED FROM PYTHON SOURCE LINES 217-255
+.. GENERATED FROM PYTHON SOURCE LINES 232-234
+
+Post-process PSD analysis in POST1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. GENERATED FROM PYTHON SOURCE LINES 234-241
 
 .. code-block:: default
+
 
     mapdl.post1()
     mapdl.set(1, 1)
@@ -1576,7 +1581,23 @@ Using MAPDL methods in POST1
     mapdl.set("last")
     mapdl.plnsol("u", "sum")
 
-    # Using MAPDL methods in POST26 (time-history post-processing)
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 242-244
+
+Post-process PSD analysis in POST26 (time-history post-processing)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. GENERATED FROM PYTHON SOURCE LINES 244-276
+
+.. code-block:: default
+
+
     mapdl.post26()
 
     # allow storage for 200 variables
@@ -1615,16 +1636,17 @@ Using MAPDL methods in POST1
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 256-259
+.. GENERATED FROM PYTHON SOURCE LINES 277-279
 
-Plot using python libraries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-store MAPDL results to python variables
+Post-process PSD analysis using Matplotlib
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. GENERATED FROM PYTHON SOURCE LINES 259-276
+.. GENERATED FROM PYTHON SOURCE LINES 279-297
 
 .. code-block:: default
 
+
+    # store MAPDL results to python variables
     mapdl.dim("frequencies", "array", 4000, 1)
     mapdl.dim("response", "array", 4000, 1)
     mapdl.vget("frequencies(1)", 1)
@@ -1633,7 +1655,6 @@ store MAPDL results to python variables
     response = mapdl.parameters["response"]
 
     # use Matplotlib to create graph
-
     fig = plt.figure()
     ax = fig.add_subplot(111)
     plt.xscale("log")
@@ -1662,11 +1683,11 @@ store MAPDL results to python variables
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 277-278
+.. GENERATED FROM PYTHON SOURCE LINES 298-299
 
 Exit MAPDL
 
-.. GENERATED FROM PYTHON SOURCE LINES 278-279
+.. GENERATED FROM PYTHON SOURCE LINES 299-300
 
 .. code-block:: default
 
@@ -1681,7 +1702,7 @@ Exit MAPDL
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  42.051 seconds)
+   **Total running time of the script:** ( 0 minutes  45.651 seconds)
 
 
 .. _sphx_glr_download_examples_07-technology-showcase-examples_20-example-technology-showcase-dynamic-simulation-PCB.py:
