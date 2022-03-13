@@ -284,7 +284,7 @@ Solve the eigenproblem using PyMapdl with APDLMath.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1434: UserWarning: Call to sym() function cannot evaluate ifit is symmetric or not in this MAPDL version.
       warn(
 
-    Elapsed time to solve this problem :  0.5298388004302979
+    Elapsed time to solve this problem :  0.5576679706573486
 
 
 
@@ -465,7 +465,7 @@ Solve the eigenproblem
  .. code-block:: none
 
 
-    Elapsed time to solve this problem :  2.7724781036376953
+    Elapsed time to solve this problem :  2.859978675842285
 
 
 
@@ -598,7 +598,7 @@ MAPDL is faster than SciPy.
 
  .. code-block:: none
 
-    Mapdl is 5.23 times faster
+    Mapdl is 5.13 times faster
 
 
 
@@ -622,7 +622,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.723 seconds)
+   **Total running time of the script:** ( 0 minutes  6.189 seconds)
 
 
 .. _sphx_glr_download_examples_01-apdlmath-examples_mapdl_vs_scipy.py:
