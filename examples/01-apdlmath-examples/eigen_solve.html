@@ -594,7 +594,7 @@ properties (e.g. scalar, storage, symmetry…)</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Calling MAPDL to solve the eigenproblem...
 /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1434: UserWarning: Call to sym() function cannot evaluate ifit is symmetric or not in this MAPDL version.
   warn(
-Elapsed time to solve this problem: 0.031609535217285156
+Elapsed time to solve this problem: 0.03251767158508301
 </pre></div>
 </div>
 <p>This is the vector of eigenfrequencies.</p>
@@ -602,7 +602,7 @@ Elapsed time to solve this problem: 0.031609535217285156
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PFDXKC :
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>FNRKIL :
  Size : 10
   3.381e+02   3.381e+02   6.266e+02   6.266e+02   9.283e+02      &lt;       5
   9.283e+02   1.250e+03   1.250e+03   1.424e+03   1.424e+03      &lt;       10
@@ -655,7 +655,7 @@ factor and finally compute the normalized residual value
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>6.690004989071278e-11
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>2.8770969221211113e-11
 </pre></div>
 </div>
 <p>This residual can be computed for all eigenmodes</p>
@@ -699,16 +699,16 @@ factor and finally compute the normalized residual value
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.06666355063663  - Residual = 6.690004989071278e-11
-[1] : Freq = 338.06666355063663  - Residual = 2.8721192692572263e-11
-[2] : Freq = 626.6450980927033   - Residual = 2.165523763313473e-11
-[3] : Freq = 626.6450980927036   - Residual = 2.5206465332622557e-11
-[4] : Freq = 928.2598500574524   - Residual = 9.986225278422207e-12
-[5] : Freq = 928.2598500574542   - Residual = 2.035719093975018e-11
-[6] : Freq = 1249.8421074363507  - Residual = 2.7230859722702804e-11
-[7] : Freq = 1249.8421074363534  - Residual = 1.4645487249408918e-11
-[8] : Freq = 1423.9938909416692  - Residual = 1.0726980893777612e-09
-[9] : Freq = 1423.9938909416699  - Residual = 7.315378125333162e-10
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.06666355063646  - Residual = 2.8770969221211113e-11
+[1] : Freq = 338.0666635506367   - Residual = 3.6873547478622855e-11
+[2] : Freq = 626.6450980927034   - Residual = 1.7028514053504346e-11
+[3] : Freq = 626.6450980927034   - Residual = 3.0580000328290174e-11
+[4] : Freq = 928.2598500574524   - Residual = 1.1919496930940287e-11
+[5] : Freq = 928.2598500574528   - Residual = 1.3948438262680449e-11
+[6] : Freq = 1249.842107436351   - Residual = 2.4442781826095388e-11
+[7] : Freq = 1249.842107436352   - Residual = 1.0419687042080725e-11
+[8] : Freq = 1423.9938909416667  - Residual = 8.219888069734969e-10
+[9] : Freq = 1423.9938909416694  - Residual = 1.004302792876851e-09
 </pre></div>
 </div>
 <p>Plot Accuracy of Eigenresults</p>
@@ -731,7 +731,7 @@ factor and finally compute the normalized residual value
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.119 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.113 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-apdlmath-examples-eigen-solve-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ef9fd55df8801750a912151e4ce1ff42/eigen_solve.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eigen_solve.py</span></code></a></p>
