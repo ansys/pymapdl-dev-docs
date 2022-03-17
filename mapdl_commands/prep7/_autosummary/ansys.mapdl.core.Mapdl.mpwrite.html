@@ -953,25 +953,25 @@ database to a file.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
 <dt><strong>fname</strong></dt><dd><p>File name and directory path (248 characters maximum, including
-directory). If you do not specify the LIB option, the default
-directory is the current working directory. If you specify LIB and
-you have specified a material library directory (via the /MPLIB
+directory). If you do not specify the <code class="docutils literal notranslate"><span class="pre">LIB</span></code> option, the default
+directory is the current working directory. If you specify <code class="docutils literal notranslate"><span class="pre">LIB</span></code> and
+you have specified a material library directory (via the <code class="docutils literal notranslate"><span class="pre">/MPLIB</span></code>
 command), that directory is the default. Otherwise, the default is
 the current working directory. If you use the default for your
 directory, you can use all 248 characters for the file name.</p>
 <p>The file name defaults to Jobname.</p>
 </dd>
 <dt><strong>ext</strong></dt><dd><p>Filename extension (eight-character maximum).</p>
-<p>If you omit the LIB option, the default extension is
-MP. If you specify the LIB option, the default extension
+<p>If you omit the <code class="docutils literal notranslate"><span class="pre">LIB</span></code> option, the default extension is
+MP. If you specify the <code class="docutils literal notranslate"><span class="pre">LIB</span></code> option, the default extension
 is units_MPL, where units is the system of units currently
-in use. (See the description of the /UNITS command.) For
-example, if /UNITS is set to BIN, the extension defaults
+in use. (See the description of the <code class="docutils literal notranslate"><span class="pre">/UNITS</span></code> command.) For
+example, if <code class="docutils literal notranslate"><span class="pre">/UNITS</span></code> is set to BIN, the extension defaults
 to BIN_MPL.</p>
 </dd>
-<dt><strong>lib</strong></dt><dd><p>The only value allowed for this field is the string “LIB.”</p>
-<p>The LIB option indicates that you wish to have properties
-associated with the material (MAT) written to the
+<dt><strong>lib</strong></dt><dd><p>The only value allowed for this field is the string <code class="docutils literal notranslate"><span class="pre">&quot;LIB&quot;</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">LIB</span></code> option indicates that you wish to have properties
+associated with the material (<code class="docutils literal notranslate"><span class="pre">MAT</span></code>) written to the
 specified material library file using the material library
 file format. The material library file format is
 ASCII-text-based ANSYS command input. Certain commands
@@ -981,14 +981,14 @@ selected material. This feature makes the material library
 file independent of the material number in effect when the
 file was written; this enables you to restore the
 properties into the ANSYS database using the material
-number of your choice. The LIB option also enables you to
+number of your choice. The <code class="docutils literal notranslate"><span class="pre">LIB</span></code> option also enables you to
 save both linear and nonlinear properties. If you omit the
-LIB option, you can save linear properties only.</p>
+<code class="docutils literal notranslate"><span class="pre">LIB</span></code> option, you can save linear properties only.</p>
 </dd>
 <dt><strong>mat</strong></dt><dd><p>Specifies the material to be written to the named material library
 file.  There is no default; you must either specify a material or
-omit the MAT argument.  Even if you specify a MAT value, the ANSYS
-program ignores it if the LIB argument is not specified.</p>
+omit the <code class="docutils literal notranslate"><span class="pre">MAT</span></code> argument.  Even if you specify a <code class="docutils literal notranslate"><span class="pre">MAT</span></code> value, the ANSYS
+program ignores it if the <code class="docutils literal notranslate"><span class="pre">LIB</span></code> argument is not specified.</p>
 </dd>
 </dl>
 </dd>
