@@ -284,7 +284,7 @@ Solve the eigenproblem using PyMapdl with APDLMath.
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1431: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
       warn(
 
-    Elapsed time to solve this problem :  0.6736228466033936
+    Elapsed time to solve this problem :  0.6458430290222168
 
 
 
@@ -465,7 +465,7 @@ Solve the eigenproblem
  .. code-block:: none
 
 
-    Elapsed time to solve this problem :  3.763964891433716
+    Elapsed time to solve this problem :  3.246436595916748
 
 
 
@@ -598,7 +598,7 @@ MAPDL is faster than SciPy.
 
  .. code-block:: none
 
-    Mapdl is 5.59 times faster
+    Mapdl is 5.03 times faster
 
 
 
@@ -622,7 +622,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.331 seconds)
+   **Total running time of the script:** ( 0 minutes  6.823 seconds)
 
 
 .. _sphx_glr_download_examples_01-apdlmath-examples_mapdl_vs_scipy.py:
