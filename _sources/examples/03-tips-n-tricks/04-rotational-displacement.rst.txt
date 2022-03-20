@@ -98,17 +98,6 @@ freedom. Following this we:
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      warnings.warn(
-    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      warnings.warn(
-
 
 
 
@@ -180,17 +169,6 @@ Plotting Stresses
    :srcset: /examples/03-tips-n-tricks/images/sphx_glr_04-rotational-displacement_002.png
    :class: sphx-glr-single-img
 
-
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      warnings.warn(
-    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      warnings.warn(
 
 
 
@@ -290,7 +268,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.930 seconds)
+   **Total running time of the script:** ( 0 minutes  1.090 seconds)
 
 
 .. _sphx_glr_download_examples_03-tips-n-tricks_04-rotational-displacement.py:

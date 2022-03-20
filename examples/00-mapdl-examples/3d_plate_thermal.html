@@ -572,14 +572,7 @@ pyMAPDL.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_3d_plate_thermal_001.png" srcset="../../_images/sphx_glr_3d_plate_thermal_001.png" alt="3d plate thermal" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-  warnings.warn(
-/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-  warnings.warn(
-</pre></div>
-</div>
-</section>
+<img src="../../_images/sphx_glr_3d_plate_thermal_001.png" srcset="../../_images/sphx_glr_3d_plate_thermal_001.png" alt="3d plate thermal" class = "sphx-glr-single-img"/></section>
 <section id="boundary-conditions">
 <h2>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">¶</a></h2>
 <p>Set the thermal boundary conditions</p>
@@ -605,12 +598,12 @@ pyMAPDL.</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =      64.058   TIME= 04:06:45
+ *** NOTE ***                            CP =      85.318   TIME= 04:08:25
  There is no title defined for this analysis.
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:06:45  MAR 19, 2022 CP=     64.060
+ 00000000  VERSION=LINUX x64     04:08:25  MAR 20, 2022 CP=     85.320
 
 
 
@@ -626,11 +619,11 @@ pyMAPDL.</p>
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =      64.061   TIME= 04:06:45
+ *** NOTE ***                            CP =      85.321   TIME= 04:08:25
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =      64.061   TIME= 04:06:45
+ *** NOTE ***                            CP =      85.321   TIME= 04:08:25
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -655,8 +648,8 @@ pyMAPDL.</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       450  SOLID90       0.030   0.000066
- Time at end of element matrix formulation CP = 64.1001587.
+        1       450  SOLID90       0.058   0.000130
+ Time at end of element matrix formulation CP = 85.3983154.
 
  SPARSE MATRIX DIRECT SOLVER.
   Number of equations =        2606,    Maximum wavefront =     72
@@ -664,7 +657,7 @@ pyMAPDL.</p>
   Memory required for in-core solution     =     4.639 MB
   Memory required for out-of-core solution =     2.499 MB
 
- *** NOTE ***                            CP =      64.172   TIME= 04:06:45
+ *** NOTE ***                            CP =      85.493   TIME= 04:08:25
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
@@ -679,12 +672,12 @@ pyMAPDL.</p>
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       450  SOLID90       0.022   0.000048
+        1       450  SOLID90       0.041   0.000091
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       450  SOLID90       0.014   0.000030
+        1       450  SOLID90       0.025   0.000054
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -705,14 +698,7 @@ directly through MAPDL.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">plot_nodal_temperature</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_3d_plate_thermal_002.png" srcset="../../_images/sphx_glr_3d_plate_thermal_002.png" alt="3d plate thermal" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-  warnings.warn(
-/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-  warnings.warn(
-</pre></div>
-</div>
-<p>Alternatively you could also use the result object that reads in the
+<img src="../../_images/sphx_glr_3d_plate_thermal_002.png" srcset="../../_images/sphx_glr_3d_plate_thermal_002.png" alt="3d plate thermal" class = "sphx-glr-single-img"/><p>Alternatively you could also use the result object that reads in the
 result file using pyansys</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">result</span>
 <span class="n">nnum</span><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">temp</span></a> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">nodal_temperature</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -721,18 +707,14 @@ result file using pyansys</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-  warnings.warn(
-/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-  warnings.warn(
-[    1     2     3 ... 12715 12716 12717] [ 0.  0.  0. ... nan nan nan]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[    1     2     3 ... 12715 12716 12717] [0. 0. 0. ... 0. 0. 0.]
 </pre></div>
 </div>
 <p>stop mapdl</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.080 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.363 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-3d-plate-thermal-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/91c538c5ed71a5605ff4467121a37338/3d_plate_thermal.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">3d_plate_thermal.py</span></code></a></p>

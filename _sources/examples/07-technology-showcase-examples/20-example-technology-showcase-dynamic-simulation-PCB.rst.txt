@@ -88,10 +88,6 @@ between the IC packages and the circuit board.
     MAPDL Version:       21.2
     ansys.mapdl Version: 0.62.dev0
 
-    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      warnings.warn(
-    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      warnings.warn(
 
     'ALSO SELECT ALL COMPONENTS'
 
@@ -174,17 +170,6 @@ that are binded together.
    :srcset: /examples/07-technology-showcase-examples/images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_002.png
    :class: sphx-glr-single-img
 
-
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      warnings.warn(
-    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      warnings.warn(
 
 
 
@@ -1337,16 +1322,16 @@ number of nodes is recommended (suggestion: 300 modes).
       MODE    FREQUENCY (HERTZ)      
 
 
-        1     21.68428282316    
-        2     21.69024199150    
-        3     21.69131650792    
-        4     33.82973502105    
-        5     33.83798485466    
-        6     33.83938717704    
-        7     37.06064329403    
-        8     37.07091158484    
-        9     37.07187102350    
-       10     43.83753551706
+        1     21.68428282375    
+        2     21.69024199086    
+        3     21.69131650854    
+        4     33.82973502134    
+        5     33.83798485488    
+        6     33.83938717689    
+        7     37.06064329411    
+        8     37.07091158497    
+        9     37.07187102346    
+       10     43.83753551689
 
 
 
@@ -1406,17 +1391,6 @@ but will run locally if uncommented.
    :srcset: /examples/07-technology-showcase-examples/images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_003.png
    :class: sphx-glr-single-img
 
-
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-      warnings.warn(
-    /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-      warnings.warn(
 
 
 
@@ -1702,7 +1676,7 @@ Exit MAPDL
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  42.477 seconds)
+   **Total running time of the script:** ( 0 minutes  56.663 seconds)
 
 
 .. _sphx_glr_download_examples_07-technology-showcase-examples_20-example-technology-showcase-dynamic-simulation-PCB.py:

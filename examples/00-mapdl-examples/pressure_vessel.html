@@ -601,17 +601,6 @@ apply a pressure to it.</p>
 <li><img src="../../_images/sphx_glr_pressure_vessel_001.png" srcset="../../_images/sphx_glr_pressure_vessel_001.png" alt="pressure vessel" class = "sphx-glr-multi-img"/></li>
 <li><img src="../../_images/sphx_glr_pressure_vessel_002.png" srcset="../../_images/sphx_glr_pressure_vessel_002.png" alt="pressure vessel" class = "sphx-glr-multi-img"/></li>
 </ul>
-<p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-  warnings.warn(
-/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-  warnings.warn(
-/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-  warnings.warn(
-/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-  warnings.warn(
-</pre></div>
-</div>
 <p>Create the mesh</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">smrtsize</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">esize</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -621,14 +610,7 @@ apply a pressure to it.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_pressure_vessel_003.png" srcset="../../_images/sphx_glr_pressure_vessel_003.png" alt="pressure vessel" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-  warnings.warn(
-/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-  warnings.warn(
-</pre></div>
-</div>
-<p>Solve</p>
+<img src="../../_images/sphx_glr_pressure_vessel_003.png" srcset="../../_images/sphx_glr_pressure_vessel_003.png" alt="pressure vessel" class = "sphx-glr-single-img"/><p>Solve</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># boundary condition selection</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">area_select</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">da</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="s2">&quot;SYMM&quot;</span><span class="p">)</span>
@@ -649,7 +631,7 @@ apply a pressure to it.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =        93.891&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =       126.246&#39;
 </pre></div>
 </div>
 <section id="post-processing">
@@ -701,14 +683,7 @@ Node  Stress (psi)
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">plot_nodal_eqv_stress</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;zy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_pressure_vessel_004.png" srcset="../../_images/sphx_glr_pressure_vessel_004.png" alt="pressure vessel" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-  warnings.warn(
-/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-  warnings.warn(
-</pre></div>
-</div>
-<p>We could, alternatively, get the exact same results by directly
+<img src="../../_images/sphx_glr_pressure_vessel_004.png" srcset="../../_images/sphx_glr_pressure_vessel_004.png" alt="pressure vessel" class = "sphx-glr-single-img"/><p>We could, alternatively, get the exact same results by directly
 accessing the result file using the legacy file reader
 <a class="reference external" href="https://github.com/pyansys/pymapdl-reader">ansys-mapdl-reader</a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># access the result</span>
@@ -723,11 +698,7 @@ accessing the result file using the legacy file reader
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1401: PyvistaDeprecationWarning: Use of `point_arrays` is deprecated. Use `point_data` instead.
-  warnings.warn(
-/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/core/dataset.py:1541: PyvistaDeprecationWarning: Use of `cell_arrays` is deprecated. Use `cell_data` instead.
-  warnings.warn(
-All close: True
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>All close: True
 </pre></div>
 </div>
 <p>That these results are equivalent to results from PRNSOL.</p>
@@ -763,7 +734,7 @@ PRNSOL MAPDL Min:                 3483.041895
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.955 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.977 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-mapdl-examples-pressure-vessel-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f825344a51663a7df5ba8548ca4983cf/pressure_vessel.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pressure_vessel.py</span></code></a></p>
