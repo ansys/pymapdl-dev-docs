@@ -306,8 +306,8 @@
 To install it, run Julia and switch to the package manager by pressing  the``”]”`` key.</p>
 <p>If you need to work with different package versions or applications, it is beneficial to create a virtual environment in Julia.
 To create a virtual environment, use the <code class="docutils literal notranslate"><span class="pre">activate</span></code> command with the name of the new environment that you want to create or activate.</p>
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span>(@1.7) pkg&gt; activate julia_test
-  Activating project at `C:\Users\USER\julia_test`
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(@1.7) pkg&gt; activate julia_test
+  Activating project at `C:/Users/USER/julia_test`
 </pre></div>
 </div>
 <p>A message should appear, indicating that the new package (<code class="docutils literal notranslate"><span class="pre">julia_test</span></code>) has been activated. This environment name will now precede the command line.</p>
@@ -365,14 +365,14 @@ For example, if you uncompress the source files in <code class="docutils literal
 </pre></div>
 </div>
 <p>Finally, after restarting Julia, you can import PyMAPDL using the same procedure as described above:</p>
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span>julia&gt; using PyCall
-julia&gt; pymapdl = pyimport(&quot;ansys.mapdl.core&quot;)
-PyObject &lt;module &#39;ansys.mapdl.core&#39; from &#39;C:\\Users\\USER\\.julia\\conda\\3\\lib\\site-packages\\ansys\\mapdl\\core\\__init__.py&#39;&gt;
-julia&gt; mapdl = pymapdl.launch_mapdl()
-julia&gt; print(mapdl.__str__())
-Product:             Ansys Mechanical Enterprise
-MAPDL Version:       21.2
-ansys.mapdl Version: 0.60.6
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="n">using</span> <span class="n">PyCall</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">pymapdl</span> <span class="o">=</span> <span class="n">pyimport</span><span class="p">(</span><span class="s2">&quot;ansys.mapdl.core&quot;</span><span class="p">)</span>
+<span class="n">PyObject</span> <span class="o">&lt;</span><span class="n">module</span> <span class="s1">&#39;ansys.mapdl.core&#39;</span> <span class="kn">from</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">USER</span><span class="se">\\</span><span class="s1">.julia</span><span class="se">\\</span><span class="s1">conda</span><span class="se">\\</span><span class="s1">3</span><span class="se">\\</span><span class="s1">lib</span><span class="se">\\</span><span class="s1">site-packages</span><span class="se">\\</span><span class="s1">ansys</span><span class="se">\\</span><span class="s1">mapdl</span><span class="se">\\</span><span class="s1">core</span><span class="se">\\</span><span class="s1">__init__.py&#39;</span><span class="o">&gt;</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mapdl</span> <span class="o">=</span> <span class="n">pymapdl</span><span class="o">.</span><span class="n">launch_mapdl</span><span class="p">()</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="fm">__str__</span><span class="p">())</span>
+<span class="n">Product</span><span class="p">:</span>             <span class="n">Ansys</span> <span class="n">Mechanical</span> <span class="n">Enterprise</span>
+<span class="n">MAPDL</span> <span class="n">Version</span><span class="p">:</span>       <span class="mf">21.2</span>
+<span class="n">ansys</span><span class="o">.</span><span class="n">mapdl</span> <span class="n">Version</span><span class="p">:</span> <span class="mf">0.60.6</span>
 </pre></div>
 </div>
 <div class="admonition note">
