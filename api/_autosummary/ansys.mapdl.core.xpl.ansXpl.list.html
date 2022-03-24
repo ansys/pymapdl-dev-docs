@@ -294,6 +294,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.extract.html">
+       extract
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.goto.html">
        goto
       </a>
@@ -414,15 +419,35 @@
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>Response from MAPDL.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>Listing of records from the current level.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xpl</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<p>Open a full file and list the current records.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xpl</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;file.full&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xpl</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
+<span class="go">=====      ANSYS File Xplorer : List Blocks in File file.full</span>
+<span class="go"> ::FULL::HEADER         Size =        652  B     Total  Size =    180.297 KB</span>
+<span class="go"> ::FULL::DOFSBYNOD            Size =         24  B</span>
+<span class="go"> ::FULL::BACK                 Size =        336  B</span>
 </pre></div>
 </div>
+<blockquote>
+<div><p>::FULL::STIFF::HEADER        Size =    117.316 KB
+::FULL::RHS                  Size =      1.910 KB
+::FULL::DIAGK                Size =      1.910 KB
+::FULL::SCLK                 Size =      1.910 KB
+::FULL::MRK                  Size =        984  B
+::FULL::NODEEXT              Size =        336  B
+::FULL::PCGDOFS              Size =        984  B
+::FULL::BCDOFS               Size =        984  B
+::FULL::BCVALUES             Size =         12  B</p>
+<p>::FULL::MASS::HEADER         Size =     50.801 KB
+::FULL::DIAGM                Size =      1.910 KB
+::FULL::NGPH                 Size =        336  B</p>
+</div></blockquote>
 </dd></dl>
 
 </section>

@@ -294,6 +294,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.extract.html">
+       extract
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.goto.html">
        goto
       </a>
@@ -404,20 +409,19 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.xpl.ansXpl.write">
 <span class="sig-prename descclassname"><span class="pre">ansXpl.</span></span><span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recordname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vecname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.xpl.ansXpl.write" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write a given record back to an MAPDL File
-Use the write function at your own risk, you may corrupt
-an existing file by changing the size of a record in the
-file.
-This function must be used only on a non-compressed file</p>
+<dd><p>Write a given record back to an MAPDL file.</p>
+<p>Use the write function at your own risk, you may corrupt an existing
+file by changing the size of a record in the file.  This method must be
+used only on a non-compressed file.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
 <dt><strong>recordname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the record you want to overwrite. Your position
 in the file must be set accordingly to this record location
-( same as if you want to read it)</p>
+(same as if you want to read it).</p>
 </dd>
 <dt><strong>vecname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the APDLMath vector you want to write in the MAPDL
-file. Its size must be consistent with the existing record</p>
+file. Its size must be consistent with the existing record.</p>
 </dd>
 </dl>
 </dd>

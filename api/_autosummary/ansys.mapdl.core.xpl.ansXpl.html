@@ -293,6 +293,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.extract.html">
+       extract
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.goto.html">
        goto
       </a>
@@ -403,11 +408,19 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.mapdl.core.xpl.ansXpl">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.xpl.</span></span><span class="sig-name descname"><span class="pre">ansXpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapdl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.xpl.ansXpl" title="Permalink to this definition">¶</a></dt>
-<dd><p>ANSYS database explorer class.</p>
+<dd><p>ANSYS database explorer.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">xpl</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">xpl</span>
+</pre></div>
+</div>
+<p>Open a mode file and extract a vector.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xpl</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;file.mode&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vec</span> <span class="o">=</span> <span class="n">xpl</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;MASS&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vec</span><span class="o">.</span><span class="n">asarray</span><span class="p">()</span>
+<span class="go">array([ 4,  7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43,</span>
+<span class="go">        46, 49, 52, 55, 58,  1], dtype=int32)</span>
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
@@ -423,44 +436,47 @@
 <tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.copy.html#ansys.mapdl.core.xpl.ansXpl.copy" title="ansys.mapdl.core.xpl.ansXpl.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.copy</span></code></a>(newfile[, option])</p></td>
 <td><p>Copy the current opened as a new file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.goto.html#ansys.mapdl.core.xpl.ansXpl.goto" title="ansys.mapdl.core.xpl.ansXpl.goto"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.goto</span></code></a>(path)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.extract.html#ansys.mapdl.core.xpl.ansXpl.extract" title="ansys.mapdl.core.xpl.ansXpl.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.extract</span></code></a>(recordname[, sets, asarray])</p></td>
+<td><p>Import a Matrix/Vector from a MAPDL result file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.goto.html#ansys.mapdl.core.xpl.ansXpl.goto" title="ansys.mapdl.core.xpl.ansXpl.goto"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.goto</span></code></a>(path)</p></td>
 <td><p>Go directly to a new location in the file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.help.html#ansys.mapdl.core.xpl.ansXpl.help" title="ansys.mapdl.core.xpl.ansXpl.help"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.help</span></code></a>()</p></td>
-<td><p>XPL help message</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.help.html#ansys.mapdl.core.xpl.ansXpl.help" title="ansys.mapdl.core.xpl.ansXpl.help"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.help</span></code></a>()</p></td>
+<td><p>XPL help message.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.info.html#ansys.mapdl.core.xpl.ansXpl.info" title="ansys.mapdl.core.xpl.ansXpl.info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.info</span></code></a>(recname[, option])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.info.html#ansys.mapdl.core.xpl.ansXpl.info" title="ansys.mapdl.core.xpl.ansXpl.info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.info</span></code></a>(recname[, option])</p></td>
 <td><p>Gives details on a specific record, or all records (using <code class="docutils literal notranslate"><span class="pre">&quot;*&quot;</span></code>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.json.html#ansys.mapdl.core.xpl.ansXpl.json" title="ansys.mapdl.core.xpl.ansXpl.json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.json</span></code></a>()</p></td>
-<td><p>Create a JSON representation of the tree or records.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.json.html#ansys.mapdl.core.xpl.ansXpl.json" title="ansys.mapdl.core.xpl.ansXpl.json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.json</span></code></a>()</p></td>
+<td><p>Return a JSON representation of the tree or records.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.list.html#ansys.mapdl.core.xpl.ansXpl.list" title="ansys.mapdl.core.xpl.ansXpl.list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.list</span></code></a>([nlev])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.list.html#ansys.mapdl.core.xpl.ansXpl.list" title="ansys.mapdl.core.xpl.ansXpl.list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.list</span></code></a>([nlev])</p></td>
 <td><p>List the records at the current level.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.open.html#ansys.mapdl.core.xpl.ansXpl.open" title="ansys.mapdl.core.xpl.ansXpl.open"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.open</span></code></a>(filename[, option])</p></td>
-<td><p>Open an MAPDL file to explore</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.open.html#ansys.mapdl.core.xpl.ansXpl.open" title="ansys.mapdl.core.xpl.ansXpl.open"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.open</span></code></a>(filename[, option])</p></td>
+<td><p>Open an MAPDL file to explore.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.print.html#ansys.mapdl.core.xpl.ansXpl.print" title="ansys.mapdl.core.xpl.ansXpl.print"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.print</span></code></a>(recname)</p></td>
-<td><p>Print values of a given records, or all records (using <code class="docutils literal notranslate"><span class="pre">&quot;*&quot;</span></code>)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.print.html#ansys.mapdl.core.xpl.ansXpl.print" title="ansys.mapdl.core.xpl.ansXpl.print"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.print</span></code></a>(recname)</p></td>
+<td><p>Print values of a given records, or all records (using <code class="docutils literal notranslate"><span class="pre">&quot;*&quot;</span></code>).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.read.html#ansys.mapdl.core.xpl.ansXpl.read" title="ansys.mapdl.core.xpl.ansXpl.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.read</span></code></a>(recordname)</p></td>
-<td><p>Read a given record and fill a Python array.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.read.html#ansys.mapdl.core.xpl.ansXpl.read" title="ansys.mapdl.core.xpl.ansXpl.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.read</span></code></a>(recordname)</p></td>
+<td><p>Read a record and return either an APDL math matrix or an APDL math vector.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.save.html#ansys.mapdl.core.xpl.ansXpl.save" title="ansys.mapdl.core.xpl.ansXpl.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.save</span></code></a>()</p></td>
-<td><p>Save the current file, ignoring the marked records</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.save.html#ansys.mapdl.core.xpl.ansXpl.save" title="ansys.mapdl.core.xpl.ansXpl.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.save</span></code></a>()</p></td>
+<td><p>Save the current file, ignoring the marked records.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.step.html#ansys.mapdl.core.xpl.ansXpl.step" title="ansys.mapdl.core.xpl.ansXpl.step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.step</span></code></a>(where)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.step.html#ansys.mapdl.core.xpl.ansXpl.step" title="ansys.mapdl.core.xpl.ansXpl.step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.step</span></code></a>(where)</p></td>
 <td><p>Go down in the tree of records</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.up.html#ansys.mapdl.core.xpl.ansXpl.up" title="ansys.mapdl.core.xpl.ansXpl.up"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.up</span></code></a>([nlev])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.up.html#ansys.mapdl.core.xpl.ansXpl.up" title="ansys.mapdl.core.xpl.ansXpl.up"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.up</span></code></a>([nlev])</p></td>
 <td><p>Go up in the tree.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.where.html#ansys.mapdl.core.xpl.ansXpl.where" title="ansys.mapdl.core.xpl.ansXpl.where"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.where</span></code></a>()</p></td>
-<td><p>Prints the current location in the MAPDL FIle</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.where.html#ansys.mapdl.core.xpl.ansXpl.where" title="ansys.mapdl.core.xpl.ansXpl.where"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.where</span></code></a>()</p></td>
+<td><p>Returns the current location in the MAPDL file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.write.html#ansys.mapdl.core.xpl.ansXpl.write" title="ansys.mapdl.core.xpl.ansXpl.write"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.write</span></code></a>(recordname, vecname)</p></td>
-<td><p>Write a given record back to an MAPDL File Use the write function at your own risk, you may corrupt an existing file by changing the size of a record in the file.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.xpl.ansXpl.write.html#ansys.mapdl.core.xpl.ansXpl.write" title="ansys.mapdl.core.xpl.ansXpl.write"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansXpl.write</span></code></a>(recordname, vecname)</p></td>
+<td><p>Write a given record back to an MAPDL file.</p></td>
 </tr>
 </tbody>
 </table>

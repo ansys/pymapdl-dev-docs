@@ -593,9 +593,9 @@ properties (e.g. scalar, storage, symmetry…)</p>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Calling MAPDL to solve the eigenproblem...
-/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1431: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
+/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1444: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
   warn(
-Elapsed time to solve this problem: 0.043684959411621094
+Elapsed time to solve this problem: 0.029939889907836914
 </pre></div>
 </div>
 <p>This is the vector of eigenfrequencies.</p>
@@ -603,7 +603,7 @@ Elapsed time to solve this problem: 0.043684959411621094
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>UJBNFG :
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>LQFSMV :
  Size : 10
   3.381e+02   3.381e+02   6.266e+02   6.266e+02   9.283e+02      &lt;       5
   9.283e+02   1.250e+03   1.250e+03   1.424e+03   1.424e+03      &lt;       10
@@ -656,7 +656,7 @@ factor and finally compute the normalized residual value
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>6.313576918291141e-11
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>2.6273835385264075e-11
 </pre></div>
 </div>
 <p>This residual can be computed for all eigenmodes</p>
@@ -700,16 +700,16 @@ factor and finally compute the normalized residual value
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.0666635506363   - Residual = 6.313576918291141e-11
-[1] : Freq = 338.06666355063646  - Residual = 3.565104731884232e-11
-[2] : Freq = 626.6450980927034   - Residual = 3.143005001150259e-11
-[3] : Freq = 626.6450980927036   - Residual = 1.8284752424069535e-11
-[4] : Freq = 928.2598500574526   - Residual = 2.7739958010980775e-11
-[5] : Freq = 928.2598500574545   - Residual = 8.745733630888701e-12
-[6] : Freq = 1249.8421074363496  - Residual = 2.1319237557872518e-11
-[7] : Freq = 1249.8421074363519  - Residual = 1.3965305936256654e-11
-[8] : Freq = 1423.9938909416667  - Residual = 4.630700936849751e-10
-[9] : Freq = 1423.9938909416699  - Residual = 1.212875772979617e-09
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.0666635506365   - Residual = 2.6273835385264075e-11
+[1] : Freq = 338.0666635506367   - Residual = 2.1087035367443176e-11
+[2] : Freq = 626.645098092703    - Residual = 1.679604125040562e-11
+[3] : Freq = 626.6450980927034   - Residual = 2.7227800706302095e-11
+[4] : Freq = 928.2598500574526   - Residual = 1.4009940077086654e-11
+[5] : Freq = 928.2598500574528   - Residual = 8.157866990205825e-12
+[6] : Freq = 1249.8421074363503  - Residual = 2.1313038353673958e-11
+[7] : Freq = 1249.8421074363514  - Residual = 1.1989288077925653e-11
+[8] : Freq = 1423.9938909416692  - Residual = 2.9126189943721073e-10
+[9] : Freq = 1423.9938909416705  - Residual = 1.268003723707233e-09
 </pre></div>
 </div>
 <p>Plot Accuracy of Eigenresults</p>
@@ -732,7 +732,7 @@ factor and finally compute the normalized residual value
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.402 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.112 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-apdlmath-examples-eigen-solve-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ef9fd55df8801750a912151e4ce1ff42/eigen_solve.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eigen_solve.py</span></code></a></p>

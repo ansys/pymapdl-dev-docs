@@ -35,12 +35,12 @@ Additional Packages Used
 .. GENERATED FROM PYTHON SOURCE LINES 19-27
 
 Starting MAPDL as a service and importing an external model
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The original FE model is given in the Ansys Mechanical APDL Technology Showcase Manual.
-The .cdb contains a FE model of a single circuit board. The model is meshed
-with SOLID186, SHELL181 and BEAM188 elements. All components of the PCB
-model is assigned with linear elastic isotropic materials. Bonded and
-flexible surface-to-surface contact pairs are used to define the contact
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The original FE model is given in the Ansys Mechanical APDL Technology
+Showcase Manual.  The .cdb contains a FE model of a single circuit board. The
+model is meshed with SOLID186, SHELL181 and BEAM188 elements. All components
+of the PCB model is assigned with linear elastic isotropic materials. Bonded
+and flexible surface-to-surface contact pairs are used to define the contact
 between the IC packages and the circuit board.
 
 .. GENERATED FROM PYTHON SOURCE LINES 27-49
@@ -96,7 +96,7 @@ between the IC packages and the circuit board.
 .. GENERATED FROM PYTHON SOURCE LINES 50-54
 
 Creating the complete layered model
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The original model will be duplicated to create a layered PCB of three layers
 that are binded together.
 
@@ -1322,16 +1322,16 @@ number of nodes is recommended (suggestion: 300 modes).
       MODE    FREQUENCY (HERTZ)      
 
 
-        1     21.68428282375    
-        2     21.69024199086    
-        3     21.69131650854    
-        4     33.82973502134    
-        5     33.83798485488    
-        6     33.83938717689    
-        7     37.06064329411    
-        8     37.07091158497    
-        9     37.07187102346    
-       10     43.83753551689
+        1     21.68428282316    
+        2     21.69024199150    
+        3     21.69131650792    
+        4     33.82973502105    
+        5     33.83798485466    
+        6     33.83938717704    
+        7     37.06064329403    
+        8     37.07091158484    
+        9     37.07187102350    
+       10     43.83753551706
 
 
 
@@ -1398,7 +1398,7 @@ but will run locally if uncommented.
 .. GENERATED FROM PYTHON SOURCE LINES 175-178
 
 Run PSD analysis
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 The response spectrum analysis is defined, solved and post-processed.
 
 .. GENERATED FROM PYTHON SOURCE LINES 178-218
@@ -1526,7 +1526,7 @@ The response spectrum analysis is defined, solved and post-processed.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 219-229
+.. GENERATED FROM PYTHON SOURCE LINES 219-231
 
 Post-process PSD analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1534,17 +1534,19 @@ The response spectrum analysis is post-processed. First, the standard
 MAPDL POST1 postprocessor is used. Then, the MAPDL time-history
 POST26 postprocessor is used to generate the response power spectral
 density.
-density.
-.. note:: The graph generated through POST26 is exported as a picture
-   in the working directory. Finally, the results from POST26 are saved to Python
-   variables to be plotted in the Python environment with the use of Matplotlib library.
 
-.. GENERATED FROM PYTHON SOURCE LINES 232-234
+.. note::
+   The graph generated through POST26 is exported as a picture in the working
+   directory. Finally, the results from POST26 are saved to Python variables
+   to be plotted in the Python environment with the use of Matplotlib
+   library.
+
+.. GENERATED FROM PYTHON SOURCE LINES 234-236
 
 Post-process PSD analysis in POST1
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-241
+.. GENERATED FROM PYTHON SOURCE LINES 236-243
 
 .. code-block:: default
 
@@ -1562,12 +1564,12 @@ Post-process PSD analysis in POST1
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 242-244
+.. GENERATED FROM PYTHON SOURCE LINES 244-246
 
 Post-process PSD analysis in POST26 (time-history post-processing)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. GENERATED FROM PYTHON SOURCE LINES 244-276
+.. GENERATED FROM PYTHON SOURCE LINES 246-278
 
 .. code-block:: default
 
@@ -1610,12 +1612,12 @@ Post-process PSD analysis in POST26 (time-history post-processing)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 277-279
+.. GENERATED FROM PYTHON SOURCE LINES 279-281
 
 Post-process PSD analysis using Matplotlib
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. GENERATED FROM PYTHON SOURCE LINES 279-297
+.. GENERATED FROM PYTHON SOURCE LINES 281-299
 
 .. code-block:: default
 
@@ -1657,11 +1659,11 @@ Post-process PSD analysis using Matplotlib
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 298-299
+.. GENERATED FROM PYTHON SOURCE LINES 300-301
 
 Exit MAPDL
 
-.. GENERATED FROM PYTHON SOURCE LINES 299-300
+.. GENERATED FROM PYTHON SOURCE LINES 301-302
 
 .. code-block:: default
 
@@ -1676,7 +1678,7 @@ Exit MAPDL
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  56.106 seconds)
+   **Total running time of the script:** ( 0 minutes  41.871 seconds)
 
 
 .. _sphx_glr_download_examples_07-technology-showcase-examples_20-example-technology-showcase-dynamic-simulation-PCB.py:
