@@ -313,7 +313,7 @@ according to <a class="reference external" href="https://help.github.com/en/gith
 in your history.  Next, authorize docker to access this repository
 with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>GH_USERNAME=&lt;my-github-username&gt;
-cat GH_TOKEN.txt | docker login docker.pkg.github.com -u $GH_USERNAME --password-stdin
+cat GH_TOKEN.txt | docker login ghcr.io -u $GH_USERNAME --password-stdin
 </pre></div>
 </div>
 <p>You can now launch MAPDL directly from docker with a short script or
@@ -324,7 +324,7 @@ MAPDL with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>LICENSE_SERVER=1055@XXX.XXX.XXX.XXX
 VERSION=v21.1.0
 
-IMAGE=docker.pkg.github.com/pyansys/mapdl/mapdl_grpc:$VERSION
+IMAGE=ghcr.io/pyansys/pymapdl/mapdl:$VERSION
 docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -smp
 </pre></div>
 </div>
@@ -368,7 +368,7 @@ that port when connecting to MAPDL with:</p>
 <section id="additional-considerations">
 <h2>Additional Considerations<a class="headerlink" href="#additional-considerations" title="Permalink to this headline">¶</a></h2>
 <p>In the command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>IMAGE=docker.pkg.github.com/pyansys/mapdl/mapdl_grpc:$VERSION
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>IMAGE=ghcr.io/pyansys/pymapdl/mapdl:$VERSION
 docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -smp
 </pre></div>
 </div>
@@ -376,7 +376,7 @@ docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -smp
 appending to the docker command.  For example, you can increase the
 number of processors (up to the number available on the host machine)
 with the <cite>-np</cite> switch.  For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>IMAGE=docker.pkg.github.com/pyansys/mapdl/mapdl_grpc:$VERSION
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>IMAGE=ghcr.io/pyansys/pymapdl/mapdl:$VERSION
 docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -np 4
 </pre></div>
 </div>
@@ -408,7 +408,7 @@ be sure to have the appropriate license for additional HPC features.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

@@ -603,14 +603,14 @@ environment variable with that IP:</p>
 <h2>Running MAPDL on a Local Docker Image<a class="headerlink" href="#running-mapdl-on-a-local-docker-image" title="Permalink to this headline">¶</a></h2>
 <p>To run a Docker image, you must follow all steps in <a class="reference internal" href="#running-pymapdl-on-wsl">Running PyMAPDL on WSL</a> .</p>
 <p>Additionally, you run a Docker image of PyMAPDL with:</p>
-<div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">-e</span> <span class="n">ANSYSLMD_LICENSE_FILE</span><span class="p">=</span><span class="n">1055</span><span class="nv">@host</span><span class="p">.</span><span class="n">docker</span><span class="p">.</span><span class="n">internal</span> <span class="p">-</span><span class="n">-restart</span> <span class="n">always</span> <span class="p">-</span><span class="n">-name</span> <span class="n">mapdl</span> <span class="n">-p</span> <span class="n">50053</span><span class="p">:</span><span class="n">50052</span> <span class="n">docker</span><span class="p">.</span><span class="n">pkg</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pyansys</span><span class="p">/</span><span class="n">pymapdl</span><span class="p">/</span><span class="n">mapdl</span> <span class="n">-smp</span> <span class="p">&gt;</span> <span class="n">log</span><span class="p">.</span><span class="n">txt</span>
+<div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">-e</span> <span class="n">ANSYSLMD_LICENSE_FILE</span><span class="p">=</span><span class="n">1055</span><span class="nv">@host</span><span class="p">.</span><span class="n">docker</span><span class="p">.</span><span class="n">internal</span> <span class="p">-</span><span class="n">-restart</span> <span class="n">always</span> <span class="p">-</span><span class="n">-name</span> <span class="n">mapdl</span> <span class="n">-p</span> <span class="n">50053</span><span class="p">:</span><span class="n">50052</span> <span class="n">ghcr</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">pyansys</span><span class="p">/</span><span class="n">pymapdl</span><span class="p">/</span><span class="n">mapdl</span> <span class="n">-smp</span> <span class="p">&gt;</span> <span class="n">log</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 <p>Successive runs should restart the container or just delete it and rerun it using:</p>
 <div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">stop</span> <span class="n">mapdl</span>
 <span class="n">docker</span> <span class="n">container</span> <span class="n">prune</span>
 
-<span class="n">docker</span> <span class="n">run</span> <span class="n">-e</span> <span class="n">ANSYSLMD_LICENSE_FILE</span><span class="p">=</span><span class="n">1055</span><span class="nv">@host</span><span class="p">.</span><span class="n">docker</span><span class="p">.</span><span class="n">internal</span> <span class="p">-</span><span class="n">-restart</span> <span class="n">always</span> <span class="p">-</span><span class="n">-name</span> <span class="n">mapdl</span> <span class="n">-p</span> <span class="n">50053</span><span class="p">:</span><span class="n">50052</span> <span class="n">docker</span><span class="p">.</span><span class="n">pkg</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pyansys</span><span class="p">/</span><span class="n">pymapdl</span><span class="p">/</span><span class="n">mapdl</span> <span class="n">-smp</span> <span class="p">&gt;</span> <span class="n">log</span><span class="p">.</span><span class="n">txt</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="n">-e</span> <span class="n">ANSYSLMD_LICENSE_FILE</span><span class="p">=</span><span class="n">1055</span><span class="nv">@host</span><span class="p">.</span><span class="n">docker</span><span class="p">.</span><span class="n">internal</span> <span class="p">-</span><span class="n">-restart</span> <span class="n">always</span> <span class="p">-</span><span class="n">-name</span> <span class="n">mapdl</span> <span class="n">-p</span> <span class="n">50053</span><span class="p">:</span><span class="n">50052</span> <span class="n">ghcr</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">pyansys</span><span class="p">/</span><span class="n">pymapdl</span><span class="p">/</span><span class="n">mapdl</span> <span class="n">-smp</span> <span class="p">&gt;</span> <span class="n">log</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 <p>This will create a log file (<code class="docutils literal notranslate"><span class="pre">log.txt</span></code>) in your current directory location.</p>
@@ -654,7 +654,7 @@ latter should be equal to <code class="docutils literal notranslate"><span class
 </pre></div>
 </div>
 <p>You can then run the Docker image with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -e <span class="nv">ANSYSLMD_LICENSE_FILE</span><span class="o">=</span><span class="m">1055</span>@host.docker.internal -e <span class="nv">ANS_USER_PATH</span><span class="o">=</span><span class="s1">&#39;/ansys_jobs/upf&#39;</span> -e <span class="nv">ANS_USE_UPF</span><span class="o">=</span><span class="s1">&#39;TRUE&#39;</span> --restart always --name mapdl -p <span class="m">50053</span>:50052 docker.pkg.github.com/pyansys/pymapdl/mapdl -smp  <span class="m">1</span>&gt;log.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -e <span class="nv">ANSYSLMD_LICENSE_FILE</span><span class="o">=</span><span class="m">1055</span>@host.docker.internal -e <span class="nv">ANS_USER_PATH</span><span class="o">=</span><span class="s1">&#39;/ansys_jobs/upf&#39;</span> -e <span class="nv">ANS_USE_UPF</span><span class="o">=</span><span class="s1">&#39;TRUE&#39;</span> --restart always --name mapdl -p <span class="m">50053</span>:50052 ghcr.io/pyansys/pymapdl/mapdl -smp  <span class="m">1</span>&gt;log.txt
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -832,7 +832,7 @@ flag <code class="docutils literal notranslate"><span class="pre">-mpi</span> <s
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     
