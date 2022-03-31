@@ -473,7 +473,7 @@
 <h1>get_vec<a class="headerlink" href="#get-vec" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.math.MapdlMath.get_vec">
-<span class="sig-prename descclassname"><span class="pre">MapdlMath.</span></span><span class="sig-name descname"><span class="pre">get_vec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.float64'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname='file.full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat_id='RHS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asarray=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.math.MapdlMath.get_vec" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">MapdlMath.</span></span><span class="sig-name descname"><span class="pre">get_vec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'file.full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'RHS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.math.MapdlMath.get_vec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load a vector from a file.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -488,8 +488,10 @@ can be one of the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;RHS&quot;</span></code> - Load vector</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;GVEC&quot;</span></code> - Constraint equation constant terms</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;BACK&quot;</span></code> - nodal mapping vector (internal to user)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;FORWARD&quot;</span></code> - nodal mapping vector (user to internal)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;BACK&quot;</span></code> - nodal mapping vector (internal to user).
+If this is used, the default <code class="docutils literal notranslate"><span class="pre">dtype</span></code> is <code class="docutils literal notranslate"><span class="pre">np.int32</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;FORWARD&quot;</span></code> - nodal mapping vector (user to internal)
+If this is used, the default <code class="docutils literal notranslate"><span class="pre">dtype</span></code> is <code class="docutils literal notranslate"><span class="pre">np.int32</span></code>.</p></li>
 </ul>
 </dd>
 <dt><strong>asarray</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Return a <cite>scipy</cite> array rather than an APDLMath matrix.</p>
