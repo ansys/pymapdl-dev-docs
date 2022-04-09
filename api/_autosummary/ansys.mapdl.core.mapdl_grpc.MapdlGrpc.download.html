@@ -467,6 +467,10 @@
 <dt class="sig sig-object py" id="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download">
 <span class="sig-prename descclassname"><span class="pre">MapdlGrpc.</span></span><span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">262144</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download" title="Permalink to this definition">¶</a></dt>
 <dd><p>Download files from the gRPC instance workind directory</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is only available for MAPDL 2021R1 or newer.</p>
+</div>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
@@ -486,9 +490,12 @@ progress.</p>
 </dd>
 <dt><strong>recursive</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>Use recursion when using glob pattern.</p>
 </dd>
-<dt><strong>.. warning::</strong></dt><dd><p>This feature is only available for MAPDL 2021R1 or newer.</p>
+</dl>
 </dd>
-<dt><strong>.. note::</strong></dt><dd><ul class="simple">
+</dl>
+<p class="rubric">Notes</p>
+<p>There are some considerations to keep in mind when using this command:</p>
+<ul class="simple">
 <li><p>The glob pattern search does not search recursively in remote instances.</p></li>
 <li><p>In a remote instance, it is not possible to list or download files in different
 locations than the MAPDL working directory.</p></li>
@@ -496,25 +503,22 @@ locations than the MAPDL working directory.</p></li>
 from a different folder is allowed.
 However it is not a recommended approach.</p></li>
 </ul>
-</dd>
-</dl>
-</dd>
-</dl>
 <p class="rubric">Examples</p>
-<p>Download all the simulation files (‘out’, ‘full’, ‘rst’, ‘cdb’, ‘err’, ‘db’, or ‘log’):</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Download every single file in the MAPDL workind directory:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;everything&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
 <p>Download a single file:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;file.out&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Download all the files starting with <cite>‘file’</cite>:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;file*&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Download every single file in the MAPDL workind directory:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;*.*&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Alternatively, you can download all the files using
+<code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.download_project</span></code> (recommended):</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">download_project</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd></dl>

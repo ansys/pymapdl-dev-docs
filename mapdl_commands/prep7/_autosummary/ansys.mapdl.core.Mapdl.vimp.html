@@ -1137,16 +1137,16 @@ volume(s).</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
 <dt><strong>vol</strong></dt><dd><p>Number of the volume containing the tetrahedral elements to be
-improved.  If VOL = ALL (default), improve the tetrahedral elements
-in all selected volumes.  If VOL = P, graphical picking is enabled
+improved.  If <code class="docutils literal notranslate"><span class="pre">VOL</span> <span class="pre">=</span> <span class="pre">ALL</span></code> (default), improve the tetrahedral elements
+in all selected volumes.  If <code class="docutils literal notranslate"><span class="pre">VOL</span> <span class="pre">=</span> <span class="pre">P</span></code>, graphical picking is enabled
 and all remaining command fields are ignored (valid only in the
-GUI).  A component name may also be substituted for VOL.</p>
+GUI).  A component name may also be substituted for <code class="docutils literal notranslate"><span class="pre">VOL</span></code>.</p>
 </dd>
 <dt><strong>chgbnd</strong></dt><dd><p>Specifies whether to allow boundary modification.  Boundary
 modification includes such things as changes in the connectivity of
 the element faces on the boundary and the addition of boundary
 nodes.  (Also see “Notes” below for important usage information for
-CHGBND.)</p>
+<code class="docutils literal notranslate"><span class="pre">CHGBND</span></code>.)</p>
 <p>0 - Do not allow boundary modification.</p>
 <p>1 - Allow boundary modification (default).</p>
 </dd>
@@ -1156,33 +1156,31 @@ swapping and node smoothing techniques.)</p>
 <p>0 - Perform the least amount of swapping/smoothing.</p>
 <p>1 - Perform an intermediate amount of swapping/smoothing.</p>
 <p>2 - Perform the greatest amount of swapping/smoothing.</p>
-<dl class="simple">
-<dt>3 - Perform the greatest amount of swapping/smoothing, plus additional improvement</dt><dd><p>techniques (default).</p>
-</dd>
-</dl>
+<p>3 - Perform the greatest amount of swapping/smoothing, plus
+additional improvement techniques (default).</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>VIMP is useful for further improving a volume mesh created in ANSYS
-[VMESH], especially quadratic tetrahedral element meshes.</p>
-<p>The VIMP command enables you to improve a given tetrahedral mesh by
+<p><code class="docutils literal notranslate"><span class="pre">VIMP</span></code> is useful for further improving a volume mesh created in ANSYS
+[<code class="docutils literal notranslate"><span class="pre">VMESH</span></code>], especially quadratic tetrahedral element meshes.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">VIMP</span></code> command enables you to improve a given tetrahedral mesh by
 reducing the number of poorly-shaped tetrahedral elements (in
 particular, the number of sliver tetrahedral elements)–as well as the
 overall number of elements–in the mesh.  It also improves the overall
 quality of the mesh.</p>
-<p>Regardless of the value of the CHGBND argument, boundary mid-nodes can
+<p>Regardless of the value of the <code class="docutils literal notranslate"><span class="pre">CHGBND</span></code> argument, boundary mid-nodes can
 be moved.</p>
 <p>When loads or constraints have been placed on boundary nodes or mid-
 nodes, and boundary mid-nodes are later moved, ANSYS issues a warning
 message to let you know that it will not update the loads or
 constraints.</p>
-<p>Even when CHGBND = 1, no boundary modification is performed on areas
+<p>Even when <code class="docutils literal notranslate"><span class="pre">CHGBND</span> <span class="pre">=</span> <span class="pre">1</span></code>, no boundary modification is performed on areas
 and lines that are not modifiable (for example, areas that are adjacent
 to other volumes or that contain shell elements, or lines that are not
 incident on modifiable areas, contain beam elements, or have line
-divisions specified for them [LESIZE]).</p>
+divisions specified for them [<code class="docutils literal notranslate"><span class="pre">LESIZE</span></code>]).</p>
 </dd></dl>
 
 </section>

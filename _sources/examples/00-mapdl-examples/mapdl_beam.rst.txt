@@ -169,7 +169,7 @@ are sequential
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:08:22  APR 08, 2022 CP=    108.661
+     00000000  VERSION=LINUX x64     04:08:19  APR 09, 2022 CP=    105.509
 
                                                                                
 
@@ -229,28 +229,28 @@ individual elements
 
  .. code-block:: none
 
-    [1 1 1 1 0 0 0 0 0 0 1 2 0]
-    [1 1 1 1 0 0 0 0 0 0 2 3 0]
-    [1 1 1 1 0 0 0 0 0 0 3 4 0]
-    [1 1 1 1 0 0 0 0 0 0 4 5 0]
-    [1 1 1 1 0 0 0 0 0 0 5 6 0]
-    [1 1 1 1 0 0 0 0 0 0 6 7 0]
-    [1 1 1 1 0 0 0 0 0 0 7 8 0]
-    [1 1 1 1 0 0 0 0 0 0 8 9 0]
-    [ 1  1  1  1  0  0  0  0  0  0  9 10  0]
-    [ 1  1  1  1  0  0  0  0  0  0 10 11  0]
-    [ 1  1  1  1  0  0  0  0  0  0 11 12  0]
-    [ 1  1  1  1  0  0  0  0  0  0 12 13  0]
-    [ 1  1  1  1  0  0  0  0  0  0 13 14  0]
-    [ 1  1  1  1  0  0  0  0  0  0 14 15  0]
-    [ 1  1  1  1  0  0  0  0  0  0 15 16  0]
-    [ 1  1  1  1  0  0  0  0  0  0 16 17  0]
-    [ 1  1  1  1  0  0  0  0  0  0 17 18  0]
-    [ 1  1  1  1  0  0  0  0  0  0 18 19  0]
-    [ 1  1  1  1  0  0  0  0  0  0 19 20  0]
-    [ 1  1  1  1  0  0  0  0  0  0 20 21  0]
-    [ 1  1  1  1  0  0  0  0  0  0 21 22  0]
-    [ 1  1  1  1  0  0  0  0  0  0 22 23  0]
+    [1 1 1 1 0 0 0 0 1 0 1 2 0]
+    [1 1 1 1 0 0 0 0 2 0 2 3 0]
+    [1 1 1 1 0 0 0 0 3 0 3 4 0]
+    [1 1 1 1 0 0 0 0 4 0 4 5 0]
+    [1 1 1 1 0 0 0 0 5 0 5 6 0]
+    [1 1 1 1 0 0 0 0 6 0 6 7 0]
+    [1 1 1 1 0 0 0 0 7 0 7 8 0]
+    [1 1 1 1 0 0 0 0 8 0 8 9 0]
+    [ 1  1  1  1  0  0  0  0  9  0  9 10  0]
+    [ 1  1  1  1  0  0  0  0 10  0 10 11  0]
+    [ 1  1  1  1  0  0  0  0 11  0 11 12  0]
+    [ 1  1  1  1  0  0  0  0 12  0 12 13  0]
+    [ 1  1  1  1  0  0  0  0 13  0 13 14  0]
+    [ 1  1  1  1  0  0  0  0 14  0 14 15  0]
+    [ 1  1  1  1  0  0  0  0 15  0 15 16  0]
+    [ 1  1  1  1  0  0  0  0 16  0 16 17  0]
+    [ 1  1  1  1  0  0  0  0 17  0 17 18  0]
+    [ 1  1  1  1  0  0  0  0 18  0 18 19  0]
+    [ 1  1  1  1  0  0  0  0 19  0 19 20  0]
+    [ 1  1  1  1  0  0  0  0 20  0 20 21  0]
+    [ 1  1  1  1  0  0  0  0 21  0 21 22  0]
+    [ 1  1  1  1  0  0  0  0 22  0 22 23  0]
 
 
 
@@ -315,7 +315,7 @@ run the static analysis
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =     108.670   TIME= 04:08:22
+     *** NOTE ***                            CP =     105.518   TIME= 04:08:19
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -330,7 +330,7 @@ run the static analysis
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:08:22  APR 08, 2022 CP=    108.670
+     00000000  VERSION=LINUX x64     04:08:19  APR 09, 2022 CP=    105.519
 
                                                                                
 
@@ -346,11 +346,11 @@ run the static analysis
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =     108.671   TIME= 04:08:22
+     *** NOTE ***                            CP =     105.519   TIME= 04:08:19
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =     108.671   TIME= 04:08:22
+     *** NOTE ***                            CP =     105.519   TIME= 04:08:19
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -367,7 +367,7 @@ run the static analysis
 
      SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr                                                                                                                                                                                                                                                           
 
-     *** NOTE ***                            CP =     108.677   TIME= 04:08:22
+     *** NOTE ***                            CP =     105.526   TIME= 04:08:19
      Predictor is ON by default for structural elements with rotational      
      degrees of freedom.  Use the PRED,OFF command to turn the predictor     
      OFF if it adversely affects the convergence.                            
@@ -380,8 +380,8 @@ run the static analysis
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        22  BEAM188       0.013   0.000584
-     Time at end of element matrix formulation CP = 108.68483.               
+            1        22  BEAM188       0.015   0.000702
+     Time at end of element matrix formulation CP = 105.534416.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =          44,    Maximum wavefront =     12
@@ -389,7 +389,7 @@ run the static analysis
       Memory required for in-core solution     =     0.062 MB
       Memory required for out-of-core solution =     0.062 MB
 
-     *** NOTE ***                            CP =     108.689   TIME= 04:08:22
+     *** NOTE ***                            CP =     105.538   TIME= 04:08:19
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -404,12 +404,12 @@ run the static analysis
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        22  BEAM188       0.040   0.001837
+            1        22  BEAM188       0.036   0.001622
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        22  BEAM188       0.001   0.000050
+            1        22  BEAM188       0.002   0.000087
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -441,7 +441,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.660 seconds)
+   **Total running time of the script:** ( 0 minutes  0.634 seconds)
 
 
 .. _sphx_glr_download_examples_00-mapdl-examples_mapdl_beam.py:
