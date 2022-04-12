@@ -968,23 +968,23 @@ Defaults to the number of rows needed to fill the result array.</p>
 The size of the submatrix used is determined from the upper left
 starting array element (defined on the operation command) to the lower
 right array element (defined by the number of rows on this command and
-the number of columns on the <code class="docutils literal notranslate"><span class="pre">*VCOL</span></code> command).  NINC allows skipping row
+the number of columns on the <code class="docutils literal notranslate"><span class="pre">*VCOL</span></code> command).  <code class="docutils literal notranslate"><span class="pre">NINC</span></code> allows skipping row
 operations for some operation commands.  Skipped rows are included in
 the row count.  The starting row number must be defined on the
 operation command for each parameter read and for the result written.</p>
-<p>The default NROW is calculated from the maximum number of rows of the
+<p>The default <code class="docutils literal notranslate"><span class="pre">NROW</span></code> is calculated from the maximum number of rows of the
 result array (the <code class="docutils literal notranslate"><span class="pre">*DIM</span></code> row dimension) minus the starting location + 1.
-For example, <code class="docutils literal notranslate"><span class="pre">*DIM,R,,10</span></code> and a starting location of R(7) gives a default
-of 4 loops (filling R(7), R(8), R(9), and R(10)).  Repeat operations
+For example, <code class="docutils literal notranslate"><span class="pre">*DIM,R,,10</span></code> and a starting location of <code class="docutils literal notranslate"><span class="pre">R(7)</span></code> gives a default
+of 4 loops (filling <code class="docutils literal notranslate"><span class="pre">R(7)</span></code>, <code class="docutils literal notranslate"><span class="pre">R(8)</span></code>, <code class="docutils literal notranslate"><span class="pre">R(9)</span></code>, and <code class="docutils literal notranslate"><span class="pre">R(10)</span></code>).  Repeat operations
 automatically terminate at the last row of the result array.  Existing
 values in the rows and columns of the results matrix remain unchanged
 where not overwritten by the requested input or operation values.</p>
-<p>The stride (NINC) allows operations to be performed at regular
+<p>The stride (<code class="docutils literal notranslate"><span class="pre">NINC</span></code>) allows operations to be performed at regular
 intervals.  It has no effect on the total number of row operations.
 Skipped operations retain the previous result.  For example, <code class="docutils literal notranslate"><span class="pre">*DIM,R,,6,</span></code>
-with a starting location of R(1), NROW = 10, and NINC = 2 calculates
-values for locations R(1), R(3), and R(5) and retains values for
-locations R(2), R(4), and R(6).  A more general skip control may be
+with a starting location of <code class="docutils literal notranslate"><span class="pre">R(1)</span></code>, <code class="docutils literal notranslate"><span class="pre">NROW</span> <span class="pre">=</span> <span class="pre">10</span></code>, and <code class="docutils literal notranslate"><span class="pre">NINC</span> <span class="pre">=</span> <span class="pre">2</span></code> calculates
+values for locations <code class="docutils literal notranslate"><span class="pre">R(1)</span></code>, <code class="docutils literal notranslate"><span class="pre">R(3)</span></code>, and <code class="docutils literal notranslate"><span class="pre">R(5)</span></code> and retains values for
+locations <code class="docutils literal notranslate"><span class="pre">R(2)</span></code>, <code class="docutils literal notranslate"><span class="pre">R(4)</span></code>, and <code class="docutils literal notranslate"><span class="pre">R(6)</span></code>.  A more general skip control may be
 done by masking <code class="docutils literal notranslate"><span class="pre">[*VMASK]</span></code>.  The row control settings are reset to the
 defaults after each <code class="docutils literal notranslate"><span class="pre">*VXX</span></code> or <code class="docutils literal notranslate"><span class="pre">*MXX</span></code> operation.  Use <code class="docutils literal notranslate"><span class="pre">*VSTAT</span></code> to list
 settings.</p>

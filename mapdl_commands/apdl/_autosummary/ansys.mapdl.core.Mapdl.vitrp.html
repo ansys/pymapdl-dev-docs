@@ -974,20 +974,20 @@ in ParT (which must be 3-D).</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>Forms an array parameter (of type ARRAY) by interpolating values of an
-array parameter (of type TABLE) at specified table index locations
+<p>Forms an array parameter (of type <code class="docutils literal notranslate"><span class="pre">ARRAY</span></code>) by interpolating values of an
+array parameter (of type <code class="docutils literal notranslate"><span class="pre">TABLE</span></code>) at specified table index locations
 according to:</p>
-<p>ParR = f(ParT, Parl, ParJ, ParK)</p>
-<p>where ParT is the type TABLE array parameter, and ParI, ParJ, ParK are
-the type ARRAY array parameter vectors of index values for
-interpolation in ParT.  See the <code class="docutils literal notranslate"><span class="pre">*DIM</span></code> command for TABLE and ARRAY
+<p><code class="docutils literal notranslate"><span class="pre">ParR</span> <span class="pre">=</span> <span class="pre">f(ParT,</span> <span class="pre">Parl,</span> <span class="pre">ParJ,</span> <span class="pre">ParK)</span></code></p>
+<p>where <code class="docutils literal notranslate"><span class="pre">ParT</span></code> is the type <code class="docutils literal notranslate"><span class="pre">TABLE</span></code> array parameter, and <code class="docutils literal notranslate"><span class="pre">ParI</span></code>, <code class="docutils literal notranslate"><span class="pre">ParJ</span></code>, <code class="docutils literal notranslate"><span class="pre">ParK</span></code> are
+the type <code class="docutils literal notranslate"><span class="pre">ARRAY</span></code> array parameter vectors of index values for
+interpolation in <code class="docutils literal notranslate"><span class="pre">ParT</span></code>.  See the <code class="docutils literal notranslate"><span class="pre">*DIM</span></code> command for <code class="docutils literal notranslate"><span class="pre">TABLE</span></code> and <code class="docutils literal notranslate"><span class="pre">ARRAY</span></code>
 declaration types.  Linear interpolation is used.  The starting array
-element number for the TABLE array (ParT) is not used (but a value must
+element number for the <code class="docutils literal notranslate"><span class="pre">TABLE</span></code> array (<code class="docutils literal notranslate"><span class="pre">ParT</span></code>) is not used (but a value must
 be input).  Starting array element numbers must be defined for each
 array parameter vector if it does not start at the first location. For
 example, <code class="docutils literal notranslate"><span class="pre">*VITRP,R(5),TAB(1,1),X(2),Y(4)</span></code> uses the second element of X
 and the fourth element of Y as index values (row and column) for a 2-D
-interpolation in TAB and stores the result in the fifth element of R.
+interpolation in <code class="docutils literal notranslate"><span class="pre">TAB</span></code> and stores the result in the fifth element of R.
 Operations continue on successive array elements <code class="docutils literal notranslate"><span class="pre">[*VLEN,</span> <span class="pre">*VMASK]</span></code> with
 the default being all successive elements.  Absolute values and scale
 factors may be applied to the result parameter <code class="docutils literal notranslate"><span class="pre">[*VABS,</span> <span class="pre">*VFACT]</span></code>.

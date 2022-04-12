@@ -952,33 +952,52 @@
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">vscfun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">par1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.vscfun" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines properties of an array parameter.</p>
 <p>APDL Command: <code class="docutils literal notranslate"><span class="pre">*VSCFUN</span></code></p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl>
+<dd class="field-odd"><dl class="simple">
 <dt><strong>parr</strong></dt><dd><p>The name of the resulting scalar parameter.  See <code class="docutils literal notranslate"><span class="pre">*SET</span></code> for name
 restrictions.</p>
 </dd>
 <dt><strong>func</strong></dt><dd><p>Functions:</p>
-<p>Maximum: the maximum Par1 array element value. - Minimum:
-the minimum Par1 array element value.</p>
-<p>Index location of the maximum Par1 array element value.
-Array Par1 is searched starting from its specified
-index. - Index location of the minimum Par1 array element
-value.  Array Par1 is searched starting from its specified
-index.</p>
-<p>Index location of the first nonzero value in array Par1.
-Array Par1 is searched starting from its specified
-index. - Index location of the last nonzero value in array
-Par1.  Array Par1 is searched starting from its specified
-index.</p>
-<p>Sum: Par1 (the summation of the Par1 array element
-values). - Median: value of Par1 at which there are an
-equal number of values above and below.</p>
-<p>Mean: (σ Par1)/NUM, where NUM is the number of summed
-values.</p>
-<p>Variance: <code class="docutils literal notranslate"><span class="pre">(σ</span> <span class="pre">((Par1-MEAN)**2))/NUM</span></code>.</p>
-<p>Standard deviation: square root of VARI. -
-Root-mean-square: square root of <code class="docutils literal notranslate"><span class="pre">(σ</span> <span class="pre">(Par1**2))/NUM</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MAX</span></code>
+Maximum: the maximum <code class="docutils literal notranslate"><span class="pre">Par1</span></code> array element value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MIN</span></code>
+Minimum: the minimum <code class="docutils literal notranslate"><span class="pre">Par1</span></code> array element value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LMAX</span></code>
+Index location of the maximum <code class="docutils literal notranslate"><span class="pre">Par1</span></code> array element value.
+Array <code class="docutils literal notranslate"><span class="pre">Par1</span></code> is searched starting from its specified
+index.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LMIN</span></code>
+Index location of the minimum <code class="docutils literal notranslate"><span class="pre">Par1</span></code> array element
+value.  Array <code class="docutils literal notranslate"><span class="pre">Par1</span></code> is searched starting from its specified
+index.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FIRST</span></code>
+Index location of the first nonzero value in array <code class="docutils literal notranslate"><span class="pre">Par1</span></code>.
+Array <code class="docutils literal notranslate"><span class="pre">Par1</span></code> is searched starting from its specified
+index.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LAST</span></code>
+Index location of the last nonzero value in array
+<code class="docutils literal notranslate"><span class="pre">Par1</span></code>.  Array <code class="docutils literal notranslate"><span class="pre">Par1</span></code> is searched starting from its specified
+index.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SUM</span></code>
+Sum: <code class="docutils literal notranslate"><span class="pre">Par1</span></code> (the summation of the <code class="docutils literal notranslate"><span class="pre">Par1</span></code> array element
+values).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MEDI</span></code>
+Median: value of <code class="docutils literal notranslate"><span class="pre">Par1</span></code> at which there are an
+equal number of values above and below.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MEAN</span></code>
+Mean: <code class="docutils literal notranslate"><span class="pre">(σ</span> <span class="pre">Par1)/NUM</span></code>, where <code class="docutils literal notranslate"><span class="pre">NUM</span></code> is the number of summed
+values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VARI</span></code>
+Variance: <code class="docutils literal notranslate"><span class="pre">(σ</span> <span class="pre">((Par1-MEAN)**2))/NUM</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">STDV</span></code>
+Standard deviation: square root of <code class="docutils literal notranslate"><span class="pre">VARI</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RMS</span></code>
+Root-mean-square: square root of <code class="docutils literal notranslate"><span class="pre">(σ</span> <span class="pre">(Par1**2))/NUM</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NUM</span></code>
+Number: the number of summed values (masked values are not counted).</p></li>
+</ul>
 </dd>
 <dt><strong>par1</strong></dt><dd><p>Array parameter vector in the operation.</p>
 </dd>
@@ -988,11 +1007,11 @@ Root-mean-square: square root of <code class="docutils literal notranslate"><spa
 <p class="rubric">Notes</p>
 <p>Operates on one input array parameter vector and produces one output
 scalar parameter according to:</p>
-<p>ParR = f(Par1)</p>
+<p><code class="docutils literal notranslate"><span class="pre">ParR</span> <span class="pre">=</span> <span class="pre">f(Par1)</span></code></p>
 <p>where the functions (f) are described below. The starting array element
 number must be defined for the array parameter vector.  For example,
-<code class="docutils literal notranslate"><span class="pre">*VSCFUN,MU,MEAN,A(1)</span></code> finds the mean of the A vector values, starting
-from the first value and stores the result as parameter MU.  Operations
+<code class="docutils literal notranslate"><span class="pre">*VSCFUN,MU,MEAN,A(1)</span></code> finds the mean of the <code class="docutils literal notranslate"><span class="pre">A</span></code> vector values, starting
+from the first value and stores the result as parameter <code class="docutils literal notranslate"><span class="pre">MU</span></code>.  Operations
 use successive array elements <code class="docutils literal notranslate"><span class="pre">[*VLEN,</span> <span class="pre">*VMASK]</span></code> with the default being
 all successive array elements.  Absolute values and scale factors may
 be applied to all parameters <code class="docutils literal notranslate"><span class="pre">[*VABS,</span> <span class="pre">*VFACT]</span></code>.  Results may be

@@ -968,16 +968,17 @@ each resulting row operation.  The mask vector usually contains only 0
 corresponding mask vector value is checked.  A true value allows the
 operation to be done.  A false value skips the operation (and retains
 the previous results).  A mask vector can be created from direct input,
-such as M(1) = 1,0,0,1,1,0,1; or from the DATA function of the <code class="docutils literal notranslate"><span class="pre">*VFILL</span></code>
+such as <code class="docutils literal notranslate"><span class="pre">M(1)</span> <span class="pre">=</span> <span class="pre">1,0,0,1,1,0,1</span></code>; or from the DATA function of the <code class="docutils literal notranslate"><span class="pre">*VFILL</span></code>
 command.  The NOT function of the <code class="docutils literal notranslate"><span class="pre">*VFUN</span></code> command can be used to reverse
 the logical sense of the mask vector.  The logical compare operations
-(LT, LE, EQ, NE, GE, and GT) of the <code class="docutils literal notranslate"><span class="pre">*VOPER</span></code> command also produce a mask
+(<code class="docutils literal notranslate"><span class="pre">LT</span></code>, <code class="docutils literal notranslate"><span class="pre">LE</span></code>, <code class="docutils literal notranslate"><span class="pre">EQ</span></code>, <code class="docutils literal notranslate"><span class="pre">NE</span></code>, <code class="docutils literal notranslate"><span class="pre">GE</span></code>, and <code class="docutils literal notranslate"><span class="pre">GT</span></code>) of
+the <code class="docutils literal notranslate"><span class="pre">*VOPER</span></code> command also produce a mask
 vector by operating on two other vectors.  Any numeric vector can be
 used as a mask vector since the actual interpretation assumes values
 less than 0.0 are 0.0 (false) and values greater than 0.0 are 1.0
 (true).  If the mask vector is not specified (or has fewer values than
 the result vector), true (1.0) values are assumed for the unspecified
-values.  Another skip control may be input with NINC on the <code class="docutils literal notranslate"><span class="pre">*VLEN</span></code>
+values.  Another skip control may be input with <code class="docutils literal notranslate"><span class="pre">NINC</span></code> on the <code class="docutils literal notranslate"><span class="pre">*VLEN</span></code>
 command.  If both are present, operations occur only when both are
 true.  The mask setting is reset to the default (no mask) after each
 <code class="docutils literal notranslate"><span class="pre">*VXX</span></code> or <code class="docutils literal notranslate"><span class="pre">*MXX</span></code> operation.  Use <code class="docutils literal notranslate"><span class="pre">*VSTAT</span></code> to list settings.</p>
