@@ -314,11 +314,6 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#interactive-command-output">
-     Interactive Command output
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#calling-mapdl-pythonically">
      Calling MAPDL Pythonically
     </a>
@@ -420,20 +415,6 @@ than just sending text to MAPDL and includes higher level wrapping
 allowing for better scripting and interaction with MAPDL.  See the
 <a class="reference internal" href="../examples/index.html#ref-example-gallery"><span class="std std-ref">Examples</span></a> for an overview of the various advanced
 methods to visualize, script, and interact with MAPDL.</p>
-<section id="interactive-command-output">
-<h3>Interactive Command output<a class="headerlink" href="#interactive-command-output" title="Permalink to this headline">¶</a></h3>
-<p>The command output has stored the command and arguments that created it.
-You can inspect this command using:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">output</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">command</span><span class="p">())</span>
-<span class="go">prep7</span>
-</pre></div>
-</div>
-<p>or if you want to see only the command you can:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">cmd</span><span class="p">())</span>
-</pre></div>
-</div>
-</section>
 <section id="calling-mapdl-pythonically">
 <h3>Calling MAPDL Pythonically<a class="headerlink" href="#calling-mapdl-pythonically" title="Permalink to this headline">¶</a></h3>
 <p>MAPDL functions can be called directly from an instance of

@@ -487,7 +487,7 @@ libraries.</p>
 <h4>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h4>
 <p>If you are using CentOS 7, before installing MAPDL, you need to install some
 required libraries:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yum install openssl openssh-clients mesa-libGL mesa-libGLU motif libgfortran
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo yum install openssl openssh-clients mesa-libGL mesa-libGLU motif libgfortran
 </pre></div>
 </div>
 <p>If using Ubuntu, follow the instructions in <a class="reference external" href="https://mapdldocs.pyansys.com/getting_started/running_mapdl.html#ubuntu/">Running MAPDL: Ubuntu</a> .</p>
@@ -506,7 +506,7 @@ WSL (recommended).</p></li>
 </div>
 </li>
 <li><p>To install MAPDL, go into the uncompressed folder and type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./INSTALL -silent -install_dir /usr/ansys_inc/ -mechapdl
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ./INSTALL -silent -install_dir /usr/ansys_inc/ -mechapdl
 </pre></div>
 </div>
 <p>where:</p>
@@ -527,7 +527,7 @@ needed.</p></li>
 </ol>
 <p>After installing MAPDL directly in <code class="docutils literal notranslate"><span class="pre">/ansys_inc</span></code> or in <code class="docutils literal notranslate"><span class="pre">/usr/ansys_inc</span></code>,
 create a symbolic link with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ln -s /usr/ansys_inc /ansys_inc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ln -s /usr/ansys_inc /ansys_inc
 </pre></div>
 </div>
 <p>By default, PyMAPDL expects the MAPDL executable to be in
@@ -577,9 +577,9 @@ not installed.</p>
 <span class="c1"># generateHosts = false</span>
 <span class="m">127</span>.0.0.1       localhost
 <span class="m">127</span>.0.1.1       AAPDDqVK5WqNLve.win.ansys.com   AAPDDqVK5WqNLve
-<span class="hll">
-</span><span class="m">192</span>.168.0.12    host.docker.internal
-<span class="m">192</span>.168.0.12    gateway.docker.internal
+
+<span class="hll"><span class="m">192</span>.168.0.12    host.docker.internal
+</span><span class="m">192</span>.168.0.12    gateway.docker.internal
 <span class="m">127</span>.0.0.1       kubernetes.docker.internal
 
 <span class="c1"># The following lines are desirable for IPv6 capable hosts</span>
@@ -737,11 +737,10 @@ as mentioned before, this issue is solved.</p>
 </section>
 <section id="disabling-firewall-on-wsl-ethernet">
 <h3>Disabling Firewall on WSL Ethernet<a class="headerlink" href="#disabling-firewall-on-wsl-ethernet" title="Permalink to this headline">¶</a></h3>
-<p>This method will show a notification:
-.. code:: pwsh</p>
-<blockquote>
-<div><p>Set-NetFirewallProfile -DisabledInterfaceAliases “vEthernet (WSL)”</p>
-</div></blockquote>
+<p>This method will show a notification:</p>
+<div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="nb">Set-NetFirewallProfile</span> <span class="n">-DisabledInterfaceAliases</span> <span class="s2">&quot;vEthernet (WSL)&quot;</span>
+</pre></div>
+</div>
 <p>This method will not show a notification:</p>
 <div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="n">powershell</span><span class="p">.</span><span class="n">exe</span> <span class="n">-Command</span> <span class="s2">&quot;Set-NetFirewallProfile -DisabledInterfaceAliases \&quot;</span><span class="n">vEthernet</span> <span class="p">(</span><span class="n">WSL</span><span class="p">)\</span><span class="s2">&quot;&quot;</span>
 </pre></div>
