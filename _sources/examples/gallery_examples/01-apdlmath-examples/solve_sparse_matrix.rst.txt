@@ -89,7 +89,7 @@ List the files in current directory
  .. code-block:: none
 
 
-    ['HexBeam.cdb', 'PRSMEMB.DSP', 'PRSMEMB.emat', 'PRSMEMB.esav', 'PRSMEMB.full', 'PRSMEMB.mntr', 'PRSMEMB.mode', 'PRSMEMB.rst', 'PRSMEMB000.jpg', 'PRSMEMB001.jpg', 'PRSMEMB002.jpg', 'PRSMEMB003.jpg', 'PRSMEMB004.jpg', 'PRSMEMB005.jpg', 'PRSMEMB006.jpg', 'PRSMEMB007.jpg', 'PRSMEMB008.jpg', 'PRSMEMB009.jpg', 'PRSMEMB010.jpg', 'PRSMEMB011.jpg', 'SCRATCH', 'SOLVIT.MAC', 'TABLE_1', 'TABLE_2', '__tmp_sys_out__', '_tmp.iges', 'anaconda-post.log', 'anstmp', 'ansys_inc', 'bin', 'bracket.iges', 'dev', 'etc', 'file.DSP', 'file.err', 'file.esav', 'file.full', 'file.ldhi', 'file.lock', 'file.log', 'file.mlv', 'file.mntr', 'file.mode', 'file.page', 'file.r001', 'file.rdb', 'file.rth', 'file.stat', 'home', 'jbpcdmowoe.txt', 'lib', 'lib64', 'media', 'mnt', 'opt', 'ozlsmleldf.txt', 'proc', 'root', 'run', 'sbin', 'srv', 'sys', 'tmp', 'tmp.cdb', 'tmp_cohshgsnuj.inp', 'tmp_fgjuceofqa.inp', 'tmp_hibmxtafij.inp', 'tmp_lyyoaifzbw.inp', 'tmp_psefkefkrx.inp', 'tmp_qnfalurzbi.inp', 'tmp_usvlovrbdy.inp', 'tmp_uyrdupfwop.inp', 'tmp_viayywwyzu.inp', 'usr', 'var', 'vm1.dat', 'vm1.vrt', 'vm153.dat', 'vm153.vrt', 'wing.dat']
+    ['HexBeam.cdb', 'PRSMEMB.DSP', 'PRSMEMB.emat', 'PRSMEMB.esav', 'PRSMEMB.full', 'PRSMEMB.mntr', 'PRSMEMB.mode', 'PRSMEMB.rst', 'PRSMEMB000.jpg', 'PRSMEMB001.jpg', 'PRSMEMB002.jpg', 'PRSMEMB003.jpg', 'PRSMEMB004.jpg', 'PRSMEMB005.jpg', 'PRSMEMB006.jpg', 'PRSMEMB007.jpg', 'PRSMEMB008.jpg', 'PRSMEMB009.jpg', 'PRSMEMB010.jpg', 'PRSMEMB011.jpg', 'SCRATCH', 'SOLVIT.MAC', 'TABLE_1', 'TABLE_2', '__tmp_sys_out__', '_tmp.iges', 'anaconda-post.log', 'anstmp', 'ansys_inc', 'bin', 'bracket.iges', 'cegvxzgyhv.txt', 'dev', 'etc', 'file.DSP', 'file.err', 'file.esav', 'file.full', 'file.ldhi', 'file.lock', 'file.log', 'file.mlv', 'file.mntr', 'file.mode', 'file.page', 'file.r001', 'file.rdb', 'file.rth', 'file.stat', 'home', 'lib', 'lib64', 'media', 'mnt', 'opt', 'proc', 'root', 'run', 'sbin', 'srv', 'sys', 'tbfjqhkzrw.txt', 'tmp', 'tmp.cdb', 'tmp_gljxkcnelq.inp', 'tmp_hyazqwifak.inp', 'tmp_jbdwciegan.inp', 'tmp_ktwjkhcxys.inp', 'tmp_qeghujjahn.inp', 'tmp_qjcmlyktmf.inp', 'tmp_tnxikotodc.inp', 'tmp_ulkxawppwy.inp', 'tmp_xmqoapehcx.inp', 'usr', 'var', 'vm1.dat', 'vm1.vrt', 'vm153.dat', 'vm153.vrt', 'wing.dat']
 
 
 
@@ -258,7 +258,7 @@ Print the **norm** of the solution vector
  .. code-block:: none
 
 
-    5.815928297030091e-08
+    5.8159282970300264e-08
 
 
 
@@ -287,7 +287,7 @@ We check the accuracy of the solution, by verifying that
 
  .. code-block:: none
 
-    Residual error: 1.9421604937510595e-15
+    Residual error: 1.6389779944594773e-15
 
 
 
@@ -317,11 +317,11 @@ Summary of all allocated APDLMath Objects
 
       Name                   Type            Mem. (MB)       Dims            Workspace
 
-       PYDSVD                SMAT            0.011           [126:126]               1
-       JLIAOV                VEC             0.001           126             1
-       PKWQTF                VEC             0.001           126             1
-       ZKXBHZ                VEC             0.001           126             1
-       IASWXR                LSENGINE        --              --              1
+       MJEKUT                SMAT            0.011           [126:126]               1
+       PUUSGR                VEC             0.001           126             1
+       VDNDZE                VEC             0.001           126             1
+       WSUAOV                VEC             0.001           126             1
+       DGTBLJ                LSENGINE        --              --              1
 
 
 
@@ -364,7 +364,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.731 seconds)
+   **Total running time of the script:** ( 0 minutes  0.870 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_01-apdlmath-examples_solve_sparse_matrix.py:
