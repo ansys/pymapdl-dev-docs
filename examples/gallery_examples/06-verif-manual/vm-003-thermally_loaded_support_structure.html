@@ -655,7 +655,10 @@ by nodal coupling.</p></li>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;*****ANSYS VERIFICATION RUN ONLY*****\n     DO NOT USE RESULTS FOR PRODUCTION\n\n          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****ANSYS VERIFICATION RUN ONLY*****
+     DO NOT USE RESULTS FOR PRODUCTION
+
+          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****
 </pre></div>
 </div>
 <section id="define-material">
@@ -677,7 +680,7 @@ steel here.
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;REFERENCE TEMPERATURE=  70.000  (TUNIF=  70.000)&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>REFERENCE TEMPERATURE=  70.000  (TUNIF=  70.000)
 </pre></div>
 </div>
 </section>
@@ -727,7 +730,7 @@ and 6.</p></li>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;***** ROUTINE COMPLETED *****  CP =         0.000&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>***** ROUTINE COMPLETED *****  CP =         0.000
 </pre></div>
 </div>
 </section>
@@ -744,7 +747,69 @@ and 6.</p></li>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;*****  ANSYS SOLVE    COMMAND  *****\n\n *** NOTE ***                            CP =       0.000   TIME= 00:00:00\n There is no title defined for this analysis.                            \n   *****ANSYS VERIFICATION RUN ONLY*****\n     DO NOT USE RESULTS FOR PRODUCTION\n\n                       S O L U T I O N   O P T I O N S\n\n   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D                  \n   DEGREES OF FREEDOM. . . . . . UX   UY   UZ  \n   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)\n   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  \n\n *** NOTE ***                            CP =       0.000   TIME= 00:00:00\n Present time 0 is less than or equal to the previous time.  Time will   \n default to 1.                                                           \n\n *** NOTE ***                            CP =       0.000   TIME= 00:00:00\n The conditions for direct assembly have been met.  No .emat or .erot    \n files will be produced.                                                 \n\n                      L O A D   S T E P   O P T I O N S\n\n   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1\n   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000    \n   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1\n   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO\n   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT\n   DATABASE OUTPUT CONTROLS. . . . . . . . . . . .ALL DATA WRITTEN\n                                                  FOR THE LAST SUBSTEP\n\n\n\n Range of element maximum matrix coefficients in global coordinates\n Maximum = 150000 at element 0.                                          \n Minimum = 80000 at element 0.                                           \n\n   *** ELEMENT MATRIX FORMULATION TIMES\n     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP\n\n        1         3  LINK180       0.000   0.000000\n Time at end of element matrix formulation CP = 0.                       \n\n SPARSE MATRIX DIRECT SOLVER.\n  Number of equations =           1,    Maximum wavefront =      0\n  Memory available (MB) =    0.0    ,  Memory required (MB) =    0.0    \n\n Sparse solver maximum pivot= 0 at node 0 .                              \n Sparse solver minimum pivot= 0 at node 0 .                              \n Sparse solver minimum pivot in absolute value= 0 at node 0 .            \n\n   *** ELEMENT RESULT CALCULATION TIMES\n     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP\n\n        1         3  LINK180       0.000   0.000000\n\n   *** NODAL LOAD CALCULATION TIMES\n     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP\n\n        1         3  LINK180       0.000   0.000000\n *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1\n *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ There is no title defined for this analysis.
+   *****ANSYS VERIFICATION RUN ONLY*****
+     DO NOT USE RESULTS FOR PRODUCTION
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ Present time 0 is less than or equal to the previous time.  Time will
+ default to 1.
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ The conditions for direct assembly have been met.  No .emat or .erot
+ files will be produced.
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS. . . . . . . . . . . .ALL DATA WRITTEN
+                                                  FOR THE LAST SUBSTEP
+
+
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 150000 at element 0.
+ Minimum = 80000 at element 0.
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1         3  LINK180       0.000   0.000000
+ Time at end of element matrix formulation CP = 0.
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =           1,    Maximum wavefront =      0
+  Memory available (MB) =    0.0    ,  Memory required (MB) =    0.0
+
+ Sparse solver maximum pivot= 0 at node 0 .
+ Sparse solver minimum pivot= 0 at node 0 .
+ Sparse solver minimum pivot in absolute value= 0 at node 0 .
+
+   *** ELEMENT RESULT CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1         3  LINK180       0.000   0.000000
+
+   *** NODAL LOAD CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1         3  LINK180       0.000   0.000000
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+ *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 </pre></div>
 </div>
 </section>
@@ -808,7 +873,7 @@ expected stresses of 19695 and 10152 respectively.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.016 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.750 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-003-thermally-loaded-support-structure-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/4baec37914ec2b6505563c17ed8ec6e5/vm-003-thermally_loaded_support_structure.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-003-thermally_loaded_support_structure.py</span></code></a></p>

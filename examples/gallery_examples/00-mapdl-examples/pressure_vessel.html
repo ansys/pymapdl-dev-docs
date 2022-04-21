@@ -578,7 +578,19 @@ apply a pressure to it.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;U.S. CUSTOMARY INCH UNITS SPECIFIED FOR INTERNAL    \n  LENGTH      = INCHES (IN)\n  MASS        = LBF-S**2/IN \n  TIME        = SECONDS (SEC)  \n  TEMPERATURE = FAHRENHEIT\n  TOFFSET     = 460.0\n  FORCE       = LBF\n  HEAT        = IN-LBF\n  PRESSURE    = PSI (LBF/IN**2)\n  ENERGY      = IN-LBF\n  POWER       = IN-LBF/SEC\n\n INPUT  UNITS ARE ALSO SET TO BIN&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>U.S. CUSTOMARY INCH UNITS SPECIFIED FOR INTERNAL
+  LENGTH      = INCHES (IN)
+  MASS        = LBF-S**2/IN
+  TIME        = SECONDS (SEC)
+  TEMPERATURE = FAHRENHEIT
+  TOFFSET     = 460.0
+  FORCE       = LBF
+  HEAT        = IN-LBF
+  PRESSURE    = PSI (LBF/IN**2)
+  ENERGY      = IN-LBF
+  POWER       = IN-LBF/SEC
+
+ INPUT  UNITS ARE ALSO SET TO BIN
 </pre></div>
 </div>
 <p>Set the materials and element type</p>
@@ -648,12 +660,15 @@ apply a pressure to it.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">outres</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/STATUS,SOLU&quot;</span><span class="p">)</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sol_output</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+<span class="n">sol_output</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =       129.056&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  CP =        93.384
 </pre></div>
 </div>
 <section id="post-processing">
@@ -756,7 +771,7 @@ PRNSOL MAPDL Min:                 3483.041895
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.690 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.911 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-pressure-vessel-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/70263bdae41b8cfda19188857e70dec3/pressure_vessel.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pressure_vessel.py</span></code></a></p>

@@ -587,7 +587,10 @@ of our square.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;*****ANSYS VERIFICATION RUN ONLY*****\n     DO NOT USE RESULTS FOR PRODUCTION\n\n          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****ANSYS VERIFICATION RUN ONLY*****
+     DO NOT USE RESULTS FOR PRODUCTION
+
+          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****
 </pre></div>
 </div>
 <section id="mesh-setup">
@@ -637,7 +640,83 @@ freedom. Following this we:</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;*****  ANSYS SOLVE    COMMAND  *****\n\n *** NOTE ***                            CP =       0.000   TIME= 00:00:00\n There is no title defined for this analysis.                            \n\n *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***\n                ---GIVE SUGGESTIONS ONLY---\n\n ELEMENT TYPE         1 IS SHELL181. IT IS ASSOCIATED WITH ELASTOPLASTIC \n MATERIALS ONLY. KEYOPT(8)=2 IS SUGGESTED AND KEYOPT(3)=2 IS SUGGESTED FOR\n HIGHER ACCURACY OF MEMBRANE STRESSES; OTHERWISE, KEYOPT(3)=0 IS SUGGESTED.\n\n\n   *****ANSYS VERIFICATION RUN ONLY*****\n     DO NOT USE RESULTS FOR PRODUCTION\n\n                       S O L U T I O N   O P T I O N S\n\n   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D                  \n   DEGREES OF FREEDOM. . . . . . UX   UY   UZ   ROTX ROTY ROTZ\n   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)\n   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  \n\n *** NOTE ***                            CP =       0.000   TIME= 00:00:00\n Present time 0 is less than or equal to the previous time.  Time will   \n default to 1.                                                           \n\n *** NOTE ***                            CP =       0.000   TIME= 00:00:00\n The conditions for direct assembly have been met.  No .emat or .erot    \n files will be produced.                                                 \n\n                      L O A D   S T E P   O P T I O N S\n\n   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1\n   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000    \n   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1\n   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO\n   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT\n   DATABASE OUTPUT CONTROLS. . . . . . . . . . . .ALL DATA WRITTEN\n                                                  FOR THE LAST SUBSTEP\n\n\n *** NOTE ***                            CP =       0.000   TIME= 00:00:00\n Predictor is ON by default for structural elements with rotational      \n degrees of freedom.  Use the PRED,OFF command to turn the predictor     \n OFF if it adversely affects the convergence.                            \n\n\n Range of element maximum matrix coefficients in global coordinates\n Maximum = 7487.02512 at element 0.                                      \n Minimum = 7487.02512 at element 0.                                      \n\n   *** ELEMENT MATRIX FORMULATION TIMES\n     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP\n\n        1        25  SHELL181      0.000   0.000000\n Time at end of element matrix formulation CP = 0.                       \n\n SPARSE MATRIX DIRECT SOLVER.\n  Number of equations =         174,    Maximum wavefront =      0\n  Memory available (MB) =    0.0    ,  Memory required (MB) =    0.0    \n\n Sparse solver maximum pivot= 0 at node 0 .                              \n Sparse solver minimum pivot= 0 at node 0 .                              \n Sparse solver minimum pivot in absolute value= 0 at node 0 .            \n\n   *** ELEMENT RESULT CALCULATION TIMES\n     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP\n\n        1        25  SHELL181      0.000   0.000000\n\n   *** NODAL LOAD CALCULATION TIMES\n     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP\n\n        1        25  SHELL181      0.000   0.000000\n *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1\n *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ There is no title defined for this analysis.
+
+ *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
+                ---GIVE SUGGESTIONS ONLY---
+
+ ELEMENT TYPE         1 IS SHELL181. IT IS ASSOCIATED WITH ELASTOPLASTIC
+ MATERIALS ONLY. KEYOPT(8)=2 IS SUGGESTED AND KEYOPT(3)=2 IS SUGGESTED FOR
+ HIGHER ACCURACY OF MEMBRANE STRESSES; OTHERWISE, KEYOPT(3)=0 IS SUGGESTED.
+
+
+   *****ANSYS VERIFICATION RUN ONLY*****
+     DO NOT USE RESULTS FOR PRODUCTION
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ   ROTX ROTY ROTZ
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ Present time 0 is less than or equal to the previous time.  Time will
+ default to 1.
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ The conditions for direct assembly have been met.  No .emat or .erot
+ files will be produced.
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS. . . . . . . . . . . .ALL DATA WRITTEN
+                                                  FOR THE LAST SUBSTEP
+
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ Predictor is ON by default for structural elements with rotational
+ degrees of freedom.  Use the PRED,OFF command to turn the predictor
+ OFF if it adversely affects the convergence.
+
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 7487.02512 at element 0.
+ Minimum = 7487.02512 at element 0.
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1        25  SHELL181      0.000   0.000000
+ Time at end of element matrix formulation CP = 0.
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =         174,    Maximum wavefront =      0
+  Memory available (MB) =    0.0    ,  Memory required (MB) =    0.0
+
+ Sparse solver maximum pivot= 0 at node 0 .
+ Sparse solver minimum pivot= 0 at node 0 .
+ Sparse solver minimum pivot in absolute value= 0 at node 0 .
+
+   *** ELEMENT RESULT CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1        25  SHELL181      0.000   0.000000
+
+   *** NODAL LOAD CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1        25  SHELL181      0.000   0.000000
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+ *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 </pre></div>
 </div>
 </section>
@@ -716,7 +795,7 @@ D |    0.000996,   0.155360,   0.000000
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.163 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.832 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-03-tips-n-tricks-04-rotational-displacement-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/60a861e6abc1188a6be0bfce784857fa/04-rotational-displacement.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">04-rotational-displacement.py</span></code></a></p>

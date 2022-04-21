@@ -642,7 +642,10 @@ the load and the wall.</p></li>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;*****ANSYS VERIFICATION RUN ONLY*****\n     DO NOT USE RESULTS FOR PRODUCTION\n\n          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****ANSYS VERIFICATION RUN ONLY*****
+     DO NOT USE RESULTS FOR PRODUCTION
+
+          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****
 </pre></div>
 </div>
 <section id="define-material">
@@ -657,7 +660,7 @@ section and a Young’s modulus of 30e6).</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;MATERIAL          1     EX   =  0.3000000E+08&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>MATERIAL          1     EX   =  0.3000000E+08
 </pre></div>
 </div>
 </section>
@@ -674,7 +677,10 @@ problem setup.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;GENERATE       3 TOTAL SETS OF ELEMENTS WITH NODE INCREMENT OF         1\n   SET IS SELECTED ELEMENTS IN RANGE         1 TO         1 IN STEPS OF       1\n\n MAXIMUM ELEMENT NUMBER=         3&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>GENERATE       3 TOTAL SETS OF ELEMENTS WITH NODE INCREMENT OF         1
+   SET IS SELECTED ELEMENTS IN RANGE         1 TO         1 IN STEPS OF       1
+
+ MAXIMUM ELEMENT NUMBER=         3
 </pre></div>
 </div>
 </section>
@@ -692,7 +698,7 @@ values of -500 lb and -1000 lb respectively. Then exit prep7.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;***** ROUTINE COMPLETED *****  CP =         0.000&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>***** ROUTINE COMPLETED *****  CP =         0.000
 </pre></div>
 </div>
 </section>
@@ -700,12 +706,15 @@ values of -500 lb and -1000 lb respectively. Then exit prep7.</p>
 <h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">¶</a></h2>
 <p>Enter solution mode and solve the system.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">out</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =         0.000&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  CP =         0.000
 </pre></div>
 </div>
 </section>
@@ -756,7 +765,7 @@ R2, lb          600.0       600.0   1.0
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.261 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.176 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-001-statically-indeterminate-reaction-force-analysis-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/d13f1f6bdc0ed471d0bfbbfa301204f8/vm-001-statically_indeterminate_reaction_force_analysis.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-001-statically_indeterminate_reaction_force_analysis.py</span></code></a></p>

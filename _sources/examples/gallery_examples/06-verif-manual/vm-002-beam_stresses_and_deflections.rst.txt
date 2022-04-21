@@ -108,7 +108,10 @@ Start MAPDL
  .. code-block:: none
 
 
-    '*****ANSYS VERIFICATION RUN ONLY*****\n     DO NOT USE RESULTS FOR PRODUCTION\n\n          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****'
+    *****ANSYS VERIFICATION RUN ONLY*****
+         DO NOT USE RESULTS FOR PRODUCTION
+
+              ***** ANSYS ANALYSIS DEFINITION (PREP7) *****
 
 
 
@@ -216,7 +219,25 @@ Set up the cross-section properties for a beam element.
  .. code-block:: none
 
 
-    'SECTION ID NUMBER IS:            1\n   BEAM SECTION TYPE IS:     I Section       \n   BEAM SECTION NAME IS:     ISection\n   COMPUTED BEAM SECTION DATA SUMMARY:\n    Area                 =  50.650    \n    Iyy                  =  7892.0    \n    Iyz                  = 0.76051E-12\n    Izz                  =  590.47    \n    Warping Constant     = 0.12403E+06\n    Torsion Constant     =  14.962    \n    Centroid Y           = 0.10702E-14\n    Centroid Z           =  15.048    \n    Shear Center Y       =-0.96799E-12\n    Shear Center Z       =  15.048    \n    Shear Correction-xy  = 0.54626    \n    Shear Correction-yz  = 0.20960E-12\n    Shear Correction-xz  = 0.38629    \n                 \n    Beam Section is offset to CENTROID of cross section'
+    SECTION ID NUMBER IS:            1
+       BEAM SECTION TYPE IS:     I Section       
+       BEAM SECTION NAME IS:     ISection
+       COMPUTED BEAM SECTION DATA SUMMARY:
+        Area                 =  50.650    
+        Iyy                  =  7892.0    
+        Iyz                  = 0.76051E-12
+        Izz                  =  590.47    
+        Warping Constant     = 0.12403E+06
+        Torsion Constant     =  14.962    
+        Centroid Y           = 0.10702E-14
+        Centroid Z           =  15.048    
+        Shear Center Y       =-0.96799E-12
+        Shear Center Z       =  15.048    
+        Shear Correction-xy  = 0.54626    
+        Shear Correction-yz  = 0.20960E-12
+        Shear Correction-xz  = 0.38629    
+                 
+        Beam Section is offset to CENTROID of cross section
 
 
 
@@ -338,7 +359,10 @@ Application of boundary conditions (BC).
  .. code-block:: none
 
 
-    'ALL SELECT   FOR ITEM=NODE COMPONENT=    \n  IN RANGE         1 TO          6 STEP          1\n\n          6  NODES (OF          6  DEFINED) SELECTED BY NSEL  COMMAND.'
+    ALL SELECT   FOR ITEM=NODE COMPONENT=    
+      IN RANGE         1 TO          6 STEP          1
+
+              6  NODES (OF          6  DEFINED) SELECTED BY NSEL  COMMAND.
 
 
 
@@ -374,7 +398,7 @@ in the y-direction.
  .. code-block:: none
 
 
-    '***** ROUTINE COMPLETED *****  CP =         0.000'
+    ***** ROUTINE COMPLETED *****  CP =         0.000
 
 
 
@@ -597,7 +621,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.715 seconds)
+   **Total running time of the script:** ( 0 minutes  0.530 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_06-verif-manual_vm-002-beam_stresses_and_deflections.py:

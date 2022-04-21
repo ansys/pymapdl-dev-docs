@@ -124,7 +124,7 @@ Setup Boundary Conditions
  .. code-block:: none
 
 
-    '***** ROUTINE COMPLETED *****  CP =         0.000'
+    ***** ROUTINE COMPLETED *****  CP =         0.000
 
 
 
@@ -160,7 +160,10 @@ Setup Boundary Conditions
  .. code-block:: none
 
 
-    'FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =         0.000'
+    FINISH SOLUTION PROCESSING
+
+
+     ***** ROUTINE COMPLETED *****  CP =         0.000
 
 
 
@@ -240,18 +243,18 @@ Using ``Query``
         ************************
         Displacement at Node 28:
         ************************
-        X | 1.7577163783926486e-05
-        Y | 3.0362575469129926e-09
-        Z | -7.982690758480617e-07
+        X | 1.7577163783926476e-05
+        Y | 3.036257546898104e-09
+        Z | -7.982690758480568e-07
 
     
 
         ************************
         Displacement at Node 49:
         ************************
-        X | 1.7612417675184593e-05
-        Y | 1.3451097213331255e-19
-        Z | 8.070989838529168e-07
+        X | 1.761241767518456e-05
+        Y | 1.235737593205313e-19
+        Z | 8.070989838529148e-07
 
     
 
@@ -277,7 +280,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.877 seconds)
+   **Total running time of the script:** ( 0 minutes  1.238 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_03-tips-n-tricks_03-using_inline_functions_and_Query.py:

@@ -85,7 +85,10 @@ Analytical Equations:
  .. code-block:: none
 
 
-    '*****ANSYS VERIFICATION RUN ONLY*****\n     DO NOT USE RESULTS FOR PRODUCTION\n\n          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****'
+    *****ANSYS VERIFICATION RUN ONLY*****
+         DO NOT USE RESULTS FOR PRODUCTION
+
+              ***** ANSYS ANALYSIS DEFINITION (PREP7) *****
 
 
 
@@ -118,7 +121,7 @@ section and a Young's modulus of 30e6).
  .. code-block:: none
 
 
-    'MATERIAL          1     EX   =  0.3000000E+08'
+    MATERIAL          1     EX   =  0.3000000E+08
 
 
 
@@ -153,7 +156,10 @@ problem setup.
  .. code-block:: none
 
 
-    'GENERATE       3 TOTAL SETS OF ELEMENTS WITH NODE INCREMENT OF         1\n   SET IS SELECTED ELEMENTS IN RANGE         1 TO         1 IN STEPS OF       1\n\n MAXIMUM ELEMENT NUMBER=         3'
+    GENERATE       3 TOTAL SETS OF ELEMENTS WITH NODE INCREMENT OF         1
+       SET IS SELECTED ELEMENTS IN RANGE         1 TO         1 IN STEPS OF       1
+
+     MAXIMUM ELEMENT NUMBER=         3
 
 
 
@@ -190,7 +196,7 @@ Effectiely, this sets:
  .. code-block:: none
 
 
-    '***** ROUTINE COMPLETED *****  CP =         0.000'
+    ***** ROUTINE COMPLETED *****  CP =         0.000
 
 
 
@@ -220,7 +226,10 @@ Enter solution mode and solve the system.
  .. code-block:: none
 
 
-    'FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =         0.000'
+    FINISH SOLUTION PROCESSING
+
+
+     ***** ROUTINE COMPLETED *****  CP =         0.000
 
 
 
@@ -322,7 +331,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.261 seconds)
+   **Total running time of the script:** ( 0 minutes  0.176 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_06-verif-manual_vm-001-statically_indeterminate_reaction_force_analysis.py:

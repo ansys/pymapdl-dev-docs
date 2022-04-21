@@ -59,7 +59,19 @@ Also shown here:
  .. code-block:: none
 
 
-    'U.S. CUSTOMARY INCH UNITS SPECIFIED FOR INTERNAL    \n  LENGTH      = INCHES (IN)\n  MASS        = LBF-S**2/IN \n  TIME        = SECONDS (SEC)  \n  TEMPERATURE = FAHRENHEIT\n  TOFFSET     = 460.0\n  FORCE       = LBF\n  HEAT        = IN-LBF\n  PRESSURE    = PSI (LBF/IN**2)\n  ENERGY      = IN-LBF\n  POWER       = IN-LBF/SEC\n\n INPUT  UNITS ARE ALSO SET TO BIN'
+    U.S. CUSTOMARY INCH UNITS SPECIFIED FOR INTERNAL    
+      LENGTH      = INCHES (IN)
+      MASS        = LBF-S**2/IN 
+      TIME        = SECONDS (SEC)  
+      TEMPERATURE = FAHRENHEIT
+      TOFFSET     = 460.0
+      FORCE       = LBF
+      HEAT        = IN-LBF
+      PRESSURE    = PSI (LBF/IN**2)
+      ENERGY      = IN-LBF
+      POWER       = IN-LBF/SEC
+
+     INPUT  UNITS ARE ALSO SET TO BIN
 
 
 
@@ -219,7 +231,10 @@ Solve
  .. code-block:: none
 
 
-    'FINISH SOLUTION PROCESSING\n\n\n ***** ROUTINE COMPLETED *****  CP =       129.056'
+    FINISH SOLUTION PROCESSING
+
+
+     ***** ROUTINE COMPLETED *****  CP =        93.384
 
 
 
@@ -412,7 +427,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.690 seconds)
+   **Total running time of the script:** ( 0 minutes  5.911 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_pressure_vessel.py:

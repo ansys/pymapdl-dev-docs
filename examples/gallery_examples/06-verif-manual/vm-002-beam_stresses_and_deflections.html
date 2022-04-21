@@ -654,7 +654,10 @@ by the formulas of the transversally loaded beam:
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;*****ANSYS VERIFICATION RUN ONLY*****\n     DO NOT USE RESULTS FOR PRODUCTION\n\n          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****ANSYS VERIFICATION RUN ONLY*****
+     DO NOT USE RESULTS FOR PRODUCTION
+
+          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****
 </pre></div>
 </div>
 </section>
@@ -678,7 +681,7 @@ by the formulas of the transversally loaded beam:
 <span class="c1"># Output control for values extrapolated to the element</span>
 <span class="c1"># and section nodes:</span>
 <span class="c1"># Same as KEYOPT(9) = 1 plus stresses and strains at all section nodes</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">_</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">keyopt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">keyopt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -712,7 +715,25 @@ by the formulas of the transversally loaded beam:
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;SECTION ID NUMBER IS:            1\n   BEAM SECTION TYPE IS:     I Section       \n   BEAM SECTION NAME IS:     ISection\n   COMPUTED BEAM SECTION DATA SUMMARY:\n    Area                 =  50.650    \n    Iyy                  =  7892.0    \n    Iyz                  = 0.76051E-12\n    Izz                  =  590.47    \n    Warping Constant     = 0.12403E+06\n    Torsion Constant     =  14.962    \n    Centroid Y           = 0.10702E-14\n    Centroid Z           =  15.048    \n    Shear Center Y       =-0.96799E-12\n    Shear Center Z       =  15.048    \n    Shear Correction-xy  = 0.54626    \n    Shear Correction-yz  = 0.20960E-12\n    Shear Correction-xz  = 0.38629    \n                 \n    Beam Section is offset to CENTROID of cross section&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>SECTION ID NUMBER IS:            1
+   BEAM SECTION TYPE IS:     I Section
+   BEAM SECTION NAME IS:     ISection
+   COMPUTED BEAM SECTION DATA SUMMARY:
+    Area                 =  50.650
+    Iyy                  =  7892.0
+    Iyz                  = 0.76051E-12
+    Izz                  =  590.47
+    Warping Constant     = 0.12403E+06
+    Torsion Constant     =  14.962
+    Centroid Y           = 0.10702E-14
+    Centroid Z           =  15.048
+    Shear Center Y       =-0.96799E-12
+    Shear Center Z       =  15.048
+    Shear Correction-xy  = 0.54626
+    Shear Correction-yz  = 0.20960E-12
+    Shear Correction-xz  = 0.38629
+
+    Beam Section is offset to CENTROID of cross section
 </pre></div>
 </div>
 </section>
@@ -776,7 +797,10 @@ between nodes.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;ALL SELECT   FOR ITEM=NODE COMPONENT=    \n  IN RANGE         1 TO          6 STEP          1\n\n          6  NODES (OF          6  DEFINED) SELECTED BY NSEL  COMMAND.&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>ALL SELECT   FOR ITEM=NODE COMPONENT=
+  IN RANGE         1 TO          6 STEP          1
+
+          6  NODES (OF          6  DEFINED) SELECTED BY NSEL  COMMAND.
 </pre></div>
 </div>
 </section>
@@ -794,7 +818,7 @@ in the y-direction.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;***** ROUTINE COMPLETED *****  CP =         0.000&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>***** ROUTINE COMPLETED *****  CP =         0.000
 </pre></div>
 </div>
 </section>
@@ -802,9 +826,9 @@ in the y-direction.</p>
 <h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">¶</a></h2>
 <p>Enter solution mode and solve the system. Print the solver output.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">out</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">out</span></a><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -949,7 +973,7 @@ experienced by middle node of the beam to the known stresses -11,400 psi and
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.715 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.530 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-002-beam-stresses-and-deflections-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/05305dd21ddae7a52609f47e71a377a8/vm-002-beam_stresses_and_deflections.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-002-beam_stresses_and_deflections.py</span></code></a></p>

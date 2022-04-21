@@ -567,7 +567,7 @@ to download the full example code</p>
 <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sec_num</span></a> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">sectype</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sec_num</span></a><span class="p">,</span> <span class="s2">&quot;BEAM&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;ISection&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">secoffset</span><span class="p">(</span><span class="s2">&quot;CENT&quot;</span><span class="p">)</span>
-<a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">beam_info</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">secdata</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># dimensions are in centimeters</span>
+<span class="n">beam_info</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">secdata</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># dimensions are in centimeters</span>
 </pre></div>
 </div>
 <p>Create nodes within MAPDL</p>
@@ -629,7 +629,7 @@ are sequential</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:23:54  APR 20, 2022 CP=    109.922
+ 00000000  VERSION=LINUX x64     04:20:55  APR 21, 2022 CP=     81.300
 
 
 
@@ -710,7 +710,8 @@ individual elements</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;SPECIFIED NODAL LOAD FZ   FOR SELECTED NODES        12 TO       12 BY        1\n  REAL= -22840.0000       IMAG=  0.00000000&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>SPECIFIED NODAL LOAD FZ   FOR SELECTED NODES        12 TO       12 BY        1
+  REAL= -22840.0000       IMAG=  0.00000000
 </pre></div>
 </div>
 <p>run the static analysis</p>
@@ -722,7 +723,7 @@ individual elements</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =     109.931   TIME= 04:23:54
+ *** NOTE ***                            CP =      81.306   TIME= 04:20:55
  There is no title defined for this analysis.
 
  *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -737,7 +738,7 @@ individual elements</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:23:54  APR 20, 2022 CP=    109.932
+ 00000000  VERSION=LINUX x64     04:20:55  APR 21, 2022 CP=     81.307
 
 
 
@@ -753,11 +754,11 @@ individual elements</p>
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =     109.932   TIME= 04:23:54
+ *** NOTE ***                            CP =      81.307   TIME= 04:20:55
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =     109.932   TIME= 04:23:54
+ *** NOTE ***                            CP =      81.307   TIME= 04:20:55
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -774,7 +775,7 @@ individual elements</p>
 
  SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr
 
- *** NOTE ***                            CP =     109.938   TIME= 04:23:54
+ *** NOTE ***                            CP =      81.312   TIME= 04:20:55
  Predictor is ON by default for structural elements with rotational
  degrees of freedom.  Use the PRED,OFF command to turn the predictor
  OFF if it adversely affects the convergence.
@@ -787,8 +788,8 @@ individual elements</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.012   0.000538
- Time at end of element matrix formulation CP = 109.945419.
+        1        22  BEAM188       0.008   0.000380
+ Time at end of element matrix formulation CP = 81.3172226.
 
  SPARSE MATRIX DIRECT SOLVER.
   Number of equations =          44,    Maximum wavefront =     12
@@ -796,7 +797,7 @@ individual elements</p>
   Memory required for in-core solution     =     0.062 MB
   Memory required for out-of-core solution =     0.062 MB
 
- *** NOTE ***                            CP =     109.950   TIME= 04:23:54
+ *** NOTE ***                            CP =      81.321   TIME= 04:20:55
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
@@ -811,12 +812,12 @@ individual elements</p>
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.038   0.001721
+        1        22  BEAM188       0.028   0.001280
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.001   0.000030
+        1        22  BEAM188       0.001   0.000047
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -831,7 +832,7 @@ individual elements</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.649 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.491 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-mapdl-beam-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/1e012ec2cca8a7261da18d4caa725113/mapdl_beam.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mapdl_beam.py</span></code></a></p>
