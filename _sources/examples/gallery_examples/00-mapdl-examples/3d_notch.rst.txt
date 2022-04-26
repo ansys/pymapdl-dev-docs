@@ -144,6 +144,17 @@ Create a rectangular area with two notches at the top and bottom.
           :class: sphx-glr-multi-img
 
 
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    Downloading _tmp.iges: 0.00B [00:00, ?B/s]    Downloading _tmp.iges: 41.1kB [00:00, 78.6MB/s]
+    Downloading _tmp.iges: 0.00B [00:00, ?B/s]    Downloading _tmp.iges: 11.9kB [00:00, 37.8MB/s]
+    Downloading _tmp.iges: 0.00B [00:00, ?B/s]    Downloading _tmp.iges: 41.6kB [00:00, 99.5MB/s]
+    Downloading _tmp.iges: 0.00B [00:00, ?B/s]    Downloading _tmp.iges: 225kB [00:00, 211MB/s]
+
 
 
 
@@ -222,6 +233,14 @@ Line numbers can be identified through inspection using ``lplot``
           :srcset: /examples/gallery_examples/00-mapdl-examples/images/sphx_glr_3d_notch_005.png
           :class: sphx-glr-multi-img
 
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    Downloading _tmp.iges: 0.00B [00:00, ?B/s]    Downloading _tmp.iges: 224kB [00:00, 330MB/s]
 
 
 
@@ -359,6 +378,7 @@ result reader.
 
  .. code-block:: none
 
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 3.62MB [00:00, 311MB/s]
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/plotting/tools.py:571: PyvistaDeprecationWarning: The usage of `parse_color` is deprecated in favor of the new `Color` class.
       warnings.warn(
 
@@ -755,7 +775,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.826 seconds)
+   **Total running time of the script:** ( 0 minutes  5.992 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_3d_notch.py:
