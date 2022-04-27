@@ -169,7 +169,7 @@ are sequential
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:13:27  APR 26, 2022 CP=     81.659
+     00000000  VERSION=LINUX x64     04:21:31  APR 27, 2022 CP=     82.502
 
                                                                                
 
@@ -316,7 +316,7 @@ run the static analysis
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =      81.665   TIME= 04:13:27
+     *** NOTE ***                            CP =      82.508   TIME= 04:21:31
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -331,7 +331,7 @@ run the static analysis
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:13:27  APR 26, 2022 CP=     81.666
+     00000000  VERSION=LINUX x64     04:21:31  APR 27, 2022 CP=     82.509
 
                                                                                
 
@@ -347,11 +347,11 @@ run the static analysis
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =      81.666   TIME= 04:13:27
+     *** NOTE ***                            CP =      82.509   TIME= 04:21:31
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =      81.666   TIME= 04:13:27
+     *** NOTE ***                            CP =      82.509   TIME= 04:21:31
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -368,7 +368,7 @@ run the static analysis
 
      SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr                                                                                                                                                                                                                                                           
 
-     *** NOTE ***                            CP =      81.671   TIME= 04:13:27
+     *** NOTE ***                            CP =      82.513   TIME= 04:21:31
      Predictor is ON by default for structural elements with rotational      
      degrees of freedom.  Use the PRED,OFF command to turn the predictor     
      OFF if it adversely affects the convergence.                            
@@ -381,8 +381,8 @@ run the static analysis
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        22  BEAM188       0.009   0.000411
-     Time at end of element matrix formulation CP = 81.6769791.              
+            1        22  BEAM188       0.008   0.000352
+     Time at end of element matrix formulation CP = 82.5181503.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =          44,    Maximum wavefront =     12
@@ -390,7 +390,7 @@ run the static analysis
       Memory required for in-core solution     =     0.062 MB
       Memory required for out-of-core solution =     0.062 MB
 
-     *** NOTE ***                            CP =      81.680   TIME= 04:13:27
+     *** NOTE ***                            CP =      82.521   TIME= 04:21:31
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -405,12 +405,12 @@ run the static analysis
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        22  BEAM188       0.027   0.001225
+            1        22  BEAM188       0.025   0.001140
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        22  BEAM188       0.002   0.000093
+            1        22  BEAM188       0.002   0.000069
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -442,7 +442,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.498 seconds)
+   **Total running time of the script:** ( 0 minutes  0.483 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_mapdl_beam.py:
