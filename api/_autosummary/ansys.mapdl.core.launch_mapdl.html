@@ -416,10 +416,12 @@ Otherwise, launch a local instance of MAPDL.  You can also
 override the default behavior of this keyword argument with
 the environment variable <code class="docutils literal notranslate"><span class="pre">PYMAPDL_START_INSTANCE=FALSE</span></code>.</p>
 </dd>
-<dt><strong>ip</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Used only when <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.  Defaults to
-<code class="docutils literal notranslate"><span class="pre">'127.0.0.1'</span></code>. You can also override the default behavior of
-this keyword argument with the environment variable
-“PYMAPDL_IP=FALSE”.</p>
+<dt><strong>ip</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Used only when <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>. If provided,
+it will force <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> to be <code class="docutils literal notranslate"><span class="pre">False</span></code>.
+You can also provide a hostname as an alternative to an IP address.
+Defaults to <code class="docutils literal notranslate"><span class="pre">'127.0.0.1'</span></code>. You can also override the
+default behavior of this keyword argument with the
+environment variable “PYMAPDL_IP=FALSE”.</p>
 </dd>
 <dt><strong>clear_on_connect</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Used only when <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.  Defaults to
 <code class="docutils literal notranslate"><span class="pre">True</span></code>, giving you a fresh environment when connecting to

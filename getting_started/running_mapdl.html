@@ -436,8 +436,12 @@ computer running MAPDL on the port 50052, you can connect to it with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">Mapdl</span><span class="p">(</span><span class="s1">&#39;192.168.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">50052</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Alternatively you can use a hostname:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">Mapdl</span><span class="p">(</span><span class="s1">&#39;myremotemachine&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">50052</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Please note that you must have started MAPDL in gRPC mode in the PC with
-the mentioned IP for this to work.
+the mentioned IP/hostname for this to work.
 If you have MAPDL installed on your local host, you
 can use <code class="docutils literal notranslate"><span class="pre">launch_mapdl</span></code> to both start and connect to MAPDL.</p>
 </section>

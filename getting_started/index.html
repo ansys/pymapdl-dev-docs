@@ -263,7 +263,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ansys-software-requirements">
-     ANSYS Software Requirements
+     Ansys Software Requirements
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -329,42 +329,32 @@ after restarting the Python kernel.</p>
 </section>
 <section id="offline-installation">
 <h3>Offline Installation<a class="headerlink" href="#offline-installation" title="Permalink to this headline">¶</a></h3>
-<p>If you would like to install <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> on a computer
-without access to the internet, you can create a <code class="docutils literal notranslate"><span class="pre">wheelhouse</span></code> that
-contains all the dependencies necessary to install a python package
-without downloading each package individually.</p>
-<p>On the host connected to the internet, run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">wheel</span>
-<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">wheel</span> <span class="o">--</span><span class="n">wheel</span><span class="o">-</span><span class="nb">dir</span><span class="o">=</span><span class="n">pyansys_wheelhouse</span> <span class="n">ansys</span><span class="o">-</span><span class="n">mapdl</span><span class="o">-</span><span class="n">core</span>
+<p>If you lack an internet connection on your install machine, the recommended way
+of installing PyMAPDL is downloading the wheelhouse archive from the <a class="reference external" href="https://github.com/pyansys/pymapdl/releases">Releases
+Page</a> for your corresponding
+machine architecture.</p>
+<p>Each wheelhouse archive contains all the python wheels necessary to install
+PyMAPDL from scratch on Windows and Linux for Python 3.7 and 3.9. You can install
+this on an isolated system with a fresh python or on a virtual environment.</p>
+<p>For example, on Linux with Python 3.7, unzip it and install it with the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unzip</span> <span class="n">PyMAPDL</span><span class="o">-</span><span class="n">v0</span><span class="mf">.62</span><span class="o">.</span><span class="n">dev1</span><span class="o">-</span><span class="n">wheelhouse</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="mf">3.7</span><span class="o">.</span><span class="n">zip</span> <span class="n">wheelhouse</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">ansys</span><span class="o">-</span><span class="n">mapdl</span><span class="o">-</span><span class="n">core</span> <span class="o">-</span><span class="n">f</span> <span class="n">wheelhouse</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">index</span> <span class="o">--</span><span class="n">upgrade</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">installed</span>
 </pre></div>
 </div>
-<p>This creates a new directory called <code class="docutils literal notranslate"><span class="pre">pyansys_wheelhouse</span></code> which
-contains every python package necessary to install
-<code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>.</p>
-<p>Next, zip the <code class="docutils literal notranslate"><span class="pre">pyansys_wheelhouse</span></code> directory and upload it to your
-offline computer. On the offline computer, unzip it and then install
-it with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">index</span> <span class="o">--</span><span class="n">find</span><span class="o">-</span><span class="n">links</span><span class="o">=</span><span class="n">pyansys_wheelhouse</span> <span class="n">ansys</span><span class="o">-</span><span class="n">mapdl</span><span class="o">-</span><span class="n">core</span>
-</pre></div>
-</div>
-<p>This tells Python to install <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> by only looking
-within the <code class="docutils literal notranslate"><span class="pre">pyansys_wheelhouse</span></code> directory.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The OS and version of Python used to generate the wheelhouse must
-match the offline machine.</p>
-</div>
+<p>If you’re on Windows with Python 3.9, unzip to a <code class="docutils literal notranslate"><span class="pre">wheelhouse</span></code> directory and
+install using the same command as above.</p>
+<p>Consider installing using a <a class="reference external" href="https://docs.python.org/3/library/venv.html">virtual environment</a>.</p>
 </section>
 <section id="ansys-software-requirements">
-<h3>ANSYS Software Requirements<a class="headerlink" href="#ansys-software-requirements" title="Permalink to this headline">¶</a></h3>
-<p>For the latest features, you will need a copy of ANSYS 2021R1
-installed locally, but PyMAPDL is compatible with ANSYS 17.0 and newer
+<h3>Ansys Software Requirements<a class="headerlink" href="#ansys-software-requirements" title="Permalink to this headline">¶</a></h3>
+<p>For the latest features, you will need a copy of Ansys 2021R1
+installed locally, but PyMAPDL is compatible with Ansys 17.0 and newer
 on Windows and 13.0 on Linux.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The latest versions of ANSYS provide signifiantly better support
+<p>The latest versions of Ansys provide signifiantly better support
 and features.  Certain features will not be supported by earlier
-versions of ANSYS (e.g. APDL Math).</p>
+versions of Ansys (e.g. APDL Math).</p>
 </div>
 </section>
 <section id="verify-your-installation">
