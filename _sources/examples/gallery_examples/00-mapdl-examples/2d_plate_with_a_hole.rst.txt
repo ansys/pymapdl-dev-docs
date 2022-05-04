@@ -157,7 +157,7 @@ approximate this.
 
  .. code-block:: none
 
-    Downloading _tmp.iges: 0.00B [00:00, ?B/s]    Downloading _tmp.iges: 23.1kB [00:00, 58.1MB/s]
+    Downloading _tmp.iges: 0.00B [00:00, ?B/s]    Downloading _tmp.iges: 23.1kB [00:00, 61.4MB/s]
 
 
 
@@ -287,7 +287,7 @@ Solve the static analysis
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =       1.770   TIME= 04:13:21
+     *** NOTE ***                            CP =       1.780   TIME= 04:12:48
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -300,7 +300,7 @@ Solve the static analysis
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:13:21  MAY 03, 2022 CP=      1.776
+     00000000  VERSION=LINUX x64     04:12:48  MAY 04, 2022 CP=      1.786
 
                                                                                
 
@@ -316,11 +316,11 @@ Solve the static analysis
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =       1.779   TIME= 04:13:21
+     *** NOTE ***                            CP =       1.789   TIME= 04:12:48
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =       1.779   TIME= 04:13:21
+     *** NOTE ***                            CP =       1.790   TIME= 04:12:48
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -369,8 +369,8 @@ Solve the static analysis
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.075   0.000077
-     Time at end of element matrix formulation CP = 1.84941709.              
+            1       977  PLANE183      0.080   0.000082
+     Time at end of element matrix formulation CP = 1.86763394.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =        6124,    Maximum wavefront =     48
@@ -378,7 +378,7 @@ Solve the static analysis
       Memory required for in-core solution     =     8.134 MB
       Memory required for out-of-core solution =     4.318 MB
 
-     *** NOTE ***                            CP =       2.024   TIME= 04:13:21
+     *** NOTE ***                            CP =       2.060   TIME= 04:12:48
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -393,12 +393,12 @@ Solve the static analysis
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.091   0.000093
+            1       977  PLANE183      0.101   0.000104
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.028   0.000029
+            1       977  PLANE183      0.031   0.000032
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -452,7 +452,7 @@ result reader.
 
  .. code-block:: none
 
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.00MB [00:00, 58.9MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.00MB [00:00, 188MB/s]
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/plotting/tools.py:571: PyvistaDeprecationWarning: The usage of `parse_color` is deprecated in favor of the new `Color` class.
       warnings.warn(
 
@@ -701,35 +701,35 @@ Run the batch and record the stress concentration
  .. code-block:: none
 
         Ratio  : Stress Concentration (K_t)
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 2.00MB [00:00, 275MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 2.00MB [00:00, 278MB/s]
         0.0100 :     2.9660
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.81MB [00:00, 283MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.81MB [00:00, 206MB/s]
         0.0450 :     2.8619
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.69MB [00:00, 364MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.69MB [00:00, 283MB/s]
         0.0800 :     2.7690
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.69MB [00:00, 381MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.69MB [00:00, 348MB/s]
         0.1150 :     2.6902
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.62MB [00:00, 320MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.62MB [00:00, 262MB/s]
         0.1500 :     2.6101
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.56MB [00:00, 273MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.56MB [00:00, 325MB/s]
         0.1850 :     2.5418
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.50MB [00:00, 364MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.50MB [00:00, 272MB/s]
         0.2200 :     2.4737
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.56MB [00:00, 315MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.56MB [00:00, 206MB/s]
         0.2550 :     2.4202
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.56MB [00:00, 359MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.56MB [00:00, 272MB/s]
         0.2900 :     2.3683
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.44MB [00:00, 288MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.44MB [00:00, 261MB/s]
         0.3250 :     2.3222
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.38MB [00:00, 373MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.38MB [00:00, 340MB/s]
         0.3600 :     2.2799
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.38MB [00:00, 303MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.38MB [00:00, 101MB/s]
         0.3950 :     2.2447
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.31MB [00:00, 371MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.31MB [00:00, 268MB/s]
         0.4300 :     2.2145
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.31MB [00:00, 349MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.31MB [00:00, 304MB/s]
         0.4650 :     2.1837
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.19MB [00:00, 272MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.19MB [00:00, 314MB/s]
         0.5000 :     2.1609
 
 
@@ -803,7 +803,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  44.076 seconds)
+   **Total running time of the script:** ( 0 minutes  44.397 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_2d_plate_with_a_hole.py:
