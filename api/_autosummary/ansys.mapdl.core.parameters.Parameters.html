@@ -398,65 +398,9 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.mapdl.core.parameters.Parameters">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.parameters.</span></span><span class="sig-name descname"><span class="pre">Parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapdl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.parameters.Parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Collection of MAPDL parameters obtainable from the <a class="reference internal" href="ansys.mapdl.core.Mapdl.get.html#ansys.mapdl.core.Mapdl.get" title="ansys.mapdl.core.Mapdl.get"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.Mapdl.get()</span></code></a> command.</p>
+<dd><p>Collection of MAPDL parameters.</p>
 <p class="rubric">Notes</p>
-<p><strong>Leading underscored parameters</strong></p>
-<p>The parameters starting with underscore (‘_’) are reserved parameters
-for MAPDL macros and routines, therefore its use is discouraged, and
-in PyMAPDL you cannot set them by default.</p>
-<p>If you need to set one of this parameters, you can use <code class="docutils literal notranslate"><span class="pre">mapdl._run</span></code>
-to avoid PyMAPDL parameter name checks. For example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">_run</span><span class="p">(</span><span class="s1">&#39;_parameter=123&#39;</span><span class="p">)</span>
-<span class="go">&#39;PARAMETER _PARAMETER =     123.00000000&#39;</span>
-</pre></div>
-</div>
-<p>By default, this type of parameters cannot be seen when issuing
-<code class="docutils literal notranslate"><span class="pre">mapdl.parameters</span></code>. However, you can change this by setting
-<code class="docutils literal notranslate"><span class="pre">mapdl.parameters.show_leading_underscore_parameters</span></code> equal to True.
-For example:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">show_leading_underscore_parameters</span><span class="o">=</span><span class="kc">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span>
-<span class="go">MAPDL Parameters</span>
-<span class="go">----------------</span>
-<span class="go">PORT                             : 50053.0</span>
-<span class="go">_RETURN                          : 0.0</span>
-<span class="go">_STATUS                          : 0.0</span>
-<span class="go">_UIQR                            : 17.0</span>
-</pre></div>
-</div>
-<p><strong>Trailing underscored parameters</strong></p>
-<p>The parameters ending underscore are recommend for user routines
-and macros.
-You can set this type of parameters in PyMAPDL, but by default,
-they cannot be seen in <code class="docutils literal notranslate"><span class="pre">mapdl.parameters</span></code>, unless
-<code class="docutils literal notranslate"><span class="pre">mapdl.parameters.show_trailing_underscore_parameters</span></code> is set
-to True.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;param_&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span>
-<span class="go">MAPDL Parameters</span>
-<span class="go">----------------</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">show_trailing_underscore_parameters</span><span class="o">=</span><span class="kc">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span>
-<span class="go">MAPDL Parameters</span>
-<span class="go">----------------</span>
-<span class="go">PARAM_                           : 1.0</span>
-</pre></div>
-</div>
-<p><strong>Parameters with leading and trailing underscore</strong></p>
-<p>These are an especial type of parameters. They CANNOT be seen
-in <code class="docutils literal notranslate"><span class="pre">mapdl.parameters</span></code> under any circumstances, and because
-of it, it uses is not recommended.</p>
-<p>You can still retrieve them using any of the normal methods
-to retrieve parameters. But you shall know the parameter name.
-For example:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s2">&quot;_param_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span>
-<span class="go">MAPDL Parameters</span>
-<span class="go">----------------</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;_param_&#39;</span><span class="p">])</span>
-<span class="go">1.0</span>
-</pre></div>
-</div>
+<p>See <a class="reference internal" href="../../user_guide/parameters.html#ref-parameters"><span class="std std-ref">Setting and Retrieving Parameters</span></a> for additional notes.</p>
 <p class="rubric">Examples</p>
 <p>Simply list all parameters except for MAPDL MATH parameters.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span>

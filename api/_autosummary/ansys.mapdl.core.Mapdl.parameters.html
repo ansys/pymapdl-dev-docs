@@ -576,16 +576,11 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.parameters">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">parameters</span></span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Collection of MAPDL parameters obtainable from the <code class="docutils literal notranslate"><span class="pre">*GET</span></code> command or <code class="docutils literal notranslate"><span class="pre">GET</span></code> command.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><a class="reference internal" href="ansys.mapdl.core.parameters.Parameters.html#ansys.mapdl.core.parameters.Parameters" title="ansys.mapdl.core.parameters.Parameters"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.mapdl.core.parameters.Parameters</span></code></a></dt><dd></dd>
-</dl>
-</dd>
-</dl>
+<dd><p>Collection of MAPDL parameters.</p>
+<p class="rubric">Notes</p>
+<p>See <a class="reference internal" href="../../user_guide/parameters.html#ref-special-named-param"><span class="std std-ref">Specially Named Parameters</span></a> for additional notes regarding parameter naming in MAPDL.</p>
 <p class="rubric">Examples</p>
-<p>Simply list all parameters except for MAPDL MATH parameters</p>
+<p>Simply list all parameters except for MAPDL MATH parameters.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span>
 <span class="go">ARR                              : ARRAY DIM (3, 1, 1)</span>
 <span class="go">PARM_FLOAT                       : 20.0</span>
@@ -603,19 +598,6 @@
 <p>Get an array parameter</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;ARR&#39;</span><span class="p">]</span>
 <span class="go">array([1., 2., 3.])</span>
-</pre></div>
-</div>
-<p>Get the current routine</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">routine</span>
-<span class="go">&#39;PREP7&#39;</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">units</span>
-<span class="go">&#39;SI&#39;</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">csys</span>
-<span class="go">0</span>
 </pre></div>
 </div>
 </dd></dl>
