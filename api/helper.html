@@ -51,7 +51,7 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="convert_script" href="_autosummary/ansys.mapdl.core.convert_script.html" />
+    <link rel="next" title="launch_mapdl" href="_autosummary/ansys.mapdl.core.launch_mapdl.html" />
     <link rel="prev" title="vnum" href="_autosummary/ansys.mapdl.core.mapdl_geometry.Geometry.vnum.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -222,13 +222,18 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="_autosummary/ansys.mapdl.core.launch_mapdl.html">
+     launch_mapdl
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="_autosummary/ansys.mapdl.core.convert_script.html">
      convert_script
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="_autosummary/ansys.mapdl.core.launch_mapdl.html">
-     launch_mapdl
+    <a class="reference internal" href="_autosummary/ansys.mapdl.core.Information.html">
+     ansys.mapdl.core.Information
     </a>
    </li>
    <li class="toctree-l2">
@@ -350,19 +355,22 @@ or automating other tasks.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.convert_script.html#ansys.mapdl.core.convert_script" title="ansys.mapdl.core.convert_script"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_script</span></code></a>(filename_in, filename_out[, ...])</p></td>
-<td><p>Converts an ANSYS input file to a python PyMAPDL script.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch_mapdl</span></code></a>([exec_file, run_location, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch_mapdl</span></code></a>([exec_file, run_location, ...])</p></td>
 <td><p>Start MAPDL locally in gRPC mode.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.change_default_ansys_path.html#ansys.mapdl.core.change_default_ansys_path" title="ansys.mapdl.core.change_default_ansys_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">change_default_ansys_path</span></code></a>(exe_loc)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.convert_script.html#ansys.mapdl.core.convert_script" title="ansys.mapdl.core.convert_script"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_script</span></code></a>(filename_in, filename_out[, ...])</p></td>
+<td><p>Converts an ANSYS input file to a python PyMAPDL script.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Information.html#ansys.mapdl.core.Information" title="ansys.mapdl.core.Information"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Information</span></code></a>(mapdl)</p></td>
+<td><p>This class provide some MAPDL information from <code class="docutils literal notranslate"><span class="pre">/STATUS</span></code> MAPDL command.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.change_default_ansys_path.html#ansys.mapdl.core.change_default_ansys_path" title="ansys.mapdl.core.change_default_ansys_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">change_default_ansys_path</span></code></a>(exe_loc)</p></td>
 <td><p>Change your default ansys path.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.find_ansys.html#ansys.mapdl.core.find_ansys" title="ansys.mapdl.core.find_ansys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_ansys</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.find_ansys.html#ansys.mapdl.core.find_ansys" title="ansys.mapdl.core.find_ansys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_ansys</span></code></a>()</p></td>
 <td><p>Searches for ansys path within the standard install location and returns the path of the latest version.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.close_all_local_instances.html#ansys.mapdl.core.close_all_local_instances" title="ansys.mapdl.core.close_all_local_instances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close_all_local_instances</span></code></a>([port_range])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.close_all_local_instances.html#ansys.mapdl.core.close_all_local_instances" title="ansys.mapdl.core.close_all_local_instances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close_all_local_instances</span></code></a>([port_range])</p></td>
 <td><p>Close all MAPDL instances within a port_range.</p></td>
 </tr>
 </tbody>
