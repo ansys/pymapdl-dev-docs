@@ -580,7 +580,7 @@
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>method</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Mode-extraction method to be used for the modal analysis.
+<dt><strong>method</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Mode-extraction method to be used for the modal analysis.
 Defaults to lanb (block lanczos).  Must be one of the following:</p>
 <ul class="simple">
 <li><p>LANB : Block Lanczos</p></li>
@@ -593,23 +593,23 @@ Defaults to lanb (block lanczos).  Must be one of the following:</p>
 <li><p>VT : Variational Technology</p></li>
 </ul>
 </dd>
-<dt><strong>nmode</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The number of modes to extract. The value can depend on
+<dt><strong>nmode</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The number of modes to extract. The value can depend on
 the value supplied for Method. NMODE has no default and
 must be specified. If Method = LANB, LANPCG, or SNODE, the
 number of modes that can be extracted can equal the DOFs
 in the model after the application of all boundary
 conditions.</p>
 </dd>
-<dt><strong>freqb</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The beginning, or lower end, of the frequency range of
+<dt><strong>freqb</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The beginning, or lower end, of the frequency range of
 interest.</p>
 </dd>
-<dt><strong>freqe</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The ending, or upper end, of the frequency range of
+<dt><strong>freqe</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The ending, or upper end, of the frequency range of
 interest (in Hz). The default for Method = SNODE is
 described below. The default for all other methods is to
 calculate all modes, regardless of their maximum
 frequency.</p>
 </dd>
-<dt><strong>cpxmod</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Complex eigenmode key. Valid only when <code class="docutils literal notranslate"><span class="pre">method='QRDAMP'</span></code>
+<dt><strong>cpxmod</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Complex eigenmode key. Valid only when <code class="docutils literal notranslate"><span class="pre">method='QRDAMP'</span></code>
 or <code class="docutils literal notranslate"><span class="pre">method='unsym'</span></code></p>
 <ul class="simple">
 <li><p>AUTO : Determine automatically if the eigensolutions are
@@ -625,14 +625,14 @@ modal analysis for Method = QRDAMP. This is the
 default for this method.</p></li>
 </ul>
 </dd>
-<dt><strong>nrmkey</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Mode shape normalization key.  When <code class="docutils literal notranslate"><span class="pre">True</span></code> (default),
+<dt><strong>nrmkey</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Mode shape normalization key.  When <code class="docutils literal notranslate"><span class="pre">True</span></code> (default),
 normalize the mode shapes to the mass matrix.  When False,
 Normalize the mode shapes to unity instead of to the mass
 matrix.  If a subsequent spectrum or mode-superposition
 analysis is planned, the mode shapes should be normalized
 to the mass matrix.</p>
 </dd>
-<dt><strong>modtype</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Type of modes calculated by the eigensolver. Only
+<dt><strong>modtype</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Type of modes calculated by the eigensolver. Only
 applicable to the unsymmetric eigensolver.</p>
 <ul class="simple">
 <li><p>Blank : Right eigenmodes. This value is the default.</p></li>
@@ -641,7 +641,7 @@ written to Jobname.LMODE.  This option must be
 activated if a mode-superposition analysis is intended.</p></li>
 </ul>
 </dd>
-<dt><strong>memory_option</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Memory allocation option:</p>
+<dt><strong>memory_option</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Memory allocation option:</p>
 <ul class="simple">
 <li><dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> - Default Memory mode</dt><dd><p>Use the default memory allocation strategy for
@@ -685,19 +685,19 @@ solver.</p>
 </li>
 </ul>
 </dd>
-<dt><strong>mxpand</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of modes or array name (enclosed in percent signs)
+<dt><strong>mxpand</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of modes or array name (enclosed in percent signs)
 to expand and write.  If -1, do not expand and do not
 write modes to the results file during the
 analysis. Default <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p>
 </dd>
-<dt><strong>elcalc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Calculate element results, reaction forces, energies, and
+<dt><strong>elcalc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Calculate element results, reaction forces, energies, and
 the nodal degree of freedom solution.  Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>Output from MAPDL SOLVE command.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>Output from MAPDL SOLVE command.</p>
 </dd>
 </dl>
 </dd>
@@ -724,7 +724,7 @@ when eigensolutions are real.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
