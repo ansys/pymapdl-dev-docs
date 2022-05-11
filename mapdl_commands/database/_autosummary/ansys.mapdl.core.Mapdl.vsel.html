@@ -995,13 +995,13 @@
 <p>INVE - Invert the current set (selected becomes unselected and vice versa).</p>
 <p>STAT - Display the current select status.</p>
 </dd>
-<dt><strong>item</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Label identifying data. Valid item labels are shown in the table
+<dt><strong>item</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Label identifying data. Valid item labels are shown in the table
 below. Some items also require a component label. Defaults to
 VOLU.</p>
 </dd>
-<dt><strong>comp</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Component of the item (if required).</p>
+<dt><strong>comp</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Component of the item (if required).</p>
 </dd>
-<dt><strong>vmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Minimum value of item range. Ranges are volume numbers, coordinate
+<dt><strong>vmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Minimum value of item range. Ranges are volume numbers, coordinate
 values, attribute numbers, etc., as appropriate for the item. A
 component name (as specified on the CM (p. 338) command) may also
 be substituted for VMIN (VMAX and VINC are ignored). If Item = MAT,
@@ -1010,12 +1010,12 @@ Item is compared against the range for selection; if VMIN is
 negative, the signed value of Item is compared. See the VLIST
 (p. 2050) command for a discussion of signed attributes.</p>
 </dd>
-<dt><strong>vmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Maximum value of item range. VMAX defaults to VMIN.</p>
+<dt><strong>vmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Maximum value of item range. VMAX defaults to VMIN.</p>
 </dd>
-<dt><strong>vinc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Value increment within range. Used only with integer ranges (such
+<dt><strong>vinc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Value increment within range. Used only with integer ranges (such
 as for volume numbers). Defaults to 1. VINC cannot be negative.</p>
 </dd>
-<dt><strong>kswp</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Specifies whether only volumes are to be selected:</p>
+<dt><strong>kswp</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Specifies whether only volumes are to be selected:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">kswp=0</span></code> - Select volumes only.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kswp=1</span></code> - Select volumes, as well as keypoints, lines, areas,

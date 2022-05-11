@@ -361,26 +361,26 @@
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>n_instance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of instances to create.</p>
+<dt><strong>n_instance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of instances to create.</p>
 </dd>
-<dt><strong>restart_failed</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Restarts failed instances.  Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>restart_failed</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Restarts failed instances.  Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
-<dt><strong>wait</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Wait for pool to be initialized.  Otherwise, pool will start
+<dt><strong>wait</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Wait for pool to be initialized.  Otherwise, pool will start
 in the background and all resources may not be available instantly.</p>
 </dd>
-<dt><strong>run_location</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Base directory to create additional directories for each MAPDL
+<dt><strong>run_location</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Base directory to create additional directories for each MAPDL
 instance.  Defaults to a temporary working directory.</p>
 </dd>
-<dt><strong>starting_port</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Starting port for the MAPDL instances.  Defaults to 50052.</p>
+<dt><strong>starting_port</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Starting port for the MAPDL instances.  Defaults to 50052.</p>
 </dd>
-<dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Show a progress bar when starting the pool.  Defaults to
-<code class="docutils literal notranslate"><span class="pre">True</span></code>.  Will not be shown when <code class="docutils literal notranslate"><span class="pre">wait=False</span></code></p>
+<dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Show a progress bar when starting the pool.  Defaults to
+<code class="docutils literal notranslate"><span class="pre">True</span></code>.  Will not be shown when <code class="docutils literal notranslate"><span class="pre">wait=False</span></code>.</p>
 </dd>
-<dt><strong>restart_failed</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Restarts any failed instances in the pool.</p>
+<dt><strong>restart_failed</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Restarts any failed instances in the pool.</p>
 </dd>
-<dt><strong>remove_temp_files</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Removes all temporary files on exit.  Default <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>remove_temp_files</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Removes all temporary files on exit.  Default <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Additional</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">Keyword</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">Arguments</span></code></span></dt><dd><p>See <code class="docutils literal notranslate"><span class="pre">help(ansys.mapdl.launcher.launch_mapdl)</span></code> for a complete
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>See <a class="reference internal" href="ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.launch_mapdl()</span></code></a> for a complete
 listing of all additional keyword arguments.</p>
 </dd>
 </dl>
@@ -389,8 +389,8 @@ listing of all additional keyword arguments.</p>
 <p class="rubric">Examples</p>
 <p>Simply create a pool of 10 instances to run in the temporary
 directory.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">LocalMapdlPool</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">LocalMapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">LocalMapdlPool</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">LocalMapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="go">Creating Pool: 100%|########| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
 </pre></div>
 </div>
@@ -398,19 +398,19 @@ directory.</p>
 directory within their own isolated directories.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcmd</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">LocalMapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">nproc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">run_location</span><span class="o">=</span><span class="n">my_path</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">LocalMapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">nproc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">run_location</span><span class="o">=</span><span class="n">my_path</span><span class="p">)</span>
 <span class="go">Creating Pool: 100%|########| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
 </pre></div>
 </div>
 <p>Create a pool while specifying the MAPDL executable in Windows.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exec_file</span> <span class="o">=</span> <span class="s1">&#39;C:/Program Files/ANSYS Inc/v212/ansys/bin/win64/ANSYS212.exe&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">LocalMapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">exec_file</span><span class="o">=</span><span class="n">exec_file</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">LocalMapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">exec_file</span><span class="o">=</span><span class="n">exec_file</span><span class="p">)</span>
 <span class="go">Creating Pool: 100%|########| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
 </pre></div>
 </div>
 <p>Create a pool while specifying the MAPDL executable in Linux.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exec_file</span> <span class="o">=</span> <span class="s1">&#39;/ansys_inc/v211/ansys/bin/ansys211&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">LocalMapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">exec_file</span><span class="o">=</span><span class="n">exec_file</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">LocalMapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">exec_file</span><span class="o">=</span><span class="n">exec_file</span><span class="p">)</span>
 <span class="go">Creating Pool: 100%|########| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
 </pre></div>
 </div>
@@ -425,7 +425,7 @@ directory within their own isolated directories.</p>
 <td><p>Close out all instances in the pool.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.LocalMapdlPool.map.html#ansys.mapdl.core.pool.LocalMapdlPool.map" title="ansys.mapdl.core.pool.LocalMapdlPool.map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalMapdlPool.map</span></code></a>(func[, iterable, ...])</p></td>
-<td><p>Run a function for each instance of mapdl within the pool</p></td>
+<td><p>Run a function for each instance of mapdl within the pool.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.LocalMapdlPool.next_available.html#ansys.mapdl.core.pool.LocalMapdlPool.next_available" title="ansys.mapdl.core.pool.LocalMapdlPool.next_available"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalMapdlPool.next_available</span></code></a>([return_index])</p></td>
 <td><p>Wait until an instance of mapdl is available and return that instance.</p></td>
