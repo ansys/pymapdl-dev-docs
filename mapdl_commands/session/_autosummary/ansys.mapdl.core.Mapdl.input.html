@@ -930,9 +930,9 @@ Stream the response back and deserialize the output.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>fname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>MAPDL input file to stream to the MAPDL grpc server.</p>
+<dt><strong>fname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>MAPDL input file to stream to the MAPDL grpc server.</p>
 </dd>
-<dt><strong>time_step_stream</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Time to wait between streaming updates to send back chunks
+<dt><strong>time_step_stream</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Time to wait between streaming updates to send back chunks
 from the listener file.  Larger values mean more data per
 chunk and less chunks, but if the command is short, will
 wait until time_step_stream is finished leading to a long
@@ -946,7 +946,7 @@ dependent on verbosity.  The defaults are:</p>
 <p>These defaults will be ignored if <code class="docutils literal notranslate"><span class="pre">time_step_stream</span></code> is
 manually set.</p>
 </dd>
-<dt><strong>orig_cmd</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Original command. There are some cases, were input is
+<dt><strong>orig_cmd</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Original command. There are some cases, were input is
 used to send the file to the grpc server but then we want
 to run something different than <code class="docutils literal notranslate"><span class="pre">/INPUT</span></code>, for example
 <code class="docutils literal notranslate"><span class="pre">CDREAD</span></code>.</p>
@@ -955,7 +955,7 @@ to run something different than <code class="docutils literal notranslate"><span
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>Response from MAPDL.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>Response from MAPDL.</p>
 </dd>
 </dl>
 </dd>

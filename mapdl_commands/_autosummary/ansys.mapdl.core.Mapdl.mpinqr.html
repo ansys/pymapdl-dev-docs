@@ -961,15 +961,15 @@ Hence its support is limited and it use is not encouraged.
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>mat</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Material number
+<dt><strong>mat</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Material number
 should be 0 for key=11, <code class="docutils literal notranslate"><span class="pre">DB_NUMDEFINED(12)</span></code>,
 <code class="docutils literal notranslate"><span class="pre">DB_MAXDEFINED(14)</span></code>, and <code class="docutils literal notranslate"><span class="pre">DB_MAXRECLENG(15)</span></code>.</p>
 </dd>
-<dt><strong>iprop</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Property reference number (See <a class="reference internal" href="#table-1">Table-1</a> in the Notes section).</p>
+<dt><strong>iprop</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Property reference number (See <a class="reference internal" href="#table-1">Table-1</a> in the Notes section).</p>
 <p>If iprop = 0, test for existence of any material property with this
 material number (with key = <code class="docutils literal notranslate"><span class="pre">DB_SELECTED(1)</span></code>).</p>
 </dd>
-<dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Key as to the information needed about material property.</p>
+<dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Key as to the information needed about material property.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">DB_SELECTED(1)</span></code> - return select status:</p>
 <ul>
@@ -985,7 +985,7 @@ material number (with key = <code class="docutils literal notranslate"><span cla
 <li><p>11 - return void percent (integer)</p></li>
 </ul>
 </dd>
-<dt><strong>pname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the variable where the queried value is stored.</p>
+<dt><strong>pname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the variable where the queried value is stored.</p>
 </dd>
 <dt><strong>**kwargs</strong></dt><dd><p>Extra arguments to be passed to <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.run</span></code></a>.</p>
 </dd>
@@ -993,7 +993,7 @@ material number (with key = <code class="docutils literal notranslate"><span cla
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>Returned value of <code class="docutils literal notranslate"><span class="pre">mpinqr</span></code> is based on setting of key.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>Returned value of <code class="docutils literal notranslate"><span class="pre">mpinqr</span></code> is based on setting of key.</p>
 </dd>
 </dl>
 </dd>
