@@ -29,7 +29,7 @@ method.
 
 First, start by launching MAPDL as a service.
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-46
+.. GENERATED FROM PYTHON SOURCE LINES 13-45
 
 .. code-block:: default
 
@@ -62,6 +62,26 @@ First, start by launching MAPDL as a service.
     mapdl.d("all", "all")
     mapdl.allsel()
 
+    # plot the boundary conditions
+    mapdl.nplot(plot_bc=True)
+
+
+
+
+.. image-sg:: /examples/gallery_examples/00-mapdl-examples/images/sphx_glr_mapdl_3d_beam_001.png
+   :alt: mapdl 3d beam
+   :srcset: /examples/gallery_examples/00-mapdl-examples/images/sphx_glr_mapdl_3d_beam_001.png
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 46-51
+
+.. code-block:: default
+
+
     mapdl.mxpand(elcalc="YES")
     mapdl.modal_analysis(nmode=6)
 
@@ -79,7 +99,7 @@ First, start by launching MAPDL as a service.
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =      81.149   TIME= 04:27:02
+     *** NOTE ***                            CP =      81.298   TIME= 04:36:28
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -91,7 +111,7 @@ First, start by launching MAPDL as a service.
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:27:02  MAY 13, 2022 CP=     81.150
+     00000000  VERSION=LINUX x64     04:36:28  MAY 14, 2022 CP=     81.298
 
                                                                                
 
@@ -111,7 +131,7 @@ First, start by launching MAPDL as a service.
        NUMBER OF MODES TO EXPAND . . . . . . . . . . .ALL
        ELEMENT RESULTS CALCULATION . . . . . . . . . .ON 
 
-     *** NOTE ***                            CP =      81.150   TIME= 04:27:02
+     *** NOTE ***                            CP =      81.298   TIME= 04:36:28
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -161,8 +181,8 @@ First, start by launching MAPDL as a service.
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        40  SOLID186      0.009   0.000234
-     Time at end of element matrix formulation CP = 81.1636353.              
+            1        40  SOLID186      0.009   0.000229
+     Time at end of element matrix formulation CP = 81.311882.               
 
       BLOCK LANCZOS CALCULATION OF UP TO     6 EIGENVECTORS.
       NUMBER OF EQUATIONS              =          900
@@ -175,7 +195,7 @@ First, start by launching MAPDL as a service.
       Memory required for in-core solution     =     2.159 MB
       Memory required for out-of-core solution =     1.369 MB
 
-     *** NOTE ***                            CP =      81.202   TIME= 04:27:02
+     *** NOTE ***                            CP =      81.351   TIME= 04:36:28
      The Sparse Matrix Solver used by the Block Lanczos eigensolver is       
      currently running in the in-core memory mode.  This memory mode uses    
      the most amount of memory in order to avoid using the hard drive as     
@@ -185,7 +205,7 @@ First, start by launching MAPDL as a service.
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:27:02  MAY 13, 2022 CP=     81.249
+     00000000  VERSION=LINUX x64     04:36:28  MAY 14, 2022 CP=     81.396
 
                                                                                
 
@@ -215,11 +235,11 @@ First, start by launching MAPDL as a service.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-48
+.. GENERATED FROM PYTHON SOURCE LINES 52-53
 
 View the results using the pyansys result object
 
-.. GENERATED FROM PYTHON SOURCE LINES 48-52
+.. GENERATED FROM PYTHON SOURCE LINES 53-57
 
 .. code-block:: default
 
@@ -237,7 +257,7 @@ View the results using the pyansys result object
 
  .. code-block:: none
 
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 896kB [00:00, 191MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 896kB [00:00, 249MB/s]
     PyMAPDL Result
     Units       : User Defined
     Version     : 21.2
@@ -263,11 +283,11 @@ View the results using the pyansys result object
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-54
+.. GENERATED FROM PYTHON SOURCE LINES 58-59
 
 Access nodal displacement values
 
-.. GENERATED FROM PYTHON SOURCE LINES 54-61
+.. GENERATED FROM PYTHON SOURCE LINES 59-66
 
 .. code-block:: default
 
@@ -302,11 +322,11 @@ Access nodal displacement values
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 62-63
+.. GENERATED FROM PYTHON SOURCE LINES 67-68
 
 Plot a modal result
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-66
+.. GENERATED FROM PYTHON SOURCE LINES 68-71
 
 .. code-block:: default
 
@@ -316,26 +336,26 @@ Plot a modal result
 
 
 
-.. image-sg:: /examples/gallery_examples/00-mapdl-examples/images/sphx_glr_mapdl_3d_beam_001.png
+.. image-sg:: /examples/gallery_examples/00-mapdl-examples/images/sphx_glr_mapdl_3d_beam_002.png
    :alt: mapdl 3d beam
-   :srcset: /examples/gallery_examples/00-mapdl-examples/images/sphx_glr_mapdl_3d_beam_001.png
+   :srcset: /examples/gallery_examples/00-mapdl-examples/images/sphx_glr_mapdl_3d_beam_002.png
    :class: sphx-glr-single-img
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 67-70
+.. GENERATED FROM PYTHON SOURCE LINES 72-75
 
 Animate a modal result
 result.animate_nodal_solution(0, show_edges=True, loop=False, displacement_factor=10,
 movie_filename='demo.gif')
 
-.. GENERATED FROM PYTHON SOURCE LINES 72-73
+.. GENERATED FROM PYTHON SOURCE LINES 77-78
 
 stop mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 73-74
+.. GENERATED FROM PYTHON SOURCE LINES 78-79
 
 .. code-block:: default
 
@@ -350,7 +370,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.584 seconds)
+   **Total running time of the script:** ( 0 minutes  0.822 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_mapdl_3d_beam.py:
