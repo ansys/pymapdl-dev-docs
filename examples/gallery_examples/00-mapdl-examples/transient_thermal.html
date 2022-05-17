@@ -754,12 +754,12 @@ then performed.</p>
  TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
       SURFACE LOADS  TRANSFERRED FROM AREAS         =     25
 
- *** NOTE ***                            CP =     100.755   TIME= 04:08:48
+ *** NOTE ***                            CP =     130.629   TIME= 04:17:22
  There is no title defined for this analysis.
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:08:48  MAY 16, 2022 CP=    100.756
+ 00000000  VERSION=LINUX x64     04:17:22  MAY 17, 2022 CP=    130.630
 
 
 
@@ -777,7 +777,7 @@ then performed.</p>
    EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =     100.757   TIME= 04:08:48
+ *** NOTE ***                            CP =     130.631   TIME= 04:17:22
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -820,8 +820,8 @@ then performed.</p>
   XC =   2.5000          IXX =   0.2424E-02      IXX =   0.5877E-03
   YC =  0.50000          IYY =   0.3181E-01      IYY =   0.7934E-02
   ZC =  0.50000          IZZ =   0.3181E-01      IZZ =   0.7934E-02
-                         IXY =  -0.4591E-02      IXY =   0.4161E-16
-                         IYZ =  -0.9183E-03      IYZ =   0.7414E-17
+                         IXY =  -0.4591E-02      IXY =   0.4243E-16
+                         IYZ =  -0.9183E-03      IYZ =   0.7618E-17
                          IZX =  -0.4591E-02      IZX =   0.4329E-16
 
 
@@ -837,8 +837,8 @@ then performed.</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       625  SOLID70       0.021   0.000033
- Time at end of element matrix formulation CP = 100.813141.
+        1       625  SOLID70       0.034   0.000054
+ Time at end of element matrix formulation CP = 130.70047.
 
  ALL CURRENT ANSYS DATA WRITTEN TO FILE NAME= file.rdb
   FOR POSSIBLE RESUME FROM THIS POINT
@@ -849,7 +849,7 @@ then performed.</p>
   Memory required for in-core solution     =     1.032 MB
   Memory required for out-of-core solution =     0.575 MB
 
- *** NOTE ***                            CP =     100.847   TIME= 04:08:48
+ *** NOTE ***                            CP =     130.741   TIME= 04:17:22
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
@@ -864,12 +864,12 @@ then performed.</p>
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       625  SOLID70       0.023   0.000036
+        1       625  SOLID70       0.039   0.000062
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       625  SOLID70       0.026   0.000041
+        1       625  SOLID70       0.041   0.000066
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   10.0000         TIME INC =   10.0000      NEW TRIANG MATRIX
  *** RESPONSE EIGENVALUE = 0.2324       OSCILLATION LIMIT =  2.324
@@ -1773,13 +1773,13 @@ result = mapdl.thermal_result</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>FINISH SOLUTION PROCESSING
 
 
- ***** ROUTINE COMPLETED *****  CP =       107.590
+ ***** ROUTINE COMPLETED *****  CP =       141.835
 
 
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:08:51  MAY 16, 2022 CP=    107.591
+ 00000000  VERSION=LINUX x64     04:17:28  MAY 17, 2022 CP=    141.837
 
 
 
@@ -1857,7 +1857,7 @@ python accessible variable, rather than storing it to a MAPDL value.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561237, 81.19108300049322, 83.56709007016161, 85.35125295387645, 86.23266429275347, 86.97754017604862, 88.31275589884439]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561243, 81.19108300049325, 83.56709007016164, 85.35125295387648, 86.23266429275351, 86.97754017604863, 88.31275589884442]
 </pre></div>
 </div>
 <p>Alternatively, you can simply grab the data for the node from the
@@ -1877,7 +1877,7 @@ sent back for each result.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561237, 81.19108300049322, 83.56709007016161, 85.35125295387645, 86.23266429275347, 86.97754017604862, 88.31275589884439]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561243, 81.19108300049325, 83.56709007016164, 85.35125295387648, 86.23266429275351, 86.97754017604863, 88.31275589884442]
 </pre></div>
 </div>
 <p>Plot the temperature as a function of time</p>
@@ -1894,7 +1894,7 @@ sent back for each result.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.710 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.349 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-transient-thermal-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/5ea8304e8eee080ba9decd82a6d7994e/transient_thermal.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">transient_thermal.py</span></code></a></p>

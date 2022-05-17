@@ -199,7 +199,7 @@ Post-Processing
 
  .. code-block:: none
 
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.00MB [00:00, 197MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 1.00MB [00:00, 125MB/s]
 
 
 
@@ -251,9 +251,9 @@ Using ``Query``
         ************************
         Displacement at Node 28:
         ************************
-        X | 1.7577163783926452e-05
-        Y | 3.0362575468990116e-09
-        Z | -7.982690758480552e-07
+        X | 1.757716378392645e-05
+        Y | 3.0362575469037303e-09
+        Z | -7.982690758480575e-07
 
     
 
@@ -261,8 +261,8 @@ Using ``Query``
         Displacement at Node 49:
         ************************
         X | 1.761241767518452e-05
-        Y | 1.2725946729502164e-19
-        Z | 8.070989838529131e-07
+        Y | 1.3080731251013364e-19
+        Z | 8.070989838529139e-07
 
     
 
@@ -288,7 +288,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.214 seconds)
+   **Total running time of the script:** ( 0 minutes  1.551 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_03-tips-n-tricks_03-using_inline_functions_and_Query.py:
