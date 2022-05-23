@@ -99,7 +99,7 @@ First, start by launching MAPDL as a service.
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =      94.733   TIME= 04:08:08
+     *** NOTE ***                            CP =      52.037   TIME= 04:16:14
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -111,7 +111,7 @@ First, start by launching MAPDL as a service.
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:08:08  MAY 21, 2022 CP=     94.733
+     00000000  VERSION=LINUX x64     04:16:14  MAY 23, 2022 CP=     52.037
 
                                                                                
 
@@ -131,7 +131,7 @@ First, start by launching MAPDL as a service.
        NUMBER OF MODES TO EXPAND . . . . . . . . . . .ALL
        ELEMENT RESULTS CALCULATION . . . . . . . . . .ON 
 
-     *** NOTE ***                            CP =      94.733   TIME= 04:08:08
+     *** NOTE ***                            CP =      52.037   TIME= 04:16:14
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -163,9 +163,9 @@ First, start by launching MAPDL as a service.
        CENTER OF MASS (X,Y,Z)=   0.50000       0.50000        2.5000    
 
        TOTAL INERTIA ABOUT CENTER OF MASS
-             84500.      -0.92371E-11  -0.79876E-10
-           -0.92371E-11    84500.      -0.32069E-10
-           -0.79876E-10  -0.32069E-10    6500.0    
+             84500.      -0.67262E-11  -0.53896E-10
+           -0.67262E-11    84500.      -0.45237E-10
+           -0.53896E-10  -0.45237E-10    6500.0    
          The inertia principal axes coincide with the global Cartesian axes
 
 
@@ -181,8 +181,8 @@ First, start by launching MAPDL as a service.
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        40  SOLID186      0.012   0.000294
-     Time at end of element matrix formulation CP = 94.7504501.              
+            1        40  SOLID186      0.003   0.000085
+     Time at end of element matrix formulation CP = 52.0434837.              
 
       BLOCK LANCZOS CALCULATION OF UP TO     6 EIGENVECTORS.
       NUMBER OF EQUATIONS              =          900
@@ -191,11 +191,11 @@ First, start by launching MAPDL as a service.
       MINIMUM EIGENVALUE               =  0.00000E+00
       MAXIMUM EIGENVALUE               =  0.10000E+31
 
-      Memory allocated for solver              =     2.263 MB
-      Memory required for in-core solution     =     2.159 MB
-      Memory required for out-of-core solution =     1.369 MB
+      Memory allocated for solver              =     2.330 MB
+      Memory required for in-core solution     =     2.222 MB
+      Memory required for out-of-core solution =     1.433 MB
 
-     *** NOTE ***                            CP =      94.794   TIME= 04:08:08
+     *** NOTE ***                            CP =      52.058   TIME= 04:16:14
      The Sparse Matrix Solver used by the Block Lanczos eigensolver is       
      currently running in the in-core memory mode.  This memory mode uses    
      the most amount of memory in order to avoid using the hard drive as     
@@ -205,7 +205,7 @@ First, start by launching MAPDL as a service.
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:08:08  MAY 21, 2022 CP=     94.848
+     00000000  VERSION=LINUX x64     04:16:14  MAY 23, 2022 CP=     52.076
 
                                                                                
 
@@ -257,7 +257,7 @@ View the results using the pyansys result object
 
  .. code-block:: none
 
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 896kB [00:00, 185MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 896kB [00:00, 309MB/s]
     PyMAPDL Result
     Units       : User Defined
     Version     : 21.2
@@ -308,16 +308,16 @@ Access nodal displacement values
 
  .. code-block:: none
 
-    50 [-0.00118414  0.00208919  0.00134271]
-    51 [-0.00143623  0.00255233  0.00144392]
-    52 [-0.00170491  0.00304514  0.00153097]
-    53 [-0.00198766  0.00356303  0.0016043 ]
-    54 [-0.00228208  0.00410167  0.00166479]
-    55 [-0.00258591  0.00465688  0.00171318]
-    56 [-0.00289709  0.00522485  0.00175064]
-    57 [-0.00321369  0.00580202  0.00177814]
-    58 [-0.00353406  0.00638538  0.00179711]
-    59 [-0.00385671  0.00697215  0.00180876]
+    50 [-0.0011844   0.00208905  0.00134276]
+    51 [-0.00143655  0.00255215  0.00144397]
+    52 [-0.00170529  0.00304493  0.00153103]
+    53 [-0.00198811  0.00356278  0.00160436]
+    54 [-0.00228261  0.00410139  0.00166485]
+    55 [-0.00258651  0.00465655  0.00171324]
+    56 [-0.00289776  0.00522448  0.0017507 ]
+    57 [-0.00321443  0.00580162  0.0017782 ]
+    58 [-0.00353487  0.00638493  0.00179718]
+    59 [-0.0038576   0.00697166  0.00180883]
 
 
 
@@ -370,7 +370,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.000 seconds)
+   **Total running time of the script:** ( 0 minutes  0.680 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_mapdl_3d_beam.py:
