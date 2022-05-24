@@ -167,7 +167,7 @@ Create the Geometry
 
  .. code-block:: none
 
-    Downloading _tmp.iges: 0.00B [00:00, ?B/s]    Downloading _tmp.iges: 84.4kB [00:00, 116MB/s]
+    Downloading _tmp.iges: 0.00B [00:00, ?B/s]    Downloading _tmp.iges: 84.4kB [00:00, 87.5MB/s]
 
 
 
@@ -242,7 +242,7 @@ Solve
     FINISH SOLUTION PROCESSING
 
 
-     ***** ROUTINE COMPLETED *****  CP =        58.745
+     ***** ROUTINE COMPLETED *****  CP =        94.389
 
 
 
@@ -296,16 +296,16 @@ method to efficiently obtain results without outputting to disk.
 
 
     Node  Stress (psi)
-    1     3303.258
-    2     1910.658
-    3     1387.105
-    4     1372.503
-    5     866.849
+    1     3301.403
+    2     1906.958
+    3     1387.545
+    4     1373.553
+    5     867.288
     ...
 
     Maximum Stress
     Node  Stress (psi)
-    1000  3473.216
+    1004  3483.042
 
 
 
@@ -365,7 +365,7 @@ accessing the result file using the legacy file reader
 
  .. code-block:: none
 
-    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 15.5MB [00:00, 519MB/s]
+    Downloading file.rst: 0.00B [00:00, ?B/s]    Downloading file.rst: 15.5MB [00:00, 473MB/s]
     All close: True
 
 
@@ -408,11 +408,11 @@ That these results are equivalent to results from PRNSOL.
  .. code-block:: none
 
     All close: True
-    LEGACY Reader and MAPDL VGET Min: 695.6714131015065
-    PRNSOL MAPDL Min:                 695.671413
+    LEGACY Reader and MAPDL VGET Min: 691.8562018090861
+    PRNSOL MAPDL Min:                 691.8562017
 
-    LEGACY Reader and MAPDL VGET Min: 3473.216439528389
-    PRNSOL MAPDL Min:                 3473.216439
+    LEGACY Reader and MAPDL VGET Min: 3483.0418952187233
+    PRNSOL MAPDL Min:                 3483.041895
 
 
 
@@ -436,7 +436,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.796 seconds)
+   **Total running time of the script:** ( 0 minutes  5.884 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_pressure_vessel.py:
