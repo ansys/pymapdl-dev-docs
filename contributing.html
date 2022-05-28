@@ -9,8 +9,9 @@
     <title>Contributing &#8212; PyMAPDL</title>
     
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="_static/css/breadcrumbs.css" rel="stylesheet">
@@ -59,7 +57,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -139,20 +137,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -187,7 +185,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -197,6 +196,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -207,7 +209,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -260,7 +262,7 @@
               <div>
                 
   <section id="contributing">
-<span id="ref-contributing"></span><h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
+<span id="ref-contributing"></span><h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">#</a></h1>
 <p>Overall guidance on contributing to a PyAnsys library appears in the
 <a class="reference external" href="https://dev.docs.pyansys.com/overview/contributing.html">Contributing</a> topic
 in the <em>PyAnsys Developer’s Guide</em>. Ensure that you are thoroughly familiar
@@ -268,7 +270,7 @@ with it and all <a class="reference external" href="https://dev.docs.pyansys.com
 contribute to PyMAPDL.</p>
 <p>The following contribution information is specific to PyMAPDL.</p>
 <section id="cloning-the-pymapdl-repository">
-<h2>Cloning the PyMAPDL Repository<a class="headerlink" href="#cloning-the-pymapdl-repository" title="Permalink to this headline">¶</a></h2>
+<h2>Cloning the PyMAPDL Repository<a class="headerlink" href="#cloning-the-pymapdl-repository" title="Permalink to this headline">#</a></h2>
 <p>Run this code to clone and install the latest version of PyMAPDL in development mode:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pyansys</span><span class="o">/</span><span class="n">pymapdl</span>
 <span class="n">cd</span> <span class="n">pymapdl</span>
@@ -278,7 +280,7 @@ contribute to PyMAPDL.</p>
 </div>
 </section>
 <section id="posting-issues">
-<h2>Posting Issues<a class="headerlink" href="#posting-issues" title="Permalink to this headline">¶</a></h2>
+<h2>Posting Issues<a class="headerlink" href="#posting-issues" title="Permalink to this headline">#</a></h2>
 <p>Use the <a class="reference external" href="https://github.com/pyansys/pymapdl/issues">PyMAPDL Issues</a>
 page to submit questions, report bugs, and request new features. When possible, we
 recommend that you use these issue templates:</p>
@@ -290,7 +292,7 @@ recommend that you use these issue templates:</p>
 <p>To reach the project support team, email <a class="reference external" href="mailto:pyansys&#46;support&#37;&#52;&#48;ansys&#46;com">pyansys<span>&#46;</span>support<span>&#64;</span>ansys<span>&#46;</span>com</a>.</p>
 </section>
 <section id="viewing-pymapdl-documentation">
-<h2>Viewing PyMAPDL Documentation<a class="headerlink" href="#viewing-pymapdl-documentation" title="Permalink to this headline">¶</a></h2>
+<h2>Viewing PyMAPDL Documentation<a class="headerlink" href="#viewing-pymapdl-documentation" title="Permalink to this headline">#</a></h2>
 <p>Documentation for the latest stable release of PyMAPDL is hosted at
 <a class="reference external" href="https://mapdldocs.pyansys.com">PyMAPDL Documentation</a>.</p>
 <p>Documentation for the latest development version, which tracks the
@@ -298,7 +300,7 @@ recommend that you use these issue templates:</p>
 This version is automatically kept up to date via GitHub actions.</p>
 </section>
 <section id="testing-mapdl">
-<h2>Testing MAPDL<a class="headerlink" href="#testing-mapdl" title="Permalink to this headline">¶</a></h2>
+<h2>Testing MAPDL<a class="headerlink" href="#testing-mapdl" title="Permalink to this headline">#</a></h2>
 <p>If you do not have MAPDL installed locally but still want to run the
 unit testing, you must set up the following environment variables.</p>
 <p>In Windows, use:</p>
@@ -317,7 +319,7 @@ unit testing, you must set up the following environment variables.</p>
 MAPDL service by default when the <code class="docutils literal notranslate"><span class="pre">launch_mapdl</span></code> function is used.</p>
 </section>
 <section id="code-style">
-<h2>Code Style<a class="headerlink" href="#code-style" title="Permalink to this headline">¶</a></h2>
+<h2>Code Style<a class="headerlink" href="#code-style" title="Permalink to this headline">#</a></h2>
 <p>PyMAPDL follows PEP8 standard as outlined in the <a class="reference external" href="https://dev.docs.pyansys.com">PyAnsys Development Guide</a> and implements style checking using
 <a class="reference external" href="https://pre-commit.com/">pre-commit</a>.</p>
 <p>To ensure your code meets minimum code styling standards, run:</p>
@@ -351,7 +353,8 @@ codespell................................................................Passed
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

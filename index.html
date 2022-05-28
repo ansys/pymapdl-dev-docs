@@ -6,11 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>PyMAPDL Documentation 0.62.dev1 &#8212; PyMAPDL</title>
+    <title>PyMAPDL Documentation 0.63.dev0 &#8212; PyMAPDL</title>
     
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="_static/css/breadcrumbs.css" rel="stylesheet">
@@ -59,7 +57,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -139,20 +137,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -171,7 +169,7 @@
     
     
 
-        <li class="nav-item nav-item-this"><a href="">PyMAPDL Documentation 0.62.dev1</a></li> 
+        <li class="nav-item nav-item-this"><a href="">PyMAPDL Documentation 0.63.dev0</a></li> 
       </ul>
     </div>
         </div>
@@ -185,7 +183,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -195,6 +194,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -205,7 +207,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -267,11 +269,11 @@
               <div>
                 
   <section id="pymapdl-documentation-version">
-<h1>PyMAPDL Documentation 0.62.dev1<a class="headerlink" href="#pymapdl-documentation-version" title="Permalink to this headline">¶</a></h1>
+<h1>PyMAPDL Documentation 0.63.dev0<a class="headerlink" href="#pymapdl-documentation-version" title="Permalink to this headline">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <section id="introduction-and-purpose">
-<h2>Introduction and Purpose<a class="headerlink" href="#introduction-and-purpose" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction and Purpose<a class="headerlink" href="#introduction-and-purpose" title="Permalink to this headline">#</a></h2>
 <p>PyMAPDL is part of the larger <a class="reference external" href="https://docs.pyansys.com">PyAnsys</a>
 effort to facilitate the use of Ansys technologies directly from
 Python. Its primary package, <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>, provides:</p>
@@ -297,7 +299,7 @@ the solver as the physics engine in your next Artificial Intelligence
 application. It is now open source: Enjoy it! Contributions are welcome.</p>
 </section>
 <section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 <p>PyMAPDL, based on <a class="reference external" href="https://grpc.io/">gRPC</a>, represents an
 improvement over its predecessor based on CORBA. These technologies
 allow the MAPDL solver to function as a server, ready to respond to
@@ -312,7 +314,7 @@ commands that can then be transmitted to an MAPDL instance running anywhere,
 while producing network footprints that are compact and efficient.</p>
 </section>
 <section id="quick-code">
-<h2>Quick Code<a class="headerlink" href="#quick-code" title="Permalink to this headline">¶</a></h2>
+<h2>Quick Code<a class="headerlink" href="#quick-code" title="Permalink to this headline">#</a></h2>
 <p>Here’s a brief example of how PyMAPDL works:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
@@ -342,7 +344,7 @@ keypoints we could run:</p>
 stored to the logging module or can be immediately printed out with
 <code class="docutils literal notranslate"><span class="pre">print(mapdl.run)</span></code>.  Errors are caught immediately and pythonically.</p>
 <section id="calling-mapdl-pythonically">
-<h3>Calling MAPDL Pythonically<a class="headerlink" href="#calling-mapdl-pythonically" title="Permalink to this headline">¶</a></h3>
+<h3>Calling MAPDL Pythonically<a class="headerlink" href="#calling-mapdl-pythonically" title="Permalink to this headline">#</a></h3>
 <p>MAPDL functions can be called directly from an <a class="reference internal" href="api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> instance in a pythonic manner.  This is to
 simplify calling MAPDL, especially when inputs are variables within
 Python.  For example, the following two commands are equivalent:</p>
@@ -360,7 +362,7 @@ example, inputting points from a numpy array:</p>
 </div>
 </section>
 <section id="advanced-features">
-<h3>Advanced Features<a class="headerlink" href="#advanced-features" title="Permalink to this headline">¶</a></h3>
+<h3>Advanced Features<a class="headerlink" href="#advanced-features" title="Permalink to this headline">#</a></h3>
 <p>All features available to command line MAPDL can be used within
 PyMAPDL, and there are a variety of new features available through
 gRPC.</p>
@@ -388,13 +390,13 @@ gRPC.</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="_images/eplot_vtk.png"><img alt="_images/eplot_vtk.png" src="_images/eplot_vtk.png" style="width: 400pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Element Plot from MAPDL using <code class="docutils literal notranslate"><span class="pre">PyMAPDL</span></code> and <code class="docutils literal notranslate"><span class="pre">vtk</span></code></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Element Plot from MAPDL using <code class="docutils literal notranslate"><span class="pre">PyMAPDL</span></code> and <code class="docutils literal notranslate"><span class="pre">vtk</span></code></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For a full listing of the additional PyMAPDL features, please see the
 <a class="reference internal" href="user_guide/index.html#ref-user-guide"><span class="std std-ref">User Guide</span></a>.</p>
 <section id="project-index">
-<h4>Project Index<a class="headerlink" href="#project-index" title="Permalink to this headline">¶</a></h4>
+<h4>Project Index<a class="headerlink" href="#project-index" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 </ul>
@@ -413,7 +415,8 @@ gRPC.</p>
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

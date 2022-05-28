@@ -9,8 +9,9 @@
     <title>Dynamic simulation of a printed circuit board assembly &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -51,7 +49,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Gmsh Example" href="../../extended_examples/ex_01-gmsh_example/ex_01-gmsh_example.html" />
+    <link rel="next" title="Friction Stir Welding (FSW) Simulation" href="../techdemo-28/ex_28-tecfricstir.html" />
     <link rel="prev" title="Brake Squeal Analysis" href="../techdemo-1/ex_0-tecbrakesqueal.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -234,6 +233,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../gallery_examples/00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../gallery_examples/00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -486,6 +492,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -508,6 +519,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -518,7 +532,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -601,19 +615,19 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="dynamic-simulation-of-a-printed-circuit-board-assembly">
-<span id="tech-demo-20"></span><span id="ref-dynamic-simulation-printed-circuit-board"></span><span id="sphx-glr-examples-examples-technology-showcase-examples-techdemo-20-example-technology-showcase-dynamic-simulation-pcb-py"></span><h1>Dynamic simulation of a printed circuit board assembly<a class="headerlink" href="#dynamic-simulation-of-a-printed-circuit-board-assembly" title="Permalink to this headline">¶</a></h1>
+<span id="tech-demo-20"></span><span id="ref-dynamic-simulation-printed-circuit-board"></span><span id="sphx-glr-examples-examples-technology-showcase-examples-techdemo-20-example-technology-showcase-dynamic-simulation-pcb-py"></span><h1>Dynamic simulation of a printed circuit board assembly<a class="headerlink" href="#dynamic-simulation-of-a-printed-circuit-board-assembly" title="Permalink to this headline">#</a></h1>
 <p>This examples shows how to use PyMAPDL to import an existing FE model and to
 run a modal and PSD analysis. PyDPF modules are also used for post-processing.</p>
 <p>This example is inspired from the model and analysis defined in Chapter 20 of
 the Mechanical APDL Technology Showcase Manual.</p>
 <section id="additional-packages-used">
-<h2>Additional Packages Used<a class="headerlink" href="#additional-packages-used" title="Permalink to this headline">¶</a></h2>
+<h2>Additional Packages Used<a class="headerlink" href="#additional-packages-used" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://matplotlib.org">Matplotlib</a> is used for plotting purposes.</p></li>
 </ul>
 </section>
 <section id="starting-mapdl-as-a-service-and-importing-an-external-model">
-<h2>Starting MAPDL as a service and importing an external model<a class="headerlink" href="#starting-mapdl-as-a-service-and-importing-an-external-model" title="Permalink to this headline">¶</a></h2>
+<h2>Starting MAPDL as a service and importing an external model<a class="headerlink" href="#starting-mapdl-as-a-service-and-importing-an-external-model" title="Permalink to this headline">#</a></h2>
 <p>The original FE model is given in the Ansys Mechanical APDL Technology
 Showcase Manual.  The .cdb contains a FE model of a single circuit board. The
 model is meshed with SOLID186, SHELL181 and BEAM188 elements. All components
@@ -652,7 +666,7 @@ ansys.mapdl Version: 0.62.dev0
 </div>
 </section>
 <section id="creating-the-complete-layered-model">
-<h2>Creating the complete layered model<a class="headerlink" href="#creating-the-complete-layered-model" title="Permalink to this headline">¶</a></h2>
+<h2>Creating the complete layered model<a class="headerlink" href="#creating-the-complete-layered-model" title="Permalink to this headline">#</a></h2>
 <p>The original model will be duplicated to create a layered PCB of three layers
 that are binded together.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># duplicate single PCB to get three layers</span>
@@ -715,7 +729,7 @@ that are binded together.</p>
 </div>
 <img src="../../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_002.png" srcset="../../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_002.png" alt="20 example technology showcase dynamic simulation PCB" class = "sphx-glr-single-img"/><img src="../../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_003.png" srcset="../../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_003.png" alt="20 example technology showcase dynamic simulation PCB" class = "sphx-glr-single-img"/></section>
 <section id="run-modal-analysis">
-<h2>Run modal analysis<a class="headerlink" href="#run-modal-analysis" title="Permalink to this headline">¶</a></h2>
+<h2>Run modal analysis<a class="headerlink" href="#run-modal-analysis" title="Permalink to this headline">#</a></h2>
 <p>A modal analysis is run using Block Lanzos.
 Only 10 modes are extracted for the sake of run times, but using a higher
 number of nodes is recommended (suggestion: 300 modes).</p>
@@ -2474,7 +2488,7 @@ number of nodes is recommended (suggestion: 300 modes).</p>
 </div>
 </section>
 <section id="post-processing-the-modal-results">
-<h2>Post-processing the modal results<a class="headerlink" href="#post-processing-the-modal-results" title="Permalink to this headline">¶</a></h2>
+<h2>Post-processing the modal results<a class="headerlink" href="#post-processing-the-modal-results" title="Permalink to this headline">#</a></h2>
 <p>This sections illustrates different methods to post-process the results of the
 modal analysis : PyMAPDL method, PyMAPDL result reader, PyDPF-Post
 and PyDPF-Core. All methods lead to the same result and are just given as an
@@ -2515,7 +2529,7 @@ but will run locally if uncommented.</p>
 </div>
 <img src="../../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_004.png" srcset="../../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_004.png" alt="20 example technology showcase dynamic simulation PCB" class = "sphx-glr-single-img"/><img src="../../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_005.png" srcset="../../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_005.png" alt="20 example technology showcase dynamic simulation PCB" class = "sphx-glr-single-img"/></section>
 <section id="run-psd-analysis">
-<h2>Run PSD analysis<a class="headerlink" href="#run-psd-analysis" title="Permalink to this headline">¶</a></h2>
+<h2>Run PSD analysis<a class="headerlink" href="#run-psd-analysis" title="Permalink to this headline">#</a></h2>
 <p>The response spectrum analysis is defined, solved and post-processed.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># define PSD analysis with input spectrum</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
@@ -2826,7 +2840,7 @@ but will run locally if uncommented.</p>
 </div>
 </section>
 <section id="post-process-psd-analysis">
-<h2>Post-process PSD analysis<a class="headerlink" href="#post-process-psd-analysis" title="Permalink to this headline">¶</a></h2>
+<h2>Post-process PSD analysis<a class="headerlink" href="#post-process-psd-analysis" title="Permalink to this headline">#</a></h2>
 <p>The response spectrum analysis is post-processed. First, the standard
 MAPDL POST1 postprocessor is used. Then, the MAPDL time-history
 POST26 postprocessor is used to generate the response power spectral
@@ -2840,7 +2854,7 @@ library.</p>
 </div>
 </section>
 <section id="post-process-psd-analysis-in-post1">
-<h2>Post-process PSD analysis in POST1<a class="headerlink" href="#post-process-psd-analysis-in-post1" title="Permalink to this headline">¶</a></h2>
+<h2>Post-process PSD analysis in POST1<a class="headerlink" href="#post-process-psd-analysis-in-post1" title="Permalink to this headline">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">plnsol</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">)</span>
@@ -2850,7 +2864,7 @@ library.</p>
 </div>
 <img src="../../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_006.png" srcset="../../../_images/sphx_glr_20-example-technology-showcase-dynamic-simulation-PCB_006.png" alt="20 example technology showcase dynamic simulation PCB" class = "sphx-glr-single-img"/></section>
 <section id="post-process-psd-analysis-in-post26-time-history-post-processing">
-<h2>Post-process PSD analysis in POST26 (time-history post-processing)<a class="headerlink" href="#post-process-psd-analysis-in-post26-time-history-post-processing" title="Permalink to this headline">¶</a></h2>
+<h2>Post-process PSD analysis in POST26 (time-history post-processing)<a class="headerlink" href="#post-process-psd-analysis-in-post26-time-history-post-processing" title="Permalink to this headline">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">post26</span><span class="p">()</span>
 
 <span class="c1"># allow storage for 200 variables</span>
@@ -2885,7 +2899,7 @@ library.</p>
 </div>
 </section>
 <section id="post-process-psd-analysis-using-matplotlib">
-<h2>Post-process PSD analysis using Matplotlib<a class="headerlink" href="#post-process-psd-analysis-using-matplotlib" title="Permalink to this headline">¶</a></h2>
+<h2>Post-process PSD analysis using Matplotlib<a class="headerlink" href="#post-process-psd-analysis-using-matplotlib" title="Permalink to this headline">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># store MAPDL results to python variables</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">dim</span><span class="p">(</span><span class="s2">&quot;frequencies&quot;</span><span class="p">,</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">dim</span><span class="p">(</span><span class="s2">&quot;response&quot;</span><span class="p">,</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -2931,7 +2945,8 @@ library.</p>
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

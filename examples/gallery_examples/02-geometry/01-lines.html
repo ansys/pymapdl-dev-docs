@@ -9,8 +9,9 @@
     <title>Lines &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -234,6 +233,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -486,6 +492,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -508,6 +519,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -518,7 +532,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -636,7 +650,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="lines">
-<span id="ref-basic-geometry-lines"></span><span id="sphx-glr-examples-gallery-examples-02-geometry-01-lines-py"></span><h1>Lines<a class="headerlink" href="#lines" title="Permalink to this headline">¶</a></h1>
+<span id="ref-basic-geometry-lines"></span><span id="sphx-glr-examples-gallery-examples-02-geometry-01-lines-py"></span><h1>Lines<a class="headerlink" href="#lines" title="Permalink to this headline">#</a></h1>
 <p>This example shows how you can use PyMAPDL to create basic geometry
 using Pythonic PREP7 line commands.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -653,11 +667,11 @@ using Pythonic PREP7 line commands.</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Product:             Ansys Mechanical Enterprise
 MAPDL Version:       21.2
-ansys.mapdl Version: 0.62.dev1
+ansys.mapdl Version: 0.63.dev0
 </pre></div>
 </div>
 <section id="apdl-command-l">
-<h2>APDL Command: L<a class="headerlink" href="#apdl-command-l" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: L<a class="headerlink" href="#apdl-command-l" title="Permalink to this headline">#</a></h2>
 <p>Create a line between the two keypoints <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></code> and <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">0,</span> <span class="pre">0)</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k0</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k1</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -671,7 +685,7 @@ ansys.mapdl Version: 0.62.dev1
 </div>
 </section>
 <section id="apdl-command-larc">
-<h2>APDL Command: LARC<a class="headerlink" href="#apdl-command-larc" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: LARC<a class="headerlink" href="#apdl-command-larc" title="Permalink to this headline">#</a></h2>
 <p>Create a circular arc that travels between <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></code> and
 <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1,</span> <span class="pre">0)</span></code> with a radius of curvature of 2.  Plot the result.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -684,14 +698,9 @@ ansys.mapdl Version: 0.62.dev1
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_01-lines_001.png" srcset="../../../_images/sphx_glr_01-lines_001.png" alt="01 lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 5.54kB [00:00, 13.6MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_01-lines_001.png" srcset="../../../_images/sphx_glr_01-lines_001.png" alt="01 lines" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-l2ang">
-<h2>APDL Command: L2ANG<a class="headerlink" href="#apdl-command-l2ang" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: L2ANG<a class="headerlink" href="#apdl-command-l2ang" title="Permalink to this headline">#</a></h2>
 <p>Create two circles and join them with a line.  Plot the result.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
@@ -705,14 +714,9 @@ Downloading _tmp.iges: 5.54kB [00:00, 13.6MB/s]
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_01-lines_002.png" srcset="../../../_images/sphx_glr_01-lines_002.png" alt="01 lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 18.5kB [00:00, 47.7MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_01-lines_002.png" srcset="../../../_images/sphx_glr_01-lines_002.png" alt="01 lines" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-l2tan">
-<h2>APDL Command: L2TAN<a class="headerlink" href="#apdl-command-l2tan" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: L2TAN<a class="headerlink" href="#apdl-command-l2tan" title="Permalink to this headline">#</a></h2>
 <p>Create two circular arcs and connect them with a spline.  Plot the result.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
@@ -727,14 +731,9 @@ Downloading _tmp.iges: 18.5kB [00:00, 47.7MB/s]
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_01-lines_003.png" srcset="../../../_images/sphx_glr_01-lines_003.png" alt="01 lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 9.18kB [00:00, 21.3MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_01-lines_003.png" srcset="../../../_images/sphx_glr_01-lines_003.png" alt="01 lines" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-lang">
-<h2>APDL Command: LANG<a class="headerlink" href="#apdl-command-lang" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: LANG<a class="headerlink" href="#apdl-command-lang" title="Permalink to this headline">#</a></h2>
 <p>Create a line from a line from <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></code> to <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">0,</span> <span class="pre">0)</span></code> to a
 keypoint at <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1,</span> <span class="pre">1)</span></code> at an angle of 60 degrees.  Plot the result.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -748,14 +747,9 @@ keypoint at <code class="docutils literal notranslate"><span class="pre">(1,</sp
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_01-lines_004.png" srcset="../../../_images/sphx_glr_01-lines_004.png" alt="01 lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 6.33kB [00:00, 17.2MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_01-lines_004.png" srcset="../../../_images/sphx_glr_01-lines_004.png" alt="01 lines" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-larea">
-<h2>APDL Command: LAREA<a class="headerlink" href="#apdl-command-larea" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: LAREA<a class="headerlink" href="#apdl-command-larea" title="Permalink to this headline">#</a></h2>
 <p>Generate a line on a square between its two corners.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
@@ -769,14 +763,9 @@ Downloading _tmp.iges: 6.33kB [00:00, 17.2MB/s]
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_01-lines_005.png" srcset="../../../_images/sphx_glr_01-lines_005.png" alt="01 lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 16.0kB [00:00, 45.9MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_01-lines_005.png" srcset="../../../_images/sphx_glr_01-lines_005.png" alt="01 lines" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-lcomb">
-<h2>APDL Command: LCOMB<a class="headerlink" href="#apdl-command-lcomb" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: LCOMB<a class="headerlink" href="#apdl-command-lcomb" title="Permalink to this headline">#</a></h2>
 <p>Create two lines and combine them.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k0</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k1</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -788,7 +777,7 @@ Downloading _tmp.iges: 16.0kB [00:00, 45.9MB/s]
 </div>
 </section>
 <section id="apdl-command-ldiv">
-<h2>APDL Command: LDIV<a class="headerlink" href="#apdl-command-ldiv" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: LDIV<a class="headerlink" href="#apdl-command-ldiv" title="Permalink to this headline">#</a></h2>
 <p>Create a single line and divide it into 5 pieces.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
@@ -800,14 +789,9 @@ Downloading _tmp.iges: 16.0kB [00:00, 45.9MB/s]
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_01-lines_006.png" srcset="../../../_images/sphx_glr_01-lines_006.png" alt="01 lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 7.91kB [00:00, 22.5MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_01-lines_006.png" srcset="../../../_images/sphx_glr_01-lines_006.png" alt="01 lines" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-lextnd">
-<h2>APDL Command: LEXTND<a class="headerlink" href="#apdl-command-lextnd" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: LEXTND<a class="headerlink" href="#apdl-command-lextnd" title="Permalink to this headline">#</a></h2>
 <p>Create a circular arc and extend it at one of its keypoints.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
@@ -819,14 +803,9 @@ Downloading _tmp.iges: 7.91kB [00:00, 22.5MB/s]
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_01-lines_007.png" srcset="../../../_images/sphx_glr_01-lines_007.png" alt="01 lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 6.17kB [00:00, 15.8MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_01-lines_007.png" srcset="../../../_images/sphx_glr_01-lines_007.png" alt="01 lines" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-lfillt">
-<h2>APDL Command: LFILLT<a class="headerlink" href="#apdl-command-lfillt" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: LFILLT<a class="headerlink" href="#apdl-command-lfillt" title="Permalink to this headline">#</a></h2>
 <p>Create two intersecting lines at a right angle and add a
 fillet between them.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -841,14 +820,9 @@ fillet between them.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_01-lines_008.png" srcset="../../../_images/sphx_glr_01-lines_008.png" alt="01 lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 7.12kB [00:00, 17.3MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_01-lines_008.png" srcset="../../../_images/sphx_glr_01-lines_008.png" alt="01 lines" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-ltan">
-<h2>APDL Command: LTAN<a class="headerlink" href="#apdl-command-ltan" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: LTAN<a class="headerlink" href="#apdl-command-ltan" title="Permalink to this headline">#</a></h2>
 <p>Create a circular arc and generate a tangent spline at the end of it
 directed to a new keypoint.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -862,14 +836,9 @@ directed to a new keypoint.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_01-lines_009.png" srcset="../../../_images/sphx_glr_01-lines_009.png" alt="01 lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 7.28kB [00:00, 18.2MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_01-lines_009.png" srcset="../../../_images/sphx_glr_01-lines_009.png" alt="01 lines" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-spline">
-<h2>APDL Command: SPLINE<a class="headerlink" href="#apdl-command-spline" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: SPLINE<a class="headerlink" href="#apdl-command-spline" title="Permalink to this headline">#</a></h2>
 <p>Generate a segmented spline through 5 keypoints.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
@@ -883,14 +852,9 @@ Downloading _tmp.iges: 7.28kB [00:00, 18.2MB/s]
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_01-lines_010.png" srcset="../../../_images/sphx_glr_01-lines_010.png" alt="01 lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 9.65kB [00:00, 17.5MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_01-lines_010.png" srcset="../../../_images/sphx_glr_01-lines_010.png" alt="01 lines" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-bsplin">
-<h2>APDL Command: BSPLIN<a class="headerlink" href="#apdl-command-bsplin" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: BSPLIN<a class="headerlink" href="#apdl-command-bsplin" title="Permalink to this headline">#</a></h2>
 <p>Generate a single line from a spline fit to a series of keypoints.
 Generate through <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></code>, <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">0)</span></code> and <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">0)</span></code></p>
 <p>This is different than the <code class="docutils literal notranslate"><span class="pre">spline</span></code> method as this creates a
@@ -905,14 +869,9 @@ single line rather than multiple lines.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_01-lines_011.png" srcset="../../../_images/sphx_glr_01-lines_011.png" alt="01 lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 5.85kB [00:00, 17.6MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_01-lines_011.png" srcset="../../../_images/sphx_glr_01-lines_011.png" alt="01 lines" class = "sphx-glr-single-img"/></section>
 <section id="line-ids">
-<h2>Line IDs<a class="headerlink" href="#line-ids" title="Permalink to this headline">¶</a></h2>
+<h2>Line IDs<a class="headerlink" href="#line-ids" title="Permalink to this headline">#</a></h2>
 <p>Return an array of the line IDs</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lnum</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lnum</span></a>
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lnum</span></a>
@@ -924,16 +883,11 @@ Downloading _tmp.iges: 5.85kB [00:00, 17.6MB/s]
 </div>
 </section>
 <section id="line-geometry">
-<h2>Line Geometry<a class="headerlink" href="#line-geometry" title="Permalink to this headline">¶</a></h2>
+<h2>Line Geometry<a class="headerlink" href="#line-geometry" title="Permalink to this headline">#</a></h2>
 <p>Get the VTK <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> containing lines.  This VTK mesh can be
 saved or plotted.  For more details, visit <a class="reference external" href="https://docs.pyvista.com">https://docs.pyvista.com</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lines</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lines</span></a>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lines</span></a>
-</pre></div>
-</div>
-<p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 5.85kB [00:00, 19.3MB/s]
 </pre></div>
 </div>
 <div class="output_subarea output_html rendered_html output_result">
@@ -959,7 +913,7 @@ Downloading _tmp.iges: 5.85kB [00:00, 19.3MB/s]
 <br />
 <br /></section>
 <section id="line-selection">
-<h2>Line Selection<a class="headerlink" href="#line-selection" title="Permalink to this headline">¶</a></h2>
+<h2>Line Selection<a class="headerlink" href="#line-selection" title="Permalink to this headline">#</a></h2>
 <p>There are two approaches for selecting lines, the old “legacy”
 style and the new style.  The old style is valuable for those who
 are comfortable with the existing MAPDL commands, and new style is
@@ -1022,7 +976,7 @@ areas.</p>
 </div>
 </section>
 <section id="apdl-command-lplot">
-<h2>APDL Command: LPLOT<a class="headerlink" href="#apdl-command-lplot" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: LPLOT<a class="headerlink" href="#apdl-command-lplot" title="Permalink to this headline">#</a></h2>
 <p>Plot colored lines while displaying the keypoint numbers.</p>
 <p>There are a variety of plotting options available for all the common
 plotting methods.</p>
@@ -1038,19 +992,11 @@ plotting methods.</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_01-lines_012.png" srcset="../../../_images/sphx_glr_01-lines_012.png" alt="01 lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 19.9kB [00:00, 49.8MB/s]
-
-Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 6.72kB [00:00, 18.8MB/s]
-</pre></div>
-</div>
-<p>stop mapdl</p>
+<img src="../../../_images/sphx_glr_01-lines_012.png" srcset="../../../_images/sphx_glr_01-lines_012.png" alt="01 lines" class = "sphx-glr-single-img"/><p>stop mapdl</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.358 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.213 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-02-geometry-01-lines-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/4f2de534e61d69b9b2b91b33379e9e22/01-lines.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">01-lines.py</span></code></a></p>
@@ -1073,7 +1019,8 @@ Downloading _tmp.iges: 6.72kB [00:00, 18.8MB/s]
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

@@ -9,8 +9,9 @@
     <title>Use APDLMath to Solve a Dense Matrix Linear System &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -234,6 +233,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -486,6 +492,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -508,6 +519,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -546,7 +560,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="use-apdlmath-to-solve-a-dense-matrix-linear-system">
-<span id="sphx-glr-examples-gallery-examples-01-apdlmath-examples-solve-dense-matrix-py"></span><h1>Use APDLMath to Solve a Dense Matrix Linear System<a class="headerlink" href="#use-apdlmath-to-solve-a-dense-matrix-linear-system" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-examples-gallery-examples-01-apdlmath-examples-solve-dense-matrix-py"></span><h1>Use APDLMath to Solve a Dense Matrix Linear System<a class="headerlink" href="#use-apdlmath-to-solve-a-dense-matrix-linear-system" title="Permalink to this headline">#</a></h1>
 <p>Use the APDLMath module to solve a Dense Matrix Linear System.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
 
@@ -585,7 +599,7 @@ factorization call</p>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Solving a (10000 x 10000) dense linear system using MAPDL...
-Elapsed time to solve the linear system using Mapdl: 4.940816402435303 seconds
+Elapsed time to solve the linear system using Mapdl: 11.564983606338501 seconds
 </pre></div>
 </div>
 <p>Norm of the MAPDL Solution</p>
@@ -607,7 +621,7 @@ Elapsed time to solve the linear system using Mapdl: 4.940816402435303 seconds
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Solving a (10000 x 10000) dense linear system using numpy...
-Elapsed time to solve the linear system using numpy: 6.0353920459747314 seconds
+Elapsed time to solve the linear system using numpy: 12.635327100753784 seconds
 </pre></div>
 </div>
 <p>Norm of the numpy Solution</p>
@@ -615,14 +629,14 @@ Elapsed time to solve the linear system using numpy: 6.0353920459747314 seconds
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1.0000000000000022
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1.0000000000000042
 </pre></div>
 </div>
 <p>stop mapdl</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  13.959 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  28.709 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-01-apdlmath-examples-solve-dense-matrix-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/30eeb81938a8e9dd5d326aee416ab9f3/solve_dense_matrix.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">solve_dense_matrix.py</span></code></a></p>
@@ -644,7 +658,8 @@ Elapsed time to solve the linear system using numpy: 6.0353920459747314 seconds
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

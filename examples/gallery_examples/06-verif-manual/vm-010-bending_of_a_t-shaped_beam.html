@@ -9,8 +9,9 @@
     <title>Bending of a Tee-Shaped Beam &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -61,7 +59,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -141,20 +139,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -190,7 +188,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -235,6 +234,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -487,6 +493,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -509,6 +520,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -519,7 +533,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -617,7 +631,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="bending-of-a-tee-shaped-beam">
-<span id="ref-vm10-example"></span><span id="sphx-glr-examples-gallery-examples-06-verif-manual-vm-010-bending-of-a-t-shaped-beam-py"></span><h1>Bending of a Tee-Shaped Beam<a class="headerlink" href="#bending-of-a-tee-shaped-beam" title="Permalink to this headline">¶</a></h1>
+<span id="ref-vm10-example"></span><span id="sphx-glr-examples-gallery-examples-06-verif-manual-vm-010-bending-of-a-t-shaped-beam-py"></span><h1>Bending of a Tee-Shaped Beam<a class="headerlink" href="#bending-of-a-tee-shaped-beam" title="Permalink to this headline">#</a></h1>
 <dl class="simple">
 <dt>Problem Description:</dt><dd><ul class="simple">
 <li><p>Find the maximum tensile <span class="math notranslate nohighlight">\(\sigma_{\mathrm{(B,Bot)}}\)</span> and compressive <span class="math notranslate nohighlight">\(\sigma_{\mathrm{(B,Top)}}\)</span>
@@ -642,7 +656,7 @@ McGraw-Hill Book Co., Inc., New York, NY, 1959, pg. 294, ex. 7.2.</p></li>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../../_images/vm10_setup_1.png"><img alt="VM10 Geometry of Beam188 and Element Model" src="../../../_images/vm10_setup_1.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-text"><strong>Figure 1: VM10 Geometry of Beam188 and Element Model</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Figure 1: VM10 Geometry of Beam188 and Element Model</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <dl class="simple">
@@ -673,7 +687,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </dd>
 </dl>
 <section id="start-mapdl">
-<h2>Start MAPDL<a class="headerlink" href="#start-mapdl" title="Permalink to this headline">¶</a></h2>
+<h2>Start MAPDL<a class="headerlink" href="#start-mapdl" title="Permalink to this headline">#</a></h2>
 <p>Start MAPDL and import Numpy and Pandas libraries.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_path = &#39;_static/vm10_setup.png&#39;</span>
 
@@ -688,7 +702,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </div>
 </section>
 <section id="pre-processing">
-<h2>Pre-Processing<a class="headerlink" href="#pre-processing" title="Permalink to this headline">¶</a></h2>
+<h2>Pre-Processing<a class="headerlink" href="#pre-processing" title="Permalink to this headline">#</a></h2>
 <p>Enter verification example mode and the pre-processing routine.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">verify</span><span class="p">()</span>
@@ -697,7 +711,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </div>
 </section>
 <section id="define-element-type">
-<h2>Define Element Type<a class="headerlink" href="#define-element-type" title="Permalink to this headline">¶</a></h2>
+<h2>Define Element Type<a class="headerlink" href="#define-element-type" title="Permalink to this headline">#</a></h2>
 <p>Set up the element type <code class="docutils literal notranslate"><span class="pre">BEAM188</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type of analysis: Static.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s2">&quot;STATIC&quot;</span><span class="p">)</span>
@@ -728,7 +742,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </div>
 </section>
 <section id="define-material">
-<h2>Define Material<a class="headerlink" href="#define-material" title="Permalink to this headline">¶</a></h2>
+<h2>Define Material<a class="headerlink" href="#define-material" title="Permalink to this headline">#</a></h2>
 <p>Set up the material, where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(E = 30 \cdot 10^6 psi\)</span> - Young Modulus of steel.</p></li>
@@ -755,7 +769,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </div>
 </section>
 <section id="define-section">
-<h2>Define Section<a class="headerlink" href="#define-section" title="Permalink to this headline">¶</a></h2>
+<h2>Define Section<a class="headerlink" href="#define-section" title="Permalink to this headline">#</a></h2>
 <p>Set up the cross-section properties for a beam elements, where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(w_1 = 6b = 6 \cdot 1.5 = 9\,in\)</span> - flange width.</p></li>
@@ -805,7 +819,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </div>
 </section>
 <section id="define-geometry">
-<h2>Define Geometry<a class="headerlink" href="#define-geometry" title="Permalink to this headline">¶</a></h2>
+<h2>Define Geometry<a class="headerlink" href="#define-geometry" title="Permalink to this headline">#</a></h2>
 <p>Set up the nodes and elements. Create nodes between elements.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define nodes for the beam element.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -826,7 +840,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </div>
 </section>
 <section id="define-elements">
-<h2>Define elements<a class="headerlink" href="#define-elements" title="Permalink to this headline">¶</a></h2>
+<h2>Define elements<a class="headerlink" href="#define-elements" title="Permalink to this headline">#</a></h2>
 <p>Create element between nodes 1 and 2 using node 3 as orientational node.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create element.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">e</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -851,7 +865,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </div>
 </section>
 <section id="define-boundary-conditions">
-<h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this headline">#</a></h2>
 <p>Application of boundary conditions (BC).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="n">node</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="n">node</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s2">&quot;UZ&quot;</span><span class="p">,</span> <span class="n">lab2</span><span class="o">=</span><span class="s2">&quot;ROTX&quot;</span><span class="p">,</span> <span class="n">lab3</span><span class="o">=</span><span class="s2">&quot;ROTY&quot;</span><span class="p">,</span> <span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -859,7 +873,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </div>
 </section>
 <section id="define-distributed-loads">
-<h2>Define Distributed Loads<a class="headerlink" href="#define-distributed-loads" title="Permalink to this headline">¶</a></h2>
+<h2>Define Distributed Loads<a class="headerlink" href="#define-distributed-loads" title="Permalink to this headline">#</a></h2>
 <p>Apply a bending moment <span class="math notranslate nohighlight">\(\mathrm{M_{z}}= 100000\,in\,lb\)</span>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parametrization of the bending moment.</span>
 <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">bending_mz</span></a> <span class="o">=</span> <span class="mi">100000</span>
@@ -871,7 +885,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </div>
 </section>
 <section id="solve">
-<h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">¶</a></h2>
+<h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">#</a></h2>
 <p>Enter solution mode and run the simulation.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start solution procedure.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
@@ -883,7 +897,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </div>
 </section>
 <section id="post-processing">
-<h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
+<h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">#</a></h2>
 <p>Enter post-processing.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Enter the post-processing routine.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">(</span><span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -891,7 +905,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 </div>
 </section>
 <section id="getting-displacements">
-<h2>Getting Displacements<a class="headerlink" href="#getting-displacements" title="Permalink to this headline">¶</a></h2>
+<h2>Getting Displacements<a class="headerlink" href="#getting-displacements" title="Permalink to this headline">#</a></h2>
 <p>Using <a class="reference internal" href="../../../mapdl_commands/post1/_autosummary/ansys.mapdl.core.Mapdl.etable.html#ansys.mapdl.core.Mapdl.etable" title="ansys.mapdl.core.Mapdl.etable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.etable</span></code></a> get the results of
 the the maximum tensile and compressive bending stresses in
 an unsymmetric <cite>T-beam</cite> with <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.Mapdl.get_value.html#ansys.mapdl.core.Mapdl.get_value" title="ansys.mapdl.core.Mapdl.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.get_value</span></code></a>.</p>
@@ -910,7 +924,7 @@ an unsymmetric <cite>T-beam</cite> with <a class="reference internal" href="../.
 </div>
 </section>
 <section id="check-results">
-<h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">¶</a></h2>
+<h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">#</a></h2>
 <p>Finally we have the results of the the maximum tensile and
 compressive bending stresses, which can be compared with expected target
 values:</p>
@@ -995,7 +1009,7 @@ with following settings below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.549 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.657 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-010-bending-of-a-t-shaped-beam-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/b61d12b23033b8d997af8ad748a0ab72/vm-010-bending_of_a_t-shaped_beam.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-010-bending_of_a_t-shaped_beam.py</span></code></a></p>
@@ -1018,7 +1032,8 @@ with following settings below:</p>
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

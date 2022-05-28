@@ -9,8 +9,9 @@
     <title>Using APDLMath to solve Eigenproblems &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -61,7 +59,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -141,20 +139,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -190,7 +188,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -235,6 +234,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -487,6 +493,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -509,6 +520,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -519,7 +533,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -557,7 +571,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="using-apdlmath-to-solve-eigenproblems">
-<span id="ref-mapdl-math-eigen-solve"></span><span id="sphx-glr-examples-gallery-examples-01-apdlmath-examples-eigen-solve-py"></span><h1>Using APDLMath to solve Eigenproblems<a class="headerlink" href="#using-apdlmath-to-solve-eigenproblems" title="Permalink to this headline">¶</a></h1>
+<span id="ref-mapdl-math-eigen-solve"></span><span id="sphx-glr-examples-gallery-examples-01-apdlmath-examples-eigen-solve-py"></span><h1>Using APDLMath to solve Eigenproblems<a class="headerlink" href="#using-apdlmath-to-solve-eigenproblems" title="Permalink to this headline">#</a></h1>
 <p>Use APDLMath to solve eigenproblems.</p>
 <p>This example uses a verification manual input file, but you can use
 your own sparse or dense matrices and solve those.</p>
@@ -617,7 +631,7 @@ properties (e.g. scalar, storage, symmetry…)</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Calling MAPDL to solve the eigenproblem...
 /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1453: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
   warn(
-Elapsed time to solve this problem: 0.029397249221801758
+Elapsed time to solve this problem: 0.060060739517211914
 </pre></div>
 </div>
 <p>This is the vector of eigenfrequencies.</p>
@@ -625,14 +639,14 @@ Elapsed time to solve this problem: 0.029397249221801758
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>ZWRCCR :
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>MMCCHL :
  Size : 10
   3.381e+02   3.381e+02   6.266e+02   6.266e+02   9.283e+02      &lt;       5
   9.283e+02   1.250e+03   1.250e+03   1.424e+03   1.424e+03      &lt;       10
 </pre></div>
 </div>
 <section id="verify-the-accuracy-of-eigenresults">
-<h2>Verify the accuracy of eigenresults<a class="headerlink" href="#verify-the-accuracy-of-eigenresults" title="Permalink to this headline">¶</a></h2>
+<h2>Verify the accuracy of eigenresults<a class="headerlink" href="#verify-the-accuracy-of-eigenresults" title="Permalink to this headline">#</a></h2>
 <p>Check the residual error for the first eigenresult
 <span class="math notranslate nohighlight">\(R_1=||(K-\lambda_1.M).\phi_1||_2\)</span></p>
 <p>First, we compute <span class="math notranslate nohighlight">\(\lambda_1 = \omega_1^2 = (2.\pi.f_1)^2\)</span></p>
@@ -678,7 +692,7 @@ factor and finally compute the normalized residual value
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>3.181050785182842e-11
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>2.3070247813015805e-11
 </pre></div>
 </div>
 <p>This residual can be computed for all eigenmodes</p>
@@ -722,16 +736,16 @@ factor and finally compute the normalized residual value
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.0666635506365   - Residual = 3.181050785182842e-11
-[1] : Freq = 338.0666635506368   - Residual = 3.5475434093114633e-11
-[2] : Freq = 626.6450980927034   - Residual = 1.434552260908854e-11
-[3] : Freq = 626.6450980927037   - Residual = 2.242620236985272e-11
-[4] : Freq = 928.2598500574518   - Residual = 1.7701677913328432e-11
-[5] : Freq = 928.2598500574526   - Residual = 7.276682335532794e-12
-[6] : Freq = 1249.8421074363496  - Residual = 2.65932402918181e-11
-[7] : Freq = 1249.8421074363505  - Residual = 1.3458330766846825e-11
-[8] : Freq = 1423.9938909416667  - Residual = 1.2952991235437392e-09
-[9] : Freq = 1423.9938909416692  - Residual = 7.872756939147528e-11
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.0666635506365   - Residual = 2.3070247813015805e-11
+[1] : Freq = 338.0666635506367   - Residual = 7.911817709574835e-11
+[2] : Freq = 626.645098092703    - Residual = 1.4338816801861427e-11
+[3] : Freq = 626.6450980927036   - Residual = 3.0909179798841926e-11
+[4] : Freq = 928.2598500574526   - Residual = 1.5073029240215198e-11
+[5] : Freq = 928.2598500574527   - Residual = 1.3866957267529915e-11
+[6] : Freq = 1249.8421074363505  - Residual = 2.3330795208513303e-11
+[7] : Freq = 1249.842107436351   - Residual = 1.3173155997875071e-11
+[8] : Freq = 1423.9938909416678  - Residual = 3.8657651202757016e-10
+[9] : Freq = 1423.9938909416703  - Residual = 1.2400348326967832e-09
 </pre></div>
 </div>
 <p>Plot Accuracy of Eigenresults</p>
@@ -754,7 +768,7 @@ factor and finally compute the normalized residual value
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.063 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.378 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-01-apdlmath-examples-eigen-solve-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/ff5a8539a3f0024e3ca927614b521224/eigen_solve.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eigen_solve.py</span></code></a></p>
@@ -777,7 +791,8 @@ factor and finally compute the normalized residual value
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

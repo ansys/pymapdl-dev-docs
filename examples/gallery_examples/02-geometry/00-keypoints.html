@@ -9,8 +9,9 @@
     <title>Keypoints &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -234,6 +233,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -486,6 +492,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -508,6 +519,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -518,7 +532,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -591,7 +605,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="keypoints">
-<span id="ref-basic-geometry-keypoints"></span><span id="sphx-glr-examples-gallery-examples-02-geometry-00-keypoints-py"></span><h1>Keypoints<a class="headerlink" href="#keypoints" title="Permalink to this headline">¶</a></h1>
+<span id="ref-basic-geometry-keypoints"></span><span id="sphx-glr-examples-gallery-examples-02-geometry-00-keypoints-py"></span><h1>Keypoints<a class="headerlink" href="#keypoints" title="Permalink to this headline">#</a></h1>
 <p>This example shows how you can use PyMAPDL to create basic geometry
 using Pythonic PREP7 commands.</p>
 <p>This section is focused on creating keypoints.</p>
@@ -609,11 +623,11 @@ using Pythonic PREP7 commands.</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Product:             Ansys Mechanical Enterprise
 MAPDL Version:       21.2
-ansys.mapdl Version: 0.62.dev1
+ansys.mapdl Version: 0.63.dev0
 </pre></div>
 </div>
 <section id="apdl-command-k">
-<h2>APDL Command: K<a class="headerlink" href="#apdl-command-k" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: K<a class="headerlink" href="#apdl-command-k" title="Permalink to this headline">#</a></h2>
 <p>Create a single keypoint at <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0]</span></code>.  Note that the first
 value is an empty string to allow MAPDL to pick the keypoint number.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k0</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -635,7 +649,7 @@ value is an empty string to allow MAPDL to pick the keypoint number.</p>
 </div>
 </section>
 <section id="apdl-command-kbetw">
-<h2>APDL Command: KBETW<a class="headerlink" href="#apdl-command-kbetw" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: KBETW<a class="headerlink" href="#apdl-command-kbetw" title="Permalink to this headline">#</a></h2>
 <p>Create keypoint between two keypoints</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k2</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">kbetw</span><span class="p">(</span><span class="n">kp1</span><span class="o">=</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k0</span></a><span class="p">,</span> <span class="n">kp2</span><span class="o">=</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k1</span></a><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k2</span></a><span class="p">)</span>
@@ -647,7 +661,7 @@ value is an empty string to allow MAPDL to pick the keypoint number.</p>
 </div>
 </section>
 <section id="apdl-command-kcenter">
-<h2>APDL Command: KCENTER<a class="headerlink" href="#apdl-command-kcenter" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: KCENTER<a class="headerlink" href="#apdl-command-kcenter" title="Permalink to this headline">#</a></h2>
 <p>Create keypoint at the center of a circular arc defined by three locations.
 Note that we first clear mapdl before generating this geometry</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -665,7 +679,7 @@ Note that we first clear mapdl before generating this geometry</p>
 </div>
 </section>
 <section id="keypoint-ids">
-<h2>Keypoint IDs<a class="headerlink" href="#keypoint-ids" title="Permalink to this headline">¶</a></h2>
+<h2>Keypoint IDs<a class="headerlink" href="#keypoint-ids" title="Permalink to this headline">#</a></h2>
 <p>Return an array of the keypoint IDs
 Note that this matches the array <code class="docutils literal notranslate"><span class="pre">[k0,</span> <span class="pre">k1,</span> <span class="pre">k2,</span> <span class="pre">k3]</span></code> (due to sorting)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">knum</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">knum</span></a>
@@ -678,17 +692,14 @@ Note that this matches the array <code class="docutils literal notranslate"><spa
 </div>
 </section>
 <section id="keypoint-coordinates">
-<h2>Keypoint Coordinates<a class="headerlink" href="#keypoint-coordinates" title="Permalink to this headline">¶</a></h2>
+<h2>Keypoint Coordinates<a class="headerlink" href="#keypoint-coordinates" title="Permalink to this headline">#</a></h2>
 <p>Return an array of the keypoint locations</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">kloc</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">keypoints</span>
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">kloc</span></a>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 4.27kB [00:00, 10.5MB/s]
-
-array([[ 0.00000000e+00,  1.00000000e+00,  0.00000000e+00],
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[ 0.00000000e+00,  1.00000000e+00,  0.00000000e+00],
        [ 1.00000000e+00,  0.00000000e+00,  0.00000000e+00],
        [ 0.00000000e+00, -1.00000000e+00,  0.00000000e+00],
        [ 2.23711432e-17,  2.22044605e-16,  0.00000000e+00]])
@@ -696,7 +707,7 @@ array([[ 0.00000000e+00,  1.00000000e+00,  0.00000000e+00],
 </div>
 </section>
 <section id="apdl-command-kdist">
-<h2>APDL Command: KDIST<a class="headerlink" href="#apdl-command-kdist" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: KDIST<a class="headerlink" href="#apdl-command-kdist" title="Permalink to this headline">#</a></h2>
 <p>Calculate the distance between two keypoints.  Note that you could
 compute this yourself from <code class="docutils literal notranslate"><span class="pre">kloc</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dist</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">kdist</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k0</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k1</span></a><span class="p">)</span>
@@ -709,7 +720,7 @@ compute this yourself from <code class="docutils literal notranslate"><span clas
 </div>
 </section>
 <section id="keypoint-selection">
-<h2>Keypoint Selection<a class="headerlink" href="#keypoint-selection" title="Permalink to this headline">¶</a></h2>
+<h2>Keypoint Selection<a class="headerlink" href="#keypoint-selection" title="Permalink to this headline">#</a></h2>
 <p>There are two approaches for selecting keypoints, the old “legacy”
 style and the new style.  The old style is valuable for those who
 are comfortable with the existing MAPDL commands, and new style is
@@ -765,7 +776,7 @@ areas.</p>
 </div>
 </section>
 <section id="apdl-command-kplot">
-<h2>APDL Command: KPLOT<a class="headerlink" href="#apdl-command-kplot" title="Permalink to this headline">¶</a></h2>
+<h2>APDL Command: KPLOT<a class="headerlink" href="#apdl-command-kplot" title="Permalink to this headline">#</a></h2>
 <p>Plot the keypoints while displaying the keypoint numbers</p>
 <p>There are a variety of plotting options available for all the common
 plotting methods.</p>
@@ -774,16 +785,11 @@ plotting methods.</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_00-keypoints_001.png" srcset="../../../_images/sphx_glr_00-keypoints_001.png" alt="00 keypoints" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 4.27kB [00:00, 12.3MB/s]
-</pre></div>
-</div>
-<p>stop mapdl</p>
+<img src="../../../_images/sphx_glr_00-keypoints_001.png" srcset="../../../_images/sphx_glr_00-keypoints_001.png" alt="00 keypoints" class = "sphx-glr-single-img"/><p>stop mapdl</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.762 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.864 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-02-geometry-00-keypoints-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/b09cc4ea4ddf76e7e9be33d7815b0a52/00-keypoints.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">00-keypoints.py</span></code></a></p>
@@ -806,7 +812,8 @@ Downloading _tmp.iges: 4.27kB [00:00, 12.3MB/s]
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

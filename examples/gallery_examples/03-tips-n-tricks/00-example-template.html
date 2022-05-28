@@ -9,8 +9,9 @@
     <title>Adding a New Gallery Example &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -234,6 +233,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -486,6 +492,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -508,6 +519,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -518,7 +532,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -576,7 +590,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="adding-a-new-gallery-example">
-<span id="ref-how-to-add-an-example-reference-key"></span><span id="sphx-glr-examples-gallery-examples-03-tips-n-tricks-00-example-template-py"></span><h1>Adding a New Gallery Example<a class="headerlink" href="#adding-a-new-gallery-example" title="Permalink to this headline">¶</a></h1>
+<span id="ref-how-to-add-an-example-reference-key"></span><span id="sphx-glr-examples-gallery-examples-03-tips-n-tricks-00-example-template-py"></span><h1>Adding a New Gallery Example<a class="headerlink" href="#adding-a-new-gallery-example" title="Permalink to this headline">#</a></h1>
 <p>This example demonstrates how to add new examples as well as being a template that can
 be used in their creation.</p>
 <p>This block comment should be included at the top of any new example. Each example
@@ -610,11 +624,11 @@ Otherwise the new folder will be ignored by Sphinx.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f4067209850&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f42e951c0d0&gt;
 </pre></div>
 </div>
 <section id="section-title">
-<h2>Section Title<a class="headerlink" href="#section-title" title="Permalink to this headline">¶</a></h2>
+<h2>Section Title<a class="headerlink" href="#section-title" title="Permalink to this headline">#</a></h2>
 <p>Code blocks can be broken up with text “sections” which are interpreted as
 restructured text.</p>
 <p>This will also be translated into a markdown cell in the generated jupyter notebook.
@@ -633,29 +647,24 @@ printed to the screen according to its <code class="docutils literal notranslate
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Product:             Ansys Mechanical Enterprise
 MAPDL Version:       21.2
-ansys.mapdl Version: 0.62.dev1
+ansys.mapdl Version: 0.63.dev0
 
 
-&lt;ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f4067209850&gt;
+&lt;ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f42e951c0d0&gt;
 </pre></div>
 </div>
 </section>
 <section id="plots-and-images">
-<h2>Plots and images<a class="headerlink" href="#plots-and-images" title="Permalink to this headline">¶</a></h2>
+<h2>Plots and images<a class="headerlink" href="#plots-and-images" title="Permalink to this headline">#</a></h2>
 <p>If you use an mapdl plotting command the result will be auto-generated and
 rendered in the page. Like so:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">block</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">vplot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_00-example-template_001.png" srcset="../../../_images/sphx_glr_00-example-template_001.png" alt="00 example template" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 59.6kB [00:00, 106MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_00-example-template_001.png" srcset="../../../_images/sphx_glr_00-example-template_001.png" alt="00 example template" class = "sphx-glr-single-img"/></section>
 <section id="further-plots-and-images">
-<h2>Further Plots and images<a class="headerlink" href="#further-plots-and-images" title="Permalink to this headline">¶</a></h2>
+<h2>Further Plots and images<a class="headerlink" href="#further-plots-and-images" title="Permalink to this headline">#</a></h2>
 <p>Matplotlib plots will also be rendered in the html.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -674,12 +683,12 @@ Downloading _tmp.iges: 59.6kB [00:00, 106MB/s]
 </div>
 </section>
 <section id="animations">
-<h2>Animations<a class="headerlink" href="#animations" title="Permalink to this headline">¶</a></h2>
+<h2>Animations<a class="headerlink" href="#animations" title="Permalink to this headline">#</a></h2>
 <p>You can even create animations.  See <a class="reference internal" href="../00-mapdl-examples/pyvista_mesh.html#ref-pyvista-mesh"><span class="std std-ref">PyVista Mesh Integration</span></a> for an example.
 Incidentally that is also how you link to another example (via <cite>ref_pyvista_mesh</cite>).</p>
 </section>
 <section id="making-a-pull-request">
-<h2>Making a Pull Request<a class="headerlink" href="#making-a-pull-request" title="Permalink to this headline">¶</a></h2>
+<h2>Making a Pull Request<a class="headerlink" href="#making-a-pull-request" title="Permalink to this headline">#</a></h2>
 <p>Once your example is complete and you’ve verified builds locally, you can make a pull request (PR).
 Branches containing examples should be prefixed with <cite>doc/</cite> as per the branch
 naming conventions found here: <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/development/contributing.html#contributing" title="(in pandas v1.4.2)"><span>Contributing to pandas</span></a>.</p>
@@ -689,7 +698,7 @@ notebook, the example html and the demo script will all be auto-generated via <c
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.700 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.853 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-03-tips-n-tricks-00-example-template-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/354ff6a78bbd73472ec5378f7627e993/00-example-template.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">00-example-template.py</span></code></a></p>
@@ -712,7 +721,8 @@ notebook, the example html and the demo script will all be auto-generated via <c
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

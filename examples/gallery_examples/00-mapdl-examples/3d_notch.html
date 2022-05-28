@@ -9,8 +9,9 @@
     <title>3D Stress Concentration Analysis for a Notched Plate &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -61,7 +59,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -141,20 +139,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -190,7 +188,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -235,6 +234,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -487,6 +493,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -509,6 +520,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -519,7 +533,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -597,7 +611,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="d-stress-concentration-analysis-for-a-notched-plate">
-<span id="ref-3d-plane-stress-concentration"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-3d-notch-py"></span><h1>3D Stress Concentration Analysis for a Notched Plate<a class="headerlink" href="#d-stress-concentration-analysis-for-a-notched-plate" title="Permalink to this headline">¶</a></h1>
+<span id="ref-3d-plane-stress-concentration"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-3d-notch-py"></span><h1>3D Stress Concentration Analysis for a Notched Plate<a class="headerlink" href="#d-stress-concentration-analysis-for-a-notched-plate" title="Permalink to this headline">#</a></h1>
 <p>This tutorial is the 3D corollary to the 2D plane example
 <a class="reference internal" href="2d_plate_with_a_hole.html#ref-plane-stress-concentration"><span class="std std-ref">MAPDL 2D Plane Stress Concentration Analysis</span></a>, but This example verifies the
 stress concentration factor <span class="math notranslate nohighlight">\(K-t\)</span> when modeling opposite single
@@ -614,7 +628,7 @@ notches in a finite width thin plate</p>
 </pre></div>
 </div>
 <section id="geometry">
-<h2>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h2>
+<h2>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">#</a></h2>
 <p>Create a rectangular area with two notches at the top and bottom.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">length</span></a> <span class="o">=</span> <span class="mf">0.4</span>
 <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">width</span></a> <span class="o">=</span> <span class="mf">0.1</span>
@@ -675,23 +689,9 @@ notches in a finite width thin plate</p>
 <li><img src="../../../_images/sphx_glr_3d_notch_002.png" srcset="../../../_images/sphx_glr_3d_notch_002.png" alt="3d notch" class = "sphx-glr-multi-img"/></li>
 <li><img src="../../../_images/sphx_glr_3d_notch_003.png" srcset="../../../_images/sphx_glr_3d_notch_003.png" alt="3d notch" class = "sphx-glr-multi-img"/></li>
 </ul>
-<p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 41.1kB [00:00, 93.6MB/s]
-
-Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 11.9kB [00:00, 31.2MB/s]
-
-Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 41.6kB [00:00, 90.1MB/s]
-
-Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 225kB [00:00, 259MB/s]
-</pre></div>
-</div>
 </section>
 <section id="meshing">
-<h2>Meshing<a class="headerlink" href="#meshing" title="Permalink to this headline">¶</a></h2>
+<h2>Meshing<a class="headerlink" href="#meshing" title="Permalink to this headline">#</a></h2>
 <p>This example will use PLANE183 elements as a thin plate can be
 modeled with plane elements provided that KEYOPTION 3 is set to 3
 and a thickness is provided.</p>
@@ -739,14 +739,9 @@ lines nearby the hole and <code class="docutils literal notranslate"><span class
 <li><img src="../../../_images/sphx_glr_3d_notch_004.png" srcset="../../../_images/sphx_glr_3d_notch_004.png" alt="3d notch" class = "sphx-glr-multi-img"/></li>
 <li><img src="../../../_images/sphx_glr_3d_notch_005.png" srcset="../../../_images/sphx_glr_3d_notch_005.png" alt="3d notch" class = "sphx-glr-multi-img"/></li>
 </ul>
-<p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 224kB [00:00, 228MB/s]
-</pre></div>
-</div>
 </section>
 <section id="material-properties-and-boundary-conditions">
-<h2>Material Properties and Boundary Conditions<a class="headerlink" href="#material-properties-and-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<h2>Material Properties and Boundary Conditions<a class="headerlink" href="#material-properties-and-boundary-conditions" title="Permalink to this headline">#</a></h2>
 <p>Fix the left-hand side of the plate in the X direction and set a
 force of 1 kN in the positive X direction.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This example will use SI units.</span>
@@ -793,7 +788,7 @@ force of 1 kN in the positive X direction.</p>
 </div>
 </section>
 <section id="solve-the-static-problem">
-<h2>Solve the Static Problem<a class="headerlink" href="#solve-the-static-problem" title="Permalink to this headline">¶</a></h2>
+<h2>Solve the Static Problem<a class="headerlink" href="#solve-the-static-problem" title="Permalink to this headline">#</a></h2>
 <p>Solve the static analysis</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s2">&quot;STATIC&quot;</span><span class="p">)</span>
@@ -803,7 +798,7 @@ force of 1 kN in the positive X direction.</p>
 </div>
 </section>
 <section id="post-processing">
-<h2>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
+<h2>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">#</a></h2>
 <p>The static result can be post-processed both within MAPDL and
 outside of MAPDL using <code class="docutils literal notranslate"><span class="pre">pyansys</span></code>.  This example shows how to
 extract the von Mises stress and plot it using the <code class="docutils literal notranslate"><span class="pre">pyansys</span></code>
@@ -828,15 +823,13 @@ result reader.</p>
 </pre></div>
 </div>
 <img src="../../../_images/sphx_glr_3d_notch_006.png" srcset="../../../_images/sphx_glr_3d_notch_006.png" alt="3d notch" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading file.rst: 0.00B [00:00, ?B/s]
-Downloading file.rst: 3.62MB [00:00, 449MB/s]
-/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/plotting/tools.py:571: PyvistaDeprecationWarning: The usage of `parse_color` is deprecated in favor of the new `Color` class.
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyvista/plotting/tools.py:571: PyvistaDeprecationWarning: The usage of `parse_color` is deprecated in favor of the new `Color` class.
   warnings.warn(
 </pre></div>
 </div>
 </section>
 <section id="compute-the-stress-concentration">
-<h2>Compute the Stress Concentration<a class="headerlink" href="#compute-the-stress-concentration" title="Permalink to this headline">¶</a></h2>
+<h2>Compute the Stress Concentration<a class="headerlink" href="#compute-the-stress-concentration" title="Permalink to this headline">#</a></h2>
 <p>The stress concentration <span class="math notranslate nohighlight">\(K_t\)</span> is the ratio of the maximum
 stress at the hole to the far-field stress, or the mean cross
 sectional stress at a point far from the hole.  Analytically, this
@@ -881,7 +874,7 @@ width over the modified cross section width.</p>
 </div>
 </section>
 <section id="batch-analysis">
-<h2>Batch Analysis<a class="headerlink" href="#batch-analysis" title="Permalink to this headline">¶</a></h2>
+<h2>Batch Analysis<a class="headerlink" href="#batch-analysis" title="Permalink to this headline">#</a></h2>
 <p>The above script can be placed within a function to compute the
 stress concentration for a variety of hole diameters.  For each
 batch, MAPDL is reset and the geometry is generated from scratch.</p>
@@ -1019,7 +1012,7 @@ this example. Enable it by setting <code class="docutils literal notranslate"><s
 </div>
 </section>
 <section id="analytical-solution">
-<h2>Analytical Solution<a class="headerlink" href="#analytical-solution" title="Permalink to this headline">¶</a></h2>
+<h2>Analytical Solution<a class="headerlink" href="#analytical-solution" title="Permalink to this headline">#</a></h2>
 <p>Stress concentrations are often obtained by referencing tabular
 results or polynominal fits for a variety of geometries.  According
 to <em>Roark’s Formulas for Stress and Strain</em> (Warren C. Young and
@@ -1077,7 +1070,7 @@ C_4 &amp; -2.294 + 2.713 \sqrt{h/r} + 0.240 h/r &amp; 6.294 - 3.239 \sqrt{h/r} +
 </div>
 </section>
 <section id="analytical-comparison">
-<h2>Analytical Comparison<a class="headerlink" href="#analytical-comparison" title="Permalink to this headline">¶</a></h2>
+<h2>Analytical Comparison<a class="headerlink" href="#analytical-comparison" title="Permalink to this headline">#</a></h2>
 <p>As shown in the following plot, MAPDL matches the known tabular
 result for this geometry remarkably well using PLANE183 elements.
 The fit to the results may vary depending on the ratio between the
@@ -1093,7 +1086,7 @@ height and width of the plate.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.814 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.541 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-3d-notch-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/e628f9b9260d87ddaecade20291524e5/3d_notch.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">3d_notch.py</span></code></a></p>
@@ -1116,7 +1109,8 @@ height and width of the plate.</p>
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

@@ -9,8 +9,9 @@
     <title>PyVista Mesh Integration &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -234,6 +233,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -486,6 +492,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -508,6 +519,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -546,7 +560,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="pyvista-mesh-integration">
-<span id="ref-pyvista-mesh"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py"></span><h1>PyVista Mesh Integration<a class="headerlink" href="#pyvista-mesh-integration" title="Permalink to this headline">¶</a></h1>
+<span id="ref-pyvista-mesh"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py"></span><h1>PyVista Mesh Integration<a class="headerlink" href="#pyvista-mesh-integration" title="Permalink to this headline">#</a></h1>
 <p>Run a modal analysis on a mesh generated from pyvista within MAPDL.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
 
@@ -624,10 +638,10 @@ to download the full example code</p>
 
 *****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =      95.782   TIME= 04:15:32
+ *** NOTE ***                            CP =     136.313   TIME= 04:09:46
  There is no title defined for this analysis.
 
- *** NOTE ***                            CP =      95.863   TIME= 04:15:32
+ *** NOTE ***                            CP =     136.411   TIME= 04:09:46
  No modes are being expanded (MXPAND command) and therefore the element
  results will not be written to the mode file.  If you do not intend to
  use mode selection and for more efficient calculation of element
@@ -645,7 +659,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:15:32  MAY 24, 2022 CP=     95.884
+ 00000000  VERSION=LINUX x64     04:09:46  MAY 28, 2022 CP=    136.434
 
 
 
@@ -664,15 +678,15 @@ to download the full example code</p>
    SHIFT POINT . . . . . . . . . . . . . . . . . .  1.0000
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** WARNING ***                         CP =      95.902   TIME= 04:15:32
+ *** WARNING ***                         CP =     136.454   TIME= 04:09:46
  No constraints have been defined using the D command.
 
- *** NOTE ***                            CP =      95.902   TIME= 04:15:32
+ *** NOTE ***                            CP =     136.454   TIME= 04:09:46
  The step data was checked and warning messages were found.
   Please review output or errors file ( /file.err ) for these warning
  messages.
 
- *** NOTE ***                            CP =      95.902   TIME= 04:15:32
+ *** NOTE ***                            CP =     136.454   TIME= 04:09:46
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -720,8 +734,8 @@ to download the full example code</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        4     10000  SHELL181      0.615   0.000062
- Time at end of element matrix formulation CP = 96.7124863.
+        4     10000  SHELL181      1.095   0.000109
+ Time at end of element matrix formulation CP = 137.832306.
 
   BLOCK LANCZOS CALCULATION OF UP TO    20 EIGENVECTORS.
   NUMBER OF EQUATIONS              =        61206
@@ -734,7 +748,7 @@ to download the full example code</p>
   Memory required for in-core solution     =   178.612 MB
   Memory required for out-of-core solution =    60.617 MB
 
- *** NOTE ***                            CP =      98.409   TIME= 04:15:34
+ *** NOTE ***                            CP =     139.825   TIME= 04:09:49
  The Sparse Matrix Solver used by the Block Lanczos eigensolver is
  currently running in the in-core memory mode.  This memory mode uses
  the most amount of memory in order to avoid using the hard drive as
@@ -744,7 +758,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:15:35  MAY 24, 2022 CP=    100.704
+ 00000000  VERSION=LINUX x64     04:09:50  MAY 28, 2022 CP=    143.654
 
 
 
@@ -761,29 +775,29 @@ to download the full example code</p>
    FREQUENCY RANGE REQUESTED=   20 MODES ABOVE   1.00000     HERTZ
 
     1     32.74664192985
-    2     47.77804288731
+    2     47.77804288730
     3     59.17108298360
     4     84.60790505173
-    5     84.60790505208
-    6     148.8927748650
-    7     148.8927748652
-    8     154.6519861747
-    9     168.3840411461
-   10     187.7790667343
-   11     255.9751634915
+    5     84.60790505209
+    6     148.8927748648
+    7     148.8927748650
+    8     154.6519861746
+    9     168.3840411459
+   10     187.7790667340
+   11     255.9751634914
    12     255.9751634916
-   13     285.2444050788
-   14     298.2943388367
+   13     285.2444050791
+   14     298.2943388368
    15     319.8023401634
-   16     319.8023401640
+   16     319.8023401642
    17     370.6023621796
-   18     391.8457651345
-   19     409.1039880842
-   20     482.6516135505
+   18     391.8457651362
+   19     409.1039880850
+   20     482.6516135508
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:15:35  MAY 24, 2022 CP=    100.967
+ 00000000  VERSION=LINUX x64     04:09:51  MAY 28, 2022 CP=    144.024
 
 
 
@@ -963,9 +977,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <img src="../../../_images/sphx_glr_pyvista_mesh_002.png" srcset="../../../_images/sphx_glr_pyvista_mesh_002.png" alt="pyvista mesh" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading file.rst: 0.00B [00:00, ?B/s]
-Downloading file.rst: 11.9MB [00:00, 388MB/s]
-PyMAPDL Result
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PyMAPDL Result
 Units       : User Defined
 Version     : 21.2
 Cyclic      : False
@@ -1004,37 +1016,37 @@ Enable a continuous plot looping with <code class="docutils literal notranslate"
   warnings.warn(&#39;The ``nangles`` kwarg is depreciated and ``n_frames`` &#39;
 
 Rendering animation:   0%|          | 0/30 [00:00&lt;?, ?it/s]
-Rendering animation:   3%|3         | 1/30 [00:00&lt;00:06,  4.50it/s]
-Rendering animation:   7%|6         | 2/30 [00:00&lt;00:04,  5.82it/s]
-Rendering animation:  10%|#         | 3/30 [00:00&lt;00:04,  5.87it/s]
-Rendering animation:  13%|#3        | 4/30 [00:00&lt;00:04,  6.19it/s]
-Rendering animation:  17%|#6        | 5/30 [00:00&lt;00:03,  6.31it/s]
-Rendering animation:  20%|##        | 6/30 [00:00&lt;00:03,  6.16it/s]
-Rendering animation:  23%|##3       | 7/30 [00:01&lt;00:03,  6.17it/s]
-Rendering animation:  27%|##6       | 8/30 [00:01&lt;00:03,  6.09it/s]
-Rendering animation:  30%|###       | 9/30 [00:01&lt;00:03,  5.86it/s]
-Rendering animation:  33%|###3      | 10/30 [00:01&lt;00:03,  5.70it/s]
-Rendering animation:  37%|###6      | 11/30 [00:01&lt;00:03,  5.77it/s]
-Rendering animation:  40%|####      | 12/30 [00:02&lt;00:03,  5.90it/s]
-Rendering animation:  43%|####3     | 13/30 [00:02&lt;00:02,  5.90it/s]
-Rendering animation:  47%|####6     | 14/30 [00:02&lt;00:02,  6.11it/s]
-Rendering animation:  50%|#####     | 15/30 [00:02&lt;00:02,  6.32it/s]
-Rendering animation:  53%|#####3    | 16/30 [00:02&lt;00:02,  6.20it/s]
-Rendering animation:  57%|#####6    | 17/30 [00:02&lt;00:01,  6.52it/s]
-Rendering animation:  60%|######    | 18/30 [00:02&lt;00:01,  6.59it/s]
-Rendering animation:  63%|######3   | 19/30 [00:03&lt;00:01,  6.59it/s]
-Rendering animation:  67%|######6   | 20/30 [00:03&lt;00:01,  6.46it/s]
-Rendering animation:  70%|#######   | 21/30 [00:03&lt;00:01,  6.43it/s]
-Rendering animation:  73%|#######3  | 22/30 [00:03&lt;00:01,  6.38it/s]
-Rendering animation:  77%|#######6  | 23/30 [00:03&lt;00:01,  6.20it/s]
-Rendering animation:  80%|########  | 24/30 [00:03&lt;00:00,  6.05it/s]
-Rendering animation:  83%|########3 | 25/30 [00:04&lt;00:00,  5.96it/s]
-Rendering animation:  87%|########6 | 26/30 [00:04&lt;00:00,  5.90it/s]
-Rendering animation:  90%|######### | 27/30 [00:04&lt;00:00,  6.01it/s]
-Rendering animation:  93%|#########3| 28/30 [00:04&lt;00:00,  6.14it/s]
-Rendering animation:  97%|#########6| 29/30 [00:04&lt;00:00,  6.15it/s]
-Rendering animation: 100%|##########| 30/30 [00:04&lt;00:00,  6.26it/s]
-Rendering animation: 100%|##########| 30/30 [00:05&lt;00:00,  5.98it/s]
+Rendering animation:   3%|3         | 1/30 [00:00&lt;00:09,  3.14it/s]
+Rendering animation:   7%|6         | 2/30 [00:00&lt;00:07,  3.97it/s]
+Rendering animation:  10%|#         | 3/30 [00:00&lt;00:06,  4.05it/s]
+Rendering animation:  13%|#3        | 4/30 [00:00&lt;00:06,  4.27it/s]
+Rendering animation:  17%|#6        | 5/30 [00:01&lt;00:05,  4.36it/s]
+Rendering animation:  20%|##        | 6/30 [00:01&lt;00:05,  4.47it/s]
+Rendering animation:  23%|##3       | 7/30 [00:01&lt;00:05,  4.52it/s]
+Rendering animation:  27%|##6       | 8/30 [00:01&lt;00:05,  4.38it/s]
+Rendering animation:  30%|###       | 9/30 [00:02&lt;00:04,  4.27it/s]
+Rendering animation:  33%|###3      | 10/30 [00:02&lt;00:04,  4.17it/s]
+Rendering animation:  37%|###6      | 11/30 [00:02&lt;00:04,  4.10it/s]
+Rendering animation:  40%|####      | 12/30 [00:02&lt;00:04,  4.24it/s]
+Rendering animation:  43%|####3     | 13/30 [00:03&lt;00:03,  4.39it/s]
+Rendering animation:  47%|####6     | 14/30 [00:03&lt;00:03,  4.51it/s]
+Rendering animation:  50%|#####     | 15/30 [00:03&lt;00:03,  4.59it/s]
+Rendering animation:  53%|#####3    | 16/30 [00:03&lt;00:03,  4.51it/s]
+Rendering animation:  57%|#####6    | 17/30 [00:03&lt;00:02,  4.55it/s]
+Rendering animation:  60%|######    | 18/30 [00:04&lt;00:02,  4.55it/s]
+Rendering animation:  63%|######3   | 19/30 [00:04&lt;00:02,  4.61it/s]
+Rendering animation:  67%|######6   | 20/30 [00:04&lt;00:02,  4.53it/s]
+Rendering animation:  70%|#######   | 21/30 [00:04&lt;00:02,  4.39it/s]
+Rendering animation:  73%|#######3  | 22/30 [00:05&lt;00:01,  4.36it/s]
+Rendering animation:  77%|#######6  | 23/30 [00:05&lt;00:01,  4.23it/s]
+Rendering animation:  80%|########  | 24/30 [00:05&lt;00:01,  4.20it/s]
+Rendering animation:  83%|########3 | 25/30 [00:05&lt;00:01,  4.20it/s]
+Rendering animation:  87%|########6 | 26/30 [00:06&lt;00:00,  4.14it/s]
+Rendering animation:  90%|######### | 27/30 [00:06&lt;00:00,  4.15it/s]
+Rendering animation:  93%|#########3| 28/30 [00:06&lt;00:00,  4.16it/s]
+Rendering animation:  97%|#########6| 29/30 [00:06&lt;00:00,  4.16it/s]
+Rendering animation: 100%|##########| 30/30 [00:06&lt;00:00,  4.26it/s]
+Rendering animation: 100%|##########| 30/30 [00:07&lt;00:00,  4.19it/s]
 
 [(1.5773502691896262, 1.5773502691896262, 1.5773502691896262),
  (0.0, 0.0, 0.0),
@@ -1045,7 +1057,7 @@ Rendering animation: 100%|##########| 30/30 [00:05&lt;00:00,  5.98it/s]
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.774 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  14.081 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/64adae6b03e47dc2c3a43f0a2a856797/pyvista_mesh.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pyvista_mesh.py</span></code></a></p>
@@ -1067,7 +1079,8 @@ Rendering animation: 100%|##########| 30/30 [00:05&lt;00:00,  5.98it/s]
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

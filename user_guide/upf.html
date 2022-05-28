@@ -9,8 +9,9 @@
     <title>Using Python to Code UPF Subroutines &#8212; PyMAPDL</title>
     
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -261,6 +260,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -271,7 +273,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -324,7 +326,7 @@
               <div>
                 
   <section id="using-python-to-code-upf-subroutines">
-<span id="python-upf"></span><h1>Using Python to Code UPF Subroutines<a class="headerlink" href="#using-python-to-code-upf-subroutines" title="Permalink to this headline">¶</a></h1>
+<span id="python-upf"></span><h1>Using Python to Code UPF Subroutines<a class="headerlink" href="#using-python-to-code-upf-subroutines" title="Permalink to this headline">#</a></h1>
 <p>As an alternative to compiled languages like C and Fortran, you can use the
 Python language to code user programmable subroutines. A subset of the
 documented UPF subroutines support the Python UPF capability (see <a class="reference internal" href="#supported-upf-subroutines">Supported UPF
@@ -344,7 +346,7 @@ Python libraries like NumPy.</p>
 <li><p><a class="reference internal" href="#python-upf-examples">Python UPF Examples</a></p></li>
 </ul>
 <section id="supported-upf-subroutines">
-<h2>Supported UPF Subroutines<a class="headerlink" href="#supported-upf-subroutines" title="Permalink to this headline">¶</a></h2>
+<h2>Supported UPF Subroutines<a class="headerlink" href="#supported-upf-subroutines" title="Permalink to this headline">#</a></h2>
 <p>A subset of the entire set of available UPF subroutines support Python coding (see the
 table below). This list will be expanded in the future.</p>
 <p><strong>Table 1: Python Support for Subroutines</strong></p>
@@ -416,7 +418,7 @@ table below). This list will be expanded in the future.</p>
 </table>
 </section>
 <section id="python-upf-methodology">
-<h2>Python UPF Methodology<a class="headerlink" href="#python-upf-methodology" title="Permalink to this headline">¶</a></h2>
+<h2>Python UPF Methodology<a class="headerlink" href="#python-upf-methodology" title="Permalink to this headline">#</a></h2>
 <p>Coding a Python UPF is different from using a compiled language like C/C++ or Fortran,
 mainly in terms of the API. Because the <a class="reference external" href="https://storage.ansys.com/doclinks/external.html?code=grpc-ELU-N2a">gRPC technology</a>
 is used to handle the
@@ -510,7 +512,7 @@ server:</p>
 </div>
 </section>
 <section id="accessing-the-database-from-the-python-code">
-<h2>Accessing the Database from the Python Code<a class="headerlink" href="#accessing-the-database-from-the-python-code" title="Permalink to this headline">¶</a></h2>
+<h2>Accessing the Database from the Python Code<a class="headerlink" href="#accessing-the-database-from-the-python-code" title="Permalink to this headline">#</a></h2>
 <p>Within your UPF routine, you may need to access the Mechanical APDL database in read/write
 mode.</p>
 <p>In the Python code, you can create a connection with the DB server. This command must
@@ -592,7 +594,7 @@ have been exposed and can be called from the Python code.</p>
 </table>
 </section>
 <section id="python-upf-limitations">
-<h2>Python UPF Limitations<a class="headerlink" href="#python-upf-limitations" title="Permalink to this headline">¶</a></h2>
+<h2>Python UPF Limitations<a class="headerlink" href="#python-upf-limitations" title="Permalink to this headline">#</a></h2>
 <p>The Python UPF capability has these limitations:</p>
 <ul class="simple">
 <li><p>Currently, Distributed Ansys is not supported. You must specify the <code class="docutils literal notranslate"><span class="pre">-smp</span></code> option on the command line to make sure Mechanical APDL is running in shared-memory processing mode.</p></li>
@@ -600,7 +602,7 @@ have been exposed and can be called from the Python code.</p>
 </ul>
 </section>
 <section id="python-upf-examples">
-<h2>Python UPF Examples<a class="headerlink" href="#python-upf-examples" title="Permalink to this headline">¶</a></h2>
+<h2>Python UPF Examples<a class="headerlink" href="#python-upf-examples" title="Permalink to this headline">#</a></h2>
 <p>The following Python UPF Examples are available in <a class="reference internal" href="../examples/extended_examples/Python_UPF/python_upf_examples.html#python-upf-examples"><span class="std std-ref">UPF in PyMAPDL</span></a> :</p>
 <ul class="simple">
 <li><p>Example: Python <cite>UserMat</cite> Subroutine</p></li>
@@ -620,7 +622,8 @@ have been exposed and can be called from the Python code.</p>
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

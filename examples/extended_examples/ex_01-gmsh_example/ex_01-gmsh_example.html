@@ -9,8 +9,9 @@
     <title>Gmsh Example &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -52,7 +50,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="UPF in PyMAPDL" href="../Python_UPF/python_upf_examples.html" />
-    <link rel="prev" title="Dynamic simulation of a printed circuit board assembly" href="../../technology_showcase_examples/techdemo-20/20-example-technology-showcase-dynamic-simulation-PCB.html" />
+    <link rel="prev" title="Friction Stir Welding (FSW) Simulation" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -234,6 +233,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../gallery_examples/00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../gallery_examples/00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -486,6 +492,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
@@ -508,6 +519,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -518,7 +532,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -600,15 +614,15 @@
               <div>
                 
   <section id="gmsh-example">
-<span id="extended-example01"></span><h1>Gmsh Example<a class="headerlink" href="#gmsh-example" title="Permalink to this headline">¶</a></h1>
+<span id="extended-example01"></span><h1>Gmsh Example<a class="headerlink" href="#gmsh-example" title="Permalink to this headline">#</a></h1>
 <section id="objective">
-<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this headline">¶</a></h2>
+<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this headline">#</a></h2>
 <p>Demonstrate the interoperability of PyAnsys with <code class="docutils literal notranslate"><span class="pre">gmsh</span></code>, a very well known
 open source Python meshing library.</p>
 <p>For more information about <code class="docutils literal notranslate"><span class="pre">gmsh</span></code> please visit its website: <a class="reference external" href="https://gmsh.info/">Gmsh</a>.</p>
 </section>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">#</a></h2>
 <p>In this example the interoperability of PyAnsys with the open source mesher <code class="docutils literal notranslate"><span class="pre">gmsh</span></code> is demonstrated.
 Using <code class="docutils literal notranslate"><span class="pre">gmsh</span></code> we import an external geometry file in STL format and then the
 geometry is imported into PyMAPDL using the
@@ -623,16 +637,16 @@ to a gif file named <code class="docutils literal notranslate"><span class="pre"
 </ul>
 </section>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">#</a></h2>
 <p>You need to have <code class="docutils literal notranslate"><span class="pre">gmsh</span></code> installed. You can install it using <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">gmsh</span>
 </pre></div>
 </div>
 </section>
 <section id="source-code">
-<h2>Source code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
+<h2>Source code<a class="headerlink" href="#source-code" title="Permalink to this headline">#</a></h2>
 <section id="gmsh-generator-py">
-<h3><code class="docutils literal notranslate"><span class="pre">gmsh_generator.py</span></code><a class="headerlink" href="#gmsh-generator-py" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">gmsh_generator.py</span></code><a class="headerlink" href="#gmsh-generator-py" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;Using ``gmsh`` read the STEP file, mesh it, and save it as a ``*.msh`` file.&quot;&quot;&quot;</span>
 <span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">gmsh</span>
 <span class="linenos"> 3</span>
@@ -661,7 +675,7 @@ to a gif file named <code class="docutils literal notranslate"><span class="pre"
 </div>
 </section>
 <section id="mesh-converter-py">
-<h3><code class="docutils literal notranslate"><span class="pre">mesh_converter.py</span></code><a class="headerlink" href="#mesh-converter-py" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">mesh_converter.py</span></code><a class="headerlink" href="#mesh-converter-py" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos"> 2</span><span class="sd">This script convert the file in `gmsh` format to ANSYS `CDB` format.</span>
 <span class="linenos"> 3</span><span class="sd">&quot;&quot;&quot;</span>
@@ -678,7 +692,7 @@ to a gif file named <code class="docutils literal notranslate"><span class="pre"
 </div>
 </section>
 <section id="modal-analysis-py">
-<h3><code class="docutils literal notranslate"><span class="pre">modal_analysis.py</span></code><a class="headerlink" href="#modal-analysis-py" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">modal_analysis.py</span></code><a class="headerlink" href="#modal-analysis-py" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;Import the CDB database, setup modal analysis and run it.&quot;&quot;&quot;</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span>
@@ -747,7 +761,7 @@ to a gif file named <code class="docutils literal notranslate"><span class="pre"
 </section>
 </section>
 <section id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">#</a></h2>
 <p>It is recommended that you copy all the files in a separate directory to make it
 easier to run the example.</p>
 </section>
@@ -763,7 +777,8 @@ easier to run the example.</p>
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

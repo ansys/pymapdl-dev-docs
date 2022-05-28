@@ -9,8 +9,9 @@
     <title>Getting Started &#8212; PyMAPDL</title>
     
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -52,7 +50,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Using PyMAPDL from the Standard Install" href="running_mapdl.html" />
-    <link rel="prev" title="PyMAPDL Documentation 0.62.dev1" href="../index.html" />
+    <link rel="prev" title="PyMAPDL Documentation 0.63.dev0" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -188,7 +186,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -230,6 +229,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -240,7 +242,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -295,7 +297,7 @@
               <div>
                 
   <section id="getting-started">
-<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h1>
 <p>To use PyMAPDL, you need to have a local installation of Ansys.  The
 version of Ansys installed will dictate the interface and features
 available to you.</p>
@@ -304,9 +306,9 @@ getting a licensed copy of Ansys.</p>
 <div class="toctree-wrapper compound">
 </div>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <section id="python-module">
-<h3>Python Module<a class="headerlink" href="#python-module" title="Permalink to this headline">¶</a></h3>
+<h3>Python Module<a class="headerlink" href="#python-module" title="Permalink to this headline">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">ansys.mapdl.core</span></code> package currently supports Python 3.6 through
 Python 3.9 on Windows, Mac OS, and Linux.</p>
 <p>Install the latest release from <a class="reference external" href="https://pypi.org/project/ansys-mapdl-core/">PyPi</a> with:</p>
@@ -328,7 +330,7 @@ and modify it locally and have the changes reflected in your setup
 after restarting the Python kernel.</p>
 </section>
 <section id="offline-installation">
-<h3>Offline Installation<a class="headerlink" href="#offline-installation" title="Permalink to this headline">¶</a></h3>
+<h3>Offline Installation<a class="headerlink" href="#offline-installation" title="Permalink to this headline">#</a></h3>
 <p>If you lack an internet connection on your install machine, the recommended way
 of installing PyMAPDL is downloading the wheelhouse archive from the <a class="reference external" href="https://github.com/pyansys/pymapdl/releases">Releases
 Page</a> for your corresponding
@@ -346,7 +348,7 @@ install using the same command as above.</p>
 <p>Consider installing using a <a class="reference external" href="https://docs.python.org/3/library/venv.html">virtual environment</a>.</p>
 </section>
 <section id="ansys-software-requirements">
-<h3>Ansys Software Requirements<a class="headerlink" href="#ansys-software-requirements" title="Permalink to this headline">¶</a></h3>
+<h3>Ansys Software Requirements<a class="headerlink" href="#ansys-software-requirements" title="Permalink to this headline">#</a></h3>
 <p>For the latest features, you will need a copy of Ansys 2021R1
 installed locally, but PyMAPDL is compatible with Ansys 17.0 and newer
 on Windows and 13.0 on Linux.</p>
@@ -358,7 +360,7 @@ versions of Ansys (e.g. APDL Math).</p>
 </div>
 </section>
 <section id="verify-your-installation">
-<h3>Verify Your Installation<a class="headerlink" href="#verify-your-installation" title="Permalink to this headline">¶</a></h3>
+<h3>Verify Your Installation<a class="headerlink" href="#verify-your-installation" title="Permalink to this headline">#</a></h3>
 <p>Check that you can start MAPDL from Python by running:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
@@ -386,7 +388,8 @@ PyMAPDL interface, see <a class="reference internal" href="../user_guide/mapdl.h
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

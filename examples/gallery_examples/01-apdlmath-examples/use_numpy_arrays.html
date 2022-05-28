@@ -9,8 +9,9 @@
     <title>Manipulate APDLMath vectors or dense matrices as NumPy Arrays &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -234,6 +233,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -486,6 +492,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -508,6 +519,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -518,7 +532,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -566,7 +580,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="manipulate-apdlmath-vectors-or-dense-matrices-as-numpy-arrays">
-<span id="sphx-glr-examples-gallery-examples-01-apdlmath-examples-use-numpy-arrays-py"></span><h1>Manipulate APDLMath vectors or dense matrices as NumPy Arrays<a class="headerlink" href="#manipulate-apdlmath-vectors-or-dense-matrices-as-numpy-arrays" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-examples-gallery-examples-01-apdlmath-examples-use-numpy-arrays-py"></span><h1>Manipulate APDLMath vectors or dense matrices as NumPy Arrays<a class="headerlink" href="#manipulate-apdlmath-vectors-or-dense-matrices-as-numpy-arrays" title="Permalink to this headline">#</a></h1>
 <p>This example demonstrates how to exchange data between MAPDL and
 Python via numpy arrays.</p>
 <div class="admonition note">
@@ -584,14 +598,14 @@ Python via numpy arrays.</p>
 </pre></div>
 </div>
 <section id="convert-an-apdlmath-vector-into-an-numpy-array">
-<h2>Convert an APDLMath Vector into an NumPy Array<a class="headerlink" href="#convert-an-apdlmath-vector-into-an-numpy-array" title="Permalink to this headline">¶</a></h2>
+<h2>Convert an APDLMath Vector into an NumPy Array<a class="headerlink" href="#convert-an-apdlmath-vector-into-an-numpy-array" title="Permalink to this headline">#</a></h2>
 <p>First, allocate a APDLMath vector with 10 doubles</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apdl_vec</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">apdl_vec</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>KRFQFB :
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>TXFQKN :
  Size : 10
   1.000e+00   1.000e+00   1.000e+00   1.000e+00   1.000e+00      &lt;       5
   1.000e+00   1.000e+00   1.000e+00   1.000e+00   1.000e+00      &lt;       10
@@ -641,7 +655,7 @@ more efficient if performed within MAPDL.</p>
 </div>
 </section>
 <section id="copy-a-numpy-array-to-an-apdlmath-vector">
-<h2>Copy a NumPy Array to an APDLMath vector<a class="headerlink" href="#copy-a-numpy-array-to-an-apdlmath-vector" title="Permalink to this headline">¶</a></h2>
+<h2>Copy a NumPy Array to an APDLMath vector<a class="headerlink" href="#copy-a-numpy-array-to-an-apdlmath-vector" title="Permalink to this headline">#</a></h2>
 <p>You can push back any numpy vector or 2D array to MAPDL.  This
 creates a new APDLMath, which in this case is named <code class="docutils literal notranslate"><span class="pre">'NewVec'</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mm</span><span class="o">.</span><span class="n">set_vec</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pv</span></a><span class="p">,</span> <span class="s2">&quot;NewVec&quot;</span><span class="p">)</span>
@@ -655,8 +669,8 @@ creates a new APDLMath, which in this case is named <code class="docutils litera
 
   Name                   Type            Mem. (MB)       Dims            Workspace
 
-   KRFQFB                VEC             0.000           10              1
    NEWVEC                VEC             0.000           10              1
+   TXFQKN                VEC             0.000           10              1
 </pre></div>
 </div>
 <p>Create a Python handle to this vector by specifying its name</p>
@@ -673,7 +687,7 @@ creates a new APDLMath, which in this case is named <code class="docutils litera
 </div>
 </section>
 <section id="dense-numpy-arrays">
-<h2>Dense Numpy Arrays<a class="headerlink" href="#dense-numpy-arrays" title="Permalink to this headline">¶</a></h2>
+<h2>Dense Numpy Arrays<a class="headerlink" href="#dense-numpy-arrays" title="Permalink to this headline">#</a></h2>
 <p>The same features apply to dense APDL matrices and numpy arrays.</p>
 <p>Allow allocate an APDLMath Dense Matrix and convert it to a numpy
 array</p>
@@ -686,7 +700,7 @@ array</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>DWORHZ:
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>EZPMLN:
  [1,1]: 4.170e-01 [1,2]: 9.326e-01 [1,3]: 3.023e-01
  [2,1]: 9.972e-01 [2,2]: 1.144e-04 [2,3]: 9.990e-01
  [3,1]: 7.203e-01 [3,2]: 1.281e-01 [3,3]: 1.468e-01
@@ -704,7 +718,7 @@ array</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>CHCGDH
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>JNSKDY
 </pre></div>
 </div>
 <p>Load this matrix from APDL and verify it is identical</p>
@@ -720,7 +734,7 @@ array</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.206 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.220 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-01-apdlmath-examples-use-numpy-arrays-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/fe293c50abf6c0b8293f44258b6141b9/use_numpy_arrays.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">use_numpy_arrays.py</span></code></a></p>
@@ -743,7 +757,8 @@ array</p>
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

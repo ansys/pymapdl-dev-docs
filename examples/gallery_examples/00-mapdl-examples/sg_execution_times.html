@@ -9,8 +9,9 @@
     <title>Computation times &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -58,7 +56,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -138,20 +136,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -186,7 +184,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -196,6 +195,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -229,8 +231,8 @@
               <div>
                 
   <section id="computation-times">
-<span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-sg-execution-times"></span><h1>Computation times<a class="headerlink" href="#computation-times" title="Permalink to this headline">¶</a></h1>
-<p><strong>01:44.113</strong> total execution time for <strong>examples_gallery_examples_00-mapdl-examples</strong> files:</p>
+<span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-sg-execution-times"></span><h1>Computation times<a class="headerlink" href="#computation-times" title="Permalink to this headline">#</a></h1>
+<p><strong>02:29.683</strong> total execution time for <strong>examples_gallery_examples_00-mapdl-examples</strong> files:</p>
 <table class="table">
 <colgroup>
 <col style="width: 86%" />
@@ -239,51 +241,55 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="2d_plate_with_a_hole.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-2d-plate-with-a-hole-py"><span class="std std-ref">MAPDL 2D Plane Stress Concentration Analysis</span></a> (<code class="docutils literal notranslate"><span class="pre">2d_plate_with_a_hole.py</span></code>)</p></td>
-<td><p>00:45.152</p></td>
+<td><p>00:57.484</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="geometry.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-geometry-py"><span class="std std-ref">Plotting and Mesh Access</span></a> (<code class="docutils literal notranslate"><span class="pre">geometry.py</span></code>)</p></td>
-<td><p>00:16.036</p></td>
+<td><p>00:19.917</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista_mesh.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py"><span class="std std-ref">PyVista Mesh Integration</span></a> (<code class="docutils literal notranslate"><span class="pre">pyvista_mesh.py</span></code>)</p></td>
-<td><p>00:09.774</p></td>
+<td><p>00:14.081</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="transient_thermal.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-transient-thermal-py"><span class="std std-ref">Example Thermal Transient Analysis</span></a> (<code class="docutils literal notranslate"><span class="pre">transient_thermal.py</span></code>)</p></td>
-<td><p>00:06.793</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="lathe_cutter.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-lathe-cutter-py"><span class="std std-ref">Structural Analysis of a Lathe Cutter</span></a> (<code class="docutils literal notranslate"><span class="pre">lathe_cutter.py</span></code>)</p></td>
+<td><p>00:10.890</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="2d_pressure_vessel.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-2d-pressure-vessel-py"><span class="std std-ref">2D Pressure Vessel</span></a> (<code class="docutils literal notranslate"><span class="pre">2d_pressure_vessel.py</span></code>)</p></td>
-<td><p>00:06.788</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="transient_thermal.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-transient-thermal-py"><span class="std std-ref">Example Thermal Transient Analysis</span></a> (<code class="docutils literal notranslate"><span class="pre">transient_thermal.py</span></code>)</p></td>
+<td><p>00:10.224</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pressure_vessel.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-pressure-vessel-py"><span class="std std-ref">Pressure Vessel</span></a> (<code class="docutils literal notranslate"><span class="pre">pressure_vessel.py</span></code>)</p></td>
-<td><p>00:05.884</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="2d_pressure_vessel.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-2d-pressure-vessel-py"><span class="std std-ref">2D Pressure Vessel</span></a> (<code class="docutils literal notranslate"><span class="pre">2d_pressure_vessel.py</span></code>)</p></td>
+<td><p>00:09.648</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="3d_notch.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-3d-notch-py"><span class="std std-ref">3D Stress Concentration Analysis for a Notched Plate</span></a> (<code class="docutils literal notranslate"><span class="pre">3d_notch.py</span></code>)</p></td>
-<td><p>00:05.814</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pressure_vessel.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-pressure-vessel-py"><span class="std std-ref">Pressure Vessel</span></a> (<code class="docutils literal notranslate"><span class="pre">pressure_vessel.py</span></code>)</p></td>
+<td><p>00:08.930</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="path_operations.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-path-operations-py"><span class="std std-ref">Path Operations within pyMAPDL and MAPDL</span></a> (<code class="docutils literal notranslate"><span class="pre">path_operations.py</span></code>)</p></td>
-<td><p>00:04.087</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="3d_notch.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-3d-notch-py"><span class="std std-ref">3D Stress Concentration Analysis for a Notched Plate</span></a> (<code class="docutils literal notranslate"><span class="pre">3d_notch.py</span></code>)</p></td>
+<td><p>00:07.541</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="contact_elements.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-contact-elements-py"><span class="std std-ref">Contact Element Example</span></a> (<code class="docutils literal notranslate"><span class="pre">contact_elements.py</span></code>)</p></td>
-<td><p>00:01.484</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="path_operations.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-path-operations-py"><span class="std std-ref">Path Operations within pyMAPDL and MAPDL</span></a> (<code class="docutils literal notranslate"><span class="pre">path_operations.py</span></code>)</p></td>
+<td><p>00:06.058</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="3d_plate_thermal.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-3d-plate-thermal-py"><span class="std std-ref">Basic Thermal Analysis with pyMAPDL</span></a> (<code class="docutils literal notranslate"><span class="pre">3d_plate_thermal.py</span></code>)</p></td>
-<td><p>00:00.975</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="contact_elements.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-contact-elements-py"><span class="std std-ref">Contact Element Example</span></a> (<code class="docutils literal notranslate"><span class="pre">contact_elements.py</span></code>)</p></td>
+<td><p>00:01.911</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="mapdl_3d_beam.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-mapdl-3d-beam-py"><span class="std std-ref">MAPDL 3D Beam Example</span></a> (<code class="docutils literal notranslate"><span class="pre">mapdl_3d_beam.py</span></code>)</p></td>
-<td><p>00:00.831</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="3d_plate_thermal.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-3d-plate-thermal-py"><span class="std std-ref">Basic Thermal Analysis with pyMAPDL</span></a> (<code class="docutils literal notranslate"><span class="pre">3d_plate_thermal.py</span></code>)</p></td>
+<td><p>00:01.263</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="mapdl_beam.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-mapdl-beam-py"><span class="std std-ref">MAPDL 2D Beam Example</span></a> (<code class="docutils literal notranslate"><span class="pre">mapdl_beam.py</span></code>)</p></td>
-<td><p>00:00.493</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="mapdl_3d_beam.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-mapdl-3d-beam-py"><span class="std std-ref">MAPDL 3D Beam Example</span></a> (<code class="docutils literal notranslate"><span class="pre">mapdl_3d_beam.py</span></code>)</p></td>
+<td><p>00:01.112</p></td>
+<td><p>0.0 MB</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="mapdl_beam.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-mapdl-beam-py"><span class="std std-ref">MAPDL 2D Beam Example</span></a> (<code class="docutils literal notranslate"><span class="pre">mapdl_beam.py</span></code>)</p></td>
+<td><p>00:00.624</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 </tbody>
@@ -300,7 +306,8 @@
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

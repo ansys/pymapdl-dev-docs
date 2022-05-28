@@ -9,8 +9,9 @@
     <title>MAPDL Element Size Transition Example &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -234,6 +233,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -486,6 +492,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -508,6 +519,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -518,7 +532,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -571,7 +585,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="mapdl-element-size-transition-example">
-<span id="ref-element-size-transition"></span><span id="sphx-glr-examples-gallery-examples-03-tips-n-tricks-01-smoothing-element-size-transitions-py"></span><h1>MAPDL Element Size Transition Example<a class="headerlink" href="#mapdl-element-size-transition-example" title="Permalink to this headline">¶</a></h1>
+<span id="ref-element-size-transition"></span><span id="sphx-glr-examples-gallery-examples-03-tips-n-tricks-01-smoothing-element-size-transitions-py"></span><h1>MAPDL Element Size Transition Example<a class="headerlink" href="#mapdl-element-size-transition-example" title="Permalink to this headline">#</a></h1>
 <p>There are many cases in which you will want to control the density of the mesh nearby
 a region of local high stresses (e.g. simulated crack, filleted bracket, etc.)  This
 usually introduces a sharp element size transition
@@ -587,11 +601,11 @@ reduce this effect using a simple geometry.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f405e212af0&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f42c9e5d340&gt;
 </pre></div>
 </div>
 <section id="the-geometry-a-box">
-<h2>The Geometry (a box)<a class="headerlink" href="#the-geometry-a-box" title="Permalink to this headline">¶</a></h2>
+<h2>The Geometry (a box)<a class="headerlink" href="#the-geometry-a-box" title="Permalink to this headline">#</a></h2>
 <p>This example uses very simple geometry. In this case, a 3D box with 4 sides.
 The two remaining sides are open, and we have a rectangular tube. Its
 dimensions are 5 x 5 x 1. We create this using 8 keypoints and then
@@ -616,7 +630,7 @@ building 4 areas.</p>
 </div>
 </section>
 <section id="mesh-size">
-<h2>Mesh size<a class="headerlink" href="#mesh-size" title="Permalink to this headline">¶</a></h2>
+<h2>Mesh size<a class="headerlink" href="#mesh-size" title="Permalink to this headline">#</a></h2>
 <p>We set the global mesh size to 0.7, but we’re particularly interested in
 face <code class="docutils literal notranslate"><span class="pre">a2</span></code>, so we set the element size of that face to 0.1. Then we just
 need to specify an element type (we use <code class="docutils literal notranslate"><span class="pre">SHELL181</span></code> here) and mesh our geometry.</p>
@@ -634,7 +648,7 @@ for a quadrilateral mesh.</p>
 </div>
 <img src="../../../_images/sphx_glr_01-smoothing-element-size-transitions_001.png" srcset="../../../_images/sphx_glr_01-smoothing-element-size-transitions_001.png" alt="01 smoothing element size transitions" class = "sphx-glr-single-img"/></section>
 <section id="smoothing-the-transition">
-<h2>Smoothing the transition<a class="headerlink" href="#smoothing-the-transition" title="Permalink to this headline">¶</a></h2>
+<h2>Smoothing the transition<a class="headerlink" href="#smoothing-the-transition" title="Permalink to this headline">#</a></h2>
 <p>The mesh mostly looks fine, but we have quite a sharp transition in element
 size along the edges of our focus area. This is likely undesirable because
 these are corners and generally require a higher degree of accuracy. This
@@ -655,7 +669,7 @@ are self-evident.</p>
 </div>
 <img src="../../../_images/sphx_glr_01-smoothing-element-size-transitions_002.png" srcset="../../../_images/sphx_glr_01-smoothing-element-size-transitions_002.png" alt="01 smoothing element size transitions" class = "sphx-glr-single-img"/></section>
 <section id="smoothing-the-transition-into-a2">
-<h2>Smoothing the transition into a2<a class="headerlink" href="#smoothing-the-transition-into-a2" title="Permalink to this headline">¶</a></h2>
+<h2>Smoothing the transition into a2<a class="headerlink" href="#smoothing-the-transition-into-a2" title="Permalink to this headline">#</a></h2>
 <p>Similarly, if we were happy to reduce the mesh size at the edges of <code class="docutils literal notranslate"><span class="pre">a2</span></code>, we
 could set the keypoint element sizes to be an intermediate value, which would
 shift the main location of the size transition to within the face of <code class="docutils literal notranslate"><span class="pre">a2</span></code>.</p>
@@ -672,7 +686,7 @@ shift the main location of the size transition to within the face of <code class
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.659 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.068 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-03-tips-n-tricks-01-smoothing-element-size-transitions-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/7cc1b8b4a4e49b62711eba9cc816edc6/01-smoothing-element-size-transitions.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">01-smoothing-element-size-transitions.py</span></code></a></p>
@@ -695,7 +709,8 @@ shift the main location of the size transition to within the face of <code class
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

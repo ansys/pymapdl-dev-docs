@@ -9,8 +9,9 @@
     <title>Post-Processing &#8212; PyMAPDL</title>
     
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -261,6 +260,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -271,7 +273,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -321,7 +323,7 @@
               <div>
                 
   <section id="post-processing">
-<h1>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h1>
+<h1>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">#</a></h1>
 <p>You can post process using an active MAPDL session using the
 <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.post.PostProcessing.html#ansys.mapdl.core.post.PostProcessing" title="ansys.mapdl.core.post.PostProcessing"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl.post_processing</span></code></a>
 an attribute of an instance of <a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>.
@@ -343,7 +345,7 @@ interface using the same software used within Ansys Workbench, but
 via a Python client.</p>
 </div>
 <section id="enriched-command-output">
-<h2>Enriched Command Output<a class="headerlink" href="#enriched-command-output" title="Permalink to this headline">¶</a></h2>
+<h2>Enriched Command Output<a class="headerlink" href="#enriched-command-output" title="Permalink to this headline">#</a></h2>
 <p>All <a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> commands output
 a string object which can be parsed to obtain specific data from it.</p>
 <p>In certain <a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> commands
@@ -443,7 +445,7 @@ These commands are listed in <a class="reference internal" href="#table-1">Table
 </div>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h2>
 <p>Classically, one would request nodal results from MAPDL using the
 <code class="docutils literal notranslate"><span class="pre">PRNSOL</span></code> command.  For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST1</span><span class="p">:</span>
@@ -487,12 +489,12 @@ nodal displacement with:</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/post_norm_disp.png"><img alt="../_images/post_norm_disp.png" src="../_images/post_norm_disp.png" style="width: 300pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Normalized Displacement of a Cylinder from MAPDL</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Normalized Displacement of a Cylinder from MAPDL</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="selected-nodes">
-<h2>Selected Nodes<a class="headerlink" href="#selected-nodes" title="Permalink to this headline">¶</a></h2>
+<h2>Selected Nodes<a class="headerlink" href="#selected-nodes" title="Permalink to this headline">#</a></h2>
 <p>The MAPDL database processes some results independently of if nodes or
 elements are selected.  If you have subselected a certain component
 and wish to also limit the result of a certain output
@@ -505,7 +507,7 @@ a mask of the currently selected nodes.</p>
 </pre></div>
 </div>
 <section id="post-processing-object-methods">
-<h3>Post Processing Object Methods<a class="headerlink" href="#post-processing-object-methods" title="Permalink to this headline">¶</a></h3>
+<h3>Post Processing Object Methods<a class="headerlink" href="#post-processing-object-methods" title="Permalink to this headline">#</a></h3>
 <p>For a full list of all available post-processing methods, see
 <a class="reference internal" href="../api/post.html#post-processing-api"><span class="std std-ref">Post-Processing</span></a>.</p>
 </section>
@@ -522,7 +524,8 @@ a mask of the currently selected nodes.</p>
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

@@ -8,8 +8,9 @@
     <title>Index &#8212; PyMAPDL</title>
     
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -19,21 +20,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="_static/css/breadcrumbs.css" rel="stylesheet">
@@ -57,7 +55,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -137,20 +135,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -185,7 +183,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -195,6 +194,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -1273,10 +1275,10 @@
 </li>
       <li><a href="api/_autosummary/ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html#ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system">element_coord_system() (ansys.mapdl.core.mesh_grpc.MeshGrpc method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/ansys.mapdl.core.post.PostProcessing.element_displacement.html#ansys.mapdl.core.post.PostProcessing.element_displacement">element_displacement() (ansys.mapdl.core.post.PostProcessing method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/ansys.mapdl.core.post.PostProcessing.element_stress.html#ansys.mapdl.core.post.PostProcessing.element_stress">element_stress() (ansys.mapdl.core.post.PostProcessing method)</a>
 </li>
       <li><a href="api/_autosummary/ansys.mapdl.core.post.PostProcessing.element_temperature.html#ansys.mapdl.core.post.PostProcessing.element_temperature">element_temperature() (ansys.mapdl.core.post.PostProcessing method)</a>
@@ -1386,6 +1388,8 @@
       <li><a href="mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.esys.html#ansys.mapdl.core.Mapdl.esys">esys() (ansys.mapdl.core.Mapdl method)</a>
 </li>
       <li><a href="mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.et.html#ansys.mapdl.core.Mapdl.et">et() (ansys.mapdl.core.Mapdl method)</a>
+</li>
+      <li><a href="api/_autosummary/ansys.mapdl.core.mesh_grpc.MeshGrpc.et_id.html#ansys.mapdl.core.mesh_grpc.MeshGrpc.et_id">et_id (ansys.mapdl.core.mesh_grpc.MeshGrpc property)</a>
 </li>
       <li><a href="mapdl_commands/post1/_autosummary/ansys.mapdl.core.Mapdl.etable.html#ansys.mapdl.core.Mapdl.etable">etable() (ansys.mapdl.core.Mapdl method)</a>
 </li>
@@ -3855,10 +3859,10 @@
 </li>
       <li><a href="mapdl_commands/solution/_autosummary/ansys.mapdl.core.Mapdl.timint.html#ansys.mapdl.core.Mapdl.timint">timint() (ansys.mapdl.core.Mapdl method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.timp.html#ansys.mapdl.core.Mapdl.timp">timp() (ansys.mapdl.core.Mapdl method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="mapdl_commands/solution/_autosummary/ansys.mapdl.core.Mapdl.tintp.html#ansys.mapdl.core.Mapdl.tintp">tintp() (ansys.mapdl.core.Mapdl method)</a>
 </li>
       <li><a href="api/_autosummary/ansys.mapdl.core.Information.title.html#ansys.mapdl.core.Information.title">title (ansys.mapdl.core.Information property)</a>
@@ -3906,6 +3910,10 @@
       <li><a href="mapdl_commands/post1/_autosummary/ansys.mapdl.core.Mapdl.trtime.html#ansys.mapdl.core.Mapdl.trtime">trtime() (ansys.mapdl.core.Mapdl method)</a>
 </li>
       <li><a href="mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.tshap.html#ansys.mapdl.core.Mapdl.tshap">tshap() (ansys.mapdl.core.Mapdl method)</a>
+</li>
+      <li><a href="api/_autosummary/ansys.mapdl.core.mesh_grpc.MeshGrpc.tshape.html#ansys.mapdl.core.mesh_grpc.MeshGrpc.tshape">tshape (ansys.mapdl.core.mesh_grpc.MeshGrpc property)</a>
+</li>
+      <li><a href="api/_autosummary/ansys.mapdl.core.mesh_grpc.MeshGrpc.tshape_key.html#ansys.mapdl.core.mesh_grpc.MeshGrpc.tshape_key">tshape_key (ansys.mapdl.core.mesh_grpc.MeshGrpc property)</a>
 </li>
       <li><a href="mapdl_commands/graphics/_autosummary/ansys.mapdl.core.Mapdl.tspec.html#ansys.mapdl.core.Mapdl.tspec">tspec() (ansys.mapdl.core.Mapdl method)</a>
 </li>
@@ -4243,7 +4251,8 @@
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

@@ -9,8 +9,9 @@
     <title>Parametric Calculation &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -61,7 +59,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -141,20 +139,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -190,7 +188,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -235,6 +234,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -487,6 +493,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -509,6 +520,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -519,7 +533,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -582,7 +596,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="parametric-calculation">
-<span id="ref-vm8-example"></span><span id="sphx-glr-examples-gallery-examples-06-verif-manual-vm-008-parametric-calculation-py"></span><h1>Parametric Calculation<a class="headerlink" href="#parametric-calculation" title="Permalink to this headline">¶</a></h1>
+<span id="ref-vm8-example"></span><span id="sphx-glr-examples-gallery-examples-06-verif-manual-vm-008-parametric-calculation-py"></span><h1>Parametric Calculation<a class="headerlink" href="#parametric-calculation" title="Permalink to this headline">#</a></h1>
 <dl class="simple">
 <dt>Problem Description:</dt><dd><ul class="simple">
 <li><p>Write a user file macro to calculate the distance <code class="docutils literal notranslate"><span class="pre">d</span></code> between either nodes
@@ -644,7 +658,7 @@ with the simple distances’ formula between keypoints as:</p>
 </dd>
 </dl>
 <section id="start-mapdl">
-<h2>Start MAPDL<a class="headerlink" href="#start-mapdl" title="Permalink to this headline">¶</a></h2>
+<h2>Start MAPDL<a class="headerlink" href="#start-mapdl" title="Permalink to this headline">#</a></h2>
 <p>Start MAPDL and import Numpy and Pandas libraries.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_path = &#39;_static/vm8_setup.png&#39;</span>
 
@@ -659,7 +673,7 @@ with the simple distances’ formula between keypoints as:</p>
 </div>
 </section>
 <section id="pre-processing">
-<h2>Pre-Processing<a class="headerlink" href="#pre-processing" title="Permalink to this headline">¶</a></h2>
+<h2>Pre-Processing<a class="headerlink" href="#pre-processing" title="Permalink to this headline">#</a></h2>
 <p>Enter verification example mode and the pre-processing routine.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">verify</span><span class="p">()</span>
@@ -668,7 +682,7 @@ with the simple distances’ formula between keypoints as:</p>
 </div>
 </section>
 <section id="define-class">
-<h2>Define Class<a class="headerlink" href="#define-class" title="Permalink to this headline">¶</a></h2>
+<h2>Define Class<a class="headerlink" href="#define-class" title="Permalink to this headline">#</a></h2>
 <p>Identifying the class <code class="docutils literal notranslate"><span class="pre">create</span></code> with methods <code class="docutils literal notranslate"><span class="pre">create_kp_method</span></code> and
 <code class="docutils literal notranslate"><span class="pre">create_node_method</span></code> to calculate and plot the distances between keypoints
 and nodes.</p>
@@ -746,7 +760,7 @@ and nodes.</p>
 </div>
 </section>
 <section id="distance-between-keypoints">
-<h2>Distance between keypoints<a class="headerlink" href="#distance-between-keypoints" title="Permalink to this headline">¶</a></h2>
+<h2>Distance between keypoints<a class="headerlink" href="#distance-between-keypoints" title="Permalink to this headline">#</a></h2>
 <p>Using already created method for keypoints to get the distance between them
 and print out an output. The keypoints have got next coordinates:</p>
 <ul class="simple">
@@ -764,9 +778,7 @@ and print out an output. The keypoints have got next coordinates:</p>
 </pre></div>
 </div>
 <img src="../../../_images/sphx_glr_vm-008-parametric_calculation_001.png" srcset="../../../_images/sphx_glr_vm-008-parametric_calculation_001.png" alt="vm 008 parametric calculation" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 3.72kB [00:00, 11.6MB/s]
-Distance between keypoint is: 305.16
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Distance between keypoint is: 305.16
 
 
 3   100.       0.00       30.0       0.00         0     0   0    0   0    0
@@ -775,7 +787,7 @@ Distance between keypoint is: 305.16
 </div>
 </section>
 <section id="distance-between-nodes">
-<h2>Distance between nodes.<a class="headerlink" href="#distance-between-nodes" title="Permalink to this headline">¶</a></h2>
+<h2>Distance between nodes.<a class="headerlink" href="#distance-between-nodes" title="Permalink to this headline">#</a></h2>
 <p>Using already created method for nodes to get the distance between them and
 print out an output. The nodes have got next coordinates:</p>
 <ul class="simple">
@@ -802,7 +814,7 @@ print out an output. The nodes have got next coordinates:</p>
 </div>
 </section>
 <section id="check-results">
-<h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">¶</a></h2>
+<h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">#</a></h2>
 <p>Finally we have the results of the distances for both simulations,
 which can be compared with expected target values:</p>
 <ul class="simple">
@@ -883,7 +895,7 @@ with following settings below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.765 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.944 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-008-parametric-calculation-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/ad9880df64843f0847799266023a5dc5/vm-008-parametric_calculation.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-008-parametric_calculation.py</span></code></a></p>
@@ -906,7 +918,8 @@ with following settings below:</p>
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

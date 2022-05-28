@@ -9,8 +9,9 @@
     <title>Path Operations within pyMAPDL and MAPDL &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -234,6 +233,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -486,6 +492,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -508,6 +519,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -518,7 +532,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -574,7 +588,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="path-operations-within-pymapdl-and-mapdl">
-<span id="ref-path-operation"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-path-operations-py"></span><h1>Path Operations within pyMAPDL and MAPDL<a class="headerlink" href="#path-operations-within-pymapdl-and-mapdl" title="Permalink to this headline">¶</a></h1>
+<span id="ref-path-operation"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-path-operations-py"></span><h1>Path Operations within pyMAPDL and MAPDL<a class="headerlink" href="#path-operations-within-pymapdl-and-mapdl" title="Permalink to this headline">#</a></h1>
 <p>This tutorial shows how you can use pyansys and MAPDL to interpolate
 along a path for stress.  This shows some advanced features of the
 <cite>pyvista</cite> module to perform the interpolation.</p>
@@ -591,7 +605,7 @@ along a path for stress.  This shows some advanced features of the
 </pre></div>
 </div>
 <section id="mapdl-solve-a-beam-with-a-non-uniform-load">
-<h2>MAPDL: Solve a Beam with a Non-Uniform Load<a class="headerlink" href="#mapdl-solve-a-beam-with-a-non-uniform-load" title="Permalink to this headline">¶</a></h2>
+<h2>MAPDL: Solve a Beam with a Non-Uniform Load<a class="headerlink" href="#mapdl-solve-a-beam-with-a-non-uniform-load" title="Permalink to this headline">#</a></h2>
 <p>Create a beam, apply a load, and solve for the static solution.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># beam dimensions</span>
 <a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">width_</span></a> <span class="o">=</span> <span class="mf">0.5</span>
@@ -635,7 +649,7 @@ along a path for stress.  This shows some advanced features of the
 </div>
 <img src="../../../_images/sphx_glr_path_operations_001.png" srcset="../../../_images/sphx_glr_path_operations_001.png" alt="path operations" class = "sphx-glr-single-img"/></section>
 <section id="post-processing-mapdl-path-operation">
-<h2>Post-Processing - MAPDL Path Operation<a class="headerlink" href="#post-processing-mapdl-path-operation" title="Permalink to this headline">¶</a></h2>
+<h2>Post-Processing - MAPDL Path Operation<a class="headerlink" href="#post-processing-mapdl-path-operation" title="Permalink to this headline">#</a></h2>
 <p>Compute the stress along a path within MAPDL and convert the result
 to a numpy array</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
@@ -688,7 +702,7 @@ to a numpy array</p>
 </div>
 </section>
 <section id="comparing-with-path-operation-within-pyvista">
-<h2>Comparing with Path Operation Within <cite>pyvista</cite><a class="headerlink" href="#comparing-with-path-operation-within-pyvista" title="Permalink to this headline">¶</a></h2>
+<h2>Comparing with Path Operation Within <cite>pyvista</cite><a class="headerlink" href="#comparing-with-path-operation-within-pyvista" title="Permalink to this headline">#</a></h2>
 <p>The same path operation can be performed within <cite>pyvista</cite> by saving
 the resulting stress and storing within the underlying <code class="docutils literal notranslate"><span class="pre">UnstructuredGrid</span></code></p>
 <p>Take note that there is slight piece-wise behavior in both MAPDL’s
@@ -728,14 +742,9 @@ interpolate / compute the point attributes.
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_path_operations_002.png" srcset="../../../_images/sphx_glr_path_operations_002.png" alt="path operations" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading file.rst: 0.00B [00:00, ?B/s]
-Downloading file.rst: 5.19MB [00:00, 443MB/s]
-</pre></div>
-</div>
-</section>
+<img src="../../../_images/sphx_glr_path_operations_002.png" srcset="../../../_images/sphx_glr_path_operations_002.png" alt="path operations" class = "sphx-glr-single-img"/></section>
 <section id="d-slice-interpolation">
-<h2>2D Slice Interpolation<a class="headerlink" href="#d-slice-interpolation" title="Permalink to this headline">¶</a></h2>
+<h2>2D Slice Interpolation<a class="headerlink" href="#d-slice-interpolation" title="Permalink to this headline">#</a></h2>
 <p>Take a 2D slice along the beam and plot it alongside the stress at
 the line.</p>
 <p>Note that this slice occurs between the edge nodes of this beam,
@@ -773,7 +782,7 @@ extrapolated to the edge nodes of ANSYS FEMs.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.087 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.058 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-path-operations-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/88a28e70b19eacb616e36eb57c5197f6/path_operations.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">path_operations.py</span></code></a></p>
@@ -796,7 +805,8 @@ extrapolated to the edge nodes of ANSYS FEMs.</p>
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

@@ -9,8 +9,9 @@
     <title>Pressure Vessel &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -234,6 +233,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -486,6 +492,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -508,6 +519,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -518,7 +532,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -556,7 +570,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="pressure-vessel">
-<span id="pressure-vessel-example"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-pressure-vessel-py"></span><h1>Pressure Vessel<a class="headerlink" href="#pressure-vessel" title="Permalink to this headline">¶</a></h1>
+<span id="pressure-vessel-example"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-pressure-vessel-py"></span><h1>Pressure Vessel<a class="headerlink" href="#pressure-vessel" title="Permalink to this headline">#</a></h1>
 <p>This example demonstrates how to create a basic pressure vessel and
 apply a pressure to it.</p>
 <p>Also shown here:
@@ -635,11 +649,6 @@ apply a pressure to it.</p>
 <li><img src="../../../_images/sphx_glr_pressure_vessel_001.png" srcset="../../../_images/sphx_glr_pressure_vessel_001.png" alt="pressure vessel" class = "sphx-glr-multi-img"/></li>
 <li><img src="../../../_images/sphx_glr_pressure_vessel_002.png" srcset="../../../_images/sphx_glr_pressure_vessel_002.png" alt="pressure vessel" class = "sphx-glr-multi-img"/></li>
 </ul>
-<p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 84.4kB [00:00, 87.5MB/s]
-</pre></div>
-</div>
 <p>Create the mesh</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">smrtsize</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">esize</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -673,11 +682,11 @@ Downloading _tmp.iges: 84.4kB [00:00, 87.5MB/s]
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>FINISH SOLUTION PROCESSING
 
 
- ***** ROUTINE COMPLETED *****  CP =        94.389
+ ***** ROUTINE COMPLETED *****  CP =       134.527
 </pre></div>
 </div>
 <section id="post-processing">
-<h2>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
+<h2>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">#</a></h2>
 <p>Enter the MAPDL post-postprocessing routine (/POST1) and obtain the
 von-mises stress for the single static solution. Here, we use MAPDL
 directly to obtain the results using a wrapper around the VGET
@@ -740,9 +749,7 @@ accessing the result file using the legacy file reader
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading file.rst: 0.00B [00:00, ?B/s]
-Downloading file.rst: 15.5MB [00:00, 473MB/s]
-All close: True
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>All close: True
 </pre></div>
 </div>
 <p>That these results are equivalent to results from PRNSOL.</p>
@@ -778,7 +785,7 @@ PRNSOL MAPDL Min:                 3483.041895
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.884 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.930 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-pressure-vessel-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/70263bdae41b8cfda19188857e70dec3/pressure_vessel.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pressure_vessel.py</span></code></a></p>
@@ -801,7 +808,8 @@ PRNSOL MAPDL Min:                 3483.041895
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

@@ -9,8 +9,9 @@
     <title>Pinched Cylinder &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -61,7 +59,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -141,20 +139,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -190,7 +188,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -235,6 +234,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -487,6 +493,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -509,6 +520,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -519,7 +533,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -637,7 +651,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="pinched-cylinder">
-<span id="ref-vm6-example"></span><span id="sphx-glr-examples-gallery-examples-06-verif-manual-vm-006-pinched-cylinder-py"></span><h1>Pinched Cylinder<a class="headerlink" href="#pinched-cylinder" title="Permalink to this headline">¶</a></h1>
+<span id="ref-vm6-example"></span><span id="sphx-glr-examples-gallery-examples-06-verif-manual-vm-006-pinched-cylinder-py"></span><h1>Pinched Cylinder<a class="headerlink" href="#pinched-cylinder" title="Permalink to this headline">#</a></h1>
 <dl class="simple">
 <dt>Problem Description:</dt><dd><ul class="simple">
 <li><p>A thin-walled cylinder is pinched by a force <span class="math notranslate nohighlight">\(F\)</span> at the middle
@@ -691,7 +705,7 @@ due to symmetry.</p></li>
 </pre></div>
 </div>
 <section id="start-mapdl">
-<h2>Start MAPDL<a class="headerlink" href="#start-mapdl" title="Permalink to this headline">¶</a></h2>
+<h2>Start MAPDL<a class="headerlink" href="#start-mapdl" title="Permalink to this headline">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="c1"># Start mapdl.</span>
@@ -700,7 +714,7 @@ due to symmetry.</p></li>
 </div>
 </section>
 <section id="initiate-pre-processing">
-<h2>Initiate Pre-Processing<a class="headerlink" href="#initiate-pre-processing" title="Permalink to this headline">¶</a></h2>
+<h2>Initiate Pre-Processing<a class="headerlink" href="#initiate-pre-processing" title="Permalink to this headline">#</a></h2>
 <p>Enter verification example mode and the pre-processing routine.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">start_prep7</span><span class="p">():</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -713,7 +727,7 @@ due to symmetry.</p></li>
 </div>
 </section>
 <section id="define-element-type">
-<h2>Define Element Type<a class="headerlink" href="#define-element-type" title="Permalink to this headline">¶</a></h2>
+<h2>Define Element Type<a class="headerlink" href="#define-element-type" title="Permalink to this headline">#</a></h2>
 <p>Set up the element type (a shell-type).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the element type number.</span>
 <span class="k">def</span> <span class="nf">define_element</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">elem_type</span></a><span class="p">):</span>
@@ -765,7 +779,7 @@ Printout the element list with its own properties:
 </div>
 </section>
 <section id="define-material">
-<h2>Define Material<a class="headerlink" href="#define-material" title="Permalink to this headline">¶</a></h2>
+<h2>Define Material<a class="headerlink" href="#define-material" title="Permalink to this headline">#</a></h2>
 <p>Set up the material properties, where:
 Young Modulus is <span class="math notranslate nohighlight">\(E = 10.5 \cdot 10^6 psi\)</span>,
 Poisson’s ratio is <span class="math notranslate nohighlight">\(\nu = 0.3125\)</span>.</p>
@@ -796,7 +810,7 @@ Poisson’s ratio is <span class="math notranslate nohighlight">\(\nu = 0.3125\)
 </div>
 </section>
 <section id="define-section">
-<h2>Define Section<a class="headerlink" href="#define-section" title="Permalink to this headline">¶</a></h2>
+<h2>Define Section<a class="headerlink" href="#define-section" title="Permalink to this headline">#</a></h2>
 <p>Set up the cross-section properties for a shell element.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define cross-section number and thickness of the shell element.</span>
 <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sec_num</span></a> <span class="o">=</span> <span class="mi">1</span>
@@ -843,7 +857,7 @@ Poisson’s ratio is <span class="math notranslate nohighlight">\(\nu = 0.3125\)
 </div>
 </section>
 <section id="define-geometry">
-<h2>Define Geometry<a class="headerlink" href="#define-geometry" title="Permalink to this headline">¶</a></h2>
+<h2>Define Geometry<a class="headerlink" href="#define-geometry" title="Permalink to this headline">#</a></h2>
 <p>Set up the keypoints and create the area through the keypoints.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define geometry of the simplified mathematical model.</span>
 <span class="k">def</span> <span class="nf">define_geometry</span><span class="p">():</span>
@@ -896,17 +910,12 @@ Poisson’s ratio is <span class="math notranslate nohighlight">\(\nu = 0.3125\)
 <li><img src="../../../_images/sphx_glr_vm-006-pinched_cylinder_002.png" srcset="../../../_images/sphx_glr_vm-006-pinched_cylinder_002.png" alt="vm 006 pinched cylinder" class = "sphx-glr-multi-img"/></li>
 </ul>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 15.7kB [00:00, 40.1MB/s]
-
-Downloading _tmp.iges: 0.00B [00:00, ?B/s]
-Downloading _tmp.iges: 16.2kB [00:00, 35.5MB/s]
-The number of the keypoint where F is applied: 3
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The number of the keypoint where F is applied: 3
 </pre></div>
 </div>
 </section>
 <section id="meshing">
-<h2>Meshing<a class="headerlink" href="#meshing" title="Permalink to this headline">¶</a></h2>
+<h2>Meshing<a class="headerlink" href="#meshing" title="Permalink to this headline">#</a></h2>
 <p>Define line division of the lines, then mesh the area with shell elements.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define mesh properties and create the mesh with shell elements.</span>
 <span class="k">def</span> <span class="nf">meshing</span><span class="p">():</span>
@@ -1101,7 +1110,7 @@ The number of the keypoint where F is applied: 3
 </div>
 </section>
 <section id="define-boundary-conditions">
-<h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this headline">#</a></h2>
 <p>Application of symmetric boundary conditions for simplified model.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select nodes by location and apply BC.</span>
 <span class="k">def</span> <span class="nf">define_bc</span><span class="p">():</span>
@@ -1120,7 +1129,7 @@ The number of the keypoint where F is applied: 3
 </div>
 </section>
 <section id="define-distributed-loads">
-<h2>Define Distributed Loads<a class="headerlink" href="#define-distributed-loads" title="Permalink to this headline">¶</a></h2>
+<h2>Define Distributed Loads<a class="headerlink" href="#define-distributed-loads" title="Permalink to this headline">#</a></h2>
 <p>Apply the force of <span class="math notranslate nohighlight">\(F = (100/4) lb\)</span> in the y-direction.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define loads.</span>
 <span class="k">def</span> <span class="nf">define_loads</span><span class="p">():</span>
@@ -1137,7 +1146,7 @@ The number of the keypoint where F is applied: 3
 </div>
 </section>
 <section id="solve">
-<h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">¶</a></h2>
+<h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">#</a></h2>
 <p>Enter solution mode and solve the system. Print the solver output.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">solve_procedure</span><span class="p">():</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/solu&quot;</span><span class="p">)</span>
@@ -1235,7 +1244,7 @@ The number of the keypoint where F is applied: 3
 </div>
 </section>
 <section id="post-processing">
-<h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
+<h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">#</a></h2>
 <p>Enter post-processing for the model with elements <code class="docutils literal notranslate"><span class="pre">shell181</span></code>.
 Plotting nodal displacement.
 Get the the radial displacement at the node where force F is applied.</p>
@@ -1250,7 +1259,7 @@ Get the the radial displacement at the node where force F is applied.</p>
 </div>
 </section>
 <section id="plotting">
-<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h2>
 <p>Plot nodal displacement using PyVista.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_nodal_disp</span><span class="p">():</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">plot_nodal_displacement</span><span class="p">(</span>
@@ -1269,7 +1278,7 @@ Get the the radial displacement at the node where force F is applied.</p>
 </div>
 <img src="../../../_images/sphx_glr_vm-006-pinched_cylinder_005.png" srcset="../../../_images/sphx_glr_vm-006-pinched_cylinder_005.png" alt="vm 006 pinched cylinder" class = "sphx-glr-single-img"/></section>
 <section id="getting-the-radial-displacements">
-<h2>Getting the radial displacements<a class="headerlink" href="#getting-the-radial-displacements" title="Permalink to this headline">¶</a></h2>
+<h2>Getting the radial displacements<a class="headerlink" href="#getting-the-radial-displacements" title="Permalink to this headline">#</a></h2>
 <p>To determine the radial displacement <span class="math notranslate nohighlight">\(\delta\)</span> at the point
 where F is applied, we can use <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.Mapdl.get_value.html#ansys.mapdl.core.Mapdl.get_value" title="ansys.mapdl.core.Mapdl.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.get_value</span></code></a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_displacements</span><span class="p">():</span>
@@ -1305,7 +1314,7 @@ Radial displacement: -0.11
 </div>
 </section>
 <section id="rerun-model-with-shell281">
-<h2>Rerun Model with SHELL281<a class="headerlink" href="#rerun-model-with-shell281" title="Permalink to this headline">¶</a></h2>
+<h2>Rerun Model with SHELL281<a class="headerlink" href="#rerun-model-with-shell281" title="Permalink to this headline">#</a></h2>
 <p>Perform the simulation again using the element type SHELL281.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restart pre-processing routine.</span>
 <span class="n">start_prep7</span><span class="p">()</span>
@@ -1613,7 +1622,7 @@ Radial displacement: -0.11
 </div>
 </section>
 <section id="id1">
-<h2>Solve<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>Solve<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>Enter solution mode and solve the system. Print the solver output.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solve_procedure</span><span class="p">()</span>
 </pre></div>
@@ -1702,7 +1711,7 @@ Radial displacement: -0.11
 </div>
 </section>
 <section id="id2">
-<h2>Post-processing<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>Post-processing<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>Enter post-processing for the model with elements <code class="docutils literal notranslate"><span class="pre">shell281</span></code>.
 Plotting nodal displacement.
 Get the the radial displacement at the node where force F is applied.</p>
@@ -1713,7 +1722,7 @@ Get the the radial displacement at the node where force F is applied.</p>
 </div>
 <img src="../../../_images/sphx_glr_vm-006-pinched_cylinder_007.png" srcset="../../../_images/sphx_glr_vm-006-pinched_cylinder_007.png" alt="vm 006 pinched cylinder" class = "sphx-glr-single-img"/></section>
 <section id="check-results">
-<h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">¶</a></h2>
+<h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">#</a></h2>
 <p>Now we have the deflections, we can compare them to the expected values
 of radial deflection at the node where force <span class="math notranslate nohighlight">\(F\)</span> was applied
 for both simulations. The expected value for <span class="math notranslate nohighlight">\(\delta_{\mathrm{shell181}}\)</span> is 0.1139,
@@ -1755,7 +1764,7 @@ and <span class="math notranslate nohighlight">\(\delta_{\mathrm{shell281}}\)</s
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.973 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.966 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-006-pinched-cylinder-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/67d392adcde641261b383b6161b41103/vm-006-pinched_cylinder.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-006-pinched_cylinder.py</span></code></a></p>
@@ -1778,7 +1787,8 @@ and <span class="math notranslate nohighlight">\(\delta_{\mathrm{shell281}}\)</s
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

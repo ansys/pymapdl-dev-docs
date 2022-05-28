@@ -9,8 +9,9 @@
     <title>ANSYS APDL Interactive Control Examples &#8212; PyMAPDL</title>
     
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -261,6 +260,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -271,7 +273,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -326,7 +328,7 @@
               <div>
                 
   <section id="ansys-apdl-interactive-control-examples">
-<h1>ANSYS APDL Interactive Control Examples<a class="headerlink" href="#ansys-apdl-interactive-control-examples" title="Permalink to this headline">¶</a></h1>
+<h1>ANSYS APDL Interactive Control Examples<a class="headerlink" href="#ansys-apdl-interactive-control-examples" title="Permalink to this headline">#</a></h1>
 <p>These examples are used to demonstrate how to convert an existing
 ANSYS APDL script to a python PyMAPDL script.  You could also simply
 use the built-in <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.convert_script.html#ansys.mapdl.core.convert_script" title="ansys.mapdl.core.convert_script"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_script()</span></code></a> within <a class="reference external" href="https://pypi.org/project/ansys-mapdl-core/">ansys-mapdl-core</a> to convert an existing
@@ -338,11 +340,11 @@ input file:</p>
 </pre></div>
 </div>
 <section id="torsional-load-on-a-bar-using-surf154-elements">
-<h2>Torsional Load on a Bar using SURF154 Elements<a class="headerlink" href="#torsional-load-on-a-bar-using-surf154-elements" title="Permalink to this headline">¶</a></h2>
+<h2>Torsional Load on a Bar using SURF154 Elements<a class="headerlink" href="#torsional-load-on-a-bar-using-surf154-elements" title="Permalink to this headline">#</a></h2>
 <p>This ANSYS APDL script builds a bar and applies torque to it using
 SURF154 elements.  This is a static analysis example.</p>
 <section id="script-initialization">
-<h3>Script Initialization<a class="headerlink" href="#script-initialization" title="Permalink to this headline">¶</a></h3>
+<h3>Script Initialization<a class="headerlink" href="#script-initialization" title="Permalink to this headline">#</a></h3>
 <p>Beginning of MAPDL script:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!----------------------------------------
 ! Input torque applied (moment)
@@ -380,7 +382,7 @@ instance of <a class="reference internal" href="../api/mapdl.html#ansys.mapdl.co
 </div>
 </section>
 <section id="model-creation">
-<h3>Model Creation<a class="headerlink" href="#model-creation" title="Permalink to this headline">¶</a></h3>
+<h3>Model Creation<a class="headerlink" href="#model-creation" title="Permalink to this headline">#</a></h3>
 <p>APDL Script:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!----------------------------------------
 ! Define higher-order SOLID186
@@ -480,7 +482,7 @@ finish
 </div>
 </section>
 <section id="solution">
-<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h3>
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h3>
 <p>APDL script:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/solu
 antype,static,new
@@ -565,7 +567,7 @@ SAVE
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/cylinder_disp.png"><img alt="../_images/cylinder_disp.png" src="../_images/cylinder_disp.png" style="width: 300pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Non-interactive Screenshot of Displacement from PyMAPDL</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Non-interactive Screenshot of Displacement from PyMAPDL</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">plot_nodal_stress</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Sx&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;bwr&#39;</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span>
@@ -575,7 +577,7 @@ SAVE
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../_images/cylinder_sx.png"><img alt="../_images/cylinder_sx.png" src="../_images/cylinder_sx.png" style="width: 300pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Non-interactive Screenshot of X Stress from PyMAPDL</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Non-interactive Screenshot of X Stress from PyMAPDL</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">plot_principal_nodal_stress</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;SEQV&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;bwr&#39;</span><span class="p">,</span>
@@ -585,7 +587,7 @@ SAVE
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../_images/cylinder_vonmises.png"><img alt="../_images/cylinder_vonmises.png" src="../_images/cylinder_vonmises.png" style="width: 300pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Non-interactive Screenshot of von Mises Stress from PyMAPDL</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Non-interactive Screenshot of von Mises Stress from PyMAPDL</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Alternatively, you can access the same results directly from MAPDL
@@ -599,7 +601,7 @@ using the <code class="xref py py-attr docutils literal notranslate"><span class
 </section>
 </section>
 <section id="running-an-input-file-spotweld-shell181-example">
-<h2>Running an Input File - Spotweld SHELL181 Example<a class="headerlink" href="#running-an-input-file-spotweld-shell181-example" title="Permalink to this headline">¶</a></h2>
+<h2>Running an Input File - Spotweld SHELL181 Example<a class="headerlink" href="#running-an-input-file-spotweld-shell181-example" title="Permalink to this headline">#</a></h2>
 <p>This MAPDL example demonstrates how to model spot welding on three
 thin sheets of metal.  Here, we simply run the full input file using
 the PyMAPDL interface.</p>
@@ -757,7 +759,7 @@ after running the MAPDL analysis.</p>
 <figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../_images/spot_disp.png"><img alt="../_images/spot_disp.png" src="../_images/spot_disp.png" style="width: 300pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Spot Weld: Displacement</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Spot Weld: Displacement</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Get the nodal and element component stress at time step 0.  Plot the
@@ -774,7 +776,7 @@ stress in the Z direction.</p>
 <figure class="align-default" id="id5">
 <a class="reference internal image-reference" href="../_images/spot_sz.png"><img alt="../_images/spot_sz.png" src="../_images/spot_sz.png" style="width: 300pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Spot Weld: Z Stress</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Spot Weld: Z Stress</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span> <span class="n">the</span> <span class="n">principal</span> <span class="n">nodal</span> <span class="n">stress</span> <span class="ow">and</span> <span class="n">plot</span> <span class="n">the</span> <span class="n">von</span> <span class="n">Mises</span> <span class="n">Stress</span>
@@ -786,7 +788,7 @@ stress in the Z direction.</p>
 <figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/spot_seqv.png"><img alt="../_images/spot_seqv.png" src="../_images/spot_seqv.png" style="width: 300pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Spot Weld: von Mises Stress</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Spot Weld: von Mises Stress</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -802,7 +804,8 @@ stress in the Z direction.</p>
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

@@ -9,8 +9,9 @@
     <title>Frequently Asked Questions &#8212; PyMAPDL</title>
     
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -231,6 +230,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -241,7 +243,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -294,10 +296,10 @@
               <div>
                 
   <section id="frequently-asked-questions">
-<span id="faq"></span><h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+<span id="faq"></span><h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">#</a></h1>
 <p>A collection of frequently asked questions and their answers.</p>
 <section id="how-should-i-report-issues">
-<h2>How should I report issues?<a class="headerlink" href="#how-should-i-report-issues" title="Permalink to this headline">¶</a></h2>
+<h2>How should I report issues?<a class="headerlink" href="#how-should-i-report-issues" title="Permalink to this headline">#</a></h2>
 <p>Issues with pyansys such as bugs, feature requests, and documentation
 errors can be reported on the <a class="reference external" href="https://github.com/pyansys/PyMAPDL/issues">GitHub page</a> as new issues.</p>
 <p>If you wish to ask more open-ended questions or wish to pick the
@@ -305,7 +307,7 @@ brains of the community you can visit the <a class="reference external" href="ht
 repository.</p>
 </section>
 <section id="what-are-the-pros-and-cons-of-pyansys-vs-ansys-act">
-<h2>What are the pros and cons of pyansys vs Ansys ACT?<a class="headerlink" href="#what-are-the-pros-and-cons-of-pyansys-vs-ansys-act" title="Permalink to this headline">¶</a></h2>
+<h2>What are the pros and cons of pyansys vs Ansys ACT?<a class="headerlink" href="#what-are-the-pros-and-cons-of-pyansys-vs-ansys-act" title="Permalink to this headline">#</a></h2>
 <p>It depends on your pipeline and software approach. Ansys Act is a
 workbench dependent approach where extensions are built from within
 the ACT App Builder and then run from within Ansys Mechanical.  If you
@@ -329,7 +331,7 @@ compatible with IronPython (Python 2)</p></li>
 like to develop software.</p>
 </section>
 <section id="i-ve-heard-apdl-has-been-deprecated-by-ansys-what-does-that-mean-for-pymapdl">
-<h2>I’ve heard APDL has been “deprecated” by Ansys, what does that mean for PyMAPDL?<a class="headerlink" href="#i-ve-heard-apdl-has-been-deprecated-by-ansys-what-does-that-mean-for-pymapdl" title="Permalink to this headline">¶</a></h2>
+<h2>I’ve heard APDL has been “deprecated” by Ansys, what does that mean for PyMAPDL?<a class="headerlink" href="#i-ve-heard-apdl-has-been-deprecated-by-ansys-what-does-that-mean-for-pymapdl" title="Permalink to this headline">#</a></h2>
 <p>APDL isn’t going anywhere. In fact, whenever you call Mechanical Workbench, it’s generating an input file
 (look for “ds.dat”) that’s fed into MAPDL. However, what’s changed over the past several years is where the geometry,
 meshing, and post-processing is occurring. Geometry generation can take place within SpaceClaim or Design Modeler,
@@ -338,7 +340,7 @@ far superior to the ones in MAPDL, but the biggest limitation to them is that th
 (especially externally) and as a result there are still users who choose to generate geometry and mesh within MAPDL.</p>
 </section>
 <section id="what-are-the-main-reasons-to-use-this-over-other-ansys-products-like-workbench">
-<h2>What are the main reasons to use this over other Ansys products like Workbench?<a class="headerlink" href="#what-are-the-main-reasons-to-use-this-over-other-ansys-products-like-workbench" title="Permalink to this headline">¶</a></h2>
+<h2>What are the main reasons to use this over other Ansys products like Workbench?<a class="headerlink" href="#what-are-the-main-reasons-to-use-this-over-other-ansys-products-like-workbench" title="Permalink to this headline">#</a></h2>
 <p>There will always be tasks where it’s better to use one or the
 other. Workbench is great tool to rapidly prototype, mesh, set
 boundary conditions, and solve. It’s where a ton of development has
@@ -352,7 +354,7 @@ learning tools or allows for advanced plotting with <code class="docutils litera
 <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
 </section>
 <section id="script-restart">
-<h2>Script Restart<a class="headerlink" href="#script-restart" title="Permalink to this headline">¶</a></h2>
+<h2>Script Restart<a class="headerlink" href="#script-restart" title="Permalink to this headline">#</a></h2>
 <p><strong>Question</strong></p>
 <p>Sometimes I have difficulty to terminate the simulation. I
 have to close python and open it again.  I also need to clear all
@@ -381,7 +383,8 @@ python process. As for clearing out mapdl, it’s just
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

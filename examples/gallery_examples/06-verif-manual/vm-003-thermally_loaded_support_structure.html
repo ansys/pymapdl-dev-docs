@@ -9,8 +9,9 @@
     <title>Thermally Loaded Support Structure &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -61,7 +59,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -141,20 +139,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -190,7 +188,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -235,6 +234,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-mapdl-examples/lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -487,6 +493,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -509,6 +520,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -519,7 +533,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -587,7 +601,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="thermally-loaded-support-structure">
-<span id="ref-thermally-loaded-support-structure"></span><span id="sphx-glr-examples-gallery-examples-06-verif-manual-vm-003-thermally-loaded-support-structure-py"></span><h1>Thermally Loaded Support Structure<a class="headerlink" href="#thermally-loaded-support-structure" title="Permalink to this headline">¶</a></h1>
+<span id="ref-thermally-loaded-support-structure"></span><span id="sphx-glr-examples-gallery-examples-06-verif-manual-vm-003-thermally-loaded-support-structure-py"></span><h1>Thermally Loaded Support Structure<a class="headerlink" href="#thermally-loaded-support-structure" title="Permalink to this headline">#</a></h1>
 <dl class="simple">
 <dt>Problem Description:</dt><dd><ul class="simple">
 <li><p>Find the stresses in the copper and steel wire structure shown below.
@@ -662,7 +676,7 @@ by nodal coupling.</p></li>
 </pre></div>
 </div>
 <section id="define-material">
-<h2>Define Material<a class="headerlink" href="#define-material" title="Permalink to this headline">¶</a></h2>
+<h2>Define Material<a class="headerlink" href="#define-material" title="Permalink to this headline">#</a></h2>
 <p>Set up the materials and their properties. We are using copper and
 steel here.
 - <cite>EX</cite> - X-direction elastic modulus
@@ -685,7 +699,7 @@ steel here.
 </div>
 </section>
 <section id="define-geometry-nodes">
-<h2>Define Geometry: Nodes<a class="headerlink" href="#define-geometry-nodes" title="Permalink to this headline">¶</a></h2>
+<h2>Define Geometry: Nodes<a class="headerlink" href="#define-geometry-nodes" title="Permalink to this headline">#</a></h2>
 <p>Set up the nodes and elements.  This creates a mesh just like in the
 problem setup. We create a square of nodes and use <cite>fill</cite> to add
 mid-point nodes to two opposite sides.</p>
@@ -700,7 +714,7 @@ mid-point nodes to two opposite sides.</p>
 </div>
 <img src="../../../_images/sphx_glr_vm-003-thermally_loaded_support_structure_001.png" srcset="../../../_images/sphx_glr_vm-003-thermally_loaded_support_structure_001.png" alt="vm 003 thermally loaded support structure" class = "sphx-glr-single-img"/></section>
 <section id="define-geometry-elements">
-<h2>Define Geometry: Elements<a class="headerlink" href="#define-geometry-elements" title="Permalink to this headline">¶</a></h2>
+<h2>Define Geometry: Elements<a class="headerlink" href="#define-geometry-elements" title="Permalink to this headline">#</a></h2>
 <p>Create two elements (using material #1) that are two sides of our
 square, as links. Then create a single element using material #2
 between the first 2 that is parallel to them.</p>
@@ -713,7 +727,7 @@ between the first 2 that is parallel to them.</p>
 </div>
 <img src="../../../_images/sphx_glr_vm-003-thermally_loaded_support_structure_002.png" srcset="../../../_images/sphx_glr_vm-003-thermally_loaded_support_structure_002.png" alt="vm 003 thermally loaded support structure" class = "sphx-glr-single-img"/></section>
 <section id="define-boundary-conditions">
-<h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Couple the degrees of freedom in y-displacement across nodes 5, 4,
 and 6.</p></li>
@@ -735,7 +749,7 @@ and 6.</p></li>
 </div>
 </section>
 <section id="solve">
-<h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">¶</a></h2>
+<h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Enter solution mode</p></li>
 <li><p>Specify a timestep of 1 to be used for this load step</p></li>
@@ -814,7 +828,7 @@ and 6.</p></li>
 </div>
 </section>
 <section id="post-processing">
-<h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
+<h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Access the queries functions</p></li>
 <li><p>Find a steel node and a copper node</p></li>
@@ -836,7 +850,7 @@ and 6.</p></li>
 </div>
 </section>
 <section id="check-results">
-<h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">¶</a></h2>
+<h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">#</a></h2>
 <p>Now that we have the response we can compare the values to the
 expected stresses of 19695 and 10152 respectively.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel_target</span></a> <span class="o">=</span> <span class="mi">19695</span>
@@ -873,7 +887,7 @@ expected stresses of 19695 and 10152 respectively.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.748 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.920 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-003-thermally-loaded-support-structure-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/4baec37914ec2b6505563c17ed8ec6e5/vm-003-thermally_loaded_support_structure.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-003-thermally_loaded_support_structure.py</span></code></a></p>
@@ -896,7 +910,8 @@ expected stresses of 19695 and 10152 respectively.</p>
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

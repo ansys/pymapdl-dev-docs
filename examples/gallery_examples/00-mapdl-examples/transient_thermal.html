@@ -9,8 +9,9 @@
     <title>Example Thermal Transient Analysis &#8212; PyMAPDL</title>
     
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -60,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -140,20 +138,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -189,7 +187,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -234,6 +233,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="geometry.html">
    Plotting and Mesh Access
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lathe_cutter.html">
+   Structural Analysis of a Lathe Cutter
   </a>
  </li>
 </ul>
@@ -486,6 +492,11 @@
    Dynamic simulation of a printed circuit board assembly
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
+   Friction Stir Welding (FSW) Simulation
+  </a>
+ </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -508,6 +519,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -518,7 +532,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -586,7 +600,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="example-thermal-transient-analysis">
-<span id="ref-thermal-transient"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-transient-thermal-py"></span><h1>Example Thermal Transient Analysis<a class="headerlink" href="#example-thermal-transient-analysis" title="Permalink to this headline">¶</a></h1>
+<span id="ref-thermal-transient"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-transient-thermal-py"></span><h1>Example Thermal Transient Analysis<a class="headerlink" href="#example-thermal-transient-analysis" title="Permalink to this headline">#</a></h1>
 <p>This example shows how you can use PyMAPDL to input a time dependent
 temperature table to vary the temperature at a beam.  This uses
 convection loads with independently varying convection coefficient and
@@ -624,7 +638,7 @@ bulk temperature.</p>
 </pre></div>
 </div>
 <section id="geometry-and-mesh">
-<h2>Geometry and Mesh<a class="headerlink" href="#geometry-and-mesh" title="Permalink to this headline">¶</a></h2>
+<h2>Geometry and Mesh<a class="headerlink" href="#geometry-and-mesh" title="Permalink to this headline">#</a></h2>
 <p>Create a block 5x1x1 inches in size and mesh it</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">block</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lesize</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">layer1</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -637,7 +651,7 @@ bulk temperature.</p>
 </div>
 <img src="../../../_images/sphx_glr_transient_thermal_001.png" srcset="../../../_images/sphx_glr_transient_thermal_001.png" alt="transient thermal" class = "sphx-glr-single-img"/></section>
 <section id="setup-the-solution">
-<h2>Setup the Solution<a class="headerlink" href="#setup-the-solution" title="Permalink to this headline">¶</a></h2>
+<h2>Setup the Solution<a class="headerlink" href="#setup-the-solution" title="Permalink to this headline">#</a></h2>
 <p>Solve a transient analysis while ramping the load up and down.</p>
 <p>Note the solution time commands in the above code fragment. The
 final TIME is set to 1000 seconds. Time substep size is permitted to
@@ -693,7 +707,7 @@ Coefficients go in the First column.</p>
 </div>
 </section>
 <section id="the-transient-thermal-solve">
-<h2>The Transient Thermal Solve<a class="headerlink" href="#the-transient-thermal-solve" title="Permalink to this headline">¶</a></h2>
+<h2>The Transient Thermal Solve<a class="headerlink" href="#the-transient-thermal-solve" title="Permalink to this headline">#</a></h2>
 <p>This model is to be solved in one time step. For this reason, a
 <code class="docutils literal notranslate"><span class="pre">TSRES</span></code> command is used for force the solver to include a
 <code class="docutils literal notranslate"><span class="pre">SOLVE</span></code> at every time point in the two Table Arrays above. This
@@ -754,12 +768,12 @@ then performed.</p>
  TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
       SURFACE LOADS  TRANSFERRED FROM AREAS         =     25
 
- *** NOTE ***                            CP =     101.266   TIME= 04:15:43
+ *** NOTE ***                            CP =     144.309   TIME= 04:10:01
  There is no title defined for this analysis.
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:15:43  MAY 24, 2022 CP=    101.267
+ 00000000  VERSION=LINUX x64     04:10:01  MAY 28, 2022 CP=    144.310
 
 
 
@@ -777,7 +791,7 @@ then performed.</p>
    EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =     101.267   TIME= 04:15:43
+ *** NOTE ***                            CP =     144.311   TIME= 04:10:01
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -837,8 +851,8 @@ then performed.</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       625  SOLID70       0.020   0.000032
- Time at end of element matrix formulation CP = 101.323524.
+        1       625  SOLID70       0.032   0.000051
+ Time at end of element matrix formulation CP = 144.371429.
 
  ALL CURRENT ANSYS DATA WRITTEN TO FILE NAME= file.rdb
   FOR POSSIBLE RESUME FROM THIS POINT
@@ -849,7 +863,7 @@ then performed.</p>
   Memory required for in-core solution     =     1.032 MB
   Memory required for out-of-core solution =     0.575 MB
 
- *** NOTE ***                            CP =     101.358   TIME= 04:15:43
+ *** NOTE ***                            CP =     144.414   TIME= 04:10:01
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
@@ -864,12 +878,12 @@ then performed.</p>
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       625  SOLID70       0.024   0.000038
+        1       625  SOLID70       0.041   0.000065
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       625  SOLID70       0.027   0.000043
+        1       625  SOLID70       0.043   0.000068
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   10.0000         TIME INC =   10.0000      NEW TRIANG MATRIX
  *** RESPONSE EIGENVALUE = 0.2324       OSCILLATION LIMIT =  2.324
@@ -1763,7 +1777,7 @@ then performed.</p>
 </div>
 </section>
 <section id="post-processing">
-<h2>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
+<h2>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">#</a></h2>
 <p>Open up the result file using <code class="docutils literal notranslate"><span class="pre">ansys.mapdl.reader</span></code>
 result = mapdl.thermal_result</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
@@ -1773,13 +1787,13 @@ result = mapdl.thermal_result</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>FINISH SOLUTION PROCESSING
 
 
- ***** ROUTINE COMPLETED *****  CP =       108.188
+ ***** ROUTINE COMPLETED *****  CP =       155.819
 
 
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:15:46  MAY 24, 2022 CP=    108.190
+ 00000000  VERSION=LINUX x64     04:10:07  MAY 28, 2022 CP=    155.820
 
 
 
@@ -1793,7 +1807,7 @@ result = mapdl.thermal_result</p>
 </div>
 </section>
 <section id="visualize-a-slice">
-<h2>Visualize a Slice<a class="headerlink" href="#visualize-a-slice" title="Permalink to this headline">¶</a></h2>
+<h2>Visualize a Slice<a class="headerlink" href="#visualize-a-slice" title="Permalink to this headline">#</a></h2>
 <p>Visualize a slice through the dataset using <code class="docutils literal notranslate"><span class="pre">pyvista</span></code>
 for more details visit &lt;<a class="reference external" href="https://docs.pyvista.org/">https://docs.pyvista.org/</a>&gt;`_.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the temperature of the 30th result set</span>
@@ -1811,7 +1825,7 @@ for more details visit &lt;<a class="reference external" href="https://docs.pyvi
 </div>
 <img src="../../../_images/sphx_glr_transient_thermal_002.png" srcset="../../../_images/sphx_glr_transient_thermal_002.png" alt="transient thermal" class = "sphx-glr-single-img"/></section>
 <section id="visualize-several-slices">
-<h2>Visualize Several Slices<a class="headerlink" href="#visualize-several-slices" title="Permalink to this headline">¶</a></h2>
+<h2>Visualize Several Slices<a class="headerlink" href="#visualize-several-slices" title="Permalink to this headline">#</a></h2>
 <p>This shows how you can visualize a series of slices through a dataset</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the temperature of a different result set</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
@@ -1828,7 +1842,7 @@ for more details visit &lt;<a class="reference external" href="https://docs.pyvi
 </div>
 <img src="../../../_images/sphx_glr_transient_thermal_003.png" srcset="../../../_images/sphx_glr_transient_thermal_003.png" alt="transient thermal" class = "sphx-glr-single-img"/></section>
 <section id="temperature-at-a-single-point">
-<h2>Temperature at a Single Point<a class="headerlink" href="#temperature-at-a-single-point" title="Permalink to this headline">¶</a></h2>
+<h2>Temperature at a Single Point<a class="headerlink" href="#temperature-at-a-single-point" title="Permalink to this headline">#</a></h2>
 <p>Extract the temperature at a single node and plot it with respect to
 the input temperatures using <code class="docutils literal notranslate"><span class="pre">ansys.mapdl</span></code></p>
 <p>Here, we use the <code class="docutils literal notranslate"><span class="pre">get_value</span></code> command which is very similar to the
@@ -1842,7 +1856,7 @@ python accessible variable, rather than storing it to a MAPDL value.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>251.05408986663684
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>251.05408986663687
 </pre></div>
 </div>
 <p>Here, we extract the temperature of the node across for each solution</p>
@@ -1857,7 +1871,7 @@ python accessible variable, rather than storing it to a MAPDL value.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561245, 81.19108300049328, 83.56709007016165, 85.35125295387647, 86.2326642927535, 86.97754017604863, 88.31275589884443]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716555, 76.81799224351983, 77.42151540097551, 79.0483883556124, 81.19108300049328, 83.56709007016164, 85.3512529538765, 86.2326642927535, 86.97754017604863, 88.31275589884442]
 </pre></div>
 </div>
 <p>Alternatively, you can simply grab the data for the node from the
@@ -1877,7 +1891,7 @@ sent back for each result.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561245, 81.19108300049328, 83.56709007016165, 85.35125295387647, 86.2326642927535, 86.97754017604863, 88.31275589884443]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716555, 76.81799224351983, 77.42151540097551, 79.0483883556124, 81.19108300049328, 83.56709007016164, 85.3512529538765, 86.2326642927535, 86.97754017604863, 88.31275589884442]
 </pre></div>
 </div>
 <p>Plot the temperature as a function of time</p>
@@ -1894,7 +1908,7 @@ sent back for each result.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.793 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.224 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-transient-thermal-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/5ea8304e8eee080ba9decd82a6d7994e/transient_thermal.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">transient_thermal.py</span></code></a></p>
@@ -1917,7 +1931,8 @@ sent back for each result.</p>
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
