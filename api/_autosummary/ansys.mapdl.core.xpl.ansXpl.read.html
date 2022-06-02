@@ -415,12 +415,14 @@
 <h1>read<a class="headerlink" href="#read" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.xpl.ansXpl.read">
-<span class="sig-prename descclassname"><span class="pre">ansXpl.</span></span><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recordname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.xpl.ansXpl.read" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ansXpl.</span></span><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recordname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.xpl.ansXpl.read" title="Permalink to this definition">#</a></dt>
 <dd><p>Read a record and return either an APDL math matrix or an APDL math vector.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansys.mapdl.AnsMat</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">ansys.mapdl.AnsVec</span></code></dt><dd><p>A handle to the APDLMath object.</p>
+</dd>
+<dt><strong>asarray</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Return a <a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> rather than a <a class="reference internal" href="ansys.mapdl.core.math.AnsMat.html#ansys.mapdl.core.math.AnsMat" title="ansys.mapdl.core.math.AnsMat"><code class="xref py py-class docutils literal notranslate"><span class="pre">AnsMat</span></code></a>. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
 </dl>
 </dd>
@@ -428,6 +430,9 @@
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vec</span> <span class="o">=</span> <span class="n">xpl</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;MASS&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">vec</span><span class="o">.</span><span class="n">asarray</span><span class="p">()</span>
+<span class="go">array([ 4,  7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43,</span>
+<span class="go">       46, 49, 52, 55, 58,  1], dtype=int32)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vec</span> <span class="o">=</span> <span class="n">xpl</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;MASS&#39;</span><span class="p">,</span> <span class="n">asarray</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="go">array([ 4,  7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43,</span>
 <span class="go">       46, 49, 52, 55, 58,  1], dtype=int32)</span>
 </pre></div>

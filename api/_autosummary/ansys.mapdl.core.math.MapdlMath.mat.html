@@ -475,7 +475,7 @@
 <h1>mat<a class="headerlink" href="#mat" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.math.MapdlMath.mat">
-<span class="sig-prename descclassname"><span class="pre">MapdlMath.</span></span><span class="sig-name descname"><span class="pre">mat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nrow=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncol=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.float64'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.math.MapdlMath.mat" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">MapdlMath.</span></span><span class="sig-name descname"><span class="pre">mat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nrow=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncol=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.float64'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asarray=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.math.MapdlMath.mat" title="Permalink to this definition">#</a></dt>
 <dd><p>Create an APDLMath matrix.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -493,6 +493,8 @@ or <code class="docutils literal notranslate"><span class="pre">&quot;rand&quot;
 <dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Matrix name.  If given, assigns a MAPDL matrix based on
 the existing named matrix.  Otherwise one will be
 automatically generated.</p>
+</dd>
+<dt><strong>asarray</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Return a <cite>scipy</cite> array rather than an APDLMath matrix.</p>
 </dd>
 </dl>
 </dd>

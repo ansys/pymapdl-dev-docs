@@ -866,7 +866,7 @@ class ansXpl(builtins.object)
  |      Size : 3
  |             1         2         3
  |
- |  read(self, recordname)
+ |  read(self, recordname, asarray=False)
  |      Read a record and return either an APDL math matrix or an APDL math vector.
  |
  |      Returns
@@ -874,10 +874,17 @@ class ansXpl(builtins.object)
  |      ansys.mapdl.AnsMat or ansys.mapdl.AnsVec
  |          A handle to the APDLMath object.
  |
+ |      asarray : bool, optional
+ |          Return a :class:`numpy.ndarray` rather than a :class:`AnsMat
+ |          &lt;ansys.mapdl.core.math.AnsMat&gt;`. Default ``False``.
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; vec = xpl.read(&#39;MASS&#39;)
  |      &gt;&gt;&gt; vec.asarray()
+ |      array([ 4,  7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43,
+ |             46, 49, 52, 55, 58,  1], dtype=int32)
+ |      &gt;&gt;&gt; vec = xpl.read(&#39;MASS&#39;, asarray=True)
  |      array([ 4,  7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43,
  |             46, 49, 52, 55, 58,  1], dtype=int32)
  |
@@ -1084,7 +1091,7 @@ APDLMath object.</p>
 
          - Record Size   : 3
          - Data type     : integer values
-GSNGRI :
+QDULWC :
  Size : 3
         1         2         3
 </pre></div>
@@ -1145,7 +1152,7 @@ First we go into the first solution set</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.263 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.234 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-01-apdlmath-examples-explore-mapdl-files-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/7893b096a4dee3c81a38a8363d05251f/explore_mapdl_files.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">explore_mapdl_files.py</span></code></a></p>

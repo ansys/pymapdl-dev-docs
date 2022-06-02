@@ -475,7 +475,7 @@
 <h1>rand<a class="headerlink" href="#rand" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.math.MapdlMath.rand">
-<span class="sig-prename descclassname"><span class="pre">MapdlMath.</span></span><span class="sig-name descname"><span class="pre">rand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nrow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncol=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.float64'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.math.MapdlMath.rand" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">MapdlMath.</span></span><span class="sig-name descname"><span class="pre">rand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nrow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncol=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.float64'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asarray=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.math.MapdlMath.rand" title="Permalink to this definition">#</a></dt>
 <dd><p>Create a vector or matrix containing all random values</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -486,6 +486,10 @@
 </dd>
 <dt><strong>dtype</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.dtype</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Datatype of the vector.  Must be either <code class="docutils literal notranslate"><span class="pre">np.int32</span></code>,
 <code class="docutils literal notranslate"><span class="pre">np.int64</span></code>, or <code class="docutils literal notranslate"><span class="pre">np.double</span></code>.</p>
+</dd>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>APDLMath matrix name.  Optional and defaults to a random name.</p>
+</dd>
+<dt><strong>asarray</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Return a <cite>scipy</cite> array rather than an APDLMath matrix.</p>
 </dd>
 </dl>
 </dd>
