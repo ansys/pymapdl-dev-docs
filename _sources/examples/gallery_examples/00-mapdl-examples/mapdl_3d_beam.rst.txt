@@ -99,7 +99,7 @@ First, start by launching MAPDL as a service.
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =     100.938   TIME= 04:07:42
+     *** NOTE ***                            CP =     112.052   TIME= 04:08:14
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -111,7 +111,7 @@ First, start by launching MAPDL as a service.
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:07:42  JUN 04, 2022 CP=    100.938
+     00000000  VERSION=LINUX x64     04:08:14  JUN 05, 2022 CP=    112.052
 
                                                                                
 
@@ -131,7 +131,7 @@ First, start by launching MAPDL as a service.
        NUMBER OF MODES TO EXPAND . . . . . . . . . . .ALL
        ELEMENT RESULTS CALCULATION . . . . . . . . . .ON 
 
-     *** NOTE ***                            CP =     100.938   TIME= 04:07:42
+     *** NOTE ***                            CP =     112.052   TIME= 04:08:14
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -181,8 +181,8 @@ First, start by launching MAPDL as a service.
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        40  SOLID186      0.014   0.000344
-     Time at end of element matrix formulation CP = 100.959389.              
+            1        40  SOLID186      0.015   0.000381
+     Time at end of element matrix formulation CP = 112.073669.              
 
       BLOCK LANCZOS CALCULATION OF UP TO     6 EIGENVECTORS.
       NUMBER OF EQUATIONS              =          900
@@ -195,7 +195,7 @@ First, start by launching MAPDL as a service.
       Memory required for in-core solution     =     2.159 MB
       Memory required for out-of-core solution =     1.369 MB
 
-     *** NOTE ***                            CP =     101.004   TIME= 04:07:42
+     *** NOTE ***                            CP =     112.123   TIME= 04:08:14
      The Sparse Matrix Solver used by the Block Lanczos eigensolver is       
      currently running in the in-core memory mode.  This memory mode uses    
      the most amount of memory in order to avoid using the hard drive as     
@@ -205,7 +205,7 @@ First, start by launching MAPDL as a service.
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:07:42  JUN 04, 2022 CP=    101.065
+     00000000  VERSION=LINUX x64     04:08:14  JUN 05, 2022 CP=    112.185
 
                                                                                
 
@@ -369,7 +369,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.938 seconds)
+   **Total running time of the script:** ( 0 minutes  1.044 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_mapdl_3d_beam.py:

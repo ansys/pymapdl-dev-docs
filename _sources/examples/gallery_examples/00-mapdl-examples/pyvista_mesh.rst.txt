@@ -131,10 +131,10 @@ Write the mesh to a temporary file
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =     121.030   TIME= 04:08:07
+     *** NOTE ***                            CP =     133.668   TIME= 04:08:42
      There is no title defined for this analysis.                            
 
-     *** NOTE ***                            CP =     121.116   TIME= 04:08:07
+     *** NOTE ***                            CP =     133.771   TIME= 04:08:42
      No modes are being expanded (MXPAND command) and therefore the element  
      results will not be written to the mode file.  If you do not intend to  
      use mode selection and for more efficient calculation of element        
@@ -152,7 +152,7 @@ Write the mesh to a temporary file
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:08:07  JUN 04, 2022 CP=    121.136
+     00000000  VERSION=LINUX x64     04:08:42  JUN 05, 2022 CP=    133.799
 
                                                                                
 
@@ -171,15 +171,15 @@ Write the mesh to a temporary file
        SHIFT POINT . . . . . . . . . . . . . . . . . .  1.0000    
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** WARNING ***                         CP =     121.157   TIME= 04:08:07
+     *** WARNING ***                         CP =     133.822   TIME= 04:08:42
      No constraints have been defined using the D command.                   
 
-     *** NOTE ***                            CP =     121.157   TIME= 04:08:07
+     *** NOTE ***                            CP =     133.822   TIME= 04:08:42
      The step data was checked and warning messages were found.              
       Please review output or errors file ( /file.err ) for these warning    
      messages.                                                               
 
-     *** NOTE ***                            CP =     121.157   TIME= 04:08:07
+     *** NOTE ***                            CP =     133.822   TIME= 04:08:42
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -227,8 +227,8 @@ Write the mesh to a temporary file
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            4     10000  SHELL181      1.023   0.000102
-     Time at end of element matrix formulation CP = 122.427612.              
+            4     10000  SHELL181      1.064   0.000106
+     Time at end of element matrix formulation CP = 135.204254.              
 
       BLOCK LANCZOS CALCULATION OF UP TO    20 EIGENVECTORS.
       NUMBER OF EQUATIONS              =        61206
@@ -241,7 +241,7 @@ Write the mesh to a temporary file
       Memory required for in-core solution     =   178.612 MB
       Memory required for out-of-core solution =    60.617 MB
 
-     *** NOTE ***                            CP =     124.179   TIME= 04:08:10
+     *** NOTE ***                            CP =     137.287   TIME= 04:08:45
      The Sparse Matrix Solver used by the Block Lanczos eigensolver is       
      currently running in the in-core memory mode.  This memory mode uses    
      the most amount of memory in order to avoid using the hard drive as     
@@ -251,7 +251,7 @@ Write the mesh to a temporary file
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:08:12  JUN 04, 2022 CP=    127.862
+     00000000  VERSION=LINUX x64     04:08:47  JUN 05, 2022 CP=    141.164
 
                                                                                
 
@@ -290,7 +290,7 @@ Write the mesh to a temporary file
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:08:12  JUN 04, 2022 CP=    128.175
+     00000000  VERSION=LINUX x64     04:08:47  JUN 05, 2022 CP=    141.511
 
                                                                                
 
@@ -571,7 +571,7 @@ Enable a continuous plot looping with ```loop=True```.
 
     /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/ansys/mapdl/reader/rst.py:994: UserWarning: The ``nangles`` kwarg is depreciated and ``n_frames`` should be used instead.
       warnings.warn('The ``nangles`` kwarg is depreciated and ``n_frames`` '
-    Rendering animation:   0%|          | 0/30 [00:00<?, ?it/s]    Rendering animation:   3%|3         | 1/30 [00:00<00:08,  3.34it/s]    Rendering animation:   7%|6         | 2/30 [00:00<00:06,  4.07it/s]    Rendering animation:  10%|#         | 3/30 [00:00<00:06,  4.22it/s]    Rendering animation:  13%|#3        | 4/30 [00:00<00:05,  4.61it/s]    Rendering animation:  17%|#6        | 5/30 [00:01<00:05,  4.77it/s]    Rendering animation:  20%|##        | 6/30 [00:01<00:04,  4.84it/s]    Rendering animation:  23%|##3       | 7/30 [00:01<00:04,  4.84it/s]    Rendering animation:  27%|##6       | 8/30 [00:01<00:04,  4.78it/s]    Rendering animation:  30%|###       | 9/30 [00:01<00:04,  4.78it/s]    Rendering animation:  33%|###3      | 10/30 [00:02<00:04,  4.72it/s]    Rendering animation:  37%|###6      | 11/30 [00:02<00:04,  4.71it/s]    Rendering animation:  40%|####      | 12/30 [00:02<00:03,  4.87it/s]    Rendering animation:  43%|####3     | 13/30 [00:02<00:03,  5.00it/s]    Rendering animation:  47%|####6     | 14/30 [00:02<00:03,  5.12it/s]    Rendering animation:  50%|#####     | 15/30 [00:03<00:02,  5.17it/s]    Rendering animation:  53%|#####3    | 16/30 [00:03<00:02,  5.07it/s]    Rendering animation:  57%|#####6    | 17/30 [00:03<00:02,  5.17it/s]    Rendering animation:  60%|######    | 18/30 [00:03<00:02,  5.13it/s]    Rendering animation:  63%|######3   | 19/30 [00:03<00:02,  5.16it/s]    Rendering animation:  67%|######6   | 20/30 [00:04<00:01,  5.10it/s]    Rendering animation:  70%|#######   | 21/30 [00:04<00:01,  5.05it/s]    Rendering animation:  73%|#######3  | 22/30 [00:04<00:01,  5.00it/s]    Rendering animation:  77%|#######6  | 23/30 [00:04<00:01,  4.84it/s]    Rendering animation:  80%|########  | 24/30 [00:04<00:01,  4.78it/s]    Rendering animation:  83%|########3 | 25/30 [00:05<00:01,  4.74it/s]    Rendering animation:  87%|########6 | 26/30 [00:05<00:00,  4.63it/s]    Rendering animation:  90%|######### | 27/30 [00:05<00:00,  4.61it/s]    Rendering animation:  93%|#########3| 28/30 [00:05<00:00,  4.62it/s]    Rendering animation:  97%|#########6| 29/30 [00:06<00:00,  4.65it/s]    Rendering animation: 100%|##########| 30/30 [00:06<00:00,  4.82it/s]    Rendering animation: 100%|##########| 30/30 [00:06<00:00,  4.70it/s]
+    Rendering animation:   0%|          | 0/30 [00:00<?, ?it/s]    Rendering animation:   3%|3         | 1/30 [00:00<00:08,  3.31it/s]    Rendering animation:   7%|6         | 2/30 [00:00<00:06,  4.06it/s]    Rendering animation:  10%|#         | 3/30 [00:00<00:06,  4.17it/s]    Rendering animation:  13%|#3        | 4/30 [00:00<00:05,  4.40it/s]    Rendering animation:  17%|#6        | 5/30 [00:01<00:05,  4.36it/s]    Rendering animation:  20%|##        | 6/30 [00:01<00:05,  4.45it/s]    Rendering animation:  23%|##3       | 7/30 [00:01<00:05,  4.50it/s]    Rendering animation:  27%|##6       | 8/30 [00:01<00:05,  4.34it/s]    Rendering animation:  30%|###       | 9/30 [00:02<00:04,  4.33it/s]    Rendering animation:  33%|###3      | 10/30 [00:02<00:04,  4.27it/s]    Rendering animation:  37%|###6      | 11/30 [00:02<00:04,  4.12it/s]    Rendering animation:  40%|####      | 12/30 [00:02<00:04,  4.26it/s]    Rendering animation:  43%|####3     | 13/30 [00:03<00:03,  4.40it/s]    Rendering animation:  47%|####6     | 14/30 [00:03<00:03,  4.55it/s]    Rendering animation:  50%|#####     | 15/30 [00:03<00:03,  4.60it/s]    Rendering animation:  53%|#####3    | 16/30 [00:03<00:03,  4.48it/s]    Rendering animation:  57%|#####6    | 17/30 [00:03<00:02,  4.56it/s]    Rendering animation:  60%|######    | 18/30 [00:04<00:02,  4.65it/s]    Rendering animation:  63%|######3   | 19/30 [00:04<00:02,  4.66it/s]    Rendering animation:  67%|######6   | 20/30 [00:04<00:02,  4.49it/s]    Rendering animation:  70%|#######   | 21/30 [00:04<00:02,  4.41it/s]    Rendering animation:  73%|#######3  | 22/30 [00:05<00:01,  4.33it/s]    Rendering animation:  77%|#######6  | 23/30 [00:05<00:01,  4.21it/s]    Rendering animation:  80%|########  | 24/30 [00:05<00:01,  4.14it/s]    Rendering animation:  83%|########3 | 25/30 [00:05<00:01,  4.16it/s]    Rendering animation:  87%|########6 | 26/30 [00:06<00:00,  4.14it/s]    Rendering animation:  90%|######### | 27/30 [00:06<00:00,  4.16it/s]    Rendering animation:  93%|#########3| 28/30 [00:06<00:00,  4.21it/s]    Rendering animation:  97%|#########6| 29/30 [00:06<00:00,  4.21it/s]    Rendering animation: 100%|##########| 30/30 [00:06<00:00,  4.37it/s]    Rendering animation: 100%|##########| 30/30 [00:07<00:00,  4.23it/s]
 
     [(1.5773502691896262, 1.5773502691896262, 1.5773502691896262),
      (0.0, 0.0, 0.0),
@@ -598,7 +598,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  12.691 seconds)
+   **Total running time of the script:** ( 0 minutes  14.100 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_pyvista_mesh.py:
