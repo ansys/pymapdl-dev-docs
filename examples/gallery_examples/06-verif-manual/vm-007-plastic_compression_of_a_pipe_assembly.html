@@ -1,19 +1,23 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Plastic Compression of a Pipe Assembly &#8212; PyMAPDL</title>
     
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
 
-    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -30,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-    
+
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -40,6 +44,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
@@ -52,43 +57,42 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Parametric Calculation" href="vm-008-parametric_calculation.html" />
     <link rel="prev" title="Pinched Cylinder" href="vm-006-pinched_cylinder.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://www.ansys.com/">
-  <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -139,8 +143,15 @@
       
     </div>
 
-    
     <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -152,7 +163,6 @@
       </div>
       
     </div>
-    
   </div>
 </div>
     </nav>
@@ -183,13 +193,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -520,19 +530,20 @@
     
   </div>
 </nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
 <div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
@@ -612,23 +623,21 @@
 </ul>
 
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
@@ -636,7 +645,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="plastic-compression-of-a-pipe-assembly">
-<span id="ref-vm7-example"></span><span id="sphx-glr-examples-gallery-examples-06-verif-manual-vm-007-plastic-compression-of-a-pipe-assembly-py"></span><h1>Plastic Compression of a Pipe Assembly<a class="headerlink" href="#plastic-compression-of-a-pipe-assembly" title="Permalink to this headline">#</a></h1>
+<span id="ref-vm7-example"></span><span id="sphx-glr-examples-gallery-examples-06-verif-manual-vm-007-plastic-compression-of-a-pipe-assembly-py"></span><h1>Plastic Compression of a Pipe Assembly<a class="headerlink" href="#plastic-compression-of-a-pipe-assembly" title="Permalink to this heading">#</a></h1>
 <dl class="simple">
 <dt>Problem Description:</dt><dd><ul class="simple">
 <li><p>Two coaxial tubes, the inner one of 1020 CR steel and cross-sectional
@@ -718,7 +727,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </dd>
 </dl>
 <section id="start-mapdl">
-<h2>Start MAPDL<a class="headerlink" href="#start-mapdl" title="Permalink to this headline">#</a></h2>
+<h2>Start MAPDL<a class="headerlink" href="#start-mapdl" title="Permalink to this heading">#</a></h2>
 <p>Start MAPDL and import Numpy and Pandas libraries.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_path = &#39;_static/vm7_setup.png&#39;</span>
 
@@ -734,7 +743,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </div>
 </section>
 <section id="pre-processing">
-<h2>Pre-Processing<a class="headerlink" href="#pre-processing" title="Permalink to this headline">#</a></h2>
+<h2>Pre-Processing<a class="headerlink" href="#pre-processing" title="Permalink to this heading">#</a></h2>
 <p>Enter verification example mode and the pre-processing routine.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">verify</span><span class="p">()</span>
@@ -743,7 +752,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </div>
 </section>
 <section id="parameterization">
-<h2>Parameterization<a class="headerlink" href="#parameterization" title="Permalink to this headline">#</a></h2>
+<h2>Parameterization<a class="headerlink" href="#parameterization" title="Permalink to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Angle of the model sector.</span>
 <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">theta</span></a> <span class="o">=</span> <span class="mi">6</span>
 
@@ -755,7 +764,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </div>
 </section>
 <section id="define-element-type">
-<h2>Define Element Type<a class="headerlink" href="#define-element-type" title="Permalink to this headline">#</a></h2>
+<h2>Define Element Type<a class="headerlink" href="#define-element-type" title="Permalink to this heading">#</a></h2>
 <p>Set up the element types .</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Element type PIPE288.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;PIPE288&quot;</span><span class="p">)</span>
@@ -804,7 +813,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </div>
 </section>
 <section id="define-material">
-<h2>Define Material<a class="headerlink" href="#define-material" title="Permalink to this headline">#</a></h2>
+<h2>Define Material<a class="headerlink" href="#define-material" title="Permalink to this heading">#</a></h2>
 <p>Set up the material properties.</p>
 <ul class="simple">
 <li><p>Young Modulus of steel is: <span class="math notranslate nohighlight">\(E_{\mathrm{s}} = 26875000\,psi\)</span>,</p></li>
@@ -857,7 +866,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </div>
 </section>
 <section id="plot-stress-strain-curve">
-<h2>Plot Stress - Strain Curve<a class="headerlink" href="#plot-stress-strain-curve" title="Permalink to this headline">#</a></h2>
+<h2>Plot Stress - Strain Curve<a class="headerlink" href="#plot-stress-strain-curve" title="Permalink to this heading">#</a></h2>
 <p>Use Matplotlib library to plot material model curves of steel and aluminum.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define stress - strain properties of the steel.</span>
 <a href="https://docs.python.org/dev/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">steel</span></a> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stress_s&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">86000</span><span class="p">,</span> <span class="mi">86000</span><span class="p">,</span> <span class="mi">86000</span><span class="p">],</span> <span class="s2">&quot;strain_s&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.032</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]}</span>
@@ -923,7 +932,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </div>
 <img src="../../../_images/sphx_glr_vm-007-plastic_compression_of_a_pipe_assembly_001.png" srcset="../../../_images/sphx_glr_vm-007-plastic_compression_of_a_pipe_assembly_001.png" alt="Stress - Strain Curve" class = "sphx-glr-single-img"/></section>
 <section id="define-section">
-<h2>Define Section<a class="headerlink" href="#define-section" title="Permalink to this headline">#</a></h2>
+<h2>Define Section<a class="headerlink" href="#define-section" title="Permalink to this heading">#</a></h2>
 <p>Set up the cross-section properties for a shell and pipe elements.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shell cross-section for inside tube(steel).</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">sectype</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;SHELL&quot;</span><span class="p">)</span>
@@ -1024,7 +1033,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </div>
 </section>
 <section id="define-geometry">
-<h2>Define Geometry<a class="headerlink" href="#define-geometry" title="Permalink to this headline">#</a></h2>
+<h2>Define Geometry<a class="headerlink" href="#define-geometry" title="Permalink to this heading">#</a></h2>
 <p>Set up the nodes and create the elements through the nodes.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate nodes and elements for PIPE288.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -1098,7 +1107,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </div>
 <img src="../../../_images/sphx_glr_vm-007-plastic_compression_of_a_pipe_assembly_002.png" srcset="../../../_images/sphx_glr_vm-007-plastic_compression_of_a_pipe_assembly_002.png" alt="vm 007 plastic compression of a pipe assembly" class = "sphx-glr-single-img"/></section>
 <section id="define-boundary-conditions">
-<h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this headline">#</a></h2>
+<h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this heading">#</a></h2>
 <p>Application of boundary conditions (BC) for simplified  axisymmetric model.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Apply constraints to the PIPE288 model.</span>
 <span class="c1"># Fix all DOFs for bottom end of PIPE288.</span>
@@ -1152,7 +1161,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </div>
 </section>
 <section id="solve">
-<h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">#</a></h2>
+<h2>Solve<a class="headerlink" href="#solve" title="Permalink to this heading">#</a></h2>
 <p>Enter solution mode and solve the system.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start solution procedure.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
@@ -1179,7 +1188,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </div>
 </section>
 <section id="post-processing">
-<h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">#</a></h2>
+<h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this heading">#</a></h2>
 <p>Enter post-processing.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Enter the post-processing routine.</span>
 <span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
@@ -1187,7 +1196,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 </div>
 </section>
 <section id="getting-loads">
-<h2>Getting loads<a class="headerlink" href="#getting-loads" title="Permalink to this headline">#</a></h2>
+<h2>Getting loads<a class="headerlink" href="#getting-loads" title="Permalink to this heading">#</a></h2>
 <p>Set up the function to get load values of each load step of the simplified
 axisymmetric model and convert it to the full model.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getload</span><span class="p">():</span>
@@ -1232,7 +1241,7 @@ axisymmetric model and convert it to the full model.</p>
 </div>
 </section>
 <section id="getting-loads-for-each-load-step">
-<h2>Getting Loads For Each Load Step<a class="headerlink" href="#getting-loads-for-each-load-step" title="Permalink to this headline">#</a></h2>
+<h2>Getting Loads For Each Load Step<a class="headerlink" href="#getting-loads-for-each-load-step" title="Permalink to this heading">#</a></h2>
 <p>Obtain the loads of the model using <code class="xref py py-func docutils literal notranslate"><span class="pre">getload()</span></code> function.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Activate Load Step 1 and extract load data.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -1249,7 +1258,7 @@ axisymmetric model and convert it to the full model.</p>
 </div>
 </section>
 <section id="check-results">
-<h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">#</a></h2>
+<h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this heading">#</a></h2>
 <p>Finally we have the results of the loads for the simplified axisymmetric model,
 which can be compared with expected target values for models with <code class="docutils literal notranslate"><span class="pre">PIPE288</span></code>,
 <code class="docutils literal notranslate"><span class="pre">SOLID185</span></code>, and <code class="docutils literal notranslate"><span class="pre">SHELL181</span></code> elements. Loads expected for each load step are:</p>
@@ -1349,36 +1358,36 @@ which can be compared with expected target values for models with <code class="d
 </div>
 <div class="output_subarea output_html rendered_html output_result">
 <style type="text/css">
-#T_d463b th.col_heading {
+#T_f5e71 th.col_heading {
   background-color: #FFEFD5;
   color: black;
   border: 0.5px solid black;
   font-style: italic;
   text-align: center;
 }
-#T_d463b th.row_heading {
+#T_f5e71 th.row_heading {
   background-color: #FFEFD5;
   color: black;
   border: 0.5px solid black;
   font-style: italic;
   text-align: center;
 }
-#T_d463b td:hover {
+#T_f5e71 td:hover {
   background-color: #FFF8DC;
 }
-#T_d463b th {
+#T_f5e71 th {
   max-width: 120px;
 }
-#T_d463b  {
+#T_f5e71  {
   border: 0.5px solid black;
 }
-#T_d463b caption {
+#T_f5e71 caption {
   color: black;
   font-style: italic;
   font-size: 24px;
   text-align: center;
 }
-#T_d463b_row0_col0, #T_d463b_row0_col1, #T_d463b_row0_col2, #T_d463b_row1_col0, #T_d463b_row1_col1, #T_d463b_row1_col2, #T_d463b_row2_col0, #T_d463b_row2_col1, #T_d463b_row2_col2, #T_d463b_row3_col0, #T_d463b_row3_col1, #T_d463b_row3_col2, #T_d463b_row4_col0, #T_d463b_row4_col1, #T_d463b_row4_col2, #T_d463b_row5_col0, #T_d463b_row5_col1, #T_d463b_row5_col2, #T_d463b_row6_col0, #T_d463b_row6_col1, #T_d463b_row6_col2, #T_d463b_row7_col0, #T_d463b_row7_col1, #T_d463b_row7_col2, #T_d463b_row8_col0, #T_d463b_row8_col1, #T_d463b_row8_col2 {
+#T_f5e71_row0_col0, #T_f5e71_row0_col1, #T_f5e71_row0_col2, #T_f5e71_row1_col0, #T_f5e71_row1_col1, #T_f5e71_row1_col2, #T_f5e71_row2_col0, #T_f5e71_row2_col1, #T_f5e71_row2_col2, #T_f5e71_row3_col0, #T_f5e71_row3_col1, #T_f5e71_row3_col2, #T_f5e71_row4_col0, #T_f5e71_row4_col1, #T_f5e71_row4_col2, #T_f5e71_row5_col0, #T_f5e71_row5_col1, #T_f5e71_row5_col2, #T_f5e71_row6_col0, #T_f5e71_row6_col1, #T_f5e71_row6_col2, #T_f5e71_row7_col0, #T_f5e71_row7_col1, #T_f5e71_row7_col2, #T_f5e71_row8_col0, #T_f5e71_row8_col1, #T_f5e71_row8_col2 {
   background-color: #FFFAFA;
   color: black;
   border-color: black;
@@ -1387,74 +1396,74 @@ which can be compared with expected target values for models with <code class="d
   text-align: center;
 }
 </style>
-<table id="T_d463b">
+<table id="T_f5e71">
   <caption>Results Comparison</caption>
   <thead>
     <tr>
       <th class="blank" >&nbsp;</th>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_d463b_level0_col0" class="col_heading level0 col0" >Target</th>
-      <th id="T_d463b_level0_col1" class="col_heading level0 col1" >Mechanical APDL</th>
-      <th id="T_d463b_level0_col2" class="col_heading level0 col2" >Ratio</th>
+      <th id="T_f5e71_level0_col0" class="col_heading level0 col0" >Target</th>
+      <th id="T_f5e71_level0_col1" class="col_heading level0 col1" >Mechanical APDL</th>
+      <th id="T_f5e71_level0_col2" class="col_heading level0 col2" >Ratio</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_d463b_level0_row0" class="row_heading level0 row0" rowspan="3">PIPE288</th>
-      <th id="T_d463b_level1_row0" class="row_heading level1 row0" >Load, lb for Deflection = 0.032 in</th>
-      <td id="T_d463b_row0_col0" class="data row0 col0" >1024400.000</td>
-      <td id="T_d463b_row0_col1" class="data row0 col1" >1024400.000</td>
-      <td id="T_d463b_row0_col2" class="data row0 col2" >1.000</td>
+      <th id="T_f5e71_level0_row0" class="row_heading level0 row0" rowspan="3">PIPE288</th>
+      <th id="T_f5e71_level1_row0" class="row_heading level1 row0" >Load, lb for Deflection = 0.032 in</th>
+      <td id="T_f5e71_row0_col0" class="data row0 col0" >1024400.000</td>
+      <td id="T_f5e71_row0_col1" class="data row0 col1" >1024400.000</td>
+      <td id="T_f5e71_row0_col2" class="data row0 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_d463b_level1_row1" class="row_heading level1 row1" >Load, lb for Deflection = 0.05 in</th>
-      <td id="T_d463b_row1_col0" class="data row1 col0" >1262000.000</td>
-      <td id="T_d463b_row1_col1" class="data row1 col1" >1262000.000</td>
-      <td id="T_d463b_row1_col2" class="data row1 col2" >1.000</td>
+      <th id="T_f5e71_level1_row1" class="row_heading level1 row1" >Load, lb for Deflection = 0.05 in</th>
+      <td id="T_f5e71_row1_col0" class="data row1 col0" >1262000.000</td>
+      <td id="T_f5e71_row1_col1" class="data row1 col1" >1262000.000</td>
+      <td id="T_f5e71_row1_col2" class="data row1 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_d463b_level1_row2" class="row_heading level1 row2" >Load, lb for Deflection = 0.1 in</th>
-      <td id="T_d463b_row2_col0" class="data row2 col0" >1262000.000</td>
-      <td id="T_d463b_row2_col1" class="data row2 col1" >1262000.000</td>
-      <td id="T_d463b_row2_col2" class="data row2 col2" >1.000</td>
+      <th id="T_f5e71_level1_row2" class="row_heading level1 row2" >Load, lb for Deflection = 0.1 in</th>
+      <td id="T_f5e71_row2_col0" class="data row2 col0" >1262000.000</td>
+      <td id="T_f5e71_row2_col1" class="data row2 col1" >1262000.000</td>
+      <td id="T_f5e71_row2_col2" class="data row2 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_d463b_level0_row3" class="row_heading level0 row3" rowspan="3">SOLID185</th>
-      <th id="T_d463b_level1_row3" class="row_heading level1 row3" >Load, lb for Deflection = 0.032 in</th>
-      <td id="T_d463b_row3_col0" class="data row3 col0" >1024400.000</td>
-      <td id="T_d463b_row3_col1" class="data row3 col1" >1022529.000</td>
-      <td id="T_d463b_row3_col2" class="data row3 col2" >0.998</td>
+      <th id="T_f5e71_level0_row3" class="row_heading level0 row3" rowspan="3">SOLID185</th>
+      <th id="T_f5e71_level1_row3" class="row_heading level1 row3" >Load, lb for Deflection = 0.032 in</th>
+      <td id="T_f5e71_row3_col0" class="data row3 col0" >1024400.000</td>
+      <td id="T_f5e71_row3_col1" class="data row3 col1" >1022529.000</td>
+      <td id="T_f5e71_row3_col2" class="data row3 col2" >0.998</td>
     </tr>
     <tr>
-      <th id="T_d463b_level1_row4" class="row_heading level1 row4" >Load, lb for Deflection = 0.05 in</th>
-      <td id="T_d463b_row4_col0" class="data row4 col0" >1262000.000</td>
-      <td id="T_d463b_row4_col1" class="data row4 col1" >1259695.000</td>
-      <td id="T_d463b_row4_col2" class="data row4 col2" >0.998</td>
+      <th id="T_f5e71_level1_row4" class="row_heading level1 row4" >Load, lb for Deflection = 0.05 in</th>
+      <td id="T_f5e71_row4_col0" class="data row4 col0" >1262000.000</td>
+      <td id="T_f5e71_row4_col1" class="data row4 col1" >1259695.000</td>
+      <td id="T_f5e71_row4_col2" class="data row4 col2" >0.998</td>
     </tr>
     <tr>
-      <th id="T_d463b_level1_row5" class="row_heading level1 row5" >Load, lb for Deflection = 0.1 in</th>
-      <td id="T_d463b_row5_col0" class="data row5 col0" >1262000.000</td>
-      <td id="T_d463b_row5_col1" class="data row5 col1" >1259695.000</td>
-      <td id="T_d463b_row5_col2" class="data row5 col2" >0.998</td>
+      <th id="T_f5e71_level1_row5" class="row_heading level1 row5" >Load, lb for Deflection = 0.1 in</th>
+      <td id="T_f5e71_row5_col0" class="data row5 col0" >1262000.000</td>
+      <td id="T_f5e71_row5_col1" class="data row5 col1" >1259695.000</td>
+      <td id="T_f5e71_row5_col2" class="data row5 col2" >0.998</td>
     </tr>
     <tr>
-      <th id="T_d463b_level0_row6" class="row_heading level0 row6" rowspan="3">SHELL181</th>
-      <th id="T_d463b_level1_row6" class="row_heading level1 row6" >Load, lb for Deflection = 0.032 in</th>
-      <td id="T_d463b_row6_col0" class="data row6 col0" >1024400.000</td>
-      <td id="T_d463b_row6_col1" class="data row6 col1" >1023932.000</td>
-      <td id="T_d463b_row6_col2" class="data row6 col2" >1.000</td>
+      <th id="T_f5e71_level0_row6" class="row_heading level0 row6" rowspan="3">SHELL181</th>
+      <th id="T_f5e71_level1_row6" class="row_heading level1 row6" >Load, lb for Deflection = 0.032 in</th>
+      <td id="T_f5e71_row6_col0" class="data row6 col0" >1024400.000</td>
+      <td id="T_f5e71_row6_col1" class="data row6 col1" >1023932.000</td>
+      <td id="T_f5e71_row6_col2" class="data row6 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_d463b_level1_row7" class="row_heading level1 row7" >Load, lb for Deflection = 0.05 in</th>
-      <td id="T_d463b_row7_col0" class="data row7 col0" >1262000.000</td>
-      <td id="T_d463b_row7_col1" class="data row7 col1" >1261654.000</td>
-      <td id="T_d463b_row7_col2" class="data row7 col2" >1.000</td>
+      <th id="T_f5e71_level1_row7" class="row_heading level1 row7" >Load, lb for Deflection = 0.05 in</th>
+      <td id="T_f5e71_row7_col0" class="data row7 col0" >1262000.000</td>
+      <td id="T_f5e71_row7_col1" class="data row7 col1" >1261654.000</td>
+      <td id="T_f5e71_row7_col2" class="data row7 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_d463b_level1_row8" class="row_heading level1 row8" >Load, lb for Deflection = 0.1 in</th>
-      <td id="T_d463b_row8_col0" class="data row8 col0" >1262000.000</td>
-      <td id="T_d463b_row8_col1" class="data row8 col1" >1261423.000</td>
-      <td id="T_d463b_row8_col2" class="data row8 col2" >1.000</td>
+      <th id="T_f5e71_level1_row8" class="row_heading level1 row8" >Load, lb for Deflection = 0.1 in</th>
+      <td id="T_f5e71_row8_col0" class="data row8 col0" >1262000.000</td>
+      <td id="T_f5e71_row8_col1" class="data row8 col1" >1261423.000</td>
+      <td id="T_f5e71_row8_col2" class="data row8 col2" >1.000</td>
     </tr>
   </tbody>
 </table>
@@ -1465,7 +1474,7 @@ which can be compared with expected target values for models with <code class="d
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.086 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.893 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-007-plastic-compression-of-a-pipe-assembly-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/ca47a76043c981995a74854db8e72c4c/vm-007-plastic_compression_of_a_pipe_assembly.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-007-plastic_compression_of_a_pipe_assembly.py</span></code></a></p>
@@ -1479,33 +1488,35 @@ which can be compared with expected target values for models with <code class="d
 </section>
 
 
-              </div>
+              </article>
               
-              
-          </main>
-          
 
+              
+          </div>
+          
       </div>
     </div>
+
+  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.1.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>

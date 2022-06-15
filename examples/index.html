@@ -1,19 +1,23 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Examples &#8212; PyMAPDL</title>
     
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
 
-    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -30,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
-    
+
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -40,6 +44,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/thebelab-helper.js"></script>
     <script src="../_static/clipboard.min.js"></script>
@@ -51,43 +56,42 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="MAPDL 2D Plane Stress Concentration Analysis" href="gallery_examples/00-mapdl-examples/2d_plate_with_a_hole.html" />
     <link rel="prev" title="erinqr" href="../mapdl_commands/_autosummary/ansys.mapdl.core.Mapdl.erinqr.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://www.ansys.com/">
-  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    <img src="../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -138,8 +142,15 @@
       
     </div>
 
-    
     <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -151,7 +162,6 @@
       </div>
       
     </div>
-    
   </div>
 </div>
     </nav>
@@ -181,13 +191,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -518,19 +528,20 @@
     
   </div>
 </nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
 <div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
@@ -590,29 +601,27 @@
 </ul>
 
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   <section id="examples">
-<span id="ref-examples"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h1>
+<span id="ref-examples"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h1>
 <p>Here are a series of examples using MAPDL with <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>.</p>
 <div class="sphx-glr-clear"></div><section id="full-examples-using-pymapdl">
-<span id="sphx-glr-examples-gallery-examples-00-mapdl-examples"></span><h2>Full Examples Using PyMAPDL<a class="headerlink" href="#full-examples-using-pymapdl" title="Permalink to this headline">#</a></h2>
+<span id="sphx-glr-examples-gallery-examples-00-mapdl-examples"></span><h2>Full Examples Using PyMAPDL<a class="headerlink" href="#full-examples-using-pymapdl" title="Permalink to this heading">#</a></h2>
 <p>These examples demonstrate full examples using the PyMAPDL module.</p>
 <div class="sphx-glr-thumbcontainer" tooltip="This tutorial shows how you can use PyMAPDL to determine and verify the &quot;stress concentration f..."><figure class="align-default" id="id1">
 <img alt="MAPDL 2D Plane Stress Concentration Analysis" src="../_images/sphx_glr_2d_plate_with_a_hole_thumb.png" />
@@ -720,7 +729,7 @@
 </div>
 <div class="sphx-glr-clear"></div></section>
 <section id="pymapdl-math-examples">
-<span id="ref-apdl-math-examples"></span><span id="sphx-glr-examples-gallery-examples-01-apdlmath-examples"></span><h2>PyMAPDL Math Examples<a class="headerlink" href="#pymapdl-math-examples" title="Permalink to this headline">#</a></h2>
+<span id="ref-apdl-math-examples"></span><span id="sphx-glr-examples-gallery-examples-01-apdlmath-examples"></span><h2>PyMAPDL Math Examples<a class="headerlink" href="#pymapdl-math-examples" title="Permalink to this heading">#</a></h2>
 <p>These examples demonstrate using APDL Math from the PyMAPDL library.</p>
 <div class="sphx-glr-thumbcontainer" tooltip="This tutorial shows how you can use pymapdl to use APDL math for basic operations on APDLMath v..."><figure class="align-default" id="id14">
 <img alt="PyMAPDL APDLMath Basic Operations" src="../_images/sphx_glr_basic_operations_thumb.png" />
@@ -788,7 +797,7 @@
 </div>
 <div class="sphx-glr-clear"></div></section>
 <section id="geometry-examples">
-<span id="sphx-glr-examples-gallery-examples-02-geometry"></span><h2>Geometry Examples<a class="headerlink" href="#geometry-examples" title="Permalink to this headline">#</a></h2>
+<span id="sphx-glr-examples-gallery-examples-02-geometry"></span><h2>Geometry Examples<a class="headerlink" href="#geometry-examples" title="Permalink to this heading">#</a></h2>
 <p>These examples demonstrate using PyMAPDL to create basic geometry.</p>
 <div class="sphx-glr-thumbcontainer" tooltip="This section is focused on creating keypoints."><figure class="align-default" id="id22">
 <img alt="Keypoints" src="../_images/sphx_glr_00-keypoints_thumb.png" />
@@ -832,7 +841,7 @@
 </div>
 <div class="sphx-glr-clear"></div></section>
 <section id="miscellaneous-examples">
-<span id="sphx-glr-examples-gallery-examples-03-tips-n-tricks"></span><h2>Miscellaneous Examples<a class="headerlink" href="#miscellaneous-examples" title="Permalink to this headline">#</a></h2>
+<span id="sphx-glr-examples-gallery-examples-03-tips-n-tricks"></span><h2>Miscellaneous Examples<a class="headerlink" href="#miscellaneous-examples" title="Permalink to this heading">#</a></h2>
 <p>These examples demonstrate miscellaneous tips and tricks for using PyMAPDL.</p>
 <div class="sphx-glr-thumbcontainer" tooltip="This block comment should be included at the top of any new example. Each example should have a..."><figure class="align-default" id="id27">
 <img alt="Adding a New Gallery Example" src="../_images/sphx_glr_00-example-template_thumb.png" />
@@ -868,7 +877,7 @@
 </div>
 <div class="sphx-glr-clear"></div></section>
 <section id="academic-finite-element-examples">
-<span id="sphx-glr-examples-gallery-examples-04-general-fea"></span><h2>Academic Finite Element Examples<a class="headerlink" href="#academic-finite-element-examples" title="Permalink to this headline">#</a></h2>
+<span id="sphx-glr-examples-gallery-examples-04-general-fea"></span><h2>Academic Finite Element Examples<a class="headerlink" href="#academic-finite-element-examples" title="Permalink to this heading">#</a></h2>
 <p>These examples demonstrate finite element method as applicable to
 Python and MAPDL while emphasising Python libaries such as <a class="reference external" href="https://matplotlib.org/">matplotlib</a></p>
 <div class="sphx-glr-thumbcontainer" tooltip="To illustrate it with a concrete example, we take a 2D element described by the following (x, y..."><figure class="align-default" id="id31">
@@ -881,7 +890,7 @@ Python and MAPDL while emphasising Python libaries such as <a class="reference e
 </div>
 <div class="sphx-glr-clear"></div></section>
 <section id="verification-manual-examples">
-<span id="sphx-glr-examples-gallery-examples-06-verif-manual"></span><h2>Verification Manual Examples<a class="headerlink" href="#verification-manual-examples" title="Permalink to this headline">#</a></h2>
+<span id="sphx-glr-examples-gallery-examples-06-verif-manual"></span><h2>Verification Manual Examples<a class="headerlink" href="#verification-manual-examples" title="Permalink to this heading">#</a></h2>
 <p>This section demonstrates a range of Mechanical APDL elements and
 capabilities in straightforward problems which have “classical” or
 readily-obtainable theoretical solutions using PyMAPDL.</p>
@@ -973,7 +982,7 @@ applications that may be of interest.</p>
 </div>
 </section>
 <section id="technology-showcase-manual-examples">
-<h2>Technology Showcase Manual Examples<a class="headerlink" href="#technology-showcase-manual-examples" title="Permalink to this headline">#</a></h2>
+<h2>Technology Showcase Manual Examples<a class="headerlink" href="#technology-showcase-manual-examples" title="Permalink to this heading">#</a></h2>
 <p>This section demonstrates the broad simulation capabilities of Ansys Mechanical
 APDL. The problems demonstrate how to use PyMAPDL to effectively and accurately
 solve interdisciplinary problems from a variety of industries and engineering
@@ -981,10 +990,6 @@ fields.</p>
 <p>These examples are a work-in-progress and will be extended during the life of
 this project.</p>
 <table class="table">
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 79%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Name</p></td>
 <td><p>Description</p></td>
@@ -1004,16 +1009,12 @@ this project.</p>
 </div>
 </section>
 <section id="extended-examples">
-<h2>Extended Examples<a class="headerlink" href="#extended-examples" title="Permalink to this headline">#</a></h2>
+<h2>Extended Examples<a class="headerlink" href="#extended-examples" title="Permalink to this heading">#</a></h2>
 <p>These extended examples aim to explain other concepts such as interoperability
 with other programs, libraries, and features in development.</p>
 <p>These examples are a work-in-progress and will be extended during the life of
 this project.</p>
 <table class="table">
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 79%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Name</p></td>
 <td><p>Description</p></td>
@@ -1033,33 +1034,35 @@ this project.</p>
 </section>
 
 
-              </div>
+              </article>
               
-              
-          </main>
-          
 
+              
+          </div>
+          
       </div>
     </div>
+
+  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.1.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>

@@ -1,19 +1,23 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Computation times &#8212; PyMAPDL</title>
     
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
 
-    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -30,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-    
+
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -40,6 +44,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
@@ -49,43 +54,42 @@
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://www.ansys.com/">
-  <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -136,8 +140,15 @@
       
     </div>
 
-    
     <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -149,7 +160,6 @@
       </div>
       
     </div>
-    
   </div>
 </div>
     </nav>
@@ -179,13 +189,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -195,101 +205,95 @@
     
   </div>
 </nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
 
 <nav id="bd-toc-nav">
     
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   <section id="computation-times">
-<span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-sg-execution-times"></span><h1>Computation times<a class="headerlink" href="#computation-times" title="Permalink to this headline">#</a></h1>
-<p><strong>02:08.602</strong> total execution time for <strong>examples_gallery_examples_00-mapdl-examples</strong> files:</p>
+<span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-sg-execution-times"></span><h1>Computation times<a class="headerlink" href="#computation-times" title="Permalink to this heading">#</a></h1>
+<p><strong>01:52.733</strong> total execution time for <strong>examples_gallery_examples_00-mapdl-examples</strong> files:</p>
 <table class="table">
-<colgroup>
-<col style="width: 86%" />
-<col style="width: 8%" />
-<col style="width: 6%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="2d_plate_with_a_hole.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-2d-plate-with-a-hole-py"><span class="std std-ref">MAPDL 2D Plane Stress Concentration Analysis</span></a> (<code class="docutils literal notranslate"><span class="pre">2d_plate_with_a_hole.py</span></code>)</p></td>
-<td><p>00:48.745</p></td>
+<td><p>00:44.373</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="geometry.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-geometry-py"><span class="std std-ref">Plotting and Mesh Access</span></a> (<code class="docutils literal notranslate"><span class="pre">geometry.py</span></code>)</p></td>
-<td><p>00:17.972</p></td>
+<td><p>00:16.172</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista_mesh.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py"><span class="std std-ref">PyVista Mesh Integration</span></a> (<code class="docutils literal notranslate"><span class="pre">pyvista_mesh.py</span></code>)</p></td>
-<td><p>00:12.071</p></td>
+<td><p>00:10.012</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="lathe_cutter.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-lathe-cutter-py"><span class="std std-ref">Structural Analysis of a Lathe Cutter</span></a> (<code class="docutils literal notranslate"><span class="pre">lathe_cutter.py</span></code>)</p></td>
-<td><p>00:09.685</p></td>
+<td><p>00:08.187</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="transient_thermal.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-transient-thermal-py"><span class="std std-ref">Example Thermal Transient Analysis</span></a> (<code class="docutils literal notranslate"><span class="pre">transient_thermal.py</span></code>)</p></td>
-<td><p>00:08.552</p></td>
+<td><p>00:07.256</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="2d_pressure_vessel.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-2d-pressure-vessel-py"><span class="std std-ref">2D Pressure Vessel</span></a> (<code class="docutils literal notranslate"><span class="pre">2d_pressure_vessel.py</span></code>)</p></td>
-<td><p>00:08.165</p></td>
+<td><p>00:06.975</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pressure_vessel.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-pressure-vessel-py"><span class="std std-ref">Pressure Vessel</span></a> (<code class="docutils literal notranslate"><span class="pre">pressure_vessel.py</span></code>)</p></td>
-<td><p>00:07.567</p></td>
+<td><p>00:05.907</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="3d_notch.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-3d-notch-py"><span class="std std-ref">3D Stress Concentration Analysis for a Notched Plate</span></a> (<code class="docutils literal notranslate"><span class="pre">3d_notch.py</span></code>)</p></td>
-<td><p>00:06.563</p></td>
+<td><p>00:05.884</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="path_operations.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-path-operations-py"><span class="std std-ref">Path Operations within pyMAPDL and MAPDL</span></a> (<code class="docutils literal notranslate"><span class="pre">path_operations.py</span></code>)</p></td>
-<td><p>00:05.109</p></td>
+<td><p>00:04.124</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="contact_elements.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-contact-elements-py"><span class="std std-ref">Contact Element Example</span></a> (<code class="docutils literal notranslate"><span class="pre">contact_elements.py</span></code>)</p></td>
-<td><p>00:01.641</p></td>
+<td><p>00:01.489</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="3d_plate_thermal.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-3d-plate-thermal-py"><span class="std std-ref">Basic Thermal Analysis with pyMAPDL</span></a> (<code class="docutils literal notranslate"><span class="pre">3d_plate_thermal.py</span></code>)</p></td>
-<td><p>00:01.075</p></td>
+<td><p>00:01.001</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="mapdl_3d_beam.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-mapdl-3d-beam-py"><span class="std std-ref">MAPDL 3D Beam Example</span></a> (<code class="docutils literal notranslate"><span class="pre">mapdl_3d_beam.py</span></code>)</p></td>
-<td><p>00:00.915</p></td>
+<td><p>00:00.856</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="mapdl_beam.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-mapdl-beam-py"><span class="std std-ref">MAPDL 2D Beam Example</span></a> (<code class="docutils literal notranslate"><span class="pre">mapdl_beam.py</span></code>)</p></td>
-<td><p>00:00.541</p></td>
+<td><p>00:00.497</p></td>
 <td><p>0.0 MB</p></td>
 </tr>
 </tbody>
@@ -297,33 +301,35 @@
 </section>
 
 
-              </div>
+              </article>
               
-              
-          </main>
-          
 
+              
+          </div>
+          
       </div>
     </div>
+
+  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.1.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>

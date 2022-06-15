@@ -1,19 +1,23 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>PyVista Mesh Integration &#8212; PyMAPDL</title>
     
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
 
-    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -30,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-    
+
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -40,6 +44,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
@@ -51,43 +56,42 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Example Thermal Transient Analysis" href="transient_thermal.html" />
     <link rel="prev" title="Pressure Vessel" href="pressure_vessel.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://www.ansys.com/">
-  <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -138,8 +142,15 @@
       
     </div>
 
-    
     <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -151,7 +162,6 @@
       </div>
       
     </div>
-    
   </div>
 </div>
     </nav>
@@ -182,13 +192,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -519,40 +529,39 @@
     
   </div>
 </nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
 
 <nav id="bd-toc-nav">
     
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
@@ -560,7 +569,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="pyvista-mesh-integration">
-<span id="ref-pyvista-mesh"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py"></span><h1>PyVista Mesh Integration<a class="headerlink" href="#pyvista-mesh-integration" title="Permalink to this headline">#</a></h1>
+<span id="ref-pyvista-mesh"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py"></span><h1>PyVista Mesh Integration<a class="headerlink" href="#pyvista-mesh-integration" title="Permalink to this heading">#</a></h1>
 <p>Run a modal analysis on a mesh generated from pyvista within MAPDL.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
 
@@ -638,10 +647,10 @@ to download the full example code</p>
 
 *****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =     117.632   TIME= 04:28:19
+ *** NOTE ***                            CP =     101.478   TIME= 04:19:02
  There is no title defined for this analysis.
 
- *** NOTE ***                            CP =     117.724   TIME= 04:28:19
+ *** NOTE ***                            CP =     101.555   TIME= 04:19:02
  No modes are being expanded (MXPAND command) and therefore the element
  results will not be written to the mode file.  If you do not intend to
  use mode selection and for more efficient calculation of element
@@ -659,7 +668,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:28:19  JUN 14, 2022 CP=    117.744
+ 00000000  VERSION=LINUX x64     04:19:02  JUN 15, 2022 CP=    101.577
 
 
 
@@ -678,15 +687,15 @@ to download the full example code</p>
    SHIFT POINT . . . . . . . . . . . . . . . . . .  1.0000
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** WARNING ***                         CP =     117.762   TIME= 04:28:19
+ *** WARNING ***                         CP =     101.596   TIME= 04:19:02
  No constraints have been defined using the D command.
 
- *** NOTE ***                            CP =     117.762   TIME= 04:28:19
+ *** NOTE ***                            CP =     101.596   TIME= 04:19:02
  The step data was checked and warning messages were found.
   Please review output or errors file ( /file.err ) for these warning
  messages.
 
- *** NOTE ***                            CP =     117.763   TIME= 04:28:19
+ *** NOTE ***                            CP =     101.596   TIME= 04:19:02
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -734,8 +743,8 @@ to download the full example code</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        4     10000  SHELL181      1.003   0.000100
- Time at end of element matrix formulation CP = 119.019691.
+        4     10000  SHELL181      0.619   0.000062
+ Time at end of element matrix formulation CP = 102.415031.
 
   BLOCK LANCZOS CALCULATION OF UP TO    20 EIGENVECTORS.
   NUMBER OF EQUATIONS              =        61206
@@ -748,7 +757,7 @@ to download the full example code</p>
   Memory required for in-core solution     =   178.612 MB
   Memory required for out-of-core solution =    60.617 MB
 
- *** NOTE ***                            CP =     120.795   TIME= 04:28:22
+ *** NOTE ***                            CP =     104.179   TIME= 04:19:04
  The Sparse Matrix Solver used by the Block Lanczos eigensolver is
  currently running in the in-core memory mode.  This memory mode uses
  the most amount of memory in order to avoid using the hard drive as
@@ -758,7 +767,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:28:23  JUN 14, 2022 CP=    123.873
+ 00000000  VERSION=LINUX x64     04:19:05  JUN 15, 2022 CP=    106.587
 
 
 
@@ -775,29 +784,29 @@ to download the full example code</p>
    FREQUENCY RANGE REQUESTED=   20 MODES ABOVE   1.00000     HERTZ
 
     1     32.74664192985
-    2     47.77804288730
+    2     47.77804288731
     3     59.17108298360
     4     84.60790505173
-    5     84.60790505209
-    6     148.8927748648
-    7     148.8927748650
-    8     154.6519861746
-    9     168.3840411459
-   10     187.7790667340
-   11     255.9751634914
+    5     84.60790505208
+    6     148.8927748650
+    7     148.8927748652
+    8     154.6519861747
+    9     168.3840411461
+   10     187.7790667343
+   11     255.9751634915
    12     255.9751634916
-   13     285.2444050791
-   14     298.2943388368
+   13     285.2444050788
+   14     298.2943388367
    15     319.8023401634
-   16     319.8023401642
+   16     319.8023401640
    17     370.6023621796
-   18     391.8457651362
-   19     409.1039880850
-   20     482.6516135508
+   18     391.8457651345
+   19     409.1039880842
+   20     482.6516135505
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:28:23  JUN 14, 2022 CP=    124.201
+ 00000000  VERSION=LINUX x64     04:19:05  JUN 15, 2022 CP=    106.863
 
 
 
@@ -1016,37 +1025,37 @@ Enable a continuous plot looping with <code class="docutils literal notranslate"
   warnings.warn(&#39;The ``nangles`` kwarg is depreciated and ``n_frames`` &#39;
 
 Rendering animation:   0%|          | 0/30 [00:00&lt;?, ?it/s]
-Rendering animation:   3%|3         | 1/30 [00:00&lt;00:07,  3.77it/s]
-Rendering animation:   7%|6         | 2/30 [00:00&lt;00:05,  4.70it/s]
-Rendering animation:  10%|#         | 3/30 [00:00&lt;00:05,  4.79it/s]
-Rendering animation:  13%|#3        | 4/30 [00:00&lt;00:05,  5.01it/s]
-Rendering animation:  17%|#6        | 5/30 [00:01&lt;00:04,  5.17it/s]
-Rendering animation:  20%|##        | 6/30 [00:01&lt;00:04,  5.20it/s]
-Rendering animation:  23%|##3       | 7/30 [00:01&lt;00:04,  5.29it/s]
-Rendering animation:  27%|##6       | 8/30 [00:01&lt;00:04,  5.05it/s]
-Rendering animation:  30%|###       | 9/30 [00:01&lt;00:04,  4.96it/s]
-Rendering animation:  33%|###3      | 10/30 [00:02&lt;00:04,  4.91it/s]
-Rendering animation:  37%|###6      | 11/30 [00:02&lt;00:03,  4.80it/s]
-Rendering animation:  40%|####      | 12/30 [00:02&lt;00:03,  4.93it/s]
-Rendering animation:  43%|####3     | 13/30 [00:02&lt;00:03,  5.08it/s]
-Rendering animation:  47%|####6     | 14/30 [00:02&lt;00:03,  5.08it/s]
-Rendering animation:  50%|#####     | 15/30 [00:03&lt;00:02,  5.12it/s]
-Rendering animation:  53%|#####3    | 16/30 [00:03&lt;00:02,  4.96it/s]
-Rendering animation:  57%|#####6    | 17/30 [00:03&lt;00:02,  5.16it/s]
-Rendering animation:  60%|######    | 18/30 [00:03&lt;00:02,  5.28it/s]
-Rendering animation:  63%|######3   | 19/30 [00:03&lt;00:02,  5.35it/s]
-Rendering animation:  67%|######6   | 20/30 [00:03&lt;00:01,  5.22it/s]
-Rendering animation:  70%|#######   | 21/30 [00:04&lt;00:01,  5.05it/s]
-Rendering animation:  73%|#######3  | 22/30 [00:04&lt;00:01,  5.00it/s]
-Rendering animation:  77%|#######6  | 23/30 [00:04&lt;00:01,  4.86it/s]
-Rendering animation:  80%|########  | 24/30 [00:04&lt;00:01,  4.84it/s]
-Rendering animation:  83%|########3 | 25/30 [00:05&lt;00:01,  4.80it/s]
-Rendering animation:  87%|########6 | 26/30 [00:05&lt;00:00,  4.74it/s]
-Rendering animation:  90%|######### | 27/30 [00:05&lt;00:00,  4.83it/s]
-Rendering animation:  93%|#########3| 28/30 [00:05&lt;00:00,  4.91it/s]
-Rendering animation:  97%|#########6| 29/30 [00:05&lt;00:00,  4.97it/s]
-Rendering animation: 100%|##########| 30/30 [00:06&lt;00:00,  5.10it/s]
-Rendering animation: 100%|##########| 30/30 [00:06&lt;00:00,  4.88it/s]
+Rendering animation:   3%|3         | 1/30 [00:00&lt;00:06,  4.34it/s]
+Rendering animation:   7%|6         | 2/30 [00:00&lt;00:04,  5.67it/s]
+Rendering animation:  10%|#         | 3/30 [00:00&lt;00:04,  5.76it/s]
+Rendering animation:  13%|#3        | 4/30 [00:00&lt;00:04,  6.10it/s]
+Rendering animation:  17%|#6        | 5/30 [00:00&lt;00:04,  6.19it/s]
+Rendering animation:  20%|##        | 6/30 [00:01&lt;00:03,  6.05it/s]
+Rendering animation:  23%|##3       | 7/30 [00:01&lt;00:03,  6.07it/s]
+Rendering animation:  27%|##6       | 8/30 [00:01&lt;00:03,  6.01it/s]
+Rendering animation:  30%|###       | 9/30 [00:01&lt;00:03,  5.79it/s]
+Rendering animation:  33%|###3      | 10/30 [00:01&lt;00:03,  5.64it/s]
+Rendering animation:  37%|###6      | 11/30 [00:01&lt;00:03,  5.71it/s]
+Rendering animation:  40%|####      | 12/30 [00:02&lt;00:03,  5.84it/s]
+Rendering animation:  43%|####3     | 13/30 [00:02&lt;00:02,  5.83it/s]
+Rendering animation:  47%|####6     | 14/30 [00:02&lt;00:02,  6.03it/s]
+Rendering animation:  50%|#####     | 15/30 [00:02&lt;00:02,  6.24it/s]
+Rendering animation:  53%|#####3    | 16/30 [00:02&lt;00:02,  6.10it/s]
+Rendering animation:  57%|#####6    | 17/30 [00:02&lt;00:02,  6.42it/s]
+Rendering animation:  60%|######    | 18/30 [00:02&lt;00:01,  6.51it/s]
+Rendering animation:  63%|######3   | 19/30 [00:03&lt;00:01,  6.52it/s]
+Rendering animation:  67%|######6   | 20/30 [00:03&lt;00:01,  6.40it/s]
+Rendering animation:  70%|#######   | 21/30 [00:03&lt;00:01,  6.40it/s]
+Rendering animation:  73%|#######3  | 22/30 [00:03&lt;00:01,  6.37it/s]
+Rendering animation:  77%|#######6  | 23/30 [00:03&lt;00:01,  6.16it/s]
+Rendering animation:  80%|########  | 24/30 [00:03&lt;00:01,  5.98it/s]
+Rendering animation:  83%|########3 | 25/30 [00:04&lt;00:00,  5.83it/s]
+Rendering animation:  87%|########6 | 26/30 [00:04&lt;00:00,  5.81it/s]
+Rendering animation:  90%|######### | 27/30 [00:04&lt;00:00,  5.94it/s]
+Rendering animation:  93%|#########3| 28/30 [00:04&lt;00:00,  6.03it/s]
+Rendering animation:  97%|#########6| 29/30 [00:04&lt;00:00,  6.04it/s]
+Rendering animation: 100%|##########| 30/30 [00:04&lt;00:00,  6.17it/s]
+Rendering animation: 100%|##########| 30/30 [00:05&lt;00:00,  5.90it/s]
 
 [(1.5773502691896262, 1.5773502691896262, 1.5773502691896262),
  (0.0, 0.0, 0.0),
@@ -1057,7 +1066,7 @@ Rendering animation: 100%|##########| 30/30 [00:06&lt;00:00,  4.88it/s]
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  12.071 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.012 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/64adae6b03e47dc2c3a43f0a2a856797/pyvista_mesh.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pyvista_mesh.py</span></code></a></p>
@@ -1070,33 +1079,35 @@ Rendering animation: 100%|##########| 30/30 [00:06&lt;00:00,  4.88it/s]
 </section>
 
 
-              </div>
+              </article>
               
-              
-          </main>
-          
 
+              
+          </div>
+          
       </div>
     </div>
+
+  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.1.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>

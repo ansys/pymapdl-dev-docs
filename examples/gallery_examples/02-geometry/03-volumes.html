@@ -1,19 +1,23 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Volumes &#8212; PyMAPDL</title>
     
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
 
-    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -30,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-    
+
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -40,6 +44,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
@@ -51,43 +56,42 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Primitives" href="04-primitives.html" />
     <link rel="prev" title="Areas" href="02-areas.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://www.ansys.com/">
-  <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -138,8 +142,15 @@
       
     </div>
 
-    
     <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -151,7 +162,6 @@
       </div>
       
     </div>
-    
   </div>
 </div>
     </nav>
@@ -182,13 +192,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -519,19 +529,20 @@
     
   </div>
 </nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
 <div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
@@ -591,23 +602,21 @@
 </ul>
 
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
@@ -615,7 +624,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="volumes">
-<span id="ref-basic-geometry-volumes"></span><span id="sphx-glr-examples-gallery-examples-02-geometry-03-volumes-py"></span><h1>Volumes<a class="headerlink" href="#volumes" title="Permalink to this headline">#</a></h1>
+<span id="ref-basic-geometry-volumes"></span><span id="sphx-glr-examples-gallery-examples-02-geometry-03-volumes-py"></span><h1>Volumes<a class="headerlink" href="#volumes" title="Permalink to this heading">#</a></h1>
 <p>This example shows how you can use PyMAPDL to create basic geometry
 using Pythonic PREP7 volume commands.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -636,7 +645,7 @@ ansys.mapdl Version: 0.63.dev0
 </pre></div>
 </div>
 <section id="apdl-command-v">
-<h2>APDL Command: V<a class="headerlink" href="#apdl-command-v" title="Permalink to this headline">#</a></h2>
+<h2>APDL Command: V<a class="headerlink" href="#apdl-command-v" title="Permalink to this heading">#</a></h2>
 <p>Define a volume through keypoints.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a simple cube volume.</span>
 
@@ -682,7 +691,7 @@ ansys.mapdl Version: 0.63.dev0
 </div>
 <img src="../../../_images/sphx_glr_03-volumes_003.png" srcset="../../../_images/sphx_glr_03-volumes_003.png" alt="03 volumes" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-va">
-<h2>APDL Command: VA<a class="headerlink" href="#apdl-command-va" title="Permalink to this headline">#</a></h2>
+<h2>APDL Command: VA<a class="headerlink" href="#apdl-command-va" title="Permalink to this heading">#</a></h2>
 <p>Generate a volume bounded by existing areas.</p>
 <p>Create a simple tetrahedral bounded by 4 areas</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -705,7 +714,7 @@ ansys.mapdl Version: 0.63.dev0
 </div>
 <img src="../../../_images/sphx_glr_03-volumes_004.png" srcset="../../../_images/sphx_glr_03-volumes_004.png" alt="03 volumes" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-vdrag">
-<h2>APDL Command: VDRAG<a class="headerlink" href="#apdl-command-vdrag" title="Permalink to this headline">#</a></h2>
+<h2>APDL Command: VDRAG<a class="headerlink" href="#apdl-command-vdrag" title="Permalink to this heading">#</a></h2>
 <p>Generate volumes by dragging an area pattern along a path.</p>
 <p>Create a square with a hole in it and drag it along an arc.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -726,7 +735,7 @@ ansys.mapdl Version: 0.63.dev0
 </div>
 <img src="../../../_images/sphx_glr_03-volumes_005.png" srcset="../../../_images/sphx_glr_03-volumes_005.png" alt="03 volumes" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-vext">
-<h2>APDL Command: VEXT<a class="headerlink" href="#apdl-command-vext" title="Permalink to this headline">#</a></h2>
+<h2>APDL Command: VEXT<a class="headerlink" href="#apdl-command-vext" title="Permalink to this heading">#</a></h2>
 <p>Generate additional volumes by extruding areas.</p>
 <p>Create a basic cylinder by extruding a circle.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -752,7 +761,7 @@ ansys.mapdl Version: 0.63.dev0
 </div>
 <img src="../../../_images/sphx_glr_03-volumes_007.png" srcset="../../../_images/sphx_glr_03-volumes_007.png" alt="03 volumes" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-vrotat">
-<h2>APDL Command: VROTAT<a class="headerlink" href="#apdl-command-vrotat" title="Permalink to this headline">#</a></h2>
+<h2>APDL Command: VROTAT<a class="headerlink" href="#apdl-command-vrotat" title="Permalink to this heading">#</a></h2>
 <p>Generate cylindrical volumes by rotating an area pattern about an
 axis.</p>
 <p>Rotate a circle about the Z axis to create a hoop</p>
@@ -779,7 +788,7 @@ axis.</p>
 </div>
 <img src="../../../_images/sphx_glr_03-volumes_008.png" srcset="../../../_images/sphx_glr_03-volumes_008.png" alt="03 volumes" class = "sphx-glr-single-img"/></section>
 <section id="apdl-command-vsymm">
-<h2>APDL Command: VSYMM<a class="headerlink" href="#apdl-command-vsymm" title="Permalink to this headline">#</a></h2>
+<h2>APDL Command: VSYMM<a class="headerlink" href="#apdl-command-vsymm" title="Permalink to this heading">#</a></h2>
 <p>Generate volumes from a volume pattern by symmetry reflection.</p>
 <p>Create four blocks by reflecting a single block across the YZ and
 then XZ planes.</p>
@@ -795,7 +804,7 @@ then XZ planes.</p>
 </div>
 <img src="../../../_images/sphx_glr_03-volumes_009.png" srcset="../../../_images/sphx_glr_03-volumes_009.png" alt="03 volumes" class = "sphx-glr-single-img"/></section>
 <section id="volume-ids">
-<h2>Volume IDs<a class="headerlink" href="#volume-ids" title="Permalink to this headline">#</a></h2>
+<h2>Volume IDs<a class="headerlink" href="#volume-ids" title="Permalink to this heading">#</a></h2>
 <p>Return an array of the volume numbers.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">vnum</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">vnum</span></a>
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">vnum</span></a>
@@ -807,7 +816,7 @@ then XZ planes.</p>
 </div>
 </section>
 <section id="volume-geometry">
-<h2>Volume Geometry<a class="headerlink" href="#volume-geometry" title="Permalink to this headline">#</a></h2>
+<h2>Volume Geometry<a class="headerlink" href="#volume-geometry" title="Permalink to this heading">#</a></h2>
 <p>Volume geometry can be accessed from the <code class="docutils literal notranslate"><span class="pre">geometry.areas</span></code> method.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">volume_mesh</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">areas</span><span class="p">(</span><span class="n">merge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">volume_mesh</span></a>
@@ -836,7 +845,7 @@ then XZ planes.</p>
 <br />
 <br /></section>
 <section id="volume-selection">
-<h2>Volume Selection<a class="headerlink" href="#volume-selection" title="Permalink to this headline">#</a></h2>
+<h2>Volume Selection<a class="headerlink" href="#volume-selection" title="Permalink to this heading">#</a></h2>
 <p>There are two approaches for selecting volumes, the old “legacy”
 style and the new style.  The old style is valuable for those who
 are comfortable with the existing MAPDL commands, and new style is
@@ -898,7 +907,7 @@ areas.</p>
 </div>
 </section>
 <section id="apdl-command-vplot">
-<h2>APDL Command: VPLOT<a class="headerlink" href="#apdl-command-vplot" title="Permalink to this headline">#</a></h2>
+<h2>APDL Command: VPLOT<a class="headerlink" href="#apdl-command-vplot" title="Permalink to this heading">#</a></h2>
 <p>Plot colored volumes while displaying the keypoint numbers.</p>
 <p>There are a variety of plotting options available for all the common
 plotting methods.</p>
@@ -917,7 +926,7 @@ plotting methods.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  24.178 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  12.986 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-02-geometry-03-volumes-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/24ac1d968b114a236f6ae1b0268ec5a2/03-volumes.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">03-volumes.py</span></code></a></p>
@@ -931,33 +940,35 @@ plotting methods.</p>
 </section>
 
 
-              </div>
+              </article>
               
-              
-          </main>
-          
 
+              
+          </div>
+          
       </div>
     </div>
+
+  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.1.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>
