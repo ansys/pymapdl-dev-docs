@@ -697,7 +697,7 @@ STOP SOLUTION AFTER FULL FILE HAS BEEN WRITTEN
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1498: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
   warn(
 
-Elapsed time to solve this problem :  0.519859790802002
+Elapsed time to solve this problem :  0.7406470775604248
 </pre></div>
 </div>
 <p>Print eigenfrequencies and accuracy.</p>
@@ -723,16 +723,16 @@ Elapsed time to solve this problem :  0.519859790802002
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq =   352.40 Hz         Residual = 6.4363e-09
-[1] : Freq =   385.20 Hz         Residual = 5.6669e-09
-[2] : Freq =   656.81 Hz         Residual = 6.2898e-09
-[3] : Freq =   764.73 Hz         Residual = 6.6152e-09
-[4] : Freq =   825.47 Hz         Residual = 5.4891e-09
-[5] : Freq =  1039.28 Hz         Residual = 6.2336e-09
-[6] : Freq =  1143.61 Hz         Residual = 2.6386e-08
-[7] : Freq =  1258.00 Hz         Residual = 4.5162e-08
-[8] : Freq =  1334.23 Hz         Residual = 5.2739e-08
-[9] : Freq =  1352.10 Hz         Residual = 3.6164e-08
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq =   352.40 Hz         Residual = 1.8616e-08
+[1] : Freq =   385.20 Hz         Residual = 1.185e-08
+[2] : Freq =   656.81 Hz         Residual = 6.9081e-09
+[3] : Freq =   764.73 Hz         Residual = 1.1926e-08
+[4] : Freq =   825.47 Hz         Residual = 4.9541e-09
+[5] : Freq =  1039.28 Hz         Residual = 6.9855e-09
+[6] : Freq =  1143.61 Hz         Residual = 5.4131e-09
+[7] : Freq =  1258.00 Hz         Residual = 2.3296e-08
+[8] : Freq =  1334.23 Hz         Residual = 3.309e-07
+[9] : Freq =  1352.10 Hz         Residual = 6.2926e-08
 </pre></div>
 </div>
 <section id="use-scipy-to-solve-the-same-eigenproblem">
@@ -781,7 +781,7 @@ are memory inefficient.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Elapsed time to solve this problem :  2.5229878425598145
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Elapsed time to solve this problem :  3.8289408683776855
 </pre></div>
 </div>
 <p>Convert Lambda values to Frequency values:
@@ -810,16 +810,16 @@ are memory inefficient.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq =   352.40 Hz         Residual = 8.0071e-05
-[1] : Freq =   385.20 Hz         Residual = 0.00010352
-[2] : Freq =   656.81 Hz         Residual = 0.00024255
-[3] : Freq =   764.73 Hz         Residual = 0.00016257
-[4] : Freq =   825.47 Hz         Residual = 0.0003896
-[5] : Freq =  1039.28 Hz         Residual = 0.00057568
-[6] : Freq =  1143.61 Hz         Residual = 0.0025878
-[7] : Freq =  1258.00 Hz         Residual = 0.00033875
-[8] : Freq =  1334.24 Hz         Residual = 0.00046618
-[9] : Freq =  1352.10 Hz         Residual = 0.0011268
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq =   352.40 Hz         Residual = 8.0099e-05
+[1] : Freq =   385.20 Hz         Residual = 0.0001036
+[2] : Freq =   656.81 Hz         Residual = 0.00024281
+[3] : Freq =   764.73 Hz         Residual = 0.00016262
+[4] : Freq =   825.47 Hz         Residual = 0.00038878
+[5] : Freq =  1039.28 Hz         Residual = 0.00057727
+[6] : Freq =  1143.61 Hz         Residual = 0.0025645
+[7] : Freq =  1258.00 Hz         Residual = 0.00033886
+[8] : Freq =  1334.23 Hz         Residual = 0.00046698
+[9] : Freq =  1352.10 Hz         Residual = 0.0011234
 </pre></div>
 </div>
 <p>MAPDL is more accurate than SciPy.</p>
@@ -842,14 +842,14 @@ are memory inefficient.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Mapdl is 4.85 times faster
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Mapdl is 5.17 times faster
 </pre></div>
 </div>
 <p>stop mapdl</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.240 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.070 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-01-apdlmath-examples-mapdl-vs-scipy-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/8e3e8f7ff86d69bea9c0ba80fd9000cd/mapdl_vs_scipy.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mapdl_vs_scipy.py</span></code></a></p>
@@ -887,7 +887,7 @@ are memory inefficient.</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

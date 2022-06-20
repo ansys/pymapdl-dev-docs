@@ -1203,6 +1203,16 @@ Poisson’s ratio is <span class="math notranslate nohighlight">\(\nu = 0.3125\)
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
+
+
+     D I S T R I B U T E D   D O M A I N   D E C O M P O S E R
+
+  ...Number of elements: 64
+  ...Number of nodes:    81
+  ...Decompose to 0 CPU domains
+  ...Element load balance ratio =     0.000
+
+
                       L O A D   S T E P   O P T I O N S
 
    LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
@@ -1230,13 +1240,14 @@ Poisson’s ratio is <span class="math notranslate nohighlight">\(\nu = 0.3125\)
         1        64  SHELL181      0.000   0.000000
  Time at end of element matrix formulation CP = 0.
 
- SPARSE MATRIX DIRECT SOLVER.
+ DISTRIBUTED SPARSE MATRIX DIRECT SOLVER.
   Number of equations =         407,    Maximum wavefront =      0
   Memory available (MB) =    0.0    ,  Memory required (MB) =    0.0
 
- Sparse solver maximum pivot= 0 at node 0 .
- Sparse solver minimum pivot= 0 at node 0 .
- Sparse solver minimum pivot in absolute value= 0 at node 0 .
+ Distributed sparse solver maximum pivot= 0 at node 0 .
+ Distributed sparse solver minimum pivot= 0 at node 0 .
+ Distributed sparse solver minimum pivot in absolute value= 0 at node 0
+ .
 
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
@@ -1670,6 +1681,16 @@ Radial displacement: -0.11
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
+
+
+     D I S T R I B U T E D   D O M A I N   D E C O M P O S E R
+
+  ...Number of elements: 64
+  ...Number of nodes:    225
+  ...Decompose to 0 CPU domains
+  ...Element load balance ratio =     0.000
+
+
                       L O A D   S T E P   O P T I O N S
 
    LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
@@ -1697,13 +1718,14 @@ Radial displacement: -0.11
         1        64  SHELL281      0.000   0.000000
  Time at end of element matrix formulation CP = 0.
 
- SPARSE MATRIX DIRECT SOLVER.
+ DISTRIBUTED SPARSE MATRIX DIRECT SOLVER.
   Number of equations =        1199,    Maximum wavefront =      0
   Memory available (MB) =    0.0    ,  Memory required (MB) =    0.0
 
- Sparse solver maximum pivot= 0 at node 0 .
- Sparse solver minimum pivot= 0 at node 0 .
- Sparse solver minimum pivot in absolute value= 0 at node 0 .
+ Distributed sparse solver maximum pivot= 0 at node 0 .
+ Distributed sparse solver minimum pivot= 0 at node 0 .
+ Distributed sparse solver minimum pivot in absolute value= 0 at node 0
+ .
 
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
@@ -1773,7 +1795,7 @@ and <span class="math notranslate nohighlight">\(\delta_{\mathrm{shell281}}\)</s
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.041 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.981 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-006-pinched-cylinder-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/67d392adcde641261b383b6161b41103/vm-006-pinched_cylinder.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-006-pinched_cylinder.py</span></code></a></p>
@@ -1811,7 +1833,7 @@ and <span class="math notranslate nohighlight">\(\delta_{\mathrm{shell281}}\)</s
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   
