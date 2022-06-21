@@ -1128,31 +1128,41 @@
 <dd class="field-odd"><dl>
 <dt><strong>action</strong></dt><dd><p>Specifies the action for defining or manipulating crack-growth
 data:</p>
-<p>NEW - Initiate a new set of crack-growth simulation data (default).</p>
 <dl class="simple">
-<dt>CID - Specify the crack-calculation (CINT) ID for energy-release rates to be used in</dt><dd><p>the fracture criterion calculation.</p>
+<dt>NEW</dt><dd><p>Initiate a new set of crack-growth simulation data (default).</p>
+</dd>
+<dt>CID</dt><dd><p>Specify the crack-calculation (CINT) ID for energy-release rates to be used in
+the fracture criterion calculation.</p>
+</dd>
+<dt>FCOPTION</dt><dd><p>Specify the fracture criterion for crack-growth/delamination.</p>
+</dd>
+<dt>CPATH</dt><dd><p>Specify the element component for crack growth.</p>
+</dd>
+<dt>DTIME</dt><dd><p>Specify the initial time step for crack growth.</p>
+</dd>
+<dt>DTMIN</dt><dd><p>Specify the minimum time step for crack growth.</p>
+</dd>
+<dt>DTMAX</dt><dd><p>Specify the maximum time step for crack growth.</p>
+</dd>
+<dt>FCRAT</dt><dd><p>Fracture criterion ratio (fc).</p>
+</dd>
+<dt>STOP</dt><dd><p>Stops the analysis when the specified maximum crack extension is reached.</p>
+</dd>
+<dt>METHOD</dt><dd><p>Define the method of crack propagation.</p>
 </dd>
 </dl>
-<p>FCOPTION - Specify the fracture criterion for crack-growth/delamination.</p>
-<p>CPATH - Specify the element component for crack growth.</p>
-<p>DTIME - Specify the initial time step for crack growth.</p>
-<p>DTMIN - Specify the minimum time step for crack growth.</p>
-<p>DTMAX - Specify the maximum time step for crack growth.</p>
-<p>FCRAT - Fracture criterion ratio (fc).</p>
-<p>STOP - Stops the analysis when the specified maximum crack extension is reached.</p>
-<p>METHOD - Define the method of crack propagation.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>When Action = NEW, the CGROW command initializes a crack-growth
-simulation set. Subsequent CGROW commands define the parameters
+<p>When <code class="docutils literal notranslate"><span class="pre">Action</span> <span class="pre">=</span> <span class="pre">NEW</span></code>, the <a class="reference internal" href="#ansys.mapdl.core.Mapdl.cgrow" title="ansys.mapdl.core.Mapdl.cgrow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.cgrow()</span></code></a> command initializes a crack-growth
+simulation set. Subsequent <a class="reference internal" href="#ansys.mapdl.core.Mapdl.cgrow" title="ansys.mapdl.core.Mapdl.cgrow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.cgrow()</span></code></a> commands define the parameters
 necessary for the simulation.</p>
-<p>For multiple cracks, issue multiple CGROW,NEW commands (and any
-subsequent CGROW commands necessary to define the parameters) for each
+<p>For multiple cracks, issue multiple <a class="reference internal" href="#ansys.mapdl.core.Mapdl.cgrow" title="ansys.mapdl.core.Mapdl.cgrow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.cgrow(&quot;NEW&quot;)</span></code></a> commands (and any
+subsequent <a class="reference internal" href="#ansys.mapdl.core.Mapdl.cgrow" title="ansys.mapdl.core.Mapdl.cgrow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.cgrow()</span></code></a> commands necessary to define the parameters) for each
 crack.</p>
-<p>If the analysis is restarted (ANTYPE,,RESTART), the CGROW command must
+<p>If the analysis is restarted (<a class="reference internal" href="ansys.mapdl.core.Mapdl.antype.html#ansys.mapdl.core.Mapdl.antype" title="ansys.mapdl.core.Mapdl.antype"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.antype(&quot;&quot;,&quot;RESTART&quot;)</span></code></a>), the <a class="reference internal" href="#ansys.mapdl.core.Mapdl.cgrow" title="ansys.mapdl.core.Mapdl.cgrow"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.cgrow()</span></code></a> command must
 be re-issued.</p>
 <p>For additional details on this command, see
 <a class="reference external" href="https://www.mm.bme.hu/~gyebro/files/ans_help_v182/ans_cmd/Hlp_C_CGROW.html">https://www.mm.bme.hu/~gyebro/files/ans_help_v182/ans_cmd/Hlp_C_CGROW.html</a></p>

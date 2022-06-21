@@ -1127,85 +1127,105 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>option</strong></dt><dd><p>Option to be performed:</p>
-<p>DETAIL - List all contact pair properties (default).</p>
-<p>SUMMARY - List only the open/closed status for each contact pair.</p>
-<dl class="simple">
-<dt>POST - Execute a partial solution to write the initial</dt><dd><p>contact configuration to the Jobname.RCN file.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;DETAIL&quot;</span></code> : List all contact pair properties (default).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;SUMMARY&quot;</span></code> : List only the open/closed status for each
+contact pair.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;POST&quot;</span></code> : Execute a partial solution to write the initial
+contact configuration to the Jobname.RCN file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;ADJUST&quot;</span></code> : Physically move contact nodes to the target
+in order to close a gap or reduce penetration. The initial
+adjustment is converted to structural displacement values
+(UX, UY, UZ) and stored in the Jobname.RCN file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;MORPH&quot;</span></code> : Physically move contact nodes to the target in
+order to close a gap or reduce penetration, and also morph
+the underlying solid mesh. The initial adjustment of contact
+nodes and repositioning of solid element nodes due to mesh
+morphing are converted to structural displacement values
+(UX, UY, UZ) and stored in the Jobname.RCN file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;RESET&quot;</span></code> : Reset target element and contact element key
+options and real constants to their default values. This
+option is not valid for general contact.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;AUTO&quot;</span></code> : Automatically sets certain real constants and
+key options to recommended values or settings in order to
+achieve better convergence based on overall contact pair
+behaviors. This option is not valid for general contact.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;TRIM&quot;</span></code> : Trim contact pair (remove certain contact and
+target elements).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;UNSE&quot;</span></code> : Unselect certain contact and target elements.</p></li>
+</ul>
 </dd>
-<dt>ADJUST - Physically move contact nodes to the target in</dt><dd><p>order to close a gap or reduce penetration. The
-initial adjustment is converted to structural
-displacement values (UX, UY, UZ) and stored in
-the Jobname.RCN file.</p>
-</dd>
-<dt>RESET - Reset target element and contact element key</dt><dd><p>options and real constants to their default
-values. This option is not valid for general
-contact.</p>
-</dd>
-<dt>AUTO - Automatically sets certain real constants and key</dt><dd><p>options to recommended values or settings in order
-to achieve better convergence based on overall
-contact pair behaviors. This option is not valid
-for general contact.</p>
-</dd>
-</dl>
-<p>TRIM - Trim contact pair (remove certain contact and target elements).</p>
-<p>UNSE - Unselect certain contact and target elements.</p>
-</dd>
-<dt><strong>rid1, rid2, rinc</strong></dt><dd><p>For pair-based contact, the range of real constant pair
-ID’s for which Option will be performed. If RID2 is not
-specified, it defaults to RID1. If no value is specified,
-all contact pairs in the selected set of elements are
-considered.</p>
+<dt><strong>rid1, rid2, rinc</strong></dt><dd><p>For pair-based contact, the range of real constant pair IDs
+for which Option will be performed. If RID2 is not specified,
+it defaults to RID1. If no value is specified, all contact
+pairs in the selected set of elements are considered.</p>
+<p>For general contact (InterType = GCN), RID1 and RID2 are
+section IDs associated with general contact surfaces instead
+of real constant IDs. If RINC = 0, the Option is performed
+between the two sections, RID1 and RID2. If RINC &gt; 0, the
+Option is performed among all specified sections (RID1 to RID2
+with increment of RINC).</p>
 </dd>
 <dt><strong>intertype</strong></dt><dd><p>The type of contact interface (pair-based versus general
-contact) to be considered; or the type of contact pair to
-be trimmed/unselected/auto-set.</p>
-<p>(blank) - Include all contact definitions (pair-based and general contact).</p>
-<dl class="simple">
-<dt>GCN - Include general contact definitions only (not valid</dt><dd><p>when Option = RESET or AUTO).</p>
+contact) to be considered; or the type of contact pair to be
+trimmed/unselected/auto-set.</p>
+<p>The following labels specify the type of contact interface:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> : (blank) Include all contact definitions (pair-based
+and general contact).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;GCN&quot;</span></code> : Include general contact definitions only (not valid when Option = RESET or AUTO).</p></li>
+</ul>
+<p>The following labels specify the type of contact pairs to be
+trimmed/unselected/auto-set (used only when Option = TRIM,
+UNSE, or AUTO, and only for pair-based contact definitions):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;ANY&quot;</span></code> : All types (default).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;MPC&quot;</span></code> : MPC-based contact pairs (KEYOPT(2) = 2).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;BOND&quot;</span></code> : Bonded contact pairs (KEYOPT(12) = 3, 5, 6).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;NOSP&quot;</span></code> : No separation contact pairs (KEYOPT(12) = 2, 4).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;INAC&quot;</span></code> : Inactive contact pairs (symmetric contact pairs for MPC contact or KEYOPT(8) = 2).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;TRlevel&quot;</span></code> : mming level (used only when Option = TRIM, UNSE, or MORPH):</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;(blank)&quot;</span></code> : Normal trimming (default): remove/unselect contact and target elements which are in far-field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;AGGRE&quot;</span></code> : Aggressive trimming: remove/unselect contact and target elements which are in far-field, and certain elements in near-field.</p></li>
+</ul>
 </dd>
-</dl>
+<dt><strong>cgap</strong></dt><dd><p>They are only valid when Option = ADJUST or MORPH.  Control
+parameter for opening gap. Close the opening gap if the
+absolute value of the gap is smaller than the CGAP value. CGAP
+defaults to <code class="docutils literal notranslate"><span class="pre">0.25*PINB</span></code> (where PINB is the pinball radius) for
+bonded and no-separation contact; otherwise it defaults to the
+value of real constant ICONT.</p>
 </dd>
-<dt><strong>trlevel</strong></dt><dd><p>Trimming level (used only when Option = TRIM or UNSE):</p>
-<dl class="simple">
-<dt>(blank) - Normal trimming (default): remove/unselect</dt><dd><p>contact and target elements which are in
-far-field.</p>
+<dt><strong>CPEN</strong></dt><dd><p>They are only valid when Option = ADJUST or MORPH.  Control
+parameter for initial penetration. Close the initial
+penetration if the absolute value of the penetration is
+smaller than the CPEN value. CPEN defaults to <code class="docutils literal notranslate"><span class="pre">0.25*PINB</span></code> (where
+PINB is the pinball radius) for any type of interface behavior
+(either bonded or standard contact).</p>
 </dd>
-<dt>AGGRE - Aggressive trimming: remove/unselect contact and</dt><dd><p>target elements which are in far-field, and
-certain elements in near-field.</p>
-</dd>
-</dl>
+<dt><strong>IOFF</strong></dt><dd><p>They are only valid when Option = ADJUST or MORPH.  Control
+parameter for initial adjustment. Input a positive value to
+adjust the contact nodes towards the target surface with a
+constant interference distance equal to IOFF. Input a negative
+value to adjust the contact node towards the target surface
+with a uniform gap distance equal to the absolute value of
+IOFF.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>The CNCHECK command provides information for
-surface-to-surface, node- to-surface, and line-to-line contact
-pairs (element types TARGE169, TARGE170, CONTA171, CONTA172,
-CONTA173, CONTA174, CONTA175, CONTA176, CONTA177). All contact
-and target elements of interest, along with the solid elements
-and nodes attached to them, must be selected for the command
-to function properly. For performance reasons, the program
-uses a subset of nodes and elements based on the specified
-contact regions (RID1, RID2, RINC) when executing the CNCHECK
-command.</p>
-<p>CNCHECK is available in both the PREP7 and SOLUTION
-processors, but only before the first solve operation (that
-is, only before the first load step or the first substep).</p>
-<p>If the contact and target elements were generated through mesh
-commands (AMESH, LMESH, etc.) instead of the ESURF command,
-you must issue MODMSH,DETACH before CNCHECK. Otherwise,
-CNCHECK will not work correctly.</p>
-<p>The following additional notes are available:</p>
-<p>The command CNCHECK,POST solves the initial contact configuration in
-one substep. After issuing this command, you can postprocess the
-contact result items as you would for any other converged load step;
-however, only the contact status, contact penetration or gap, and
-contact pressure will have meaningful values. Other contact quantities
-(friction stress, sliding distance, chattering) will be available but
-are not useful.</p>
-<p>Because Option = POST forces a solve operation, the PrepPost (PP)
-license does not work with CNCHECK,POST.</p>
+<p>The CNCHECK command provides information for surface-to-surface,
+node-to-surface, and line-to-line contact pairs (element types
+TARGE169, TARGE170, CONTA171, CONTA172, CONTA173, CONTA174,
+CONTA175, CONTA176, CONTA177). All contact and target elements of
+interest, along with the solid elements and nodes attached to
+them, must be selected for the command to function properly. For
+performance reasons, the program uses a subset of nodes and
+elements based on the specified contact regions (RID1, RID2, RINC)
+when executing the CNCHECK command.</p>
+<p>For additional details, see the notes section at:
+<a class="reference external" href="https://www.mm.bme.hu/~gyebro/files/ans_help_v182/ans_cmd/Hlp_C_CNCHECK.html">https://www.mm.bme.hu/~gyebro/files/ans_help_v182/ans_cmd/Hlp_C_CNCHECK.html</a></p>
 </dd></dl>
 
 </section>

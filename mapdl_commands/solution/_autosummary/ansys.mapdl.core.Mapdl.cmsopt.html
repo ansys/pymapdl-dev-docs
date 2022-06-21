@@ -1127,9 +1127,14 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>cmsmeth</strong></dt><dd><p>The component mode synthesis method to use. This value is required.</p>
-<p>FIX - Fixed-interface method.</p>
-<p>FREE - Free-interface method.</p>
-<p>RFFB - Residual-flexible free-interface method.</p>
+<dl class="simple">
+<dt>FIX</dt><dd><p>Fixed-interface method.</p>
+</dd>
+<dt>FREE</dt><dd><p>Free-interface method.</p>
+</dd>
+<dt>RFFB</dt><dd><p>Residual-flexible free-interface method.</p>
+</dd>
+</dl>
 </dd>
 <dt><strong>nmode</strong></dt><dd><p>The number of normal modes extracted and used in the superelement
 generation. This value is required; the minimum is 1.</p>
@@ -1143,14 +1148,18 @@ optional.</p>
 <dt><strong>fbddef</strong></dt><dd><p>In a free-interface (CMSMETH = FREE) or residual-flexible free-
 interface (CMSMETH = RFFB) CMS analysis, the method to use for
 defining free body modes:</p>
-<p>FNUM - The number (FDBVAL) of rigid body modes in the calculation.</p>
 <dl class="simple">
-<dt>FTOL - Employ a specified tolerance (FDBVAL) to determine rigid body modes in the</dt><dd><p>calculation.</p>
+<dt>FNUM</dt><dd><p>The number (FDBVAL) of rigid body modes in the calculation.</p>
 </dd>
-<dt>FAUTO - Automatically determine rigid body modes in the calculation. This method is the</dt><dd><p>default.</p>
+<dt>FTOL</dt><dd><p>Employ a specified tolerance (FDBVAL) to determine rigid body modes in the
+calculation.</p>
+</dd>
+<dt>FAUTO</dt><dd><p>Automatically determine rigid body modes in the calculation. This method is the
+default.</p>
+</dd>
+<dt>RIGID</dt><dd><p>If no rigid body modes exist, define your own via the RIGID command.</p>
 </dd>
 </dl>
-<p>RIGID - If no rigid body modes exist, define your own via the RIGID command.</p>
 </dd>
 <dt><strong>fbdval</strong></dt><dd><p>In a free-interface CMS analysis (CMSMETH = FREE), the number of
 rigid body modes if FBDDEF = fnum (where the value is an integer
@@ -1163,11 +1172,13 @@ otherwise, any specified value is ignored.</p>
 .TCMS file (FIX or FREE methods) or body properties to the .EXB
 file (FIX method).</p>
 <dl class="simple">
-<dt>TCMS - Write the transformation matrix of the nodal component defined by the OUTPR</dt><dd><p>command to a .TCMS file. Refer to TCMS File Format in the
+<dt>TCMS</dt><dd><p>Write the transformation matrix of the nodal component defined by the OUTPR
+command to a .TCMS file. Refer to TCMS File Format in the
 Programmer’s Reference for more information on the this
 file.</p>
 </dd>
-<dt>EXB - Write a body property input file (.EXB file) containing the condensed</dt><dd><p>substructure matrices and other body properties for use with
+<dt>EXB</dt><dd><p>Write a body property input file (.EXB file) containing the condensed
+substructure matrices and other body properties for use with
 AVL EXCITE. Refer to ANSYS Interface to AVL EXCITE in the
 Substructuring Analysis Guide for more information.</p>
 </dd>

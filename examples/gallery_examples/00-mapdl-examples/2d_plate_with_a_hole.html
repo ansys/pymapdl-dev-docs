@@ -778,13 +778,9 @@ force of 1 kN in the positive X direction.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*** NOTE ***                            CP =       2.386   TIME= 16:10:28
- The automatic domain decomposition logic has selected the MESH domain
- decomposition method with 2 processes per solution.
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *****  ANSYS SOLVE    COMMAND  *****
-
- *** NOTE ***                            CP =       2.387   TIME= 16:10:28
+ *** NOTE ***                            CP =       1.783   TIME= 04:19:02
  There is no title defined for this analysis.
 
  *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -796,9 +792,8 @@ force of 1 kN in the positive X direction.</p>
 
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
- DISTRIBUTED Ansys Mechanical Enterprise
-
- 00000000  VERSION=LINUX x64     16:10:28  JUN 20, 2022 CP=      2.394
+ Ansys Mechanical Enterprise
+ 00000000  VERSION=LINUX x64     04:19:02  JUN 21, 2022 CP=      1.789
 
 
 
@@ -814,23 +809,13 @@ force of 1 kN in the positive X direction.</p>
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =       2.399   TIME= 16:10:28
+ *** NOTE ***                            CP =       1.792   TIME= 04:19:02
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =       2.400   TIME= 16:10:28
+ *** NOTE ***                            CP =       1.793   TIME= 04:19:02
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
-
-
-
-     D I S T R I B U T E D   D O M A I N   D E C O M P O S E R
-
-  ...Number of elements: 977
-  ...Number of nodes:    3083
-  ...Decompose to 2 CPU domains
-  ...Element load balance ratio =     1.002
-
 
                       L O A D   S T E P   O P T I O N S
 
@@ -877,50 +862,44 @@ force of 1 kN in the positive X direction.</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       977  PLANE183      0.095   0.000098
- Time at end of element matrix formulation CP = 2.53294897.
+        1       977  PLANE183      0.075   0.000077
+ Time at end of element matrix formulation CP = 1.86355209.
 
- DISTRIBUTED SPARSE MATRIX DIRECT SOLVER.
-  Number of equations =        6124,    Maximum wavefront =     42
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =        6124,    Maximum wavefront =     48
+  Memory allocated for solver              =     8.435 MB
+  Memory required for in-core solution     =     8.134 MB
+  Memory required for out-of-core solution =     4.318 MB
 
-  Local memory allocated for solver              =      5.073 MB
-  Local memory required for in-core solution     =      4.884 MB
-  Local memory required for out-of-core solution =      3.209 MB
-
-  Total memory allocated for solver              =      9.600 MB
-  Total memory required for in-core solution     =      9.244 MB
-  Total memory required for out-of-core solution =      6.131 MB
-
- *** NOTE ***                            CP =       2.739   TIME= 16:10:28
- The Distributed Sparse Matrix Solver is currently running in the
- in-core memory mode.  This memory mode uses the most amount of memory
- in order to avoid using the hard drive as much as possible, which most
- often results in the fastest solution time.  This mode is recommended
- if enough physical memory is present to accommodate all of the solver
+ *** NOTE ***                            CP =       2.037   TIME= 04:19:02
+ The Sparse Matrix Solver is currently running in the in-core memory
+ mode.  This memory mode uses the most amount of memory in order to
+ avoid using the hard drive as much as possible, which most often
+ results in the fastest solution time.  This mode is recommended if
+ enough physical memory is present to accommodate all of the solver
  data.
- Distributed sparse solver maximum pivot= 2.088128653E+09 at node 362
+ Sparse solver maximum pivot= 1.958386732E+09 at node 1937 UY.
+ Sparse solver minimum pivot= 3839644.71 at node 960 UY.
+ Sparse solver minimum pivot in absolute value= 3839644.71 at node 960
  UY.
- Distributed sparse solver minimum pivot= 8361946.37 at node 2589 UY.
- Distributed sparse solver minimum pivot in absolute value= 8361946.37
- at node 2589 UY.
 
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       977  PLANE183      0.075   0.000077
+        1       977  PLANE183      0.092   0.000094
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       977  PLANE183      0.022   0.000023
+        1       977  PLANE183      0.025   0.000025
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
 
  *** ANSYS BINARY FILE STATISTICS
   BUFFER SIZE USED= 16384
-        0.812 MB WRITTEN ON ASSEMBLED MATRIX FILE: file0.full
-        0.688 MB WRITTEN ON RESULTS FILE: file0.rst
+        1.562 MB WRITTEN ON ASSEMBLED MATRIX FILE: file.full
+        1.000 MB WRITTEN ON RESULTS FILE: file.rst
 </pre></div>
 </div>
 </section>
@@ -1122,21 +1101,21 @@ batch, MAPDL is reset and the geometry is generated from scratch.</p>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Ratio  : Stress Concentration (K_t)
-0.0100 :     3.3089
-0.0450 :     2.8611
-0.0800 :     2.7570
-0.1150 :     2.6636
-0.1500 :     2.5838
-0.1850 :     2.5026
-0.2200 :     2.4327
-0.2550 :     2.3627
-0.2900 :     2.3065
-0.3250 :     2.2516
-0.3600 :     2.2018
-0.3950 :     2.1552
-0.4300 :     2.1148
-0.4650 :     2.0785
-0.5000 :     2.0408
+0.0100 :     2.9660
+0.0450 :     2.8619
+0.0800 :     2.7690
+0.1150 :     2.6902
+0.1500 :     2.6101
+0.1850 :     2.5418
+0.2200 :     2.4737
+0.2550 :     2.4202
+0.2900 :     2.3683
+0.3250 :     2.3222
+0.3600 :     2.2799
+0.3950 :     2.2447
+0.4300 :     2.2145
+0.4650 :     2.1837
+0.5000 :     2.1609
 </pre></div>
 </div>
 </section>
@@ -1172,7 +1151,7 @@ height and width of the plate.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  58.182 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  45.035 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-2d-plate-with-a-hole-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/bb8a19792fbc4311ff0d03d9f9c306c5/2d_plate_with_a_hole.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">2d_plate_with_a_hole.py</span></code></a></p>

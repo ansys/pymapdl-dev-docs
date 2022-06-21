@@ -1127,44 +1127,59 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>antype</strong></dt><dd><p>Analysis type (defaults to the previously specified analysis type,
-or to STATIC if none specified):</p>
-<p>STATIC or 0 - Perform a static analysis.  Valid for all degrees of freedom.</p>
+or to <code class="docutils literal notranslate"><span class="pre">STATIC</span></code> if none specified):</p>
 <dl class="simple">
-<dt>BUCKLE or 1 - Perform a buckling analysis.  Implies that a previous static solution was</dt><dd><p>performed with prestress effects calculated
-(PSTRES,ON).  Valid for structural degrees of freedom
-only.</p>
+<dt>STATIC or 0</dt><dd><p>Perform a <strong>static analysis</strong>.
+Valid for all degrees of freedom.</p>
 </dd>
-</dl>
-<p>MODAL or 2 - Perform a modal analysis.  Valid for structural and fluid degrees of freedom.</p>
-<dl class="simple">
-<dt>HARMIC or 3 - Perform a harmonic analysis.  Valid for structural, fluid, magnetic, and</dt><dd><p>electrical degrees of freedom.</p>
+<dt>BUCKLE or 1</dt><dd><p>Perform a buckling analysis.
+Implies that a previous static solution was performed with
+prestress effects calculated
+(<a class="reference internal" href="ansys.mapdl.core.Mapdl.pstres.html#ansys.mapdl.core.Mapdl.pstres" title="ansys.mapdl.core.Mapdl.pstres"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.pstres('ON')</span></code></a>).
+Valid for structural degrees of freedom only.</p>
 </dd>
-</dl>
-<p>TRANS or 4 - Perform a transient analysis.  Valid for all degrees of freedom.</p>
-<p>SUBSTR or 7 - Perform a substructure analysis.  Valid for all degrees of freedom.</p>
-<dl class="simple">
-<dt>SPECTR or 8 - Perform a spectrum analysis.  Implies that a previous modal analysis was</dt><dd><p>performed.  Valid for structural degrees of freedom
+<dt>MODAL or 2</dt><dd><p>Perform a modal analysis.
+Valid for structural and fluid degrees of freedom.</p>
+</dd>
+<dt>HARMIC or 3</dt><dd><p>Perform a harmonic analysis.
+Valid for structural, fluid, magnetic, and electrical degrees
+of freedom.</p>
+</dd>
+<dt>TRANS or 4</dt><dd><p>Perform a transient analysis.
+Valid for all degrees of freedom.</p>
+</dd>
+<dt>SUBSTR or 7</dt><dd><p>Perform a substructure analysis.
+Valid for all degrees of freedom.</p>
+</dd>
+<dt>SPECTR or 8</dt><dd><p>Perform a spectrum analysis.
+Implies that a previous modal analysis was
+performed.  Valid for structural degrees of freedom
 only.</p>
 </dd>
 </dl>
 </dd>
 <dt><strong>status</strong></dt><dd><p>Specifies the status of the analysis (new or restart):</p>
-<dl class="simple">
-<dt>NEW - Specifies a new analysis (default). If NEW, the remaining fields on this</dt><dd><p>command are ignored.</p>
+<dl>
+<dt>NEW</dt><dd><p>Specifies a new analysis (default). If <code class="docutils literal notranslate"><span class="pre">NEW</span></code>, the remaining fields on this
+command are ignored.</p>
 </dd>
-<dt>RESTART - Specifies a restart of a previous analysis. Valid for static, modal, and</dt><dd><p>transient (full or mode-superposition method) analyses.
+<dt>RESTART</dt><dd><p>Specifies a restart of a previous analysis. Valid for static, modal, and
+transient (full or mode-superposition method) analyses.
 For more information about restarting static and
 transient analyses, see Multiframe Restart in the Basic
 Analysis Guide. For more information on restarting a
 modal analysis, see Modal Analysis Restart in the Basic
 Analysis Guide.</p>
-</dd>
-<dt>Multiframe restart is also valid for harmonic analysis, but is limited to 2-D magnetic analysis only. - A substructure analysis (backsubstitution method only) can be restarted for the</dt><dd><p>purpose of generating additional load vectors.
-For more information, see the SEOPT command and
+<p>Multiframe restart is also valid for harmonic analysis, but is limited
+to 2-D magnetic analysis only.</p>
+<p>A substructure analysis (<cite>backsubstitution</cite> method only) can be restarted for the
+purpose of generating additional load vectors. For more information, see the
+<a class="reference internal" href="ansys.mapdl.core.Mapdl.seopt.html#ansys.mapdl.core.Mapdl.seopt" title="ansys.mapdl.core.Mapdl.seopt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.seopt()</span></code></a> command and
 Applying Loads and Creating the Superelement
 Matrices in the Substructuring Analysis Guide.</p>
 </dd>
-<dt>VTREST - Specifies the restart of a previous VT Accelerator analysis. Valid only with</dt><dd><p>Antype = STATIC, HARMIC, or TRANS. For more information,
+<dt>VTREST</dt><dd><p>Specifies the restart of a previous VT Accelerator analysis. Valid only with
+<code class="docutils literal notranslate"><span class="pre">Antype</span> <span class="pre">=</span> <span class="pre">STATIC</span></code>, <code class="docutils literal notranslate"><span class="pre">HARMIC</span></code>, or <code class="docutils literal notranslate"><span class="pre">TRANS</span></code>. For more information,
 see VT Accelerator Re-run in the Basic Analysis Guide.</p>
 </dd>
 </dl>
@@ -1175,36 +1190,41 @@ see VT Accelerator Re-run in the Basic Analysis Guide.</p>
 </dd>
 <dt><strong>action</strong></dt><dd><p>Specifies the manner of a multiframe restart.</p>
 <dl class="simple">
-<dt>CONTINUE - The program continues the analysis based on the specified LDSTEP and SUBSTEP</dt><dd><p>(default). The current load step is continued. If the
-end of the load step is encountered in the .Rnnn file, a
-new load step is started. The program deletes all .Rnnn
-files, or .Mnnn files for mode-superposition transient
+<dt>CONTINUE</dt><dd><p>The program continues the analysis based on the specified
+<code class="docutils literal notranslate"><span class="pre">LDSTEP</span></code> and <code class="docutils literal notranslate"><span class="pre">SUBSTEP</span></code> (default). The current load step is continued.
+If the end of the load step is encountered in the <code class="docutils literal notranslate"><span class="pre">.Rnnn</span></code> file, a
+new load step is started. The program deletes all <code class="docutils literal notranslate"><span class="pre">.Rnnn</span></code>
+files, or <code class="docutils literal notranslate"><span class="pre">.Mnnn</span></code> files for mode-superposition transient
 analyses, beyond the point of restart and updates the
-.LDHI file if a new load step is encountered.</p>
+<code class="docutils literal notranslate"><span class="pre">.LDHI</span></code> file if a new load step is encountered.</p>
 </dd>
-<dt>ENDSTEP - At restart, force the specified load step (LDSTEP) to end at the specified</dt><dd><p>substep (SUBSTEP), even though the end of the current
+<dt>ENDSTEP</dt><dd><p>At restart, force the specified load step (<code class="docutils literal notranslate"><span class="pre">LDSTEP</span></code>) to end at the specified
+substep (<code class="docutils literal notranslate"><span class="pre">SUBSTEP</span></code>), even though the end of the current
 load step has not been reached. At the end of the
 specified substep, all loadings are scaled to the level
-of the current ending and stored in the .LDHI file. A run
-following this ENDSTEP starts a new load step. This
+of the current ending and stored in the <code class="docutils literal notranslate"><span class="pre">.LDHI</span></code> file. A run
+following this <code class="docutils literal notranslate"><span class="pre">ENDSTEP</span></code> starts a new load step. This
 capability allows you to change the load level in the
-middle of a load step. The program updates the .LDHI file
-and deletes all .Rnnn files, or .Mnnn files for mode-
+middle of a load step. The program updates the <code class="docutils literal notranslate"><span class="pre">.LDHI</span></code> file
+and deletes all .Rnnn files, or <code class="docutils literal notranslate"><span class="pre">.Mnnn</span></code> files for mode-
 superposition transient analyses, beyond the point of
-ENDSTEP. The .Rnnn or .Mnnn file at the point of ENDSTEP
+<code class="docutils literal notranslate"><span class="pre">ENDSTEP</span></code>. The <code class="docutils literal notranslate"><span class="pre">.Rnnn</span></code> or <code class="docutils literal notranslate"><span class="pre">.Mnnn</span></code> file at the point of <code class="docutils literal notranslate"><span class="pre">ENDSTEP</span></code>
 are rewritten to record the rescaled load level.</p>
 </dd>
-<dt>RSTCREATE - At restart, retrieve information to be written to the results file for the</dt><dd><p>specified load step (LDSTEP) and substep (SUBSTEP). Be
-sure to use   OUTRES to write the results to the
-results file. This action does not affect the .LDHI or
-.Rnnn files. Previous items stored in the results file
-at and beyond the point of RSTCREATE are deleted. This
+<dt>RSTCREATE</dt><dd><p>At restart, retrieve information to be written to the results file for the
+specified load step (<code class="docutils literal notranslate"><span class="pre">LDSTEP</span></code>) and substep (<code class="docutils literal notranslate"><span class="pre">SUBSTEP</span></code>). Be
+sure to use <a class="reference internal" href="ansys.mapdl.core.Mapdl.outres.html#ansys.mapdl.core.Mapdl.outres" title="ansys.mapdl.core.Mapdl.outres"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.outres()</span></code></a>
+to write the results to the
+results file. This action does not affect the <code class="docutils literal notranslate"><span class="pre">.LDHI</span></code> or
+<code class="docutils literal notranslate"><span class="pre">.Rnnn</span></code> files. Previous items stored in the results file
+at and beyond the point of <code class="docutils literal notranslate"><span class="pre">RSTCREATE</span></code> are deleted. This
 option cannot be used to restart a mode-superposition
 transient analysis.</p>
 </dd>
-<dt>PERTURB - At restart, a linear perturbation analysis (static, modal, buckling, or full</dt><dd><p>harmonic) is performed for the specified load step
-(LDSTEP) and substep (SUBSTEP). This action does not
-affect the .LDHI, .Rnnn, or .RST files.</p>
+<dt>PERTURB</dt><dd><p>At restart, a linear perturbation analysis (static, modal, buckling, or full
+harmonic) is performed for the specified load step
+(<code class="docutils literal notranslate"><span class="pre">LDSTEP</span></code>) and substep (<code class="docutils literal notranslate"><span class="pre">SUBSTEP</span></code>). This action does not
+affect the <code class="docutils literal notranslate"><span class="pre">.LDHI</span></code>, <code class="docutils literal notranslate"><span class="pre">.Rnnn</span></code>, or <code class="docutils literal notranslate"><span class="pre">.RST</span></code> files.</p>
 </dd>
 </dl>
 </dd>
@@ -1212,18 +1232,23 @@ affect the .LDHI, .Rnnn, or .RST files.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>If using the ANTYPE command to change the analysis type in the same
-SOLVE session, the program issues the following message: “Some analysis
+<p>If using the <a class="reference internal" href="#ansys.mapdl.core.Mapdl.antype" title="ansys.mapdl.core.Mapdl.antype"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.antype()</span></code></a>
+command to change the analysis type in the same
+<a class="reference internal" href="ansys.mapdl.core.Mapdl.solve.html#ansys.mapdl.core.Mapdl.solve" title="ansys.mapdl.core.Mapdl.solve"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.solve()</span></code></a> session,
+the program issues the following message: <cite>“Some analysis
 options have been reset to their defaults. Please verify current
-settings or respecify as required.” Typically, the program resets
-commands such as NLGEOM and EQSLV to their default values.</p>
-<p>The analysis type (Antype) cannot be changed if a restart is specified.
+settings or respecify as required.”</cite> Typically, the program resets
+commands such as <a class="reference internal" href="ansys.mapdl.core.Mapdl.nlgeom.html#ansys.mapdl.core.Mapdl.nlgeom" title="ansys.mapdl.core.Mapdl.nlgeom"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.nlgeom()</span></code></a> and
+<a class="reference internal" href="ansys.mapdl.core.Mapdl.eqslv.html#ansys.mapdl.core.Mapdl.eqslv" title="ansys.mapdl.core.Mapdl.eqslv"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.eqslv()</span></code></a> to their default values.</p>
+<p>The analysis type (<a class="reference internal" href="#ansys.mapdl.core.Mapdl.antype" title="ansys.mapdl.core.Mapdl.antype"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.antype()</span></code></a>)
+cannot be changed if a restart is specified.
 Always save parameters before doing a restart. For more information on
 the different types of restart, see Restarting an Analysis in the Basic
 Analysis Guide.</p>
-<p>This command is also valid in PREP7.</p>
+<p>This command is also valid in <a class="reference internal" href="../../session/_autosummary/ansys.mapdl.core.Mapdl.prep7.html#ansys.mapdl.core.Mapdl.prep7" title="ansys.mapdl.core.Mapdl.prep7"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.prep7()</span></code></a>.</p>
 <p>The ANSYS Professional - Nonlinear Structural (PRN) product supports
-the Antype = TRANS option for mode-superposition (TRNOPT,MSUP) analyses
+the <code class="docutils literal notranslate"><span class="pre">Antype</span> <span class="pre">=</span> <span class="pre">TRANS</span></code> option for mode-superposition (
+<a class="reference internal" href="ansys.mapdl.core.Mapdl.trnopt.html#ansys.mapdl.core.Mapdl.trnopt" title="ansys.mapdl.core.Mapdl.trnopt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.trnopt(&quot;MSUP&quot;)</span></code></a>) analyses
 only.</p>
 </dd></dl>
 
