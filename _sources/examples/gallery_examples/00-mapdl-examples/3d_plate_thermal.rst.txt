@@ -129,19 +129,19 @@ Solve the thermal static analysis and print the results
 
  .. code-block:: none
 
-    *** NOTE ***                            CP =      59.285   TIME= 11:44:31
+    *** NOTE ***                            CP =      58.870   TIME= 12:00:10
      The automatic domain decomposition logic has selected the MESH domain   
      decomposition method with 2 processes per solution.                     
 
      *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =      59.285   TIME= 11:44:31
+     *** NOTE ***                            CP =      58.870   TIME= 12:00:10
      There is no title defined for this analysis.                            
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      DISTRIBUTED Ansys Mechanical Enterprise                       
 
-     00000000  VERSION=LINUX x64     11:44:31  JUN 28, 2022 CP=     59.287
+     00000000  VERSION=LINUX x64     12:00:10  JUN 28, 2022 CP=     58.871
 
                                                                                
 
@@ -157,11 +157,11 @@ Solve the thermal static analysis and print the results
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =      59.287   TIME= 11:44:31
+     *** NOTE ***                            CP =      58.872   TIME= 12:00:10
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =      59.287   TIME= 11:44:31
+     *** NOTE ***                            CP =      58.872   TIME= 12:00:10
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -196,8 +196,8 @@ Solve the thermal static analysis and print the results
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       450  SOLID90       0.017   0.000037
-     Time at end of element matrix formulation CP = 59.3220787.              
+            1       450  SOLID90       0.014   0.000031
+     Time at end of element matrix formulation CP = 58.907753.               
 
      DISTRIBUTED SPARSE MATRIX DIRECT SOLVER.
       Number of equations =        2606,    Maximum wavefront =     72
@@ -210,7 +210,7 @@ Solve the thermal static analysis and print the results
       Total memory required for in-core solution     =      5.694 MB
       Total memory required for out-of-core solution =      3.800 MB
 
-     *** NOTE ***                            CP =      59.414   TIME= 11:44:31
+     *** NOTE ***                            CP =      59.001   TIME= 12:00:10
      The Distributed Sparse Matrix Solver is currently running in the        
      in-core memory mode.  This memory mode uses the most amount of memory   
      in order to avoid using the hard drive as much as possible, which most  
@@ -225,12 +225,12 @@ Solve the thermal static analysis and print the results
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       450  SOLID90       0.014   0.000031
+            1       450  SOLID90       0.015   0.000032
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       450  SOLID90       0.006   0.000012
+            1       450  SOLID90       0.006   0.000013
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -320,7 +320,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.253 seconds)
+   **Total running time of the script:** ( 0 minutes  1.305 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_3d_plate_thermal.py:

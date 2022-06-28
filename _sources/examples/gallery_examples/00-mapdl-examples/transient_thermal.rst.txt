@@ -257,7 +257,7 @@ then performed.
  .. code-block:: none
 
 
-    *** NOTE ***                            CP =      93.510   TIME= 11:45:40
+    *** NOTE ***                            CP =      93.535   TIME= 12:01:22
      The automatic domain decomposition logic has selected the MESH domain   
      decomposition method with 2 processes per solution.                     
 
@@ -266,13 +266,13 @@ then performed.
      TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
           SURFACE LOADS  TRANSFERRED FROM AREAS         =     25
 
-     *** NOTE ***                            CP =      93.511   TIME= 11:45:40
+     *** NOTE ***                            CP =      93.536   TIME= 12:01:22
      There is no title defined for this analysis.                            
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      DISTRIBUTED Ansys Mechanical Enterprise                       
 
-     00000000  VERSION=LINUX x64     11:45:40  JUN 28, 2022 CP=     93.512
+     00000000  VERSION=LINUX x64     12:01:22  JUN 28, 2022 CP=     93.537
 
                                                                                
 
@@ -290,7 +290,7 @@ then performed.
        EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE             
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =      93.513   TIME= 11:45:40
+     *** NOTE ***                            CP =      93.538   TIME= 12:01:22
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -360,8 +360,8 @@ then performed.
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       625  SOLID70       0.009   0.000015
-     Time at end of element matrix formulation CP = 93.5418091.              
+            1       625  SOLID70       0.009   0.000014
+     Time at end of element matrix formulation CP = 93.5679855.              
 
      ALL CURRENT ANSYS DATA WRITTEN TO FILE NAME= file.rdb
       FOR POSSIBLE RESUME FROM THIS POINT
@@ -377,7 +377,7 @@ then performed.
       Total memory required for in-core solution     =      1.326 MB
       Total memory required for out-of-core solution =      1.099 MB
 
-     *** NOTE ***                            CP =      93.573   TIME= 11:45:40
+     *** NOTE ***                            CP =      93.599   TIME= 12:01:22
      The Distributed Sparse Matrix Solver is currently running in the        
      in-core memory mode.  This memory mode uses the most amount of memory   
      in order to avoid using the hard drive as much as possible, which most  
@@ -399,7 +399,7 @@ then performed.
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       625  SOLID70       0.011   0.000017
+            1       625  SOLID70       0.011   0.000018
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   10.0000         TIME INC =   10.0000      NEW TRIANG MATRIX
      *** RESPONSE EIGENVALUE = 0.2324       OSCILLATION LIMIT =  2.324    
@@ -1319,14 +1319,14 @@ result = mapdl.thermal_result
     FINISH SOLUTION PROCESSING
 
 
-     ***** ROUTINE COMPLETED *****  CP =        98.339
+     ***** ROUTINE COMPLETED *****  CP =        98.532
 
 
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      DISTRIBUTED Ansys Mechanical Enterprise                       
 
-     00000000  VERSION=LINUX x64     11:45:45  JUN 28, 2022 CP=     98.343
+     00000000  VERSION=LINUX x64     12:01:28  JUN 28, 2022 CP=     98.537
 
                                                                                
 
@@ -1566,7 +1566,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.386 seconds)
+   **Total running time of the script:** ( 0 minutes  10.150 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_transient_thermal.py:
