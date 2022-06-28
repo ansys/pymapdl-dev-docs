@@ -615,7 +615,7 @@ graph of the sparse matrix</p>
 </pre></div>
 </div>
 <img src="../../../_images/sphx_glr_scipy_sparse_matrix_001.png" srcset="../../../_images/sphx_glr_scipy_sparse_matrix_001.png" alt="scipy sparse matrix" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D object at 0x7fd4e6084430&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D object at 0x7efe1eae03d0&gt;
 </pre></div>
 </div>
 <p>You can access the 3 vectors that describe this sparse matrix with.</p>
@@ -631,10 +631,10 @@ graph of the sparse matrix</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[ 0.57249304  0.56369167 -0.28624652 -0.28184583 -0.24789676 -0.24408565
- -0.14312326 -0.14092292  0.77576289 -0.37033122]
-[ 0  1  4  7 10 13 73 76  1  4]
-[ 0  8 19 31 42 49 55 60 63 71]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[ 0.20292539  0.00378143 -0.05003569 -0.01392161 -0.04333217 -0.01205647
+ -0.0445371  -0.02501784 -0.0069608  -0.02571351]
+[ 0  1  4  7 18 21 30 49 52 61]
+[ 0 12 23 35 46 53 63 72 78 88]
 </pre></div>
 </div>
 <p>### Create a APDLMath Sparse Matrix from a SciPy Sparse CSR Matrix</p>
@@ -678,9 +678,9 @@ We compute the norm of the difference, should be zero</p>
 
   Name                   Type            Mem. (MB)       Dims            Workspace
 
-   FKXKLQ                SMAT            0.011           [126:126]               1
+   EBZQIO                SMAT            0.011           [126:126]               1
    MY_MAT                SMAT            0.000           [126:126]               1
-   XKAFSZ                SMAT            0.011           [126:126]               1
+   WTONQZ                SMAT            0.011           [126:126]               1
    MY_MAT_DATA           VEC             0.006           738             1
    MY_MAT_IND            VEC             0.001           127             1
    MY_MAT_PTR            VEC             0.003           738             1
@@ -697,16 +697,16 @@ access the id property of the Python object.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>name(k)=FKXKLQ
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>name(k)=WTONQZ
 name(my_mat)=my_mat
-name(msub)=XKAFSZ
+name(msub)=EBZQIO
 </pre></div>
 </div>
 <p>stop mapdl</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.635 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.219 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-01-apdlmath-examples-scipy-sparse-matrix-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/cca37b9778ec7e909dbc04a38ce66e95/scipy_sparse_matrix.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">scipy_sparse_matrix.py</span></code></a></p>
