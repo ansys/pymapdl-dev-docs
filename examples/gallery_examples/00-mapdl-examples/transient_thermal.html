@@ -784,12 +784,12 @@ then performed.</p>
  TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
       SURFACE LOADS  TRANSFERRED FROM AREAS         =     25
 
- *** NOTE ***                            CP =     130.577   TIME= 04:26:43
+ *** NOTE ***                            CP =      79.970   TIME= 04:25:22
  There is no title defined for this analysis.
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:26:43  JUL 06, 2022 CP=    130.578
+ 00000000  VERSION=LINUX x64     04:25:22  JUL 07, 2022 CP=     79.970
 
 
 
@@ -807,7 +807,7 @@ then performed.</p>
    EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =     130.579   TIME= 04:26:43
+ *** NOTE ***                            CP =      79.971   TIME= 04:25:22
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -850,9 +850,9 @@ then performed.</p>
   XC =   2.5000          IXX =   0.2424E-02      IXX =   0.5877E-03
   YC =  0.50000          IYY =   0.3181E-01      IYY =   0.7934E-02
   ZC =  0.50000          IZZ =   0.3181E-01      IZZ =   0.7934E-02
-                         IXY =  -0.4591E-02      IXY =   0.4161E-16
-                         IYZ =  -0.9183E-03      IYZ =   0.7414E-17
-                         IZX =  -0.4591E-02      IZX =   0.4329E-16
+                         IXY =  -0.4591E-02      IXY =   0.4607E-16
+                         IYZ =  -0.9183E-03      IYZ =   0.8325E-17
+                         IZX =  -0.4591E-02      IZX =   0.4530E-16
 
 
   *** MASS SUMMARY BY ELEMENT TYPE ***
@@ -861,32 +861,32 @@ then performed.</p>
      1  0.367317E-02
 
  Range of element maximum matrix coefficients in global coordinates
- Maximum = 5.168130667E-05 at element 375.
+ Maximum = 5.168130667E-05 at element 100.
  Minimum = 4.168130667E-05 at element 226.
 
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       625  SOLID70       0.023   0.000037
- Time at end of element matrix formulation CP = 130.627945.
+        1       625  SOLID70       0.006   0.000009
+ Time at end of element matrix formulation CP = 79.9891586.
 
  ALL CURRENT ANSYS DATA WRITTEN TO FILE NAME= file.rdb
   FOR POSSIBLE RESUME FROM THIS POINT
 
  SPARSE MATRIX DIRECT SOLVER.
   Number of equations =         936,    Maximum wavefront =     21
-  Memory allocated for solver              =     1.070 MB
-  Memory required for in-core solution     =     1.032 MB
-  Memory required for out-of-core solution =     0.575 MB
+  Memory allocated for solver              =     1.090 MB
+  Memory required for in-core solution     =     1.051 MB
+  Memory required for out-of-core solution =     0.548 MB
 
- *** NOTE ***                            CP =     130.663   TIME= 04:26:43
+ *** NOTE ***                            CP =      80.002   TIME= 04:25:22
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
  results in the fastest solution time.  This mode is recommended if
  enough physical memory is present to accommodate all of the solver
  data.
- Sparse solver maximum pivot= 3.561556377E-04 at node 882 TEMP.
+ Sparse solver maximum pivot= 3.561556377E-04 at node 863 TEMP.
  Sparse solver minimum pivot= 4.451945471E-05 at node 1 TEMP.
  Sparse solver minimum pivot in absolute value= 4.451945471E-05 at node
  1 TEMP.
@@ -894,12 +894,12 @@ then performed.</p>
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       625  SOLID70       0.024   0.000039
+        1       625  SOLID70       0.007   0.000011
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       625  SOLID70       0.027   0.000044
+        1       625  SOLID70       0.007   0.000012
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   10.0000         TIME INC =   10.0000      NEW TRIANG MATRIX
  *** RESPONSE EIGENVALUE = 0.2324       OSCILLATION LIMIT =  2.324
@@ -1803,13 +1803,13 @@ result = mapdl.thermal_result</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>FINISH SOLUTION PROCESSING
 
 
- ***** ROUTINE COMPLETED *****  CP =       137.807
+ ***** ROUTINE COMPLETED *****  CP =        83.682
 
 
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:26:47  JUL 06, 2022 CP=    137.808
+ 00000000  VERSION=LINUX x64     04:25:26  JUL 07, 2022 CP=     83.682
 
 
 
@@ -1872,7 +1872,7 @@ python accessible variable, rather than storing it to a MAPDL value.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>251.05408986663682
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>251.0540898666364
 </pre></div>
 </div>
 <p>Here, we extract the temperature of the node across for each solution</p>
@@ -1887,7 +1887,7 @@ python accessible variable, rather than storing it to a MAPDL value.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561243, 81.19108300049335, 83.56709007016168, 85.35125295387651, 86.23266429275358, 86.97754017604873, 88.31275589884449]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716552, 76.8179922435199, 77.42151540097558, 79.04838835561252, 81.19108300049332, 83.5670900701616, 85.35125295387641, 86.2326642927534, 86.97754017604852, 88.31275589884434]
 </pre></div>
 </div>
 <p>Alternatively, you can simply grab the data for the node from the
@@ -1907,7 +1907,7 @@ sent back for each result.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561243, 81.19108300049335, 83.56709007016168, 85.35125295387651, 86.23266429275358, 86.97754017604873, 88.31275589884449]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[76.27707675716552, 76.8179922435199, 77.42151540097558, 79.04838835561252, 81.19108300049332, 83.5670900701616, 85.35125295387641, 86.2326642927534, 86.97754017604852, 88.31275589884434]
 </pre></div>
 </div>
 <p>Plot the temperature as a function of time</p>
@@ -1924,7 +1924,7 @@ sent back for each result.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.117 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.664 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-transient-thermal-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/5ea8304e8eee080ba9decd82a6d7994e/transient_thermal.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">transient_thermal.py</span></code></a></p>

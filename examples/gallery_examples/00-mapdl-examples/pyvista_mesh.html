@@ -654,10 +654,10 @@ to download the full example code</p>
 
 *****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =     124.444   TIME= 04:26:32
+ *** NOTE ***                            CP =      76.904   TIME= 04:25:13
  There is no title defined for this analysis.
 
- *** NOTE ***                            CP =     124.524   TIME= 04:26:32
+ *** NOTE ***                            CP =      76.932   TIME= 04:25:13
  No modes are being expanded (MXPAND command) and therefore the element
  results will not be written to the mode file.  If you do not intend to
  use mode selection and for more efficient calculation of element
@@ -675,7 +675,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:26:32  JUL 06, 2022 CP=    124.544
+ 00000000  VERSION=LINUX x64     04:25:13  JUL 07, 2022 CP=     76.942
 
 
 
@@ -694,15 +694,15 @@ to download the full example code</p>
    SHIFT POINT . . . . . . . . . . . . . . . . . .  1.0000
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** WARNING ***                         CP =     124.562   TIME= 04:26:32
+ *** WARNING ***                         CP =      76.948   TIME= 04:25:13
  No constraints have been defined using the D command.
 
- *** NOTE ***                            CP =     124.562   TIME= 04:26:32
+ *** NOTE ***                            CP =      76.948   TIME= 04:25:13
  The step data was checked and warning messages were found.
   Please review output or errors file ( /file.err ) for these warning
  messages.
 
- *** NOTE ***                            CP =     124.562   TIME= 04:26:32
+ *** NOTE ***                            CP =      76.948   TIME= 04:25:13
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -717,14 +717,14 @@ to download the full example code</p>
 
    TOTAL RIGID BODY MASS MATRIX ABOUT ORIGIN
                Translational mass               |   Coupled translational/rotational mass
-         78.000        0.0000      -0.48842E-30 |   -0.17755E-33  -0.17959E-31   0.20817E-16
-         0.0000        78.000        0.0000     |    0.13915E-31    0.0000       0.70300E-15
-       -0.48238E-30    0.0000        78.000     |    0.53776E-15  -0.68391E-15  -0.54477E-33
+         78.000       0.38507E-62  -0.51644E-30 |   -0.67003E-34  -0.17959E-31   0.20817E-16
+        0.38507E-62    78.000      -0.64788E-47 |    0.13915E-31  -0.51708E-47   0.70300E-15
+       -0.51075E-30  -0.62676E-47    78.000     |    0.53776E-15  -0.68391E-15  -0.36483E-33
      ------------------------------------------ | ------------------------------------------
                                                 |         Rotational mass (inertia)
                                                 |     6.5006       0.22335E-16   0.72143E-15
-                                                |   -0.27105E-16    6.5006       0.61389E-32
-                                                |    0.72143E-15  -0.12037E-32    12.999
+                                                |   -0.27105E-16    6.5006       0.30574E-32
+                                                |    0.72143E-15   0.33704E-33    12.999
 
    TOTAL MASS =  78.000
      The mass principal axes coincide with the global Cartesian axes
@@ -733,8 +733,8 @@ to download the full example code</p>
 
    TOTAL INERTIA ABOUT CENTER OF MASS
          6.5006       0.22335E-16   0.72143E-15
-        0.22335E-16    6.5006       0.61389E-32
-        0.72143E-15   0.61389E-32    12.999
+        0.22335E-16    6.5006       0.30574E-32
+        0.72143E-15   0.30574E-32    12.999
      The inertia principal axes coincide with the global Cartesian axes
 
 
@@ -750,8 +750,8 @@ to download the full example code</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        4     10000  SHELL181      0.651   0.000065
- Time at end of element matrix formulation CP = 125.443619.
+        4     10000  SHELL181      0.302   0.000030
+ Time at end of element matrix formulation CP = 77.3283997.
 
   BLOCK LANCZOS CALCULATION OF UP TO    20 EIGENVECTORS.
   NUMBER OF EQUATIONS              =        61206
@@ -760,11 +760,11 @@ to download the full example code</p>
   MINIMUM EIGENVALUE               =  0.10000E+01
   MAXIMUM EIGENVALUE               =  0.10000E+31
 
-  Memory allocated for solver              =   187.192 MB
-  Memory required for in-core solution     =   178.612 MB
-  Memory required for out-of-core solution =    60.617 MB
+  Memory allocated for solver              =   166.120 MB
+  Memory required for in-core solution     =   158.546 MB
+  Memory required for out-of-core solution =    40.594 MB
 
- *** NOTE ***                            CP =     127.225   TIME= 04:26:34
+ *** NOTE ***                            CP =      78.383   TIME= 04:25:14
  The Sparse Matrix Solver used by the Block Lanczos eigensolver is
  currently running in the in-core memory mode.  This memory mode uses
  the most amount of memory in order to avoid using the hard drive as
@@ -774,7 +774,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:26:35  JUL 06, 2022 CP=    130.022
+ 00000000  VERSION=LINUX x64     04:25:16  JUL 07, 2022 CP=     79.723
 
 
 
@@ -790,30 +790,30 @@ to download the full example code</p>
 
    FREQUENCY RANGE REQUESTED=   20 MODES ABOVE   1.00000     HERTZ
 
-    1     32.74664192985
-    2     47.77804288731
-    3     59.17108298360
-    4     84.60790505173
-    5     84.60790505208
-    6     148.8927748650
-    7     148.8927748652
+    1     32.74664192956
+    2     47.77804288719
+    3     59.17108298355
+    4     84.60790505164
+    5     84.60790505195
+    6     148.8927748649
+    7     148.8927748651
     8     154.6519861747
-    9     168.3840411461
-   10     187.7790667343
+    9     168.3840411457
+   10     187.7790667341
    11     255.9751634915
-   12     255.9751634916
-   13     285.2444050788
-   14     298.2943388367
-   15     319.8023401634
-   16     319.8023401640
+   12     255.9751634919
+   13     285.2444050790
+   14     298.2943388360
+   15     319.8023401633
+   16     319.8023401634
    17     370.6023621796
-   18     391.8457651345
-   19     409.1039880842
-   20     482.6516135505
+   18     391.8457651355
+   19     409.1039880845
+   20     482.6516135508
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:26:35  JUL 06, 2022 CP=    130.309
+ 00000000  VERSION=LINUX x64     04:25:16  JUL 07, 2022 CP=     79.816
 
 
 
@@ -981,7 +981,7 @@ to download the full example code</p>
 
  *** ANSYS BINARY FILE STATISTICS
   BUFFER SIZE USED= 16384
-       19.250 MB WRITTEN ON ASSEMBLED MATRIX FILE: file.full
+       19.438 MB WRITTEN ON ASSEMBLED MATRIX FILE: file.full
        26.938 MB WRITTEN ON MODAL MATRIX FILE: file.mode
 </pre></div>
 </div>
@@ -1032,37 +1032,37 @@ Enable a continuous plot looping with <code class="docutils literal notranslate"
   warnings.warn(&#39;The ``nangles`` kwarg is depreciated and ``n_frames`` &#39;
 
 Rendering animation:   0%|          | 0/30 [00:00&lt;?, ?it/s]
-Rendering animation:   3%|3         | 1/30 [00:00&lt;00:06,  4.33it/s]
-Rendering animation:   7%|6         | 2/30 [00:00&lt;00:05,  5.43it/s]
-Rendering animation:  10%|#         | 3/30 [00:00&lt;00:04,  5.71it/s]
-Rendering animation:  13%|#3        | 4/30 [00:00&lt;00:04,  5.75it/s]
-Rendering animation:  17%|#6        | 5/30 [00:00&lt;00:04,  5.81it/s]
-Rendering animation:  20%|##        | 6/30 [00:01&lt;00:04,  5.81it/s]
-Rendering animation:  23%|##3       | 7/30 [00:01&lt;00:04,  5.75it/s]
-Rendering animation:  27%|##6       | 8/30 [00:01&lt;00:03,  5.69it/s]
-Rendering animation:  30%|###       | 9/30 [00:01&lt;00:03,  5.70it/s]
-Rendering animation:  33%|###3      | 10/30 [00:01&lt;00:03,  5.65it/s]
-Rendering animation:  37%|###6      | 11/30 [00:01&lt;00:03,  5.67it/s]
-Rendering animation:  40%|####      | 12/30 [00:02&lt;00:03,  5.70it/s]
-Rendering animation:  43%|####3     | 13/30 [00:02&lt;00:02,  5.75it/s]
-Rendering animation:  47%|####6     | 14/30 [00:02&lt;00:02,  5.79it/s]
-Rendering animation:  50%|#####     | 15/30 [00:02&lt;00:02,  5.78it/s]
-Rendering animation:  53%|#####3    | 16/30 [00:02&lt;00:02,  5.87it/s]
-Rendering animation:  57%|#####6    | 17/30 [00:02&lt;00:02,  6.07it/s]
-Rendering animation:  60%|######    | 18/30 [00:03&lt;00:01,  6.04it/s]
-Rendering animation:  63%|######3   | 19/30 [00:03&lt;00:01,  5.90it/s]
-Rendering animation:  67%|######6   | 20/30 [00:03&lt;00:01,  5.89it/s]
-Rendering animation:  70%|#######   | 21/30 [00:03&lt;00:01,  5.89it/s]
-Rendering animation:  73%|#######3  | 22/30 [00:03&lt;00:01,  5.80it/s]
-Rendering animation:  77%|#######6  | 23/30 [00:03&lt;00:01,  5.76it/s]
-Rendering animation:  80%|########  | 24/30 [00:04&lt;00:01,  5.70it/s]
-Rendering animation:  83%|########3 | 25/30 [00:04&lt;00:00,  5.65it/s]
-Rendering animation:  87%|########6 | 26/30 [00:04&lt;00:00,  5.67it/s]
-Rendering animation:  90%|######### | 27/30 [00:04&lt;00:00,  5.69it/s]
-Rendering animation:  93%|#########3| 28/30 [00:04&lt;00:00,  5.73it/s]
-Rendering animation:  97%|#########6| 29/30 [00:05&lt;00:00,  5.78it/s]
-Rendering animation: 100%|##########| 30/30 [00:05&lt;00:00,  5.76it/s]
-Rendering animation: 100%|##########| 30/30 [00:05&lt;00:00,  5.60it/s]
+Rendering animation:   3%|3         | 1/30 [00:00&lt;00:06,  4.78it/s]
+Rendering animation:   7%|6         | 2/30 [00:00&lt;00:04,  6.11it/s]
+Rendering animation:  10%|#         | 3/30 [00:00&lt;00:04,  6.48it/s]
+Rendering animation:  13%|#3        | 4/30 [00:00&lt;00:03,  6.62it/s]
+Rendering animation:  17%|#6        | 5/30 [00:00&lt;00:03,  6.73it/s]
+Rendering animation:  20%|##        | 6/30 [00:00&lt;00:03,  6.77it/s]
+Rendering animation:  23%|##3       | 7/30 [00:01&lt;00:03,  6.75it/s]
+Rendering animation:  27%|##6       | 8/30 [00:01&lt;00:03,  6.75it/s]
+Rendering animation:  30%|###       | 9/30 [00:01&lt;00:03,  6.74it/s]
+Rendering animation:  33%|###3      | 10/30 [00:01&lt;00:02,  6.75it/s]
+Rendering animation:  37%|###6      | 11/30 [00:01&lt;00:02,  6.75it/s]
+Rendering animation:  40%|####      | 12/30 [00:01&lt;00:02,  6.78it/s]
+Rendering animation:  43%|####3     | 13/30 [00:01&lt;00:02,  6.81it/s]
+Rendering animation:  47%|####6     | 14/30 [00:02&lt;00:02,  6.85it/s]
+Rendering animation:  50%|#####     | 15/30 [00:02&lt;00:02,  6.88it/s]
+Rendering animation:  53%|#####3    | 16/30 [00:02&lt;00:02,  6.92it/s]
+Rendering animation:  57%|#####6    | 17/30 [00:02&lt;00:01,  7.12it/s]
+Rendering animation:  60%|######    | 18/30 [00:02&lt;00:01,  7.06it/s]
+Rendering animation:  63%|######3   | 19/30 [00:02&lt;00:01,  6.96it/s]
+Rendering animation:  67%|######6   | 20/30 [00:02&lt;00:01,  6.93it/s]
+Rendering animation:  70%|#######   | 21/30 [00:03&lt;00:01,  6.93it/s]
+Rendering animation:  73%|#######3  | 22/30 [00:03&lt;00:01,  6.86it/s]
+Rendering animation:  77%|#######6  | 23/30 [00:03&lt;00:01,  6.81it/s]
+Rendering animation:  80%|########  | 24/30 [00:03&lt;00:00,  6.74it/s]
+Rendering animation:  83%|########3 | 25/30 [00:03&lt;00:00,  6.70it/s]
+Rendering animation:  87%|########6 | 26/30 [00:03&lt;00:00,  6.71it/s]
+Rendering animation:  90%|######### | 27/30 [00:03&lt;00:00,  6.73it/s]
+Rendering animation:  93%|#########3| 28/30 [00:04&lt;00:00,  6.79it/s]
+Rendering animation:  97%|#########6| 29/30 [00:04&lt;00:00,  6.85it/s]
+Rendering animation: 100%|##########| 30/30 [00:04&lt;00:00,  6.83it/s]
+Rendering animation: 100%|##########| 30/30 [00:04&lt;00:00,  6.60it/s]
 
 [(1.5773502691896262, 1.5773502691896262, 1.5773502691896262),
  (0.0, 0.0, 0.0),
@@ -1073,7 +1073,7 @@ Rendering animation: 100%|##########| 30/30 [00:05&lt;00:00,  5.60it/s]
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.575 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.825 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/64adae6b03e47dc2c3a43f0a2a856797/pyvista_mesh.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pyvista_mesh.py</span></code></a></p>
