@@ -444,9 +444,9 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">'127.0.
 default behavior of this keyword argument with the
 environment variable “PYMAPDL_IP=FALSE”.</p>
 </dd>
-<dt><strong>clear_on_connect</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Used only when <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.  Defaults to
-<code class="docutils literal notranslate"><span class="pre">True</span></code>, giving you a fresh environment when connecting to
-MAPDL.</p>
+<dt><strong>clear_on_connect</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>, giving you a fresh environment when
+connecting to MAPDL. When if <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> is specified
+it defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
 <dt><strong>log_apdl</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Enables logging every APDL command to the local disk.  This
 can be used to “record” all the commands that are sent to
