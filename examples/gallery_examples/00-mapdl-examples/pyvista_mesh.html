@@ -131,6 +131,12 @@
 </li>
 
 <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../learning/index.html">
+  Learning PyMAPDL
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../contributing.html">
   Contributing
  </a>
@@ -654,10 +660,10 @@ to download the full example code</p>
 
 *****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =     125.768   TIME= 14:39:01
+ *** NOTE ***                            CP =     151.432   TIME= 04:26:08
  There is no title defined for this analysis.
 
- *** NOTE ***                            CP =     125.849   TIME= 14:39:01
+ *** NOTE ***                            CP =     151.531   TIME= 04:26:08
  No modes are being expanded (MXPAND command) and therefore the element
  results will not be written to the mode file.  If you do not intend to
  use mode selection and for more efficient calculation of element
@@ -675,7 +681,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     14:39:01  JUL 21, 2022 CP=    125.870
+ 00000000  VERSION=LINUX x64     04:26:08  JUL 22, 2022 CP=    151.556
 
 
 
@@ -694,15 +700,15 @@ to download the full example code</p>
    SHIFT POINT . . . . . . . . . . . . . . . . . .  1.0000
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** WARNING ***                         CP =     125.890   TIME= 14:39:01
+ *** WARNING ***                         CP =     151.577   TIME= 04:26:08
  No constraints have been defined using the D command.
 
- *** NOTE ***                            CP =     125.890   TIME= 14:39:01
+ *** NOTE ***                            CP =     151.578   TIME= 04:26:08
  The step data was checked and warning messages were found.
   Please review output or errors file ( /file.err ) for these warning
  messages.
 
- *** NOTE ***                            CP =     125.890   TIME= 14:39:01
+ *** NOTE ***                            CP =     151.578   TIME= 04:26:08
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -750,8 +756,8 @@ to download the full example code</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        4     10000  SHELL181      0.625   0.000063
- Time at end of element matrix formulation CP = 126.730965.
+        4     10000  SHELL181      0.765   0.000076
+ Time at end of element matrix formulation CP = 152.648178.
 
   BLOCK LANCZOS CALCULATION OF UP TO    20 EIGENVECTORS.
   NUMBER OF EQUATIONS              =        61206
@@ -764,7 +770,7 @@ to download the full example code</p>
   Memory required for in-core solution     =   178.612 MB
   Memory required for out-of-core solution =    60.617 MB
 
- *** NOTE ***                            CP =     128.436   TIME= 14:39:03
+ *** NOTE ***                            CP =     154.766   TIME= 04:26:10
  The Sparse Matrix Solver used by the Block Lanczos eigensolver is
  currently running in the in-core memory mode.  This memory mode uses
  the most amount of memory in order to avoid using the hard drive as
@@ -774,7 +780,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     14:39:04  JUL 21, 2022 CP=    130.886
+ 00000000  VERSION=LINUX x64     04:26:12  JUL 22, 2022 CP=    157.797
 
 
 
@@ -813,7 +819,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     14:39:04  JUL 21, 2022 CP=    131.145
+ 00000000  VERSION=LINUX x64     04:26:12  JUL 22, 2022 CP=    158.129
 
 
 
@@ -1032,37 +1038,37 @@ Enable a continuous plot looping with <code class="docutils literal notranslate"
   warnings.warn(&#39;The ``nangles`` kwarg is depreciated and ``n_frames`` &#39;
 
 Rendering animation:   0%|          | 0/30 [00:00&lt;?, ?it/s]
-Rendering animation:   3%|3         | 1/30 [00:00&lt;00:06,  4.43it/s]
-Rendering animation:   7%|6         | 2/30 [00:00&lt;00:05,  5.39it/s]
-Rendering animation:  10%|#         | 3/30 [00:00&lt;00:04,  5.75it/s]
-Rendering animation:  13%|#3        | 4/30 [00:00&lt;00:04,  5.83it/s]
-Rendering animation:  17%|#6        | 5/30 [00:00&lt;00:04,  6.05it/s]
-Rendering animation:  20%|##        | 6/30 [00:01&lt;00:04,  5.94it/s]
-Rendering animation:  23%|##3       | 7/30 [00:01&lt;00:03,  5.83it/s]
-Rendering animation:  27%|##6       | 8/30 [00:01&lt;00:03,  5.77it/s]
-Rendering animation:  30%|###       | 9/30 [00:01&lt;00:03,  5.61it/s]
-Rendering animation:  33%|###3      | 10/30 [00:01&lt;00:03,  5.47it/s]
-Rendering animation:  37%|###6      | 11/30 [00:01&lt;00:03,  5.54it/s]
-Rendering animation:  40%|####      | 12/30 [00:02&lt;00:03,  5.62it/s]
-Rendering animation:  43%|####3     | 13/30 [00:02&lt;00:02,  5.67it/s]
-Rendering animation:  47%|####6     | 14/30 [00:02&lt;00:02,  5.90it/s]
-Rendering animation:  50%|#####     | 15/30 [00:02&lt;00:02,  5.94it/s]
-Rendering animation:  53%|#####3    | 16/30 [00:02&lt;00:02,  6.03it/s]
-Rendering animation:  57%|#####6    | 17/30 [00:02&lt;00:02,  6.17it/s]
-Rendering animation:  60%|######    | 18/30 [00:03&lt;00:01,  6.22it/s]
-Rendering animation:  63%|######3   | 19/30 [00:03&lt;00:01,  6.18it/s]
-Rendering animation:  67%|######6   | 20/30 [00:03&lt;00:01,  6.28it/s]
-Rendering animation:  70%|#######   | 21/30 [00:03&lt;00:01,  6.32it/s]
-Rendering animation:  73%|#######3  | 22/30 [00:03&lt;00:01,  6.14it/s]
-Rendering animation:  77%|#######6  | 23/30 [00:03&lt;00:01,  5.89it/s]
-Rendering animation:  80%|########  | 24/30 [00:04&lt;00:01,  5.78it/s]
-Rendering animation:  83%|########3 | 25/30 [00:04&lt;00:00,  5.72it/s]
-Rendering animation:  87%|########6 | 26/30 [00:04&lt;00:00,  5.63it/s]
-Rendering animation:  90%|######### | 27/30 [00:04&lt;00:00,  5.68it/s]
-Rendering animation:  93%|#########3| 28/30 [00:04&lt;00:00,  5.88it/s]
-Rendering animation:  97%|#########6| 29/30 [00:04&lt;00:00,  6.06it/s]
-Rendering animation: 100%|##########| 30/30 [00:05&lt;00:00,  6.07it/s]
-Rendering animation: 100%|##########| 30/30 [00:05&lt;00:00,  5.72it/s]
+Rendering animation:   3%|3         | 1/30 [00:00&lt;00:08,  3.60it/s]
+Rendering animation:   7%|6         | 2/30 [00:00&lt;00:06,  4.34it/s]
+Rendering animation:  10%|#         | 3/30 [00:00&lt;00:05,  4.57it/s]
+Rendering animation:  13%|#3        | 4/30 [00:00&lt;00:05,  4.59it/s]
+Rendering animation:  17%|#6        | 5/30 [00:01&lt;00:05,  4.66it/s]
+Rendering animation:  20%|##        | 6/30 [00:01&lt;00:05,  4.50it/s]
+Rendering animation:  23%|##3       | 7/30 [00:01&lt;00:05,  4.33it/s]
+Rendering animation:  27%|##6       | 8/30 [00:01&lt;00:05,  4.35it/s]
+Rendering animation:  30%|###       | 9/30 [00:02&lt;00:04,  4.28it/s]
+Rendering animation:  33%|###3      | 10/30 [00:02&lt;00:04,  4.26it/s]
+Rendering animation:  37%|###6      | 11/30 [00:02&lt;00:04,  4.32it/s]
+Rendering animation:  40%|####      | 12/30 [00:02&lt;00:04,  4.34it/s]
+Rendering animation:  43%|####3     | 13/30 [00:02&lt;00:03,  4.40it/s]
+Rendering animation:  47%|####6     | 14/30 [00:03&lt;00:03,  4.58it/s]
+Rendering animation:  50%|#####     | 15/30 [00:03&lt;00:03,  4.62it/s]
+Rendering animation:  53%|#####3    | 16/30 [00:03&lt;00:02,  4.70it/s]
+Rendering animation:  57%|#####6    | 17/30 [00:03&lt;00:02,  4.80it/s]
+Rendering animation:  60%|######    | 18/30 [00:03&lt;00:02,  4.82it/s]
+Rendering animation:  63%|######3   | 19/30 [00:04&lt;00:02,  4.81it/s]
+Rendering animation:  67%|######6   | 20/30 [00:04&lt;00:02,  4.90it/s]
+Rendering animation:  70%|#######   | 21/30 [00:04&lt;00:01,  4.92it/s]
+Rendering animation:  73%|#######3  | 22/30 [00:04&lt;00:01,  4.77it/s]
+Rendering animation:  77%|#######6  | 23/30 [00:05&lt;00:01,  4.59it/s]
+Rendering animation:  80%|########  | 24/30 [00:05&lt;00:01,  4.52it/s]
+Rendering animation:  83%|########3 | 25/30 [00:05&lt;00:01,  4.46it/s]
+Rendering animation:  87%|########6 | 26/30 [00:05&lt;00:00,  4.38it/s]
+Rendering animation:  90%|######### | 27/30 [00:05&lt;00:00,  4.42it/s]
+Rendering animation:  93%|#########3| 28/30 [00:06&lt;00:00,  4.59it/s]
+Rendering animation:  97%|#########6| 29/30 [00:06&lt;00:00,  4.72it/s]
+Rendering animation: 100%|##########| 30/30 [00:06&lt;00:00,  4.76it/s]
+Rendering animation: 100%|##########| 30/30 [00:06&lt;00:00,  4.45it/s]
 
 [(1.5773502691896262, 1.5773502691896262, 1.5773502691896262),
  (0.0, 0.0, 0.0),
@@ -1073,7 +1079,7 @@ Rendering animation: 100%|##########| 30/30 [00:05&lt;00:00,  5.72it/s]
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.416 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  12.978 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/64adae6b03e47dc2c3a43f0a2a856797/pyvista_mesh.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pyvista_mesh.py</span></code></a></p>
