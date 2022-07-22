@@ -653,7 +653,7 @@ properties (e.g. scalar, storage, symmetry…)</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Calling MAPDL to solve the eigenproblem...
 /opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1498: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
   warn(
-Elapsed time to solve this problem: 0.04167962074279785
+Elapsed time to solve this problem: 0.043282270431518555
 </pre></div>
 </div>
 <p>This is the vector of eigenfrequencies.</p>
@@ -661,7 +661,7 @@ Elapsed time to solve this problem: 0.04167962074279785
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>THQJGV :
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>GMIUPI :
  Size : 10
   3.381e+02   3.381e+02   6.266e+02   6.266e+02   9.283e+02      &lt;       5
   9.283e+02   1.250e+03   1.250e+03   1.424e+03   1.424e+03      &lt;       10
@@ -714,7 +714,7 @@ factor and finally compute the normalized residual value
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>3.503338761293556e-11
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>2.3070247813015805e-11
 </pre></div>
 </div>
 <p>This residual can be computed for all eigenmodes</p>
@@ -758,20 +758,20 @@ factor and finally compute the normalized residual value
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.0666635506364   - Residual = 3.503338761293556e-11
-[1] : Freq = 338.06666355063646  - Residual = 5.095765571157227e-11
-[2] : Freq = 626.6450980927036   - Residual = 1.7852148894677666e-11
-[3] : Freq = 626.645098092704    - Residual = 2.17372918531887e-11
-[4] : Freq = 928.2598500574518   - Residual = 1.72025442075496e-11
-[5] : Freq = 928.2598500574528   - Residual = 6.747910207805831e-12
-[6] : Freq = 1249.8421074363514  - Residual = 2.815524037478371e-11
-[7] : Freq = 1249.8421074363525  - Residual = 7.546271373844357e-12
-[8] : Freq = 1423.993890941669   - Residual = 4.5372004789272195e-10
-[9] : Freq = 1423.9938909416699  - Residual = 1.2160010951553228e-09
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.0666635506365   - Residual = 2.3070247813015805e-11
+[1] : Freq = 338.0666635506367   - Residual = 7.911817709574835e-11
+[2] : Freq = 626.645098092703    - Residual = 1.4338816801861427e-11
+[3] : Freq = 626.6450980927036   - Residual = 3.0909179798841926e-11
+[4] : Freq = 928.2598500574526   - Residual = 1.5073029240215198e-11
+[5] : Freq = 928.2598500574527   - Residual = 1.3866957267529915e-11
+[6] : Freq = 1249.8421074363505  - Residual = 2.3330795208513303e-11
+[7] : Freq = 1249.842107436351   - Residual = 1.3173155997875071e-11
+[8] : Freq = 1423.9938909416678  - Residual = 3.8657651202757016e-10
+[9] : Freq = 1423.9938909416703  - Residual = 1.2400348326967832e-09
 </pre></div>
 </div>
 <p>Plot Accuracy of Eigenresults</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.linspace.html#numpy.linspace" title="numpy.linspace" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">nev</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">nev</span></a><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;APDL Math Residual Error (%)&quot;</span><span class="p">)</span>
@@ -779,7 +779,7 @@ factor and finally compute the normalized residual value
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">10e-13</span><span class="p">,</span> <span class="mf">10e-7</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Frequency #&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Errors (%)&quot;</span><span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.bar.html#matplotlib.axes.Axes.bar" title="matplotlib.axes.Axes.bar" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">bar</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mapdl_acc</span></a><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MAPDL Results&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mapdl_acc</span></a><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;MAPDL Results&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img src="../../../_images/sphx_glr_eigen_solve_001.png" srcset="../../../_images/sphx_glr_eigen_solve_001.png" alt="APDL Math Residual Error (%)" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
@@ -790,7 +790,7 @@ factor and finally compute the normalized residual value
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.470 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.706 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-01-apdlmath-examples-eigen-solve-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/ff5a8539a3f0024e3ca927614b521224/eigen_solve.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eigen_solve.py</span></code></a></p>
