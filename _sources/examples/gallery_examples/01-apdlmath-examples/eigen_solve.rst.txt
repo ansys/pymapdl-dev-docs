@@ -91,8 +91,6 @@ Display size of the M and K matrices
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     (126, 126)
@@ -120,8 +118,6 @@ where `nev` is the number of eigenvalues requested
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -155,14 +151,12 @@ properties (e.g. scalar, storage, symmetry...)
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Calling MAPDL to solve the eigenproblem...
     /opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1498: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
       warn(
-    Elapsed time to solve this problem: 0.0411832332611084
+    Elapsed time to solve this problem: 0.03355121612548828
 
 
 
@@ -183,11 +177,9 @@ This is the vector of eigenfrequencies.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    DCBUHR :
+    QLMUZO :
      Size : 10
       3.381e+02   3.381e+02   6.266e+02   6.266e+02   9.283e+02      <       5
       9.283e+02   1.250e+03   1.250e+03   1.424e+03   1.424e+03      <       10
@@ -300,11 +292,9 @@ factor and finally compute the normalized residual value
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    2.0562977090177616e-11
+    3.503338761293556e-11
 
 
 
@@ -364,20 +354,18 @@ This residual can be computed for all eigenmodes
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    [0] : Freq = 338.06666355063646  - Residual = 2.0562977090177616e-11
-    [1] : Freq = 338.0666635506367   - Residual = 2.5193344997692946e-11
-    [2] : Freq = 626.6450980927032   - Residual = 1.4931028931457695e-11
-    [3] : Freq = 626.6450980927036   - Residual = 1.4010455780885683e-11
-    [4] : Freq = 928.2598500574527   - Residual = 1.1679113588822033e-11
-    [5] : Freq = 928.2598500574536   - Residual = 5.968337213591112e-12
-    [6] : Freq = 1249.8421074363512  - Residual = 2.782619737137024e-11
-    [7] : Freq = 1249.842107436352   - Residual = 8.446490585584126e-12
-    [8] : Freq = 1423.9938909416685  - Residual = 1.751755451417778e-10
-    [9] : Freq = 1423.9938909416712  - Residual = 1.2864006236092943e-09
+    [0] : Freq = 338.0666635506364   - Residual = 3.503338761293556e-11
+    [1] : Freq = 338.06666355063646  - Residual = 5.095765571157227e-11
+    [2] : Freq = 626.6450980927036   - Residual = 1.7852148894677666e-11
+    [3] : Freq = 626.645098092704    - Residual = 2.17372918531887e-11
+    [4] : Freq = 928.2598500574518   - Residual = 1.72025442075496e-11
+    [5] : Freq = 928.2598500574528   - Residual = 6.747910207805831e-12
+    [6] : Freq = 1249.8421074363514  - Residual = 2.815524037478371e-11
+    [7] : Freq = 1249.8421074363525  - Residual = 7.546271373844357e-12
+    [8] : Freq = 1423.993890941669   - Residual = 4.5372004789272195e-10
+    [9] : Freq = 1423.9938909416699  - Residual = 1.2160010951553228e-09
 
 
 
@@ -413,8 +401,6 @@ Plot Accuracy of Eigenresults
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -441,28 +427,23 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.287 seconds)
+   **Total running time of the script:** ( 0 minutes  1.155 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_01-apdlmath-examples_eigen_solve.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: eigen_solve.py <eigen_solve.py>`
 
-     :download:`Download Python source code: eigen_solve.py <eigen_solve.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: eigen_solve.ipynb <eigen_solve.ipynb>`
+      :download:`Download Jupyter notebook: eigen_solve.ipynb <eigen_solve.ipynb>`
 
 
 .. only:: html

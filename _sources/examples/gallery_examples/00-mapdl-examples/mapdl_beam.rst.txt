@@ -107,8 +107,6 @@ Create nodes within MAPDL
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     [[  0.   0.   0.]
@@ -161,15 +159,13 @@ are sequential
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     LIST ALL SELECTED ELEMENTS.  (LIST NODES)
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:29:00  JUL 27, 2022 CP=    166.634
+     00000000  VERSION=LINUX x64     04:22:54  JUL 28, 2022 CP=    151.128
 
                                                                                
 
@@ -224,8 +220,6 @@ individual elements
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -282,8 +276,6 @@ Define the boundary conditions
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -310,13 +302,11 @@ run the static analysis
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =     166.642   TIME= 04:29:00
+     *** NOTE ***                            CP =     151.135   TIME= 04:22:54
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -331,7 +321,7 @@ run the static analysis
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:29:00  JUL 27, 2022 CP=    166.642
+     00000000  VERSION=LINUX x64     04:22:54  JUL 28, 2022 CP=    151.135
 
                                                                                
 
@@ -347,11 +337,11 @@ run the static analysis
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =     166.643   TIME= 04:29:00
+     *** NOTE ***                            CP =     151.136   TIME= 04:22:54
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =     166.643   TIME= 04:29:00
+     *** NOTE ***                            CP =     151.136   TIME= 04:22:54
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -368,7 +358,7 @@ run the static analysis
 
      SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr                                                                                                                                                                                                                                                           
 
-     *** NOTE ***                            CP =     166.649   TIME= 04:29:00
+     *** NOTE ***                            CP =     151.143   TIME= 04:22:54
      Predictor is ON by default for structural elements with rotational      
      degrees of freedom.  Use the PRED,OFF command to turn the predictor     
      OFF if it adversely affects the convergence.                            
@@ -381,8 +371,8 @@ run the static analysis
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        22  BEAM188       0.011   0.000518
-     Time at end of element matrix formulation CP = 166.655457.              
+            1        22  BEAM188       0.011   0.000498
+     Time at end of element matrix formulation CP = 151.149323.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =          44,    Maximum wavefront =     12
@@ -390,7 +380,7 @@ run the static analysis
       Memory required for in-core solution     =     0.062 MB
       Memory required for out-of-core solution =     0.062 MB
 
-     *** NOTE ***                            CP =     166.659   TIME= 04:29:00
+     *** NOTE ***                            CP =     151.154   TIME= 04:22:54
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -405,12 +395,12 @@ run the static analysis
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        22  BEAM188       0.034   0.001547
+            1        22  BEAM188       0.030   0.001352
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        22  BEAM188       0.001   0.000033
+            1        22  BEAM188       0.001   0.000050
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -442,28 +432,23 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.601 seconds)
+   **Total running time of the script:** ( 0 minutes  0.542 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_mapdl_beam.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: mapdl_beam.py <mapdl_beam.py>`
 
-     :download:`Download Python source code: mapdl_beam.py <mapdl_beam.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: mapdl_beam.ipynb <mapdl_beam.ipynb>`
+      :download:`Download Jupyter notebook: mapdl_beam.ipynb <mapdl_beam.ipynb>`
 
 
 .. only:: html

@@ -179,8 +179,6 @@ Set up the element type (a shell-type).
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Selected element type is: SHELL181,
@@ -230,8 +228,6 @@ Poisson's ratio is :math:`\nu = 0.3125`.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     MATERIAL NUMBER        1
@@ -277,8 +273,6 @@ Set up the cross-section properties for a shell element.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -390,8 +384,6 @@ Set up the keypoints and create the area through the keypoints.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     The number of the keypoint where F is applied: 3
@@ -470,8 +462,6 @@ Define line division of the lines, then mesh the area with shell elements.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -717,8 +707,6 @@ Enter solution mode and solve the system. Print the solver output.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     *****  ANSYS SOLVE    COMMAND  *****
@@ -918,8 +906,6 @@ where F is applied, we can use :meth:`Mapdl.get_value <ansys.mapdl.core.Mapdl.ge
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Number of the node attached to the top keypoint: 18,
@@ -960,8 +946,6 @@ Perform the simulation again using the element type SHELL281.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -1279,8 +1263,6 @@ Enter solution mode and solve the system. Print the solver output.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -1437,8 +1419,6 @@ and :math:`\delta_{\mathrm{shell281}}` is 0.1139.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -1474,28 +1454,23 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.563 seconds)
+   **Total running time of the script:** ( 0 minutes  3.172 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_06-verif-manual_vm-006-pinched_cylinder.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: vm-006-pinched_cylinder.py <vm-006-pinched_cylinder.py>`
 
-     :download:`Download Python source code: vm-006-pinched_cylinder.py <vm-006-pinched_cylinder.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: vm-006-pinched_cylinder.ipynb <vm-006-pinched_cylinder.ipynb>`
+      :download:`Download Jupyter notebook: vm-006-pinched_cylinder.ipynb <vm-006-pinched_cylinder.ipynb>`
 
 
 .. only:: html

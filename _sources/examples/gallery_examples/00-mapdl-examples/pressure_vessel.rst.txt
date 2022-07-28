@@ -54,8 +54,6 @@ Also shown here:
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -96,8 +94,6 @@ Set the materials and element type
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -226,15 +222,13 @@ Solve
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
     FINISH SOLUTION PROCESSING
 
 
-     ***** ROUTINE COMPLETED *****  CP =       180.694
+     ***** ROUTINE COMPLETED *****  CP =       163.733
 
 
 
@@ -281,8 +275,6 @@ method to efficiently obtain results without outputting to disk.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -353,8 +345,6 @@ accessing the result file using the legacy file reader
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     All close: True
@@ -394,8 +384,6 @@ That these results are equivalent to results from PRNSOL.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     All close: True
@@ -427,28 +415,23 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.894 seconds)
+   **Total running time of the script:** ( 0 minutes  6.167 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_pressure_vessel.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: pressure_vessel.py <pressure_vessel.py>`
 
-     :download:`Download Python source code: pressure_vessel.py <pressure_vessel.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: pressure_vessel.ipynb <pressure_vessel.ipynb>`
+      :download:`Download Jupyter notebook: pressure_vessel.ipynb <pressure_vessel.ipynb>`
 
 
 .. only:: html

@@ -49,8 +49,6 @@ This section is focused on creating keypoints.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Product:             Ansys Mechanical Enterprise
@@ -82,8 +80,6 @@ value is an empty string to allow MAPDL to pick the keypoint number.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     1
@@ -108,8 +104,6 @@ Create keypoint at (10, 11, 12) while specifying the keypoint number.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -137,8 +131,6 @@ Create keypoint between two keypoints
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -173,8 +165,6 @@ Note that we first clear mapdl before generating this geometry
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     [1, 2, 3, 4]
@@ -202,8 +192,6 @@ Note that this matches the array ``[k0, k1, k2, k3]`` (due to sorting)
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -230,8 +218,6 @@ Return an array of the keypoint locations
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -263,8 +249,6 @@ compute this yourself from ``kloc``
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -305,8 +289,6 @@ This example generates a series of random keypoints and selects them
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]
@@ -331,8 +313,6 @@ Select every other keypoint with the old style command.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -361,8 +341,6 @@ Note that the item IDs are 1 based in MAPDL, while Python ranges are
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -394,8 +372,6 @@ Note that you could use a numpy array here as well.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -452,28 +428,23 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.861 seconds)
+   **Total running time of the script:** ( 0 minutes  0.712 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_02-geometry_00-keypoints.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 00-keypoints.py <00-keypoints.py>`
 
-     :download:`Download Python source code: 00-keypoints.py <00-keypoints.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 00-keypoints.ipynb <00-keypoints.ipynb>`
+      :download:`Download Jupyter notebook: 00-keypoints.ipynb <00-keypoints.ipynb>`
 
 
 .. only:: html

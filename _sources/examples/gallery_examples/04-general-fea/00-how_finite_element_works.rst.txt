@@ -318,8 +318,6 @@ element:
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -383,8 +381,6 @@ for 4 point-integration are:
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -635,8 +631,6 @@ First for our subject element:
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -749,8 +743,6 @@ for
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -938,8 +930,6 @@ the shape of the 2D quadrilateral at hand.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     [[ 12875125.32026284   4266737.21733318  -1512012.17927291   2247558.57561918  -7065315.06442397  -4038004.53009543
@@ -976,8 +966,6 @@ the shape of the 2D quadrilateral at hand.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -1158,8 +1146,6 @@ Aplying the created classes.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     [[ 1288.   427.  -151.   225.  -707.  -404.  -430.  -248.]
@@ -1223,8 +1209,6 @@ properties.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -1291,8 +1275,6 @@ Setup the static analysis.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -1353,8 +1335,6 @@ The columns of the stiffness matrix appear as nodal force reactions
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -1423,8 +1403,6 @@ Now, apply this to the whole matrix and output it.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     [[ 1288.   427.  -151.   225.  -707.  -404.  -430.  -248.]
@@ -1457,8 +1435,6 @@ academic formulation.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -1493,8 +1469,6 @@ Show that the stiffness matrix in MAPDL matches what we derived.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Both matrices are the equal within tolerance.
@@ -1521,28 +1495,23 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.995 seconds)
+   **Total running time of the script:** ( 0 minutes  0.860 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_04-general-fea_00-how_finite_element_works.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 00-how_finite_element_works.py <00-how_finite_element_works.py>`
 
-     :download:`Download Python source code: 00-how_finite_element_works.py <00-how_finite_element_works.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 00-how_finite_element_works.ipynb <00-how_finite_element_works.ipynb>`
+      :download:`Download Jupyter notebook: 00-how_finite_element_works.ipynb <00-how_finite_element_works.ipynb>`
 
 
 .. only:: html

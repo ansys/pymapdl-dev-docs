@@ -92,14 +92,12 @@ First, start by launching MAPDL as a service.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =     166.144   TIME= 04:28:57
+     *** NOTE ***                            CP =     150.664   TIME= 04:22:52
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -111,7 +109,7 @@ First, start by launching MAPDL as a service.
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:28:57  JUL 27, 2022 CP=    166.144
+     00000000  VERSION=LINUX x64     04:22:52  JUL 28, 2022 CP=    150.664
 
                                                                                
 
@@ -131,7 +129,7 @@ First, start by launching MAPDL as a service.
        NUMBER OF MODES TO EXPAND . . . . . . . . . . .ALL
        ELEMENT RESULTS CALCULATION . . . . . . . . . .ON 
 
-     *** NOTE ***                            CP =     166.144   TIME= 04:28:57
+     *** NOTE ***                            CP =     150.664   TIME= 04:22:52
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -181,8 +179,8 @@ First, start by launching MAPDL as a service.
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1        40  SOLID186      0.012   0.000291
-     Time at end of element matrix formulation CP = 166.161575.              
+            1        40  SOLID186      0.010   0.000254
+     Time at end of element matrix formulation CP = 150.680206.              
 
       BLOCK LANCZOS CALCULATION OF UP TO     6 EIGENVECTORS.
       NUMBER OF EQUATIONS              =          900
@@ -195,7 +193,7 @@ First, start by launching MAPDL as a service.
       Memory required for in-core solution     =     2.159 MB
       Memory required for out-of-core solution =     1.369 MB
 
-     *** NOTE ***                            CP =     166.202   TIME= 04:28:57
+     *** NOTE ***                            CP =     150.717   TIME= 04:22:52
      The Sparse Matrix Solver used by the Block Lanczos eigensolver is       
      currently running in the in-core memory mode.  This memory mode uses    
      the most amount of memory in order to avoid using the hard drive as     
@@ -205,7 +203,7 @@ First, start by launching MAPDL as a service.
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:28:57  JUL 27, 2022 CP=    166.253
+     00000000  VERSION=LINUX x64     04:22:52  JUL 28, 2022 CP=    150.757
 
                                                                                
 
@@ -252,8 +250,6 @@ View the results using the pyansys result object
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -302,8 +298,6 @@ Access nodal displacement values
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -369,28 +363,23 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.990 seconds)
+   **Total running time of the script:** ( 0 minutes  0.910 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_mapdl_3d_beam.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: mapdl_3d_beam.py <mapdl_3d_beam.py>`
 
-     :download:`Download Python source code: mapdl_3d_beam.py <mapdl_3d_beam.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: mapdl_3d_beam.ipynb <mapdl_3d_beam.ipynb>`
+      :download:`Download Jupyter notebook: mapdl_3d_beam.ipynb <mapdl_3d_beam.ipynb>`
 
 
 .. only:: html
