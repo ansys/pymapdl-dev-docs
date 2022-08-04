@@ -395,7 +395,11 @@ instance.  Defaults to a temporary working directory.</p>
 </dd>
 <dt><strong>restart_failed</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Restarts any failed instances in the pool.</p>
 </dd>
-<dt><strong>remove_temp_files</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Removes all temporary files on exit.  Default <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>remove_temp_files</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>This launcher creates a new MAPDL working directory for each instance
+of MAPDL within the temporary user directory, obtainable with
+<code class="docutils literal notranslate"><span class="pre">tempfile.gettempdir()</span></code>, for MAPDL files. When this parameter is
+<code class="docutils literal notranslate"><span class="pre">True</span></code>, this directory will be deleted when MAPDL is exited. Default
+<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
 <dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>See <a class="reference internal" href="ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.launch_mapdl()</span></code></a> for a complete
 listing of all additional keyword arguments.</p>
