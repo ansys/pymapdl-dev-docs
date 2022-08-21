@@ -926,24 +926,29 @@
 <h1>lgwrite<a class="headerlink" href="#lgwrite" title="Permalink to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.lgwrite">
-<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">lgwrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kedit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.lgwrite" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">lgwrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kedit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_grpc_extra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.lgwrite" title="Permalink to this definition">#</a></dt>
 <dd><p>Writes the database command log to a file.</p>
 <p>APDL Command: LGWRITE</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>fname</strong></dt><dd><p>File name and directory path (248 characters maximum, including the
+<dt><strong>fname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>File name and directory path (248 characters maximum, including the
 characters needed for the directory path).  An unspecified
 directory path defaults to the working directory; in this case, you
 can use all 248 characters for the file name.</p>
 <p>The file name defaults to Jobname.</p>
 </dd>
-<dt><strong>ext</strong></dt><dd><p>Filename extension (eight-character maximum).</p>
+<dt><strong>ext</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Filename extension (eight-character maximum).</p>
 </dd>
-<dt><strong>kedit</strong></dt><dd><p>Flag to suppress nonessential commands:</p>
-<p>NONE - Do not suppress any commands (default).</p>
-<p>COMMENT - Write nonessential commands as comments (starting with !).</p>
-<p>REMOVE - Do not write nonessential commands or comments.</p>
+<dt><strong>kedit</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Flag to suppress nonessential commands:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;NONE&quot;</span></code> - Do not suppress any commands (default).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;COMMENT&quot;</span></code> - Write nonessential commands as comments (starting with !).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;REMOVE&quot;</span></code> - Do not write nonessential commands or comments.</p></li>
+</ul>
+</dd>
+<dt><strong>remove_grpc_extra</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, default: <a class="reference external" href="https://docs.python.org/dev/library/constants.html#True" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a></span></dt><dd><p>Remove gRPC related content (like <code class="docutils literal notranslate"><span class="pre">/OUT,anstmp</span></code>). This will be
+ignored when MAPDL is not in gRPC mode.</p>
 </dd>
 </dl>
 </dd>
@@ -962,6 +967,26 @@ to the program.  This command is most useful if the session
 log file (File.LOG), which is normally saved during an
 interactive session, has been lost or corrupted.</p>
 <p>This command is valid in any processor.</p>
+<p class="rubric">Examples</p>
+<p>Output the database command log to the local directory.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;log.txt&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">lgwrite</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">kedit</span><span class="o">=</span><span class="s1">&#39;REMOVE&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Print the output from the log file.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">fid</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">lines</span> <span class="o">=</span> <span class="n">fid</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">))</span>
+<span class="go">/BATCH</span>
+<span class="go">/PREP7,</span>
+<span class="go">K,1,0,0,0</span>
+<span class="go">K,2,2,0,0</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>

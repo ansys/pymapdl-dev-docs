@@ -935,11 +935,11 @@ values, the nearer value is used.</p>
 </dl>
 <p class="rubric">Notes</p>
 <p>Moves a variable into an array parameter vector.  The starting array
-element number must be defined.  For example, VGET,A(1),2 moves
+element number must be defined.  For example, <code class="docutils literal notranslate"><span class="pre">VGET,A(1),2</span></code> moves
 variable 2 (starting at time 0.0) to array parameter A.  Looping
-continues from array element A(1) with the index number incremented by
+continues from array element <code class="docutils literal notranslate"><span class="pre">A(1)</span></code> with the index number incremented by
 one until the variable is filled.  The number of loops may be
-controlled with the <code class="docutils literal notranslate"><span class="pre">*VLEN</span></code> command (except that loop skipping (NINC) is
+controlled with the <code class="docutils literal notranslate"><span class="pre">*VLEN</span></code> command (except that loop skipping (<code class="docutils literal notranslate"><span class="pre">NINC</span></code>) is
 not allowed).  For multi-dimensioned array parameters, only the first
 (row) subscript is incremented.</p>
 </dd></dl>

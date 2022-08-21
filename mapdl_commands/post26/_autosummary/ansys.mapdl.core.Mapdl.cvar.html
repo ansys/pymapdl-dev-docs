@@ -914,26 +914,30 @@
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">cvar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">itype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.cvar" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes covariance between two quantities.</p>
 <p>APDL Command: CVAR</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl>
+<dd class="field-odd"><dl class="simple">
 <dt><strong>ir</strong></dt><dd><p>Arbitrary reference number assigned to the resulting variable (2 to
 NV [NUMVAR]).  If this number is the same as for a previous
 variable, the previous variable will be overwritten with this
 result.</p>
 </dd>
 <dt><strong>ia, ib</strong></dt><dd><p>Reference numbers of the two variables to be operated on.  If only
-one, leave IB blank.</p>
+one, leave <code class="docutils literal notranslate"><span class="pre">IB</span></code> blank.</p>
 </dd>
 <dt><strong>itype</strong></dt><dd><p>Defines the type of response PSD to be calculated:</p>
-<p>0,1 - Displacement (default).</p>
-<p>2 - Velocity.</p>
-<p>3 - Acceleration.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0,1</span></code> - Displacement (default).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - Velocity.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - Acceleration.</p></li>
+</ul>
 </dd>
 <dt><strong>datum</strong></dt><dd><p>Defines the reference with respect to which covariance is to be
 calculated:</p>
-<p>1 - Absolute value.</p>
-<p>2 - Relative to base (default).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - Absolute value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - Relative to base (default).</p></li>
+</ul>
 </dd>
 <dt><strong>name</strong></dt><dd><p>Thirty-two character name for identifying the variable on listings
 and displays.  Embedded blanks are compressed upon output.</p>
