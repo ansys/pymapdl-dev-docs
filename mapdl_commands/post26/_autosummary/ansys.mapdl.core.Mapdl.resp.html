@@ -914,9 +914,9 @@
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">resp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lftab</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ldtab</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spectype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dampratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.resp" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates a response spectrum.</p>
 <p>APDL Command: RESP</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>ir</strong></dt><dd><p>Arbitrary reference number assigned to the response spectrum
 results (2 to NV [NUMVAR]).  If this number is the same as for a
 previously defined variable, the previously defined variable will
@@ -931,13 +931,11 @@ the entire range. Frequencies must be input in ascending order.</p>
 <dt><strong>ldtab</strong></dt><dd><p>Reference number of variable containing the input time-history.</p>
 </dd>
 <dt><strong>spectype</strong></dt><dd><p>Defines the type of response spectrum to be calculated:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code> - Displacement (relative to base excitation)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - Velocity (relative to base excitation)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - Acceleration response spectrum (absolute)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - Pseudo-velocity</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - Pseudo-acceleration</p></li>
-</ul>
+<p>0 or 1 - Displacement (relative to base excitation)</p>
+<p>2 - Velocity (relative to base excitation)</p>
+<p>3 - Acceleration response spectrum (absolute)</p>
+<p>4 - Pseudo-velocity</p>
+<p>5 - Pseudo-acceleration</p>
 </dd>
 <dt><strong>dampratio</strong></dt><dd><p>Ratio of viscous damping to critical damping (input as a decimal
 number).</p>
@@ -951,10 +949,8 @@ the response spectrum calculation.  Defaults to the full time
 range.</p>
 </dd>
 <dt><strong>inputtype</strong></dt><dd><p>Defines the type of the input time-history:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - Displacement (default)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - Acceleration</p></li>
-</ul>
+<p>0 - Displacement (default)</p>
+<p>1 - Acceleration</p>
 </dd>
 </dl>
 </dd>
@@ -964,21 +960,21 @@ range.</p>
 acceleration time-history and frequency data. The response spectrum is
 defined as the maximum response of single degree of freedom systems of
 varying frequency (or period) to a given input support excitation.</p>
-<p>A response spectrum analysis (<code class="docutils literal notranslate"><span class="pre">ANTYPE,</span> <span class="pre">SPECTR</span></code> with <code class="docutils literal notranslate"><span class="pre">SPOPT</span></code>, <code class="docutils literal notranslate"><span class="pre">SPRS</span></code> or <code class="docutils literal notranslate"><span class="pre">MPRS</span></code>)
+<p>A response spectrum analysis (ANTYPE, SPECTR with SPOPT, SPRS or MPRS)
 requires a response spectrum input. This input can be determined from
 the response spectrum printout or display of this command.</p>
 <p>If a response spectrum is to be calculated from a given displacement
 (or acceleration) time-history, the displacement time-history may be
 input to a single one-element reduced linear transient dynamic
-(<code class="docutils literal notranslate"><span class="pre">ANTYPE,TRANS</span></code>) analysis, so that the calculated output (which should be
+(ANTYPE,TRANS) analysis, so that the calculated output (which should be
 the same as the input) will be properly located on the file.</p>
-<p>The integration time step (argument <code class="docutils literal notranslate"><span class="pre">DTIME</span></code> on the RESP command) and the
+<p>The integration time step (argument DTIME on the RESP command) and the
 damping coefficient (argument dampRatio) are constant over the
 frequency range. The number of calculations done per response spectrum
-curve is the product of the number of input solution points <code class="docutils literal notranslate"><span class="pre">(TMAX-</span>
-<span class="pre">TMIN)/DTIME</span></code> and the number of frequency points (frequencies located in
+curve is the product of the number of input solution points (TMAX-
+TMIN)/DTIME and the number of frequency points (frequencies located in
 variable LFTAB).</p>
-<p>Input solution points requested (using <code class="docutils literal notranslate"><span class="pre">DTIME</span></code> and the frequency range)
+<p>Input solution points requested (using DTIME and the frequency range)
 at a time not corresponding to an actual displacement solution time on
 the file are linearly interpolated with respect to the existing points.</p>
 <p>For the details of the response spectrum calculation, see POST26 -
