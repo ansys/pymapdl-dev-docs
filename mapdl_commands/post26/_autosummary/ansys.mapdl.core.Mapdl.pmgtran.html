@@ -919,8 +919,8 @@
 <dd class="field-odd"><dl class="simple">
 <dt><strong>fname</strong></dt><dd><p>File name (8 characters maximum) to which tabular data and plot
 files will be written.  Must be enclosed in single quotes when the
-command is manually typed in.  Defaults to MG_TRNS.  The data file
-extension is .OUT and the plot file extension is .PLT.</p>
+command is manually typed in.  Defaults to <code class="docutils literal notranslate"><span class="pre">MG_TRNS</span></code>.  The data file
+extension is <code class="docutils literal notranslate"><span class="pre">.OUT</span></code> and the plot file extension is <code class="docutils literal notranslate"><span class="pre">.PLT</span></code>.</p>
 </dd>
 <dt><strong>freq</strong></dt><dd><p>Frequency of solution output.  Defaults to 1.  Every FREQth
 solution on the results file is output.</p>
@@ -939,15 +939,15 @@ the command is manually typed in.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>PMGTRAN invokes an ANSYS macro which calculates and summarizes
+<p><code class="docutils literal notranslate"><span class="pre">PMGTRAN</span></code> invokes an ANSYS macro which calculates and summarizes
 electromagnetic results from a transient analysis.  The results are
 summarized by element components and listed on the screen as well as
-written to a file (Fname.OUT).  Also, graph plots of results as a
-function of time are created and written to a file (Fname.PLT) for use
-in the DISPLAY program.</p>
+written to a file (<code class="docutils literal notranslate"><span class="pre">Fname.OUT</span></code>).  Also, graph plots of results as a
+function of time are created and written to a file (<code class="docutils literal notranslate"><span class="pre">Fname.PLT</span></code>) for use
+in the <code class="docutils literal notranslate"><span class="pre">DISPLAY</span></code> program.</p>
 <p>Two components may be selected for the summary of electromagnetic
-forces (see FMAGSUM), two for power loss, and one each for stored
-energy (see SENERGY) and total current (see CURR2D).  See the
+forces (see <code class="docutils literal notranslate"><span class="pre">FMAGSUM</span></code>), two for power loss, and one each for stored
+energy (see <code class="docutils literal notranslate"><span class="pre">SENERGY</span></code>) and total current (see <code class="docutils literal notranslate"><span class="pre">CURR2D</span></code>).  See the
 referenced commands for other restrictions.</p>
 <p>PMGTRAN is restricted to MKSA units.</p>
 <p>Distributed ANSYS Restriction: This command is not supported in

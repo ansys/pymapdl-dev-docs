@@ -914,9 +914,9 @@
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">vput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">par</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tstrt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kcplx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.vput" title="Permalink to this definition">#</a></dt>
 <dd><p>Moves an array parameter vector into a variable.</p>
 <p>APDL Command: VPUT</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl>
+<dd class="field-odd"><dl class="simple">
 <dt><strong>par</strong></dt><dd><p>Array parameter vector in the operation.</p>
 </dd>
 <dt><strong>ir</strong></dt><dd><p>Arbitrary reference number assigned to this variable (1 to NV
@@ -926,8 +926,10 @@
 values, the nearer value is used.</p>
 </dd>
 <dt><strong>kcplx</strong></dt><dd><p>Complex number key:</p>
-<p>0 - Use the real part of the IR data.</p>
-<p>1 - Use the imaginary part of the IR data.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - Use the real part of the IR data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - Use the imaginary part of the IR data.</p></li>
+</ul>
 </dd>
 <dt><strong>name</strong></dt><dd><p>Thirty-two character name identifying the item on printouts and
 displays. Defaults to the label formed by concatenating VPUT with
@@ -937,14 +939,14 @@ the reference number IR.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>At least one variable should be defined (NSOL, ESOL, RFORCE, etc.)
+<p>At least one variable should be defined (<code class="docutils literal notranslate"><span class="pre">NSOL</span></code>, <code class="docutils literal notranslate"><span class="pre">ESOL</span></code>, <code class="docutils literal notranslate"><span class="pre">RFORCE</span></code>, etc.)
 before using this command.  The starting array element number must be
-defined.  For example, VPUT,A(1),2 moves array parameter A to variable
-2 starting at time 0.0.  Looping continues from array element A(1) with
+defined.  For example,`` VPUT,A(1),2`` moves array parameter A to variable
+2 starting at time 0.0.  Looping continues from array element <code class="docutils literal notranslate"><span class="pre">A(1)</span></code> with
 the index number incremented by one until the variable is filled.
 Unfilled variable locations are assigned a zero value.  The number of
 loops may be controlled with the <code class="docutils literal notranslate"><span class="pre">*VLEN</span></code> command (except that loop
-skipping (NINC) is not allowed).  For multi-dimensioned array
+skipping (<code class="docutils literal notranslate"><span class="pre">NINC</span></code>) is not allowed).  For multi-dimensioned array
 parameters, only the first (row) subscript is incremented.</p>
 </dd></dl>
 

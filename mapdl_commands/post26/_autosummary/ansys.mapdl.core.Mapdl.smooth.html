@@ -915,16 +915,16 @@
 <dd><p>Allows smoothing of noisy data and provides a graphical representation</p>
 <p>APDL Command: SMOOTH
 of the data.</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl>
+<dd class="field-odd"><dl class="simple">
 <dt><strong>vect1</strong></dt><dd><p>Name of the first vector that contains the noisy data set (i.e.,
 independent variable). You must create and fill this vector before
-issuing SMOOTH.</p>
+issuing <code class="docutils literal notranslate"><span class="pre">SMOOTH</span></code>.</p>
 </dd>
 <dt><strong>vect2</strong></dt><dd><p>Name of the second vector that contains the dependent set of data.
 Must be the same length as the first vector. You must create and
-fill this vector before issuing SMOOTH.</p>
+fill this vector before issuing <code class="docutils literal notranslate"><span class="pre">SMOOTH</span></code>.</p>
 </dd>
 <dt><strong>datap</strong></dt><dd><p>Number of data points to be fitted, starting from the beginning of
 the vector. If left blank, the entire vector will be fitted. The
@@ -937,17 +937,20 @@ equal to the number of the data points. Default (blank) is one-half
 the number of data points. Maximum number of smoothed data fitting
 order is the number of data points up to 50.  Depending on this
 number, the smoothed curve will be one of the following:</p>
-<p>1 - Curve is the absolute average of all of the data points.</p>
-<p>2 - Curve is the least square average of all of the data points.</p>
-<dl class="simple">
-<dt>3 or more - Curve is a polynomial of the order (n-1), where n is the number of data fitting</dt><dd><p>order points.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - Curve is the absolute average of all of the data points.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - Curve is the least square average of all of the data points.</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">3</span></code> or more - Curve is a polynomial of the order (n-1), where n is the number of data fitting</dt><dd><p>order points.</p>
 </dd>
 </dl>
+</li>
+</ul>
 </dd>
 <dt><strong>vect3</strong></dt><dd><p>Name of the vector that contains the smoothed data of the
 independent variable. This vector should have a length equal to or
 greater than the number of smoothed data points. In batch (command)
-mode, you must create this vector before issuing the SMOOTH
+mode, you must create this vector before issuing the <code class="docutils literal notranslate"><span class="pre">SMOOTH</span></code>
 command. In interactive mode, the GUI automatically creates this
 vector (if it does not exist). If you do not specify a vector name,
 the GUI will name the vector smth_ind.</p>
@@ -955,22 +958,24 @@ the GUI will name the vector smth_ind.</p>
 <dt><strong>vect4</strong></dt><dd><p>Name of the vector that contains the smoothed data of the dependent
 variable.  This vector must be the same length as Vect3.  In batch
 (command) mode, you must create this vector before issuing the
-SMOOTH command. In interactive mode, the GUI automatically creates
+<code class="docutils literal notranslate"><span class="pre">SMOOTH</span></code> command. In interactive mode, the GUI automatically creates
 this vector (if it does not exist). If you do not specify a vector
 name, the GUI will name the vector smth_dep.</p>
 </dd>
 <dt><strong>disp</strong></dt><dd><p>Specifies how you want to display data. No default; you must
 specify an option.</p>
-<p>1 - Unsmoothed data only</p>
-<p>2 - Smoothed data only</p>
-<p>3 - Both smoothed and unsmoothed data</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - Unsmoothed data only</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - Smoothed data only</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - Both smoothed and unsmoothed data</p></li>
+</ul>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
 <p>You can control the attributes of the graph using standard ANSYS
-controls (/GRID, /GTHK, /COLOR, etc.). If working interactively, these
+controls (<code class="docutils literal notranslate"><span class="pre">/GRID</span></code>, <code class="docutils literal notranslate"><span class="pre">/GTHK</span></code>, <code class="docutils literal notranslate"><span class="pre">/COLOR</span></code>, etc.). If working interactively, these
 controls appear in this dialog box for convenience, as well as in their
 standard dialog boxes. You must always create Vect1 and Vect2 (using
 <code class="docutils literal notranslate"><span class="pre">*DIM</span></code>) and fill these vectors before smoothing the data. If you’re
