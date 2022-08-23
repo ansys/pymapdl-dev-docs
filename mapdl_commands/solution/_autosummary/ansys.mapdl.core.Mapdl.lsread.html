@@ -898,6 +898,12 @@
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.lsread">
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">lsread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lsnum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.lsread" title="Permalink to this definition">#</a></dt>
 <dd><p>Reads load and load step option data into the database.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This command can only run in non-interactive mode.
+Please visit <a class="reference external" href="https://mapdl.docs.pyansys.com/user_guide/mapdl.html#unsupported-interactive-commands">Unsupported “Interactive” Commands</a>
+for further information.</p>
+</div>
 <p>APDL Command: LSREAD</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -921,6 +927,61 @@ the existing load. See the LSWRITE command to write load step files,
 and the LSDELE command to delete load step files.  LSREAD removes any
 existing SFGRAD specification.</p>
 <p>This command is also valid in PREP7.</p>
+<p class="rubric">Examples</p>
+<p>Demonstrate writing out load steps using <code class="xref py py-func docutils literal notranslate"><span class="pre">lswrite</span>
+<span class="pre">&lt;ansys.mapdl.core.Mapdl.lswrite&gt;</span> <span class="pre">and</span> <span class="pre">reading</span> <span class="pre">them</span> <span class="pre">back</span> <span class="pre">in</span> <span class="pre">using</span>
+<span class="pre">``lsread`()</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Build a 5 x 5 flat plate out of shell181 elements.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">rectng</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;SHELL181&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s1">&#39;ex&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">10.0e5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">sectype</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;shell&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">secdata</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>  <span class="c1">#  0.1 thick</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">esize</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">amesh</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Fix the four corners</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s1">&#39;node(0,0,0)&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s1">&#39;node(0,5,0)&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s1">&#39;node(5,5,0)&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s1">&#39;node(5,0,0)&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Enter the solution routine and define a force at (2,2,0).</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s1">&#39;static&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="s1">&#39;node(2,2,0)&#39;</span><span class="p">,</span> <span class="s1">&#39;fz&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Write load out as load step 1 and delete all loads and displacements.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">lswrite</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">fdele</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">ddele</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Read back in the loads and list them.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">lsread</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">flist</span><span class="p">()</span>
+<span class="go">LIST NODAL FORCES FOR SELECTED NODES         1 TO       36 BY        1</span>
+<span class="go">CURRENTLY SELECTED NODAL LOAD SET= FX   FY   FZ   MX   MY   MZ</span>
+</pre></div>
+</div>
+<p><strong>* MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2022 R2          22.2     *</strong>
+Ansys Mechanical Enterprise
+00000000  VERSION=LINUX x64     10:15:14  AUG 22, 2022 CP=      0.561</p>
+<blockquote>
+<div><dl class="simple">
+<dt>NODE  LABEL     REAL           IMAG</dt><dd><p>26  FZ     -10.0000000      0.00000000</p>
+</dd>
+</dl>
+</div></blockquote>
 </dd></dl>
 
 </section>
