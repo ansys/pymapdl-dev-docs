@@ -603,10 +603,8 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.load_table">
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">load_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csysid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.load_table" title="Permalink to this definition">#</a></dt>
-<dd><p>Load a table from Python to MAPDL.</p>
-<p>Uses <code class="docutils literal notranslate"><span class="pre">TREAD</span></code> to transfer the table.
-It should be noticed that PyMAPDL when query a table, it will return
-the table but not its axis (meaning it will return <code class="docutils literal notranslate"><span class="pre">table[1:,1:]</span></code>).</p>
+<dd><p>Load a table from Python to into MAPDL.</p>
+<p>Uses <a class="reference internal" href="../../mapdl_commands/apdl/_autosummary/ansys.mapdl.core.Mapdl.tread.html#ansys.mapdl.core.Mapdl.tread" title="ansys.mapdl.core.Mapdl.tread"><code class="xref py py-func docutils literal notranslate"><span class="pre">tread</span></code></a> to transfer the table.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
@@ -615,18 +613,17 @@ may be up to 32 characters, beginning with a letter and
 containing only letters, numbers, and underscores.
 Examples: <code class="docutils literal notranslate"><span class="pre">&quot;ABC&quot;</span> <span class="pre">&quot;A3X&quot;</span> <span class="pre">&quot;TOP_END&quot;</span></code>.</p>
 </dd>
-<dt><strong>array</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.ndarray</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">List</span></code></span></dt><dd><p>List as a table or <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array.</p>
+<dt><strong>array</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">List</span></code></span></dt><dd><p>List as a table or <a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> array.</p>
 </dd>
 <dt><strong>var1</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Variable name corresponding to the first dimension (row).
-Default Row</p>
+Default <code class="docutils literal notranslate"><span class="pre">&quot;Row&quot;</span></code>.</p>
 <p>A primary variable (listed below) or can be an independent
-parameter. If specifying an independent parameter, then
-you must define an additional table for the independent
-parameter. The additional table must have the same name as
-the independent parameter and may be a function of one or
-more primary variables or another independent
-parameter. All independent parameters must relate to a
-primary variable.</p>
+parameter. If specifying an independent parameter, then you must
+define an additional table for the independent parameter. The
+additional table must have the same name as the independent
+parameter and may be a function of one or more primary variables or
+another independent parameter. All independent parameters must
+relate to a primary variable.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;TIME&quot;</span></code>: Time</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;FREQ&quot;</span></code>: Frequency</p></li>
@@ -659,6 +656,8 @@ APDL Default = 0 (global Cartesian)</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
+<p>Transfer a table to MAPDL. The first column is time values and must be
+ascending in order.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_conv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">],</span>
 <span class="go">                        [120, 0.001],</span>
 <span class="go">                        [130, 0.005],</span>
@@ -667,7 +666,12 @@ APDL Default = 0 (global Cartesian)</p>
 <span class="go">                        [1000, 0.002]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">load_table</span><span class="p">(</span><span class="s1">&#39;MY_TABLE&#39;</span><span class="p">,</span> <span class="n">my_conv</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;MY_TABLE&#39;</span><span class="p">]</span>
-<span class="go">array([0.0001, 0.0001, 0.0005, 0.0005, 0.0002, 0.0002])</span>
+<span class="go">array([[0.001],</span>
+<span class="go">       [0.001],</span>
+<span class="go">       [0.005],</span>
+<span class="go">       [0.005],</span>
+<span class="go">       [0.002],</span>
+<span class="go">       [0.002]])</span>
 </pre></div>
 </div>
 </dd></dl>
