@@ -156,7 +156,7 @@ properties (e.g. scalar, storage, symmetry...)
     Calling MAPDL to solve the eigenproblem...
     /opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1501: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
       warn(
-    Elapsed time to solve this problem: 0.038908958435058594
+    Elapsed time to solve this problem: 0.03931164741516113
 
 
 
@@ -179,7 +179,7 @@ This is the vector of eigenfrequencies.
 
  .. code-block:: none
 
-    PDYKOV :
+    LMRFHV :
      Size : 10
       3.381e+02   3.381e+02   6.266e+02   6.266e+02   9.283e+02      <       5
       9.283e+02   1.250e+03   1.250e+03   1.424e+03   1.424e+03      <       10
@@ -294,7 +294,7 @@ factor and finally compute the normalized residual value
 
  .. code-block:: none
 
-    2.3070247813015805e-11
+    4.346462676948426e-11
 
 
 
@@ -356,16 +356,16 @@ This residual can be computed for all eigenmodes
 
  .. code-block:: none
 
-    [0] : Freq = 338.0666635506365   - Residual = 2.3070247813015805e-11
-    [1] : Freq = 338.0666635506367   - Residual = 7.911817709574835e-11
-    [2] : Freq = 626.645098092703    - Residual = 1.4338816801861427e-11
-    [3] : Freq = 626.6450980927036   - Residual = 3.0909179798841926e-11
-    [4] : Freq = 928.2598500574526   - Residual = 1.5073029240215198e-11
-    [5] : Freq = 928.2598500574527   - Residual = 1.3866957267529915e-11
-    [6] : Freq = 1249.8421074363505  - Residual = 2.3330795208513303e-11
-    [7] : Freq = 1249.842107436351   - Residual = 1.3173155997875071e-11
-    [8] : Freq = 1423.9938909416678  - Residual = 3.8657651202757016e-10
-    [9] : Freq = 1423.9938909416703  - Residual = 1.2400348326967832e-09
+    [0] : Freq = 338.0666635506365   - Residual = 4.346462676948426e-11
+    [1] : Freq = 338.0666635506368   - Residual = 3.796127618800603e-11
+    [2] : Freq = 626.645098092703    - Residual = 1.1034506099824385e-11
+    [3] : Freq = 626.6450980927033   - Residual = 1.113799582706991e-11
+    [4] : Freq = 928.2598500574521   - Residual = 1.0206209210830457e-11
+    [5] : Freq = 928.2598500574524   - Residual = 1.140643969258827e-11
+    [6] : Freq = 1249.842107436351   - Residual = 2.0432836731658545e-11
+    [7] : Freq = 1249.8421074363519  - Residual = 1.3855179380600932e-11
+    [8] : Freq = 1423.993890941668   - Residual = 4.881572366212674e-10
+    [9] : Freq = 1423.9938909416699  - Residual = 1.2023335877336095e-09
 
 
 
@@ -427,7 +427,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.454 seconds)
+   **Total running time of the script:** ( 0 minutes  1.369 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_01-apdlmath-examples_eigen_solve.py:
