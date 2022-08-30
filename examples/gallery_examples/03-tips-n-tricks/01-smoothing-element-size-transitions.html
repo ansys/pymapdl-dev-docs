@@ -56,8 +56,9 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Using Inline Functions (Query)" href="03-using_inline_functions_and_Query.html" />
     <link rel="prev" title="Adding a New Gallery Example" href="00-example-template.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="en">
+<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+
+
   </head>
   
   
@@ -615,10 +616,12 @@ reduce this effect using a simple geometry.</p>
 <span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
-<span class="n">mapdl</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f63f7cd2eb0&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Product:             Ansys Mechanical Enterprise
+MAPDL Version:       21.2
+ansys.mapdl Version: 0.64.dev0
 </pre></div>
 </div>
 <section id="the-geometry-a-box">
@@ -694,16 +697,14 @@ shift the main location of the size transition to within the face of <code class
 <span class="k">for</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k</span></a> <span class="ow">in</span> <span class="p">[</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k2</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k3</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k6</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k7</span></a><span class="p">]:</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">kesize</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k</span></a><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">amesh</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span>
-    <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_axes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span>
-<span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_axes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img src="../../../_images/sphx_glr_01-smoothing-element-size-transitions_003.png" srcset="../../../_images/sphx_glr_01-smoothing-element-size-transitions_003.png" alt="01 smoothing element size transitions" class = "sphx-glr-single-img"/><p>stop mapdl</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.828 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.159 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-03-tips-n-tricks-01-smoothing-element-size-transitions-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/7cc1b8b4a4e49b62711eba9cc816edc6/01-smoothing-element-size-transitions.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">01-smoothing-element-size-transitions.py</span></code></a></p>

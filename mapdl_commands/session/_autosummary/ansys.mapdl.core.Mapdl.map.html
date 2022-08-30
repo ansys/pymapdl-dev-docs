@@ -56,8 +56,9 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="post1" href="ansys.mapdl.core.Mapdl.post1.html" />
     <link rel="prev" title="finish" href="ansys.mapdl.core.Mapdl.finish.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="en">
+<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+
+
   </head>
   
   
@@ -929,33 +930,28 @@
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kdim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.map" title="Permalink to this definition">#</a></dt>
 <dd><p>Maps pressures from source points to target surface elements.</p>
 <p>APDL Command: MAP</p>
-<dl class="field-list">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl>
-<dt><strong>kdim</strong></dt><dd><p>Interpolation key:</p>
-<p>0 or 2 - Interpolation is done on a surface (default).</p>
 <dl class="simple">
-<dt>3 - Interpolation is done within a volume. This option is</dt><dd><p>useful if the supplied source data is volumetric field
-data rather than surface data.</p>
+<dt>kdim</dt><dd><p>Interpolation key:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;0</span> <span class="pre">or</span> <span class="pre">2&quot;</span></code> : Interpolation is done on a surface (default).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;3&quot;</span></code> : Interpolation is done within a volume. This option
+is useful if the supplied source data is volumetric field
+data rather than surface data.</p></li>
+</ul>
 </dd>
-</dl>
-</dd>
-<dt><strong>kout</strong></dt><dd><p>Key to control how pressure is applied when a target node is
+<dt>kout</dt><dd><p>Key to control how pressure is applied when a target node is
 outside of the source region:</p>
-<dl class="simple">
-<dt>0 - Use the pressure(s) of the nearest source point for</dt><dd><p>target nodes outside of the region (default).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;0&quot;</span></code> : Use the pressure(s) of the nearest source point
+for target nodes outside of the region (default).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;1&quot;</span></code> : Set pressures outside of the region to zero.</p></li>
+</ul>
 </dd>
-</dl>
-<p>1 - Set pressures outside of the region to zero.</p>
-</dd>
-<dt><strong>limit</strong></dt><dd><p>Number of nearby points considered for interpolation. The
-minimum is 5; the default is 20. Lower values reduce
-processing time.  However, some distorted or irregular
-meshes will require a higher LIMIT value to find the
-points encompassing the target node in order to define the
-region for interpolation.</p>
-</dd>
-</dl>
+<dt>limit</dt><dd><p>Number of nearby points considered for interpolation. The minimum
+is 5; the default is 20. Lower values reduce processing
+time. However, some distorted or irregular meshes will require a
+higher <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code> value to find the points encompassing the target node
+in order to define the region for interpolation.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>

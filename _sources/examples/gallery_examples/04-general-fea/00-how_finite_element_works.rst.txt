@@ -1299,12 +1299,21 @@ Solve and permit one degree of freedom of each mode to be free per solution.
         mapdl.d(node_id, dof, 1)
         mapdl.solve()
 
-    _ = mapdl.finish()
+    mapdl.finish()
 
 
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+
+    FINISH SOLUTION PROCESSING
+
+
+     ***** ROUTINE COMPLETED *****  CP =         0.000
 
 
 
@@ -1495,7 +1504,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.061 seconds)
+   **Total running time of the script:** ( 0 minutes  1.212 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_04-general-fea_00-how_finite_element_works.py:

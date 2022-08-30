@@ -129,10 +129,10 @@ Write the mesh to a temporary file
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =     198.417   TIME= 04:40:35
+     *** NOTE ***                            CP =     219.225   TIME= 04:43:36
      There is no title defined for this analysis.                            
 
-     *** NOTE ***                            CP =     198.512   TIME= 04:40:35
+     *** NOTE ***                            CP =     219.326   TIME= 04:43:36
      No modes are being expanded (MXPAND command) and therefore the element  
      results will not be written to the mode file.  If you do not intend to  
      use mode selection and for more efficient calculation of element        
@@ -150,7 +150,7 @@ Write the mesh to a temporary file
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:40:35  AUG 29, 2022 CP=    198.536
+     00000000  VERSION=LINUX x64     04:43:36  AUG 30, 2022 CP=    219.353
 
                                                                                
 
@@ -169,15 +169,15 @@ Write the mesh to a temporary file
        SHIFT POINT . . . . . . . . . . . . . . . . . .  1.0000    
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** WARNING ***                         CP =     198.555   TIME= 04:40:35
+     *** WARNING ***                         CP =     219.377   TIME= 04:43:36
      No constraints have been defined using the D command.                   
 
-     *** NOTE ***                            CP =     198.555   TIME= 04:40:35
+     *** NOTE ***                            CP =     219.378   TIME= 04:43:36
      The step data was checked and warning messages were found.              
       Please review output or errors file ( /file.err ) for these warning    
      messages.                                                               
 
-     *** NOTE ***                            CP =     198.556   TIME= 04:40:35
+     *** NOTE ***                            CP =     219.378   TIME= 04:43:36
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -225,8 +225,8 @@ Write the mesh to a temporary file
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            4     10000  SHELL181      1.010   0.000101
-     Time at end of element matrix formulation CP = 199.832962.              
+            4     10000  SHELL181      1.123   0.000112
+     Time at end of element matrix formulation CP = 220.836258.              
 
       BLOCK LANCZOS CALCULATION OF UP TO    20 EIGENVECTORS.
       NUMBER OF EQUATIONS              =        61206
@@ -239,7 +239,7 @@ Write the mesh to a temporary file
       Memory required for in-core solution     =   178.612 MB
       Memory required for out-of-core solution =    60.617 MB
 
-     *** NOTE ***                            CP =     201.742   TIME= 04:40:38
+     *** NOTE ***                            CP =     222.955   TIME= 04:43:39
      The Sparse Matrix Solver used by the Block Lanczos eigensolver is       
      currently running in the in-core memory mode.  This memory mode uses    
      the most amount of memory in order to avoid using the hard drive as     
@@ -249,7 +249,7 @@ Write the mesh to a temporary file
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:40:39  AUG 29, 2022 CP=    204.990
+     00000000  VERSION=LINUX x64     04:43:41  AUG 30, 2022 CP=    226.699
 
                                                                                
 
@@ -288,7 +288,7 @@ Write the mesh to a temporary file
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:40:39  AUG 29, 2022 CP=    205.328
+     00000000  VERSION=LINUX x64     04:43:41  AUG 30, 2022 CP=    227.086
 
                                                                                
 
@@ -531,7 +531,7 @@ plot the 1st mode using contours
 
 Animate a high frequency mode
 
-Get a smoother plot by disabling movie_filename and increasing ``nangles``.
+Get a smoother plot by disabling movie_filename and increasing ``n_frames``.
 Enable a continuous plot looping with ```loop=True```.
 
 .. GENERATED FROM PYTHON SOURCE LINES 79-91
@@ -543,7 +543,7 @@ Enable a continuous plot looping with ```loop=True```.
         18,
         loop=False,
         add_text=False,
-        nangles=30,
+        n_frames=30,
         displacement_factor=0.4,
         show_axes=False,
         background="w",
@@ -563,8 +563,6 @@ Enable a continuous plot looping with ```loop=True```.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/ansys/mapdl/reader/rst.py:1055: UserWarning: The ``nangles`` kwarg is depreciated and ``n_frames`` should be used instead.
-      warnings.warn(
 
     [(1.5773502691896262, 1.5773502691896262, 1.5773502691896262),
      (0.0, 0.0, 0.0),
@@ -591,7 +589,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  12.650 seconds)
+   **Total running time of the script:** ( 0 minutes  13.909 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_pyvista_mesh.py:

@@ -57,8 +57,9 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Basic Thermal Analysis with pyMAPDL" href="3d_plate_thermal.html" />
     <link rel="prev" title="2D Pressure Vessel" href="2d_pressure_vessel.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="en">
+<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+
+
   </head>
   
   
@@ -699,7 +700,7 @@ notches in a finite width thin plate</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">vext</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cut_area</span></a><span class="p">,</span> <span class="n">dz</span><span class="o">=</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">thickness</span></a><span class="p">)</span>
 
 <span class="c1"># Checking volume plot</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">vplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_axes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">vplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_axes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="sphx-glr-horizontal">
@@ -748,9 +749,7 @@ lines nearby the hole and <code class="docutils literal notranslate"><span class
 <span class="n">mapdl</span><span class="o">.</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">esize</span></a><span class="p">()</span>  <span class="c1"># this is tough to automate</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;SOLID186&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">vsweep</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span>
-    <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_axes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span>
-<span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_axes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="sphx-glr-horizontal">
@@ -801,7 +800,7 @@ force of 1 kN in the positive X direction.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="s2">&quot;FX&quot;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 
 <span class="c1"># finally, be sure to select all nodes again to solve the entire solution</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">allsel</span><span class="p">(</span><span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">allsel</span><span class="p">(</span><span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -811,7 +810,7 @@ force of 1 kN in the positive X direction.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s2">&quot;STATIC&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">(</span><span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -1101,7 +1100,7 @@ height and width of the plate.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.128 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.099 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-3d-notch-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/e628f9b9260d87ddaecade20291524e5/3d_notch.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">3d_notch.py</span></code></a></p>

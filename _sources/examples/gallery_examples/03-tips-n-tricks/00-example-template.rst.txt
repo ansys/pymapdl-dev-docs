@@ -56,56 +56,20 @@ Where ``XY`` is the number of the example. If there are already three examples n
 
 After this preamble is complete, the first code block begins.
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-48
+.. GENERATED FROM PYTHON SOURCE LINES 40-51
 
 .. code-block:: default
 
 
-    # Your code goes here...
     from ansys.mapdl.core import launch_mapdl
 
-    # start MAPDL and enter the pre-processing routine
+    # start MAPDL
     mapdl = launch_mapdl()
-    mapdl
-
-
-
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-
-    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f63f7d0bd60>
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 49-61
-
-Section Title
-~~~~~~~~~~~~~
-Code blocks can be broken up with text "sections" which are interpreted as
-restructured text.
-
-This will also be translated into a markdown cell in the generated jupyter notebook.
-Sections can contain any information you may have regarding the example
-such as step-by-step comments or notes regarding motivations etc.
-
-As in jupyter notebooks, if code is left unassigned at the end of a code block
-(as with ``mapdl`` in the previous block) the output will be generated and
-printed to the screen according to its ``__repr__``.  Otherwise, you can use ``print()`` to output the ``__str__``.
-
-.. GENERATED FROM PYTHON SOURCE LINES 61-68
-
-.. code-block:: default
-
-
-    # more code...
-    mapdl.clear()
-    mapdl.prep7()
     print(mapdl)
-    mapdl
+
+    # Your code goes here...
+    # mapdl.prep7()
+    # mapdl...
 
 
 
@@ -120,18 +84,58 @@ printed to the screen according to its ``__repr__``.  Otherwise, you can use ``p
     ansys.mapdl Version: 0.64.dev0
 
 
-    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7f63f7d0bd60>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-73
+.. GENERATED FROM PYTHON SOURCE LINES 52-64
+
+Section Title
+~~~~~~~~~~~~~
+Code blocks can be broken up with text "sections" which are interpreted as
+restructured text.
+
+This will also be translated into a markdown cell in the generated jupyter notebook.
+Sections can contain any information you may have regarding the example
+such as step-by-step comments or notes regarding motivations etc.
+
+As in jupyter notebooks, if code is left unassigned at the end of a code block
+(as with ``mapdl`` in the previous block) the output will be generated and
+printed to the screen according to its ``__repr__``.  Otherwise, you can use ``print()`` to output the ``__str__``.
+
+.. GENERATED FROM PYTHON SOURCE LINES 64-70
+
+.. code-block:: default
+
+
+    # more code...
+    mapdl.clear()
+    mapdl.prep7()
+    print(mapdl)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    Product:             Ansys Mechanical Enterprise
+    MAPDL Version:       21.2
+    ansys.mapdl Version: 0.64.dev0
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 71-75
 
 Plots and images
 ~~~~~~~~~~~~~~~~
 If you use an mapdl plotting command the result will be auto-generated and
 rendered in the page. Like so:
 
-.. GENERATED FROM PYTHON SOURCE LINES 73-77
+.. GENERATED FROM PYTHON SOURCE LINES 75-79
 
 .. code-block:: default
 
@@ -151,13 +155,13 @@ rendered in the page. Like so:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-81
+.. GENERATED FROM PYTHON SOURCE LINES 80-83
 
 Further Plots and images
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Matplotlib plots will also be rendered in the html.
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-92
+.. GENERATED FROM PYTHON SOURCE LINES 83-95
 
 .. code-block:: default
 
@@ -171,6 +175,7 @@ Matplotlib plots will also be rendered in the html.
     ax.plot(x, y)
     ax.set_xlabel("x")
     ax.set_ylabel("y")
+    plt.show()
 
 
 
@@ -181,16 +186,10 @@ Matplotlib plots will also be rendered in the html.
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-
-    Text(38.347222222222214, 0.5, 'y')
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 93-107
+.. GENERATED FROM PYTHON SOURCE LINES 96-110
 
 Animations
 ~~~~~~~~~~
@@ -207,11 +206,11 @@ naming conventions found here: :ref:`contributing`.
 Note that you only need to create the python source example (.py).  The jupyter
 notebook, the example html and the demo script will all be auto-generated via ``sphinx-gallery``.
 
-.. GENERATED FROM PYTHON SOURCE LINES 109-110
+.. GENERATED FROM PYTHON SOURCE LINES 112-113
 
-stop mapdl
+Stopping mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-111
+.. GENERATED FROM PYTHON SOURCE LINES 113-114
 
 .. code-block:: default
 
@@ -226,7 +225,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.774 seconds)
+   **Total running time of the script:** ( 0 minutes  0.897 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_03-tips-n-tricks_00-example-template.py:
