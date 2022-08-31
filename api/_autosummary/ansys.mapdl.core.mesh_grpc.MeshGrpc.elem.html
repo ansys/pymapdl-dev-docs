@@ -275,11 +275,6 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html">
-       element_coord_system
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.save.html">
        save
       </a>
@@ -302,6 +297,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_components.html">
        element_components
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html">
+       element_coord_system
       </a>
      </li>
      <li class="toctree-l3">
@@ -332,6 +332,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.key_option.html">
        key_option
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.local.html">
+       local
       </a>
      </li>
      <li class="toctree-l3">
@@ -493,20 +498,6 @@ element.  The first 10 items are:</p>
 <li><p>FIELD 9 : base element number (applicable to reinforcing elements only)</p></li>
 <li><p>FIELDS 10 - 30 : The nodes belonging to the element in ANSYS numbering.</p></li>
 </ul>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">reader</span> <span class="k">as</span> <span class="n">pymapdl_reader</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.reader</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">archive</span> <span class="o">=</span> <span class="n">pymapdl_reader</span><span class="o">.</span><span class="n">Archive</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">hexarchivefile</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">archive</span><span class="o">.</span><span class="n">elem</span>
-<span class="go">[array([  1,   4,  19,  15,  63,  91, 286, 240,   3,  18,  17,</span>
-<span class="go">         16,  81, 276, 267, 258,  62,  90, 285, 239],</span>
-<span class="go"> array([  4,   2,   8,  19,  91,  44, 147, 286,   5,   7,  21,</span>
-<span class="go">         18, 109, 137, 313, 276,  90,  43, 146, 285],</span>
-<span class="go"> array([ 15,  19,  12,  10, 240, 286, 203, 175,  17,  20,  13,</span>
-<span class="go">         14, 267, 304, 221, 230, 239, 285, 202, 174],</span>
-<span class="gp">...</span>
-</pre></div>
-</div>
 </dd></dl>
 
 </section>

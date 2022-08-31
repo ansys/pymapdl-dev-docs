@@ -55,7 +55,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="n_elem" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.n_elem.html" />
-    <link rel="prev" title="key_option" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.key_option.html" />
+    <link rel="prev" title="local" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.local.html" />
 <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
 
 
@@ -275,11 +275,6 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html">
-       element_coord_system
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.save.html">
        save
       </a>
@@ -302,6 +297,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_components.html">
        element_components
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html">
+       element_coord_system
       </a>
      </li>
      <li class="toctree-l3">
@@ -332,6 +332,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.key_option.html">
        key_option
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.local.html">
+       local
       </a>
      </li>
      <li class="toctree-l3 current active">
@@ -478,16 +483,6 @@
 <dt class="sig sig-object py" id="ansys.mapdl.core.mesh_grpc.MeshGrpc.material_type">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">MeshGrpc.</span></span><span class="sig-name descname"><span class="pre">material_type</span></span><a class="headerlink" href="#ansys.mapdl.core.mesh_grpc.MeshGrpc.material_type" title="Permalink to this definition">#</a></dt>
 <dd><p>Material type index of each element in the archive.</p>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">reader</span> <span class="k">as</span> <span class="n">pymapdl_reader</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.reader</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">archive</span> <span class="o">=</span> <span class="n">pymapdl_reader</span><span class="o">.</span><span class="n">Archive</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">hexarchivefile</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">archive</span><span class="o">.</span><span class="n">material_type</span>
-<span class="go">array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,</span>
-<span class="go">       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,</span>
-<span class="go">       1, 1, 1, 1], dtype=int32)</span>
-</pre></div>
-</div>
 </dd></dl>
 
 </section>

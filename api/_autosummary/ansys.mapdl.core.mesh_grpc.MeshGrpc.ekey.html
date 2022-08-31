@@ -275,11 +275,6 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html">
-       element_coord_system
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.save.html">
        save
       </a>
@@ -302,6 +297,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_components.html">
        element_components
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html">
+       element_coord_system
       </a>
      </li>
      <li class="toctree-l3">
@@ -332,6 +332,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.key_option.html">
        key_option
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.local.html">
+       local
       </a>
      </li>
      <li class="toctree-l3">
@@ -480,17 +485,6 @@
 <dd><p>Element type key</p>
 <p>Array containing element type numbers in the first column and
 the element types (like SURF154) in the second column.</p>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">reader</span> <span class="k">as</span> <span class="n">pymapdl_reader</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.reader</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">archive</span> <span class="o">=</span> <span class="n">pymapdl_reader</span><span class="o">.</span><span class="n">Archive</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">hexarchivefile</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">archive</span><span class="o">.</span><span class="n">ekey</span>
-<span class="go">array([[  1,  45],</span>
-<span class="go">       [  2,  95],</span>
-<span class="go">       [  3,  92],</span>
-<span class="go">       [ 60, 154]], dtype=int32)</span>
-</pre></div>
-</div>
 </dd></dl>
 
 </section>

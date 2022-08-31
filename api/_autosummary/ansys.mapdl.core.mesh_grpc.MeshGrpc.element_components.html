@@ -54,7 +54,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="enum" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.enum.html" />
+    <link rel="next" title="element_coord_system" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html" />
     <link rel="prev" title="elem_real_constant" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.elem_real_constant.html" />
 <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
 
@@ -275,11 +275,6 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html">
-       element_coord_system
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.save.html">
        save
       </a>
@@ -302,6 +297,11 @@
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
        element_components
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html">
+       element_coord_system
       </a>
      </li>
      <li class="toctree-l3">
@@ -332,6 +332,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.key_option.html">
        key_option
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.local.html">
+       local
       </a>
      </li>
      <li class="toctree-l3">
@@ -481,18 +486,6 @@
 <p>Output is a dictionary of element components.  Each entry is an
 array of MAPDL element numbers corresponding to the element
 component.  The keys are element component names.</p>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">reader</span> <span class="k">as</span> <span class="n">pymapdl_reader</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.reader</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">archive</span> <span class="o">=</span> <span class="n">pymapdl_reader</span><span class="o">.</span><span class="n">Archive</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">hexarchivefile</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">archive</span><span class="o">.</span><span class="n">element_components</span>
-<span class="go">{&#39;ECOMP1 &#39;: array([17, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29,</span>
-<span class="go">                   30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],</span>
-<span class="go">                   dtype=int32),</span>
-<span class="go">&#39;ECOMP2 &#39;: array([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,</span>
-<span class="go">                  14, 15, 16, 17, 18, 19, 20, 23, 24], dtype=int32)}</span>
-</pre></div>
-</div>
 </dd></dl>
 
 </section>

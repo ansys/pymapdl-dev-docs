@@ -275,11 +275,6 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html">
-       element_coord_system
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.save.html">
        save
       </a>
@@ -302,6 +297,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_components.html">
        element_components
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html">
+       element_coord_system
       </a>
      </li>
      <li class="toctree-l3">
@@ -332,6 +332,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.key_option.html">
        key_option
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.local.html">
+       local
       </a>
      </li>
      <li class="toctree-l3">
@@ -481,25 +486,6 @@
 <p>Output is a dictionary of node components.  Each entry is an
 array of MAPDL node numbers corresponding to the node
 component.  The keys are node component names.</p>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">reader</span> <span class="k">as</span> <span class="n">pymapdl_reader</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.reader</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">archive</span> <span class="o">=</span> <span class="n">pymapdl_reader</span><span class="o">.</span><span class="n">Archive</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">hexarchivefile</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">archive</span><span class="o">.</span><span class="n">node_components</span>
-<span class="go">{&#39;NCOMP2  &#39;: array([  1,   2,   3,   4,   5,   6,   7,   8,</span>
-<span class="go">                     14, 15, 16, 17, 18, 19, 20, 21, 43, 44,</span>
-<span class="go">                     62, 63, 64, 81, 82, 90, 91, 92, 93, 94,</span>
-<span class="go">                     118, 119, 120, 121, 122, 123, 124, 125,</span>
-<span class="go">                     126, 137, 147, 148, 149, 150, 151, 152,</span>
-<span class="go">                     153, 165, 166, 167, 193, 194, 195, 202,</span>
-<span class="go">                     203, 204, 205, 206, 207, 221, 240, 258,</span>
-<span class="go">                     267, 268, 276, 277, 278, 285, 286, 287,</span>
-<span class="go">                     304, 305, 306, 313, 314, 315, 316</span>
-<span class="go">                     ], dtype=int32),</span>
-<span class="go">...,</span>
-<span class="go">}</span>
-</pre></div>
-</div>
 </dd></dl>
 
 </section>

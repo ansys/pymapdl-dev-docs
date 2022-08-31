@@ -275,11 +275,6 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html">
-       element_coord_system
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.save.html">
        save
       </a>
@@ -302,6 +297,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_components.html">
        element_components
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.element_coord_system.html">
+       element_coord_system
       </a>
      </li>
      <li class="toctree-l3">
@@ -332,6 +332,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.key_option.html">
        key_option
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.mapdl.core.mesh_grpc.MeshGrpc.local.html">
+       local
       </a>
      </li>
      <li class="toctree-l3">
@@ -483,20 +488,6 @@
 <p>Element types are listed below.  Please see the APDL Element
 Reference for more details:</p>
 <p><a class="reference external" href="https://www.mm.bme.hu/~gyebro/files/vem/ansys_14_element_reference.pdf">https://www.mm.bme.hu/~gyebro/files/vem/ansys_14_element_reference.pdf</a></p>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">reader</span> <span class="k">as</span> <span class="n">pymapdl_reader</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.reader</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">archive</span> <span class="o">=</span> <span class="n">pymapdl_reader</span><span class="o">.</span><span class="n">Archive</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">hexarchivefile</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">archive</span><span class="o">.</span><span class="n">etype</span>
-<span class="go">array([ 45,  45,  45,  45,  45,  45,  45,  45,  45,  45,  45,</span>
-<span class="go">        45,  45,  45,  45,  45,  45,  45,  45,  92,  92,  92,</span>
-<span class="go">        92,  92,  92,  92,  92,  92,  92,  92,  92,  92,  92,</span>
-<span class="go">        ...,</span>
-<span class="go">        92,  92,  92,  92,  92, 154, 154, 154, 154, 154, 154,</span>
-<span class="go">       154, 154, 154, 154, 154, 154, 154, 154, 154, 154, 154,</span>
-<span class="go">       154], dtype=int32)</span>
-</pre></div>
-</div>
 </dd></dl>
 
 </section>
