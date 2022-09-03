@@ -114,12 +114,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../api/index.html">
-  API Reference
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -138,8 +132,14 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../contributing.html">
-  Contributing
+ <a class="reference internal nav-link" href="../troubleshoot/index.html">
+  Troubleshooting
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../contribution_and_api/index.html">
+  Contributing and API
  </a>
 </li>
 
@@ -324,11 +324,6 @@
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#issues-when-importing-and-exporting-numpy-arrays-in-mapdl">
-   Issues when Importing and Exporting Numpy Arrays in MAPDL
-  </a>
- </li>
 </ul>
 
 </nav>
@@ -350,8 +345,8 @@
                 
   <section id="setting-and-retrieving-parameters">
 <span id="ref-parameters"></span><h1>Setting and Retrieving Parameters<a class="headerlink" href="#setting-and-retrieving-parameters" title="Permalink to this heading">#</a></h1>
-<p>APDL parameters can be retrieved from and instance of <a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> using the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a>.  For example, if you wish to use
-the MAPDL’s <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.get.html#ansys.mapdl.core.Mapdl.get" title="ansys.mapdl.core.Mapdl.get"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.get()</span></code></a> to
+<p>APDL parameters can be retrieved from and instance of <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> using the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a>.  For example, if you wish to use
+the MAPDL’s <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.get.html#ansys.mapdl.core.Mapdl.get" title="ansys.mapdl.core.Mapdl.get"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.get()</span></code></a> to
 populate a parameter, you can then access the parameter with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
@@ -360,7 +355,7 @@ populate a parameter, you can then access the parameter with:</p>
 </pre></div>
 </div>
 <p>You can also set both scalar and array parameters from python objects
-using <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a>
+using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a>
 with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;MY_ARRAY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;MY_ARRAY&#39;</span><span class="p">]</span>
@@ -373,7 +368,7 @@ with:</p>
 </pre></div>
 </div>
 <p>You can also access some built-in parameters normally accessed through
-the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.get.html#ansys.mapdl.core.Mapdl.get" title="ansys.mapdl.core.Mapdl.get"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.get()</span></code></a>.  For example,
+the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.get.html#ansys.mapdl.core.Mapdl.get" title="ansys.mapdl.core.Mapdl.get"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.get()</span></code></a>.  For example,
 instead of getting the current routine with <code class="docutils literal notranslate"><span class="pre">\*GET,</span> <span class="pre">ACTIVE,</span> <span class="pre">0,</span>
 <span class="pre">ROUT</span></code>, you can access it with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">routine</span>
@@ -381,7 +376,9 @@ instead of getting the current routine with <code class="docutils literal notran
 </pre></div>
 </div>
 <p>For a full listing of the methods and attributes available to the
-<code class="docutils literal notranslate"><span class="pre">Parameters</span></code> class, please reference the <a class="reference internal" href="../api/parameters.html#ref-parameters-api"><span class="std std-ref">Parameters</span></a>.</p>
+<code class="docutils literal notranslate"><span class="pre">Parameters</span></code> class, please reference the <a class="reference internal" href="../contribution_and_api/parameters.html#ref-parameters-api"><span class="std std-ref">Parameters</span></a>.</p>
+<p>Please visit <a class="reference internal" href="../troubleshoot/troubleshoot.html#ref-numpy-arrays-in-mapdl"><span class="std std-ref">Issues when Importing and Exporting Numpy Arrays in MAPDL</span></a> for further information about
+PyMAPDL array limitations.</p>
 <section id="specially-named-parameters">
 <span id="ref-special-named-param"></span><h2>Specially Named Parameters<a class="headerlink" href="#specially-named-parameters" title="Permalink to this heading">#</a></h2>
 <section id="leading-underscored-parameters">
@@ -397,7 +394,7 @@ to avoid PyMAPDL parameter name checks. For example</p>
 </pre></div>
 </div>
 <p>By default, this type of parameter cannot be seen when issuing
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a>.
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a>.
 However, you can change this by setting
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters.show_leading_underscore_parameters</span></code>
 equal to <code class="docutils literal notranslate"><span class="pre">True</span></code>.
@@ -419,7 +416,7 @@ For example:</p>
 and macros.
 You can set this type of parameter in PyMAPDL, but by default,
 they cannot be seen in
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a>, unless
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a>, unless
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters.show_trailing_underscore_parameters</span></code>
 is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;param_&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
@@ -436,7 +433,7 @@ is set to <code class="docutils literal notranslate"><span class="pre">True</spa
 </section>
 <section id="parameters-with-leading-and-trailing-underscore">
 <h3>Parameters with Leading and Trailing Underscore<a class="headerlink" href="#parameters-with-leading-and-trailing-underscore" title="Permalink to this heading">#</a></h3>
-<p>These are a special type of parameter. They <strong>CANNOT</strong> be seen in <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a> under any circumstances. Their use is not recommended.</p>
+<p>These are a special type of parameter. They <strong>CANNOT</strong> be seen in <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a> under any circumstances. Their use is not recommended.</p>
 <p>You can still retrieve them using any of the normal methods
 to retrieve parameters. But you need to know the parameter name.
 For example:</p>
@@ -449,53 +446,6 @@ For example:</p>
 </pre></div>
 </div>
 </section>
-</section>
-<section id="issues-when-importing-and-exporting-numpy-arrays-in-mapdl">
-<span id="ref-numpy-arrays-in-mapdl"></span><h2>Issues when Importing and Exporting Numpy Arrays in MAPDL<a class="headerlink" href="#issues-when-importing-and-exporting-numpy-arrays-in-mapdl" title="Permalink to this heading">#</a></h2>
-<p>Because of the way MAPDL is designed, there is no way to store an
-array where one or more dimension is zero.
-This can happens in Numpy arrays, where its first dimension can be
-set to zero.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">array40</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">(</span><span class="mi">4</span><span class="p">,))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">array40</span>
-<span class="go">array([1, 2, 3, 4])</span>
-</pre></div>
-</div>
-<p>These types of array dimensions will be always converted to <code class="docutils literal notranslate"><span class="pre">1</span></code>.
-For example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;mapdlarray40&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">array40</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;mapdlarray40&#39;</span><span class="p">]</span>
-<span class="go">array([[1.],</span>
-<span class="go">   [2.],</span>
-<span class="go">   [3.],</span>
-<span class="go">   [4.]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;mapdlarray40&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
-<span class="go">(4, 1)</span>
-</pre></div>
-</div>
-<p>This means that when you pass two arrays, one with the second axis equal
-to zero (e.g. <code class="docutils literal notranslate"><span class="pre">array40</span></code>) and another one with the second axis equal
-to one, if later retrieved, they will have the same
-shape.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">array41</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">array41</span>
-<span class="go">array([[1],</span>
-<span class="go">   [2],</span>
-<span class="go">   [3],</span>
-<span class="go">   [4]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;mapdlarray41&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">array41</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;mapdlarray41&#39;</span><span class="p">]</span>
-<span class="go">array([[1.],</span>
-<span class="go">   [2.],</span>
-<span class="go">   [3.],</span>
-<span class="go">   [4.]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;mapdlarray40&#39;</span><span class="p">],</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;mapdlarray41&#39;</span><span class="p">])</span>
-<span class="go">True</span>
-</pre></div>
-</div>
 </section>
 </section>
 

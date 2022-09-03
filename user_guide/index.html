@@ -114,12 +114,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../api/index.html">
-  API Reference
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -138,8 +132,14 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../contributing.html">
-  Contributing
+ <a class="reference internal nav-link" href="../troubleshoot/index.html">
+  Troubleshooting
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../contribution_and_api/index.html">
+  Contributing and API
  </a>
 </li>
 
@@ -310,13 +310,6 @@
     <a class="reference internal nav-link" href="#calling-mapdl-pythonically">
      Calling MAPDL Pythonically
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#remote-stability-considerations">
-       Remote Stability Considerations
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -347,15 +340,15 @@ PyMAPDL library.</p>
 </div>
 <section id="pymapdl-basic-overview">
 <h2>PyMAPDL Basic Overview<a class="headerlink" href="#pymapdl-basic-overview" title="Permalink to this heading">#</a></h2>
-<p>The <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> function
+<p>The <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> function
 within the <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> library creates an instance of of
-<a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> in the background and sends
+<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> in the background and sends
 commands to that service.  Errors and warnings are processed
 Pythonically letting the user develop a script real-time without
 worrying about if it will function correctly when deployed in batch
 mode.</p>
 <p>MAPDL can be started from python in gRPC mode using
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>.  This starts
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>.  This starts
 MAPDL in a temporary directory by default.  You can change this to
 your current directory with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -401,7 +394,7 @@ example, if you input an invalid command:</p>
 you can write your MAPDL scripts in python, run them interactively and
 then as a batch without worrying if the script will run correctly if
 you had instead outputted it to a script file.</p>
-<p>The <a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class supports much more
+<p>The <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class supports much more
 than just sending text to MAPDL and includes higher level wrapping
 allowing for better scripting and interaction with MAPDL.  See the
 <a class="reference internal" href="../examples/index.html#ref-examples"><span class="std std-ref">Examples</span></a> for an overview of the various advanced
@@ -409,7 +402,7 @@ methods to visualize, script, and interact with MAPDL.</p>
 <section id="calling-mapdl-pythonically">
 <h3>Calling MAPDL Pythonically<a class="headerlink" href="#calling-mapdl-pythonically" title="Permalink to this heading">#</a></h3>
 <p>MAPDL functions can be called directly from an instance of
-<a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> in a pythonic manner.  This is
+<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> in a pythonic manner.  This is
 to simplify calling ANSYS, especially when inputs are variables within
 Python.  For example, the following two commands are equivalent:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -460,7 +453,7 @@ area creation example, we can instead run:</p>
 </pre></div>
 </div>
 <p>This approach has some obvious advantages, chiefly that it’s a bit
-easier to script as <a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>
+easier to script as <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>
 takes care of the string formatting for you.  For example, inputting
 points from a numpy array:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -512,33 +505,7 @@ within it.  For example:</p>
 <span class="go">    recommended.</span>
 </pre></div>
 </div>
-<section id="remote-stability-considerations">
-<h4>Remote Stability Considerations<a class="headerlink" href="#remote-stability-considerations" title="Permalink to this heading">#</a></h4>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only valid for instances of MAPDL launched in 2021R1 or
-newer launching with <code class="docutils literal notranslate"><span class="pre">mode=grpc</span></code> (default).</p>
-</div>
-<p>When connecting to a remote instance of MAPDL, there are some cases
-where the MAPDL server will exit unexpectedly.  These issues are being
-corrected and will be solved in 2021R2, but for the time being, there
-are several ways to improve performance and stability of MADPL:</p>
-<ul class="simple">
-<li><p>When possible, pass <code class="docutils literal notranslate"><span class="pre">mute=True</span></code> to individual MAPDL commands or
-set it globally with <a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl_grpc.MapdlGrpc" title="ansys.mapdl.core.mapdl_grpc.MapdlGrpc"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.mute</span></code></a>.  This disables streaming
-back the response from MAPDL for each command and will marginally
-improve performance and stability.  Consider having a debug flag in
-your program or script so you can enable or disable logging and
-verbosity when needed.</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>MAPDL 2021R1 has a stability issue with <a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.input.html#ansys.mapdl.core.Mapdl.input" title="ansys.mapdl.core.Mapdl.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.input()</span></code></a>.  Avoid using input files if
-possible.  Attempt to <code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.upload()</span></code> nodes and elements and read them
-in via <a class="reference internal" href="../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.nread.html#ansys.mapdl.core.Mapdl.nread" title="ansys.mapdl.core.Mapdl.nread"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.nread()</span></code></a> and
-<a class="reference internal" href="../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.eread.html#ansys.mapdl.core.Mapdl.eread" title="ansys.mapdl.core.Mapdl.eread"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.eread()</span></code></a>.</p>
-</div>
-</section>
+<p>Visit <a class="reference internal" href="../troubleshoot/troubleshoot.html#ref-pymapdl-stability"><span class="std std-ref">PyMAPDL Stability</span></a> for stability considerations.</p>
 </section>
 </section>
 </section>

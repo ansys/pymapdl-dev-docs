@@ -115,12 +115,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../api/index.html">
-  API Reference
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -139,8 +133,14 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contributing.html">
-  Contributing
+ <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
+  Troubleshooting
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
+  Contributing and API
  </a>
 </li>
 
@@ -922,7 +922,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 <h2>Getting Displacements<a class="headerlink" href="#getting-displacements" title="Permalink to this heading">#</a></h2>
 <p>Using <a class="reference internal" href="../../../mapdl_commands/post1/_autosummary/ansys.mapdl.core.Mapdl.etable.html#ansys.mapdl.core.Mapdl.etable" title="ansys.mapdl.core.Mapdl.etable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.etable</span></code></a> get the results of
 the the maximum tensile and compressive bending stresses in
-an unsymmetric <cite>T-beam</cite> with <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.Mapdl.get_value.html#ansys.mapdl.core.Mapdl.get_value" title="ansys.mapdl.core.Mapdl.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.get_value</span></code></a>.</p>
+an unsymmetric <cite>T-beam</cite> with <a class="reference internal" href="../../../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.get_value.html#ansys.mapdl.core.Mapdl.get_value" title="ansys.mapdl.core.Mapdl.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.get_value</span></code></a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Create a table of element values for BEAM188.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">etable</span><span class="p">(</span><span class="n">lab</span><span class="o">=</span><span class="s2">&quot;STRS_B&quot;</span><span class="p">,</span> <span class="n">item</span><span class="o">=</span><span class="s2">&quot;LS&quot;</span><span class="p">,</span> <span class="n">comp</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">etable</span><span class="p">(</span><span class="n">lab</span><span class="o">=</span><span class="s2">&quot;STRS_T&quot;</span><span class="p">,</span> <span class="n">item</span><span class="o">=</span><span class="s2">&quot;LS&quot;</span><span class="p">,</span> <span class="n">comp</span><span class="o">=</span><span class="mi">31</span><span class="p">)</span>
@@ -1023,7 +1023,7 @@ with following settings below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.659 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.570 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-010-bending-of-a-t-shaped-beam-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/b61d12b23033b8d997af8ad748a0ab72/vm-010-bending_of_a_t-shaped_beam.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-010-bending_of_a_t-shaped_beam.py</span></code></a></p>

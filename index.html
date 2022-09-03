@@ -113,12 +113,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="api/index.html">
-  API Reference
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -137,8 +131,14 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="contributing.html">
-  Contributing
+ <a class="reference internal nav-link" href="troubleshoot/index.html">
+  Troubleshooting
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="contribution_and_api/index.html">
+  Contributing and API
  </a>
 </li>
 
@@ -361,7 +361,7 @@ stored to the logging module or can be immediately printed out with
 <code class="docutils literal notranslate"><span class="pre">print(mapdl.run)</span></code>.  Errors are caught immediately and pythonically.</p>
 <section id="calling-mapdl-pythonically">
 <h3>Calling MAPDL Pythonically<a class="headerlink" href="#calling-mapdl-pythonically" title="Permalink to this heading">#</a></h3>
-<p>MAPDL functions can be called directly from an <a class="reference internal" href="api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> instance in a pythonic manner.  This is to
+<p>MAPDL functions can be called directly from an <a class="reference internal" href="contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> instance in a pythonic manner.  This is to
 simplify calling MAPDL, especially when inputs are variables within
 Python.  For example, the following two commands are equivalent:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>

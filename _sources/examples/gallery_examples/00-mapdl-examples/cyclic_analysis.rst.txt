@@ -279,16 +279,16 @@ Let's get the first 10 modes. Note that this will actually compute
 
  .. code-block:: none
 
-    *** NOTE ***                            CP =      81.961   TIME= 04:38:04
+    *** NOTE ***                            CP =      67.186   TIME= 04:30:27
      There is no title defined for this analysis.                            
 
-     *** WARNING ***                         CP =      81.976   TIME= 04:38:04
+     *** WARNING ***                         CP =      67.199   TIME= 04:30:27
      No constraints have been defined using the D command.                   
 
      GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS 
 
-     *** WARNING ***                         CP =      82.003   TIME= 04:38:04
-     There is no high edge node in a position to match low edge node 2545    
+     *** WARNING ***                         CP =      67.222   TIME= 04:30:27
+     There is no high edge node in a position to match low edge node 2515    
      (location error = 4.55E-04, maximum for all nodes).  Cyclic symmetry    
      constraint equations will be generated between the sector edges using   
      a mapping procedure similar to the CEINTF command.  This may reduce     
@@ -308,7 +308,7 @@ Let's get the first 10 modes. Note that this will actually compute
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:38:04  SEP 02, 2022 CP=     82.020
+     00000000  VERSION=LINUX x64     04:30:27  SEP 03, 2022 CP=     67.235
 
                                                                                
 
@@ -331,7 +331,7 @@ Let's get the first 10 modes. Note that this will actually compute
        NUMBER OF MODES TO EXPAND . . . . . . . . . . .    10
        ELEMENT RESULTS CALCULATION . . . . . . . . . .OFF
 
-     *** NOTE ***                            CP =      82.026   TIME= 04:38:04
+     *** NOTE ***                            CP =      67.240   TIME= 04:30:27
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -359,8 +359,8 @@ Let's get the first 10 modes. Note that this will actually compute
       YC =  0.12186E-01      IYY =   0.1533E-04      IYY =   0.2994E-05
       ZC =  0.15000E-02      IZZ =   0.1891E-04      IZZ =   0.3759E-05
                              IXY =  -0.7303E-05      IXY =  -0.1381E-05
-                             IYZ =  -0.3510E-06      IYZ =   0.1423E-19
-                             IZX =  -0.7289E-06      IZX =   0.2470E-19
+                             IYZ =  -0.3510E-06      IYZ =   0.1389E-19
+                             IZX =  -0.7290E-06      IZX =   0.2523E-19
 
 
       *** MASS SUMMARY BY ELEMENT TYPE ***
@@ -369,27 +369,27 @@ Let's get the first 10 modes. Note that this will actually compute
          1  0.192050E-01
 
      Range of element maximum matrix coefficients in global coordinates
-     Maximum = 267009240 at element 2656.                                    
-     Minimum = 160766982 at element 2626.                                    
+     Maximum = 266915922 at element 2608.                                    
+     Minimum = 162779585 at element 2500.                                    
 
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1      2658  SOLID186      0.990   0.000372
-     Time at end of element matrix formulation CP = 82.7253799.              
+            1      2628  SOLID186      0.671   0.000255
+     Time at end of element matrix formulation CP = 67.7467728.              
 
       BLOCK LANCZOS CALCULATION OF UP TO    10 EIGENVECTORS.
-      NUMBER OF EQUATIONS              =        21460
-      MAXIMUM WAVEFRONT                =          264
+      NUMBER OF EQUATIONS              =        21235
+      MAXIMUM WAVEFRONT                =          294
       MAXIMUM MODES STORED             =           10
       MINIMUM EIGENVALUE               =  0.10000E+01
       MAXIMUM EIGENVALUE               =  0.10000E+31
 
-      Memory allocated for solver              =   123.417 MB
-      Memory required for in-core solution     =   117.621 MB
-      Memory required for out-of-core solution =    43.984 MB
+      Memory allocated for solver              =   120.676 MB
+      Memory required for in-core solution     =   115.009 MB
+      Memory required for out-of-core solution =    43.291 MB
 
-     *** NOTE ***                            CP =      84.070   TIME= 04:38:05
+     *** NOTE ***                            CP =      69.034   TIME= 04:30:28
      The Sparse Matrix Solver used by the Block Lanczos eigensolver is       
      currently running in the in-core memory mode.  This memory mode uses    
      the most amount of memory in order to avoid using the hard drive as     
@@ -399,7 +399,7 @@ Let's get the first 10 modes. Note that this will actually compute
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:38:06  SEP 02, 2022 CP=     85.644
+     00000000  VERSION=LINUX x64     04:30:29  SEP 03, 2022 CP=     70.344
 
                                                                                
 
@@ -415,47 +415,47 @@ Let's get the first 10 modes. Note that this will actually compute
 
        FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-        1     1754.771705363    
-        2     9255.308287491    
-        3     10975.85410471    
-        4     11515.65920259    
-        5     21840.29378113    
-        6     26924.90029279    
-        7     33190.68468434    
-        8     34449.50204189    
-        9     38316.64108987    
-       10     56181.27843156    
+        1     1754.791688278    
+        2     9255.393201193    
+        3     10975.87812195    
+        4     11515.67505660    
+        5     21840.50742877    
+        6     26925.16402108    
+        7     33190.75878858    
+        8     34449.58645116    
+        9     38317.00896922    
+       10     56181.41200016    
 
 
       ***** PARTICIPATION FACTOR AND MODAL MASS CALCULATION *****   HARMONIC INDEX=    0
 
      GLOBAL                GLOBAL      PARTICIPATION
       MODE   FREQUENCY    DIRECTION       FACTOR      EFFECTIVE MASS   MODAL MASS
-         1   1754.77         UZ         0.20521E-09     0.42111E-19      7.0000    
-                           ROTZ         0.31994E-11     0.10236E-22
-         2   9255.31         UZ         0.25034E-08     0.62673E-17      7.0000    
-                           ROTZ         0.40596E-10     0.16480E-20
-         3   10975.9         UZ         0.93373E-08     0.87185E-16      7.0000    
-                           ROTZ        -0.12511E-11     0.15652E-23
-         4   11515.7         UZ        -0.69872E-08     0.48821E-16      7.0000    
-                           ROTZ         0.11513E-09     0.13255E-19
-         5   21840.3         UZ         0.10909E-07     0.11901E-15      7.0000    
-                           ROTZ         0.27170E-09     0.73822E-19
-         6   26924.9         UZ         0.10323E-07     0.10657E-15      7.0000    
-                           ROTZ         0.14090E-09     0.19851E-19
-         7   33190.7         UZ        -0.28883E-08     0.83422E-17      7.0000    
-                           ROTZ        -0.28158E-10     0.79289E-21
-         8   34449.5         UZ         0.55438E-09     0.30734E-18      7.0000    
-                           ROTZ         0.11409E-10     0.13016E-21
-         9   38316.6         UZ        -0.23092E-08     0.53322E-17      7.0000    
-                           ROTZ        -0.44733E-10     0.20010E-20
-        10   56181.3         UZ         0.57604E-09     0.33183E-18      7.0000    
-                           ROTZ         0.67709E-11     0.45845E-22
+         1   1754.79         UZ         0.31113E-10     0.96805E-21      7.0000    
+                           ROTZ        -0.68143E-12     0.46434E-24
+         2   9255.39         UZ         0.53777E-09     0.28919E-18      7.0000    
+                           ROTZ         0.58682E-10     0.34436E-20
+         3   10975.9         UZ        -0.54620E-08     0.29833E-16      7.0000    
+                           ROTZ        -0.10599E-09     0.11234E-19
+         4   11515.7         UZ         0.39125E-08     0.15307E-16      7.0000    
+                           ROTZ        -0.35406E-10     0.12536E-20
+         5   21840.5         UZ        -0.31517E-08     0.99332E-17      7.0000    
+                           ROTZ         0.80530E-10     0.64851E-20
+         6   26925.2         UZ        -0.13334E-08     0.17780E-17      7.0000    
+                           ROTZ         0.62639E-10     0.39237E-20
+         7   33190.8         UZ        -0.49005E-09     0.24015E-18      7.0000    
+                           ROTZ        -0.20946E-10     0.43873E-21
+         8   34449.6         UZ         0.80040E-09     0.64064E-18      7.0000    
+                           ROTZ        -0.92344E-11     0.85273E-22
+         9   38317.0         UZ         0.63991E-09     0.40948E-18      7.0000    
+                           ROTZ        -0.12476E-10     0.15565E-21
+        10   56181.4         UZ         0.45566E-09     0.20762E-18      7.0000    
+                           ROTZ        -0.12925E-10     0.16705E-21
 
 
      *** ANSYS BINARY FILE STATISTICS
       BUFFER SIZE USED= 16384
-           32.688 MB WRITTEN ON ASSEMBLED MATRIX FILE: file.full
+           32.312 MB WRITTEN ON ASSEMBLED MATRIX FILE: file.full
             2.062 MB WRITTEN ON MODAL MATRIX FILE: file.mode
             1.125 MB WRITTEN ON RESULTS FILE: file.rst
 
@@ -468,7 +468,7 @@ Let's get the first 10 modes. Note that this will actually compute
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:38:06  SEP 02, 2022 CP=     85.796
+     00000000  VERSION=LINUX x64     04:30:29  SEP 03, 2022 CP=     70.470
 
                                                                                
 
@@ -487,17 +487,17 @@ Let's get the first 10 modes. Note that this will actually compute
 
 
       BLOCK LANCZOS CALCULATION OF UP TO    10 EIGENVECTORS.
-      NUMBER OF EQUATIONS              =        42920
-      MAXIMUM WAVEFRONT                =          348
+      NUMBER OF EQUATIONS              =        42470
+      MAXIMUM WAVEFRONT                =          384
       MAXIMUM MODES STORED             =           10
       MINIMUM EIGENVALUE               =  0.10000E+01
       MAXIMUM EIGENVALUE               =  0.10000E+31
 
-      Memory allocated for solver              =   262.675 MB
-      Memory required for in-core solution     =   250.330 MB
-      Memory required for out-of-core solution =    88.086 MB
+      Memory allocated for solver              =   258.548 MB
+      Memory required for in-core solution     =   246.396 MB
+      Memory required for out-of-core solution =    85.844 MB
 
-     *** NOTE ***                            CP =      88.372   TIME= 04:38:08
+     *** NOTE ***                            CP =      72.811   TIME= 04:30:30
      The Sparse Matrix Solver used by the Block Lanczos eigensolver is       
      currently running in the in-core memory mode.  This memory mode uses    
      the most amount of memory in order to avoid using the hard drive as     
@@ -505,9 +505,9 @@ Let's get the first 10 modes. Note that this will actually compute
      time.  This mode is recommended if enough physical memory is present    
      to accommodate all of the solver data.                                  
 
-     *** WARNING ***                         CP =      89.616   TIME= 04:38:08
+     *** WARNING ***                         CP =      73.707   TIME= 04:30:31
      The eigenproblem is ill-conditioned (relative residual from test linear 
-     solve: 1.198990E-03).  The accuracy of the solution may not be          
+     solve: 1.041251E-03).  The accuracy of the solution may not be          
      satisfactory.  Modifying the initial value of the frequency shift       
      (FREQB in the MODOPT command) or changing the boundary conditions of    
      the model might solve the problem.                                      
@@ -515,7 +515,7 @@ Let's get the first 10 modes. Note that this will actually compute
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:38:09  SEP 02, 2022 CP=     91.973
+     00000000  VERSION=LINUX x64     04:30:32  SEP 03, 2022 CP=     75.352
 
                                                                                
 
@@ -531,62 +531,62 @@ Let's get the first 10 modes. Note that this will actually compute
 
        FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-        1     4016.678977760    
-        2     4016.679025425    
-        3     4064.701844478    
-        4     4064.701853367    
-        5     10313.63508372    
-        6     10313.63514787    
-        7     14213.05725322    
-        8     14213.05727598    
-        9     19292.87800453    
-       10     19292.87831033    
+        1     4016.683045412    
+        2     4016.683050393    
+        3     4064.737842262    
+        4     4064.737853802    
+        5     10313.66920225    
+        6     10313.66921919    
+        7     14213.07119908    
+        8     14213.07124998    
+        9     19293.02898702    
+       10     19293.02904692    
 
 
       ***** PARTICIPATION FACTOR AND MODAL MASS CALCULATION *****   HARMONIC INDEX=    1
 
      GLOBAL                GLOBAL      PARTICIPATION
       MODE   FREQUENCY    DIRECTION       FACTOR      EFFECTIVE MASS   MODAL MASS
-        11   4016.68         UX         0.16858E-05     0.28419E-11      3.5000    
-                             UY        -0.13163E-06     0.17325E-13
-                           ROTX         0.12357E-03     0.15269E-07
-                           ROTY        -0.11691E-03     0.13668E-07
-        12   4016.68         UX        -0.12580E-06     0.15826E-13      3.5000    
-                             UY        -0.16736E-05     0.28009E-11
-                           ROTX        -0.11691E-03     0.13668E-07
-                           ROTY        -0.12357E-03     0.15269E-07
-        13   4064.70         UX        -0.10134E-01     0.10271E-03      3.5000    
-                             UY         0.11878         0.14108E-01
-                           ROTX        -0.17817E-03     0.31746E-07
-                           ROTY        -0.15195E-04     0.23090E-09
-        14   4064.70         UX        -0.11878         0.14108E-01      3.5000    
-                             UY        -0.10134E-01     0.10271E-03
-                           ROTX         0.15195E-04     0.23090E-09
-                           ROTY        -0.17817E-03     0.31746E-07
-        15   10313.6         UX        -0.96894E-06     0.93884E-12      3.5000    
-                             UY        -0.22231E-06     0.49422E-13
-                           ROTX        -0.48657E-03     0.23675E-06
-                           ROTY         0.23217E-03     0.53903E-07
-        16   10313.6         UX         0.22183E-06     0.49208E-13      3.5000    
-                             UY        -0.96870E-06     0.93838E-12
-                           ROTX        -0.23217E-03     0.53903E-07
-                           ROTY        -0.48657E-03     0.23675E-06
-        17   14213.1         UX        -0.17908E-05     0.32069E-11      3.5000    
-                             UY         0.19071E-05     0.36370E-11
-                           ROTX         0.12005E-04     0.14413E-09
-                           ROTY        -0.17719E-03     0.31396E-07
-        18   14213.1         UX        -0.19062E-05     0.36336E-11      3.5000    
-                             UY        -0.17882E-05     0.31976E-11
-                           ROTX         0.17719E-03     0.31396E-07
-                           ROTY         0.12005E-04     0.14413E-09
-        19   19292.9         UX         0.79239E-01     0.62788E-02      3.5000    
-                             UY        -0.53442E-01     0.28560E-02
-                           ROTX         0.80168E-04     0.64269E-08
-                           ROTY         0.11886E-03     0.14127E-07
-        20   19292.9         UX        -0.53442E-01     0.28560E-02      3.5000    
-                             UY        -0.79239E-01     0.62788E-02
-                           ROTX         0.11886E-03     0.14127E-07
-                           ROTY        -0.80168E-04     0.64269E-08
+        11   4016.68         UX         0.25150E-06     0.63253E-13      3.5000    
+                             UY         0.16740E-05     0.28024E-11
+                           ROTX        -0.12310E-03     0.15154E-07
+                           ROTY        -0.11741E-03     0.13785E-07
+        12   4016.68         UX        -0.16666E-05     0.27777E-11      3.5000    
+                             UY         0.24960E-06     0.62298E-13
+                           ROTX         0.11741E-03     0.13785E-07
+                           ROTY        -0.12310E-03     0.15154E-07
+        13   4064.74         UX         0.69108E-01     0.47758E-02      3.5000    
+                             UY         0.97134E-01     0.94350E-02
+                           ROTX        -0.14570E-03     0.21229E-07
+                           ROTY         0.10365E-03     0.10744E-07
+        14   4064.74         UX        -0.97134E-01     0.94350E-02      3.5000    
+                             UY         0.69108E-01     0.47758E-02
+                           ROTX        -0.10365E-03     0.10744E-07
+                           ROTY        -0.14570E-03     0.21229E-07
+        15   10313.7         UX         0.85988E-06     0.73939E-12      3.5000    
+                             UY        -0.49718E-06     0.24719E-12
+                           ROTX        -0.19752E-03     0.39016E-07
+                           ROTY         0.50164E-03     0.25164E-06
+        16   10313.7         UX        -0.49656E-06     0.24657E-12      3.5000    
+                             UY        -0.86021E-06     0.73997E-12
+                           ROTX         0.50164E-03     0.25164E-06
+                           ROTY         0.19752E-03     0.39016E-07
+        17   14213.1         UX        -0.20706E-06     0.42872E-13      3.5000    
+                             UY        -0.26059E-05     0.67906E-11
+                           ROTX        -0.12331E-03     0.15204E-07
+                           ROTY        -0.12781E-03     0.16336E-07
+        18   14213.1         UX         0.26052E-05     0.67870E-11      3.5000    
+                             UY        -0.20607E-06     0.42465E-13
+                           ROTX         0.12781E-03     0.16336E-07
+                           ROTY        -0.12331E-03     0.15204E-07
+        19   19293.0         UX         0.66407E-01     0.44099E-02      3.5000    
+                             UY        -0.68738E-01     0.47249E-02
+                           ROTX         0.10310E-03     0.10630E-07
+                           ROTY         0.99611E-04     0.99224E-08
+        20   19293.0         UX        -0.68738E-01     0.47249E-02      3.5000    
+                             UY        -0.66407E-01     0.44099E-02
+                           ROTX         0.99611E-04     0.99224E-08
+                           ROTY        -0.10310E-03     0.10630E-07
 
      GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS 
 
@@ -597,7 +597,7 @@ Let's get the first 10 modes. Note that this will actually compute
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:38:09  SEP 02, 2022 CP=     92.115
+     00000000  VERSION=LINUX x64     04:30:32  SEP 03, 2022 CP=     75.465
 
                                                                                
 
@@ -616,17 +616,17 @@ Let's get the first 10 modes. Note that this will actually compute
 
 
       BLOCK LANCZOS CALCULATION OF UP TO    10 EIGENVECTORS.
-      NUMBER OF EQUATIONS              =        42906
-      MAXIMUM WAVEFRONT                =          333
+      NUMBER OF EQUATIONS              =        42456
+      MAXIMUM WAVEFRONT                =          384
       MAXIMUM MODES STORED             =           10
       MINIMUM EIGENVALUE               =  0.10000E+01
       MAXIMUM EIGENVALUE               =  0.10000E+31
 
-      Memory allocated for solver              =   263.503 MB
-      Memory required for in-core solution     =   251.119 MB
-      Memory required for out-of-core solution =    88.283 MB
+      Memory allocated for solver              =   262.012 MB
+      Memory required for in-core solution     =   249.696 MB
+      Memory required for out-of-core solution =    87.269 MB
 
-     *** NOTE ***                            CP =      94.641   TIME= 04:38:11
+     *** NOTE ***                            CP =      77.703   TIME= 04:30:33
      The Sparse Matrix Solver used by the Block Lanczos eigensolver is       
      currently running in the in-core memory mode.  This memory mode uses    
      the most amount of memory in order to avoid using the hard drive as     
@@ -636,7 +636,7 @@ Let's get the first 10 modes. Note that this will actually compute
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:38:12  SEP 02, 2022 CP=     97.448
+     00000000  VERSION=LINUX x64     04:30:34  SEP 03, 2022 CP=     80.028
 
                                                                                
 
@@ -652,31 +652,31 @@ Let's get the first 10 modes. Note that this will actually compute
 
        FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-        1     1057.619328542    
-        2     1057.619328566    
-        3     3380.530621119    
-        4     3380.530621126    
-        5     6319.874142949    
-        6     6319.874142952    
-        7     10091.65459692    
-        8     10091.65459693    
-        9     18041.41473794    
-       10     18041.41473794    
+        1     1057.627660216    
+        2     1057.627660289    
+        3     3380.551787118    
+        4     3380.551787120    
+        5     6319.916392201    
+        6     6319.916392203    
+        7     10091.69582739    
+        8     10091.69582740    
+        9     18041.48697678    
+       10     18041.48697678    
 
 
        ***** MODAL MASS CALCULATION *****   HARMONIC INDEX=    2
 
       MODE   FREQUENCY       MODAL MASS
-        21   1057.62           3.5000    
-        22   1057.62           3.5000    
-        23   3380.53           3.5000    
-        24   3380.53           3.5000    
-        25   6319.87           3.5000    
-        26   6319.87           3.5000    
+        21   1057.63           3.5000    
+        22   1057.63           3.5000    
+        23   3380.55           3.5000    
+        24   3380.55           3.5000    
+        25   6319.92           3.5000    
+        26   6319.92           3.5000    
         27   10091.7           3.5000    
         28   10091.7           3.5000    
-        29   18041.4           3.5000    
-        30   18041.4           3.5000    
+        29   18041.5           3.5000    
+        30   18041.5           3.5000    
 
      GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS 
 
@@ -687,7 +687,7 @@ Let's get the first 10 modes. Note that this will actually compute
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:38:13  SEP 02, 2022 CP=     97.507
+     00000000  VERSION=LINUX x64     04:30:34  SEP 03, 2022 CP=     80.079
 
                                                                                
 
@@ -706,17 +706,17 @@ Let's get the first 10 modes. Note that this will actually compute
 
 
       BLOCK LANCZOS CALCULATION OF UP TO    10 EIGENVECTORS.
-      NUMBER OF EQUATIONS              =        42906
-      MAXIMUM WAVEFRONT                =          333
+      NUMBER OF EQUATIONS              =        42456
+      MAXIMUM WAVEFRONT                =          384
       MAXIMUM MODES STORED             =           10
       MINIMUM EIGENVALUE               =  0.10000E+01
       MAXIMUM EIGENVALUE               =  0.10000E+31
 
-      Memory allocated for solver              =   263.503 MB
-      Memory required for in-core solution     =   251.119 MB
-      Memory required for out-of-core solution =    88.283 MB
+      Memory allocated for solver              =   262.012 MB
+      Memory required for in-core solution     =   249.696 MB
+      Memory required for out-of-core solution =    87.269 MB
 
-     *** NOTE ***                            CP =     100.110   TIME= 04:38:14
+     *** NOTE ***                            CP =      82.320   TIME= 04:30:36
      The Sparse Matrix Solver used by the Block Lanczos eigensolver is       
      currently running in the in-core memory mode.  This memory mode uses    
      the most amount of memory in order to avoid using the hard drive as     
@@ -726,7 +726,7 @@ Let's get the first 10 modes. Note that this will actually compute
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:38:16  SEP 02, 2022 CP=    103.007
+     00000000  VERSION=LINUX x64     04:30:37  SEP 03, 2022 CP=     84.644
 
                                                                                
 
@@ -742,16 +742,16 @@ Let's get the first 10 modes. Note that this will actually compute
 
        FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-        1     1193.646581139    
-        2     1193.646581159    
-        3     3319.531421335    
-        4     3319.531421346    
-        5     7336.371613694    
-        6     7336.371613696    
-        7     9979.948398079    
-        8     9979.948398086    
-        9     19188.40690290    
-       10     19188.40690290    
+        1     1193.652629299    
+        2     1193.652629370    
+        3     3319.553821207    
+        4     3319.553821210    
+        5     7336.402568777    
+        6     7336.402568781    
+        7     9979.988874660    
+        8     9979.988874668    
+        9     19188.49510780    
+       10     19188.49510780    
 
 
        ***** MODAL MASS CALCULATION *****   HARMONIC INDEX=    3
@@ -759,14 +759,14 @@ Let's get the first 10 modes. Note that this will actually compute
       MODE   FREQUENCY       MODAL MASS
         31   1193.65           3.5000    
         32   1193.65           3.5000    
-        33   3319.53           3.5000    
-        34   3319.53           3.5000    
-        35   7336.37           3.5000    
-        36   7336.37           3.5000    
-        37   9979.95           3.5000    
-        38   9979.95           3.5000    
-        39   19188.4           3.5000    
-        40   19188.4           3.5000
+        33   3319.55           3.5000    
+        34   3319.55           3.5000    
+        35   7336.40           3.5000    
+        36   7336.40           3.5000    
+        37   9979.99           3.5000    
+        38   9979.99           3.5000    
+        39   19188.5           3.5000    
+        40   19188.5           3.5000
 
 
 
@@ -814,8 +814,8 @@ For more details regarding cyclic result post processing, see:
     Version     : 21.2
     Cyclic      : True
     Result Sets : 40
-    Nodes       : 7279
-    Elements    : 1329
+    Nodes       : 7204
+    Elements    : 1314
 
 
     Available Results:
@@ -860,20 +860,20 @@ harmonic index for each cumulative mode.
       7        0
       8        0
       9        0
-     10        1
-     11       -1
+     10       -1
+     11        1
      12       -1
      13        1
-     14       -1
-     15        1
+     14        1
+     15       -1
      16       -1
      17        1
      18        1
      19       -1
      20        2
      21       -2
-     22        2
-     23       -2
+     22       -2
+     23        2
      24        2
      25       -2
      26        2
@@ -882,14 +882,14 @@ harmonic index for each cumulative mode.
      29       -2
      30        3
      31       -3
-     32        3
-     33       -3
+     32       -3
+     33        3
      34        3
      35       -3
      36        3
      37       -3
-     38        3
-     39       -3
+     38       -3
+     39        3
 
 
 
@@ -1070,58 +1070,58 @@ the number of sectors.
       3      0
       4      0
       5      0
-      6      1
-      7     -1
-      8     -1
-      9      1
+      6     -1
+      7      1
+      8      1
+      9     -1
      10      1
      11     -1
-     12     -2
-     13      2
-     14     -2
-     15      2
-     16     -2
-     17      2
-     18     -3
-     19      3
-     20     -3
-     21      3
-     22     -3
-     23      3
+     12      2
+     13     -2
+     14      2
+     15     -2
+     16      2
+     17     -2
+     18      3
+     19     -3
+     20      3
+     21     -3
+     22      3
+     23     -3
      24      4
      25     -4
-     26      4
-     27     -4
+     26     -4
+     27      4
      28      4
      29     -4
-     30     -5
-     31      5
+     30      5
+     31     -5
      32      5
      33     -5
-     34     -5
-     35      5
-     36     -6
-     37      6
+     34      5
+     35     -5
+     36      6
+     37     -6
      38      6
      39     -6
-     40     -6
-     41      6
-     42     -7
-     43      7
+     40      6
+     41     -6
+     42      7
+     43     -7
      44      7
      45     -7
-     46     -7
-     47      7
+     46      7
+     47     -7
      48      8
      49     -8
-     50     -8
-     51      8
+     50      8
+     51     -8
      52      8
      53     -8
      54      9
      55     -9
-     56     -9
-     57      9
+     56      9
+     57     -9
      58      9
      59     -9
      60     10
@@ -1201,7 +1201,7 @@ for the 2nd nodal diameter of this example model.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  46.325 seconds)
+   **Total running time of the script:** ( 0 minutes  38.413 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_cyclic_analysis.py:

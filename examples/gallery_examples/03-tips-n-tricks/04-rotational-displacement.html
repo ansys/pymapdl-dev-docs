@@ -114,12 +114,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../api/index.html">
-  API Reference
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -138,8 +132,14 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contributing.html">
-  Contributing
+ <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
+  Troubleshooting
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
+  Contributing and API
  </a>
 </li>
 
@@ -609,7 +609,7 @@ to download the full example code</p>
 “shell” ones do. In this example we create a square shell with thickness
 of 0.1 and bend it, creating rotational displacement.</p>
 <p>We subsequently plot the cumulative principal stresses and use
-<a class="reference internal" href="../../../api/inline.html#ansys.mapdl.core.inline_functions.Query" title="ansys.mapdl.core.inline_functions.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.mapdl.core.inline_functions.Query</span></code></a> to
+<a class="reference internal" href="../../../contribution_and_api/inline.html#ansys.mapdl.core.inline_functions.Query" title="ansys.mapdl.core.inline_functions.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.mapdl.core.inline_functions.Query</span></code></a> to
 extract the exact values of rotational displacement at the four corners
 of our square.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># start MAPDL and enter the pre-processing routine</span>
@@ -769,7 +769,7 @@ freedom. Following this we:</p>
 <section id="extracting-rotational-displacements">
 <h2>Extracting Rotational Displacements<a class="headerlink" href="#extracting-rotational-displacements" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Get a <a class="reference internal" href="../../../api/inline.html#ansys.mapdl.core.inline_functions.Query" title="ansys.mapdl.core.inline_functions.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.mapdl.core.inline_functions.Query</span></code></a> instance from the
+<li><p>Get a <a class="reference internal" href="../../../contribution_and_api/inline.html#ansys.mapdl.core.inline_functions.Query" title="ansys.mapdl.core.inline_functions.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.mapdl.core.inline_functions.Query</span></code></a> instance from the
 <code class="docutils literal notranslate"><span class="pre">queries</span></code> property</p></li>
 <li><p>Locate the nodes at the four corners of the square</p></li>
 <li><p>Extract all 3 rotational displacement components for each one</p></li>
@@ -825,7 +825,7 @@ D |    0.000996,   0.155360,   0.000000
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.002 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.874 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-03-tips-n-tricks-04-rotational-displacement-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/60a861e6abc1188a6be0bfce784857fa/04-rotational-displacement.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">04-rotational-displacement.py</span></code></a></p>

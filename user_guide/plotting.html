@@ -114,12 +114,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../api/index.html">
-  API Reference
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -138,8 +132,14 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../contributing.html">
-  Contributing
+ <a class="reference internal nav-link" href="../troubleshoot/index.html">
+  Troubleshooting
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../contribution_and_api/index.html">
+  Contributing and API
  </a>
 </li>
 
@@ -358,17 +358,17 @@
 <p>When generating geometry from scratch within MAPDL, it is often
 necessary to plot the geometry (e.g. keypoints, lines, areas,
 volumes), and PyMAPDL supports plotting basic CAD using VTK.  The
-<a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class leverages the
-existing MAPDL commands (e.g. <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.kplot.html#ansys.mapdl.core.Mapdl.kplot" title="ansys.mapdl.core.Mapdl.kplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.kplot()</span></code></a>, <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.vplot.html#ansys.mapdl.core.Mapdl.vplot" title="ansys.mapdl.core.Mapdl.vplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vplot()</span></code></a>, <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.eplot.html#ansys.mapdl.core.Mapdl.eplot" title="ansys.mapdl.core.Mapdl.eplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.eplot()</span></code></a>) and transfers the geometry to Python
+<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class leverages the
+existing MAPDL commands (e.g. <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.kplot.html#ansys.mapdl.core.Mapdl.kplot" title="ansys.mapdl.core.Mapdl.kplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.kplot()</span></code></a>, <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.vplot.html#ansys.mapdl.core.Mapdl.vplot" title="ansys.mapdl.core.Mapdl.vplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vplot()</span></code></a>, <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.eplot.html#ansys.mapdl.core.Mapdl.eplot" title="ansys.mapdl.core.Mapdl.eplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.eplot()</span></code></a>) and transfers the geometry to Python
 to visualize it.
 These commands rely on the function
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a>.
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a>.
 Combined with the MAPDL geometry commands, you can
 generate and visualize geometry from scratch without opening the GUI
-using <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.open_gui.html#ansys.mapdl.core.Mapdl.open_gui" title="ansys.mapdl.core.Mapdl.open_gui"><code class="xref py py-func docutils literal notranslate"><span class="pre">open_gui()</span></code></a>.</p>
+using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.open_gui.html#ansys.mapdl.core.Mapdl.open_gui" title="ansys.mapdl.core.Mapdl.open_gui"><code class="xref py py-func docutils literal notranslate"><span class="pre">open_gui()</span></code></a>.</p>
 <section id="line-plotting">
 <h2>Line Plotting<a class="headerlink" href="#line-plotting" title="Permalink to this heading">#</a></h2>
-<p>Plot lines within Python using <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.lplot.html#ansys.mapdl.core.Mapdl.lplot" title="ansys.mapdl.core.Mapdl.lplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.lplot()</span></code></a>.</p>
+<p>Plot lines within Python using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.lplot.html#ansys.mapdl.core.Mapdl.lplot" title="ansys.mapdl.core.Mapdl.lplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.lplot()</span></code></a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
 
@@ -397,7 +397,7 @@ using <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.M
 <section id="area-and-volume-plotting">
 <h2>Area and Volume Plotting<a class="headerlink" href="#area-and-volume-plotting" title="Permalink to this heading">#</a></h2>
 <p>More complex geometry can be obtained using boolean operations and can
-be visualized using <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.vplot.html#ansys.mapdl.core.Mapdl.vplot" title="ansys.mapdl.core.Mapdl.vplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vplot()</span></code></a>.  In this example, we cut the initial
+be visualized using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.vplot.html#ansys.mapdl.core.Mapdl.vplot" title="ansys.mapdl.core.Mapdl.vplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vplot()</span></code></a>.  In this example, we cut the initial
 area with the 8 circles and then extrude it.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plate_holes</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">asba</span><span class="p">(</span><span class="n">rect_anum</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
 
@@ -417,7 +417,7 @@ area with the 8 circles and then extrude it.</p>
 <section id="node-and-element-plotting">
 <h2>Node and Element Plotting<a class="headerlink" href="#node-and-element-plotting" title="Permalink to this heading">#</a></h2>
 <p>Nodes and elements can also be plotted directly from the instance of
-<a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>.  We continue the
+<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>.  We continue the
 example by defining some element types, meshing, and displaying the
 mesh.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;SOLID186&#39;</span><span class="p">)</span>
@@ -436,8 +436,8 @@ mesh.</p>
 <h3>Plotting Non-Interactively using MAPDL<a class="headerlink" href="#plotting-non-interactively-using-mapdl" title="Permalink to this heading">#</a></h3>
 <p>You can also plot using MAPDL’s native plotting tools.  To use the
 native tools, pass <code class="docutils literal notranslate"><span class="pre">vtk=False</span></code> when running plotting commands such
-as <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.aplot.html#ansys.mapdl.core.Mapdl.aplot" title="ansys.mapdl.core.Mapdl.aplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.aplot</span></code></a>,
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.eplot.html#ansys.mapdl.core.Mapdl.eplot" title="ansys.mapdl.core.Mapdl.eplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.eplot</span></code></a>, etc..  Plots will
+as <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.aplot.html#ansys.mapdl.core.Mapdl.aplot" title="ansys.mapdl.core.Mapdl.aplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.aplot</span></code></a>,
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.eplot.html#ansys.mapdl.core.Mapdl.eplot" title="ansys.mapdl.core.Mapdl.eplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.eplot</span></code></a>, etc..  Plots will
 be generated within MAPDL and then shown using <a class="reference external" href="https://matplotlib.org/stable/contents.html">matploblib</a>.</p>
 <p>Start PyMAPDL</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
@@ -475,7 +475,7 @@ be generated within MAPDL and then shown using <a class="reference external" hre
 <p><span class="caption-text">Area Plot from MAPDL displayed using <a class="reference external" href="https://matplotlib.org/stable/contents.html">matploblib</a></span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>For more details on the plotting functions, see <a class="reference internal" href="../api/plotting.html#ref-plotting-api"><span class="std std-ref">Plotting</span></a>.</p>
+<p>For more details on the plotting functions, see <a class="reference internal" href="../contribution_and_api/plotting.html#ref-plotting-api"><span class="std std-ref">Plotting</span></a>.</p>
 </section>
 </section>
 <section id="plotting-keyword-options">
@@ -495,7 +495,7 @@ XY plane with <code class="docutils literal notranslate"><span class="pre">cpos=
 </pre></div>
 </div>
 <p>For all general plotting options, see
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a>.</p>
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a>.</p>
 </section>
 <section id="plotting-boundary-conditions">
 <h2>Plotting Boundary Conditions<a class="headerlink" href="#plotting-boundary-conditions" title="Permalink to this heading">#</a></h2>
@@ -507,7 +507,7 @@ conditions and targets.</p>
 </div>
 <p>It is possible to plot the boundary conditions applied on the model by
 specifying <code class="docutils literal notranslate"><span class="pre">plot_bc=True</span></code> in the plotting functions such as
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.nplot.html#ansys.mapdl.core.Mapdl.nplot" title="ansys.mapdl.core.Mapdl.nplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.nplot()</span></code></a>.</p>
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.nplot.html#ansys.mapdl.core.Mapdl.nplot" title="ansys.mapdl.core.Mapdl.nplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.nplot()</span></code></a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">nplot</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="n">plot_bc</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="gp">... </span>    <span class="n">plot_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -526,7 +526,7 @@ Forces (arrows) and displacements (cones)</span><a class="headerlink" href="#id5
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Since the boundary conditions can only target nodes at the moment, you can
-only use <code class="docutils literal notranslate"><span class="pre">plot_bc</span></code> as an argument in the function <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.nplot.html#ansys.mapdl.core.Mapdl.nplot" title="ansys.mapdl.core.Mapdl.nplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.nplot()</span></code></a>.</p>
+only use <code class="docutils literal notranslate"><span class="pre">plot_bc</span></code> as an argument in the function <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.nplot.html#ansys.mapdl.core.Mapdl.nplot" title="ansys.mapdl.core.Mapdl.nplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.nplot()</span></code></a>.</p>
 </div>
 <figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/bc_plot_2.png"><img alt="../_images/bc_plot_2.png" src="../_images/bc_plot_2.png" style="width: 500pt;" /></a>
