@@ -266,18 +266,39 @@
   <a class="reference internal nav-link" href="#installing-the-mapdl-image">
    Installing the MAPDL Image
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#connecting-to-the-mapdl-container-from-python">
-     Connecting to the MAPDL Container from Python
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connecting-to-the-mapdl-container-from-python">
+   Connecting to the MAPDL Container from Python
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#additional-considerations">
    Additional Considerations
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#appending-mapdl-options-to-the-container">
+     Appending MAPDL Options to the Container
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-restart-policy-with-mapdl-products">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       --restart
+      </span>
+     </code>
+     policy with MAPDL products
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-useful-files-after-abnormal-termination">
+     Getting Useful Files After Abnormal Termination
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -331,7 +352,7 @@ cat GH_TOKEN.txt | docker login ghcr.io -u $GH_USERNAME --password-stdin
 </div>
 <p>You can now launch MAPDL directly from docker with a short script or
 directly from the command line.  Since this image contains no license
-server, you will need to enter in your license server IP address the
+server, you must enter your license server IP address in the
 <code class="docutils literal notranslate"><span class="pre">LICENSE_SERVER</span></code> environment variable.  With that, you can launch
 MAPDL with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>LICENSE_SERVER=1055@XXX.XXX.XXX.XXX
@@ -356,8 +377,9 @@ of MAPDL.</p>
 <span class="n">Server</span> <span class="n">listening</span> <span class="n">on</span> <span class="p">:</span> <span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">50052</span>
 </pre></div>
 </div>
+</section>
 <section id="connecting-to-the-mapdl-container-from-python">
-<h3>Connecting to the MAPDL Container from Python<a class="headerlink" href="#connecting-to-the-mapdl-container-from-python" title="Permalink to this heading">#</a></h3>
+<h2>Connecting to the MAPDL Container from Python<a class="headerlink" href="#connecting-to-the-mapdl-container-from-python" title="Permalink to this heading">#</a></h2>
 <p>You can now connect to the instance with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">Mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">Mapdl</span><span class="p">()</span>
@@ -377,9 +399,10 @@ that port when connecting to MAPDL with:</p>
 </pre></div>
 </div>
 </section>
-</section>
 <section id="additional-considerations">
 <h2>Additional Considerations<a class="headerlink" href="#additional-considerations" title="Permalink to this heading">#</a></h2>
+<section id="appending-mapdl-options-to-the-container">
+<h3>Appending MAPDL Options to the Container<a class="headerlink" href="#appending-mapdl-options-to-the-container" title="Permalink to this heading">#</a></h3>
 <p>In the command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>IMAGE=ghcr.io/pyansys/pymapdl/mapdl:$VERSION
 docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -smp
@@ -393,9 +416,95 @@ with the <cite>-np</cite> switch.  For example:</p>
 docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -np 4
 </pre></div>
 </div>
-<p>For additional command line arguments please see the ansys
+<p>For additional command-line arguments, see the Ansys
 documentation at <a class="reference external" href="https://ansyshelp.ansys.com">ANSYS help</a>.  Also,
 be sure to have the appropriate license for additional HPC features.</p>
+</section>
+<section id="using-restart-policy-with-mapdl-products">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">--restart</span></code> policy with MAPDL products<a class="headerlink" href="#using-restart-policy-with-mapdl-products" title="Permalink to this heading">#</a></h3>
+<p>By default, MAPDL creates a <code class="docutils literal notranslate"><span class="pre">LOCK</span></code> file in the working directory when it starts
+and deletes this file if it exits normally. The file is used to avoid overwriting files
+such as database (DB) files or result (RST) files when starting MAPDL after an
+abnormal termination.</p>
+<p>Because of this behavior, when using the Docker <code class="docutils literal notranslate"><span class="pre">--restart</span></code> flag in the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>
+command, you might enter into an infinite loop if you specify the Docker image to
+reboot after an abnormal termination. For example, <code class="docutils literal notranslate"><span class="pre">--restart</span> <span class="pre">always</span></code>.
+Because of the presence of the <code class="docutils literal notranslate"><span class="pre">LOCK</span></code> file, MAPDL exits, attempting to not overwrite
+the files from the previous crash, while the Docker process keeps attempting to
+restart the MAPDL container (and the MAPDL process with it).</p>
+<p>In such cases, you should not use the <code class="docutils literal notranslate"><span class="pre">--restart</span></code> option. If you really need to use
+this option, you can avoid MAPDL checks and create the <code class="docutils literal notranslate"><span class="pre">LOCK</span></code> file by starting
+the process with the environment variable <code class="docutils literal notranslate"><span class="pre">ANSYS_LOCK</span></code> set to <code class="docutils literal notranslate"><span class="pre">&quot;OFF&quot;</span></code>.</p>
+<p>You can do this in your <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run <span class="se">\</span>
+    --restart always <span class="se">\</span>
+    -e <span class="nv">ANSYSLMD_LICENSE_FILE</span><span class="o">=</span><span class="m">1055</span>@<span class="nv">$LICENSE_SERVER</span> <span class="se">\</span>
+    -e <span class="nv">ANSYS_LOCK</span><span class="o">=</span><span class="s2">&quot;OFF&quot;</span> <span class="se">\</span>
+    -p <span class="m">50052</span>:50052 <span class="se">\</span>
+    <span class="nv">$IMAGE</span>
+</pre></div>
+</div>
+</section>
+<section id="getting-useful-files-after-abnormal-termination">
+<h3>Getting Useful Files After Abnormal Termination<a class="headerlink" href="#getting-useful-files-after-abnormal-termination" title="Permalink to this heading">#</a></h3>
+<p>In some cases, the MAPDL container might crash after the MAPDL process experiences an
+abnormal termination. In these cases, you can retrieve log files and output files using
+tools that Docker provides.</p>
+<p>First, get the Docker container name:</p>
+<div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="nb">PS </span><span class="n">docker</span> <span class="nb">ps</span>
+<span class="n">CONTAINER</span> <span class="n">ID</span>   <span class="n">IMAGE</span>                                   <span class="n">COMMAND</span>                  <span class="n">CREATED</span>          <span class="n">STATUS</span>          <span class="n">PORTS</span>                      <span class="n">NAMES</span>
+<span class="n">c14560bff70f</span>   <span class="n">ghcr</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">pyansys</span><span class="p">/</span><span class="n">pymapdl</span><span class="p">/</span><span class="n">mapdl</span><span class="p">:</span><span class="n">v22</span><span class="p">.</span><span class="n">2</span><span class="p">.</span><span class="n">0</span>   <span class="s2">&quot;/ansys_inc/ansys/bi…&quot;</span>   <span class="n">9</span> <span class="n">seconds</span> <span class="n">ago</span>    <span class="n">Up</span> <span class="n">8</span> <span class="n">seconds</span>    <span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">:</span><span class="n">50053</span><span class="p">-&gt;</span><span class="n">50052</span><span class="p">/</span><span class="n">tcp</span>   <span class="n">mapdl</span>
+</pre></div>
+</div>
+<p>To appear in <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span></code>, the container should be running.</p>
+<p>You can then use the <code class="docutils literal notranslate"><span class="pre">name</span></code> in the following command:</p>
+<div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="nb">PS </span><span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">mapdl</span> <span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">bash</span>
+</pre></div>
+</div>
+<p>This command executes the command shell (<code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code>) of the container and attaches your current terminal to it (interactive <code class="docutils literal notranslate"><span class="pre">-it</span></code>).</p>
+<div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="nb">PS </span><span class="n">C</span><span class="p">:\</span><span class="n">Users</span><span class="p">\</span><span class="n">user</span><span class="p">&gt;</span> <span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">mapdl</span> <span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">bash</span>
+<span class="p">[</span><span class="n">root</span><span class="nv">@c14560bff70f</span> <span class="p">/]</span><span class="c">#</span>
+</pre></div>
+</div>
+<p>Now you can enter commands inside the Docker container and navigate inside it.</p>
+<div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="nb">PS </span><span class="n">C</span><span class="p">:\</span><span class="n">Users</span><span class="p">\</span><span class="n">user</span><span class="p">&gt;</span> <span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">mapdl</span> <span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">bash</span>
+<span class="p">[</span><span class="n">root</span><span class="nv">@c14560bff70f</span> <span class="p">/]</span><span class="c"># ls</span>
+<span class="n">anaconda-post</span><span class="p">.</span><span class="n">log</span>  <span class="n">cleanup-ansys-c14560bff70f</span><span class="p">-</span><span class="n">709</span><span class="p">.</span><span class="n">sh</span>  <span class="n">file0</span><span class="p">.</span><span class="n">err</span>   <span class="n">file1</span><span class="p">.</span><span class="n">err</span>  <span class="n">file1</span><span class="p">.</span><span class="n">page</span>  <span class="n">file2</span><span class="p">.</span><span class="n">out</span>   <span class="n">file3</span><span class="p">.</span><span class="n">log</span>   <span class="n">home</span>   <span class="n">media</span>  <span class="n">proc</span>  <span class="n">sbin</span>  <span class="n">tmp</span>
+<span class="n">ansys_inc</span>          <span class="n">dev</span>                                <span class="n">file0</span><span class="p">.</span><span class="n">log</span>   <span class="n">file1</span><span class="p">.</span><span class="n">log</span>  <span class="n">file2</span><span class="p">.</span><span class="n">err</span>   <span class="n">file2</span><span class="p">.</span><span class="n">page</span>  <span class="n">file3</span><span class="p">.</span><span class="n">out</span>   <span class="n">lib</span>    <span class="n">mnt</span>    <span class="n">root</span>  <span class="n">srv</span>   <span class="n">usr</span>
+<span class="n">bin</span>                <span class="n">etc</span>                                <span class="n">file0</span><span class="p">.</span><span class="n">page</span>  <span class="n">file1</span><span class="p">.</span><span class="n">out</span>  <span class="n">file2</span><span class="p">.</span><span class="n">log</span>   <span class="n">file3</span><span class="p">.</span><span class="n">err</span>   <span class="n">file3</span><span class="p">.</span><span class="n">page</span>  <span class="n">lib64</span>  <span class="n">opt</span>    <span class="n">run</span>   <span class="n">sys</span>   <span class="n">var</span>
+</pre></div>
+</div>
+<p>You can then take note of the files you want to retrieve. For example, the error and output files (<code class="docutils literal notranslate"><span class="pre">file*.err</span></code> and <code class="docutils literal notranslate"><span class="pre">file*.out</span></code>).</p>
+<p>Exit the container terminal using <code class="docutils literal notranslate"><span class="pre">exit</span></code>:</p>
+<div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nv">@c14560bff70f</span> <span class="p">/]</span><span class="c"># exit</span>
+<span class="n">exit</span>
+<span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="nb">PS </span><span class="n">C</span><span class="p">:\</span><span class="n">Users</span><span class="p">\</span><span class="n">user</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>You can copy the noted files using this script:</p>
+<div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="nb">cp </span><span class="n">mapdl</span><span class="p">:/</span><span class="n">file0</span><span class="p">.</span><span class="n">err</span> <span class="p">.</span>
+<span class="n">docker</span> <span class="nb">cp </span><span class="n">mapdl</span><span class="p">:/</span><span class="n">file1</span><span class="p">.</span><span class="n">err</span> <span class="p">.</span>
+<span class="n">docker</span> <span class="nb">cp </span><span class="n">mapdl</span><span class="p">:/</span><span class="n">file1</span><span class="p">.</span><span class="n">out</span> <span class="p">.</span>
+</pre></div>
+</div>
+<p>If you want to retrieve multiple files, the most efficient approach is to get back inside the Docker container:</p>
+<div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="nb">PS </span><span class="n">C</span><span class="p">:\</span><span class="n">Users</span><span class="p">\</span><span class="n">user</span><span class="p">&gt;</span> <span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">mapdl</span> <span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">bash</span>
+<span class="p">[</span><span class="n">root</span><span class="nv">@c14560bff70f</span> <span class="p">/]</span><span class="c">#</span>
+</pre></div>
+</div>
+<p>Create a folder where you are going to copy all the desired files:</p>
+<div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nv">@c14560bff70f</span> <span class="p">/]</span><span class="c"># mkdir -p /mapdl_logs</span>
+<span class="p">[</span><span class="n">root</span><span class="nv">@c14560bff70f</span> <span class="p">/]</span><span class="c"># cp -f /file*.out /mapdl_logs</span>
+<span class="p">[</span><span class="n">root</span><span class="nv">@c14560bff70f</span> <span class="p">/]</span><span class="c"># cp -f /file*.err /mapdl_logs</span>
+<span class="p">[</span><span class="n">root</span><span class="nv">@c14560bff70f</span> <span class="p">/]</span><span class="c"># ls mapdl_logs/</span>
+<span class="n">file0</span><span class="p">.</span><span class="n">err</span>  <span class="n">file1</span><span class="p">.</span><span class="n">err</span>  <span class="n">file1</span><span class="p">.</span><span class="n">out</span>  <span class="n">file2</span><span class="p">.</span><span class="n">err</span>  <span class="n">file2</span><span class="p">.</span><span class="n">out</span>  <span class="n">file3</span><span class="p">.</span><span class="n">err</span>  <span class="n">file3</span><span class="p">.</span><span class="n">out</span>
+</pre></div>
+</div>
+<p>Then copy the entire folder content at once:</p>
+<div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="nb">cp </span><span class="n">mapdl</span><span class="p">:/</span><span class="n">mapdl_logs</span><span class="p">/.</span> <span class="p">.</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 

@@ -970,7 +970,7 @@
 <dd class="field-odd"><dl>
 <dt><strong>nsbstp</strong></dt><dd><p>Number of substeps to be used for this load step (i.e., the time
 step size or frequency increment). If automatic time stepping is
-used (AUTOTS), NSBSTP defines the size of the first substep.</p>
+used (<code class="docutils literal notranslate"><span class="pre">AUTOTS</span></code>), <code class="docutils literal notranslate"><span class="pre">NSBSTP</span></code> defines the size of the first substep.</p>
 </dd>
 <dt><strong>nsbmx</strong></dt><dd><p>Maximum number of substeps to be taken (i.e., the minimum time step
 size) if automatic time stepping is used. The program automatically
@@ -982,9 +982,11 @@ determines the default based on the physics of the model.</p>
 </dd>
 <dt><strong>carry</strong></dt><dd><p>Time step carryover key (program-determined default depending on
 the problem physics):</p>
-<p>OFF - Use NSBSTP to define time step at start of each load step.</p>
 <dl class="simple">
-<dt>ON - Use final time step from previous load step as the starting time step (if</dt><dd><p>automatic time stepping is used).</p>
+<dt>OFF</dt><dd><p>Use NSBSTP to define time step at start of each load step.</p>
+</dd>
+<dt>ON</dt><dd><p>Use final time step from previous load step as the starting time step (if
+automatic time stepping is used).</p>
 </dd>
 </dl>
 </dd>
@@ -992,10 +994,10 @@ the problem physics):</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>See DELTIM for an alternative input.  It is recommended that all fields
+<p>See <code class="docutils literal notranslate"><span class="pre">DELTIM</span></code> for an alternative input.  It is recommended that all fields
 of this command be specified for solution efficiency and robustness.</p>
-<p>When the arc-length method is active (ARCLEN command), the NSBMX and
-NSBMN arguments are ignored.</p>
+<p>When the arc-length method is active (<code class="docutils literal notranslate"><span class="pre">ARCLEN</span></code> command), the <code class="docutils literal notranslate"><span class="pre">NSBMX</span></code> and
+<code class="docutils literal notranslate"><span class="pre">NSBMN</span></code> arguments are ignored.</p>
 <p>This command is also valid in PREP7.</p>
 </dd></dl>
 

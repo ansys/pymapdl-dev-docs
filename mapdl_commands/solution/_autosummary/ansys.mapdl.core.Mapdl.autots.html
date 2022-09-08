@@ -969,10 +969,13 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>key</strong></dt><dd><p>Automatic time stepping key:</p>
-<p>OFF - Do not use automatic time stepping.</p>
-<p>ON - Use automatic time stepping (default).</p>
 <dl class="simple">
-<dt>AUTO - The program determines whether to use automatic time stepping (used by</dt><dd><p>Workbench).</p>
+<dt>OFF</dt><dd><p>Do not use automatic time stepping.</p>
+</dd>
+<dt>ON</dt><dd><p>Use automatic time stepping (default).</p>
+</dd>
+<dt>AUTO</dt><dd><p>The program determines whether to use automatic time stepping (used by
+Workbench).</p>
 </dd>
 </dl>
 </dd>
@@ -983,10 +986,10 @@
 <p>Specifies whether to use automatic time stepping (or load stepping)
 over this load step. If Key = ON, both time step prediction and time
 step bisection will be used.</p>
-<p>You cannot use automatic time stepping [AUTOTS], line search [LNSRCH],
+<p>You cannot use automatic time stepping <code class="docutils literal notranslate"><span class="pre">AUTOTS</span></code>, line search <code class="docutils literal notranslate"><span class="pre">LNSRCH</span></code>,
 or the DOF solution predictor [PRED] with the arc-length method
-[ARCLEN, ARCTRM]. If you activate the arc-length method after you set
-AUTOTS, LNSRCH, or PRED, a warning message appears. If you choose to
+<code class="docutils literal notranslate"><span class="pre">ARCLEN,</span> <span class="pre">ARCTRM</span></code>. If you activate the arc-length method after you set
+<code class="docutils literal notranslate"><span class="pre">AUTOTS,</span> <span class="pre">LNSRCH</span></code>, or <code class="docutils literal notranslate"><span class="pre">PRED</span></code>, a warning message appears. If you choose to
 proceed with the arc-length method, the program disables your automatic
 time stepping, line search, and DOF predictor settings, and the time
 step size is controlled by the arc-length method internally.</p>
