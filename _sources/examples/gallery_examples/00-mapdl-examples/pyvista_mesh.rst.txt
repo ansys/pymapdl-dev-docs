@@ -129,10 +129,10 @@ Write the mesh to a temporary file
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =     171.997   TIME= 04:35:36
+     *** NOTE ***                            CP =     215.126   TIME= 04:39:03
      There is no title defined for this analysis.                            
 
-     *** NOTE ***                            CP =     172.080   TIME= 04:35:36
+     *** NOTE ***                            CP =     215.216   TIME= 04:39:03
      No modes are being expanded (MXPAND command) and therefore the element  
      results will not be written to the mode file.  If you do not intend to  
      use mode selection and for more efficient calculation of element        
@@ -150,7 +150,7 @@ Write the mesh to a temporary file
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:35:36  SEP 09, 2022 CP=    172.102
+     00000000  VERSION=LINUX x64     04:39:03  SEP 10, 2022 CP=    215.238
 
                                                                                
 
@@ -169,15 +169,15 @@ Write the mesh to a temporary file
        SHIFT POINT . . . . . . . . . . . . . . . . . .  1.0000    
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** WARNING ***                         CP =     172.121   TIME= 04:35:36
+     *** WARNING ***                         CP =     215.257   TIME= 04:39:03
      No constraints have been defined using the D command.                   
 
-     *** NOTE ***                            CP =     172.121   TIME= 04:35:36
+     *** NOTE ***                            CP =     215.257   TIME= 04:39:03
      The step data was checked and warning messages were found.              
       Please review output or errors file ( /file.err ) for these warning    
      messages.                                                               
 
-     *** NOTE ***                            CP =     172.121   TIME= 04:35:36
+     *** NOTE ***                            CP =     215.258   TIME= 04:39:03
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -225,8 +225,8 @@ Write the mesh to a temporary file
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            4     10000  SHELL181      0.670   0.000067
-     Time at end of element matrix formulation CP = 173.031815.              
+            4     10000  SHELL181      1.063   0.000106
+     Time at end of element matrix formulation CP = 216.587494.              
 
       BLOCK LANCZOS CALCULATION OF UP TO    20 EIGENVECTORS.
       NUMBER OF EQUATIONS              =        61206
@@ -239,7 +239,7 @@ Write the mesh to a temporary file
       Memory required for in-core solution     =   178.612 MB
       Memory required for out-of-core solution =    60.617 MB
 
-     *** NOTE ***                            CP =     174.965   TIME= 04:35:38
+     *** NOTE ***                            CP =     218.511   TIME= 04:39:06
      The Sparse Matrix Solver used by the Block Lanczos eigensolver is       
      currently running in the in-core memory mode.  This memory mode uses    
      the most amount of memory in order to avoid using the hard drive as     
@@ -249,7 +249,7 @@ Write the mesh to a temporary file
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:35:40  SEP 09, 2022 CP=    178.123
+     00000000  VERSION=LINUX x64     04:39:08  SEP 10, 2022 CP=    221.853
 
                                                                                
 
@@ -266,29 +266,29 @@ Write the mesh to a temporary file
        FREQUENCY RANGE REQUESTED=   20 MODES ABOVE   1.00000     HERTZ
 
         1     32.74664192985    
-        2     47.77804288731    
+        2     47.77804288730    
         3     59.17108298360    
         4     84.60790505173    
-        5     84.60790505208    
-        6     148.8927748650    
-        7     148.8927748652    
-        8     154.6519861747    
-        9     168.3840411461    
-       10     187.7790667343    
-       11     255.9751634915    
+        5     84.60790505209    
+        6     148.8927748648    
+        7     148.8927748650    
+        8     154.6519861746    
+        9     168.3840411459    
+       10     187.7790667340    
+       11     255.9751634914    
        12     255.9751634916    
-       13     285.2444050788    
-       14     298.2943388367    
+       13     285.2444050791    
+       14     298.2943388368    
        15     319.8023401634    
-       16     319.8023401640    
+       16     319.8023401642    
        17     370.6023621796    
-       18     391.8457651345    
-       19     409.1039880842    
-       20     482.6516135505    
+       18     391.8457651362    
+       19     409.1039880850    
+       20     482.6516135508    
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:35:40  SEP 09, 2022 CP=    178.404
+     00000000  VERSION=LINUX x64     04:39:08  SEP 10, 2022 CP=    222.202
 
                                                                                
 
@@ -589,7 +589,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  11.049 seconds)
+   **Total running time of the script:** ( 0 minutes  12.530 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_pyvista_mesh.py:
