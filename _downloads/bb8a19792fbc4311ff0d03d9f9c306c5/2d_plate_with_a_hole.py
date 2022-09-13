@@ -331,7 +331,7 @@ def compute_stress_con(ratio):
 ###############################################################################
 # Run the batch and record the stress concentration
 k_t_exp = []
-ratios = np.linspace(0.01, 0.5, 10)
+ratios = np.linspace(0.01, 0.5, 15)
 print("    Ratio  : Stress Concentration (K_t)")
 for ratio in ratios:
     stress_con = compute_stress_con(ratio)

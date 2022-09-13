@@ -275,7 +275,7 @@ Solve the static analysis
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =       2.099   TIME= 10:17:43
+     *** NOTE ***                            CP =       1.787   TIME= 04:37:59
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -288,7 +288,7 @@ Solve the static analysis
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     10:17:43  SEP 12, 2022 CP=      2.106
+     00000000  VERSION=LINUX x64     04:37:59  SEP 13, 2022 CP=      1.794
 
                                                                                
 
@@ -304,11 +304,11 @@ Solve the static analysis
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =       2.110   TIME= 10:17:43
+     *** NOTE ***                            CP =       1.798   TIME= 04:37:59
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =       2.111   TIME= 10:17:43
+     *** NOTE ***                            CP =       1.799   TIME= 04:37:59
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -357,8 +357,8 @@ Solve the static analysis
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.096   0.000098
-     Time at end of element matrix formulation CP = 2.20134997.              
+            1       977  PLANE183      0.140   0.000144
+     Time at end of element matrix formulation CP = 1.90982604.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =        6124,    Maximum wavefront =     48
@@ -366,7 +366,7 @@ Solve the static analysis
       Memory required for in-core solution     =     8.134 MB
       Memory required for out-of-core solution =     4.318 MB
 
-     *** NOTE ***                            CP =       2.421   TIME= 10:17:44
+     *** NOTE ***                            CP =       2.135   TIME= 04:37:59
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -381,12 +381,12 @@ Solve the static analysis
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.118   0.000121
+            1       977  PLANE183      0.176   0.000180
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.036   0.000037
+            1       977  PLANE183      0.044   0.000045
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -663,7 +663,7 @@ Run the batch and record the stress concentration
 .. code-block:: default
 
     k_t_exp = []
-    ratios = np.linspace(0.01, 0.5, 10)
+    ratios = np.linspace(0.01, 0.5, 15)
     print("    Ratio  : Stress Concentration (K_t)")
     for ratio in ratios:
         stress_con = compute_stress_con(ratio)
@@ -681,14 +681,19 @@ Run the batch and record the stress concentration
 
         Ratio  : Stress Concentration (K_t)
         0.0100 :     2.9660
-        0.0644 :     2.8119
-        0.1189 :     2.6808
-        0.1733 :     2.5607
-        0.2278 :     2.4619
-        0.2822 :     2.3766
-        0.3367 :     2.3058
-        0.3911 :     2.2479
-        0.4456 :     2.2011
+        0.0450 :     2.8619
+        0.0800 :     2.7690
+        0.1150 :     2.6902
+        0.1500 :     2.6101
+        0.1850 :     2.5418
+        0.2200 :     2.4737
+        0.2550 :     2.4202
+        0.2900 :     2.3683
+        0.3250 :     2.3222
+        0.3600 :     2.2799
+        0.3950 :     2.2447
+        0.4300 :     2.2145
+        0.4650 :     2.1837
         0.5000 :     2.1609
 
 
@@ -762,7 +767,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  32.402 seconds)
+   **Total running time of the script:** ( 0 minutes  46.637 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_2d_plate_with_a_hole.py:
