@@ -51,6 +51,7 @@
     <script src="../../_static/copybutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -2589,20 +2590,39 @@
 <h1>factorize<a class="headerlink" href="#factorize" title="Permalink to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.math.AnsSolver.factorize">
-<span class="sig-prename descclassname"><span class="pre">AnsSolver.</span></span><span class="sig-name descname"><span class="pre">factorize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.math.AnsSolver.factorize" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">AnsSolver.</span></span><span class="sig-name descname"><span class="pre">factorize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.math.AnsSolver.factorize" title="Permalink to this definition">#</a></dt>
 <dd><p>Factorize a matrix</p>
-<p>Perform the numerical factorization of a linear solver system.</p>
+<p>Perform the numerical factorization of a linear solver system (<span class="math notranslate nohighlight">\(A*x=b\)</span>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>By default, factorization modifies the input matrix <code class="docutils literal notranslate"><span class="pre">mat</span></code>
+in place. This behavior can be changed using the <code class="docutils literal notranslate"><span class="pre">inplace</span></code> argument.</p>
+</div>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>mat</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansys.mapdl.math.AnsMat</span></code></span></dt><dd><p>An ansys.mapdl.math matrix.</p>
 </dd>
-<dt><strong>algo</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Factorization algorithm.  Either <code class="docutils literal notranslate"><span class="pre">&quot;LAPACK&quot;</span></code> or
-<code class="docutils literal notranslate"><span class="pre">&quot;DSP&quot;</span></code>.</p>
+<dt><strong>algo</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Factorization algorithm.  Either <code class="docutils literal notranslate"><span class="pre">&quot;LAPACK&quot;</span></code> (default for
+dense matrices) or <code class="docutils literal notranslate"><span class="pre">&quot;DSP&quot;</span></code> (default for sparse matrices).</p>
+</dd>
+<dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the factorization is performed on a copy
+of the input matrix (<code class="docutils literal notranslate"><span class="pre">mat</span></code> argument), hence this input
+matrix (<code class="docutils literal notranslate"><span class="pre">mat</span></code>) is not changed. Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
 </dl>
 </dd>
 </dl>
+<p class="rubric">Examples</p>
+<p>Factorize a random matrix and solve a linear system.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mm</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">math</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dim</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m2</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">dim</span><span class="p">,</span> <span class="n">dim</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">solver</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">factorize</span><span class="p">(</span><span class="n">m2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">dim</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>

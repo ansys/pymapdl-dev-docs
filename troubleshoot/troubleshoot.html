@@ -544,12 +544,18 @@ shown. For Ansys MAPDL 2022 R2, <code class="docutils literal notranslate"><span
 <span class="n">C</span><span class="p">:\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">ANSYS</span> <span class="n">Inc</span><span class="p">\</span><span class="n">v222</span><span class="p">\</span><span class="n">CommonFiles</span><span class="p">\</span><span class="n">Language</span><span class="p">\</span><span class="n">en-us</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Launching MAPDL Student Version
+By default if a Student version is detected, PyMAPDL will launch the MAPDL instance in
+<code class="docutils literal notranslate"><span class="pre">SMP</span></code> mode, unless another MPI option is specified.</p>
+</div>
 </section>
 </section>
 <section id="launching-pymapdl">
 <h2>Launching PyMAPDL<a class="headerlink" href="#launching-pymapdl" title="Permalink to this heading">#</a></h2>
 <p>Even if you are able to correctly launch MAPDL, PyMAPDL might have some problems to launch
-MAPDL.</p>
+MAPDL by itself.</p>
 <section id="manually-set-the-executable-location">
 <h3>Manually Set the Executable Location<a class="headerlink" href="#manually-set-the-executable-location" title="Permalink to this heading">#</a></h3>
 <p>If you have a non-standard install, <code class="docutils literal notranslate"><span class="pre">pymapdl</span></code> may be unable find

@@ -2589,12 +2589,25 @@
 <h1>factorize<a class="headerlink" href="#factorize" title="Permalink to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.math.MapdlMath.factorize">
-<span class="sig-prename descclassname"><span class="pre">MapdlMath.</span></span><span class="sig-name descname"><span class="pre">factorize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.math.MapdlMath.factorize" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">MapdlMath.</span></span><span class="sig-name descname"><span class="pre">factorize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.math.MapdlMath.factorize" title="Permalink to this definition">#</a></dt>
 <dd><p>Factorize a matrix.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>mat</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansys.mapdl.math.AnsMat</span></code></span></dt><dd><p>An APDLMath matrix</p>
+</dd>
+<dt><strong>algo</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Factorization algorithm.  Either <code class="docutils literal notranslate"><span class="pre">&quot;LAPACK&quot;</span></code> (default for
+dense matrices) or <code class="docutils literal notranslate"><span class="pre">&quot;DSP&quot;</span></code> (default for sparse matrices).</p>
+</dd>
+<dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the factorization is performed on a copy
+of the input matrix (<code class="docutils literal notranslate"><span class="pre">mat</span></code> argument), hence this input
+matrix (<code class="docutils literal notranslate"><span class="pre">mat</span></code>) is not changed. Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference internal" href="ansys.mapdl.core.math.AnsSolver.html#ansys.mapdl.core.math.AnsSolver" title="ansys.mapdl.core.math.AnsSolver"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansys.mapdl.core.math.AnsSolver</span></code></a></dt><dd><p>An Ansys Solver object.</p>
 </dd>
 </dl>
 </dd>
