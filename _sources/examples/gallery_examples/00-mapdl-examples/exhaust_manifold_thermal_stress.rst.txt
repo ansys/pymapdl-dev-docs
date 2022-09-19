@@ -254,12 +254,12 @@ Apply loads and boundary conditions and solve the model
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** WARNING ***                         CP =      99.326   TIME= 04:35:20
+     *** WARNING ***                         CP =      97.820   TIME= 04:43:35
      Previous testing revealed that 127 of the 44241 selected elements       
      violate shape warning limits.  To review warning messages, please see   
      the output or error file, or issue the CHECK command.                   
 
-     *** NOTE ***                            CP =      99.326   TIME= 04:35:20
+     *** NOTE ***                            CP =      97.820   TIME= 04:43:35
      The model data was checked and warning messages were found.             
       Please review output or errors file ( /file.err ) for these warning    
      messages.                                                               
@@ -274,7 +274,7 @@ Apply loads and boundary conditions and solve the model
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:35:20  SEP 18, 2022 CP=     99.343
+     00000000  VERSION=LINUX x64     04:43:35  SEP 19, 2022 CP=     97.838
 
       File: D:\AICs\PyAnsys\Getting Started With PyMAPDL\Dataflow Between Python an
 
@@ -290,11 +290,11 @@ Apply loads and boundary conditions and solve the model
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =      99.397   TIME= 04:35:20
+     *** NOTE ***                            CP =      97.890   TIME= 04:43:36
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =      99.398   TIME= 04:35:20
+     *** NOTE ***                            CP =      97.891   TIME= 04:43:36
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -319,20 +319,20 @@ Apply loads and boundary conditions and solve the model
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1     44241  SOLID187      5.551   0.000125
-     Time at end of element matrix formulation CP = 103.290268.              
+            1     44241  SOLID187      5.663   0.000128
+     Time at end of element matrix formulation CP = 101.764755.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =      251853,    Maximum wavefront =    225
 
-     *** NOTE ***                            CP =     106.047   TIME= 04:35:24
+     *** NOTE ***                            CP =     104.585   TIME= 04:43:40
      The initial memory allocation (-m) has been exceeded.                   
       Supplemental memory allocations are being used.                        
       Memory allocated for solver              =  1077.722 MB
       Memory required for in-core solution     =  1033.955 MB
       Memory required for out-of-core solution =   367.872 MB
 
-     *** NOTE ***                            CP =     106.549   TIME= 04:35:25
+     *** NOTE ***                            CP =     105.033   TIME= 04:43:40
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -347,12 +347,12 @@ Apply loads and boundary conditions and solve the model
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1     44241  SOLID187      6.027   0.000136
+            1     44241  SOLID187      5.928   0.000134
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1     44241  SOLID187      1.491   0.000034
+            1     44241  SOLID187      1.456   0.000033
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -413,7 +413,7 @@ Exit MAPDL instance
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  22.078 seconds)
+   **Total running time of the script:** ( 0 minutes  21.918 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_exhaust_manifold_thermal_stress.py:
