@@ -665,7 +665,7 @@ are sequential</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:38:12  SEP 22, 2022 CP=    132.511
+ 00000000  VERSION=LINUX x64     04:40:18  SEP 23, 2022 CP=    143.252
 
 
 
@@ -756,7 +756,7 @@ individual elements</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =     132.517   TIME= 04:38:12
+ *** NOTE ***                            CP =     143.259   TIME= 04:40:18
  There is no title defined for this analysis.
 
  *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -771,7 +771,7 @@ individual elements</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:38:12  SEP 22, 2022 CP=    132.518
+ 00000000  VERSION=LINUX x64     04:40:18  SEP 23, 2022 CP=    143.260
 
 
 
@@ -787,11 +787,11 @@ individual elements</p>
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =     132.518   TIME= 04:38:12
+ *** NOTE ***                            CP =     143.261   TIME= 04:40:18
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =     132.518   TIME= 04:38:12
+ *** NOTE ***                            CP =     143.261   TIME= 04:40:18
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -808,7 +808,7 @@ individual elements</p>
 
  SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr
 
- *** NOTE ***                            CP =     132.522   TIME= 04:38:12
+ *** NOTE ***                            CP =     143.266   TIME= 04:40:18
  Predictor is ON by default for structural elements with rotational
  degrees of freedom.  Use the PRED,OFF command to turn the predictor
  OFF if it adversely affects the convergence.
@@ -821,8 +821,8 @@ individual elements</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.009   0.000395
- Time at end of element matrix formulation CP = 132.527557.
+        1        22  BEAM188       0.011   0.000495
+ Time at end of element matrix formulation CP = 143.272644.
 
  SPARSE MATRIX DIRECT SOLVER.
   Number of equations =          44,    Maximum wavefront =     12
@@ -830,14 +830,14 @@ individual elements</p>
   Memory required for in-core solution     =     0.062 MB
   Memory required for out-of-core solution =     0.062 MB
 
- *** NOTE ***                            CP =     132.531   TIME= 04:38:12
+ *** NOTE ***                            CP =     143.276   TIME= 04:40:18
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
  results in the fastest solution time.  This mode is recommended if
  enough physical memory is present to accommodate all of the solver
  data.
- Sparse solver maximum pivot= 5.009534302E+10 at node 16 ROTY.
+ Sparse solver maximum pivot= 5.009534302E+10 at node 8 ROTY.
  Sparse solver minimum pivot= 2691965.06 at node 12 UZ.
  Sparse solver minimum pivot in absolute value= 2691965.06 at node 12
  UZ.
@@ -845,12 +845,12 @@ individual elements</p>
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.026   0.001181
+        1        22  BEAM188       0.033   0.001484
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.001   0.000058
+        1        22  BEAM188       0.001   0.000053
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -865,7 +865,7 @@ individual elements</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.500 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.541 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-mapdl-beam-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/1e012ec2cca8a7261da18d4caa725113/mapdl_beam.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mapdl_beam.py</span></code></a></p>
