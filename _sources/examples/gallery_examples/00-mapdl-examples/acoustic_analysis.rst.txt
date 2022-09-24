@@ -124,7 +124,7 @@ Define the ``FLUID30`` and ``FLUID130`` element types.
                     1500.000
     *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     13:14:06  SEP 23, 2022 CP=     53.757
+     00000000  VERSION=LINUX x64     04:37:00  SEP 24, 2022 CP=     54.675
 
                                                                                
 
@@ -196,7 +196,7 @@ First select the material and elements.
 
     PRODUCE ALL TETRAHEDRAL ELEMENTS IN 3D.
 
-     *** WARNING ***                         CP =      54.473   TIME= 13:14:07
+     *** WARNING ***                         CP =      55.376   TIME= 04:37:01
      Structural elements without mid nodes usually produce much more         
      accurate results in quad or brick shape.
 
@@ -297,12 +297,12 @@ Using :func:`Mapdl.solve() <ansys.mapdl.core.Mapdl.solve>`
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =      54.867   TIME= 13:14:07
+     *** NOTE ***                            CP =      55.758   TIME= 04:37:02
      There is no title defined for this analysis.                            
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     13:14:07  SEP 23, 2022 CP=     54.870
+     00000000  VERSION=LINUX x64     04:37:02  SEP 24, 2022 CP=     55.763
 
                                                                                
 
@@ -320,19 +320,19 @@ Using :func:`Mapdl.solve() <ansys.mapdl.core.Mapdl.solve>`
        COMPLEX DISPLACEMENT PRINT OPTION . . . . . . .REAL AND IMAGINARY       
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** WARNING ***                         CP =      54.872   TIME= 13:14:07
+     *** WARNING ***                         CP =      55.765   TIME= 04:37:02
      No constraints have been defined using the D command.                   
 
-     *** WARNING ***                         CP =      54.873   TIME= 13:14:07
+     *** WARNING ***                         CP =      55.766   TIME= 04:37:02
      Load amplitudes will be ramped over the frequency range.  Use the KBC,1 
      command to use a step change.                                           
 
-     *** NOTE ***                            CP =      54.873   TIME= 13:14:07
+     *** NOTE ***                            CP =      55.766   TIME= 04:37:02
      The step data was checked and warning messages were found.              
       Please review output or errors file ( /file.err ) for these warning    
      messages.                                                               
 
-     *** NOTE ***                            CP =      54.873   TIME= 13:14:07
+     *** NOTE ***                            CP =      55.766   TIME= 04:37:02
      The Solution Control Option is only valid for single field structural,  
      single field thermal, single field diffusion, coupled                   
      thermal-diffusion analyses and coupled-field analyses with structural   
@@ -386,8 +386,8 @@ Using :func:`Mapdl.solve() <ansys.mapdl.core.Mapdl.solve>`
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1      1606  FLUID30       0.288   0.000179
-     Time at end of element matrix formulation CP = 55.0926361.              
+            1      1606  FLUID30       0.327   0.000204
+     Time at end of element matrix formulation CP = 56.0128708.              
  
  
  
@@ -397,12 +397,12 @@ Using :func:`Mapdl.solve() <ansys.mapdl.core.Mapdl.solve>`
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1      1606  FLUID30       0.206   0.000128
+            1      1606  FLUID30       0.293   0.000183
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1      1606  FLUID30       0.019   0.000012
+            1      1606  FLUID30       0.025   0.000016
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.  FREQUENCY=   220.000    
      *** LOAD STEP     1   SUBSTEP     2  COMPLETED.  FREQUENCY=   240.000    
      *** LOAD STEP     1   SUBSTEP     3  COMPLETED.  FREQUENCY=   260.000    
@@ -630,7 +630,7 @@ Stop MAPDL
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.920 seconds)
+   **Total running time of the script:** ( 0 minutes  8.836 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_acoustic_analysis.py:
