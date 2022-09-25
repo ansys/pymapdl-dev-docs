@@ -798,12 +798,12 @@ Interpolating: 100%|##########[00:00&lt;00:00]
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** WARNING ***                         CP =     118.186   TIME= 04:38:15
+ *** WARNING ***                         CP =     100.856   TIME= 04:34:00
  Previous testing revealed that 127 of the 44241 selected elements
  violate shape warning limits.  To review warning messages, please see
  the output or error file, or issue the CHECK command.
 
- *** NOTE ***                            CP =     118.186   TIME= 04:38:15
+ *** NOTE ***                            CP =     100.856   TIME= 04:34:00
  The model data was checked and warning messages were found.
   Please review output or errors file ( /file.err ) for these warning
  messages.
@@ -818,7 +818,7 @@ Interpolating: 100%|##########[00:00&lt;00:00]
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:38:15  SEP 24, 2022 CP=    118.205
+ 00000000  VERSION=LINUX x64     04:34:00  SEP 25, 2022 CP=    100.892
 
   File: D:\AICs\PyAnsys\Getting Started With PyMAPDL\Dataflow Between Python an
 
@@ -834,11 +834,11 @@ Interpolating: 100%|##########[00:00&lt;00:00]
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =     118.264   TIME= 04:38:15
+ *** NOTE ***                            CP =     100.995   TIME= 04:34:00
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =     118.265   TIME= 04:38:15
+ *** NOTE ***                            CP =     100.996   TIME= 04:34:00
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -863,20 +863,20 @@ Interpolating: 100%|##########[00:00&lt;00:00]
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1     44241  SOLID187      8.663   0.000196
- Time at end of element matrix formulation CP = 123.791916.
+        1     44241  SOLID187      5.592   0.000126
+ Time at end of element matrix formulation CP = 104.989151.
 
  SPARSE MATRIX DIRECT SOLVER.
   Number of equations =      251853,    Maximum wavefront =    225
 
- *** NOTE ***                            CP =     126.621   TIME= 04:38:20
+ *** NOTE ***                            CP =     107.976   TIME= 04:34:04
  The initial memory allocation (-m) has been exceeded.
   Supplemental memory allocations are being used.
   Memory allocated for solver              =  1077.722 MB
   Memory required for in-core solution     =  1033.955 MB
   Memory required for out-of-core solution =   367.872 MB
 
- *** NOTE ***                            CP =     127.109   TIME= 04:38:21
+ *** NOTE ***                            CP =     108.484   TIME= 04:34:05
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
@@ -891,12 +891,12 @@ Interpolating: 100%|##########[00:00&lt;00:00]
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1     44241  SOLID187      9.936   0.000225
+        1     44241  SOLID187      6.049   0.000137
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1     44241  SOLID187      2.209   0.000050
+        1     44241  SOLID187      1.497   0.000034
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -922,7 +922,7 @@ Interpolating: 100%|##########[00:00&lt;00:00]
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  28.250 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  23.436 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-exhaust-manifold-thermal-stress-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/b67a264a82677656de6b682b58cb4e14/exhaust_manifold_thermal_stress.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">exhaust_manifold_thermal_stress.py</span></code></a></p>
