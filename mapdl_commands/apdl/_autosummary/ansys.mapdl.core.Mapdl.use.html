@@ -957,98 +957,92 @@
 <h1>use<a class="headerlink" href="#use" title="Permalink to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.use">
-<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg4</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg5</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg6</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg7</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg8</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg9</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar10</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar12</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar13</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar14</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ag15</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar16</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar17</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar18</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.use" title="Permalink to this definition">#</a></dt>
-<dd><p>Executes a macro file.</p>
-<p>APDL Command: <code class="docutils literal notranslate"><span class="pre">*USE</span></code></p>
+<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lsnum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.use" title="Permalink to this definition">#</a></dt>
+<dd><p>Reads load and load step option data into the database.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This command can only run in non-interactive mode.
+Please visit <a class="reference external" href="https://mapdl.docs.pyansys.com/user_guide/mapdl.html#unsupported-interactive-commands">Unsupported “Interactive” Commands</a>
+for further information.</p>
+</div>
+<p>APDL Command: LSREAD</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong></dt><dd><p>Name (32 characters maximum, beginning with a letter) identifying
-the macro file or a macro block on a macro library file.</p>
-</dd>
-<dt><strong>arg1, arg2, arg3, … , ar18</strong></dt><dd><p>Values passed into the file or block where the parameters ARG1
-through ARG9 and AR10 through AR18 are referenced.  Values may be
-numbers, alphanumeric character strings (up to 32 characters
-enclosed in single quotes), parameters (numeric or character) or
-parametric expressions.  See below for additional details.</p>
+<dt><strong>lsnum</strong></dt><dd><p>Identification number of the load step file to be read.  Defaults
+to 1 + highest number read in the current session.  Issue
+LSREAD,STAT to list the current value of LSNUM.  Issue LSREAD,INIT
+to reset LSNUM to 1.  The load step files are assumed to be named
+Jobname.Sn, where n is a number assigned by the LSWRITE command (01
+–09,10,11, etc.).  On systems with a 3-character limit on the
+extension, the “S” is dropped for LSNUM &gt; 99.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>Causes execution of a macro file called Name, or, if not found, a macro
-block “Name” on the macro library file [<code class="docutils literal notranslate"><span class="pre">*ULIB</span></code>].  Argument values
-(numeric or character) are passed into the file or block and
-substituted for local parameters ARG1, ARG2, …, AR18.  The file Name
-may also be executed as an “unknown command” (i.e., without the <code class="docutils literal notranslate"><span class="pre">*USE</span></code>
-command name) as described below.</p>
-<p>A macro is a sequence of ANSYS commands (as many as needed) recorded in
-a file or in a macro block in a library file (specified with the <code class="docutils literal notranslate"><span class="pre">*ULIB</span></code>
-command).  The file or block is typically executed with the <code class="docutils literal notranslate"><span class="pre">*USE</span></code>
-command.  In addition to command, numerical and alphanumeric data, the
-macro may include parameters which will be assigned numerical or
-alphanumerical character values when the macro is used.  Use of the
-macro may be repeated (within a do-loop, for example) with the
-parameters incremented.  A macro is defined within a run by “enclosing”
-a sequence of data input commands between a <code class="docutils literal notranslate"><span class="pre">*CREATE</span></code> and a <code class="docutils literal notranslate"><span class="pre">*END</span></code>
-command.  The data input commands are passive (not executed) while
-being written to the macro file.  The macro file (without <code class="docutils literal notranslate"><span class="pre">*CREATE</span></code> and
-<code class="docutils literal notranslate"><span class="pre">*END</span></code> ) can also be created external to ANSYS.</p>
-<p>Up to 99 specially named scalar parameters called ARG1 to AR99 are
-locally available to each macro.  Note that the prefix for the first 9
-parameters is “ARG,” while the prefix for the last 90 is “AR.”  A local
-parameter is one which is not affected by, nor does it affect, other
-parameters, even those of the same name, which are used outside of the
-macro.  The only way a local parameter can affect, or be affected by,
-parameters outside the macro is if values are passed out of, or into,
-the macro by an argument list.  Parameters ARG1 through AR18 can have
-their values (numeric or character) passed via the argument list on the
-<code class="docutils literal notranslate"><span class="pre">*USE</span></code> command (ARG1 through AR19 can be passed as arguments on the
-“unknown command” macro).  Parameters AR19 through AR99 (AR20 through
-AR99 in the “unknown command” macro) are available solely for use
-within the macro; they cannot be passed via an argument list.  Local
-parameters are available to do-loops and to /INPUT files processed
-within the macro.  In addition to an ARG1–AR99 set for each macro,
-another ARG1–AR99 set is available external to all macros, local to
-“non-macro” space.</p>
-<p>A macro is exited after its last line is executed.  Macros may be
-nested (such as a <code class="docutils literal notranslate"><span class="pre">*USE</span></code> or an “unknown command” within a macro).  Each
-nested macro has its own set of 99 local parameters.  Only one set of
-local parameters can be active at a time and that is the set
-corresponding to the macro currently being executed or to the set
-external to all macros (if any).  When a nested macro completes
-execution, the previous set of local parameters once again becomes
-available.  Use <code class="docutils literal notranslate"><span class="pre">*STATUS,ARGX</span></code> to view current macro parameter values.</p>
-<p>An alternate way of executing a macro file is via the “unknown command”
-route.  If a command unknown to the ANSYS program is entered, a search
-for a file of that name (plus a .MAC suffix) is made.  If the file
-exists, it is executed, if not, the “unknown command” message is
-output.  Thus, users can write their own commands in terms of other
-ANSYS commands.  The procedure is similar to issuing the <code class="docutils literal notranslate"><span class="pre">*USE</span></code> command
-with the unknown command in the Name field.  For example, the command
-CMD,10,20,30 is internally similar to <code class="docutils literal notranslate"><span class="pre">*USE,CMD,10,20,30</span></code>.  The macro
-file named CMD.MAC will be executed with the three parameters.  The
-<code class="docutils literal notranslate"><span class="pre">*USE</span></code> macro description also applies to the “unknown command” macro,
-except that various directories are searched and a suffix (.MAC) is
-assumed.  Also, a macro library file is not searched.</p>
-<p>A three-level directory search for the “unknown command” macro file may
-be available (see the Operations Guide).  The search order may be: 1) a
-high-level system directory, 2) the login directory, and 3) the local
-(working) directory.  Use the /PSEARCH command to change the directory
-search path.  For an “unknown command” CMD, the first file named
-CMD.MAC found to exist in the search order will be executed.  The
-command may be input as upper or lower case, however, it is converted
-to upper case before the file name search occurs.  On systems that
-uniquely support both upper and lower case file names, the file with
-the matching lower case name will be used if it exists, otherwise, the
-file with the matching upper case name will be used. All macro files
-placed in the apdl directory must be upper case.</p>
-<p>Note, since undocumented commands exist in the ANSYS program, the user
-should issue the command intended for the macro file name to be sure
-the “unknown command” message is output in the processor where it’s to
-be used.  If the macro is to be used in other processors, the other
-processors must also be checked.</p>
-<p>This command is valid in any processor.</p>
+<p>Reads load and load step option data from the load step file into the
+database.  LSREAD will not clear the database of all current loads.
+However, if a load is respecified with LSREAD, then it will overwrite
+the existing load. See the LSWRITE command to write load step files,
+and the LSDELE command to delete load step files.  LSREAD removes any
+existing SFGRAD specification.</p>
+<p>This command is also valid in PREP7.</p>
+<p class="rubric">Examples</p>
+<p>Demonstrate writing out load steps using <code class="xref py py-func docutils literal notranslate"><span class="pre">lswrite</span>
+<span class="pre">&lt;ansys.mapdl.core.Mapdl.lswrite&gt;</span> <span class="pre">and</span> <span class="pre">reading</span> <span class="pre">them</span> <span class="pre">back</span> <span class="pre">in</span> <span class="pre">using</span>
+<span class="pre">``lsread`()</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Build a 5 x 5 flat plate out of shell181 elements.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">rectng</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;SHELL181&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s1">&#39;ex&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">10.0e5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">sectype</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;shell&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">secdata</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>  <span class="c1">#  0.1 thick</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">esize</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">amesh</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Fix the four corners</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s1">&#39;node(0,0,0)&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s1">&#39;node(0,5,0)&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s1">&#39;node(5,5,0)&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s1">&#39;node(5,0,0)&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Enter the solution routine and define a force at (2,2,0).</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s1">&#39;static&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="s1">&#39;node(2,2,0)&#39;</span><span class="p">,</span> <span class="s1">&#39;fz&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Write load out as load step 1 and delete all loads and displacements.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">lswrite</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">fdele</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">ddele</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Read back in the loads and list them.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">lsread</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">flist</span><span class="p">()</span>
+<span class="go">LIST NODAL FORCES FOR SELECTED NODES         1 TO       36 BY        1</span>
+<span class="go">CURRENTLY SELECTED NODAL LOAD SET= FX   FY   FZ   MX   MY   MZ</span>
+</pre></div>
+</div>
+<p><strong>* MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2022 R2          22.2     *</strong>
+Ansys Mechanical Enterprise
+00000000  VERSION=LINUX x64     10:15:14  AUG 22, 2022 CP=      0.561</p>
+<blockquote>
+<div><dl class="simple">
+<dt>NODE  LABEL     REAL           IMAG</dt><dd><p>26  FZ     -10.0000000      0.00000000</p>
+</dd>
+</dl>
+</div></blockquote>
 </dd></dl>
 
 </section>
