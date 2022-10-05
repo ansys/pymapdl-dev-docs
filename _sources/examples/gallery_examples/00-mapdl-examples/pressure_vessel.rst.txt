@@ -228,7 +228,7 @@ Solve
     FINISH SOLUTION PROCESSING
 
 
-     ***** ROUTINE COMPLETED *****  CP =       150.606
+     ***** ROUTINE COMPLETED *****  CP =        86.317
 
 
 
@@ -280,16 +280,16 @@ method to efficiently obtain results without outputting to disk.
 
 
     Node  Stress (psi)
-    1     3301.403
-    2     1906.958
-    3     1387.545
-    4     1373.553
-    5     867.288
+    1     3303.258
+    2     1910.658
+    3     1387.105
+    4     1372.503
+    5     866.849
     ...
 
     Maximum Stress
     Node  Stress (psi)
-    1004  3483.042
+    1000  3473.216
 
 
 
@@ -387,11 +387,11 @@ That these results are equivalent to results from PRNSOL.
  .. code-block:: none
 
     All close: True
-    LEGACY Reader and MAPDL VGET Min: 691.8562018090861
-    PRNSOL MAPDL Min:                 691.8562017
+    LEGACY Reader and MAPDL VGET Min: 695.6714131015065
+    PRNSOL MAPDL Min:                 695.671413
 
-    LEGACY Reader and MAPDL VGET Min: 3483.0418952187233
-    PRNSOL MAPDL Min:                 3483.041895
+    LEGACY Reader and MAPDL VGET Min: 3473.216439528389
+    PRNSOL MAPDL Min:                 3473.216439
 
 
 
@@ -415,7 +415,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.090 seconds)
+   **Total running time of the script:** ( 0 minutes  5.519 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_pressure_vessel.py:

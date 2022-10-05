@@ -98,7 +98,7 @@ graph of the sparse matrix
  .. code-block:: none
 
 
-    <matplotlib.lines.Line2D object at 0x7f71d571f130>
+    <matplotlib.lines.Line2D object at 0x7efe89f03760>
 
 
 
@@ -130,10 +130,11 @@ See the ``scipy`` documentation of the csr matrix at `scipy.sparse.csr_matrix <h
 
  .. code-block:: none
 
-    [ 0.57249304  0.56369167 -0.28624652 -0.28184583 -0.24789676 -0.24408565
-     -0.14312326 -0.14092292  0.77576289 -0.37033122]
-    [ 0  1  4  7 10 13 73 76  1  4]
-    [ 0  8 19 31 42 49 55 60 63 71]
+    [ 4.29370324e+03 -1.03503314e-06  4.22730212e+03 -1.64199776e-06
+     -2.11443035e+03  3.71695303e+02 -2.01662184e+03  7.35200589e+02
+      8.58683048e+03  2.26157151e-07]
+    [ 0  1  3  4  6  7  9 10  1  3]
+    [ 0  8 15 21 31 40 48 56 63 73]
 
 
 
@@ -228,9 +229,9 @@ Printing the list of objects in the MAPDL space, we find:
 
       Name                   Type            Mem. (MB)       Dims            Workspace
 
-       MIXLYB                SMAT            0.011           [126:126]               1
+       DWYCRI                SMAT            0.011           [126:126]               1
+       EJQXKC                SMAT            0.011           [126:126]               1
        MY_MAT                SMAT            0.000           [126:126]               1
-       PHMJAU                SMAT            0.011           [126:126]               1
        MY_MAT_DATA           VEC             0.006           738             1
        MY_MAT_IND            VEC             0.001           127             1
        MY_MAT_PTR            VEC             0.003           738             1
@@ -264,9 +265,9 @@ access the id property of the Python object.
 
  .. code-block:: none
 
-    name(k)=PHMJAU
+    name(k)=DWYCRI
     name(my_mat)=my_mat
-    name(msub)=MIXLYB
+    name(msub)=EJQXKC
 
 
 
@@ -290,7 +291,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.668 seconds)
+   **Total running time of the script:** ( 0 minutes  0.513 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_01-apdlmath-examples_scipy_sparse_matrix.py:
