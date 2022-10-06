@@ -662,10 +662,10 @@ to download the full example code</p>
 
 *****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =      86.937   TIME= 04:24:26
+ *** NOTE ***                            CP =     144.855   TIME= 04:21:59
  There is no title defined for this analysis.
 
- *** NOTE ***                            CP =      86.965   TIME= 04:24:26
+ *** NOTE ***                            CP =     144.937   TIME= 04:21:59
  No modes are being expanded (MXPAND command) and therefore the element
  results will not be written to the mode file.  If you do not intend to
  use mode selection and for more efficient calculation of element
@@ -683,7 +683,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:24:26  OCT 05, 2022 CP=     86.974
+ 00000000  VERSION=LINUX x64     04:21:59  OCT 06, 2022 CP=    144.957
 
 
 
@@ -702,15 +702,15 @@ to download the full example code</p>
    SHIFT POINT . . . . . . . . . . . . . . . . . .  1.0000
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** WARNING ***                         CP =      86.980   TIME= 04:24:26
+ *** WARNING ***                         CP =     144.976   TIME= 04:21:59
  No constraints have been defined using the D command.
 
- *** NOTE ***                            CP =      86.980   TIME= 04:24:26
+ *** NOTE ***                            CP =     144.976   TIME= 04:21:59
  The step data was checked and warning messages were found.
   Please review output or errors file ( /file.err ) for these warning
  messages.
 
- *** NOTE ***                            CP =      86.980   TIME= 04:24:26
+ *** NOTE ***                            CP =     144.977   TIME= 04:21:59
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -725,14 +725,14 @@ to download the full example code</p>
 
    TOTAL RIGID BODY MASS MATRIX ABOUT ORIGIN
                Translational mass               |   Coupled translational/rotational mass
-         78.000       0.38507E-62  -0.51644E-30 |   -0.67003E-34  -0.17959E-31   0.20817E-16
-        0.38507E-62    78.000      -0.64788E-47 |    0.13915E-31  -0.51708E-47   0.70300E-15
-       -0.51075E-30  -0.62676E-47    78.000     |    0.53776E-15  -0.68391E-15  -0.36483E-33
+         78.000        0.0000      -0.48842E-30 |   -0.17755E-33  -0.17959E-31   0.20817E-16
+         0.0000        78.000        0.0000     |    0.13915E-31    0.0000       0.70300E-15
+       -0.48238E-30    0.0000        78.000     |    0.53776E-15  -0.68391E-15  -0.54477E-33
      ------------------------------------------ | ------------------------------------------
                                                 |         Rotational mass (inertia)
                                                 |     6.5006       0.22335E-16   0.72143E-15
-                                                |   -0.27105E-16    6.5006       0.30574E-32
-                                                |    0.72143E-15   0.33704E-33    12.999
+                                                |   -0.27105E-16    6.5006       0.61389E-32
+                                                |    0.72143E-15  -0.12037E-32    12.999
 
    TOTAL MASS =  78.000
      The mass principal axes coincide with the global Cartesian axes
@@ -741,8 +741,8 @@ to download the full example code</p>
 
    TOTAL INERTIA ABOUT CENTER OF MASS
          6.5006       0.22335E-16   0.72143E-15
-        0.22335E-16    6.5006       0.30574E-32
-        0.72143E-15   0.30574E-32    12.999
+        0.22335E-16    6.5006       0.61389E-32
+        0.72143E-15   0.61389E-32    12.999
      The inertia principal axes coincide with the global Cartesian axes
 
 
@@ -758,8 +758,8 @@ to download the full example code</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        4     10000  SHELL181      0.305   0.000030
- Time at end of element matrix formulation CP = 87.3613205.
+        4     10000  SHELL181      0.612   0.000061
+ Time at end of element matrix formulation CP = 145.790314.
 
   BLOCK LANCZOS CALCULATION OF UP TO    20 EIGENVECTORS.
   NUMBER OF EQUATIONS              =        61206
@@ -768,11 +768,11 @@ to download the full example code</p>
   MINIMUM EIGENVALUE               =  0.10000E+01
   MAXIMUM EIGENVALUE               =  0.10000E+31
 
-  Memory allocated for solver              =   166.120 MB
-  Memory required for in-core solution     =   158.546 MB
-  Memory required for out-of-core solution =    40.594 MB
+  Memory allocated for solver              =   187.192 MB
+  Memory required for in-core solution     =   178.612 MB
+  Memory required for out-of-core solution =    60.617 MB
 
- *** NOTE ***                            CP =      88.408   TIME= 04:24:27
+ *** NOTE ***                            CP =     147.507   TIME= 04:22:01
  The Sparse Matrix Solver used by the Block Lanczos eigensolver is
  currently running in the in-core memory mode.  This memory mode uses
  the most amount of memory in order to avoid using the hard drive as
@@ -782,7 +782,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:24:29  OCT 05, 2022 CP=     89.738
+ 00000000  VERSION=LINUX x64     04:22:03  OCT 06, 2022 CP=    149.846
 
 
 
@@ -798,30 +798,30 @@ to download the full example code</p>
 
    FREQUENCY RANGE REQUESTED=   20 MODES ABOVE   1.00000     HERTZ
 
-    1     32.74664192956
-    2     47.77804288719
-    3     59.17108298355
-    4     84.60790505164
-    5     84.60790505195
-    6     148.8927748649
-    7     148.8927748651
+    1     32.74664192985
+    2     47.77804288731
+    3     59.17108298360
+    4     84.60790505173
+    5     84.60790505208
+    6     148.8927748650
+    7     148.8927748652
     8     154.6519861747
-    9     168.3840411457
-   10     187.7790667341
+    9     168.3840411461
+   10     187.7790667343
    11     255.9751634915
-   12     255.9751634919
-   13     285.2444050790
-   14     298.2943388360
-   15     319.8023401633
-   16     319.8023401634
+   12     255.9751634916
+   13     285.2444050788
+   14     298.2943388367
+   15     319.8023401634
+   16     319.8023401640
    17     370.6023621796
-   18     391.8457651355
-   19     409.1039880845
-   20     482.6516135508
+   18     391.8457651345
+   19     409.1039880842
+   20     482.6516135505
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:24:29  OCT 05, 2022 CP=     89.829
+ 00000000  VERSION=LINUX x64     04:22:03  OCT 06, 2022 CP=    150.092
 
 
 
@@ -989,7 +989,7 @@ to download the full example code</p>
 
  *** ANSYS BINARY FILE STATISTICS
   BUFFER SIZE USED= 16384
-       19.438 MB WRITTEN ON ASSEMBLED MATRIX FILE: file.full
+       19.250 MB WRITTEN ON ASSEMBLED MATRIX FILE: file.full
        26.938 MB WRITTEN ON MODAL MATRIX FILE: file.mode
 </pre></div>
 </div>
@@ -1043,7 +1043,7 @@ Enable a continuous plot looping with <code class="docutils literal notranslate"
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.669 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.730 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/64adae6b03e47dc2c3a43f0a2a856797/pyvista_mesh.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pyvista_mesh.py</span></code></a></p>
