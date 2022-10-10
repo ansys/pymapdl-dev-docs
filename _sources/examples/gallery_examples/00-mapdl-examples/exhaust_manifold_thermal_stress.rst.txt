@@ -201,7 +201,7 @@ Import and map temperature data to FE mesh
 
  .. code-block:: none
 
-      0%|          [00:00<?]    Interpolating:   0%|          [00:00<?]    Interpolating: 100%|##########[00:00<00:00]    Interpolating: 100%|##########[00:00<00:00]    Interpolating: 100%|##########[00:00<00:00]
+      0%|          [00:00<?]    Interpolating:   0%|          [00:00<?]    Interpolating: 100%|##########[00:00<00:00]    Interpolating: 100%|##########[00:00<00:00]
 
 
 
@@ -254,12 +254,12 @@ Apply loads and boundary conditions and solve the model
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** WARNING ***                         CP =     114.805   TIME= 04:34:13
+     *** WARNING ***                         CP =      92.729   TIME= 04:37:37
      Previous testing revealed that 127 of the 44241 selected elements       
      violate shape warning limits.  To review warning messages, please see   
      the output or error file, or issue the CHECK command.                   
 
-     *** NOTE ***                            CP =     114.805   TIME= 04:34:13
+     *** NOTE ***                            CP =      92.729   TIME= 04:37:37
      The model data was checked and warning messages were found.             
       Please review output or errors file ( /file.err ) for these warning    
      messages.                                                               
@@ -274,7 +274,7 @@ Apply loads and boundary conditions and solve the model
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:34:13  OCT 09, 2022 CP=    114.838
+     00000000  VERSION=LINUX x64     04:37:37  OCT 10, 2022 CP=     92.747
 
       File: D:\AICs\PyAnsys\Getting Started With PyMAPDL\Dataflow Between Python an
 
@@ -290,11 +290,11 @@ Apply loads and boundary conditions and solve the model
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =     114.922   TIME= 04:34:13
+     *** NOTE ***                            CP =      92.794   TIME= 04:37:37
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =     114.923   TIME= 04:34:13
+     *** NOTE ***                            CP =      92.795   TIME= 04:37:37
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -319,20 +319,20 @@ Apply loads and boundary conditions and solve the model
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1     44241  SOLID187      6.363   0.000144
-     Time at end of element matrix formulation CP = 119.313461.              
+            1     44241  SOLID187      5.021   0.000113
+     Time at end of element matrix formulation CP = 96.2441254.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =      251853,    Maximum wavefront =    225
 
-     *** NOTE ***                            CP =     122.362   TIME= 04:34:18
+     *** NOTE ***                            CP =      98.965   TIME= 04:37:41
      The initial memory allocation (-m) has been exceeded.                   
       Supplemental memory allocations are being used.                        
       Memory allocated for solver              =  1077.722 MB
       Memory required for in-core solution     =  1033.955 MB
       Memory required for out-of-core solution =   367.872 MB
 
-     *** NOTE ***                            CP =     122.933   TIME= 04:34:19
+     *** NOTE ***                            CP =      99.412   TIME= 04:37:41
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -347,12 +347,12 @@ Apply loads and boundary conditions and solve the model
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1     44241  SOLID187      6.920   0.000156
+            1     44241  SOLID187      5.193   0.000117
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1     44241  SOLID187      1.684   0.000038
+            1     44241  SOLID187      1.274   0.000029
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -413,7 +413,7 @@ Exit MAPDL instance
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  27.618 seconds)
+   **Total running time of the script:** ( 0 minutes  20.403 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_exhaust_manifold_thermal_stress.py:
