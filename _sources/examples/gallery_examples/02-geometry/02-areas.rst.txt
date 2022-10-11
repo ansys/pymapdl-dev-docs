@@ -47,11 +47,13 @@ using Pythonic PREP7 area commands.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     Product:             Ansys Mechanical Enterprise
     MAPDL Version:       21.2
-    ansys.mapdl Version: 0.63.1
+    ansys.mapdl Version: 0.63.0
 
 
 
@@ -210,6 +212,8 @@ Return an array of the area IDs
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
@@ -242,10 +246,12 @@ individual meshes.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
-    [UnstructuredGrid (0x7fe0593b9e20)
+    [UnstructuredGrid (0x7fed662b0640)
       N Cells:	12
       N Points:	24
       X Bounds:	0.000e+00, 1.000e+00
@@ -341,6 +347,8 @@ This example generates a series of random squares and selects them
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]
@@ -365,6 +373,8 @@ Select every other area with the old style command.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -392,6 +402,8 @@ Note that the Area IDs are 1 based in MAPDL, while Python ranges are 0 based.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -421,6 +433,8 @@ areas.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -489,23 +503,28 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.059 seconds)
+   **Total running time of the script:** ( 0 minutes  3.621 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_02-geometry_02-areas.py:
 
-.. only:: html
 
-  .. container:: sphx-glr-footer sphx-glr-footer-example
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
 
 
-    .. container:: sphx-glr-download sphx-glr-download-python
 
-      :download:`Download Python source code: 02-areas.py <02-areas.py>`
+  .. container:: sphx-glr-download sphx-glr-download-python
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+     :download:`Download Python source code: 02-areas.py <02-areas.py>`
 
-      :download:`Download Jupyter notebook: 02-areas.ipynb <02-areas.ipynb>`
+
+
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+     :download:`Download Jupyter notebook: 02-areas.ipynb <02-areas.ipynb>`
 
 
 .. only:: html

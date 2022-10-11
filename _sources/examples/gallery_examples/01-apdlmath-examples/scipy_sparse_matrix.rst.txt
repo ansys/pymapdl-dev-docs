@@ -64,6 +64,8 @@ stiffness matrix into APDLmath.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
@@ -95,10 +97,12 @@ graph of the sparse matrix
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
-    <matplotlib.lines.Line2D object at 0x7fe030a426d0>
+    <matplotlib.lines.Line2D object at 0x7fed663f3970>
 
 
 
@@ -127,6 +131,8 @@ See the ``scipy`` documentation of the csr matrix at `scipy.sparse.csr_matrix <h
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -160,6 +166,8 @@ load any CSR matrix to MAPDL.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
@@ -186,6 +194,8 @@ We compute the norm of the difference, should be zero
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -222,15 +232,17 @@ Printing the list of objects in the MAPDL space, we find:
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     APDLMATH PARAMETER STATUS-  (      6 PARAMETERS DEFINED)
 
       Name                   Type            Mem. (MB)       Dims            Workspace
 
-       DOSQCC                SMAT            0.011           [126:126]               1
        MY_MAT                SMAT            0.000           [126:126]               1
-       QRBHQA                SMAT            0.011           [126:126]               1
+       NPMIBH                SMAT            0.011           [126:126]               1
+       TADCIG                SMAT            0.011           [126:126]               1
        MY_MAT_DATA           VEC             0.006           738             1
        MY_MAT_IND            VEC             0.001           127             1
        MY_MAT_PTR            VEC             0.003           738             1
@@ -262,11 +274,13 @@ access the id property of the Python object.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
-    name(k)=DOSQCC
+    name(k)=NPMIBH
     name(my_mat)=my_mat
-    name(msub)=QRBHQA
+    name(msub)=TADCIG
 
 
 
@@ -290,23 +304,28 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.708 seconds)
+   **Total running time of the script:** ( 0 minutes  0.860 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_01-apdlmath-examples_scipy_sparse_matrix.py:
 
-.. only:: html
 
-  .. container:: sphx-glr-footer sphx-glr-footer-example
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
 
 
-    .. container:: sphx-glr-download sphx-glr-download-python
 
-      :download:`Download Python source code: scipy_sparse_matrix.py <scipy_sparse_matrix.py>`
+  .. container:: sphx-glr-download sphx-glr-download-python
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+     :download:`Download Python source code: scipy_sparse_matrix.py <scipy_sparse_matrix.py>`
 
-      :download:`Download Jupyter notebook: scipy_sparse_matrix.ipynb <scipy_sparse_matrix.ipynb>`
+
+
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+     :download:`Download Jupyter notebook: scipy_sparse_matrix.ipynb <scipy_sparse_matrix.ipynb>`
 
 
 .. only:: html

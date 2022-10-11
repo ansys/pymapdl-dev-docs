@@ -74,10 +74,12 @@ After this preamble is complete, the first code block begins.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
-    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7fe0813defa0>
+    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7fed250014f0>
 
 
 
@@ -113,14 +115,16 @@ printed to the screen according to its ``__repr__``.  Otherwise, you can use ``p
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     Product:             Ansys Mechanical Enterprise
     MAPDL Version:       21.2
-    ansys.mapdl Version: 0.63.1
+    ansys.mapdl Version: 0.63.0
 
 
-    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7fe0813defa0>
+    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7fed250014f0>
 
 
 
@@ -183,6 +187,8 @@ Matplotlib plots will also be rendered in the html.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
@@ -226,23 +232,28 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.693 seconds)
+   **Total running time of the script:** ( 0 minutes  0.811 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_03-tips-n-tricks_00-example-template.py:
 
-.. only:: html
 
-  .. container:: sphx-glr-footer sphx-glr-footer-example
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
 
 
-    .. container:: sphx-glr-download sphx-glr-download-python
 
-      :download:`Download Python source code: 00-example-template.py <00-example-template.py>`
+  .. container:: sphx-glr-download sphx-glr-download-python
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+     :download:`Download Python source code: 00-example-template.py <00-example-template.py>`
 
-      :download:`Download Jupyter notebook: 00-example-template.ipynb <00-example-template.ipynb>`
+
+
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+     :download:`Download Jupyter notebook: 00-example-template.ipynb <00-example-template.ipynb>`
 
 
 .. only:: html

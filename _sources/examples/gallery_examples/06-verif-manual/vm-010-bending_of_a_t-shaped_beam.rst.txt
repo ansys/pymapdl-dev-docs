@@ -153,6 +153,8 @@ Set up the element type ``BEAM188``.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     ELEMENT TYPE        1 IS BEAM188      3-D 2-NODE BEAM             
@@ -194,6 +196,8 @@ Set up the material, where:
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -243,6 +247,8 @@ Set up the cross-section properties for a beam elements, where:
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -299,6 +305,8 @@ Set up the nodes and elements. Create nodes between elements.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     1   0.0000        0.0000        0.0000          0.00     0.00     0.00
@@ -345,6 +353,8 @@ Create element between nodes 1 and 2 using node 3 as orientational node.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -600,23 +610,28 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.550 seconds)
+   **Total running time of the script:** ( 0 minutes  0.661 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_06-verif-manual_vm-010-bending_of_a_t-shaped_beam.py:
 
-.. only:: html
 
-  .. container:: sphx-glr-footer sphx-glr-footer-example
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
 
 
-    .. container:: sphx-glr-download sphx-glr-download-python
 
-      :download:`Download Python source code: vm-010-bending_of_a_t-shaped_beam.py <vm-010-bending_of_a_t-shaped_beam.py>`
+  .. container:: sphx-glr-download sphx-glr-download-python
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+     :download:`Download Python source code: vm-010-bending_of_a_t-shaped_beam.py <vm-010-bending_of_a_t-shaped_beam.py>`
 
-      :download:`Download Jupyter notebook: vm-010-bending_of_a_t-shaped_beam.ipynb <vm-010-bending_of_a_t-shaped_beam.ipynb>`
+
+
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+     :download:`Download Jupyter notebook: vm-010-bending_of_a_t-shaped_beam.ipynb <vm-010-bending_of_a_t-shaped_beam.ipynb>`
 
 
 .. only:: html

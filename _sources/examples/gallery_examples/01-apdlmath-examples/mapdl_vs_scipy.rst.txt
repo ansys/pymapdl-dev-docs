@@ -92,11 +92,13 @@ Next:
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     Product:             Ansys Mechanical Enterprise
     MAPDL Version:       21.2
-    ansys.mapdl Version: 0.63.1
+    ansys.mapdl Version: 0.63.0
 
 
 
@@ -120,6 +122,8 @@ First load the input file using MAPDL.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -199,6 +203,8 @@ file.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     *****  ANSYS SOLUTION ROUTINE  *****
@@ -260,12 +266,14 @@ Solve the eigenproblem using PyMapdl with APDLMath.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     /opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1498: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
       warn(
 
-    Elapsed time to solve this problem :  0.4917106628417969
+    Elapsed time to solve this problem :  0.5850937366485596
 
 
 
@@ -306,6 +314,8 @@ Accuracy : :math:`\frac{||(K-\lambda.M).\phi||_2}{||K.\phi||_2}`
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -439,10 +449,12 @@ Solve the eigenproblem
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
-    Elapsed time to solve this problem :  2.347872495651245
+    Elapsed time to solve this problem :  2.8754096031188965
 
 
 
@@ -501,6 +513,8 @@ Compute the residual error for SciPy.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -569,9 +583,11 @@ MAPDL is faster than SciPy.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
-    Mapdl is 4.77 times faster
+    Mapdl is 4.91 times faster
 
 
 
@@ -595,23 +611,28 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.070 seconds)
+   **Total running time of the script:** ( 0 minutes  6.188 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_01-apdlmath-examples_mapdl_vs_scipy.py:
 
-.. only:: html
 
-  .. container:: sphx-glr-footer sphx-glr-footer-example
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
 
 
-    .. container:: sphx-glr-download sphx-glr-download-python
 
-      :download:`Download Python source code: mapdl_vs_scipy.py <mapdl_vs_scipy.py>`
+  .. container:: sphx-glr-download sphx-glr-download-python
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+     :download:`Download Python source code: mapdl_vs_scipy.py <mapdl_vs_scipy.py>`
 
-      :download:`Download Jupyter notebook: mapdl_vs_scipy.ipynb <mapdl_vs_scipy.ipynb>`
+
+
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+     :download:`Download Jupyter notebook: mapdl_vs_scipy.ipynb <mapdl_vs_scipy.ipynb>`
 
 
 .. only:: html

@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Mapdl &#8212; PyMAPDL</title>
     
@@ -680,7 +680,7 @@
 <td><p>Start writing all APDL commands to an MAPDL input file.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.open_gui.html#ansys.mapdl.core.Mapdl.open_gui" title="ansys.mapdl.core.Mapdl.open_gui"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.open_gui</span></code></a>([include_result, inplace])</p></td>
-<td><p>Save the existing database and open it up in the MAPDL GUI.</p></td>
+<td><p>Saves existing database and opens up the APDL GUI.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a></p></td>
 <td><p>Collection of MAPDL parameters.</p></td>
@@ -746,9 +746,8 @@ collected.</p>
 <dt><strong>set_no_abort</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Sets MAPDL to not abort at the first error within /BATCH mode.
 Default <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
-<dt><strong>remove_temp_files</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>When this parameter is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the MAPDL working directory will be
-deleted when MAPDL is exited provided that it is within the temporary
-user directory. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dt><strong>remove_temp_files</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Removes temporary files on exit if MAPDL is local.  Default
+<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
 <dt><strong>log_file</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Copy the log to a file called <cite>logs.log</cite> located where the
 python script is executed. Default <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
@@ -952,7 +951,7 @@ which means <code class="docutils literal notranslate"><span class="pre">print</
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

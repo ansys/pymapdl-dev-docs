@@ -184,6 +184,8 @@ Import the geometry file and list any MAPDL parameters.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     MAPDL Parameters
@@ -212,6 +214,8 @@ Use pressure area per length in the load definition.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     MAPDL Parameters
@@ -239,6 +243,8 @@ Change the units and title.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
@@ -264,6 +270,8 @@ Set material properties.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -298,6 +306,8 @@ application.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -425,6 +435,8 @@ form needed to define the MAPDL table array, you can use
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
@@ -487,6 +499,8 @@ Solve the model.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -672,6 +686,8 @@ Get all principal nodal stresses.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
@@ -703,6 +719,8 @@ Get the principal nodal stresses of the node subset.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -737,13 +755,15 @@ to check
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     PRINT S    NODAL SOLUTION PER NODE
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     07:42:52  OCT 11, 2022 CP=    141.363
+     00000000  VERSION=LINUX x64     08:02:42  OCT 11, 2022 CP=    170.462
 
      Lathe Cutter                                                                  
 
@@ -802,6 +822,8 @@ Use this command to obtain the data as a list.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     [[15.0, 6455.0, 135.15, -633.69, 7089.0, 6737.0], [84.0, 7591.0, 381.08, 336.29, 7255.0, 7232.0], [85.0, 6735.0, 440.78, 173.33, 6561.0, 6432.0], [86.0, 6829.0, 1084.0, 460.22, 6369.0, 6081.0], [235.0, 5348.0, 529.17, -108.09, 5456.0, 5167.0], [236.0, 5801.0, 434.95, -21.273, 5822.0, 5608.0], [237.0, 6092.0, 543.8, 57.951, 6034.0, 5807.0], [415.0, 7151.0, 636.57, 329.05, 6822.0, 6674.0], [416.0, 7022.0, 328.91, 131.78, 6890.0, 6794.0], [417.0, 7361.0, 380.66, 114.99, 7246.0, 7117.0], [425.0, 7092.0, 308.05, -124.23, 7216.0, 7010.0], [426.0, 6572.0, 285.34, -4.5637, 6576.0, 6436.0], [460.0, 5708.0, 483.65, -115.92, 5824.0, 5549.0], [1104.0, 6789.0, 418.02, 157.69, 6632.0, 6505.0], [1163.0, 5894.0, -128.3, -567.37, 6461.0, 6253.0]]
@@ -825,6 +847,8 @@ Use this command to obtain the data as an array:
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -1136,23 +1160,28 @@ Finally, exit MAPDL.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.839 seconds)
+   **Total running time of the script:** ( 0 minutes  9.411 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_lathe_cutter.py:
 
-.. only:: html
 
-  .. container:: sphx-glr-footer sphx-glr-footer-example
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
 
 
-    .. container:: sphx-glr-download sphx-glr-download-python
 
-      :download:`Download Python source code: lathe_cutter.py <lathe_cutter.py>`
+  .. container:: sphx-glr-download sphx-glr-download-python
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+     :download:`Download Python source code: lathe_cutter.py <lathe_cutter.py>`
 
-      :download:`Download Jupyter notebook: lathe_cutter.ipynb <lathe_cutter.ipynb>`
+
+
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+     :download:`Download Jupyter notebook: lathe_cutter.ipynb <lathe_cutter.ipynb>`
 
 
 .. only:: html

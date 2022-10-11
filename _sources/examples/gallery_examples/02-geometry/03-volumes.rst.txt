@@ -47,11 +47,13 @@ using Pythonic PREP7 volume commands.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     Product:             Ansys Mechanical Enterprise
     MAPDL Version:       21.2
-    ansys.mapdl Version: 0.63.1
+    ansys.mapdl Version: 0.63.0
 
 
 
@@ -408,6 +410,8 @@ Return an array of the volume numbers.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
@@ -497,6 +501,8 @@ This example generates a series of random volumes and selects them
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]
@@ -521,6 +527,8 @@ Select every other volume with the old style command.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -549,6 +557,8 @@ Note that the item IDs are 1 based in MAPDL, while Python ranges are
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -580,6 +590,8 @@ Note that you could use a numpy array here as well.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -644,23 +656,28 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  9.688 seconds)
+   **Total running time of the script:** ( 2 minutes  39.678 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_02-geometry_03-volumes.py:
 
-.. only:: html
 
-  .. container:: sphx-glr-footer sphx-glr-footer-example
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
 
 
-    .. container:: sphx-glr-download sphx-glr-download-python
 
-      :download:`Download Python source code: 03-volumes.py <03-volumes.py>`
+  .. container:: sphx-glr-download sphx-glr-download-python
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+     :download:`Download Python source code: 03-volumes.py <03-volumes.py>`
 
-      :download:`Download Jupyter notebook: 03-volumes.ipynb <03-volumes.ipynb>`
+
+
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+     :download:`Download Jupyter notebook: 03-volumes.ipynb <03-volumes.ipynb>`
 
 
 .. only:: html

@@ -67,6 +67,8 @@ Thanks SimuTech!
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
@@ -250,6 +252,8 @@ then performed.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
@@ -258,12 +262,12 @@ then performed.
      TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
           SURFACE LOADS  TRANSFERRED FROM AREAS         =     25
 
-     *** NOTE ***                            CP =     160.941   TIME= 07:43:28
+     *** NOTE ***                            CP =     194.061   TIME= 08:03:27
      There is no title defined for this analysis.                            
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     07:43:28  OCT 11, 2022 CP=    160.942
+     00000000  VERSION=LINUX x64     08:03:27  OCT 11, 2022 CP=    194.063
 
                                                                                
 
@@ -281,7 +285,7 @@ then performed.
        EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE             
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =     160.943   TIME= 07:43:28
+     *** NOTE ***                            CP =     194.064   TIME= 08:03:27
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -341,8 +345,8 @@ then performed.
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       625  SOLID70       0.020   0.000032
-     Time at end of element matrix formulation CP = 160.987701.              
+            1       625  SOLID70       0.026   0.000042
+     Time at end of element matrix formulation CP = 194.119598.              
 
      ALL CURRENT ANSYS DATA WRITTEN TO FILE NAME= file.rdb
       FOR POSSIBLE RESUME FROM THIS POINT
@@ -353,7 +357,7 @@ then performed.
       Memory required for in-core solution     =     1.032 MB
       Memory required for out-of-core solution =     0.575 MB
 
-     *** NOTE ***                            CP =     161.020   TIME= 07:43:28
+     *** NOTE ***                            CP =     194.160   TIME= 08:03:27
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -368,12 +372,12 @@ then performed.
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       625  SOLID70       0.024   0.000038
+            1       625  SOLID70       0.028   0.000046
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       625  SOLID70       0.027   0.000043
+            1       625  SOLID70       0.033   0.000053
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   10.0000         TIME INC =   10.0000      NEW TRIANG MATRIX
      *** RESPONSE EIGENVALUE = 0.2324       OSCILLATION LIMIT =  2.324    
@@ -1285,19 +1289,21 @@ result = mapdl.thermal_result
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
     FINISH SOLUTION PROCESSING
 
 
-     ***** ROUTINE COMPLETED *****  CP =       167.768
+     ***** ROUTINE COMPLETED *****  CP =       202.721
 
 
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     07:43:31  OCT 11, 2022 CP=    167.770
+     00000000  VERSION=LINUX x64     08:03:31  OCT 11, 2022 CP=    202.722
 
                                                                                
 
@@ -1411,6 +1417,8 @@ python accessible variable, rather than storing it to a MAPDL value.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
@@ -1441,10 +1449,12 @@ Here, we extract the temperature of the node across for each solution
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
-    [76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561242, 81.1910830004933, 83.56709007016164, 85.3512529538765, 86.23266429275351, 86.97754017604863, 88.31275589884442]
+    [76.27707675716556, 76.81799224351983, 77.4215154009755, 79.04838835561242, 81.19108300049326, 83.5670900701616, 85.35125295387644, 86.23266429275347, 86.97754017604862, 88.31275589884443]
 
 
 
@@ -1477,10 +1487,12 @@ sent back for each result.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
-    [76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561242, 81.1910830004933, 83.56709007016164, 85.3512529538765, 86.23266429275351, 86.97754017604863, 88.31275589884442]
+    [76.27707675716556, 76.81799224351983, 77.4215154009755, 79.04838835561242, 81.19108300049326, 83.5670900701616, 85.35125295387644, 86.23266429275347, 86.97754017604862, 88.31275589884443]
 
 
 
@@ -1531,23 +1543,28 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.138 seconds)
+   **Total running time of the script:** ( 0 minutes  8.627 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_transient_thermal.py:
 
-.. only:: html
 
-  .. container:: sphx-glr-footer sphx-glr-footer-example
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
 
 
-    .. container:: sphx-glr-download sphx-glr-download-python
 
-      :download:`Download Python source code: transient_thermal.py <transient_thermal.py>`
+  .. container:: sphx-glr-download sphx-glr-download-python
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+     :download:`Download Python source code: transient_thermal.py <transient_thermal.py>`
 
-      :download:`Download Jupyter notebook: transient_thermal.ipynb <transient_thermal.ipynb>`
+
+
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+     :download:`Download Jupyter notebook: transient_thermal.ipynb <transient_thermal.ipynb>`
 
 
 .. only:: html

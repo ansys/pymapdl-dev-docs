@@ -47,11 +47,13 @@ using Pythonic PREP7 line commands.
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     Product:             Ansys Mechanical Enterprise
     MAPDL Version:       21.2
-    ansys.mapdl Version: 0.63.1
+    ansys.mapdl Version: 0.63.0
 
 
 
@@ -80,6 +82,8 @@ Create a line between the two keypoints ``(0, 0, 0)`` and ``(1, 0, 0)``
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -507,6 +511,8 @@ Return an array of the line IDs
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
 
@@ -598,6 +604,8 @@ This example generates a series of random lines and selects them
 
 .. rst-class:: sphx-glr-script-out
 
+ Out:
+
  .. code-block:: none
 
     [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]
@@ -622,6 +630,8 @@ Select every other line with the old style command.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -650,6 +660,8 @@ Note that the item IDs are 1 based in MAPDL, while Python ranges are
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -681,6 +693,8 @@ Note that you could use a numpy array here as well.
 
 
 .. rst-class:: sphx-glr-script-out
+
+ Out:
 
  .. code-block:: none
 
@@ -746,23 +760,28 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.454 seconds)
+   **Total running time of the script:** ( 0 minutes  5.532 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_02-geometry_01-lines.py:
 
-.. only:: html
 
-  .. container:: sphx-glr-footer sphx-glr-footer-example
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
 
 
-    .. container:: sphx-glr-download sphx-glr-download-python
 
-      :download:`Download Python source code: 01-lines.py <01-lines.py>`
+  .. container:: sphx-glr-download sphx-glr-download-python
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+     :download:`Download Python source code: 01-lines.py <01-lines.py>`
 
-      :download:`Download Jupyter notebook: 01-lines.ipynb <01-lines.ipynb>`
+
+
+  .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+     :download:`Download Jupyter notebook: 01-lines.ipynb <01-lines.ipynb>`
 
 
 .. only:: html
