@@ -1,23 +1,19 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Statically Indeterminate Reaction Force Analysis &#8212; PyMAPDL</title>
     
-<script>
-  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
-</script>
-
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-
+    
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -29,14 +25,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/ansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -44,7 +40,6 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
@@ -57,42 +52,43 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Pinched Cylinder" href="vm-006-pinched_cylinder.html" />
     <link rel="prev" title="Deflection of a Hinged Support" href="vm-004-deflection_of_a_hinged_support.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
-    <div class="bd-header-announcement container-fluid" id="banner">
-      
-
-    </div>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
 
     
     
-    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
 
   <div id="navbar-start">
     
     
-  
 
-
-<a class="navbar-brand logo" href="../../../index.html">
-  
-  
-  
-  
-    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
-    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
-  
-  
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
 </a>
+
+
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="fas fa-bars"></span>
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
   </button>
 
   
@@ -132,12 +128,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../learning/index.html">
-  Learning PyMAPDL
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../contributing.html">
   Contributing
  </a>
@@ -149,15 +139,8 @@
       
     </div>
 
+    
     <div id="navbar-end">
-      
-      <div class="navbar-end-item">
-        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
-</span>
-      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -169,6 +152,7 @@
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -199,13 +183,13 @@
     
 
 
-    <div class="bd-container container-xl">
-      <div class="bd-container__inner row">
+    <div class="container-xl">
+      <div class="row">
           
-
-<!-- Only show if we have sidebars configured, else just a small margin  -->
-<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
-  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -243,20 +227,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/contact_elements.html">
    Contact Element Example
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/cyclic_analysis.html">
-   Cyclic Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/exhaust_manifold_thermal_stress.html">
-   Thermal-structural analysis of exhaust manifold
   </a>
  </li>
 </ul>
@@ -550,20 +520,19 @@
     
   </div>
 </nav>
-  </div>
-  <div class="sidebar-end-items">
-  </div>
-</div>
-
-
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
           
 
-
-<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
-  
-    
-    <div class="toc-item">
-      
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
 <div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
@@ -618,21 +587,23 @@
 </ul>
 
 </nav>
-    </div>
-    
-    <div class="toc-item">
-      
-    </div>
-    
-  
-</div>
-
-
-          
-          
-          <div class="bd-content col-12 col-md-9 col-xl-7">
+              </div>
               
-              <article class="bd-article" role="main">
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
                 
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
@@ -640,7 +611,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="statically-indeterminate-reaction-force-analysis">
-<span id="ref-vm5-example"></span><span id="sphx-glr-examples-gallery-examples-06-verif-manual-vm-005-laterally-loaded-tapered-support-structure-py"></span><h1>Statically Indeterminate Reaction Force Analysis<a class="headerlink" href="#statically-indeterminate-reaction-force-analysis" title="Permalink to this heading">#</a></h1>
+<span id="ref-vm5-example"></span><span id="sphx-glr-examples-gallery-examples-06-verif-manual-vm-005-laterally-loaded-tapered-support-structure-py"></span><h1>Statically Indeterminate Reaction Force Analysis<a class="headerlink" href="#statically-indeterminate-reaction-force-analysis" title="Permalink to this headline">#</a></h1>
 <dl class="simple">
 <dt>Problem Description:</dt><dd><ul class="simple">
 <li><p>A cantilever beam of thickness <span class="math notranslate nohighlight">\(t\)</span> and length <span class="math notranslate nohighlight">\(l\)</span>
@@ -698,7 +669,7 @@ ratio is set to 0.0 to agree with beam theory.</p></li>
 </pre></div>
 </div>
 <section id="start-mapdl">
-<h2>Start MAPDL<a class="headerlink" href="#start-mapdl" title="Permalink to this heading">#</a></h2>
+<h2>Start MAPDL<a class="headerlink" href="#start-mapdl" title="Permalink to this headline">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="c1"># start mapdl and clear it</span>
@@ -719,7 +690,7 @@ ratio is set to 0.0 to agree with beam theory.</p></li>
 </div>
 </section>
 <section id="define-material">
-<h2>Define Material<a class="headerlink" href="#define-material" title="Permalink to this heading">#</a></h2>
+<h2>Define Material<a class="headerlink" href="#define-material" title="Permalink to this headline">#</a></h2>
 <p>Set up the material using PLANE182 with a thickness of 2 (using real
 constants), and create a material with a Young’s modulus of 30e6,
 and a poisson’s ratio of 0.0 to agree with beam theory.</p>
@@ -736,7 +707,7 @@ and a poisson’s ratio of 0.0 to agree with beam theory.</p>
 </div>
 </section>
 <section id="define-geometry">
-<h2>Define Geometry<a class="headerlink" href="#define-geometry" title="Permalink to this heading">#</a></h2>
+<h2>Define Geometry<a class="headerlink" href="#define-geometry" title="Permalink to this headline">#</a></h2>
 <p>Set up the nodes and elements.  This creates a mesh just like in the
 problem setup.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
@@ -752,7 +723,7 @@ problem setup.</p>
 </div>
 <img src="../../../_images/sphx_glr_vm-005-laterally_loaded_tapered_support_structure_001.png" srcset="../../../_images/sphx_glr_vm-005-laterally_loaded_tapered_support_structure_001.png" alt="vm 005 laterally loaded tapered support structure" class = "sphx-glr-single-img"/></section>
 <section id="define-boundary-conditions">
-<h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this heading">#</a></h2>
+<h2>Define Boundary Conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this headline">#</a></h2>
 <p>Fix the nodes at the larger end (the “wall” end) and apply a vertical force
 to the whole structure.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># constrain nodes at fixed end</span>
@@ -769,7 +740,7 @@ to the whole structure.</p>
 </div>
 </section>
 <section id="solve">
-<h2>Solve<a class="headerlink" href="#solve" title="Permalink to this heading">#</a></h2>
+<h2>Solve<a class="headerlink" href="#solve" title="Permalink to this headline">#</a></h2>
 <p>Enter solution mode and solve the system.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
@@ -785,7 +756,7 @@ to the whole structure.</p>
 </div>
 </section>
 <section id="post-processing">
-<h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this heading">#</a></h2>
+<h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">#</a></h2>
 <p>Enter post-processing. Get the stress at the fixed end and the mid point
 of the structure by querying the stress at nodes closest to these locations.
 We’ve gathered the code into a function because we’ll have use for it later.</p>
@@ -804,7 +775,7 @@ We’ve gathered the code into a function because we’ll have use for it later.
 </div>
 </section>
 <section id="plotting">
-<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this heading">#</a></h2>
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h2>
 <p>View the equivalent stress, and displacement, of the cantilever with a
 <code class="docutils literal notranslate"><span class="pre">displacement_factor</span></code> of 26 to scale up the deformation to a visible
 amount.</p>
@@ -822,7 +793,7 @@ amount.</p>
 </div>
 <img src="../../../_images/sphx_glr_vm-005-laterally_loaded_tapered_support_structure_002.png" srcset="../../../_images/sphx_glr_vm-005-laterally_loaded_tapered_support_structure_002.png" alt="vm 005 laterally loaded tapered support structure" class = "sphx-glr-single-img"/></section>
 <section id="redo-with-plane-183">
-<h2>Redo with Plane 183<a class="headerlink" href="#redo-with-plane-183" title="Permalink to this heading">#</a></h2>
+<h2>Redo with Plane 183<a class="headerlink" href="#redo-with-plane-183" title="Permalink to this headline">#</a></h2>
 <p>Now we need to perform the simulation again but this time using the PLANE183
 element type. We additionally remove midside nodes with <code class="docutils literal notranslate"><span class="pre">emid</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
@@ -857,7 +828,7 @@ element type. We additionally remove midside nodes with <code class="docutils li
 </div>
 <img src="../../../_images/sphx_glr_vm-005-laterally_loaded_tapered_support_structure_003.png" srcset="../../../_images/sphx_glr_vm-005-laterally_loaded_tapered_support_structure_003.png" alt="vm 005 laterally loaded tapered support structure" class = "sphx-glr-single-img"/></section>
 <section id="check-results">
-<h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this heading">#</a></h2>
+<h2>Check Results<a class="headerlink" href="#check-results" title="Permalink to this headline">#</a></h2>
 <p>Now that we have the stresses we can compare them to the expected values
 of stress at the midpoint (8333) and the fixed end (7407) for both
 simulations.</p>
@@ -899,7 +870,7 @@ simulations.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.357 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.044 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-005-laterally-loaded-tapered-support-structure-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/fd412c420e86aa1bf21e9d147fc12f6d/vm-005-laterally_loaded_tapered_support_structure.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-005-laterally_loaded_tapered_support_structure.py</span></code></a></p>
@@ -913,35 +884,33 @@ simulations.</p>
 </section>
 
 
-              </article>
+              </div>
               
-
               
-          </div>
+          </main>
           
+
       </div>
     </div>
-
-  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
-
-<footer class="bd-footer"><div class="bd-footer__inner container">
-  
-  <div class="footer-item">
-    <p class="copyright">
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-  </div>
-  
-  <div class="footer-item">
-    <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
+    </div>
+    
   </div>
-  
-</div>
 </footer>
   </body>
 </html>

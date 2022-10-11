@@ -1,23 +1,19 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>cncheck &#8212; PyMAPDL</title>
     
-<script>
-  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
-</script>
-
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-
+    
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -29,14 +25,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/ansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -44,7 +40,6 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
@@ -56,42 +51,43 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="cnkmod" href="ansys.mapdl.core.Mapdl.cnkmod.html" />
     <link rel="prev" title="cmsopt" href="ansys.mapdl.core.Mapdl.cmsopt.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
-    <div class="bd-header-announcement container-fluid" id="banner">
-      
-
-    </div>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
 
     
     
-    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
 
   <div id="navbar-start">
     
     
-  
 
-
-<a class="navbar-brand logo" href="../../../index.html">
-  
-  
-  
-  
-    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
-    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
-  
-  
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
 </a>
+
+
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="fas fa-bars"></span>
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
   </button>
 
   
@@ -131,12 +127,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../learning/index.html">
-  Learning PyMAPDL
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../contributing.html">
   Contributing
  </a>
@@ -148,15 +138,8 @@
       
     </div>
 
+    
     <div id="navbar-end">
-      
-      <div class="navbar-end-item">
-        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
-</span>
-      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -168,6 +151,7 @@
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -199,13 +183,13 @@
     
 
 
-    <div class="bd-container container-xl">
-      <div class="bd-container__inner row">
+    <div class="container-xl">
+      <div class="row">
           
-
-<!-- Only show if we have sidebars configured, else just a small margin  -->
-<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
-  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -1088,184 +1072,163 @@
     
   </div>
 </nav>
-  </div>
-  <div class="sidebar-end-items">
-  </div>
-</div>
-
-
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
           
 
-
-<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
-  
-    
-    <div class="toc-item">
-      
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
 
 <nav id="bd-toc-nav">
     
 </nav>
-    </div>
-    
-    <div class="toc-item">
-      
-    </div>
-    
-  
-</div>
-
-
-          
-          
-          <div class="bd-content col-12 col-md-9 col-xl-7">
+              </div>
               
-              <article class="bd-article" role="main">
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
                 
   <section id="cncheck">
-<h1>cncheck<a class="headerlink" href="#cncheck" title="Permalink to this heading">#</a></h1>
+<h1>cncheck<a class="headerlink" href="#cncheck" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.cncheck">
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">cncheck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rid1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rid2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rinc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intertype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trlevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cgap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ioff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.cncheck" title="Permalink to this definition">#</a></dt>
 <dd><p>Provides and/or adjusts the initial status of contact pairs.</p>
 <p>APDL Command: CNCHECK</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
 <dt><strong>option</strong></dt><dd><p>Option to be performed:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;DETAIL&quot;</span></code> : List all contact pair properties (default).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;SUMMARY&quot;</span></code> : List only the open/closed status for each
-contact pair.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;POST&quot;</span></code> : Execute a partial solution to write the initial
-contact configuration to the Jobname.RCN file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;ADJUST&quot;</span></code> : Physically move contact nodes to the target
-in order to close a gap or reduce penetration. The initial
-adjustment is converted to structural displacement values
-(UX, UY, UZ) and stored in the Jobname.RCN file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;MORPH&quot;</span></code> : Physically move contact nodes to the target in
-order to close a gap or reduce penetration, and also morph
-the underlying solid mesh. The initial adjustment of contact
-nodes and repositioning of solid element nodes due to mesh
-morphing are converted to structural displacement values
-(UX, UY, UZ) and stored in the Jobname.RCN file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;RESET&quot;</span></code> : Reset target element and contact element key
-options and real constants to their default values. This
-option is not valid for general contact.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;AUTO&quot;</span></code> : Automatically sets certain real constants and
-key options to recommended values or settings in order to
-achieve better convergence based on overall contact pair
-behaviors. This option is not valid for general contact.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;TRIM&quot;</span></code> : Trim contact pair (remove certain contact and
-target elements).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;UNSE&quot;</span></code> : Unselect certain contact and target elements.</p></li>
-</ul>
+<p>DETAIL - List all contact pair properties (default).</p>
+<p>SUMMARY - List only the open/closed status for each contact pair.</p>
+<dl class="simple">
+<dt>POST - Execute a partial solution to write the initial</dt><dd><p>contact configuration to the Jobname.RCN file.</p>
 </dd>
-<dt><strong>rid1, rid2, rinc</strong></dt><dd><p>For pair-based contact, the range of real constant pair IDs
-for which Option will be performed. If RID2 is not specified,
-it defaults to RID1. If no value is specified, all contact
-pairs in the selected set of elements are considered.</p>
-<p>For general contact (InterType = GCN), RID1 and RID2 are
-section IDs associated with general contact surfaces instead
-of real constant IDs. If RINC = 0, the Option is performed
-between the two sections, RID1 and RID2. If RINC &gt; 0, the
-Option is performed among all specified sections (RID1 to RID2
-with increment of RINC).</p>
+<dt>ADJUST - Physically move contact nodes to the target in</dt><dd><p>order to close a gap or reduce penetration. The
+initial adjustment is converted to structural
+displacement values (UX, UY, UZ) and stored in
+the Jobname.RCN file.</p>
+</dd>
+<dt>RESET - Reset target element and contact element key</dt><dd><p>options and real constants to their default
+values. This option is not valid for general
+contact.</p>
+</dd>
+<dt>AUTO - Automatically sets certain real constants and key</dt><dd><p>options to recommended values or settings in order
+to achieve better convergence based on overall
+contact pair behaviors. This option is not valid
+for general contact.</p>
+</dd>
+</dl>
+<p>TRIM - Trim contact pair (remove certain contact and target elements).</p>
+<p>UNSE - Unselect certain contact and target elements.</p>
+</dd>
+<dt><strong>rid1, rid2, rinc</strong></dt><dd><p>For pair-based contact, the range of real constant pair
+ID’s for which Option will be performed. If RID2 is not
+specified, it defaults to RID1. If no value is specified,
+all contact pairs in the selected set of elements are
+considered.</p>
 </dd>
 <dt><strong>intertype</strong></dt><dd><p>The type of contact interface (pair-based versus general
-contact) to be considered; or the type of contact pair to be
-trimmed/unselected/auto-set.</p>
-<p>The following labels specify the type of contact interface:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> : (blank) Include all contact definitions (pair-based
-and general contact).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;GCN&quot;</span></code> : Include general contact definitions only (not valid when Option = RESET or AUTO).</p></li>
-</ul>
-<p>The following labels specify the type of contact pairs to be
-trimmed/unselected/auto-set (used only when Option = TRIM,
-UNSE, or AUTO, and only for pair-based contact definitions):</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;ANY&quot;</span></code> : All types (default).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;MPC&quot;</span></code> : MPC-based contact pairs (KEYOPT(2) = 2).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;BOND&quot;</span></code> : Bonded contact pairs (KEYOPT(12) = 3, 5, 6).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;NOSP&quot;</span></code> : No separation contact pairs (KEYOPT(12) = 2, 4).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;INAC&quot;</span></code> : Inactive contact pairs (symmetric contact pairs for MPC contact or KEYOPT(8) = 2).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;TRlevel&quot;</span></code> : mming level (used only when Option = TRIM, UNSE, or MORPH):</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;(blank)&quot;</span></code> : Normal trimming (default): remove/unselect contact and target elements which are in far-field.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;AGGRE&quot;</span></code> : Aggressive trimming: remove/unselect contact and target elements which are in far-field, and certain elements in near-field.</p></li>
-</ul>
+contact) to be considered; or the type of contact pair to
+be trimmed/unselected/auto-set.</p>
+<p>(blank) - Include all contact definitions (pair-based and general contact).</p>
+<dl class="simple">
+<dt>GCN - Include general contact definitions only (not valid</dt><dd><p>when Option = RESET or AUTO).</p>
 </dd>
-<dt><strong>cgap</strong></dt><dd><p>They are only valid when Option = ADJUST or MORPH.  Control
-parameter for opening gap. Close the opening gap if the
-absolute value of the gap is smaller than the CGAP value. CGAP
-defaults to <code class="docutils literal notranslate"><span class="pre">0.25*PINB</span></code> (where PINB is the pinball radius) for
-bonded and no-separation contact; otherwise it defaults to the
-value of real constant ICONT.</p>
+</dl>
 </dd>
-<dt><strong>CPEN</strong></dt><dd><p>They are only valid when Option = ADJUST or MORPH.  Control
-parameter for initial penetration. Close the initial
-penetration if the absolute value of the penetration is
-smaller than the CPEN value. CPEN defaults to <code class="docutils literal notranslate"><span class="pre">0.25*PINB</span></code> (where
-PINB is the pinball radius) for any type of interface behavior
-(either bonded or standard contact).</p>
+<dt><strong>trlevel</strong></dt><dd><p>Trimming level (used only when Option = TRIM or UNSE):</p>
+<dl class="simple">
+<dt>(blank) - Normal trimming (default): remove/unselect</dt><dd><p>contact and target elements which are in
+far-field.</p>
 </dd>
-<dt><strong>IOFF</strong></dt><dd><p>They are only valid when Option = ADJUST or MORPH.  Control
-parameter for initial adjustment. Input a positive value to
-adjust the contact nodes towards the target surface with a
-constant interference distance equal to IOFF. Input a negative
-value to adjust the contact node towards the target surface
-with a uniform gap distance equal to the absolute value of
-IOFF.</p>
+<dt>AGGRE - Aggressive trimming: remove/unselect contact and</dt><dd><p>target elements which are in far-field, and
+certain elements in near-field.</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>The CNCHECK command provides information for surface-to-surface,
-node-to-surface, and line-to-line contact pairs (element types
-TARGE169, TARGE170, CONTA171, CONTA172, CONTA173, CONTA174,
-CONTA175, CONTA176, CONTA177). All contact and target elements of
-interest, along with the solid elements and nodes attached to
-them, must be selected for the command to function properly. For
-performance reasons, the program uses a subset of nodes and
-elements based on the specified contact regions (RID1, RID2, RINC)
-when executing the CNCHECK command.</p>
-<p>For additional details, see the notes section at:
-<a class="reference external" href="https://www.mm.bme.hu/~gyebro/files/ans_help_v182/ans_cmd/Hlp_C_CNCHECK.html">https://www.mm.bme.hu/~gyebro/files/ans_help_v182/ans_cmd/Hlp_C_CNCHECK.html</a></p>
+<p>The CNCHECK command provides information for
+surface-to-surface, node- to-surface, and line-to-line contact
+pairs (element types TARGE169, TARGE170, CONTA171, CONTA172,
+CONTA173, CONTA174, CONTA175, CONTA176, CONTA177). All contact
+and target elements of interest, along with the solid elements
+and nodes attached to them, must be selected for the command
+to function properly. For performance reasons, the program
+uses a subset of nodes and elements based on the specified
+contact regions (RID1, RID2, RINC) when executing the CNCHECK
+command.</p>
+<p>CNCHECK is available in both the PREP7 and SOLUTION
+processors, but only before the first solve operation (that
+is, only before the first load step or the first substep).</p>
+<p>If the contact and target elements were generated through mesh
+commands (AMESH, LMESH, etc.) instead of the ESURF command,
+you must issue MODMSH,DETACH before CNCHECK. Otherwise,
+CNCHECK will not work correctly.</p>
+<p>The following additional notes are available:</p>
+<p>The command CNCHECK,POST solves the initial contact configuration in
+one substep. After issuing this command, you can postprocess the
+contact result items as you would for any other converged load step;
+however, only the contact status, contact penetration or gap, and
+contact pressure will have meaningful values. Other contact quantities
+(friction stress, sliding distance, chattering) will be available but
+are not useful.</p>
+<p>Because Option = POST forces a solve operation, the PrepPost (PP)
+license does not work with CNCHECK,POST.</p>
 </dd></dl>
 
 </section>
 
 
-              </article>
+              </div>
               
-
               
-          </div>
+          </main>
           
+
       </div>
     </div>
-
-  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
-
-<footer class="bd-footer"><div class="bd-footer__inner container">
-  
-  <div class="footer-item">
-    <p class="copyright">
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-  </div>
-  
-  <div class="footer-item">
-    <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
+    </div>
+    
   </div>
-  
-</div>
 </footer>
   </body>
 </html>

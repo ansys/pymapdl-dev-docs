@@ -98,7 +98,7 @@ Next:
 
     Product:             Ansys Mechanical Enterprise
     MAPDL Version:       21.2
-    ansys.mapdl Version: 0.63.0
+    ansys.mapdl Version: 0.62.2
 
 
 
@@ -270,10 +270,10 @@ Solve the eigenproblem using PyMapdl with APDLMath.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1498: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
+    /opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1453: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
       warn(
 
-    Elapsed time to solve this problem :  0.5850937366485596
+    Elapsed time to solve this problem :  0.6131722927093506
 
 
 
@@ -454,7 +454,7 @@ Solve the eigenproblem
  .. code-block:: none
 
 
-    Elapsed time to solve this problem :  2.8754096031188965
+    Elapsed time to solve this problem :  3.0542352199554443
 
 
 
@@ -587,7 +587,7 @@ MAPDL is faster than SciPy.
 
  .. code-block:: none
 
-    Mapdl is 4.91 times faster
+    Mapdl is 4.98 times faster
 
 
 
@@ -611,7 +611,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.188 seconds)
+   **Total running time of the script:** ( 0 minutes  6.373 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_01-apdlmath-examples_mapdl_vs_scipy.py:

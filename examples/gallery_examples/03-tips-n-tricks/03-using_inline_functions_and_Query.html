@@ -1,23 +1,19 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Using Inline Functions (Query) &#8212; PyMAPDL</title>
     
-<script>
-  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
-</script>
-
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-
+    
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -29,14 +25,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/ansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -44,7 +40,6 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
@@ -56,42 +51,43 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Generating and Extracting Rotational Displacement" href="04-rotational-displacement.html" />
     <link rel="prev" title="MAPDL Element Size Transition Example" href="01-smoothing-element-size-transitions.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
-    <div class="bd-header-announcement container-fluid" id="banner">
-      
-
-    </div>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
 
     
     
-    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
 
   <div id="navbar-start">
     
     
-  
 
-
-<a class="navbar-brand logo" href="../../../index.html">
-  
-  
-  
-  
-    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
-    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
-  
-  
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
 </a>
+
+
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="fas fa-bars"></span>
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
   </button>
 
   
@@ -131,12 +127,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../learning/index.html">
-  Learning PyMAPDL
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../contributing.html">
   Contributing
  </a>
@@ -148,15 +138,8 @@
       
     </div>
 
+    
     <div id="navbar-end">
-      
-      <div class="navbar-end-item">
-        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
-</span>
-      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -168,6 +151,7 @@
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -198,13 +182,13 @@
     
 
 
-    <div class="bd-container container-xl">
-      <div class="bd-container__inner row">
+    <div class="container-xl">
+      <div class="row">
           
-
-<!-- Only show if we have sidebars configured, else just a small margin  -->
-<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
-  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -242,20 +226,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/contact_elements.html">
    Contact Element Example
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/cyclic_analysis.html">
-   Cyclic Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/exhaust_manifold_thermal_stress.html">
-   Thermal-structural analysis of exhaust manifold
   </a>
  </li>
 </ul>
@@ -549,20 +519,19 @@
     
   </div>
 </nav>
-  </div>
-  <div class="sidebar-end-items">
-  </div>
-</div>
-
-
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
           
 
-
-<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
-  
-    
-    <div class="toc-item">
-      
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
 <div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
@@ -602,21 +571,23 @@
 </ul>
 
 </nav>
-    </div>
-    
-    <div class="toc-item">
-      
-    </div>
-    
-  
-</div>
-
-
-          
-          
-          <div class="bd-content col-12 col-md-9 col-xl-7">
+              </div>
               
-              <article class="bd-article" role="main">
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
                 
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
@@ -624,7 +595,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="using-inline-functions-query">
-<span id="ref-how-to-use-query"></span><span id="sphx-glr-examples-gallery-examples-03-tips-n-tricks-03-using-inline-functions-and-query-py"></span><h1>Using Inline Functions (Query)<a class="headerlink" href="#using-inline-functions-query" title="Permalink to this heading">#</a></h1>
+<span id="ref-how-to-use-query"></span><span id="sphx-glr-examples-gallery-examples-03-tips-n-tricks-03-using-inline-functions-and-query-py"></span><h1>Using Inline Functions (Query)<a class="headerlink" href="#using-inline-functions-query" title="Permalink to this headline">#</a></h1>
 <p>Inline functions like <code class="docutils literal notranslate"><span class="pre">UX</span></code> have been implemented in PyMAPDL as methods
 on the <code class="docutils literal notranslate"><span class="pre">mapdl.inline_functions.Query</span></code> object. In this example we set
 up a simple simulation and use <code class="docutils literal notranslate"><span class="pre">Query</span></code> to demonstrate some of its
@@ -643,7 +614,7 @@ functionality.</p>
 </pre></div>
 </div>
 <section id="setup-mesh">
-<h2>Setup Mesh<a class="headerlink" href="#setup-mesh" title="Permalink to this heading">#</a></h2>
+<h2>Setup Mesh<a class="headerlink" href="#setup-mesh" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Assign element type <code class="docutils literal notranslate"><span class="pre">SOLID5</span></code> to element type 1</p></li>
 <li><p>Create a cuboid <code class="docutils literal notranslate"><span class="pre">mapdl.block</span></code> 10 x 20 x 30 in dimension</p></li>
@@ -660,7 +631,7 @@ functionality.</p>
 </div>
 <img src="../../../_images/sphx_glr_03-using_inline_functions_and_Query_001.png" srcset="../../../_images/sphx_glr_03-using_inline_functions_and_Query_001.png" alt="03 using inline functions and Query" class = "sphx-glr-single-img"/></section>
 <section id="setup-boundary-conditions">
-<h2>Setup Boundary Conditions<a class="headerlink" href="#setup-boundary-conditions" title="Permalink to this heading">#</a></h2>
+<h2>Setup Boundary Conditions<a class="headerlink" href="#setup-boundary-conditions" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Assign an Elastic modulus in the x-direction to material 1 of 21e9</p></li>
 <li><p>And a poisson’s ratio of 0.3</p></li>
@@ -687,7 +658,7 @@ functionality.</p>
 </div>
 </section>
 <section id="id1">
-<h2>Setup Boundary Conditions<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>Setup Boundary Conditions<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Enter solution (<code class="docutils literal notranslate"><span class="pre">mapdl.slashsolu</span></code> also works)</p></li>
 <li><p>Set the analysis type to <code class="docutils literal notranslate"><span class="pre">STATIC</span></code></p></li>
@@ -711,7 +682,7 @@ functionality.</p>
 </div>
 </section>
 <section id="post-processing">
-<h2>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this heading">#</a></h2>
+<h2>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Get the result from the <code class="docutils literal notranslate"><span class="pre">mapdl</span></code> instance</p></li>
 <li><p>Plot the equivalent stress results
@@ -724,7 +695,7 @@ functionality.</p>
 </div>
 <img src="../../../_images/sphx_glr_03-using_inline_functions_and_Query_002.png" srcset="../../../_images/sphx_glr_03-using_inline_functions_and_Query_002.png" alt="03 using inline functions and Query" class = "sphx-glr-single-img"/></section>
 <section id="using-query">
-<h2>Using <code class="docutils literal notranslate"><span class="pre">Query</span></code><a class="headerlink" href="#using-query" title="Permalink to this heading">#</a></h2>
+<h2>Using <code class="docutils literal notranslate"><span class="pre">Query</span></code><a class="headerlink" href="#using-query" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">Query</span></code> to get the nodes nearest to (5, 0, 0) and (5, 10, 0)</p></li>
 <li><p>Use the <code class="docutils literal notranslate"><span class="pre">Query</span></code> instance to examine the x, y, and z displacement.</p></li>
@@ -754,25 +725,25 @@ functionality.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>************************
 Displacement at Node 28:
 ************************
-X | 1.757716378392638e-05
-Y | 3.036257546893168e-09
-Z | -7.982690758480495e-07
+X | 1.757716378392639e-05
+Y | 3.036257546888294e-09
+Z | -7.982690758480489e-07
 
 
 
 ************************
 Displacement at Node 49:
 ************************
-X | 1.7612417675184464e-05
-Y | 1.1837612853985523e-19
-Z | 8.07098983852912e-07
+X | 1.7612417675184474e-05
+Y | 1.1462170715955625e-19
+Z | 8.070989838529135e-07
 </pre></div>
 </div>
 <p>stop mapdl</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.477 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.271 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-03-tips-n-tricks-03-using-inline-functions-and-query-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/68d02256e0f0d2308651884a6b173c5d/03-using_inline_functions_and_Query.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">03-using_inline_functions_and_Query.py</span></code></a></p>
@@ -786,35 +757,33 @@ Z | 8.07098983852912e-07
 </section>
 
 
-              </article>
+              </div>
               
-
               
-          </div>
+          </main>
           
+
       </div>
     </div>
-
-  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
-
-<footer class="bd-footer"><div class="bd-footer__inner container">
-  
-  <div class="footer-item">
-    <p class="copyright">
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-  </div>
-  
-  <div class="footer-item">
-    <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
+    </div>
+    
   </div>
-  
-</div>
 </footer>
   </body>
 </html>

@@ -1,23 +1,19 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>cutcontrol &#8212; PyMAPDL</title>
     
-<script>
-  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
-</script>
-
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-
+    
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -29,14 +25,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/ansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -44,7 +40,6 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
@@ -56,42 +51,43 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="ddoption" href="ansys.mapdl.core.Mapdl.ddoption.html" />
     <link rel="prev" title="cntr" href="ansys.mapdl.core.Mapdl.cntr.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
-    <div class="bd-header-announcement container-fluid" id="banner">
-      
-
-    </div>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
 
     
     
-    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
 
   <div id="navbar-start">
     
     
-  
 
-
-<a class="navbar-brand logo" href="../../../index.html">
-  
-  
-  
-  
-    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
-    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
-  
-  
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
 </a>
+
+
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="fas fa-bars"></span>
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
   </button>
 
   
@@ -131,12 +127,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../learning/index.html">
-  Learning PyMAPDL
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../contributing.html">
   Contributing
  </a>
@@ -148,15 +138,8 @@
       
     </div>
 
+    
     <div id="navbar-end">
-      
-      <div class="navbar-end-item">
-        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
-</span>
-      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -168,6 +151,7 @@
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -199,13 +183,13 @@
     
 
 
-    <div class="bd-container container-xl">
-      <div class="bd-container__inner row">
+    <div class="container-xl">
+      <div class="row">
           
-
-<!-- Only show if we have sidebars configured, else just a small margin  -->
-<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
-  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -1088,97 +1072,80 @@
     
   </div>
 </nav>
-  </div>
-  <div class="sidebar-end-items">
-  </div>
-</div>
-
-
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
           
 
-
-<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
-  
-    
-    <div class="toc-item">
-      
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
 
 <nav id="bd-toc-nav">
     
 </nav>
-    </div>
-    
-    <div class="toc-item">
-      
-    </div>
-    
-  
-</div>
-
-
-          
-          
-          <div class="bd-content col-12 col-md-9 col-xl-7">
+              </div>
               
-              <article class="bd-article" role="main">
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
                 
   <section id="cutcontrol">
-<h1>cutcontrol<a class="headerlink" href="#cutcontrol" title="Permalink to this heading">#</a></h1>
+<h1>cutcontrol<a class="headerlink" href="#cutcontrol" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.cutcontrol">
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">cutcontrol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lab</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.cutcontrol" title="Permalink to this definition">#</a></dt>
 <dd><p>Controls time-step cutback during a nonlinear solution.</p>
 <p>APDL Command: CUTCONTROL</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
 <dt><strong>lab</strong></dt><dd><p>Specifies the criteria for causing a cutback.  Valid labels are:</p>
-<dl>
-<dt>PLSLIMIT</dt><dd><p>Maximum equivalent plastic strain allowed within a time-step (substep).  If the
-calculated value exceeds the VALUE, the program
+<dl class="simple">
+<dt>PLSLIMIT  - Maximum equivalent plastic strain allowed within a time-step (substep).  If the</dt><dd><p>calculated value exceeds the VALUE, the program
 performs a cutback (bisection).  VALUE defaults to 0.15
 (15%).</p>
 </dd>
-<dt>CRPLIMIT</dt><dd><p>Set values for calculating the maximum equivalent creep ratio allowed within a
-time step. If the calculated maximum creep ratio
+<dt>CRPLIMIT  - Set values for calculating the maximum equivalent creep ratio allowed within a</dt><dd><p>time step. If the calculated maximum creep ratio
 exceeds the defined creep ratio limit, the program
 performs a cutback.</p>
 </dd>
-<dt>DSPLIMIT</dt><dd><p>Maximum incremental displacement within the solution field in a time step
-(substep).  If the maximum calculated value exceeds
+<dt>DSPLIMIT  - Maximum incremental displacement within the solution field in a time step</dt><dd><p>(substep).  If the maximum calculated value exceeds
 VALUE, the program performs a cutback (bisection).
 VALUE defaults to 1.0 x 107.</p>
 </dd>
-<dt>NPOINT</dt><dd><p>Number of points in a cycle for a second order dynamic equation, used to
-control automatic time stepping.  If the number of
+<dt>NPOINT  - Number of points in a cycle for a second order dynamic equation, used to</dt><dd><p>control automatic time stepping.  If the number of
 solution points per cycle is less than VALUE, the program
 performs a cutback in time step size. VALUE defaults to
 13 for linear analysis, 5 for nonlinear analysis. A
 larger number of points yields a more accurate solution
 but also increases the solution run time.</p>
-<p>This option works well for linear problems. For nonlinear analyses, other
-factors such as contact status changes and solution convergence rate can
-overwrite NPOINT. See Automatic Time Stepping in the Mechanical APDL
-Theory Reference for more information on automatic time stepping.</p>
 </dd>
 </dl>
-<p>NOITERPREDICT</p>
-<blockquote>
-<div><p>If VALUE is 0 (default), an internal auto time step scheme will predict
-the number of iterations for nonlinear convergence and perform a cutback
-earlier than the number of iterations specified by the NEQIT command.
-This is the recommended option.</p>
-<p>If VALUE is 1, the solution will iterate (if nonconvergent) to NEQIT
-number of iterations before a cutback is invoked.
-It is sometimes useful for poorly-convergent problems, but rarely needed in general.</p>
-<p>Bisection is also controlled by contact status change, plasticity or creep
-strain limit, and other factors. If any of these
+<p>This option works well for linear problems. For nonlinear analyses, other factors such as contact status changes and solution convergence rate can overwrite NPOINT. See Automatic Time Stepping in the Mechanical APDL Theory Reference for more information on automatic time stepping. - NOITERPREDICT</p>
+<dl class="simple">
+<dt>If VALUE is 0 (default), an internal auto time step scheme will predict the number of iterations for nonlinear convergence and perform a cutback earlier than the number of iterations specified by the NEQIT command. This is the recommended option. If VALUE is 1, the solution will iterate (if nonconvergent) to NEQIT number of iterations before a cutback is invoked. It is sometimes useful for poorly-convergent problems, but rarely needed in general. - Bisection is also controlled by contact status change, plasticity or creep</dt><dd><p>strain limit, and other factors. If any of these
 factors occur, bisection will still take place,
 regardless of the NOITERPREDICT setting.</p>
-</div></blockquote>
-<dl class="simple">
-<dt>CUTBACKFACTOR</dt><dd><p>Changes the cutback value for bisection. Default is 0.5. VALUE must be greater
-than 0.0 and less than 1.0. This option is active
+</dd>
+<dt>CUTBACKFACTOR  - Changes the cutback value for bisection. Default is 0.5. VALUE must be greater</dt><dd><p>than 0.0 and less than 1.0. This option is active
 only if AUTOTS,ON is set.</p>
 </dd>
 </dl>
@@ -1188,25 +1155,21 @@ CRPLIMIT, VALUE is the creep criteria for the creep ratio limit.</p>
 </dd>
 <dt><strong>option</strong></dt><dd><p>Type of creep analysis. Valid for Lab = CRPLIMIT only.</p>
 <dl class="simple">
-<dt>IMPRATIO</dt><dd><p>Set the maximum creep ratio value for implicit creep. The default is 0.0 (i.e.,
-no creep limit control) and any positive value is
+<dt>IMPRATIO  - Set the maximum creep ratio value for implicit creep. The default is 0.0 (i.e.,</dt><dd><p>no creep limit control) and any positive value is
 valid. (See Implicit Creep Procedure in the Structural
 Analysis Guide for information on how to define
 implicit creep.)</p>
 </dd>
-<dt>EXPRATIO</dt><dd><p>Set the maximum creep ratio value for explicit creep. The default value is 0.1
-and any positive value up to 0.25 is allowed. (See
+<dt>EXPRATIO   - Set the maximum creep ratio value for explicit creep. The default value is 0.1</dt><dd><p>and any positive value up to 0.25 is allowed. (See
 Explicit Creep Procedure in the Structural Analysis
 Guide for information on how to define explicit
 creep.)</p>
 </dd>
-<dt>STSLIMIT</dt><dd><p>Stress threshold for calculating the creep ratio. For integration points with
-effective stress below this threshold, the creep ratio
+<dt>STSLIMIT   - Stress threshold for calculating the creep ratio. For integration points with</dt><dd><p>effective stress below this threshold, the creep ratio
 does not cause cutback. The default value is 0.0 and
 any positive value is valid.</p>
 </dd>
-<dt>STNLIMIT</dt><dd><p>Elastic strain threshold for calculating the creep ratio. For integration
-points with effective elastic strain below this
+<dt>STNLIMIT   - Elastic strain threshold for calculating the creep ratio. For integration</dt><dd><p>points with effective elastic strain below this
 threshold, the creep ratio does not cause cutback. The
 default value is 0.0 and any positive value is valid.</p>
 </dd>
@@ -1239,35 +1202,33 @@ options IMPRATIO and EXPRATIO</p>
 </section>
 
 
-              </article>
+              </div>
               
-
               
-          </div>
+          </main>
           
+
       </div>
     </div>
-
-  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
-
-<footer class="bd-footer"><div class="bd-footer__inner container">
-  
-  <div class="footer-item">
-    <p class="copyright">
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-  </div>
-  
-  <div class="footer-item">
-    <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
+    </div>
+    
   </div>
-  
-</div>
 </footer>
   </body>
 </html>

@@ -1,23 +1,19 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Keypoints &#8212; PyMAPDL</title>
     
-<script>
-  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
-</script>
-
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-
+    
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -29,14 +25,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/ansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -44,7 +40,6 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
@@ -56,42 +51,43 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Lines" href="01-lines.html" />
     <link rel="prev" title="Manipulate APDLMath vectors or dense matrices as NumPy Arrays" href="../01-apdlmath-examples/use_numpy_arrays.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
-    <div class="bd-header-announcement container-fluid" id="banner">
-      
-
-    </div>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
 
     
     
-    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
 
   <div id="navbar-start">
     
     
-  
 
-
-<a class="navbar-brand logo" href="../../../index.html">
-  
-  
-  
-  
-    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
-    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
-  
-  
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
 </a>
+
+
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="fas fa-bars"></span>
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
   </button>
 
   
@@ -131,12 +127,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../learning/index.html">
-  Learning PyMAPDL
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../contributing.html">
   Contributing
  </a>
@@ -148,15 +138,8 @@
       
     </div>
 
+    
     <div id="navbar-end">
-      
-      <div class="navbar-end-item">
-        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
-</span>
-      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -168,6 +151,7 @@
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -198,13 +182,13 @@
     
 
 
-    <div class="bd-container container-xl">
-      <div class="bd-container__inner row">
+    <div class="container-xl">
+      <div class="row">
           
-
-<!-- Only show if we have sidebars configured, else just a small margin  -->
-<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
-  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -242,20 +226,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-mapdl-examples/contact_elements.html">
    Contact Element Example
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/cyclic_analysis.html">
-   Cyclic Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-mapdl-examples/exhaust_manifold_thermal_stress.html">
-   Thermal-structural analysis of exhaust manifold
   </a>
  </li>
 </ul>
@@ -549,20 +519,19 @@
     
   </div>
 </nav>
-  </div>
-  <div class="sidebar-end-items">
-  </div>
-</div>
-
-
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
           
 
-
-<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
-  
-    
-    <div class="toc-item">
-      
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
 <div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
@@ -612,21 +581,23 @@
 </ul>
 
 </nav>
-    </div>
-    
-    <div class="toc-item">
-      
-    </div>
-    
-  
-</div>
-
-
-          
-          
-          <div class="bd-content col-12 col-md-9 col-xl-7">
+              </div>
               
-              <article class="bd-article" role="main">
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
                 
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
@@ -634,7 +605,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="keypoints">
-<span id="ref-basic-geometry-keypoints"></span><span id="sphx-glr-examples-gallery-examples-02-geometry-00-keypoints-py"></span><h1>Keypoints<a class="headerlink" href="#keypoints" title="Permalink to this heading">#</a></h1>
+<span id="ref-basic-geometry-keypoints"></span><span id="sphx-glr-examples-gallery-examples-02-geometry-00-keypoints-py"></span><h1>Keypoints<a class="headerlink" href="#keypoints" title="Permalink to this headline">#</a></h1>
 <p>This example shows how you can use PyMAPDL to create basic geometry
 using Pythonic PREP7 commands.</p>
 <p>This section is focused on creating keypoints.</p>
@@ -652,11 +623,11 @@ using Pythonic PREP7 commands.</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Product:             Ansys Mechanical Enterprise
 MAPDL Version:       21.2
-ansys.mapdl Version: 0.63.0
+ansys.mapdl Version: 0.62.2
 </pre></div>
 </div>
 <section id="apdl-command-k">
-<h2>APDL Command: K<a class="headerlink" href="#apdl-command-k" title="Permalink to this heading">#</a></h2>
+<h2>APDL Command: K<a class="headerlink" href="#apdl-command-k" title="Permalink to this headline">#</a></h2>
 <p>Create a single keypoint at <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0]</span></code>.  Note that the first
 value is an empty string to allow MAPDL to pick the keypoint number.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k0</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -678,7 +649,7 @@ value is an empty string to allow MAPDL to pick the keypoint number.</p>
 </div>
 </section>
 <section id="apdl-command-kbetw">
-<h2>APDL Command: KBETW<a class="headerlink" href="#apdl-command-kbetw" title="Permalink to this heading">#</a></h2>
+<h2>APDL Command: KBETW<a class="headerlink" href="#apdl-command-kbetw" title="Permalink to this headline">#</a></h2>
 <p>Create keypoint between two keypoints</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k2</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">kbetw</span><span class="p">(</span><span class="n">kp1</span><span class="o">=</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k0</span></a><span class="p">,</span> <span class="n">kp2</span><span class="o">=</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k1</span></a><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k2</span></a><span class="p">)</span>
@@ -690,7 +661,7 @@ value is an empty string to allow MAPDL to pick the keypoint number.</p>
 </div>
 </section>
 <section id="apdl-command-kcenter">
-<h2>APDL Command: KCENTER<a class="headerlink" href="#apdl-command-kcenter" title="Permalink to this heading">#</a></h2>
+<h2>APDL Command: KCENTER<a class="headerlink" href="#apdl-command-kcenter" title="Permalink to this headline">#</a></h2>
 <p>Create keypoint at the center of a circular arc defined by three locations.
 Note that we first clear mapdl before generating this geometry</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -708,7 +679,7 @@ Note that we first clear mapdl before generating this geometry</p>
 </div>
 </section>
 <section id="keypoint-ids">
-<h2>Keypoint IDs<a class="headerlink" href="#keypoint-ids" title="Permalink to this heading">#</a></h2>
+<h2>Keypoint IDs<a class="headerlink" href="#keypoint-ids" title="Permalink to this headline">#</a></h2>
 <p>Return an array of the keypoint IDs
 Note that this matches the array <code class="docutils literal notranslate"><span class="pre">[k0,</span> <span class="pre">k1,</span> <span class="pre">k2,</span> <span class="pre">k3]</span></code> (due to sorting)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">knum</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">knum</span></a>
@@ -721,7 +692,7 @@ Note that this matches the array <code class="docutils literal notranslate"><spa
 </div>
 </section>
 <section id="keypoint-coordinates">
-<h2>Keypoint Coordinates<a class="headerlink" href="#keypoint-coordinates" title="Permalink to this heading">#</a></h2>
+<h2>Keypoint Coordinates<a class="headerlink" href="#keypoint-coordinates" title="Permalink to this headline">#</a></h2>
 <p>Return an array of the keypoint locations</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">kloc</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">keypoints</span>
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">kloc</span></a>
@@ -736,7 +707,7 @@ Note that this matches the array <code class="docutils literal notranslate"><spa
 </div>
 </section>
 <section id="apdl-command-kdist">
-<h2>APDL Command: KDIST<a class="headerlink" href="#apdl-command-kdist" title="Permalink to this heading">#</a></h2>
+<h2>APDL Command: KDIST<a class="headerlink" href="#apdl-command-kdist" title="Permalink to this headline">#</a></h2>
 <p>Calculate the distance between two keypoints.  Note that you could
 compute this yourself from <code class="docutils literal notranslate"><span class="pre">kloc</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dist</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">kdist</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k0</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k1</span></a><span class="p">)</span>
@@ -749,7 +720,7 @@ compute this yourself from <code class="docutils literal notranslate"><span clas
 </div>
 </section>
 <section id="keypoint-selection">
-<h2>Keypoint Selection<a class="headerlink" href="#keypoint-selection" title="Permalink to this heading">#</a></h2>
+<h2>Keypoint Selection<a class="headerlink" href="#keypoint-selection" title="Permalink to this headline">#</a></h2>
 <p>There are two approaches for selecting keypoints, the old “legacy”
 style and the new style.  The old style is valuable for those who
 are comfortable with the existing MAPDL commands, and new style is
@@ -805,7 +776,7 @@ areas.</p>
 </div>
 </section>
 <section id="apdl-command-kplot">
-<h2>APDL Command: KPLOT<a class="headerlink" href="#apdl-command-kplot" title="Permalink to this heading">#</a></h2>
+<h2>APDL Command: KPLOT<a class="headerlink" href="#apdl-command-kplot" title="Permalink to this headline">#</a></h2>
 <p>Plot the keypoints while displaying the keypoint numbers</p>
 <p>There are a variety of plotting options available for all the common
 plotting methods.</p>
@@ -818,7 +789,7 @@ plotting methods.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.892 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.735 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-02-geometry-00-keypoints-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/b09cc4ea4ddf76e7e9be33d7815b0a52/00-keypoints.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">00-keypoints.py</span></code></a></p>
@@ -832,35 +803,33 @@ plotting methods.</p>
 </section>
 
 
-              </article>
+              </div>
               
-
               
-          </div>
+          </main>
           
+
       </div>
     </div>
-
-  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
-
-<footer class="bd-footer"><div class="bd-footer__inner container">
-  
-  <div class="footer-item">
-    <p class="copyright">
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-  </div>
-  
-  <div class="footer-item">
-    <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
+    </div>
+    
   </div>
-  
-</div>
 </footer>
   </body>
 </html>

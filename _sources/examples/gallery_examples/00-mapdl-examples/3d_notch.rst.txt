@@ -359,7 +359,7 @@ result reader.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/site-packages/pyvista/plotting/tools.py:571: PyvistaDeprecationWarning: The usage of `parse_color` is deprecated in favor of the new `Color` class.
+    /opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/site-packages/pyvista/plotting/tools.py:590: PyVistaDeprecationWarning: The usage of `parse_color` is deprecated in favor of the new `Color` class.
       warnings.warn(
 
 
@@ -755,7 +755,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.266 seconds)
+   **Total running time of the script:** ( 0 minutes  6.800 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_3d_notch.py:
