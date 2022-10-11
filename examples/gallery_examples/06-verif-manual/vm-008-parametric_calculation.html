@@ -46,7 +46,6 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -58,9 +57,8 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Large Lateral Deflection of Unequal Stiffness Springs" href="vm-009-large_lateral_deflection_of_unequal_stiffness_springs.html" />
     <link rel="prev" title="Plastic Compression of a Pipe Assembly" href="vm-007-plastic_compression_of_a_pipe_assembly.html" />
-<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -116,6 +114,12 @@
 </li>
 
 <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -134,14 +138,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../../../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -243,11 +241,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../00-mapdl-examples/3d_plate_thermal.html">
      Basic Thermal Analysis with pyMAPDL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../00-mapdl-examples/acoustic_analysis.html">
-     3D Acoustic Analysis
     </a>
    </li>
    <li class="toctree-l2">
@@ -666,7 +659,7 @@ with the simple distances’ formula between keypoints as:</p>
 </dl>
 </li>
 <li><dl>
-<dt>Python representation of the distance formula:</dt><dd><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="go">import math</span>
+<dt>Python representation of the distance formula:</dt><dd><div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="go">import math</span>
 <span class="go"># Define coordinates for keypoints K3 and K4.</span>
 <span class="go">x1, y1, z1 = 100, 0, 30</span>
 <span class="go">x2, y2, z2 = -200, 25, 80</span>
@@ -918,7 +911,7 @@ with following settings below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.781 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.766 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-008-parametric-calculation-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/ad9880df64843f0847799266023a5dc5/vm-008-parametric_calculation.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-008-parametric_calculation.py</span></code></a></p>
@@ -956,7 +949,7 @@ with following settings below:</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

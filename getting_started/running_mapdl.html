@@ -46,7 +46,6 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/thebelab-helper.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,9 +56,8 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Versioning and Interfaces" href="versioning.html" />
     <link rel="prev" title="Getting Started" href="index.html" />
-<link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -115,6 +113,12 @@
 </li>
 
 <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -133,14 +137,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -234,6 +232,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="faq.html">
+   Frequently Asked Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="wsl.html">
    PyAnsys Libraries on a Windows Subsystem for Linux and Docker
   </a>
@@ -286,6 +289,50 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#connecting-to-a-grpc-mapdl-session">
      Connecting to a gRPC MAPDL session
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#debugging-launching-mapdl">
+   Debugging Launching MAPDL
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manually-set-the-executable-location">
+     Manually Set the Executable Location
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#debug-launch-issues">
+     Debug Launch Issues
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#licensing-issues">
+   Licensing Issues
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vpn-issues">
+   VPN Issues
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#missing-dependencies-on-linux">
+   Missing Dependencies on Linux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#centos">
+     CentOS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubuntu">
+     Ubuntu
     </a>
    </li>
   </ul>
@@ -414,7 +461,119 @@ computer running MAPDL on the port 50052, you can connect to it with</p>
 the mentioned IP/hostname for this to work.
 If you have MAPDL installed on your local host, you
 can use <code class="docutils literal notranslate"><span class="pre">launch_mapdl</span></code> to both start and connect to MAPDL.</p>
-<p>If you find any problem launching PyMAPDL, please check <a class="reference internal" href="../troubleshoot/troubleshoot.html#debugging-launch-mapdl"><span class="std std-ref">Troubleshooting PyMAPDL</span></a></p>
+</section>
+</section>
+<section id="debugging-launching-mapdl">
+<h2>Debugging Launching MAPDL<a class="headerlink" href="#debugging-launching-mapdl" title="Permalink to this heading">#</a></h2>
+<p>For any number of reasons, Python may fail to launch MAPDL.  Here’s
+some approaches to debug the start:</p>
+<section id="manually-set-the-executable-location">
+<h3>Manually Set the Executable Location<a class="headerlink" href="#manually-set-the-executable-location" title="Permalink to this heading">#</a></h3>
+<p>If you have a non-standard install, <code class="docutils literal notranslate"><span class="pre">pymapdl</span></code> may be unable find
+your installation.  If that’s the case, provide the location of MAPDL
+as the first parameter to <code class="docutils literal notranslate"><span class="pre">launch_mapdl</span></code>.  For example, on Windows,
+this will be:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exec_loc</span> <span class="o">=</span> <span class="s1">&#39;C:/Program Files/ANSYS Inc/v211/ansys/bin/winx64/ANSYS211.exe&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">exec_loc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For Linux:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exec_loc</span> <span class="o">=</span> <span class="s1">&#39;/usr/ansys_inc/v211/ansys/bin/ansys211&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">exec_loc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Should this fail to launch or hang while launching, pass
+<code class="docutils literal notranslate"><span class="pre">verbose_mapdl=True</span></code> when using <code class="docutils literal notranslate"><span class="pre">launch_mapdl</span></code>.  This will print
+the output of MAPDL within Python and can be used to debug why MAPDL
+isn’t launching.  Output will be limited on Windows due to the way
+MAPDL launches on Windows.</p>
+</section>
+<section id="debug-launch-issues">
+<h3>Debug Launch Issues<a class="headerlink" href="#debug-launch-issues" title="Permalink to this heading">#</a></h3>
+<p>In some cases, it may be necessary to debug why MAPDL isn’t launching
+by running the launch command manually from the command line.  In
+Windows, open up a command prompt and run the following (version
+dependent) command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;C:\Program Files\ANSYS Inc</span><span class="se">\v</span><span class="s2">211</span><span class="se">\a</span><span class="s2">nsys</span><span class="se">\b</span><span class="s2">in\winx64\ANSYS211.exe&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Powershell users can run the above without quotes.</p>
+</div>
+<p>For Linux:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ansys_inc</span><span class="o">/</span><span class="n">v211</span><span class="o">/</span><span class="n">ansys</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ansys211</span>
+</pre></div>
+</div>
+<p>Note that you should probably startup MAPDL in a temporary working
+directory as MAPDL creates a several temporary files.</p>
+<p>If this command doesn’t launch, you could have a variety of issues, including:</p>
+<ul class="simple">
+<li><p>License server setup</p></li>
+<li><p>Running behind a VPN</p></li>
+<li><p>Missing dependencies</p></li>
+</ul>
+</section>
+</section>
+<section id="licensing-issues">
+<h2>Licensing Issues<a class="headerlink" href="#licensing-issues" title="Permalink to this heading">#</a></h2>
+<p>PADT generally has a great blog regarding ANSYS issues, and licensing is always a common issue (for example <a class="reference external" href="https://www.padtinc.com/blog/15271-2/">Changes to Licensing at ANSYS 2020R1</a>).  Should you be responsible for maintaining Ansys licensing or have a personal install of Ansys, please check the online Ansys licensing documentation at <a class="reference external" href="https://ansyshelp.ansys.com/account/secured?returnurl=/Views/Secured/prod_page.html?pn=Installation%20and%20Licensing&amp;pid=InstallationAndLicensing&amp;lang=en">Installation and Licensing</a>.</p>
+<p>For an in-depth explanation, please see the <a class="reference download internal" download="" href="../_downloads/a117b0110f46d19902baf054ee95ddf8/ANSYS_Inc._Licensing_Guide.pdf"><code class="xref download docutils literal notranslate"><span class="pre">ANSYS</span> <span class="pre">Licensing</span> <span class="pre">Guide</span></code></a>.</p>
+</section>
+<section id="vpn-issues">
+<h2>VPN Issues<a class="headerlink" href="#vpn-issues" title="Permalink to this heading">#</a></h2>
+<p>Sometimes, MAPDL has issues starting when VPN software is running.  One
+issue stems from MPI communication and can be solved by passing
+the <code class="docutils literal notranslate"><span class="pre">-smp</span></code> option that sets the execution mode to “Shared Memory
+Parallel”, rather than the default “Distributed Memory Parallel” mode.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">additional_switches</span><span class="o">=</span><span class="s1">&#39;-smp&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>While this approach has the disadvantage of using the potentially slower shared memory parallel mode, you’ll at least be able to run MAPDL.  For more details on shared vs distributed memory, see <a class="reference external" href="https://www.ansys.com/-/media/Ansys/corporate/resourcelibrary/presentation/hpc-for-mechanical-ansys.pdf">High-Performance Computing for Mechanical Simulations using ANSYS</a>.</p>
+</section>
+<section id="missing-dependencies-on-linux">
+<h2>Missing Dependencies on Linux<a class="headerlink" href="#missing-dependencies-on-linux" title="Permalink to this heading">#</a></h2>
+<p>Some Linux installations may be missing required dependencies.  Should
+you get errors like <code class="docutils literal notranslate"><span class="pre">libXp.so.6:</span> <span class="pre">cannot</span> <span class="pre">open</span> <span class="pre">shared</span> <span class="pre">object</span> <span class="pre">file:</span> <span class="pre">No</span>
+<span class="pre">such</span> <span class="pre">file</span> <span class="pre">or</span> <span class="pre">directory</span></code>, you may be missing some necessary
+dependencies.</p>
+<section id="centos">
+<h3>CentOS<a class="headerlink" href="#centos" title="Permalink to this heading">#</a></h3>
+<p>On CentOS 7, you can install these with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="n">openssl</span> <span class="n">openssh</span><span class="o">-</span><span class="n">clients</span> <span class="n">mesa</span><span class="o">-</span><span class="n">libGL</span> <span class="n">mesa</span><span class="o">-</span><span class="n">libGLU</span> <span class="n">motif</span> <span class="n">libgfortran</span>
+</pre></div>
+</div>
+</section>
+<section id="ubuntu">
+<h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this heading">#</a></h3>
+<p>Since MAPDL isn’t officially supported on Ubuntu, it’s a bit more
+difficult to setup, but it’s still possible.  On Ubuntu 20.04 with
+Ansys 2021R1, install the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libx11</span><span class="o">-</span><span class="mi">6</span> <span class="n">libgl1</span> <span class="n">libxm4</span> <span class="n">libxt6</span> <span class="n">libxext6</span> <span class="n">libxi6</span> <span class="n">libx11</span><span class="o">-</span><span class="mi">6</span> <span class="n">libsm6</span> <span class="n">libice6</span> <span class="n">libxxf86vm1</span> <span class="n">libglu1</span>
+</pre></div>
+</div>
+<p>This takes care of everything except for <code class="docutils literal notranslate"><span class="pre">libxp6</span></code>.  Should you be
+using Ubuntu 16.04, you can install that simply with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span>
+<span class="pre">install</span> <span class="pre">libxp6</span></code>.  However, on Ubuntu 18.04+, you must manually
+download and install the package.</p>
+<p>Since <code class="docutils literal notranslate"><span class="pre">libxpl6</span></code> also pre-depends on <code class="docutils literal notranslate"><span class="pre">multiarch-support</span></code>, which is
+also outdated, it must be removed, otherwise you’ll have a broken
+package configuration.  The following step downloads and modifies the
+<code class="docutils literal notranslate"><span class="pre">libxp6</span></code> package to remove the <code class="docutils literal notranslate"><span class="pre">multiarch-support</span></code> dependency, and
+then installs it via <code class="docutils literal notranslate"><span class="pre">dpkg</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">tmp</span>
+<span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">br</span><span class="o">.</span><span class="n">debian</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">debian</span><span class="o">/</span><span class="n">pool</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">libx</span><span class="o">/</span><span class="n">libxp</span><span class="o">/</span><span class="n">libxp6_1</span><span class="mf">.0.2</span><span class="o">-</span><span class="mi">2</span><span class="n">_amd64</span><span class="o">.</span><span class="n">deb</span>
+<span class="n">ar</span> <span class="n">x</span> <span class="n">libxp6_1</span><span class="mf">.0.2</span><span class="o">-</span><span class="mi">2</span><span class="n">_amd64</span><span class="o">.</span><span class="n">deb</span>
+<span class="n">sudo</span> <span class="n">tar</span> <span class="n">xzf</span> <span class="n">control</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">sudo</span> <span class="n">sed</span> <span class="s1">&#39;/Pre-Depends/d&#39;</span> <span class="n">control</span> <span class="o">-</span><span class="n">i</span>
+<span class="n">sudo</span> <span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;tar c postinst postrm md5sums control | gzip -c &gt; control.tar.gz&quot;</span>
+<span class="n">sudo</span> <span class="n">ar</span> <span class="n">rcs</span> <span class="n">libxp6_1</span><span class="mf">.0.2</span><span class="o">-</span><span class="mi">2</span><span class="n">_amd64_mod</span><span class="o">.</span><span class="n">deb</span> <span class="n">debian</span><span class="o">-</span><span class="n">binary</span> <span class="n">control</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="n">data</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">xz</span>
+<span class="n">sudo</span> <span class="n">dpkg</span> <span class="o">-</span><span class="n">i</span> <span class="o">./</span><span class="n">libxp6_1</span><span class="mf">.0.2</span><span class="o">-</span><span class="mi">2</span><span class="n">_amd64_mod</span><span class="o">.</span><span class="n">deb</span>
+</pre></div>
+</div>
 </section>
 </section>
 </section>
@@ -444,7 +603,7 @@ can use <code class="docutils literal notranslate"><span class="pre">launch_mapd
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

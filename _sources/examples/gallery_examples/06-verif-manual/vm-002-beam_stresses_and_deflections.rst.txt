@@ -141,7 +141,7 @@ Set up the element type (a beam-type).
     # Output control for values extrapolated to the element
     # and section nodes:
     # Same as KEYOPT(9) = 1 plus stresses and strains at all section nodes
-    mapdl.keyopt(1, 9, 3, mute=True)
+    _ = mapdl.keyopt(1, 9, 3)
 
 
 
@@ -603,7 +603,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.552 seconds)
+   **Total running time of the script:** ( 0 minutes  0.550 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_06-verif-manual_vm-002-beam_stresses_and_deflections.py:

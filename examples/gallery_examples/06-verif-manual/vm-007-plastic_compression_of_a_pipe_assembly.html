@@ -46,7 +46,6 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -58,9 +57,8 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Parametric Calculation" href="vm-008-parametric_calculation.html" />
     <link rel="prev" title="Pinched Cylinder" href="vm-006-pinched_cylinder.html" />
-<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -116,6 +114,12 @@
 </li>
 
 <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -134,14 +138,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../../../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -243,11 +241,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../00-mapdl-examples/3d_plate_thermal.html">
      Basic Thermal Analysis with pyMAPDL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../00-mapdl-examples/acoustic_analysis.html">
-     3D Acoustic Analysis
     </a>
    </li>
    <li class="toctree-l2">
@@ -763,7 +756,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 <p>Enter verification example mode and the pre-processing routine.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">verify</span><span class="p">()</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">(</span><span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
@@ -1115,7 +1108,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
     <span class="p">(</span><span class="mf">2.03485925</span><span class="p">,</span> <span class="mf">0.21270071036846988</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">),</span>
     <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
 <span class="p">]</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <img src="../../../_images/sphx_glr_vm-007-plastic_compression_of_a_pipe_assembly_002.png" srcset="../../../_images/sphx_glr_vm-007-plastic_compression_of_a_pipe_assembly_002.png" alt="vm 007 plastic compression of a pipe assembly" class = "sphx-glr-single-img"/></section>
@@ -1169,7 +1162,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 
 <span class="c1"># Select all nodes.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">(</span><span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
@@ -1196,7 +1189,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 
 <span class="c1"># Load Step 3</span>
 <span class="n">solution</span><span class="p">(</span><span class="n">deflect</span><span class="o">=</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">defl_ls3</span></a><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">(</span><span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
@@ -1204,7 +1197,7 @@ the <code class="docutils literal notranslate"><span class="pre">ROTY</span></co
 <h2>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this heading">#</a></h2>
 <p>Enter post-processing.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Enter the post-processing routine.</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">(</span><span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
@@ -1371,36 +1364,36 @@ which can be compared with expected target values for models with <code class="d
 </div>
 <div class="output_subarea output_html rendered_html output_result">
 <style type="text/css">
-#T_c0274 th.col_heading {
+#T_7f406 th.col_heading {
   background-color: #FFEFD5;
   color: black;
   border: 0.5px solid black;
   font-style: italic;
   text-align: center;
 }
-#T_c0274 th.row_heading {
+#T_7f406 th.row_heading {
   background-color: #FFEFD5;
   color: black;
   border: 0.5px solid black;
   font-style: italic;
   text-align: center;
 }
-#T_c0274 td:hover {
+#T_7f406 td:hover {
   background-color: #FFF8DC;
 }
-#T_c0274 th {
+#T_7f406 th {
   max-width: 120px;
 }
-#T_c0274  {
+#T_7f406  {
   border: 0.5px solid black;
 }
-#T_c0274 caption {
+#T_7f406 caption {
   color: black;
   font-style: italic;
   font-size: 24px;
   text-align: center;
 }
-#T_c0274_row0_col0, #T_c0274_row0_col1, #T_c0274_row0_col2, #T_c0274_row1_col0, #T_c0274_row1_col1, #T_c0274_row1_col2, #T_c0274_row2_col0, #T_c0274_row2_col1, #T_c0274_row2_col2, #T_c0274_row3_col0, #T_c0274_row3_col1, #T_c0274_row3_col2, #T_c0274_row4_col0, #T_c0274_row4_col1, #T_c0274_row4_col2, #T_c0274_row5_col0, #T_c0274_row5_col1, #T_c0274_row5_col2, #T_c0274_row6_col0, #T_c0274_row6_col1, #T_c0274_row6_col2, #T_c0274_row7_col0, #T_c0274_row7_col1, #T_c0274_row7_col2, #T_c0274_row8_col0, #T_c0274_row8_col1, #T_c0274_row8_col2 {
+#T_7f406_row0_col0, #T_7f406_row0_col1, #T_7f406_row0_col2, #T_7f406_row1_col0, #T_7f406_row1_col1, #T_7f406_row1_col2, #T_7f406_row2_col0, #T_7f406_row2_col1, #T_7f406_row2_col2, #T_7f406_row3_col0, #T_7f406_row3_col1, #T_7f406_row3_col2, #T_7f406_row4_col0, #T_7f406_row4_col1, #T_7f406_row4_col2, #T_7f406_row5_col0, #T_7f406_row5_col1, #T_7f406_row5_col2, #T_7f406_row6_col0, #T_7f406_row6_col1, #T_7f406_row6_col2, #T_7f406_row7_col0, #T_7f406_row7_col1, #T_7f406_row7_col2, #T_7f406_row8_col0, #T_7f406_row8_col1, #T_7f406_row8_col2 {
   background-color: #FFFAFA;
   color: black;
   border-color: black;
@@ -1409,74 +1402,74 @@ which can be compared with expected target values for models with <code class="d
   text-align: center;
 }
 </style>
-<table id="T_c0274">
+<table id="T_7f406">
   <caption>Results Comparison</caption>
   <thead>
     <tr>
       <th class="blank" >&nbsp;</th>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_c0274_level0_col0" class="col_heading level0 col0" >Target</th>
-      <th id="T_c0274_level0_col1" class="col_heading level0 col1" >Mechanical APDL</th>
-      <th id="T_c0274_level0_col2" class="col_heading level0 col2" >Ratio</th>
+      <th id="T_7f406_level0_col0" class="col_heading level0 col0" >Target</th>
+      <th id="T_7f406_level0_col1" class="col_heading level0 col1" >Mechanical APDL</th>
+      <th id="T_7f406_level0_col2" class="col_heading level0 col2" >Ratio</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_c0274_level0_row0" class="row_heading level0 row0" rowspan="3">PIPE288</th>
-      <th id="T_c0274_level1_row0" class="row_heading level1 row0" >Load, lb for Deflection = 0.032 in</th>
-      <td id="T_c0274_row0_col0" class="data row0 col0" >1024400.000</td>
-      <td id="T_c0274_row0_col1" class="data row0 col1" >1024400.000</td>
-      <td id="T_c0274_row0_col2" class="data row0 col2" >1.000</td>
+      <th id="T_7f406_level0_row0" class="row_heading level0 row0" rowspan="3">PIPE288</th>
+      <th id="T_7f406_level1_row0" class="row_heading level1 row0" >Load, lb for Deflection = 0.032 in</th>
+      <td id="T_7f406_row0_col0" class="data row0 col0" >1024400.000</td>
+      <td id="T_7f406_row0_col1" class="data row0 col1" >1024400.000</td>
+      <td id="T_7f406_row0_col2" class="data row0 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_c0274_level1_row1" class="row_heading level1 row1" >Load, lb for Deflection = 0.05 in</th>
-      <td id="T_c0274_row1_col0" class="data row1 col0" >1262000.000</td>
-      <td id="T_c0274_row1_col1" class="data row1 col1" >1262000.000</td>
-      <td id="T_c0274_row1_col2" class="data row1 col2" >1.000</td>
+      <th id="T_7f406_level1_row1" class="row_heading level1 row1" >Load, lb for Deflection = 0.05 in</th>
+      <td id="T_7f406_row1_col0" class="data row1 col0" >1262000.000</td>
+      <td id="T_7f406_row1_col1" class="data row1 col1" >1262000.000</td>
+      <td id="T_7f406_row1_col2" class="data row1 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_c0274_level1_row2" class="row_heading level1 row2" >Load, lb for Deflection = 0.1 in</th>
-      <td id="T_c0274_row2_col0" class="data row2 col0" >1262000.000</td>
-      <td id="T_c0274_row2_col1" class="data row2 col1" >1262000.000</td>
-      <td id="T_c0274_row2_col2" class="data row2 col2" >1.000</td>
+      <th id="T_7f406_level1_row2" class="row_heading level1 row2" >Load, lb for Deflection = 0.1 in</th>
+      <td id="T_7f406_row2_col0" class="data row2 col0" >1262000.000</td>
+      <td id="T_7f406_row2_col1" class="data row2 col1" >1262000.000</td>
+      <td id="T_7f406_row2_col2" class="data row2 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_c0274_level0_row3" class="row_heading level0 row3" rowspan="3">SOLID185</th>
-      <th id="T_c0274_level1_row3" class="row_heading level1 row3" >Load, lb for Deflection = 0.032 in</th>
-      <td id="T_c0274_row3_col0" class="data row3 col0" >1024400.000</td>
-      <td id="T_c0274_row3_col1" class="data row3 col1" >1022529.000</td>
-      <td id="T_c0274_row3_col2" class="data row3 col2" >0.998</td>
+      <th id="T_7f406_level0_row3" class="row_heading level0 row3" rowspan="3">SOLID185</th>
+      <th id="T_7f406_level1_row3" class="row_heading level1 row3" >Load, lb for Deflection = 0.032 in</th>
+      <td id="T_7f406_row3_col0" class="data row3 col0" >1024400.000</td>
+      <td id="T_7f406_row3_col1" class="data row3 col1" >1022529.000</td>
+      <td id="T_7f406_row3_col2" class="data row3 col2" >0.998</td>
     </tr>
     <tr>
-      <th id="T_c0274_level1_row4" class="row_heading level1 row4" >Load, lb for Deflection = 0.05 in</th>
-      <td id="T_c0274_row4_col0" class="data row4 col0" >1262000.000</td>
-      <td id="T_c0274_row4_col1" class="data row4 col1" >1259695.000</td>
-      <td id="T_c0274_row4_col2" class="data row4 col2" >0.998</td>
+      <th id="T_7f406_level1_row4" class="row_heading level1 row4" >Load, lb for Deflection = 0.05 in</th>
+      <td id="T_7f406_row4_col0" class="data row4 col0" >1262000.000</td>
+      <td id="T_7f406_row4_col1" class="data row4 col1" >1259695.000</td>
+      <td id="T_7f406_row4_col2" class="data row4 col2" >0.998</td>
     </tr>
     <tr>
-      <th id="T_c0274_level1_row5" class="row_heading level1 row5" >Load, lb for Deflection = 0.1 in</th>
-      <td id="T_c0274_row5_col0" class="data row5 col0" >1262000.000</td>
-      <td id="T_c0274_row5_col1" class="data row5 col1" >1259695.000</td>
-      <td id="T_c0274_row5_col2" class="data row5 col2" >0.998</td>
+      <th id="T_7f406_level1_row5" class="row_heading level1 row5" >Load, lb for Deflection = 0.1 in</th>
+      <td id="T_7f406_row5_col0" class="data row5 col0" >1262000.000</td>
+      <td id="T_7f406_row5_col1" class="data row5 col1" >1259695.000</td>
+      <td id="T_7f406_row5_col2" class="data row5 col2" >0.998</td>
     </tr>
     <tr>
-      <th id="T_c0274_level0_row6" class="row_heading level0 row6" rowspan="3">SHELL181</th>
-      <th id="T_c0274_level1_row6" class="row_heading level1 row6" >Load, lb for Deflection = 0.032 in</th>
-      <td id="T_c0274_row6_col0" class="data row6 col0" >1024400.000</td>
-      <td id="T_c0274_row6_col1" class="data row6 col1" >1023932.000</td>
-      <td id="T_c0274_row6_col2" class="data row6 col2" >1.000</td>
+      <th id="T_7f406_level0_row6" class="row_heading level0 row6" rowspan="3">SHELL181</th>
+      <th id="T_7f406_level1_row6" class="row_heading level1 row6" >Load, lb for Deflection = 0.032 in</th>
+      <td id="T_7f406_row6_col0" class="data row6 col0" >1024400.000</td>
+      <td id="T_7f406_row6_col1" class="data row6 col1" >1023932.000</td>
+      <td id="T_7f406_row6_col2" class="data row6 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_c0274_level1_row7" class="row_heading level1 row7" >Load, lb for Deflection = 0.05 in</th>
-      <td id="T_c0274_row7_col0" class="data row7 col0" >1262000.000</td>
-      <td id="T_c0274_row7_col1" class="data row7 col1" >1261654.000</td>
-      <td id="T_c0274_row7_col2" class="data row7 col2" >1.000</td>
+      <th id="T_7f406_level1_row7" class="row_heading level1 row7" >Load, lb for Deflection = 0.05 in</th>
+      <td id="T_7f406_row7_col0" class="data row7 col0" >1262000.000</td>
+      <td id="T_7f406_row7_col1" class="data row7 col1" >1261654.000</td>
+      <td id="T_7f406_row7_col2" class="data row7 col2" >1.000</td>
     </tr>
     <tr>
-      <th id="T_c0274_level1_row8" class="row_heading level1 row8" >Load, lb for Deflection = 0.1 in</th>
-      <td id="T_c0274_row8_col0" class="data row8 col0" >1262000.000</td>
-      <td id="T_c0274_row8_col1" class="data row8 col1" >1261423.000</td>
-      <td id="T_c0274_row8_col2" class="data row8 col2" >1.000</td>
+      <th id="T_7f406_level1_row8" class="row_heading level1 row8" >Load, lb for Deflection = 0.1 in</th>
+      <td id="T_7f406_row8_col0" class="data row8 col0" >1262000.000</td>
+      <td id="T_7f406_row8_col1" class="data row8 col1" >1261423.000</td>
+      <td id="T_7f406_row8_col2" class="data row8 col2" >1.000</td>
     </tr>
   </tbody>
 </table>
@@ -1487,7 +1480,7 @@ which can be compared with expected target values for models with <code class="d
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.920 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.870 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-007-plastic-compression-of-a-pipe-assembly-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/ca47a76043c981995a74854db8e72c4c/vm-007-plastic_compression_of_a_pipe_assembly.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-007-plastic_compression_of_a_pipe_assembly.py</span></code></a></p>
@@ -1525,7 +1518,7 @@ which can be compared with expected target values for models with <code class="d
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

@@ -46,7 +46,6 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -57,9 +56,8 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Path Operations within pyMAPDL and MAPDL" href="path_operations.html" />
     <link rel="prev" title="MAPDL 3D Beam Example" href="mapdl_3d_beam.html" />
-<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -115,6 +113,12 @@
 </li>
 
 <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -133,14 +137,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../../../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -242,11 +240,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="3d_plate_thermal.html">
      Basic Thermal Analysis with pyMAPDL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="acoustic_analysis.html">
-     3D Acoustic Analysis
     </a>
    </li>
    <li class="toctree-l2">
@@ -666,7 +659,7 @@ are sequential</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:37:49  OCT 11, 2022 CP=    136.784
+ 00000000  VERSION=LINUX x64     07:43:00  OCT 11, 2022 CP=    142.135
 
 
 
@@ -757,7 +750,7 @@ individual elements</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =     136.791   TIME= 04:37:49
+ *** NOTE ***                            CP =     142.141   TIME= 07:43:00
  There is no title defined for this analysis.
 
  *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -772,7 +765,7 @@ individual elements</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:37:49  OCT 11, 2022 CP=    136.792
+ 00000000  VERSION=LINUX x64     07:43:00  OCT 11, 2022 CP=    142.142
 
 
 
@@ -788,11 +781,11 @@ individual elements</p>
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =     136.792   TIME= 04:37:49
+ *** NOTE ***                            CP =     142.142   TIME= 07:43:00
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =     136.792   TIME= 04:37:49
+ *** NOTE ***                            CP =     142.142   TIME= 07:43:00
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -809,7 +802,7 @@ individual elements</p>
 
  SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr
 
- *** NOTE ***                            CP =     136.798   TIME= 04:37:49
+ *** NOTE ***                            CP =     142.146   TIME= 07:43:00
  Predictor is ON by default for structural elements with rotational
  degrees of freedom.  Use the PRED,OFF command to turn the predictor
  OFF if it adversely affects the convergence.
@@ -822,8 +815,8 @@ individual elements</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.010   0.000440
- Time at end of element matrix formulation CP = 136.803802.
+        1        22  BEAM188       0.009   0.000413
+ Time at end of element matrix formulation CP = 142.15181.
 
  SPARSE MATRIX DIRECT SOLVER.
   Number of equations =          44,    Maximum wavefront =     12
@@ -831,7 +824,7 @@ individual elements</p>
   Memory required for in-core solution     =     0.062 MB
   Memory required for out-of-core solution =     0.062 MB
 
- *** NOTE ***                            CP =     136.808   TIME= 04:37:49
+ *** NOTE ***                            CP =     142.155   TIME= 07:43:00
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
@@ -846,12 +839,12 @@ individual elements</p>
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.027   0.001219
+        1        22  BEAM188       0.027   0.001223
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.001   0.000031
+        1        22  BEAM188       0.001   0.000042
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -866,7 +859,7 @@ individual elements</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.533 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.501 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-mapdl-beam-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/1e012ec2cca8a7261da18d4caa725113/mapdl_beam.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mapdl_beam.py</span></code></a></p>
@@ -903,7 +896,7 @@ individual elements</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

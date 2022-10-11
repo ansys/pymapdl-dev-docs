@@ -46,7 +46,6 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -57,9 +56,8 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="vput" href="ansys.mapdl.core.Mapdl.vput.html" />
     <link rel="prev" title="rpsd" href="ansys.mapdl.core.Mapdl.rpsd.html" />
-<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -114,6 +112,12 @@
  </a>
 </li>
 
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../../index.html">
   MAPDL Commands
@@ -133,14 +137,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../../../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -889,23 +887,9 @@
     
     <div class="toc-item">
       
-<div class="tocsection onthispage mt-5 pt-1 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ansys.mapdl.core.Mapdl.smooth">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     Mapdl.smooth()
-    </span>
-   </code>
-  </a>
- </li>
-</ul>
-
+    
 </nav>
     </div>
     
@@ -931,16 +915,16 @@
 <dd><p>Allows smoothing of noisy data and provides a graphical representation</p>
 <p>APDL Command: SMOOTH
 of the data.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>vect1</strong></dt><dd><p>Name of the first vector that contains the noisy data set (i.e.,
 independent variable). You must create and fill this vector before
-issuing <code class="docutils literal notranslate"><span class="pre">SMOOTH</span></code>.</p>
+issuing SMOOTH.</p>
 </dd>
 <dt><strong>vect2</strong></dt><dd><p>Name of the second vector that contains the dependent set of data.
 Must be the same length as the first vector. You must create and
-fill this vector before issuing <code class="docutils literal notranslate"><span class="pre">SMOOTH</span></code>.</p>
+fill this vector before issuing SMOOTH.</p>
 </dd>
 <dt><strong>datap</strong></dt><dd><p>Number of data points to be fitted, starting from the beginning of
 the vector. If left blank, the entire vector will be fitted. The
@@ -953,20 +937,17 @@ equal to the number of the data points. Default (blank) is one-half
 the number of data points. Maximum number of smoothed data fitting
 order is the number of data points up to 50.  Depending on this
 number, the smoothed curve will be one of the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - Curve is the absolute average of all of the data points.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - Curve is the least square average of all of the data points.</p></li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">3</span></code> or more - Curve is a polynomial of the order (n-1), where n is the number of data fitting</dt><dd><p>order points.</p>
+<p>1 - Curve is the absolute average of all of the data points.</p>
+<p>2 - Curve is the least square average of all of the data points.</p>
+<dl class="simple">
+<dt>3 or more - Curve is a polynomial of the order (n-1), where n is the number of data fitting</dt><dd><p>order points.</p>
 </dd>
 </dl>
-</li>
-</ul>
 </dd>
 <dt><strong>vect3</strong></dt><dd><p>Name of the vector that contains the smoothed data of the
 independent variable. This vector should have a length equal to or
 greater than the number of smoothed data points. In batch (command)
-mode, you must create this vector before issuing the <code class="docutils literal notranslate"><span class="pre">SMOOTH</span></code>
+mode, you must create this vector before issuing the SMOOTH
 command. In interactive mode, the GUI automatically creates this
 vector (if it does not exist). If you do not specify a vector name,
 the GUI will name the vector smth_ind.</p>
@@ -974,24 +955,22 @@ the GUI will name the vector smth_ind.</p>
 <dt><strong>vect4</strong></dt><dd><p>Name of the vector that contains the smoothed data of the dependent
 variable.  This vector must be the same length as Vect3.  In batch
 (command) mode, you must create this vector before issuing the
-<code class="docutils literal notranslate"><span class="pre">SMOOTH</span></code> command. In interactive mode, the GUI automatically creates
+SMOOTH command. In interactive mode, the GUI automatically creates
 this vector (if it does not exist). If you do not specify a vector
 name, the GUI will name the vector smth_dep.</p>
 </dd>
 <dt><strong>disp</strong></dt><dd><p>Specifies how you want to display data. No default; you must
 specify an option.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - Unsmoothed data only</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - Smoothed data only</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - Both smoothed and unsmoothed data</p></li>
-</ul>
+<p>1 - Unsmoothed data only</p>
+<p>2 - Smoothed data only</p>
+<p>3 - Both smoothed and unsmoothed data</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
 <p>You can control the attributes of the graph using standard ANSYS
-controls (<code class="docutils literal notranslate"><span class="pre">/GRID</span></code>, <code class="docutils literal notranslate"><span class="pre">/GTHK</span></code>, <code class="docutils literal notranslate"><span class="pre">/COLOR</span></code>, etc.). If working interactively, these
+controls (/GRID, /GTHK, /COLOR, etc.). If working interactively, these
 controls appear in this dialog box for convenience, as well as in their
 standard dialog boxes. You must always create Vect1 and Vect2 (using
 <code class="docutils literal notranslate"><span class="pre">*DIM</span></code>) and fill these vectors before smoothing the data. If you’re
@@ -1035,7 +1014,7 @@ X1_SMOOTH.</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

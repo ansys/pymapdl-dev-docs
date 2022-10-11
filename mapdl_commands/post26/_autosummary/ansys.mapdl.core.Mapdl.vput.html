@@ -46,7 +46,6 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -57,9 +56,8 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="vget" href="ansys.mapdl.core.Mapdl.vget.html" />
     <link rel="prev" title="smooth" href="ansys.mapdl.core.Mapdl.smooth.html" />
-<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -114,6 +112,12 @@
  </a>
 </li>
 
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../../index.html">
   MAPDL Commands
@@ -133,14 +137,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../../../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -889,23 +887,9 @@
     
     <div class="toc-item">
       
-<div class="tocsection onthispage mt-5 pt-1 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ansys.mapdl.core.Mapdl.vput">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     Mapdl.vput()
-    </span>
-   </code>
-  </a>
- </li>
-</ul>
-
+    
 </nav>
     </div>
     
@@ -930,9 +914,9 @@
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">vput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">par</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tstrt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kcplx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.vput" title="Permalink to this definition">#</a></dt>
 <dd><p>Moves an array parameter vector into a variable.</p>
 <p>APDL Command: VPUT</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>par</strong></dt><dd><p>Array parameter vector in the operation.</p>
 </dd>
 <dt><strong>ir</strong></dt><dd><p>Arbitrary reference number assigned to this variable (1 to NV
@@ -942,10 +926,8 @@
 values, the nearer value is used.</p>
 </dd>
 <dt><strong>kcplx</strong></dt><dd><p>Complex number key:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - Use the real part of the IR data.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - Use the imaginary part of the IR data.</p></li>
-</ul>
+<p>0 - Use the real part of the IR data.</p>
+<p>1 - Use the imaginary part of the IR data.</p>
 </dd>
 <dt><strong>name</strong></dt><dd><p>Thirty-two character name identifying the item on printouts and
 displays. Defaults to the label formed by concatenating VPUT with
@@ -955,14 +937,14 @@ the reference number IR.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>At least one variable should be defined (<code class="docutils literal notranslate"><span class="pre">NSOL</span></code>, <code class="docutils literal notranslate"><span class="pre">ESOL</span></code>, <code class="docutils literal notranslate"><span class="pre">RFORCE</span></code>, etc.)
+<p>At least one variable should be defined (NSOL, ESOL, RFORCE, etc.)
 before using this command.  The starting array element number must be
-defined.  For example,`` VPUT,A(1),2`` moves array parameter A to variable
-2 starting at time 0.0.  Looping continues from array element <code class="docutils literal notranslate"><span class="pre">A(1)</span></code> with
+defined.  For example, VPUT,A(1),2 moves array parameter A to variable
+2 starting at time 0.0.  Looping continues from array element A(1) with
 the index number incremented by one until the variable is filled.
 Unfilled variable locations are assigned a zero value.  The number of
 loops may be controlled with the <code class="docutils literal notranslate"><span class="pre">*VLEN</span></code> command (except that loop
-skipping (<code class="docutils literal notranslate"><span class="pre">NINC</span></code>) is not allowed).  For multi-dimensioned array
+skipping (NINC) is not allowed).  For multi-dimensioned array
 parameters, only the first (row) subscript is incremented.</p>
 </dd></dl>
 
@@ -993,7 +975,7 @@ parameters, only the first (row) subscript is incremented.</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

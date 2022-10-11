@@ -46,7 +46,6 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -57,9 +56,8 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="rcyc" href="ansys.mapdl.core.Mapdl.rcyc.html" />
     <link rel="prev" title="cvar" href="ansys.mapdl.core.Mapdl.cvar.html" />
-<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -114,6 +112,12 @@
  </a>
 </li>
 
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../../index.html">
   MAPDL Commands
@@ -133,14 +137,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../../../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -889,23 +887,9 @@
     
     <div class="toc-item">
       
-<div class="tocsection onthispage mt-5 pt-1 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ansys.mapdl.core.Mapdl.pmgtran">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     Mapdl.pmgtran()
-    </span>
-   </code>
-  </a>
- </li>
-</ul>
-
+    
 </nav>
     </div>
     
@@ -935,8 +919,8 @@
 <dd class="field-odd"><dl class="simple">
 <dt><strong>fname</strong></dt><dd><p>File name (8 characters maximum) to which tabular data and plot
 files will be written.  Must be enclosed in single quotes when the
-command is manually typed in.  Defaults to <code class="docutils literal notranslate"><span class="pre">MG_TRNS</span></code>.  The data file
-extension is <code class="docutils literal notranslate"><span class="pre">.OUT</span></code> and the plot file extension is <code class="docutils literal notranslate"><span class="pre">.PLT</span></code>.</p>
+command is manually typed in.  Defaults to MG_TRNS.  The data file
+extension is .OUT and the plot file extension is .PLT.</p>
 </dd>
 <dt><strong>freq</strong></dt><dd><p>Frequency of solution output.  Defaults to 1.  Every FREQth
 solution on the results file is output.</p>
@@ -955,15 +939,15 @@ the command is manually typed in.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p><code class="docutils literal notranslate"><span class="pre">PMGTRAN</span></code> invokes an ANSYS macro which calculates and summarizes
+<p>PMGTRAN invokes an ANSYS macro which calculates and summarizes
 electromagnetic results from a transient analysis.  The results are
 summarized by element components and listed on the screen as well as
-written to a file (<code class="docutils literal notranslate"><span class="pre">Fname.OUT</span></code>).  Also, graph plots of results as a
-function of time are created and written to a file (<code class="docutils literal notranslate"><span class="pre">Fname.PLT</span></code>) for use
-in the <code class="docutils literal notranslate"><span class="pre">DISPLAY</span></code> program.</p>
+written to a file (Fname.OUT).  Also, graph plots of results as a
+function of time are created and written to a file (Fname.PLT) for use
+in the DISPLAY program.</p>
 <p>Two components may be selected for the summary of electromagnetic
-forces (see <code class="docutils literal notranslate"><span class="pre">FMAGSUM</span></code>), two for power loss, and one each for stored
-energy (see <code class="docutils literal notranslate"><span class="pre">SENERGY</span></code>) and total current (see <code class="docutils literal notranslate"><span class="pre">CURR2D</span></code>).  See the
+forces (see FMAGSUM), two for power loss, and one each for stored
+energy (see SENERGY) and total current (see CURR2D).  See the
 referenced commands for other restrictions.</p>
 <p>PMGTRAN is restricted to MKSA units.</p>
 <p>Distributed ANSYS Restriction: This command is not supported in
@@ -997,7 +981,7 @@ Distributed ANSYS.</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

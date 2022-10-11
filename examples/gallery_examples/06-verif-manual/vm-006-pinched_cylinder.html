@@ -46,7 +46,6 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -58,9 +57,8 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Plastic Compression of a Pipe Assembly" href="vm-007-plastic_compression_of_a_pipe_assembly.html" />
     <link rel="prev" title="Statically Indeterminate Reaction Force Analysis" href="vm-005-laterally_loaded_tapered_support_structure.html" />
-<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -116,6 +114,12 @@
 </li>
 
 <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -134,14 +138,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../../../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -243,11 +241,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../00-mapdl-examples/3d_plate_thermal.html">
      Basic Thermal Analysis with pyMAPDL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../00-mapdl-examples/acoustic_analysis.html">
-     3D Acoustic Analysis
     </a>
    </li>
    <li class="toctree-l2">
@@ -1299,7 +1292,7 @@ Get the the radial displacement at the node where force F is applied.</p>
 <section id="getting-the-radial-displacements">
 <h2>Getting the radial displacements<a class="headerlink" href="#getting-the-radial-displacements" title="Permalink to this heading">#</a></h2>
 <p>To determine the radial displacement <span class="math notranslate nohighlight">\(\delta\)</span> at the point
-where F is applied, we can use <a class="reference internal" href="../../../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.get_value.html#ansys.mapdl.core.Mapdl.get_value" title="ansys.mapdl.core.Mapdl.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.get_value</span></code></a>.</p>
+where F is applied, we can use <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.Mapdl.get_value.html#ansys.mapdl.core.Mapdl.get_value" title="ansys.mapdl.core.Mapdl.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.get_value</span></code></a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_displacements</span><span class="p">():</span>
     <span class="c1"># Select keypoint by its number ``top_keypoint``.</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">ksel</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="s2">&quot;top_keypoint&quot;</span><span class="p">)</span>
@@ -1779,7 +1772,7 @@ and <span class="math notranslate nohighlight">\(\delta_{\mathrm{shell281}}\)</s
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.118 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.955 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-006-pinched-cylinder-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/67d392adcde641261b383b6161b41103/vm-006-pinched_cylinder.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-006-pinched_cylinder.py</span></code></a></p>
@@ -1817,7 +1810,7 @@ and <span class="math notranslate nohighlight">\(\delta_{\mathrm{shell281}}\)</s
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

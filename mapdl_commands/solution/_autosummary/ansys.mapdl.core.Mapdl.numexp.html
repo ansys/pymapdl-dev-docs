@@ -46,7 +46,6 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -57,9 +56,8 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="time" href="ansys.mapdl.core.Mapdl.time.html" />
     <link rel="prev" title="nsubst" href="ansys.mapdl.core.Mapdl.nsubst.html" />
-<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -114,6 +112,12 @@
  </a>
 </li>
 
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../../index.html">
   MAPDL Commands
@@ -133,14 +137,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../../../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -939,23 +937,9 @@
     
     <div class="toc-item">
       
-<div class="tocsection onthispage mt-5 pt-1 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ansys.mapdl.core.Mapdl.numexp">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     Mapdl.numexp()
-    </span>
-   </code>
-  </a>
- </li>
-</ul>
-
+    
 </nav>
     </div>
     
@@ -985,11 +969,9 @@ substructure analyses.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>num</strong></dt><dd><p>The number of solutions to expand. This value is required.</p>
+<p>Num - Number of solutions to expand.</p>
 <dl class="simple">
-<dt>Num</dt><dd><p>Number of solutions to expand.</p>
-</dd>
-<dt>ALL</dt><dd><p>Expand all substeps between <code class="docutils literal notranslate"><span class="pre">BEGRNG</span></code> and <code class="docutils literal notranslate"><span class="pre">ENDRNG</span></code> (provided that ENDRNG &gt; 0). If
-<code class="docutils literal notranslate"><span class="pre">BEGRNG</span></code> and <code class="docutils literal notranslate"><span class="pre">ENDRNG</span></code> have no specified values, this option
+<dt>ALL - Expand all substeps between BEGRNG and ENDRNG (provided that ENDRNG &gt; 0). If</dt><dd><p>BEGRNG and ENDRNG have no specified values, this option
 expands all substeps of all load steps.</p>
 </dd>
 </dl>
@@ -999,38 +981,36 @@ solutions. The default is 0 for both values.</p>
 </dd>
 <dt><strong>elcalc</strong></dt><dd><p>The element-calculation key:</p>
 <dl class="simple">
-<dt>YES</dt><dd><p>Calculate element results, nodal loads, and reaction loads. This value is the
-default.</p>
-</dd>
-<dt>NO</dt><dd><p>Do not calculate these items.</p>
+<dt>YES - Calculate element results, nodal loads, and reaction loads. This value is the</dt><dd><p>default.</p>
 </dd>
 </dl>
+<p>NO - Do not calculate these items.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
 <p>Specifies a range of solutions to be expanded from analyses that use
-mode-superposition methods (<code class="docutils literal notranslate"><span class="pre">ANTYPE,HARMIC</span></code> or <code class="docutils literal notranslate"><span class="pre">TRANS</span></code>) or substructuring
-(<code class="docutils literal notranslate"><span class="pre">ANTYPE,SUBSTR</span></code>).</p>
+mode-superposition methods (ANTYPE,HARMIC or TRANS) or substructuring
+(ANTYPE,SUBSTR).</p>
 <p>For ANTYPE,TRANS, NUM, evenly spaced solutions are expanded between
-time BEGRNG and time <code class="docutils literal notranslate"><span class="pre">ENDRNG</span></code>.</p>
+time BEGRNG and time ENDRNG.</p>
 <p>For ANTYPE,HARMIC, NUM, evenly spaced solutions are expanded between
-frequency BEGRNG and frequency <code class="docutils literal notranslate"><span class="pre">ENDRNG</span></code>.</p>
+frequency BEGRNG and frequency ENDRNG.</p>
 <p>The first expansion in all cases is done at the first point beyond
-BEGRNG (that is, at <code class="docutils literal notranslate"><span class="pre">BEGRNG</span> <span class="pre">+</span> <span class="pre">(ENDRNG</span> <span class="pre">-</span> <span class="pre">BEGRNG)</span> <span class="pre">/</span> <span class="pre">NUM</span></code>)).</p>
+BEGRNG (that is, at BEGRNG + (ENDRNG - BEGRNG) / NUM)).</p>
 <p>The resulting results file will maintain the same load step, substep,
 and time (or frequency) values as the use pass.</p>
 <p>For a single expansion of a solution, or for multiple expansions when
 the solutions are not evenly spaced (such as in a mode-superposition
 harmonic analysis with the cluster option), ANSYS, Inc. recommends
-issuing one or more <code class="docutils literal notranslate"><span class="pre">EXPSOL</span></code> commands.</p>
+issuing one or more EXPSOL commands.</p>
 <p>The NUMEXP command is invalid in these cases:</p>
-<p>In a substructing analysis (<code class="docutils literal notranslate"><span class="pre">ANTYPE,SUBST</span></code>) when a factorized matrix file
-(the <code class="docutils literal notranslate"><span class="pre">.LN22</span></code> file generated by the sparse solver) does not exist, causing
+<p>In a substructing analysis (ANTYPE,SUBST) when a factorized matrix file
+(the .LN22 file generated by the sparse solver) does not exist, causing
 ANSYS to employ the full-resolve method.</p>
-<p>If the full-resolve option is selected using the <code class="docutils literal notranslate"><span class="pre">SEOPT</span></code> command.</p>
-<p>In both situations, use the <code class="docutils literal notranslate"><span class="pre">EXPSOL</span></code> command to perform a single
+<p>If the full-resolve option is selected using the SEOPT command.</p>
+<p>In both situations, use the EXPSOL command to perform a single
 expansion for each solution desired.</p>
 <p>This command is also valid in PREP7.</p>
 </dd></dl>
@@ -1062,7 +1042,7 @@ expansion for each solution desired.</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

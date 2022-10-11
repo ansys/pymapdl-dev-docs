@@ -46,7 +46,6 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/thebelab-helper.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -57,9 +56,8 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="cfclos" href="_autosummary/ansys.mapdl.core.Mapdl.cfclos.html" />
     <link rel="prev" title="vread" href="_autosummary/ansys.mapdl.core.Mapdl.vread.html" />
-<link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -114,6 +112,12 @@
  </a>
 </li>
 
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../api/index.html">
+  API Reference
+ </a>
+</li>
+
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../index.html">
   MAPDL Commands
@@ -133,14 +137,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -992,8 +990,8 @@ functions.  Instead of <code class="docutils literal notranslate"><span class="p
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ulib.html#ansys.mapdl.core.Mapdl.ulib" title="ansys.mapdl.core.Mapdl.ulib"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ulib</span></code></a>([fname, ext])</p></td>
 <td><p>Identifies a macro library file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.use.html#ansys.mapdl.core.Mapdl.use" title="ansys.mapdl.core.Mapdl.use"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.use</span></code></a>([lsnum])</p></td>
-<td><p>Reads load and load step option data into the database.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.use.html#ansys.mapdl.core.Mapdl.use" title="ansys.mapdl.core.Mapdl.use"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.use</span></code></a>([name, arg1, arg2, arg3, arg4, ...])</p></td>
+<td><p>Executes a macro file.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1024,7 +1022,7 @@ functions.  Instead of <code class="docutils literal notranslate"><span class="p
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

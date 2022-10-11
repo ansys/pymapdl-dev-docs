@@ -40,7 +40,7 @@ First, start MAPDL as a service.
     from ansys.mapdl.core import launch_mapdl
 
     mapdl = launch_mapdl()
-    print(mapdl)
+    mapdl
 
 
 
@@ -50,11 +50,8 @@ First, start MAPDL as a service.
 
  .. code-block:: none
 
-    Product:             Ansys Mechanical Enterprise
-    MAPDL Version:       21.2
-    ansys.mapdl Version: 0.64.dev0
 
-
+    <ansys.mapdl.core.mapdl_grpc.MapdlGrpc object at 0x7fe059402eb0>
 
 
 
@@ -187,7 +184,7 @@ could set the keypoint element sizes to be an intermediate value, which would
 shift the main location of the size transition to within the face of ``a2``.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 100-108
+.. GENERATED FROM PYTHON SOURCE LINES 100-110
 
 .. code-block:: default
 
@@ -196,7 +193,9 @@ shift the main location of the size transition to within the face of ``a2``.
     for k in [k2, k3, k6, k7]:
         mapdl.kesize(k, 0.2)
     mapdl.amesh("ALL")
-    mapdl.eplot(vtk=True, show_edges=True, show_axes=False, line_width=2, background="w")
+    _ = mapdl.eplot(
+        vtk=True, show_edges=True, show_axes=False, line_width=2, background="w"
+    )
 
 
 
@@ -211,11 +210,11 @@ shift the main location of the size transition to within the face of ``a2``.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 109-110
+.. GENERATED FROM PYTHON SOURCE LINES 111-112
 
 stop mapdl
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-111
+.. GENERATED FROM PYTHON SOURCE LINES 112-113
 
 .. code-block:: default
 
@@ -230,7 +229,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.704 seconds)
+   **Total running time of the script:** ( 0 minutes  1.691 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_03-tips-n-tricks_01-smoothing-element-size-transitions.py:

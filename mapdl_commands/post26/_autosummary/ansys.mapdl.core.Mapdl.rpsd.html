@@ -46,7 +46,6 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -57,9 +56,8 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="smooth" href="ansys.mapdl.core.Mapdl.smooth.html" />
     <link rel="prev" title="resp" href="ansys.mapdl.core.Mapdl.resp.html" />
-<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -114,6 +112,12 @@
  </a>
 </li>
 
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../../index.html">
   MAPDL Commands
@@ -133,14 +137,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../../../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -889,23 +887,9 @@
     
     <div class="toc-item">
       
-<div class="tocsection onthispage mt-5 pt-1 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ansys.mapdl.core.Mapdl.rpsd">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     Mapdl.rpsd()
-    </span>
-   </code>
-  </a>
- </li>
-</ul>
-
+    
 </nav>
     </div>
     
@@ -930,41 +914,37 @@
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">rpsd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">itype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signif</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.rpsd" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculates response power spectral density (PSD).</p>
 <p>APDL Command: RPSD</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>ir</strong></dt><dd><p>Arbitrary reference number assigned to the resulting variable (2 to
 NV [NUMVAR]).  If this number is the same as for a previous
 variable, the previous variable will be overwritten with this
 result.</p>
 </dd>
 <dt><strong>ia, ib</strong></dt><dd><p>Reference numbers of the two variables to be operated on.  If only
-one, leave <code class="docutils literal notranslate"><span class="pre">IB</span></code> blank.</p>
+one, leave IB blank.</p>
 </dd>
 <dt><strong>itype</strong></dt><dd><p>Defines the type of response PSD to be calculated:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">0,1</span></code> - Displacement (default).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - Velocity.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - Acceleration.</p></li>
-</ul>
+<p>0,1 - Displacement (default).</p>
+<p>2 - Velocity.</p>
+<p>3 - Acceleration.</p>
 </dd>
 <dt><strong>datum</strong></dt><dd><p>Defines the reference with respect to which response PSD is to be
 calculated:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - Absolute value.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - Relative to base (default).</p></li>
-</ul>
+<p>1 - Absolute value.</p>
+<p>2 - Relative to base (default).</p>
 </dd>
 <dt><strong>name</strong></dt><dd><p>Thirty-two character name identifying variable on listings and
 displays.  Embedded blanks are compressed for output.</p>
 </dd>
 <dt><strong>signif</strong></dt><dd><p>Combine only those modes whose significance level exceeds the
-<code class="docutils literal notranslate"><span class="pre">SIGNIF</span></code> threshold. The significance level is defined as the modal
+SIGNIF threshold. The significance level is defined as the modal
 covariance matrix term divided by the maximum of all the modal
 covariance matrix terms. Any term whose significance level is less
-than <code class="docutils literal notranslate"><span class="pre">SIGNIF</span></code> is considered insignificant and does not contribute to
-the response. All modes are taken into account by default (<code class="docutils literal notranslate"><span class="pre">SIGNIF</span> <span class="pre">=</span>
-<span class="pre">0.0</span></code>).</p>
+than SIGNIF is considered insignificant and does not contribute to
+the response. All modes are taken into account by default (SIGNIF =
+0.0).</p>
 </dd>
 </dl>
 </dd>
@@ -1006,7 +986,7 @@ Theory Reference for more information on these equations.</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

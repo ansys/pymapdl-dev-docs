@@ -46,7 +46,6 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/thebelab-helper.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -57,9 +56,8 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Create a Pool of MAPDL Instances" href="pool.html" />
     <link rel="prev" title="Translating Scripts" href="convert.html" />
-<link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -115,6 +113,12 @@
 </li>
 
 <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -133,14 +137,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -246,11 +244,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="parameters.html">
    Setting and Retrieving Parameters
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="database.html">
-   Accessing MAPDL Database
   </a>
  </li>
  <li class="toctree-l1">
@@ -384,7 +377,7 @@ PyMAPDL Math API.  For additional PyMAPDL Math examples, visit
 <h2>MAPDL Matrix Example<a class="headerlink" href="#mapdl-matrix-example" title="Permalink to this heading">#</a></h2>
 <p>This example demonstrates how to send an MAPDL Math matrix from MAPDL
 to Python and then send it back to be solved.  While this example runs
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> on mass
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> on mass
 and stiffness matrices generated from MAPDL, you could instead use
 mass and stiffness matrices generated from an external FEM tool, or
 even modify the mass and stiffness matrices within Python.</p>
@@ -422,7 +415,7 @@ in MAPDL.</p>
 </pre></div>
 </div>
 <p>Next, load the mass and stiffness matrices that are stored by default
-at <code class="docutils literal notranslate"><span class="pre">&lt;jobname&gt;.full</span></code>.  First, create an instance of <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.math.MapdlMath.html#ansys.mapdl.core.math.MapdlMath" title="ansys.mapdl.core.math.MapdlMath"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlMath</span></code></a> as <code class="docutils literal notranslate"><span class="pre">mm</span></code>:</p>
+at <code class="docutils literal notranslate"><span class="pre">&lt;jobname&gt;.full</span></code>.  First, create an instance of <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.math.MapdlMath.html#ansys.mapdl.core.math.MapdlMath" title="ansys.mapdl.core.math.MapdlMath"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlMath</span></code></a> as <code class="docutils literal notranslate"><span class="pre">mm</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mm</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">math</span>
 
 <span class="c1"># load by default from file.full</span>
@@ -461,7 +454,7 @@ transferred them to a different MAPDL session to be solved.</p>
 </pre></div>
 </div>
 <p>As expected, the natural frequencies obtained from
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> is
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> is
 identical to the result from <a class="reference internal" href="../mapdl_commands/solution/_autosummary/ansys.mapdl.core.Mapdl.solve.html#ansys.mapdl.core.Mapdl.solve" title="ansys.mapdl.core.Mapdl.solve"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.solve()</span></code></a>
 within MAPDL.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">1475.1333421</span>  <span class="mf">1475.1333426</span>  <span class="mf">2018.83737064</span> <span class="mf">2018.83737109</span> <span class="mf">2018.83737237</span>
@@ -470,7 +463,7 @@ within MAPDL.</p>
 </div>
 <p>If you wish to obtain the eigenvectors as well as the eigenvalues,
 initialize a matrix <code class="docutils literal notranslate"><span class="pre">eigvec</span></code> and send that to
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a>:</p>
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nmode</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">eigvec</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">my_stiff</span><span class="o">.</span><span class="n">nrow</span><span class="p">,</span> <span class="n">nmode</span><span class="p">)</span>  <span class="c1"># for eigenvectors</span>
 <span class="n">val</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">eigs</span><span class="p">(</span><span class="n">nmode</span><span class="p">,</span> <span class="n">my_stiff</span><span class="p">,</span> <span class="n">my_mass</span><span class="p">,</span> <span class="n">fmin</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -481,7 +474,7 @@ solution.</p>
 </section>
 <section id="apdlmath-reference">
 <h2>APDLMath Reference<a class="headerlink" href="#apdlmath-reference" title="Permalink to this heading">#</a></h2>
-<p>For additional details, please see the <a class="reference internal" href="../contribution_and_api/math.html#ref-math-api"><span class="std std-ref">MapdlMath</span></a> reference.</p>
+<p>For additional details, please see the <a class="reference internal" href="../api/math.html#ref-math-api"><span class="std std-ref">MapdlMath</span></a> reference.</p>
 </section>
 </section>
 
@@ -510,7 +503,7 @@ solution.</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

@@ -138,7 +138,7 @@ approximate this.
     plate_with_hole_anum = mapdl.asba(rect_anum, circ_anum)
 
     # finally, plot the lines of the plate
-    mapdl.lplot(cpos="xy", line_width=3, font_size=26, color_lines=True, background="w")
+    _ = mapdl.lplot(cpos="xy", line_width=3, font_size=26, color_lines=True, background="w")
 
 
 
@@ -182,7 +182,7 @@ Line numbers can be identified through inspection using ``lplot``
 
     mapdl.esize(plate_esize)
     mapdl.amesh(plate_with_hole_anum)
-    mapdl.eplot(
+    _ = mapdl.eplot(
         vtk=True, cpos="xy", show_edges=True, show_axes=False, line_width=2, background="w"
     )
 
@@ -240,7 +240,7 @@ force of 1 kN in the positive X direction.
     mapdl.f("ALL", "FX", 1000)
 
     # finally, be sure to select all nodes again to solve the entire solution
-    mapdl.allsel(mute=True)
+    _ = mapdl.allsel()
 
 
 
@@ -275,7 +275,7 @@ Solve the static analysis
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =       1.841   TIME= 04:35:14
+     *** NOTE ***                            CP =       1.843   TIME= 07:40:21
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -288,7 +288,7 @@ Solve the static analysis
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:35:14  OCT 11, 2022 CP=      1.847
+     00000000  VERSION=LINUX x64     07:40:21  OCT 11, 2022 CP=      1.848
 
                                                                                
 
@@ -304,11 +304,11 @@ Solve the static analysis
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =       1.850   TIME= 04:35:14
+     *** NOTE ***                            CP =       1.851   TIME= 07:40:21
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =       1.851   TIME= 04:35:14
+     *** NOTE ***                            CP =       1.852   TIME= 07:40:21
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -357,8 +357,8 @@ Solve the static analysis
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.082   0.000084
-     Time at end of element matrix formulation CP = 1.92830491.              
+            1       977  PLANE183      0.139   0.000142
+     Time at end of element matrix formulation CP = 1.95398009.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =        6124,    Maximum wavefront =     48
@@ -366,7 +366,7 @@ Solve the static analysis
       Memory required for in-core solution     =     8.134 MB
       Memory required for out-of-core solution =     4.318 MB
 
-     *** NOTE ***                            CP =       2.127   TIME= 04:35:15
+     *** NOTE ***                            CP =       2.129   TIME= 07:40:21
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -381,12 +381,12 @@ Solve the static analysis
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.100   0.000103
+            1       977  PLANE183      0.093   0.000095
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.032   0.000032
+            1       977  PLANE183      0.028   0.000029
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -663,7 +663,7 @@ Run the batch and record the stress concentration
 .. code-block:: default
 
     k_t_exp = []
-    ratios = np.linspace(0.01, 0.5, 10)
+    ratios = np.linspace(0.01, 0.5, 15)
     print("    Ratio  : Stress Concentration (K_t)")
     for ratio in ratios:
         stress_con = compute_stress_con(ratio)
@@ -681,14 +681,19 @@ Run the batch and record the stress concentration
 
         Ratio  : Stress Concentration (K_t)
         0.0100 :     2.9660
-        0.0644 :     2.8119
-        0.1189 :     2.6808
-        0.1733 :     2.5607
-        0.2278 :     2.4619
-        0.2822 :     2.3766
-        0.3367 :     2.3058
-        0.3911 :     2.2479
-        0.4456 :     2.2011
+        0.0450 :     2.8619
+        0.0800 :     2.7690
+        0.1150 :     2.6902
+        0.1500 :     2.6101
+        0.1850 :     2.5418
+        0.2200 :     2.4737
+        0.2550 :     2.4202
+        0.2900 :     2.3683
+        0.3250 :     2.3222
+        0.3600 :     2.2799
+        0.3950 :     2.2447
+        0.4300 :     2.2145
+        0.4650 :     2.1837
         0.5000 :     2.1609
 
 
@@ -762,7 +767,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  27.302 seconds)
+   **Total running time of the script:** ( 0 minutes  43.873 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_2d_plate_with_a_hole.py:

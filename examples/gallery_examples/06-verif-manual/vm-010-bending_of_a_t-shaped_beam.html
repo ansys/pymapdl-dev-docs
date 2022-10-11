@@ -46,7 +46,6 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -58,9 +57,8 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Brake Squeal Analysis" href="../../technology_showcase_examples/techdemo-1/ex_0-tecbrakesqueal.html" />
     <link rel="prev" title="Large Lateral Deflection of Unequal Stiffness Springs" href="vm-009-large_lateral_deflection_of_unequal_stiffness_springs.html" />
-<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -116,6 +114,12 @@
 </li>
 
 <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -134,14 +138,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../../../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -243,11 +241,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../00-mapdl-examples/3d_plate_thermal.html">
      Basic Thermal Analysis with pyMAPDL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../00-mapdl-examples/acoustic_analysis.html">
-     3D Acoustic Analysis
     </a>
    </li>
    <li class="toctree-l2">
@@ -876,7 +869,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
     <span class="p">(</span><span class="o">-</span><span class="mf">0.4135015240403764</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4134577015789461</span><span class="p">,</span> <span class="mf">0.8112146563156641</span><span class="p">),</span>
 <span class="p">]</span>
 
-<span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
 </pre></div>
 </div>
 <img src="../../../_images/sphx_glr_vm-010-bending_of_a_t-shaped_beam_001.png" srcset="../../../_images/sphx_glr_vm-010-bending_of_a_t-shaped_beam_001.png" alt="vm 010 bending of a t shaped beam" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>LIST ALL SELECTED ELEMENTS.  (LIST NODES)
@@ -928,7 +921,7 @@ stem thickness <span class="math notranslate nohighlight">\((b)\)</span>, input 
 <h2>Getting Displacements<a class="headerlink" href="#getting-displacements" title="Permalink to this heading">#</a></h2>
 <p>Using <a class="reference internal" href="../../../mapdl_commands/post1/_autosummary/ansys.mapdl.core.Mapdl.etable.html#ansys.mapdl.core.Mapdl.etable" title="ansys.mapdl.core.Mapdl.etable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.etable</span></code></a> get the results of
 the the maximum tensile and compressive bending stresses in
-an unsymmetric <cite>T-beam</cite> with <a class="reference internal" href="../../../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.get_value.html#ansys.mapdl.core.Mapdl.get_value" title="ansys.mapdl.core.Mapdl.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.get_value</span></code></a>.</p>
+an unsymmetric <cite>T-beam</cite> with <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.Mapdl.get_value.html#ansys.mapdl.core.Mapdl.get_value" title="ansys.mapdl.core.Mapdl.get_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.get_value</span></code></a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Create a table of element values for BEAM188.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">etable</span><span class="p">(</span><span class="n">lab</span><span class="o">=</span><span class="s2">&quot;STRS_B&quot;</span><span class="p">,</span> <span class="n">item</span><span class="o">=</span><span class="s2">&quot;LS&quot;</span><span class="p">,</span> <span class="n">comp</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">etable</span><span class="p">(</span><span class="n">lab</span><span class="o">=</span><span class="s2">&quot;STRS_T&quot;</span><span class="p">,</span> <span class="n">item</span><span class="o">=</span><span class="s2">&quot;LS&quot;</span><span class="p">,</span> <span class="n">comp</span><span class="o">=</span><span class="mi">31</span><span class="p">)</span>
@@ -1029,7 +1022,7 @@ with following settings below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.555 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.550 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-06-verif-manual-vm-010-bending-of-a-t-shaped-beam-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/b61d12b23033b8d997af8ad748a0ab72/vm-010-bending_of_a_t-shaped_beam.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vm-010-bending_of_a_t-shaped_beam.py</span></code></a></p>
@@ -1067,7 +1060,7 @@ with following settings below:</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   

@@ -46,7 +46,6 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -57,9 +56,8 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Volumes" href="03-volumes.html" />
     <link rel="prev" title="Lines" href="01-lines.html" />
-<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -115,6 +113,12 @@
 </li>
 
 <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -133,14 +137,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
-  Troubleshooting
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
-  Contributing and API
+ <a class="reference internal nav-link" href="../../../contributing.html">
+  Contributing
  </a>
 </li>
 
@@ -242,11 +240,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../00-mapdl-examples/3d_plate_thermal.html">
      Basic Thermal Analysis with pyMAPDL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../00-mapdl-examples/acoustic_analysis.html">
-     3D Acoustic Analysis
     </a>
    </li>
    <li class="toctree-l2">
@@ -651,7 +644,7 @@ using Pythonic PREP7 area commands.</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Product:             Ansys Mechanical Enterprise
 MAPDL Version:       21.2
-ansys.mapdl Version: 0.64.dev0
+ansys.mapdl Version: 0.63.1
 </pre></div>
 </div>
 <section id="apdl-command-a">
@@ -735,7 +728,7 @@ individual meshes.</p>
 <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">areas</span></a>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[UnstructuredGrid (0x7f7c8a1e92e0)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[UnstructuredGrid (0x7fe0593b9e20)
   N Cells:  12
   N Points: 24
   X Bounds: 0.000e+00, 1.000e+00
@@ -844,13 +837,13 @@ parameter.</p>
 <p>Note that the <cite>cpos</cite> keyword argument can be used to describe the
 camera direction from the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">iso</span></code> - Isometric view</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xy</span></code> - XY Plane view</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xz</span></code> - XZ Plane view</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">yx</span></code> - YX Plane view</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">yz</span></code> - YZ Plane view</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zx</span></code> - ZX Plane view</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zy</span></code> - ZY Plane view</p></li>
+<li><p>‘iso’ - Isometric view</p></li>
+<li><p>‘xy’ - XY Plane view</p></li>
+<li><p>‘xz’ - XZ Plane view</p></li>
+<li><p>‘yx’ - YX Plane view</p></li>
+<li><p>‘yz’ - YZ Plane view</p></li>
+<li><p>‘zx’ - ZX Plane view</p></li>
+<li><p>‘zy’ - ZY Plane view</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">quality</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">show_bounds</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;iso&quot;</span><span class="p">,</span> <span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -859,7 +852,7 @@ camera direction from the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.015 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.059 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-02-geometry-02-areas-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/4d6d7a4936327775f97c6ec46d7edc3f/02-areas.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">02-areas.py</span></code></a></p>
@@ -897,7 +890,7 @@ camera direction from the following:</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   
