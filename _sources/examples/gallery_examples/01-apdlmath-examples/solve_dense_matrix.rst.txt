@@ -55,7 +55,7 @@ Allocate a Dense Matrix in the APDLMath workspace
 .. code-block:: default
 
     mapdl.clear()
-    dim = 10000
+    dim = 1000
     a = mm.rand(dim, dim)
     b = mm.rand(dim)
     x = mm.zeros(dim)
@@ -110,12 +110,10 @@ Solve using APDLMath
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    Solving a (10000 x 10000) dense linear system using MAPDL...
-    Elapsed time to solve the linear system using Mapdl: 5.57164192199707 seconds
+    Solving a (1000 x 1000) dense linear system using MAPDL...
+    Elapsed time to solve the linear system using Mapdl: 0.013505220413208008 seconds
 
 
 
@@ -137,12 +135,10 @@ Norm of the MAPDL Solution
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    1.0000000000000029
+    1.0000000000000016
 
 
 
@@ -168,12 +164,10 @@ Solve the solution using numpy
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    Solving a (10000 x 10000) dense linear system using numpy...
-    Elapsed time to solve the linear system using numpy: 6.346715450286865 seconds
+    Solving a (1000 x 1000) dense linear system using numpy...
+    Elapsed time to solve the linear system using numpy: 0.07042050361633301 seconds
 
 
 
@@ -195,12 +189,10 @@ Norm of the numpy Solution
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    1.0000000000000022
+    0.9999999999999987
 
 
 
@@ -223,28 +215,23 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  15.790 seconds)
+   **Total running time of the script:** ( 0 minutes  0.342 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_01-apdlmath-examples_solve_dense_matrix.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: solve_dense_matrix.py <solve_dense_matrix.py>`
 
-     :download:`Download Python source code: solve_dense_matrix.py <solve_dense_matrix.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: solve_dense_matrix.ipynb <solve_dense_matrix.ipynb>`
+      :download:`Download Jupyter notebook: solve_dense_matrix.ipynb <solve_dense_matrix.ipynb>`
 
 
 .. only:: html

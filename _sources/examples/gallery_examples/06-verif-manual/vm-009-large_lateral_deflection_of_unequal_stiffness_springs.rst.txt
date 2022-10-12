@@ -229,8 +229,6 @@ Set up the element types.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     ELEMENT TYPE        1 IS COMBIN14     SPRING-DAMPER               
@@ -289,8 +287,6 @@ spring elements.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     *****ANSYS VERIFICATION RUN ONLY*****
@@ -339,8 +335,6 @@ Set up the nodes coordinates using python ``for`` loop.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -397,8 +391,6 @@ Create the elements through the nodes.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -573,8 +565,6 @@ in X and Y directions from the node where the force is applied using
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     PRINT U    NODAL SOLUTION PER NODE
@@ -708,28 +698,23 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.340 seconds)
+   **Total running time of the script:** ( 0 minutes  0.276 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_06-verif-manual_vm-009-large_lateral_deflection_of_unequal_stiffness_springs.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: vm-009-large_lateral_deflection_of_unequal_stiffness_springs.py <vm-009-large_lateral_deflection_of_unequal_stiffness_springs.py>`
 
-     :download:`Download Python source code: vm-009-large_lateral_deflection_of_unequal_stiffness_springs.py <vm-009-large_lateral_deflection_of_unequal_stiffness_springs.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: vm-009-large_lateral_deflection_of_unequal_stiffness_springs.ipynb <vm-009-large_lateral_deflection_of_unequal_stiffness_springs.ipynb>`
+      :download:`Download Jupyter notebook: vm-009-large_lateral_deflection_of_unequal_stiffness_springs.ipynb <vm-009-large_lateral_deflection_of_unequal_stiffness_springs.ipynb>`
 
 
 .. only:: html

@@ -1,19 +1,23 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Interactive Plotting &#8212; PyMAPDL</title>
     
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
 
-    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -25,14 +29,14 @@
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/pyansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
-    
+
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -40,7 +44,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/thebelab-helper.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -51,43 +57,43 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Mesh and Geometry" href="mesh_geometry.html" />
     <link rel="prev" title="ANSYS APDL Interactive Control Examples" href="mapdl_examples.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
+<link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
-    <!-- Google Analytics -->
-    
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://docs.pyansys.com/">
-  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    <img src="../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -109,12 +115,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../api/index.html">
-  API Reference
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -127,8 +127,20 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../contributing.html">
-  Contributing
+ <a class="reference internal nav-link" href="../learning/index.html">
+  Learning PyMAPDL
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../troubleshoot/index.html">
+  Troubleshooting
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../contribution_and_api/index.html">
+  Contributing and API
  </a>
 </li>
 
@@ -138,8 +150,15 @@
       
     </div>
 
-    
     <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -151,7 +170,6 @@
       </div>
       
     </div>
-    
   </div>
 </div>
     </nav>
@@ -182,13 +200,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -231,6 +249,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="database.html">
+   Accessing MAPDL Database
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="convert.html">
    Translating Scripts
   </a>
@@ -260,19 +283,20 @@
     
   </div>
 </nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
 <div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
@@ -314,40 +338,38 @@
 </ul>
 
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   <section id="interactive-plotting">
-<h1>Interactive Plotting<a class="headerlink" href="#interactive-plotting" title="Permalink to this headline">#</a></h1>
+<h1>Interactive Plotting<a class="headerlink" href="#interactive-plotting" title="Permalink to this heading">#</a></h1>
 <p>When generating geometry from scratch within MAPDL, it is often
 necessary to plot the geometry (e.g. keypoints, lines, areas,
 volumes), and PyMAPDL supports plotting basic CAD using VTK.  The
-<a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class leverages the
-existing MAPDL commands (e.g. <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.kplot.html#ansys.mapdl.core.Mapdl.kplot" title="ansys.mapdl.core.Mapdl.kplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.kplot()</span></code></a>, <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.vplot.html#ansys.mapdl.core.Mapdl.vplot" title="ansys.mapdl.core.Mapdl.vplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vplot()</span></code></a>, <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.eplot.html#ansys.mapdl.core.Mapdl.eplot" title="ansys.mapdl.core.Mapdl.eplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.eplot()</span></code></a>) and transfers the geometry to Python
+<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class leverages the
+existing MAPDL commands (e.g. <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.kplot.html#ansys.mapdl.core.Mapdl.kplot" title="ansys.mapdl.core.Mapdl.kplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.kplot()</span></code></a>, <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.vplot.html#ansys.mapdl.core.Mapdl.vplot" title="ansys.mapdl.core.Mapdl.vplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vplot()</span></code></a>, <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.eplot.html#ansys.mapdl.core.Mapdl.eplot" title="ansys.mapdl.core.Mapdl.eplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.eplot()</span></code></a>) and transfers the geometry to Python
 to visualize it.
 These commands rely on the function
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a>.
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a>.
 Combined with the MAPDL geometry commands, you can
 generate and visualize geometry from scratch without opening the GUI
-using <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.open_gui.html#ansys.mapdl.core.Mapdl.open_gui" title="ansys.mapdl.core.Mapdl.open_gui"><code class="xref py py-func docutils literal notranslate"><span class="pre">open_gui()</span></code></a>.</p>
+using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.open_gui.html#ansys.mapdl.core.Mapdl.open_gui" title="ansys.mapdl.core.Mapdl.open_gui"><code class="xref py py-func docutils literal notranslate"><span class="pre">open_gui()</span></code></a>.</p>
 <section id="line-plotting">
-<h2>Line Plotting<a class="headerlink" href="#line-plotting" title="Permalink to this headline">#</a></h2>
-<p>Plot lines within Python using <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.lplot.html#ansys.mapdl.core.Mapdl.lplot" title="ansys.mapdl.core.Mapdl.lplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.lplot()</span></code></a>.</p>
+<h2>Line Plotting<a class="headerlink" href="#line-plotting" title="Permalink to this heading">#</a></h2>
+<p>Plot lines within Python using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.lplot.html#ansys.mapdl.core.Mapdl.lplot" title="ansys.mapdl.core.Mapdl.lplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.lplot()</span></code></a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
 
@@ -374,9 +396,9 @@ using <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.M
 </figure>
 </section>
 <section id="area-and-volume-plotting">
-<h2>Area and Volume Plotting<a class="headerlink" href="#area-and-volume-plotting" title="Permalink to this headline">#</a></h2>
+<h2>Area and Volume Plotting<a class="headerlink" href="#area-and-volume-plotting" title="Permalink to this heading">#</a></h2>
 <p>More complex geometry can be obtained using boolean operations and can
-be visualized using <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.vplot.html#ansys.mapdl.core.Mapdl.vplot" title="ansys.mapdl.core.Mapdl.vplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vplot()</span></code></a>.  In this example, we cut the initial
+be visualized using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.vplot.html#ansys.mapdl.core.Mapdl.vplot" title="ansys.mapdl.core.Mapdl.vplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vplot()</span></code></a>.  In this example, we cut the initial
 area with the 8 circles and then extrude it.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plate_holes</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">asba</span><span class="p">(</span><span class="n">rect_anum</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
 
@@ -394,9 +416,9 @@ area with the 8 circles and then extrude it.</p>
 </figure>
 </section>
 <section id="node-and-element-plotting">
-<h2>Node and Element Plotting<a class="headerlink" href="#node-and-element-plotting" title="Permalink to this headline">#</a></h2>
+<h2>Node and Element Plotting<a class="headerlink" href="#node-and-element-plotting" title="Permalink to this heading">#</a></h2>
 <p>Nodes and elements can also be plotted directly from the instance of
-<a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>.  We continue the
+<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>.  We continue the
 example by defining some element types, meshing, and displaying the
 mesh.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;SOLID186&#39;</span><span class="p">)</span>
@@ -412,11 +434,11 @@ mesh.</p>
 </figcaption>
 </figure>
 <section id="plotting-non-interactively-using-mapdl">
-<h3>Plotting Non-Interactively using MAPDL<a class="headerlink" href="#plotting-non-interactively-using-mapdl" title="Permalink to this headline">#</a></h3>
+<h3>Plotting Non-Interactively using MAPDL<a class="headerlink" href="#plotting-non-interactively-using-mapdl" title="Permalink to this heading">#</a></h3>
 <p>You can also plot using MAPDL’s native plotting tools.  To use the
 native tools, pass <code class="docutils literal notranslate"><span class="pre">vtk=False</span></code> when running plotting commands such
-as <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.aplot.html#ansys.mapdl.core.Mapdl.aplot" title="ansys.mapdl.core.Mapdl.aplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.aplot</span></code></a>,
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.eplot.html#ansys.mapdl.core.Mapdl.eplot" title="ansys.mapdl.core.Mapdl.eplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.eplot</span></code></a>, etc..  Plots will
+as <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.aplot.html#ansys.mapdl.core.Mapdl.aplot" title="ansys.mapdl.core.Mapdl.aplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.aplot</span></code></a>,
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.eplot.html#ansys.mapdl.core.Mapdl.eplot" title="ansys.mapdl.core.Mapdl.eplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.eplot</span></code></a>, etc..  Plots will
 be generated within MAPDL and then shown using <a class="reference external" href="https://matplotlib.org/stable/contents.html">matploblib</a>.</p>
 <p>Start PyMAPDL</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
@@ -454,11 +476,11 @@ be generated within MAPDL and then shown using <a class="reference external" hre
 <p><span class="caption-text">Area Plot from MAPDL displayed using <a class="reference external" href="https://matplotlib.org/stable/contents.html">matploblib</a></span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>For more details on the plotting functions, see <a class="reference internal" href="../api/plotting.html#ref-plotting-api"><span class="std std-ref">Plotting</span></a>.</p>
+<p>For more details on the plotting functions, see <a class="reference internal" href="../contribution_and_api/plotting.html#ref-plotting-api"><span class="std std-ref">Plotting</span></a>.</p>
 </section>
 </section>
 <section id="plotting-keyword-options">
-<h2>Plotting Keyword Options<a class="headerlink" href="#plotting-keyword-options" title="Permalink to this headline">#</a></h2>
+<h2>Plotting Keyword Options<a class="headerlink" href="#plotting-keyword-options" title="Permalink to this heading">#</a></h2>
 <p>When using <code class="docutils literal notranslate"><span class="pre">vtk=True</span></code> (default <code class="docutils literal notranslate"><span class="pre">True</span></code>), all the MAPDL plotting
 methods allow you to enter in additional keyword arguments to better
 control the plot.  For example, you can automatically generate a
@@ -474,10 +496,10 @@ XY plane with <code class="docutils literal notranslate"><span class="pre">cpos=
 </pre></div>
 </div>
 <p>For all general plotting options, see
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a>.</p>
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a>.</p>
 </section>
 <section id="plotting-boundary-conditions">
-<h2>Plotting Boundary Conditions<a class="headerlink" href="#plotting-boundary-conditions" title="Permalink to this headline">#</a></h2>
+<h2>Plotting Boundary Conditions<a class="headerlink" href="#plotting-boundary-conditions" title="Permalink to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This feature is still on beta so its functionalities and stability are
@@ -486,7 +508,7 @@ conditions and targets.</p>
 </div>
 <p>It is possible to plot the boundary conditions applied on the model by
 specifying <code class="docutils literal notranslate"><span class="pre">plot_bc=True</span></code> in the plotting functions such as
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.nplot.html#ansys.mapdl.core.Mapdl.nplot" title="ansys.mapdl.core.Mapdl.nplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.nplot()</span></code></a>.</p>
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.nplot.html#ansys.mapdl.core.Mapdl.nplot" title="ansys.mapdl.core.Mapdl.nplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.nplot()</span></code></a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">nplot</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="n">plot_bc</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="gp">... </span>    <span class="n">plot_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -505,7 +527,7 @@ Forces (arrows) and displacements (cones)</span><a class="headerlink" href="#id5
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Since the boundary conditions can only target nodes at the moment, you can
-only use <code class="docutils literal notranslate"><span class="pre">plot_bc</span></code> as an argument in the function <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.nplot.html#ansys.mapdl.core.Mapdl.nplot" title="ansys.mapdl.core.Mapdl.nplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.nplot()</span></code></a>.</p>
+only use <code class="docutils literal notranslate"><span class="pre">plot_bc</span></code> as an argument in the function <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.nplot.html#ansys.mapdl.core.Mapdl.nplot" title="ansys.mapdl.core.Mapdl.nplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.nplot()</span></code></a>.</p>
 </div>
 <figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/bc_plot_2.png"><img alt="../_images/bc_plot_2.png" src="../_images/bc_plot_2.png" style="width: 500pt;" /></a>
@@ -517,33 +539,35 @@ only use <code class="docutils literal notranslate"><span class="pre">plot_bc</s
 </section>
 
 
-              </div>
+              </article>
               
-              
-          </main>
-          
 
+              
+          </div>
+          
       </div>
     </div>
+
+  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>

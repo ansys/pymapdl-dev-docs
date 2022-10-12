@@ -103,8 +103,6 @@ Start MAPDL
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -143,7 +141,7 @@ Set up the element type (a beam-type).
     # Output control for values extrapolated to the element
     # and section nodes:
     # Same as KEYOPT(9) = 1 plus stresses and strains at all section nodes
-    _ = mapdl.keyopt(1, 9, 3)
+    mapdl.keyopt(1, 9, 3, mute=True)
 
 
 
@@ -174,8 +172,6 @@ Set up the material.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -213,8 +209,6 @@ Set up the cross-section properties for a beam element.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -269,8 +263,6 @@ between nodes.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     1   0.0000        0.0000        0.0000          0.00     0.00     0.00
@@ -313,8 +305,6 @@ Define elements
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     LIST ALL SELECTED ELEMENTS.  (LIST NODES)
@@ -354,8 +344,6 @@ Application of boundary conditions (BC).
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -393,8 +381,6 @@ in the y-direction.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -424,8 +410,6 @@ Enter solution mode and solve the system. Print the solver output.
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -586,8 +570,6 @@ experienced by middle node of the beam to the known stresses -11,400 psi and
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -621,28 +603,23 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.528 seconds)
+   **Total running time of the script:** ( 0 minutes  0.561 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_06-verif-manual_vm-002-beam_stresses_and_deflections.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: vm-002-beam_stresses_and_deflections.py <vm-002-beam_stresses_and_deflections.py>`
 
-     :download:`Download Python source code: vm-002-beam_stresses_and_deflections.py <vm-002-beam_stresses_and_deflections.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: vm-002-beam_stresses_and_deflections.ipynb <vm-002-beam_stresses_and_deflections.ipynb>`
+      :download:`Download Jupyter notebook: vm-002-beam_stresses_and_deflections.ipynb <vm-002-beam_stresses_and_deflections.ipynb>`
 
 
 .. only:: html

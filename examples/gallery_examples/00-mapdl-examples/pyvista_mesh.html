@@ -1,19 +1,23 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>PyVista Mesh Integration &#8212; PyMAPDL</title>
     
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
 
-    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -25,14 +29,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-    
+
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -40,7 +44,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -51,43 +57,43 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Example Thermal Transient Analysis" href="transient_thermal.html" />
     <link rel="prev" title="Pressure Vessel" href="pressure_vessel.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
+<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
-    <!-- Google Analytics -->
-    
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://docs.pyansys.com/">
-  <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -109,12 +115,6 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../api/index.html">
-  API Reference
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../mapdl_commands/index.html">
   MAPDL Commands
  </a>
@@ -127,8 +127,20 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contributing.html">
-  Contributing
+ <a class="reference internal nav-link" href="../../../learning/index.html">
+  Learning PyMAPDL
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
+  Troubleshooting
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
+  Contributing and API
  </a>
 </li>
 
@@ -138,8 +150,15 @@
       
     </div>
 
-    
     <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -151,7 +170,6 @@
       </div>
       
     </div>
-    
   </div>
 </div>
     </nav>
@@ -172,7 +190,8 @@
         <li class="nav-item nav-item-0"><a href="../../../index.html">PyMAPDL</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Examples</a> » </li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Examples</a> » </li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Full Examples Using PyMAPDL</a> » </li>
         <li class="nav-item nav-item-this"><a href="">PyVista Mesh Integration</a></li> 
       </ul>
     </div>
@@ -182,303 +201,310 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     
-    <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="2d_plate_with_a_hole.html">
-   MAPDL 2D Plane Stress Concentration Analysis
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Full Examples Using PyMAPDL
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="2d_plate_with_a_hole.html">
+     MAPDL 2D Plane Stress Concentration Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2d_pressure_vessel.html">
+     2D Pressure Vessel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3d_notch.html">
+     3D Stress Concentration Analysis for a Notched Plate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3d_plate_thermal.html">
+     Basic Thermal Analysis with pyMAPDL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="acoustic_analysis.html">
+     3D Acoustic Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="contact_elements.html">
+     Contact Element Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cyclic_analysis.html">
+     Cyclic Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exhaust_manifold_thermal_stress.html">
+     Thermal-structural analysis of exhaust manifold
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="geometry.html">
+     Plotting and Mesh Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lathe_cutter.html">
+     Structural Analysis of a Lathe Cutter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mapdl_3d_beam.html">
+     MAPDL 3D Beam Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mapdl_beam.html">
+     MAPDL 2D Beam Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="path_operations.html">
+     Path Operations within pyMAPDL and MAPDL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pressure_vessel.html">
+     Pressure Vessel
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     PyVista Mesh Integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="transient_thermal.html">
+     Example Thermal Transient Analysis
+    </a>
+   </li>
+  </ul>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="2d_pressure_vessel.html">
-   2D Pressure Vessel
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01-apdlmath-examples/index.html">
+   PyMAPDL Math Examples
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-apdlmath-examples/basic_operations.html">
+     PyMAPDL APDLMath Basic Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-apdlmath-examples/eigen_solve.html">
+     Using APDLMath to solve Eigenproblems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-apdlmath-examples/explore_mapdl_files.html">
+     Binary MAPDL File Explorer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-apdlmath-examples/mapdl_vs_scipy.html">
+     Compute Eigenvalues using MAPDL or SciPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-apdlmath-examples/scipy_sparse_matrix.html">
+     APDLMath Sparse Matrices and SciPy Sparse Matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-apdlmath-examples/solve_dense_matrix.html">
+     Use APDLMath to Solve a Dense Matrix Linear System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-apdlmath-examples/solve_sparse_matrix.html">
+     Performing Sparse Factorization and Solve Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-apdlmath-examples/use_numpy_arrays.html">
+     Manipulate APDLMath vectors or dense matrices as NumPy Arrays
+    </a>
+   </li>
+  </ul>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="3d_notch.html">
-   3D Stress Concentration Analysis for a Notched Plate
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02-geometry/index.html">
+   Geometry Examples
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-geometry/00-keypoints.html">
+     Keypoints
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-geometry/01-lines.html">
+     Lines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-geometry/02-areas.html">
+     Areas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-geometry/03-volumes.html">
+     Volumes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-geometry/04-primitives.html">
+     Primitives
+    </a>
+   </li>
+  </ul>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="3d_plate_thermal.html">
-   Basic Thermal Analysis with pyMAPDL
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../03-tips-n-tricks/index.html">
+   Miscellaneous Examples
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-tips-n-tricks/00-example-template.html">
+     Adding a New Gallery Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-tips-n-tricks/01-smoothing-element-size-transitions.html">
+     MAPDL Element Size Transition Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-tips-n-tricks/03-using_inline_functions_and_Query.html">
+     Using Inline Functions (Query)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-tips-n-tricks/04-rotational-displacement.html">
+     Generating and Extracting Rotational Displacement
+    </a>
+   </li>
+  </ul>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="contact_elements.html">
-   Contact Element Example
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../04-general-fea/index.html">
+   Academic Finite Element Examples
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-general-fea/00-how_finite_element_works.html">
+     Build a Finite Element
+    </a>
+   </li>
+  </ul>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="geometry.html">
-   Plotting and Mesh Access
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../06-verif-manual/index.html">
+   Verification Manual Examples
   </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="lathe_cutter.html">
-   Structural Analysis of a Lathe Cutter
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="mapdl_3d_beam.html">
-   MAPDL 3D Beam Example
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="mapdl_beam.html">
-   MAPDL 2D Beam Example
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="path_operations.html">
-   Path Operations within pyMAPDL and MAPDL
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="pressure_vessel.html">
-   Pressure Vessel
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   PyVista Mesh Integration
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="transient_thermal.html">
-   Example Thermal Transient Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-apdlmath-examples/basic_operations.html">
-   PyMAPDL APDLMath Basic Operations
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-apdlmath-examples/eigen_solve.html">
-   Using APDLMath to solve Eigenproblems
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-apdlmath-examples/explore_mapdl_files.html">
-   Binary MAPDL File Explorer
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-apdlmath-examples/mapdl_vs_scipy.html">
-   Compute Eigenvalues using MAPDL or SciPy
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-apdlmath-examples/scipy_sparse_matrix.html">
-   APDLMath Sparse Matrices and SciPy Sparse Matrices
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-apdlmath-examples/solve_dense_matrix.html">
-   Use APDLMath to Solve a Dense Matrix Linear System
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-apdlmath-examples/solve_sparse_matrix.html">
-   Performing Sparse Factorization and Solve Operations
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-apdlmath-examples/use_numpy_arrays.html">
-   Manipulate APDLMath vectors or dense matrices as NumPy Arrays
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../02-geometry/00-keypoints.html">
-   Keypoints
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../02-geometry/01-lines.html">
-   Lines
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../02-geometry/02-areas.html">
-   Areas
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../02-geometry/03-volumes.html">
-   Volumes
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../02-geometry/04-primitives.html">
-   Primitives
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../03-tips-n-tricks/00-example-template.html">
-   Adding a New Gallery Example
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../03-tips-n-tricks/01-smoothing-element-size-transitions.html">
-   MAPDL Element Size Transition Example
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../03-tips-n-tricks/03-using_inline_functions_and_Query.html">
-   Using Inline Functions (Query)
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../03-tips-n-tricks/04-rotational-displacement.html">
-   Generating and Extracting Rotational Displacement
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../04-general-fea/00-how_finite_element_works.html">
-   Build a Finite Element
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06-verif-manual/vm-001-statically_indeterminate_reaction_force_analysis.html">
-   Statically Indeterminate Reaction Force Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06-verif-manual/vm-002-beam_stresses_and_deflections.html">
-   Beam Stresses and Deflections
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06-verif-manual/vm-003-thermally_loaded_support_structure.html">
-   Thermally Loaded Support Structure
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06-verif-manual/vm-004-deflection_of_a_hinged_support.html">
-   Deflection of a Hinged Support
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06-verif-manual/vm-005-laterally_loaded_tapered_support_structure.html">
-   Statically Indeterminate Reaction Force Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06-verif-manual/vm-006-pinched_cylinder.html">
-   Pinched Cylinder
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06-verif-manual/vm-007-plastic_compression_of_a_pipe_assembly.html">
-   Plastic Compression of a Pipe Assembly
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06-verif-manual/vm-008-parametric_calculation.html">
-   Parametric Calculation
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06-verif-manual/vm-009-large_lateral_deflection_of_unequal_stiffness_springs.html">
-   Large Lateral Deflection of Unequal Stiffness Springs
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06-verif-manual/vm-010-bending_of_a_t-shaped_beam.html">
-   Bending of a Tee-Shaped Beam
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-verif-manual/vm-001-statically_indeterminate_reaction_force_analysis.html">
+     Statically Indeterminate Reaction Force Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-verif-manual/vm-002-beam_stresses_and_deflections.html">
+     Beam Stresses and Deflections
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-verif-manual/vm-003-thermally_loaded_support_structure.html">
+     Thermally Loaded Support Structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-verif-manual/vm-004-deflection_of_a_hinged_support.html">
+     Deflection of a Hinged Support
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-verif-manual/vm-005-laterally_loaded_tapered_support_structure.html">
+     Statically Indeterminate Reaction Force Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-verif-manual/vm-006-pinched_cylinder.html">
+     Pinched Cylinder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-verif-manual/vm-007-plastic_compression_of_a_pipe_assembly.html">
+     Plastic Compression of a Pipe Assembly
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-verif-manual/vm-008-parametric_calculation.html">
+     Parametric Calculation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-verif-manual/vm-009-large_lateral_deflection_of_unequal_stiffness_springs.html">
+     Large Lateral Deflection of Unequal Stiffness Springs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-verif-manual/vm-010-bending_of_a_t-shaped_beam.html">
+     Bending of a Tee-Shaped Beam
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
@@ -519,40 +545,39 @@
     
   </div>
 </nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
 
 <nav id="bd-toc-nav">
     
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
@@ -560,7 +585,7 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="pyvista-mesh-integration">
-<span id="ref-pyvista-mesh"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py"></span><h1>PyVista Mesh Integration<a class="headerlink" href="#pyvista-mesh-integration" title="Permalink to this headline">#</a></h1>
+<span id="ref-pyvista-mesh"></span><span id="sphx-glr-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py"></span><h1>PyVista Mesh Integration<a class="headerlink" href="#pyvista-mesh-integration" title="Permalink to this heading">#</a></h1>
 <p>Run a modal analysis on a mesh generated from pyvista within MAPDL.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
 
@@ -614,7 +639,6 @@ to download the full example code</p>
 <span class="c1"># mapdl.solve()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>SUMMARIZE SHAPE TESTING FOR ALL SELECTED ELEMENTS
 
  ------------------------------------------------------------------------------
@@ -638,10 +662,10 @@ to download the full example code</p>
 
 *****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =     124.398   TIME= 09:19:26
+ *** NOTE ***                            CP =     150.966   TIME= 04:35:03
  There is no title defined for this analysis.
 
- *** NOTE ***                            CP =     124.495   TIME= 09:19:26
+ *** NOTE ***                            CP =     151.045   TIME= 04:35:03
  No modes are being expanded (MXPAND command) and therefore the element
  results will not be written to the mode file.  If you do not intend to
  use mode selection and for more efficient calculation of element
@@ -659,7 +683,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     09:19:26  OCT 11, 2022 CP=    124.520
+ 00000000  VERSION=LINUX x64     04:35:03  OCT 12, 2022 CP=    151.066
 
 
 
@@ -678,15 +702,15 @@ to download the full example code</p>
    SHIFT POINT . . . . . . . . . . . . . . . . . .  1.0000
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** WARNING ***                         CP =     124.542   TIME= 09:19:26
+ *** WARNING ***                         CP =     151.085   TIME= 04:35:03
  No constraints have been defined using the D command.
 
- *** NOTE ***                            CP =     124.542   TIME= 09:19:26
+ *** NOTE ***                            CP =     151.085   TIME= 04:35:03
  The step data was checked and warning messages were found.
   Please review output or errors file ( /file.err ) for these warning
  messages.
 
- *** NOTE ***                            CP =     124.543   TIME= 09:19:26
+ *** NOTE ***                            CP =     151.085   TIME= 04:35:03
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -734,8 +758,8 @@ to download the full example code</p>
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        4     10000  SHELL181      0.754   0.000075
- Time at end of element matrix formulation CP = 125.565781.
+        4     10000  SHELL181      0.651   0.000065
+ Time at end of element matrix formulation CP = 151.962341.
 
   BLOCK LANCZOS CALCULATION OF UP TO    20 EIGENVECTORS.
   NUMBER OF EQUATIONS              =        61206
@@ -748,7 +772,7 @@ to download the full example code</p>
   Memory required for in-core solution     =   178.612 MB
   Memory required for out-of-core solution =    60.617 MB
 
- *** NOTE ***                            CP =     127.583   TIME= 09:19:28
+ *** NOTE ***                            CP =     153.667   TIME= 04:35:05
  The Sparse Matrix Solver used by the Block Lanczos eigensolver is
  currently running in the in-core memory mode.  This memory mode uses
  the most amount of memory in order to avoid using the hard drive as
@@ -758,7 +782,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     09:19:30  OCT 11, 2022 CP=    130.603
+ 00000000  VERSION=LINUX x64     04:35:06  OCT 12, 2022 CP=    156.308
 
 
 
@@ -797,7 +821,7 @@ to download the full example code</p>
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     09:19:30  OCT 11, 2022 CP=    130.959
+ 00000000  VERSION=LINUX x64     04:35:07  OCT 12, 2022 CP=    156.577
 
 
 
@@ -976,8 +1000,7 @@ to download the full example code</p>
 <span class="n">result</span><span class="o">.</span><span class="n">plot_nodal_displacement</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">show_displacement</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">displacement_factor</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_pyvista_mesh_002.png" srcset="../../../_images/sphx_glr_pyvista_mesh_002.png" alt="pyvista mesh" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PyMAPDL Result
+<img src="../../../_images/sphx_glr_pyvista_mesh_002.png" srcset="../../../_images/sphx_glr_pyvista_mesh_002.png" alt="pyvista mesh" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PyMAPDL Result
 Units       : User Defined
 Version     : 21.2
 Cyclic      : False
@@ -997,13 +1020,13 @@ NSL : Nodal displacements
 </pre></div>
 </div>
 <img src="../../../_images/sphx_glr_pyvista_mesh_003.png" srcset="../../../_images/sphx_glr_pyvista_mesh_003.png" alt="pyvista mesh" class = "sphx-glr-single-img"/><p>Animate a high frequency mode</p>
-<p>Get a smoother plot by disabling movie_filename and increasing <code class="docutils literal notranslate"><span class="pre">nangles</span></code>.
+<p>Get a smoother plot by disabling movie_filename and increasing <code class="docutils literal notranslate"><span class="pre">n_frames</span></code>.
 Enable a continuous plot looping with <code class="docutils literal notranslate"><span class="pre">`loop=True`</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">animate_nodal_displacement</span><span class="p">(</span>
     <span class="mi">18</span><span class="p">,</span>
     <span class="n">loop</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">add_text</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">nangles</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">n_frames</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
     <span class="n">displacement_factor</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span>
     <span class="n">show_axes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">background</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span>
@@ -1011,44 +1034,7 @@ Enable a continuous plot looping with <code class="docutils literal notranslate"
 <span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_pyvista_mesh_004.png" srcset="../../../_images/sphx_glr_pyvista_mesh_004.png" alt="pyvista mesh" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/site-packages/ansys/mapdl/reader/rst.py:994: UserWarning: The ``nangles`` kwarg is depreciated and ``n_frames`` should be used instead.
-  warnings.warn(&#39;The ``nangles`` kwarg is depreciated and ``n_frames`` &#39;
-
-Rendering animation:   0%|          | 0/30 [00:00&lt;?, ?it/s]
-Rendering animation:   3%|3         | 1/30 [00:00&lt;00:03,  8.22it/s]
-Rendering animation:   7%|6         | 2/30 [00:00&lt;00:03,  8.00it/s]
-Rendering animation:  10%|#         | 3/30 [00:00&lt;00:03,  7.52it/s]
-Rendering animation:  13%|#3        | 4/30 [00:00&lt;00:03,  7.29it/s]
-Rendering animation:  17%|#6        | 5/30 [00:00&lt;00:03,  7.05it/s]
-Rendering animation:  20%|##        | 6/30 [00:00&lt;00:03,  6.84it/s]
-Rendering animation:  23%|##3       | 7/30 [00:00&lt;00:03,  6.88it/s]
-Rendering animation:  27%|##6       | 8/30 [00:01&lt;00:03,  6.92it/s]
-Rendering animation:  30%|###       | 9/30 [00:01&lt;00:03,  6.78it/s]
-Rendering animation:  33%|###3      | 10/30 [00:01&lt;00:02,  6.87it/s]
-Rendering animation:  37%|###6      | 11/30 [00:01&lt;00:02,  6.92it/s]
-Rendering animation:  40%|####      | 12/30 [00:01&lt;00:02,  6.95it/s]
-Rendering animation:  43%|####3     | 13/30 [00:01&lt;00:02,  6.73it/s]
-Rendering animation:  47%|####6     | 14/30 [00:02&lt;00:02,  6.63it/s]
-Rendering animation:  50%|#####     | 15/30 [00:02&lt;00:02,  6.71it/s]
-Rendering animation:  53%|#####3    | 16/30 [00:02&lt;00:02,  6.73it/s]
-Rendering animation:  57%|#####6    | 17/30 [00:02&lt;00:01,  6.95it/s]
-Rendering animation:  60%|######    | 18/30 [00:02&lt;00:01,  7.02it/s]
-Rendering animation:  63%|######3   | 19/30 [00:02&lt;00:01,  7.01it/s]
-Rendering animation:  67%|######6   | 20/30 [00:02&lt;00:01,  6.93it/s]
-Rendering animation:  70%|#######   | 21/30 [00:03&lt;00:01,  6.68it/s]
-Rendering animation:  73%|#######3  | 22/30 [00:03&lt;00:01,  6.65it/s]
-Rendering animation:  77%|#######6  | 23/30 [00:03&lt;00:01,  6.80it/s]
-Rendering animation:  80%|########  | 24/30 [00:03&lt;00:00,  6.87it/s]
-Rendering animation:  83%|########3 | 25/30 [00:03&lt;00:00,  6.93it/s]
-Rendering animation:  87%|########6 | 26/30 [00:03&lt;00:00,  6.95it/s]
-Rendering animation:  90%|######### | 27/30 [00:03&lt;00:00,  6.92it/s]
-Rendering animation:  93%|#########3| 28/30 [00:04&lt;00:00,  6.77it/s]
-Rendering animation:  97%|#########6| 29/30 [00:04&lt;00:00,  6.76it/s]
-Rendering animation: 100%|##########| 30/30 [00:04&lt;00:00,  6.76it/s]
-Rendering animation: 100%|##########| 30/30 [00:04&lt;00:00,  6.70it/s]
-
-[(1.5773502691896262, 1.5773502691896262, 1.5773502691896262),
+<img src="../../../_images/sphx_glr_pyvista_mesh_004.png" srcset="../../../_images/sphx_glr_pyvista_mesh_004.png" alt="pyvista mesh" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(1.5773502691896262, 1.5773502691896262, 1.5773502691896262),
  (0.0, 0.0, 0.0),
  (0.0, 0.0, 1.0)]
 </pre></div>
@@ -1057,8 +1043,8 @@ Rendering animation: 100%|##########| 30/30 [00:04&lt;00:00,  6.70it/s]
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.102 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py">
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.388 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-pyvista-mesh-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/64adae6b03e47dc2c3a43f0a2a856797/pyvista_mesh.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pyvista_mesh.py</span></code></a></p>
 </div>
@@ -1070,33 +1056,35 @@ Rendering animation: 100%|##########| 30/30 [00:04&lt;00:00,  6.70it/s]
 </section>
 
 
-              </div>
+              </article>
               
-              
-          </main>
-          
 
+              
+          </div>
+          
       </div>
     </div>
+
+  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>

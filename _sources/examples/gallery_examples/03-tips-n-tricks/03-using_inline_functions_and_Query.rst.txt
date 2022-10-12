@@ -119,8 +119,6 @@ Setup Boundary Conditions
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -145,25 +143,14 @@ Setup Boundary Conditions
 
     mapdl.run("/SOLU")
     mapdl.antype("STATIC")
-    mapdl.nsel("ALL")
+    mapdl.allsel()
     mapdl.solve()
-    mapdl.finish()
+    mapdl.finish(mute=True)
 
 
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-
-    FINISH SOLUTION PROCESSING
-
-
-     ***** ROUTINE COMPLETED *****  CP =         0.000
 
 
 
@@ -235,8 +222,6 @@ Using ``Query``
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -244,17 +229,17 @@ Using ``Query``
         Displacement at Node 28:
         ************************
         X | 1.757716378392639e-05
-        Y | 3.036257546888294e-09
-        Z | -7.982690758480489e-07
+        Y | 3.036257546890232e-09
+        Z | -7.982690758480487e-07
 
     
 
         ************************
         Displacement at Node 49:
         ************************
-        X | 1.7612417675184474e-05
-        Y | 1.1462170715955625e-19
-        Z | 8.070989838529135e-07
+        X | 1.761241767518445e-05
+        Y | 1.1985006716937086e-19
+        Z | 8.070989838529102e-07
 
     
 
@@ -280,28 +265,23 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.271 seconds)
+   **Total running time of the script:** ( 0 minutes  1.282 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_03-tips-n-tricks_03-using_inline_functions_and_Query.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 03-using_inline_functions_and_Query.py <03-using_inline_functions_and_Query.py>`
 
-     :download:`Download Python source code: 03-using_inline_functions_and_Query.py <03-using_inline_functions_and_Query.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 03-using_inline_functions_and_Query.ipynb <03-using_inline_functions_and_Query.ipynb>`
+      :download:`Download Jupyter notebook: 03-using_inline_functions_and_Query.ipynb <03-using_inline_functions_and_Query.ipynb>`
 
 
 .. only:: html

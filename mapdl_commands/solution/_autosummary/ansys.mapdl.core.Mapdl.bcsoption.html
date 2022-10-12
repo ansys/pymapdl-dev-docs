@@ -1,19 +1,23 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>bcsoption &#8212; PyMAPDL</title>
     
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
 
-    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -25,14 +29,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-    
+
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -40,7 +44,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -51,43 +57,43 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="cgrow" href="ansys.mapdl.core.Mapdl.cgrow.html" />
     <link rel="prev" title="asol" href="ansys.mapdl.core.Mapdl.asol.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
+<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
-    <!-- Google Analytics -->
-    
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://docs.pyansys.com/">
-  <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -108,12 +114,6 @@
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../api/index.html">
-  API Reference
- </a>
-</li>
-
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../../index.html">
   MAPDL Commands
@@ -127,8 +127,20 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contributing.html">
-  Contributing
+ <a class="reference internal nav-link" href="../../../learning/index.html">
+  Learning PyMAPDL
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
+  Troubleshooting
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
+  Contributing and API
  </a>
 </li>
 
@@ -138,8 +150,15 @@
       
     </div>
 
-    
     <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -151,7 +170,6 @@
       </div>
       
     </div>
-    
   </div>
 </div>
     </nav>
@@ -183,13 +201,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -1072,61 +1090,76 @@
     
   </div>
 </nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ansys.mapdl.core.Mapdl.bcsoption">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Mapdl.bcsoption()
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   <section id="bcsoption">
-<h1>bcsoption<a class="headerlink" href="#bcsoption" title="Permalink to this headline">#</a></h1>
+<h1>bcsoption<a class="headerlink" href="#bcsoption" title="Permalink to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.bcsoption">
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">bcsoption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memory_option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solve_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.bcsoption" title="Permalink to this definition">#</a></dt>
 <dd><p>Sets memory option for the sparse solver.</p>
 <p>APDL Command: BCSOPTION</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>memory_option</strong></dt><dd><p>Memory allocation option:</p>
 <dl class="simple">
-<dt>DEFAULT - Use the default memory allocation strategy for</dt><dd><p>the sparse solver. The default strategy attempts
-to run in the INCORE memory mode. If there is
+<dt>DEFAULT</dt><dd><p>Use the default memory allocation strategy for
+the sparse solver. The default strategy attempts
+to run in the <code class="docutils literal notranslate"><span class="pre">INCORE</span></code> memory mode. If there is
 not enough available physical memory when the
-solver starts to run in the INCORE memory mode,
+solver starts to run in the <code class="docutils literal notranslate"><span class="pre">INCORE</span></code> memory mode,
 the solver will then attempt to run in the
-OUTOFCORE memory mode.</p>
+<code class="docutils literal notranslate"><span class="pre">OUTOFCORE</span></code> memory mode.</p>
 </dd>
-<dt>INCORE - Use a memory allocation strategy in the sparse</dt><dd><p>solver that will attempt to obtain enough memory
+<dt>INCORE</dt><dd><p>Use a memory allocation strategy in the sparse
+solver that will attempt to obtain enough memory
 to run with the entire factorized matrix in
 memory. This option uses the most amount of
 memory and should avoid doing any I/O. By
@@ -1138,7 +1171,8 @@ of memory. If the allocation for in-core memory
 fails, the solver will automatically revert to
 out-of-core memory mode.</p>
 </dd>
-<dt>OUTOFCORE - Use a memory allocation strategy in the sparse</dt><dd><p>solver that will attempt to allocate only
+<dt>OUTOFCORE</dt><dd><p>Use a memory allocation strategy in the sparse
+solver that will attempt to allocate only
 enough work space to factor each individual
 frontal matrix in memory, but will store the
 entire factorized matrix on disk. Typically,
@@ -1147,7 +1181,8 @@ due to the potential bottleneck caused by the
 I/O to the various files written by the
 solver.</p>
 </dd>
-<dt>FORCE - This option, when used in conjunction with the</dt><dd><p>Memory_Size option, allows you to force the sparse
+<dt>FORCE</dt><dd><p>This option, when used in conjunction with the
+<code class="docutils literal notranslate"><span class="pre">Memory_Size</span></code> option, allows you to force the sparse
 solver to run with a specific amount of
 memory. This option is only recommended for the
 advanced user who understands sparse solver memory
@@ -1160,7 +1195,7 @@ wants to control the sparse solver memory usage.</p>
 <dt><strong>memory_size</strong></dt><dd><p>Initial memory size allocation for the sparse solver in
 MB. This argument allows you to tune the sparse solver
 memory and is not generally required. Although there is no
-upper limit for Memory_Size, the Memory_Size setting
+upper limit for <code class="docutils literal notranslate"><span class="pre">Memory_Size</span></code>, the <code class="docutils literal notranslate"><span class="pre">Memory_Size</span></code> setting
 should always be well within the physical memory
 available, but not so small as to cause the sparse solver
 to run out of memory. Warnings and/or errors from the
@@ -1170,10 +1205,12 @@ of memory allocated for the entire duration of the sparse
 solver solution.</p>
 </dd>
 <dt><strong>solve_info</strong></dt><dd><p>Solver output option:</p>
-<p>OFF - Turns off additional output printing from the sparse
-solver (default).</p>
 <dl class="simple">
-<dt>PERFORMANCE - Turns on additional output printing from the</dt><dd><p>sparse solver, including a performance
+<dt>OFF</dt><dd><p>Turns off additional output printing from the sparse
+solver (default).</p>
+</dd>
+<dt>PERFORMANCE</dt><dd><p>Turns on additional output printing from the
+sparse solver, including a performance
 summary and a summary of file I/O for the
 sparse solver. Information on memory usage
 during assembly of the global matrix (that
@@ -1198,27 +1235,27 @@ memory allocated for the sparse solver is then dynamically
 adjusted to supply the solver what it needs to compute the
 solution.</p>
 <p>If you have a very large memory system, you may want to try
-selecting the INCORE memory mode for larger jobs to improve
+selecting the <code class="docutils literal notranslate"><span class="pre">INCORE</span></code> memory mode for larger jobs to improve
 performance. When running the sparse solver on a machine with
 very slow I/O performance (for example, slow hard drive
-speed), you may want to try using the INCORE memory mode to
+speed), you may want to try using the <code class="docutils literal notranslate"><span class="pre">INCORE</span></code> memory mode to
 achieve better performance. However, doing so may require much
-more memory compared to running in the OUTOFCORE memory mode.</p>
-<p>Running with the INCORE memory mode is best for jobs which
+more memory compared to running in the <code class="docutils literal notranslate"><span class="pre">OUTOFCORE</span></code> memory mode.</p>
+<p>Running with the <code class="docutils literal notranslate"><span class="pre">INCORE</span></code> memory mode is best for jobs which
 comfortably fit within the limits of the physical memory on a
 given system. If the sparse solver work space exceeds physical
 memory size, the system will be forced to use virtual memory
 (or the system page/swap file). In this case, it is typically
-more efficient to run with the OUTOFCORE memory mode. Assuming
+more efficient to run with the <code class="docutils literal notranslate"><span class="pre">OUTOFCORE</span></code> memory mode. Assuming
 the job fits comfortably within the limits of the machine,
-running with the INCORE memory mode is often ideal for jobs
+running with the <code class="docutils literal notranslate"><span class="pre">INCORE</span></code> memory mode is often ideal for jobs
 where repeated solves are performed for a single matrix
 factorization.  This occurs in a modal or buckling analysis or
 when doing multiple load steps in a linear, static analysis.</p>
 <p>For repeated runs with the sparse solver, you may set the
 initial sparse solver memory allocation to the amount required
 for factorization. This strategy reduces the frequency of
-allocation and reallocation in the run to make the INCORE
+allocation and reallocation in the run to make the <code class="docutils literal notranslate"><span class="pre">INCORE</span></code>
 option fully effective. If you have a very large memory
 system, you may use the Memory_Size argument to increase the
 maximum size attempted for in-core runs.</p>
@@ -1227,33 +1264,35 @@ maximum size attempted for in-core runs.</p>
 </section>
 
 
-              </div>
+              </article>
               
-              
-          </main>
-          
 
+              
+          </div>
+          
       </div>
     </div>
+
+  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>

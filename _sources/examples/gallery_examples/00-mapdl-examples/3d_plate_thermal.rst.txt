@@ -125,18 +125,16 @@ Solve the thermal static analysis and print the results
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =      80.628   TIME= 09:18:22
+     *** NOTE ***                            CP =      45.997   TIME= 04:32:56
      There is no title defined for this analysis.                            
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     09:18:22  OCT 11, 2022 CP=     80.631
+     00000000  VERSION=LINUX x64     04:32:56  OCT 12, 2022 CP=     45.999
 
                                                                                
 
@@ -152,11 +150,11 @@ Solve the thermal static analysis and print the results
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =      80.632   TIME= 09:18:22
+     *** NOTE ***                            CP =      46.000   TIME= 04:32:56
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =      80.632   TIME= 09:18:22
+     *** NOTE ***                            CP =      46.000   TIME= 04:32:56
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -181,8 +179,8 @@ Solve the thermal static analysis and print the results
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       450  SOLID90       0.038   0.000085
-     Time at end of element matrix formulation CP = 80.6831055.              
+            1       450  SOLID90       0.032   0.000071
+     Time at end of element matrix formulation CP = 46.042881.               
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =        2606,    Maximum wavefront =     72
@@ -190,7 +188,7 @@ Solve the thermal static analysis and print the results
       Memory required for in-core solution     =     4.639 MB
       Memory required for out-of-core solution =     2.499 MB
 
-     *** NOTE ***                            CP =      80.777   TIME= 09:18:22
+     *** NOTE ***                            CP =      46.118   TIME= 04:32:56
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -205,12 +203,12 @@ Solve the thermal static analysis and print the results
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       450  SOLID90       0.028   0.000062
+            1       450  SOLID90       0.023   0.000052
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       450  SOLID90       0.018   0.000040
+            1       450  SOLID90       0.015   0.000033
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -272,8 +270,6 @@ result file using pyansys
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     [    1     2     3 ... 12715 12716 12717] [0. 0. 0. ... 0. 0. 0.]
@@ -300,28 +296,23 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.015 seconds)
+   **Total running time of the script:** ( 0 minutes  1.035 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_3d_plate_thermal.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: 3d_plate_thermal.py <3d_plate_thermal.py>`
 
-     :download:`Download Python source code: 3d_plate_thermal.py <3d_plate_thermal.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: 3d_plate_thermal.ipynb <3d_plate_thermal.ipynb>`
+      :download:`Download Jupyter notebook: 3d_plate_thermal.ipynb <3d_plate_thermal.ipynb>`
 
 
 .. only:: html

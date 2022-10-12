@@ -1,19 +1,23 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>numexp &#8212; PyMAPDL</title>
     
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
 
-    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -25,14 +29,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/pyansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
-    
+
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
     
         <link href="../../../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -40,7 +44,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -51,43 +57,43 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="time" href="ansys.mapdl.core.Mapdl.time.html" />
     <link rel="prev" title="nsubst" href="ansys.mapdl.core.Mapdl.nsubst.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
+<link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
-    <!-- Google Analytics -->
-    
+
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
-    .navbar-light {
-        background-color: black !important;
-    }
-</style>
-
-<div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="https://docs.pyansys.com/">
-  <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" >
-      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
-    </span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -108,12 +114,6 @@
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../api/index.html">
-  API Reference
- </a>
-</li>
-
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../../index.html">
   MAPDL Commands
@@ -127,8 +127,20 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../contributing.html">
-  Contributing
+ <a class="reference internal nav-link" href="../../../learning/index.html">
+  Learning PyMAPDL
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../troubleshoot/index.html">
+  Troubleshooting
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../contribution_and_api/index.html">
+  Contributing and API
  </a>
 </li>
 
@@ -138,8 +150,15 @@
       
     </div>
 
-    
     <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -151,7 +170,6 @@
       </div>
       
     </div>
-    
   </div>
 </div>
     </nav>
@@ -183,13 +201,13 @@
     
 
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -907,43 +925,56 @@
     
   </div>
 </nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ansys.mapdl.core.Mapdl.numexp">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Mapdl.numexp()
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   <section id="numexp">
-<h1>numexp<a class="headerlink" href="#numexp" title="Permalink to this headline">#</a></h1>
+<h1>numexp<a class="headerlink" href="#numexp" title="Permalink to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.numexp">
 <span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">numexp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">begrng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endrng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elcalc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.numexp" title="Permalink to this definition">#</a></dt>
@@ -951,12 +982,14 @@
 <p>APDL Command: NUMEXP
 substructure analyses.</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>num</strong></dt><dd><p>The number of solutions to expand. This value is required.</p>
-<p>Num - Number of solutions to expand.</p>
 <dl class="simple">
-<dt>ALL - Expand all substeps between BEGRNG and ENDRNG (provided that ENDRNG &gt; 0). If</dt><dd><p>BEGRNG and ENDRNG have no specified values, this option
+<dt>Num</dt><dd><p>Number of solutions to expand.</p>
+</dd>
+<dt>ALL</dt><dd><p>Expand all substeps between <code class="docutils literal notranslate"><span class="pre">BEGRNG</span></code> and <code class="docutils literal notranslate"><span class="pre">ENDRNG</span></code> (provided that ENDRNG &gt; 0). If
+<code class="docutils literal notranslate"><span class="pre">BEGRNG</span></code> and <code class="docutils literal notranslate"><span class="pre">ENDRNG</span></code> have no specified values, this option
 expands all substeps of all load steps.</p>
 </dd>
 </dl>
@@ -966,36 +999,38 @@ solutions. The default is 0 for both values.</p>
 </dd>
 <dt><strong>elcalc</strong></dt><dd><p>The element-calculation key:</p>
 <dl class="simple">
-<dt>YES - Calculate element results, nodal loads, and reaction loads. This value is the</dt><dd><p>default.</p>
+<dt>YES</dt><dd><p>Calculate element results, nodal loads, and reaction loads. This value is the
+default.</p>
+</dd>
+<dt>NO</dt><dd><p>Do not calculate these items.</p>
 </dd>
 </dl>
-<p>NO - Do not calculate these items.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
 <p>Specifies a range of solutions to be expanded from analyses that use
-mode-superposition methods (ANTYPE,HARMIC or TRANS) or substructuring
-(ANTYPE,SUBSTR).</p>
+mode-superposition methods (<code class="docutils literal notranslate"><span class="pre">ANTYPE,HARMIC</span></code> or <code class="docutils literal notranslate"><span class="pre">TRANS</span></code>) or substructuring
+(<code class="docutils literal notranslate"><span class="pre">ANTYPE,SUBSTR</span></code>).</p>
 <p>For ANTYPE,TRANS, NUM, evenly spaced solutions are expanded between
-time BEGRNG and time ENDRNG.</p>
+time BEGRNG and time <code class="docutils literal notranslate"><span class="pre">ENDRNG</span></code>.</p>
 <p>For ANTYPE,HARMIC, NUM, evenly spaced solutions are expanded between
-frequency BEGRNG and frequency ENDRNG.</p>
+frequency BEGRNG and frequency <code class="docutils literal notranslate"><span class="pre">ENDRNG</span></code>.</p>
 <p>The first expansion in all cases is done at the first point beyond
-BEGRNG (that is, at BEGRNG + (ENDRNG - BEGRNG) / NUM)).</p>
+BEGRNG (that is, at <code class="docutils literal notranslate"><span class="pre">BEGRNG</span> <span class="pre">+</span> <span class="pre">(ENDRNG</span> <span class="pre">-</span> <span class="pre">BEGRNG)</span> <span class="pre">/</span> <span class="pre">NUM</span></code>)).</p>
 <p>The resulting results file will maintain the same load step, substep,
 and time (or frequency) values as the use pass.</p>
 <p>For a single expansion of a solution, or for multiple expansions when
 the solutions are not evenly spaced (such as in a mode-superposition
 harmonic analysis with the cluster option), ANSYS, Inc. recommends
-issuing one or more EXPSOL commands.</p>
+issuing one or more <code class="docutils literal notranslate"><span class="pre">EXPSOL</span></code> commands.</p>
 <p>The NUMEXP command is invalid in these cases:</p>
-<p>In a substructing analysis (ANTYPE,SUBST) when a factorized matrix file
-(the .LN22 file generated by the sparse solver) does not exist, causing
+<p>In a substructing analysis (<code class="docutils literal notranslate"><span class="pre">ANTYPE,SUBST</span></code>) when a factorized matrix file
+(the <code class="docutils literal notranslate"><span class="pre">.LN22</span></code> file generated by the sparse solver) does not exist, causing
 ANSYS to employ the full-resolve method.</p>
-<p>If the full-resolve option is selected using the SEOPT command.</p>
-<p>In both situations, use the EXPSOL command to perform a single
+<p>If the full-resolve option is selected using the <code class="docutils literal notranslate"><span class="pre">SEOPT</span></code> command.</p>
+<p>In both situations, use the <code class="docutils literal notranslate"><span class="pre">EXPSOL</span></code> command to perform a single
 expansion for each solution desired.</p>
 <p>This command is also valid in PREP7.</p>
 </dd></dl>
@@ -1003,33 +1038,35 @@ expansion for each solution desired.</p>
 </section>
 
 
-              </div>
+              </article>
               
-              
-          </main>
-          
 
+              
+          </div>
+          
       </div>
     </div>
+
+  
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>
