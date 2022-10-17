@@ -653,14 +653,14 @@ properties (e.g. scalar, storage, symmetry…)</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Calling MAPDL to solve the eigenproblem...
 /opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1518: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
   warn(
-Elapsed time to solve this problem: 0.05460667610168457
+Elapsed time to solve this problem: 0.05069732666015625
 </pre></div>
 </div>
 <p>This is the vector of eigenfrequencies.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ev</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>RKOAWS :
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>XRRJUA :
  Size : 10
   3.381e+02   3.381e+02   6.266e+02   6.266e+02   9.283e+02      &lt;       5
   9.283e+02   1.250e+03   1.250e+03   1.424e+03   1.424e+03      &lt;       10
@@ -712,7 +712,7 @@ factor and finally compute the normalized residual value
 <span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">res</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>2.3070247813015805e-11
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5.864612782524706e-11
 </pre></div>
 </div>
 <p>This residual can be computed for all eigenmodes</p>
@@ -755,16 +755,16 @@ factor and finally compute the normalized residual value
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="si">}</span><span class="s2">] : Freq = </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">f</span></a><span class="si">}</span><span class="se">\t</span><span class="s2"> - Residual = </span><span class="si">{</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mapdl_acc</span></a><span class="p">[</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.0666635506365   - Residual = 2.3070247813015805e-11
-[1] : Freq = 338.0666635506367   - Residual = 7.911817709574835e-11
-[2] : Freq = 626.645098092703    - Residual = 1.4338816801861427e-11
-[3] : Freq = 626.6450980927036   - Residual = 3.0909179798841926e-11
-[4] : Freq = 928.2598500574526   - Residual = 1.5073029240215198e-11
-[5] : Freq = 928.2598500574527   - Residual = 1.3866957267529915e-11
-[6] : Freq = 1249.8421074363505  - Residual = 2.3330795208513303e-11
-[7] : Freq = 1249.842107436351   - Residual = 1.3173155997875071e-11
-[8] : Freq = 1423.9938909416678  - Residual = 3.8657651202757016e-10
-[9] : Freq = 1423.9938909416703  - Residual = 1.2400348326967832e-09
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.0666635506365   - Residual = 5.864612782524706e-11
+[1] : Freq = 338.06666355063663  - Residual = 8.593881089478647e-11
+[2] : Freq = 626.6450980927032   - Residual = 2.2104496394563398e-11
+[3] : Freq = 626.6450980927037   - Residual = 3.693024332355408e-11
+[4] : Freq = 928.259850057452    - Residual = 9.623590375183673e-12
+[5] : Freq = 928.2598500574528   - Residual = 8.843271652541085e-12
+[6] : Freq = 1249.8421074363482  - Residual = 2.2189367614586564e-11
+[7] : Freq = 1249.842107436351   - Residual = 2.2613989124165024e-11
+[8] : Freq = 1423.9938909416678  - Residual = 4.3600491032448574e-10
+[9] : Freq = 1423.9938909416692  - Residual = 1.2207781433852038e-09
 </pre></div>
 </div>
 <p>Plot Accuracy of Eigenresults</p>
@@ -784,7 +784,7 @@ factor and finally compute the normalized residual value
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.587 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.170 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-01-apdlmath-examples-eigen-solve-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/ff5a8539a3f0024e3ca927614b521224/eigen_solve.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eigen_solve.py</span></code></a></p>
