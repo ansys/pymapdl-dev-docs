@@ -275,7 +275,7 @@ Solve the static analysis
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =       1.813   TIME= 04:39:27
+     *** NOTE ***                            CP =       1.855   TIME= 04:41:06
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -288,7 +288,7 @@ Solve the static analysis
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:39:27  OCT 18, 2022 CP=      1.816
+     00000000  VERSION=LINUX x64     04:41:06  OCT 19, 2022 CP=      1.861
 
                                                                                
 
@@ -304,11 +304,11 @@ Solve the static analysis
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =       1.818   TIME= 04:39:27
+     *** NOTE ***                            CP =       1.864   TIME= 04:41:06
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =       1.819   TIME= 04:39:27
+     *** NOTE ***                            CP =       1.865   TIME= 04:41:06
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -357,8 +357,8 @@ Solve the static analysis
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.075   0.000077
-     Time at end of element matrix formulation CP = 1.88781798.              
+            1       977  PLANE183      0.074   0.000075
+     Time at end of element matrix formulation CP = 1.93196595.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =        6124,    Maximum wavefront =     48
@@ -366,7 +366,7 @@ Solve the static analysis
       Memory required for in-core solution     =     8.134 MB
       Memory required for out-of-core solution =     4.318 MB
 
-     *** NOTE ***                            CP =       2.058   TIME= 04:39:27
+     *** NOTE ***                            CP =       2.094   TIME= 04:41:06
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -381,12 +381,12 @@ Solve the static analysis
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.091   0.000093
+            1       977  PLANE183      0.100   0.000102
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.026   0.000026
+            1       977  PLANE183      0.029   0.000029
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -762,7 +762,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  27.377 seconds)
+   **Total running time of the script:** ( 0 minutes  28.055 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_2d_plate_with_a_hole.py:
