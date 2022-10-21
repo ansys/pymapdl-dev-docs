@@ -768,6 +768,7 @@ ansys.mapdl Version: 0.64.dev0
 Interpolating:   0%|          [00:00&lt;?]
 Interpolating: 100%|##########[00:00&lt;00:00]
 Interpolating: 100%|##########[00:00&lt;00:00]
+Interpolating: 100%|##########[00:00&lt;00:00]
 </pre></div>
 </div>
 </section>
@@ -804,12 +805,12 @@ Interpolating: 100%|##########[00:00&lt;00:00]
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** WARNING ***                         CP =      95.396   TIME= 10:07:23
+ *** WARNING ***                         CP =      99.619   TIME= 10:46:47
  Previous testing revealed that 127 of the 44241 selected elements
  violate shape warning limits.  To review warning messages, please see
  the output or error file, or issue the CHECK command.
 
- *** NOTE ***                            CP =      95.396   TIME= 10:07:23
+ *** NOTE ***                            CP =      99.619   TIME= 10:46:47
  The model data was checked and warning messages were found.
   Please review output or errors file ( /file.err ) for these warning
  messages.
@@ -824,7 +825,7 @@ Interpolating: 100%|##########[00:00&lt;00:00]
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     10:07:23  OCT 21, 2022 CP=     95.413
+ 00000000  VERSION=LINUX x64     10:46:47  OCT 21, 2022 CP=     99.637
 
   File: D:\AICs\PyAnsys\Getting Started With PyMAPDL\Dataflow Between Python an
 
@@ -840,11 +841,11 @@ Interpolating: 100%|##########[00:00&lt;00:00]
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =      95.463   TIME= 10:07:23
+ *** NOTE ***                            CP =      99.689   TIME= 10:46:47
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =      95.464   TIME= 10:07:23
+ *** NOTE ***                            CP =      99.690   TIME= 10:46:47
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -869,20 +870,20 @@ Interpolating: 100%|##########[00:00&lt;00:00]
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1     44241  SOLID187      5.411   0.000122
- Time at end of element matrix formulation CP = 99.2210846.
+        1     44241  SOLID187      5.984   0.000135
+ Time at end of element matrix formulation CP = 103.732452.
 
  SPARSE MATRIX DIRECT SOLVER.
   Number of equations =      251853,    Maximum wavefront =    225
 
- *** NOTE ***                            CP =     101.909   TIME= 10:07:27
+ *** NOTE ***                            CP =     106.564   TIME= 10:46:52
  The initial memory allocation (-m) has been exceeded.
   Supplemental memory allocations are being used.
   Memory allocated for solver              =  1077.722 MB
   Memory required for in-core solution     =  1033.955 MB
   Memory required for out-of-core solution =   367.872 MB
 
- *** NOTE ***                            CP =     102.420   TIME= 10:07:27
+ *** NOTE ***                            CP =     107.032   TIME= 10:46:52
  The Sparse Matrix Solver is currently running in the in-core memory
  mode.  This memory mode uses the most amount of memory in order to
  avoid using the hard drive as much as possible, which most often
@@ -897,12 +898,12 @@ Interpolating: 100%|##########[00:00&lt;00:00]
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1     44241  SOLID187      5.986   0.000135
+        1     44241  SOLID187      6.174   0.000140
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1     44241  SOLID187      1.490   0.000034
+        1     44241  SOLID187      1.479   0.000033
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -928,7 +929,7 @@ Interpolating: 100%|##########[00:00&lt;00:00]
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  22.028 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  23.117 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-exhaust-manifold-thermal-stress-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/b67a264a82677656de6b682b58cb4e14/exhaust_manifold_thermal_stress.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">exhaust_manifold_thermal_stress.py</span></code></a></p>
