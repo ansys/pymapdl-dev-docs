@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Harmonic analysis using the Krylov method &#8212; PyMAPDL</title>
+    
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    
+        <link href="../_static/css/breadcrumbs.css" rel="stylesheet">
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MAPDL Commands" href="../mapdl_commands/index.html" />
+    <link rel="prev" title="Using Python to Code UPF Subroutines" href="upf.html" />
+<link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    <img src="../_static/pyansys-logo-black-cropped.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/pyansys-logo-black-cropped.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../getting_started/index.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../mapdl_commands/index.html">
+  MAPDL Commands
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../examples/index.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../learning/index.html">
+  Learning PyMAPDL
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../troubleshoot/index.html">
+  Troubleshooting
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../contribution_and_api/index.html">
+  Contributing and API
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/pymapdl" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+        <li class="nav-item nav-item-additional-breadcrumb"><a href="https://docs.pyansys.com/">PyAnsys</a> » </li>
+    
+    
+        <li class="nav-item nav-item-0"><a href="../index.html">PyMAPDL</a> » </li>
+    
+
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Guide</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Harmonic analysis using the Krylov method</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
+    
+
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="launcher.html">
+   Initial Setup and Launching MAPDL Locally
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mapdl.html">
+   PyMAPDL Language and Usage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mapdl_examples.html">
+   ANSYS APDL Interactive Control Examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plotting.html">
+   Interactive Plotting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mesh_geometry.html">
+   Mesh and Geometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="post.html">
+   Post-Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="parameters.html">
+   Setting and Retrieving Parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="database.html">
+   Accessing MAPDL Database
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="convert.html">
+   Translating Scripts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="math.html">
+   APDL Math Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pool.html">
+   Create a Pool of MAPDL Instances
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="xpl.html">
+   File Explorer Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="upf.html">
+   Using Python to Code UPF Subroutines
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Harmonic analysis using the Krylov method
+  </a>
+ </li>
+</ul>
+
+    
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assumptions">
+     Assumptions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#krylov-method-implementation-in-pymadl">
+   Krylov method implementation in PyMADL
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage">
+   Usage
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-an-instance-of-the-krylov-class">
+     Create an instance of the Krylov class
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#return-the-krylov-subspace">
+     Return the Krylov subspace
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#return-the-reduced-solution-over-the-frequency-range">
+     Return the reduced solution over the frequency range
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-the-dof-solution-at-a-specific-frequency">
+     Get the dof solution at a specific frequency
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
+  </a>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="harmonic-analysis-using-the-krylov-method">
+<h1>Harmonic analysis using the Krylov method<a class="headerlink" href="#harmonic-analysis-using-the-krylov-method" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>You can use the frequency-sweep Krylov method for a high-performance solution of forced-frequency simulations
+in acoustic or single-field structural analyses.</p>
+<p>Similar to the full harmonic analysis, the frequency sweep Krylov method also uses the full system matrices
+to compute the harmonic response. While the full method solves the full system matrices at every frequency point
+in the frequency range, the frequency-sweep Krylov method performs the following steps to approximate the response
+across the frequency range :</p>
+<ul class="simple">
+<li><p>Builds a Krylov subspace set of vectors at the frequency value in the middle of the requested
+frequency range</p></li>
+<li><p>Reduces the system matrices and loading on the entire frequency range</p></li>
+<li><p>Solves the reduced system</p></li>
+<li><p>Expands the results back to compute the harmonic response</p></li>
+</ul>
+<p>MAPDL provides the following methods to implement a harmonic analysis using the Krylov Method:</p>
+<ol class="arabic simple">
+<li><p>Via Mechanical APDL commands.</p></li>
+<li><p>Via macros, a feature described in <em>Frequency-Sweep Harmonic Analysis via the Krylov Method</em> in the <em>Structural Analysis Guide</em>.</p></li>
+<li><p>PyMAPDL implementation of the macros, a feature described here.</p></li>
+</ol>
+<section id="assumptions">
+<h3>Assumptions<a class="headerlink" href="#assumptions" title="Permalink to this heading">#</a></h3>
+<p>The following assumptions are made in the Krylov solution obtained using this method :</p>
+<ul class="simple">
+<li><p>The stiffness, mass, and damping matrices are assumed to be constant (independent of frequency).</p></li>
+<li><p>The external load vector is linearly ramped over frequency. Ramping assumes that the frequency at
+which the Krylov subspace is built is in the middle of the frequency range. If you want to apply
+stepped loading, there is an option to specify that in the inputs for the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.krysolve.html#ansys.mapdl.core.krylov.KrylovSolver.krysolve" title="ansys.mapdl.core.krylov.KrylovSolver.krysolve"><code class="xref py py-func docutils literal notranslate"><span class="pre">KrylovSolver.krysolve()</span></code></a> method.</p></li>
+</ul>
+</section>
+</section>
+<section id="krylov-method-implementation-in-pymadl">
+<h2>Krylov method implementation in PyMADL<a class="headerlink" href="#krylov-method-implementation-in-pymadl" title="Permalink to this heading">#</a></h2>
+<p>The PyMAPDL implementation of the Kylov method gives you customization and flexibility
+because you can access
+subspace vectors and reduced solutions using the Python programming language for user-defined routines.</p>
+<p>If you do not require customization, you can use the simpler using APDL commands to solve a harmonic analysis
+with the Krylov method.</p>
+<p>The procedure described here implements an analysis identical to that defined by the macros.
+Details on the theory and equations describing the Krylov method can be found in the works of Puri <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> and Eser <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> .</p>
+<p>The exposure in PyMAPDL follows the same theory as the APDL macro and has the following methods:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.krygensub.html#ansys.mapdl.core.krylov.KrylovSolver.krygensub" title="ansys.mapdl.core.krylov.KrylovSolver.krygensub"><code class="xref py py-func docutils literal notranslate"><span class="pre">KrylovSolver.krygensub()</span></code></a>: Creates the Krylov subspace.</p></li>
+<li><p><a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.krysolve.html#ansys.mapdl.core.krylov.KrylovSolver.krysolve" title="ansys.mapdl.core.krylov.KrylovSolver.krysolve"><code class="xref py py-func docutils literal notranslate"><span class="pre">KrylovSolver.krysolve()</span></code></a>: Solves the reduced system of equations.</p></li>
+<li><p><a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.kryexpand.html#ansys.mapdl.core.krylov.KrylovSolver.kryexpand" title="ansys.mapdl.core.krylov.KrylovSolver.kryexpand"><code class="xref py py-func docutils literal notranslate"><span class="pre">KrylovSolver.kryexpand()</span></code></a>: Expands the Krylov subspace.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These methods must be run consecutively.</p>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
+<p>Generate the full file (<code class="docutils literal notranslate"><span class="pre">.full</span></code>) for the Krylov method using Mechanical APDL:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span>  <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+
+  <span class="o">&gt;&gt;&gt;</span> <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
+  <span class="o">&gt;&gt;&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
+
+      <span class="c1"># Generate the FEA model (mesh, constraints, loads)</span>
+<span class="c1"># ...</span>
+
+  <span class="o">&gt;&gt;&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
+  <span class="o">&gt;&gt;&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s2">&quot;HARMIC&quot;</span><span class="p">)</span>  <span class="c1"># HARMONIC ANALYSIS</span>
+  <span class="o">&gt;&gt;&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">hropt</span><span class="p">(</span><span class="s2">&quot;KRYLOV&quot;</span><span class="p">)</span>
+  <span class="o">&gt;&gt;&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">eqslv</span><span class="p">(</span><span class="s2">&quot;SPARSE&quot;</span><span class="p">)</span>
+  <span class="o">&gt;&gt;&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">harfrq</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>  <span class="c1"># Set beginning and ending frequency</span>
+  <span class="o">&gt;&gt;&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">nsubst</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Set the number of frequency increments</span>
+  <span class="o">&gt;&gt;&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">wrfull</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># GENERATE .FULL FILE AND STOP</span>
+  <span class="o">&gt;&gt;&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+  <span class="o">&gt;&gt;&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="create-an-instance-of-the-krylov-class">
+<h3>Create an instance of the Krylov class<a class="headerlink" href="#create-an-instance-of-the-krylov-class" title="Permalink to this heading">#</a></h3>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mk</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">krylov</span>
+</pre></div>
+</div>
+<p>Call the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.krygensub.html#ansys.mapdl.core.krylov.KrylovSolver.krygensub" title="ansys.mapdl.core.krylov.KrylovSolver.krygensub"><code class="xref py py-func docutils literal notranslate"><span class="pre">krygensub</span></code></a> method, which creates the Krylov subspace:
+Build a subspace of Size / Dimension 10 and at a frequency of 500 Hz.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Qz</span> <span class="o">=</span> <span class="n">mk</span><span class="o">.</span><span class="n">krygensub</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="return-the-krylov-subspace">
+<h3>Return the Krylov subspace<a class="headerlink" href="#return-the-krylov-subspace" title="Permalink to this heading">#</a></h3>
+<p>Call the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.krysolve.html#ansys.mapdl.core.krylov.KrylovSolver.krysolve" title="ansys.mapdl.core.krylov.KrylovSolver.krysolve"><code class="xref py py-func docutils literal notranslate"><span class="pre">krysolve</span></code></a> method, which reduces
+the system of equations, and then solve at each frequency. The following code solves from 0 Hz
+to 1000 Hz with 100 intervals in between, with stepped loading.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Yz</span> <span class="o">=</span> <span class="n">mk</span><span class="o">.</span><span class="n">krysolve</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="return-the-reduced-solution-over-the-frequency-range">
+<h3>Return the reduced solution over the frequency range<a class="headerlink" href="#return-the-reduced-solution-over-the-frequency-range" title="Permalink to this heading">#</a></h3>
+<p>Call the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.kryexpand.html#ansys.mapdl.core.krylov.KrylovSolver.kryexpand" title="ansys.mapdl.core.krylov.KrylovSolver.kryexpand"><code class="xref py py-func docutils literal notranslate"><span class="pre">kryexpand</span></code></a> method, which expands the reduced solution back to FE space. Output the expanded solution and calculate the residual.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">mk</span><span class="o">.</span><span class="n">kryexpand</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Return Ndarray (if out_key = True) solution vectors mapped to User order.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> returned by the method <code class="docutils literal notranslate"><span class="pre">kryexpand</span></code> contains the node number
+along with the dof solution for each of the calculated frequencies.</p>
+</div>
+</section>
+<section id="get-the-dof-solution-at-a-specific-frequency">
+<h3>Get the dof solution at a specific frequency<a class="headerlink" href="#get-the-dof-solution-at-a-specific-frequency" title="Permalink to this heading">#</a></h3>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the nodal solution at freq number 3``````</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">node_order</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s1">&#39;node&#39;</span><span class="p">]</span> <span class="c1"># Get the nodal order</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">node_num</span> <span class="ow">in</span> <span class="n">node_order</span><span class="p">:</span>
+<span class="o">&gt;&gt;&gt;</span>     <span class="n">nodal_sol</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="n">node_num</span><span class="p">][</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="c1"># Get the nodal solution for each node</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h2>
+<p>Examples of using the Krylov method in PyMAPDL are available in <a class="reference internal" href="../examples/extended_examples/Krylov/krylov_example.html#krylov-example"><span class="std std-ref">Harmonic analysis using the frequency sweep Krylov method</span></a>.</p>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">#</a></h2>
+<p>To use <code class="docutils literal notranslate"><span class="pre">krylov</span></code> feature, you need to meet the following requirements:</p>
+<ul class="simple">
+<li><p>ANSYS MAPDL version should be 2022R2 or newer.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature does not support Distributed Ansys.
+However, you can still run MAPDL Math commands without specifying the <code class="docutils literal notranslate"><span class="pre">-smp</span></code> flag when
+launching MAPDL.</p>
+</div>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this heading">#</a></h2>
+<p>For additional details, for the krylov method refer the <a class="reference external" href="https://ansysproducthelpqa.win.ansys.com/account/secured?returnurl=/Views/Secured/corp/v231/en/ans_str/str_Krysweep.html">APDL Docummentation Manual</a></p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Puri, S. R. (2009). Krylov Subspace Based Direct Projection Techniques for Low Frequency,
+Fully Coupled, Structural Acoustic Analysis and Optimization. PhD Thesis. Oxford Brookes University,
+Mechanical Engineering Department. Oxford, UK.</p>
+</aside>
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Eser, M. C. (2019) Efficient Evaluation of Sound Radiation of an Electric Motor using Model Order
+Reduction.MSc Thesis. Technical University of Munich, Mechanical Engineering Department. Munich, DE.</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+              </article>
+              
+
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+  </body>
+</html>
