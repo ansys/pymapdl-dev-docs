@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Translating Scripts &#8212; PyMAPDL</title>
+    <title>Translate scripts &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -56,7 +56,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="APDL Math Overview" href="math.html" />
-    <link rel="prev" title="Accessing MAPDL Database" href="database.html" />
+    <link rel="prev" title="Access MAPDL database" href="database.html" />
 <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
 
@@ -104,13 +104,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
@@ -190,8 +190,8 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyMAPDL</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Guide</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Translating Scripts</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User guide</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Translate scripts</a></li> 
       </ul>
     </div>
         </div>
@@ -215,17 +215,17 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="launcher.html">
-   Initial Setup and Launching MAPDL Locally
+   Initial setup and launch of MAPDL locally
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mapdl.html">
-   PyMAPDL Language and Usage
+   PyMAPDL language and usage
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mapdl_examples.html">
-   ANSYS APDL Interactive Control Examples
+   ANSYS APDL interactive control examples
   </a>
  </li>
  <li class="toctree-l1">
@@ -250,12 +250,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="database.html">
-   Accessing MAPDL Database
+   Access MAPDL database
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Translating Scripts
+   Translate scripts
   </a>
  </li>
  <li class="toctree-l1">
@@ -276,11 +276,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="upf.html">
    Using Python to Code UPF Subroutines
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="krylov.html">
-   Harmonic analysis using the Krylov method
   </a>
  </li>
 </ul>
@@ -315,17 +310,17 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#script-translation">
-   Script Translation
+   Script translation
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-vm1-statically-indeterminate-reaction-force-analysis">
-     Example: VM1 - Statically Indeterminate Reaction Force Analysis
+     Example: VM1 - statically indeterminate reaction force analysis
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vm7-plastic-compression-of-a-pipe-assembly">
-     VM7 - Plastic Compression of a Pipe Assembly
+     VM7 - plastic compression of a pipe assembly
     </a>
    </li>
   </ul>
@@ -349,26 +344,27 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="translating-scripts">
-<h1>Translating Scripts<a class="headerlink" href="#translating-scripts" title="Permalink to this heading">#</a></h1>
+  <section id="translate-scripts">
+<h1>Translate scripts<a class="headerlink" href="#translate-scripts" title="Permalink to this heading">#</a></h1>
 <p>The <a class="reference external" href="https://pypi.org/project/ansys-mapdl-core/">ansys-mapdl-core</a>
 library contains a few basic functions to translate existing MAPDL
-scripts into PyMAPDL scripts.  Ideally, all math and variable setting
-would take place within Python as much as possible as APDL commands
+scripts into PyMAPDL scripts. Ideally, all math and variable setting
+would take place within Python because APDL commands
 are less transparent and more difficult to debug.</p>
 <section id="caveats">
 <h2>Caveats<a class="headerlink" href="#caveats" title="Permalink to this heading">#</a></h2>
 <p>These examples only show an automatic translation of a verification
-file and not optimized code.  Should it be necessary to pull
-parameters or arrays from ansys, use <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.get_value.html#ansys.mapdl.core.Mapdl.get_value" title="ansys.mapdl.core.Mapdl.get_value"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.get_value()</span></code></a>, which is quite similar to the
+file and not optimized code. Should it be necessary to pull
+parameters or arrays from ansys, use the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.get_value.html#ansys.mapdl.core.Mapdl.get_value" title="ansys.mapdl.core.Mapdl.get_value"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.get_value()</span></code></a> function, which is quite similar to the
 MAPDL <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.get.html#ansys.mapdl.core.Mapdl.get" title="ansys.mapdl.core.Mapdl.get"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.get()</span></code></a>
-command as in:</p>
+command shown here:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s1">&#39;NODE&#39;</span> <span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span> <span class="p">,</span><span class="s1">&#39;Y&#39;</span><span class="p">)</span>
 <span class="go">4.532094298033</span>
 </pre></div>
 </div>
 <p>Alternatively, if a parameter is already defined, you can access it
-using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a> with:</p>
+using the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.parameters</span></code></a> attribute
+with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span>
 <span class="go">ARR                              : ARRAY DIM (3, 1, 1)</span>
 <span class="go">PARM_FLOAT                       : 20.0</span>
@@ -383,16 +379,17 @@ using <a class="reference internal" href="../contribution_and_api/_autosummary/a
 </div>
 </section>
 <section id="script-translation">
-<h2>Script Translation<a class="headerlink" href="#script-translation" title="Permalink to this heading">#</a></h2>
-<p>Existing ANSYS scripts can be translated using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.convert_script.html#ansys.mapdl.core.convert_script" title="ansys.mapdl.core.convert_script"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_script()</span></code></a></p>
+<h2>Script translation<a class="headerlink" href="#script-translation" title="Permalink to this heading">#</a></h2>
+<p>Existing Ansys scripts can be translated using the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.convert_script.html#ansys.mapdl.core.convert_script" title="ansys.mapdl.core.convert_script"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_script()</span></code></a>
+function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ansys.mapdl.core</span> <span class="k">as</span> <span class="nn">pymapdl</span>
 <span class="n">inputfile</span> <span class="o">=</span> <span class="s1">&#39;ansys_inputfile.inp&#39;</span>
 <span class="n">pyscript</span> <span class="o">=</span> <span class="s1">&#39;pyscript.py&#39;</span>
 <span class="n">pymapdl</span><span class="o">.</span><span class="n">convert_script</span><span class="p">(</span><span class="n">inputfile</span><span class="p">,</span> <span class="n">pyscript</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Or additionally, you can convert code in form of strings for later processing
-using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.convert_apdl_block.html#ansys.mapdl.core.convert_apdl_block" title="ansys.mapdl.core.convert_apdl_block"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_apdl_block()</span></code></a> :</p>
+<p>Or, you can convert code in form of strings for later processing using the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.convert_apdl_block.html#ansys.mapdl.core.convert_apdl_block" title="ansys.mapdl.core.convert_apdl_block"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_apdl_block()</span></code></a> function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core.convert</span> <span class="kn">import</span> <span class="n">convert_apdl_block</span>
 
 <span class="n">apdl_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;/com, This is a block of APDL commands.</span>
@@ -403,32 +400,32 @@ using <a class="reference internal" href="../contribution_and_api/_autosummary/a
 <span class="n">pycode</span> <span class="o">=</span> <span class="n">convert_apdl_block</span><span class="p">(</span><span class="n">apdl_string</span><span class="p">)</span> <span class="c1"># apdl_string can be also a list of strings.</span>
 </pre></div>
 </div>
-<p>The script conversion functions allows some interesting arguments which can be seen in
+<p>The script conversion functions allow some interesting arguments that can be seen in
 their respective function documentation, <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.convert_script.html#ansys.mapdl.core.convert_script" title="ansys.mapdl.core.convert_script"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_script()</span></code></a>
 and <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.convert_apdl_block.html#ansys.mapdl.core.convert_apdl_block" title="ansys.mapdl.core.convert_apdl_block"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_apdl_block()</span></code></a>.
-Especially interesting are they keyword arguments <code class="docutils literal notranslate"><span class="pre">add_imports</span></code>, <code class="docutils literal notranslate"><span class="pre">comment_solve</span></code> or
+Especially interesting are the keyword arguments <code class="docutils literal notranslate"><span class="pre">add_imports</span></code>, <code class="docutils literal notranslate"><span class="pre">comment_solve</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">print_com</span></code>.</p>
 <p>Of particular note in the following examples is how most of the
-commands can be called as a method to the ansys object rather than
-sending a string as a command.  Additionally, take note that some
+commands can be called as a method to the Ansys object rather than
+sending a string as a command. Additionally, take note that some
 commands require the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a> context manager since some
 commands require and may break the server connection for some
-interfaces (e.g. CORBA) or are invalid (as in gRPC).</p>
+interfaces (such as CORBA) or are invalid (as in gRPC).</p>
 <p>Also note that APDL macros that use <code class="docutils literal notranslate"><span class="pre">*CREATE</span></code> have been replaced
-with python functions.  This will make the code easier to debug
+with Python functions. This makes the code easier to debug
 should it be necessary to insert a <code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code> in the script.</p>
 <section id="example-vm1-statically-indeterminate-reaction-force-analysis">
-<h3>Example: VM1 - Statically Indeterminate Reaction Force Analysis<a class="headerlink" href="#example-vm1-statically-indeterminate-reaction-force-analysis" title="Permalink to this heading">#</a></h3>
-<p>Ansys MAPDL contains over 200 verification files used for ANSYS
-validation and demonstration.  These validation files are used here to
-demo the use of the PyMAPDL file translator <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.convert_script.html#ansys.mapdl.core.convert_script" title="ansys.mapdl.core.convert_script"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_script()</span></code></a> and are available in:</p>
+<h3>Example: VM1 - statically indeterminate reaction force analysis<a class="headerlink" href="#example-vm1-statically-indeterminate-reaction-force-analysis" title="Permalink to this heading">#</a></h3>
+<p>Ansys MAPDL contains over 200 verification files used for Ansys
+validation and demonstration. These validation files are used here to
+demo the use of the PyMAPDL file translator <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.convert_script.html#ansys.mapdl.core.convert_script" title="ansys.mapdl.core.convert_script"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_script()</span></code></a> function and are available in:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">examples</span><span class="o">.</span><span class="n">vmfiles</span><span class="p">[</span><span class="s1">&#39;vm1&#39;</span><span class="p">]</span>
 <span class="go">&#39;.../ansys/mapdl/core/examples/verif/vm1.dat&#39;</span>
 </pre></div>
 </div>
-<p>This example translates the verification example <code class="docutils literal notranslate"><span class="pre">&quot;vm1.dat&quot;</span></code>.
-First, the MAPDL code:</p>
+<p>This example translates the verification example <code class="docutils literal notranslate"><span class="pre">&quot;vm1.dat&quot;</span></code>.</p>
+<p>First, the MAPDL code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/COM,ANSYS MEDIA REL. 150 (11/8/2013) REF. VERIF. MANUAL: REL. 150
 /VERIFY,VM1
 /PREP7
@@ -482,13 +479,13 @@ FINISH
 *LIST,vm1,vrt
 </pre></div>
 </div>
-<p>This verification file was translated using:</p>
+<p>Translate the verification file with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">core</span> <span class="k">as</span> <span class="n">pymapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pymapdl</span><span class="o">.</span><span class="n">convert_script</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">vmfiles</span><span class="p">[</span><span class="s1">&#39;vm1&#39;</span><span class="p">],</span> <span class="s1">&#39;vm1.py&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Translated code:</p>
+<p>Here is the translated code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Script generated by ansys-mapdl-core version 0.57.0&quot;&quot;&quot;</span>
 <span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
@@ -546,7 +543,7 @@ FINISH
 <span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Results from running the converted file:</p>
+<p>Here are the results from running the converted file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-------------------</span> <span class="n">VM1</span> <span class="n">RESULTS</span> <span class="n">COMPARISON</span> <span class="o">---------------------</span>
 <span class="o">|</span>   <span class="n">TARGET</span>   <span class="o">|</span>   <span class="n">Mechanical</span> <span class="n">APDL</span>   <span class="o">|</span>   <span class="n">RATIO</span>
 <span class="o">/</span><span class="n">INPUT</span> <span class="n">FILE</span><span class="o">=</span>    <span class="n">LINE</span><span class="o">=</span>       <span class="mi">0</span>
@@ -567,13 +564,14 @@ FINISH
 </div>
 <p>Note that some of the commands with <code class="docutils literal notranslate"><span class="pre">/</span></code> are not directly translated
 to functions and are instead run as “classic” commands like
-<code class="docutils literal notranslate"><span class="pre">mapdl.run('/COM')</span></code>.  Also, please note that the <code class="docutils literal notranslate"><span class="pre">*VWRITE</span></code> command
-requires a command immediately following it.  This normally locks the
+<code class="docutils literal notranslate"><span class="pre">mapdl.run('/COM')</span></code>. Also, note that the <code class="docutils literal notranslate"><span class="pre">*VWRITE</span></code> command
+requires a command immediately following it. This normally locks the
 interface, so it’s implemented in the background as an input file
-using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a>.</p>
+using the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a>
+attribute.</p>
 </section>
 <section id="vm7-plastic-compression-of-a-pipe-assembly">
-<h3>VM7 - Plastic Compression of a Pipe Assembly<a class="headerlink" href="#vm7-plastic-compression-of-a-pipe-assembly" title="Permalink to this heading">#</a></h3>
+<h3>VM7 - plastic compression of a pipe assembly<a class="headerlink" href="#vm7-plastic-compression-of-a-pipe-assembly" title="Permalink to this heading">#</a></h3>
 <p>Here is the input file from VM7:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/COM,ANSYS MEDIA REL. 150 (11/8/2013) REF. VERIF. MANUAL: REL. 150
 /VERIFY,VM7
@@ -993,7 +991,7 @@ FINISH
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
   </div>
   

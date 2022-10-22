@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Using PyMAPDL in Julia &#8212; PyMAPDL</title>
+    <title>Use PyMAPDL in Julia &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -55,8 +55,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="PyAnsys Libraries on a Windows Subsystem for Linux and Docker" href="wsl.html" />
-    <link rel="prev" title="Using MAPDL Through Docker" href="docker.html" />
+    <link rel="next" title="PyAnsys libraries on a Windows Subsystem for Linux and Docker" href="wsl.html" />
+    <link rel="prev" title="Use MAPDL through Docker" href="docker.html" />
 <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
 
@@ -104,13 +104,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
@@ -190,8 +190,8 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyMAPDL</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Getting Started</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Using PyMAPDL in Julia</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Getting started</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Use PyMAPDL in Julia</a></li> 
       </ul>
     </div>
         </div>
@@ -215,27 +215,27 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="running_mapdl.html">
-   Using PyMAPDL from the Standard Install
+   Use PyMAPDL from the standard installation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="versioning.html">
-   Versioning and Interfaces
+   Versions and interfaces
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="docker.html">
-   Using MAPDL Through Docker
+   Use MAPDL through Docker
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Using PyMAPDL in Julia
+   Use PyMAPDL in Julia
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wsl.html">
-   PyAnsys Libraries on a Windows Subsystem for Linux and Docker
+   PyAnsys libraries on a Windows Subsystem for Linux and Docker
   </a>
  </li>
 </ul>
@@ -264,23 +264,23 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installing-julia">
-   Installing Julia
+  <a class="reference internal nav-link" href="#install-julia">
+   Install Julia
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-julia-environment">
-   Setting Julia Environment
+  <a class="reference internal nav-link" href="#set-the-julia-environment">
+   Set the Julia environment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installing-pymapdl-in-julia">
-   Installing PyMAPDL in Julia
+  <a class="reference internal nav-link" href="#install-pymapdl-in-julia">
+   Install PyMAPDL in Julia
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Using PyMAPDL in Julia
+   Use PyMAPDL in Julia
   </a>
  </li>
 </ul>
@@ -302,20 +302,20 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="using-pymapdl-in-julia">
-<span id="using-julia"></span><h1>Using PyMAPDL in Julia<a class="headerlink" href="#using-pymapdl-in-julia" title="Permalink to this heading">#</a></h1>
+  <section id="use-pymapdl-in-julia">
+<span id="using-julia"></span><h1>Use PyMAPDL in Julia<a class="headerlink" href="#use-pymapdl-in-julia" title="Permalink to this heading">#</a></h1>
 <p>If you like to work with Julia, you can use Python libraries as if they were Julia packages.</p>
-<section id="installing-julia">
-<h2>Installing Julia<a class="headerlink" href="#installing-julia" title="Permalink to this heading">#</a></h2>
-<p>To install Julia go to their website <a class="reference external" href="https://julialang.org/">https://julialang.org/</a> and follow the instructions given in the <em>Download</em> section.</p>
+<section id="install-julia">
+<h2>Install Julia<a class="headerlink" href="#install-julia" title="Permalink to this heading">#</a></h2>
+<p>To install Julia, go to their website <a class="reference external" href="https://julialang.org/">https://julialang.org/</a> and follow the instructions given in the <strong>Download</strong> section.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://julialang.org/downloads/platform/#windows">Windows</a></p></li>
 <li><p><a class="reference external" href="https://julialang.org/downloads/platform/#linux_and_freebsd">Linux</a></p></li>
 <li><p><a class="reference external" href="https://julialang.org/downloads/platform/#macos">MacOS</a></p></li>
 </ul>
 </section>
-<section id="setting-julia-environment">
-<h2>Setting Julia Environment<a class="headerlink" href="#setting-julia-environment" title="Permalink to this heading">#</a></h2>
+<section id="set-the-julia-environment">
+<h2>Set the Julia environment<a class="headerlink" href="#set-the-julia-environment" title="Permalink to this heading">#</a></h2>
 <p>To have access to Python libraries within Julia, you must install the [PyCall](<a class="reference external" href="https://github.com/JuliaPy/PyCall.jl">https://github.com/JuliaPy/PyCall.jl</a>) Julia package.
 To install it, run Julia and switch to the package manager by pressing  the``”]”`` key.</p>
 <p>If you need to work with different package versions or applications, it is beneficial to create a virtual environment in Julia.
@@ -324,20 +324,20 @@ To create a virtual environment, use the <code class="docutils literal notransla
   Activating project at `C:/Users/USER/julia_test`
 </pre></div>
 </div>
-<p>A message should appear, indicating that the new package (<code class="docutils literal notranslate"><span class="pre">julia_test</span></code>) has been activated. This environment name will now precede the command line.</p>
+<p>A message should appear, indicating that the new package (<code class="docutils literal notranslate"><span class="pre">julia_test</span></code>) has been activated. This environment name now precedes the command line.</p>
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">julia_test</span><span class="p">)</span><span class="w"> </span><span class="n">pkg</span><span class="o">&gt;</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Next install the <em>PyCall</em> package by typing:</p>
+<p>Next install the PyCall package by typing:</p>
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">julia_test</span><span class="p">)</span><span class="w"> </span><span class="n">pkg</span><span class="o">&gt;</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">PyCall</span><span class="w"></span>
 </pre></div>
 </div>
-<p>To use <em>PyCall</em>, press the backspace key to go to the Julia command line.
-The command line will now be precede by the name <code class="docutils literal notranslate"><span class="pre">Julia</span></code>.</p>
+<p>To use PyCall, press the backspace key to go to the Julia command line.
+The command line is then preceded by the name <code class="docutils literal notranslate"><span class="pre">Julia</span></code>.</p>
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Next use the <em>PyCall</em> package with:</p>
+<p>Next use the PyCall package with:</p>
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">PyCall</span><span class="w"></span>
 </pre></div>
 </div>
@@ -348,9 +348,9 @@ The command line will now be precede by the name <code class="docutils literal n
 </pre></div>
 </div>
 </section>
-<section id="installing-pymapdl-in-julia">
-<h2>Installing PyMAPDL in Julia<a class="headerlink" href="#installing-pymapdl-in-julia" title="Permalink to this heading">#</a></h2>
-<p><em>PyCall</em> includes a lightweight Python environment that uses <a class="reference external" href="https://conda.io">Conda</a> to manage and access Python packages.
+<section id="install-pymapdl-in-julia">
+<h2>Install PyMAPDL in Julia<a class="headerlink" href="#install-pymapdl-in-julia" title="Permalink to this heading">#</a></h2>
+<p>PyCall includes a lightweight Python environment that uses <a class="reference external" href="https://conda.io">Conda</a> to manage and access Python packages.
 This environment, currently based on Python 3.9.7, includes the standard basic Python libraries.
 However, because it is a fully working Python environment, you can still use it from outside the Julia command line and install Python packages using <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
 <p>To install PyMAPDL, first locate the Python executable with:</p>
@@ -367,8 +367,8 @@ However, because it is a fully working Python environment, you can still use it 
 <p class="admonition-title">Note</p>
 <p>In Linux, there are no specific installation steps. You only need to add the Julia executable to the path.
 Hence, Julia’s Python installation path can differ from user to user.
-For example, if you uncompress the source files in <code class="docutils literal notranslate"><span class="pre">/home/USER/Julia</span></code>, Julia’s path will be
-<code class="docutils literal notranslate"><span class="pre">/home/USER/Julia/julia-1.7.2/bin</span></code></p>
+For example, if you uncompress the source files in <code class="docutils literal notranslate"><span class="pre">/home/USER/Julia</span></code>, Julia’s path is
+<code class="docutils literal notranslate"><span class="pre">/home/USER/Julia/julia-1.7.2/bin</span></code>.</p>
 </div>
 <p>You would use this Python executable to install PyMAPDL:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:<span class="se">\U</span>sers<span class="se">\U</span>SER<span class="se">\.</span>julia<span class="se">\c</span>onda<span class="se">\3\p</span>ython.exe -m pip install ansys-mapdl-core
@@ -378,7 +378,7 @@ For example, if you uncompress the source files in <code class="docutils literal
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m pip install ansys-mapdl-core
 </pre></div>
 </div>
-<p>Finally, after restarting Julia, you can import PyMAPDL using the same procedure as described above:</p>
+<p>Finally, after restarting Julia, you can import PyMAPDL using the same procedure as described earlier:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="n">using</span> <span class="n">PyCall</span>
 <span class="n">julia</span><span class="o">&gt;</span> <span class="n">pymapdl</span> <span class="o">=</span> <span class="n">pyimport</span><span class="p">(</span><span class="s2">&quot;ansys.mapdl.core&quot;</span><span class="p">)</span>
 <span class="n">PyObject</span> <span class="o">&lt;</span><span class="n">module</span> <span class="s1">&#39;ansys.mapdl.core&#39;</span> <span class="kn">from</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">USER</span><span class="se">\\</span><span class="s1">.julia</span><span class="se">\\</span><span class="s1">conda</span><span class="se">\\</span><span class="s1">3</span><span class="se">\\</span><span class="s1">lib</span><span class="se">\\</span><span class="s1">site-packages</span><span class="se">\\</span><span class="s1">ansys</span><span class="se">\\</span><span class="s1">mapdl</span><span class="se">\\</span><span class="s1">core</span><span class="se">\\</span><span class="s1">__init__.py&#39;</span><span class="o">&gt;</span>
@@ -391,14 +391,14 @@ For example, if you uncompress the source files in <code class="docutils literal
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you experience errors when using <em>PyCall</em>, you can try to rebuild the package by pressing <code class="docutils literal notranslate"><span class="pre">&quot;]&quot;</span></code> to go to the package manager and typing:</p>
+<p>If you experience errors when using PyCall, you can try to rebuild the package by pressing <code class="docutils literal notranslate"><span class="pre">&quot;]&quot;</span></code> to go to the package manager and typing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkg</span><span class="o">&gt;</span> <span class="n">build</span> <span class="n">PyCall</span>
 </pre></div>
 </div>
 </div>
 </section>
 <section id="id1">
-<h2>Using PyMAPDL in Julia<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>Use PyMAPDL in Julia<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>Here is a simple example of using PyMAPDL in Julia:</p>
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">PyCall</span><span class="w"></span>
 <span class="n">julia</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pymapdl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pyimport</span><span class="p">(</span><span class="s">&quot;ansys.mapdl.core&quot;</span><span class="p">)</span><span class="w"></span>
@@ -457,7 +457,7 @@ For example, if you uncompress the source files in <code class="docutils literal
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Do notice the changes in the strings (only <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> strings are allowed) and the loops.</p>
+<p>Notice the changes in the strings and the loops. Only <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> strings are allowed.</p>
 </div>
 </section>
 </section>
@@ -487,7 +487,7 @@ For example, if you uncompress the source files in <code class="docutils literal
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
   </div>
   

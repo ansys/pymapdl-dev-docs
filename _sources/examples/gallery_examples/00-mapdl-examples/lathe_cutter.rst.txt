@@ -75,7 +75,7 @@ Contents
    Demonstrate extended methods and writing a list to a file.
 
 7. **Advanced plotting**
-   Use of `mesh.grid <https://mapdldocs.pyansys.com/mapdl_commands/graphics/_autosummary/ansys.mapdl.core.Mapdl.grid.html>`_
+   Use of :class:`pyvista.UnstructuredGrid`
    for additional postprocessing.
 
 
@@ -116,9 +116,9 @@ Often used MAPDL command line options are exposed as Pythonic parameter names in
 has become ``run_location``.
 You could use ``run_location`` to specify the MAPDL run location. For example:
 
-..code:: python3
+.. code:: python3
 
-  mapdl = launch_mapdl(run_location=path)
+   mapdl = launch_mapdl(run_location=path)
 
 Otherwise, the MAPDL working directory is stored in ``mapdl.directory``. In this
 directory, MAPDL will create some of the images we will show later.
@@ -716,14 +716,13 @@ Get the principal nodal stresses of the node subset.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 340-344
+.. GENERATED FROM PYTHON SOURCE LINES 340-343
 
 Results as lists, arrays, and DataFrames
 -----------------------------------------
-Using `mapdl.prnsol <https://mapdldocs.pyansys.com/mapdl_commands/post1/_autosummary/ansys.mapdl.core.Mapdl.prnsol.html>`_
-to check
+Using :meth:`mapdl.prnsol` to check
 
-.. GENERATED FROM PYTHON SOURCE LINES 344-346
+.. GENERATED FROM PYTHON SOURCE LINES 343-345
 
 .. code-block:: default
 
@@ -741,7 +740,7 @@ to check
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     10:47:26  OCT 21, 2022 CP=    140.000
+     00000000  VERSION=LINUX x64     04:33:25  OCT 22, 2022 CP=    183.077
 
      Lathe Cutter                                                                  
 
@@ -777,11 +776,11 @@ to check
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 347-348
+.. GENERATED FROM PYTHON SOURCE LINES 346-347
 
 Use this command to obtain the data as a list.
 
-.. GENERATED FROM PYTHON SOURCE LINES 348-351
+.. GENERATED FROM PYTHON SOURCE LINES 347-350
 
 .. code-block:: default
 
@@ -801,11 +800,11 @@ Use this command to obtain the data as a list.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 352-353
+.. GENERATED FROM PYTHON SOURCE LINES 351-352
 
 Use this command to obtain the data as an array:
 
-.. GENERATED FROM PYTHON SOURCE LINES 353-356
+.. GENERATED FROM PYTHON SOURCE LINES 352-355
 
 .. code-block:: default
 
@@ -833,11 +832,11 @@ Use this command to obtain the data as an array:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 357-358
+.. GENERATED FROM PYTHON SOURCE LINES 356-357
 
 or as a DataFrame:
 
-.. GENERATED FROM PYTHON SOURCE LINES 358-361
+.. GENERATED FROM PYTHON SOURCE LINES 357-360
 
 .. code-block:: default
 
@@ -931,14 +930,14 @@ or as a DataFrame:
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 362-366
+.. GENERATED FROM PYTHON SOURCE LINES 361-365
 
 Use this command to obtain the data as a DataFrame, which is a.
 `Pandas data type <https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html>`_.
 Because the Pandas module is imported, you can use its functions.
 For example, you can write principal stresses to a file.
 
-.. GENERATED FROM PYTHON SOURCE LINES 366-371
+.. GENERATED FROM PYTHON SOURCE LINES 365-370
 
 .. code-block:: default
 
@@ -954,13 +953,13 @@ For example, you can write principal stresses to a file.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 372-375
+.. GENERATED FROM PYTHON SOURCE LINES 371-374
 
 Step 7: Advanced plotting
 =========================
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 375-379
+.. GENERATED FROM PYTHON SOURCE LINES 374-378
 
 .. code-block:: default
 
@@ -975,11 +974,11 @@ Step 7: Advanced plotting
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 380-381
+.. GENERATED FROM PYTHON SOURCE LINES 379-380
 
 Load this result into the VTK grid.
 
-.. GENERATED FROM PYTHON SOURCE LINES 381-391
+.. GENERATED FROM PYTHON SOURCE LINES 380-390
 
 .. code-block:: default
 
@@ -1000,7 +999,7 @@ Load this result into the VTK grid.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 392-398
+.. GENERATED FROM PYTHON SOURCE LINES 391-397
 
 Generate a single horizontal slice along the XY plane.
 
@@ -1009,7 +1008,7 @@ Generate a single horizontal slice along the XY plane.
    Read more about it at `Eye Dome Lighting
    <https://docs.pyvista.org/examples/02-plot/edl.html>`_
 
-.. GENERATED FROM PYTHON SOURCE LINES 398-411
+.. GENERATED FROM PYTHON SOURCE LINES 397-410
 
 .. code-block:: default
 
@@ -1038,11 +1037,11 @@ Generate a single horizontal slice along the XY plane.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 412-413
+.. GENERATED FROM PYTHON SOURCE LINES 411-412
 
 Generate a plot with three slice planes.
 
-.. GENERATED FROM PYTHON SOURCE LINES 413-425
+.. GENERATED FROM PYTHON SOURCE LINES 412-424
 
 .. code-block:: default
 
@@ -1070,12 +1069,12 @@ Generate a plot with three slice planes.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 426-428
+.. GENERATED FROM PYTHON SOURCE LINES 425-427
 
 Generate a grid with multiple slices in the same plane.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 428-440
+.. GENERATED FROM PYTHON SOURCE LINES 427-439
 
 .. code-block:: default
 
@@ -1103,11 +1102,11 @@ Generate a grid with multiple slices in the same plane.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 441-442
+.. GENERATED FROM PYTHON SOURCE LINES 440-441
 
 Finally, exit MAPDL.
 
-.. GENERATED FROM PYTHON SOURCE LINES 442-443
+.. GENERATED FROM PYTHON SOURCE LINES 441-442
 
 .. code-block:: default
 
@@ -1122,7 +1121,7 @@ Finally, exit MAPDL.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.169 seconds)
+   **Total running time of the script:** ( 0 minutes  10.189 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_lathe_cutter.py:

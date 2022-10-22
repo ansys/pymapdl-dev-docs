@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>User Guide &#8212; PyMAPDL</title>
+    <title>User guide &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -55,8 +55,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Initial Setup and Launching MAPDL Locally" href="launcher.html" />
-    <link rel="prev" title="PyAnsys Libraries on a Windows Subsystem for Linux and Docker" href="../getting_started/wsl.html" />
+    <link rel="next" title="Initial setup and launch of MAPDL locally" href="launcher.html" />
+    <link rel="prev" title="PyAnsys libraries on a Windows Subsystem for Linux and Docker" href="../getting_started/wsl.html" />
 <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
 
@@ -104,13 +104,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="current reference internal nav-link" href="#">
-  User Guide
+  User guide
  </a>
 </li>
 
@@ -190,7 +190,7 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyMAPDL</a> » </li>
     
 
-        <li class="nav-item nav-item-this"><a href="">User Guide</a></li> 
+        <li class="nav-item nav-item-this"><a href="">User guide</a></li> 
       </ul>
     </div>
         </div>
@@ -214,17 +214,17 @@
     <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="launcher.html">
-   Initial Setup and Launching MAPDL Locally
+   Initial setup and launch of MAPDL locally
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mapdl.html">
-   PyMAPDL Language and Usage
+   PyMAPDL language and usage
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mapdl_examples.html">
-   ANSYS APDL Interactive Control Examples
+   ANSYS APDL interactive control examples
   </a>
  </li>
  <li class="toctree-l1">
@@ -249,12 +249,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="database.html">
-   Accessing MAPDL Database
+   Access MAPDL database
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="convert.html">
-   Translating Scripts
+   Translate scripts
   </a>
  </li>
  <li class="toctree-l1">
@@ -275,11 +275,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="upf.html">
    Using Python to Code UPF Subroutines
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="krylov.html">
-   Harmonic analysis using the Krylov method
   </a>
  </li>
 </ul>
@@ -339,23 +334,22 @@
               <article class="bd-article" role="main">
                 
   <section id="user-guide">
-<span id="ref-user-guide"></span><h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this heading">#</a></h1>
-<p>This guide provides a general overview of the basics and usage of the
-PyMAPDL library.</p>
+<span id="ref-user-guide"></span><h1>User guide<a class="headerlink" href="#user-guide" title="Permalink to this heading">#</a></h1>
+<p>This section provides a general overview of PyMAPDL and how you use it.</p>
 <div class="toctree-wrapper compound">
 </div>
 <section id="pymapdl-overview">
 <h2>PyMAPDL overview<a class="headerlink" href="#pymapdl-overview" title="Permalink to this heading">#</a></h2>
 <p>The <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> function
-within the <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> library creates an instance of of
-<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> in the background and sends
-commands to that service.  Errors and warnings are processed
-Pythonically letting the user develop a script real-time without
-worrying about if it will function correctly when deployed in batch
+within the <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> library creates an instance of the
+<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class in the background and sends
+commands to that service. Errors and warnings are processed
+Pythonically, letting you develop a script in real time, without
+worrying about it functioning correctly when deployed in batch
 mode.</p>
-<p>MAPDL can be started from python in gRPC mode using
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>.  This starts
-MAPDL in a temporary directory by default.  You can change this to
+<p>MAPDL can be started from Python in gRPC mode using the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> method. This starts
+MAPDL in a temporary directory by default. You can change this to
 your current directory with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
@@ -364,9 +358,9 @@ your current directory with:</p>
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">run_location</span><span class="o">=</span><span class="n">path</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>MAPDL is now active and you can send commands to it as a genuine a
-Python class.  For example, if we wanted to create a surface using
-keypoints we could run:</p>
+<p>MAPDL is now active, and you can send commands to it as a genuine a
+Python class.  For example, if you wanted to create a surface using
+keypoints, you could run:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;/PREP7&#39;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;K, 1, 0, 0, 0&#39;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;K, 2, 1, 0, 0&#39;</span><span class="p">)</span>
@@ -379,8 +373,8 @@ keypoints we could run:</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;AL, 1, 2, 3, 4&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>MAPDL interactively returns the result of each command and it is
-stored to the logging module.  Errors are caught immediately.  For
+<p>MAPDL interactively returns the result of each command, which is
+stored to the logging module. Errors are caught immediately. For
 example, if you input an invalid command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;AL, 1, 2, 3&#39;</span><span class="p">)</span>
 
@@ -396,29 +390,29 @@ example, if you input an invalid command:</p>
 <span class="nb">set</span> <span class="k">for</span> <span class="n">AL</span> <span class="n">command</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>This <code class="docutils literal notranslate"><span class="pre">MapdlRuntimeError</span></code> was caught immediately, and this means that
-you can write your MAPDL scripts in python, run them interactively and
-then as a batch without worrying if the script will run correctly if
+<p>This <code class="docutils literal notranslate"><span class="pre">MapdlRuntimeError</span></code> was caught immediately. This means that
+you can write your MAPDL scripts in Python, run them interactively, and
+then run them as a batch without worrying if the script would run correctly if
 you had instead outputted it to a script file.</p>
 <p>The <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class supports much more
-than just sending text to MAPDL and includes higher level wrapping
-allowing for better scripting and interaction with MAPDL.  See the
-<a class="reference internal" href="../examples/index.html#ref-examples"><span class="std std-ref">Examples</span></a> for an overview of the various advanced
-methods to visualize, script, and interact with MAPDL.</p>
+than just sending text to MAPDL. It includes higher-level wrapping,
+allowing for better scripting and interaction with MAPDL. For an overview of the
+various advanced methods to visualize, script, and interact with MAPDL, see
+<a class="reference internal" href="../examples/index.html#ref-examples"><span class="std std-ref">Examples</span></a>.</p>
 <section id="calling-mapdl-pythonically">
 <h3>Calling MAPDL Pythonically<a class="headerlink" href="#calling-mapdl-pythonically" title="Permalink to this heading">#</a></h3>
 <p>MAPDL functions can be called directly from an instance of
-<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> in a pythonic manner.  This is
-to simplify calling ANSYS, especially when inputs are variables within
-Python.  For example, the following two commands are equivalent:</p>
+<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> in a Pythonic manner. This is
+to simplify calling Anys, especially when inputs are variables within
+Python. For example, the following two commands are equivalent:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;K, 1, 0, 0, 0&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This approach has some obvious advantages, chiefly that it’s a easier
-to script as <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> takes care of the string formatting for you.
-For example, inputting points from a numpy array:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># make 10 random keypoints in ANSYS</span>
+<p>This approach has some obvious advantages. Chiefly, it’s easier
+to script because <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> takes care of the string formatting for you.
+For example, you can input points from a numpy array with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># make 10 random keypoints in Ansys</span>
 <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">points</span><span class="p">):</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
@@ -440,7 +434,7 @@ For example, inputting points from a numpy array:</p>
 </pre></div>
 </div>
 <p>For longer scripts, instead of sending commands to MAPDL as in the
-area creation example, we can instead run:</p>
+area creation example, you can instead run:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># clear existing geometry</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -460,7 +454,7 @@ area creation example, we can instead run:</p>
 </div>
 <p>This approach has some obvious advantages, chiefly that it’s a bit
 easier to script as <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>
-takes care of the string formatting for you.  For example, inputting
+takes care of the string formatting for you. For example, inputting
 points from a numpy array:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -471,7 +465,7 @@ points from a numpy array:</p>
 </pre></div>
 </div>
 <p>Additionally, each function with the MAPDL class has help associated
-within it.  For example:</p>
+with it. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">)</span>
 
 <span class="go">Help on method K in module ansys.mapdl.core.mapdl_grpc.MapdlGrpc:</span>
@@ -486,12 +480,12 @@ within it.  For example:</p>
 <span class="go">    Parameters</span>
 <span class="go">    ----------</span>
 <span class="go">    npt</span>
-<span class="go">        Reference number for keypoint.  If zero, the lowest</span>
+<span class="go">        Reference number for keypoint. If zero, the lowest</span>
 <span class="go">        available number is assigned [NUMSTR].</span>
 
 <span class="go">    x, y, z</span>
 <span class="go">        Keypoint location in the active coordinate system (may be</span>
-<span class="go">        R, θ, Z or R, θ, Φ).  If X = P, graphical picking is</span>
+<span class="go">        R, θ, Z or R, θ, Φ). If X = P, graphical picking is</span>
 <span class="go">        enabled and all other fields (including NPT) are ignored</span>
 <span class="go">        (valid only in the GUI).</span>
 
@@ -504,14 +498,14 @@ within it.  For example:</p>
 <span class="go">    Notes</span>
 <span class="go">    -----</span>
 <span class="go">    Defines a keypoint in the active coordinate system [CSYS] for</span>
-<span class="go">    line, area, and volume descriptions.  A previously defined</span>
-<span class="go">    keypoint of the same number will be redefined.  Keypoints may</span>
+<span class="go">    line, area, and volume descriptions. A previously defined</span>
+<span class="go">    keypoint of the same number is then redefined. A keypoint may</span>
 <span class="go">    be redefined only if it is not yet attached to a line or is</span>
-<span class="go">    not yet meshed.  Solid modeling in a toroidal system is not</span>
+<span class="go">    not yet meshed. Solid modeling in a toroidal system is not</span>
 <span class="go">    recommended.</span>
 </pre></div>
 </div>
-<p>Visit <a class="reference internal" href="../troubleshoot/troubleshoot.html#ref-pymapdl-stability"><span class="std std-ref">PyMAPDL Stability</span></a> for stability considerations.</p>
+<p>For stability considerations, see <a class="reference internal" href="../troubleshoot/troubleshoot.html#ref-pymapdl-stability"><span class="std std-ref">PyMAPDL Stability</span></a>.</p>
 </section>
 </section>
 </section>
@@ -541,7 +535,7 @@ within it.  For example:</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
   </div>
   

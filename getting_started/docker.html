@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Using MAPDL Through Docker &#8212; PyMAPDL</title>
+    <title>Use MAPDL through Docker &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -55,8 +55,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using PyMAPDL in Julia" href="using_julia.html" />
-    <link rel="prev" title="Versioning and Interfaces" href="versioning.html" />
+    <link rel="next" title="Use PyMAPDL in Julia" href="using_julia.html" />
+    <link rel="prev" title="Versions and interfaces" href="versioning.html" />
 <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
 
@@ -104,13 +104,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
@@ -190,8 +190,8 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyMAPDL</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Getting Started</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Using MAPDL Through Docker</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Getting started</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Use MAPDL through Docker</a></li> 
       </ul>
     </div>
         </div>
@@ -215,27 +215,27 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="running_mapdl.html">
-   Using PyMAPDL from the Standard Install
+   Use PyMAPDL from the standard installation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="versioning.html">
-   Versioning and Interfaces
+   Versions and interfaces
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Using MAPDL Through Docker
+   Use MAPDL through Docker
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="using_julia.html">
-   Using PyMAPDL in Julia
+   Use PyMAPDL in Julia
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wsl.html">
-   PyAnsys Libraries on a Windows Subsystem for Linux and Docker
+   PyAnsys libraries on a Windows Subsystem for Linux and Docker
   </a>
  </li>
 </ul>
@@ -264,28 +264,28 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installing-the-mapdl-image">
-   Installing the MAPDL Image
+  <a class="reference internal nav-link" href="#install-the-mapdl-image">
+   Install the MAPDL image
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#connecting-to-the-mapdl-container-from-python">
-   Connecting to the MAPDL Container from Python
+  <a class="reference internal nav-link" href="#connect-to-the-mapdl-container-from-python">
+   Connect to the MAPDL container from Python
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#additional-considerations">
-   Additional Considerations
+   Additional considerations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#appending-mapdl-options-to-the-container">
-     Appending MAPDL Options to the Container
+    <a class="reference internal nav-link" href="#append-mapdl-options-to-the-container">
+     Append MAPDL options to the container
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-restart-policy-with-mapdl-products">
-     Using
+    <a class="reference internal nav-link" href="#use-restart-policy-with-mapdl-products">
+     Use
      <code class="docutils literal notranslate">
       <span class="pre">
        --restart
@@ -295,8 +295,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-useful-files-after-abnormal-termination">
-     Getting Useful Files After Abnormal Termination
+    <a class="reference internal nav-link" href="#get-useful-files-after-abnormal-termination">
+     Get useful files after abnormal termination
     </a>
    </li>
   </ul>
@@ -320,41 +320,41 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="using-mapdl-through-docker">
-<span id="docker"></span><h1>Using MAPDL Through Docker<a class="headerlink" href="#using-mapdl-through-docker" title="Permalink to this heading">#</a></h1>
+  <section id="use-mapdl-through-docker">
+<span id="docker"></span><h1>Use MAPDL through Docker<a class="headerlink" href="#use-mapdl-through-docker" title="Permalink to this heading">#</a></h1>
 <p>You can run MAPDL within a container on any OS using <cite>docker</cite> and
 connect to it via PyMAPDL.</p>
 <p>There are several situations in which it is advantageous to run MAPDL
-in a containerized environment (e.g. Docker or singularity):</p>
+in a containerized environment (for example, Docker or Singularity):</p>
 <ul class="simple">
 <li><p>Run in a consistent environment regardless of the host OS.</p></li>
 <li><p>Portability and ease of install.</p></li>
-<li><p>Large scale cluster deployment using Kubernetes</p></li>
+<li><p>Large-scale cluster deployment using Kubernetes</p></li>
 <li><p>Genuine application isolation through containerization.</p></li>
 </ul>
-<section id="installing-the-mapdl-image">
-<h2>Installing the MAPDL Image<a class="headerlink" href="#installing-the-mapdl-image" title="Permalink to this heading">#</a></h2>
-<p>There is a docker image hosted on the <a class="reference external" href="https://https://github.com/pyansys/pymapdl">PyMAPDL GitHub</a> repository that you
+<section id="install-the-mapdl-image">
+<h2>Install the MAPDL image<a class="headerlink" href="#install-the-mapdl-image" title="Permalink to this heading">#</a></h2>
+<p>There is a Docker image hosted on the <a class="reference external" href="https://https://github.com/pyansys/pymapdl">PyMAPDL GitHub</a> repository that you
 can download using your GitHub credentials.</p>
-<p>Assuming you have docker installed, you can get started by
-authorizing docker to access this repository using a personal access
-token.  Create a GH personal access token with <code class="docutils literal notranslate"><span class="pre">packages</span> <span class="pre">read</span></code> permissions
+<p>Assuming that you have docker installed, you can get started by
+authorizing Docker to access this repository using a personal access
+token. Create a GitHub personal access token with <code class="docutils literal notranslate"><span class="pre">packages</span> <span class="pre">read</span></code> permissions
 according to <a class="reference external" href="https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">Creating a personal access token</a></p>
 <p>Save that token to a file with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="n">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span> <span class="o">&gt;</span> <span class="n">GH_TOKEN</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
-<p>This lets you send the token to docker without leaving the token value
-in your history.  Next, authorize docker to access this repository
+<p>This lets you send the token to Docker without leaving the token value
+in your history. Next, authorize Docker to access this repository
 with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>GH_USERNAME=&lt;my-github-username&gt;
 cat GH_TOKEN.txt | docker login ghcr.io -u $GH_USERNAME --password-stdin
 </pre></div>
 </div>
 <p>You can now launch MAPDL directly from docker with a short script or
-directly from the command line.  Since this image contains no license
+directly from the command line. Because this image contains no license
 server, you must enter your license server IP address in the
-<code class="docutils literal notranslate"><span class="pre">LICENSE_SERVER</span></code> environment variable.  With that, you can launch
+<code class="docutils literal notranslate"><span class="pre">LICENSE_SERVER</span></code> environment variable. With that, you can launch
 MAPDL with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>LICENSE_SERVER=1055@XXX.XXX.XXX.XXX
 VERSION=v21.1.0
@@ -364,7 +364,7 @@ docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -smp
 </pre></div>
 </div>
 <p>Note that port <cite>50052</cite> (local to the container) is being mapped to
-50052 on the host.  This makes it possible to launch several MAPDL
+50052 on the host. This makes it possible to launch several MAPDL
 instances with different port mappings to allow for multiple instances
 of MAPDL.</p>
 <p>Once you’ve launched MAPDL you should see:</p>
@@ -379,8 +379,8 @@ of MAPDL.</p>
 </pre></div>
 </div>
 </section>
-<section id="connecting-to-the-mapdl-container-from-python">
-<h2>Connecting to the MAPDL Container from Python<a class="headerlink" href="#connecting-to-the-mapdl-container-from-python" title="Permalink to this heading">#</a></h2>
+<section id="connect-to-the-mapdl-container-from-python">
+<h2>Connect to the MAPDL container from Python<a class="headerlink" href="#connect-to-the-mapdl-container-from-python" title="Permalink to this heading">#</a></h2>
 <p>You can now connect to the instance with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">Mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">Mapdl</span><span class="p">()</span>
@@ -401,28 +401,28 @@ that port when connecting to MAPDL with:</p>
 </div>
 </section>
 <section id="additional-considerations">
-<h2>Additional Considerations<a class="headerlink" href="#additional-considerations" title="Permalink to this heading">#</a></h2>
-<section id="appending-mapdl-options-to-the-container">
-<h3>Appending MAPDL Options to the Container<a class="headerlink" href="#appending-mapdl-options-to-the-container" title="Permalink to this heading">#</a></h3>
+<h2>Additional considerations<a class="headerlink" href="#additional-considerations" title="Permalink to this heading">#</a></h2>
+<section id="append-mapdl-options-to-the-container">
+<h3>Append MAPDL options to the container<a class="headerlink" href="#append-mapdl-options-to-the-container" title="Permalink to this heading">#</a></h3>
 <p>In the command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>IMAGE=ghcr.io/pyansys/pymapdl/mapdl:$VERSION
 docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -smp
 </pre></div>
 </div>
 <p>You can provide additional command line parameters to MAPDL by simply
-appending to the docker command.  For example, you can increase the
+appending to the docker command. For example, you can increase the
 number of processors (up to the number available on the host machine)
-with the <cite>-np</cite> switch.  For example:</p>
+with the <code class="docutils literal notranslate"><span class="pre">`-np`</span></code> switch. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>IMAGE=ghcr.io/pyansys/pymapdl/mapdl:$VERSION
 docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -np 4
 </pre></div>
 </div>
 <p>For additional command-line arguments, see the Ansys
-documentation at <a class="reference external" href="https://ansyshelp.ansys.com">ANSYS help</a>.  Also,
+documentation at <a class="reference external" href="https://ansyshelp.ansys.com">ANSYS help</a>. Also,
 be sure to have the appropriate license for additional HPC features.</p>
 </section>
-<section id="using-restart-policy-with-mapdl-products">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">--restart</span></code> policy with MAPDL products<a class="headerlink" href="#using-restart-policy-with-mapdl-products" title="Permalink to this heading">#</a></h3>
+<section id="use-restart-policy-with-mapdl-products">
+<h3>Use <code class="docutils literal notranslate"><span class="pre">--restart</span></code> policy with MAPDL products<a class="headerlink" href="#use-restart-policy-with-mapdl-products" title="Permalink to this heading">#</a></h3>
 <p>By default, MAPDL creates a <code class="docutils literal notranslate"><span class="pre">LOCK</span></code> file in the working directory when it starts
 and deletes this file if it exits normally. The file is used to avoid overwriting files
 such as database (DB) files or result (RST) files when starting MAPDL after an
@@ -446,8 +446,8 @@ the process with the environment variable <code class="docutils literal notransl
 </pre></div>
 </div>
 </section>
-<section id="getting-useful-files-after-abnormal-termination">
-<h3>Getting Useful Files After Abnormal Termination<a class="headerlink" href="#getting-useful-files-after-abnormal-termination" title="Permalink to this heading">#</a></h3>
+<section id="get-useful-files-after-abnormal-termination">
+<h3>Get useful files after abnormal termination<a class="headerlink" href="#get-useful-files-after-abnormal-termination" title="Permalink to this heading">#</a></h3>
 <p>In some cases, the MAPDL container might crash after the MAPDL process experiences an
 abnormal termination. In these cases, you can retrieve log files and output files using
 tools that Docker provides.</p>
@@ -534,7 +534,7 @@ tools that Docker provides.</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
   </div>
   

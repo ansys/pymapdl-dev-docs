@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Initial Setup and Launching MAPDL Locally &#8212; PyMAPDL</title>
+    <title>Initial setup and launch of MAPDL locally &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -55,8 +55,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="PyMAPDL Language and Usage" href="mapdl.html" />
-    <link rel="prev" title="User Guide" href="index.html" />
+    <link rel="next" title="PyMAPDL language and usage" href="mapdl.html" />
+    <link rel="prev" title="User guide" href="index.html" />
 <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
 
@@ -104,13 +104,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
@@ -190,8 +190,8 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyMAPDL</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Guide</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Initial Setup and Launching MAPDL Locally</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User guide</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Initial setup and launch of MAPDL locally</a></li> 
       </ul>
     </div>
         </div>
@@ -215,17 +215,17 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Initial Setup and Launching MAPDL Locally
+   Initial setup and launch of MAPDL locally
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mapdl.html">
-   PyMAPDL Language and Usage
+   PyMAPDL language and usage
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mapdl_examples.html">
-   ANSYS APDL Interactive Control Examples
+   ANSYS APDL interactive control examples
   </a>
  </li>
  <li class="toctree-l1">
@@ -250,12 +250,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="database.html">
-   Accessing MAPDL Database
+   Access MAPDL database
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="convert.html">
-   Translating Scripts
+   Translate scripts
   </a>
  </li>
  <li class="toctree-l1">
@@ -276,11 +276,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="upf.html">
    Using Python to Code UPF Subroutines
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="krylov.html">
-   Harmonic analysis using the Krylov method
   </a>
  </li>
 </ul>
@@ -310,7 +305,7 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#api-reference">
-   API Reference
+   API reference
   </a>
  </li>
 </ul>
@@ -332,54 +327,55 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="initial-setup-and-launching-mapdl-locally">
-<h1>Initial Setup and Launching MAPDL Locally<a class="headerlink" href="#initial-setup-and-launching-mapdl-locally" title="Permalink to this heading">#</a></h1>
-<p>To run, <code class="docutils literal notranslate"><span class="pre">ansys.mapdl.core</span></code> needs to know the location of the MAPDL
-binary.  Most of the time this can be automatically determined, but
-non-standard installs will need to provide the location of MAPDL.
-When running for the first time, <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> will request the
+  <section id="initial-setup-and-launch-of-mapdl-locally">
+<h1>Initial setup and launch of MAPDL locally<a class="headerlink" href="#initial-setup-and-launch-of-mapdl-locally" title="Permalink to this heading">#</a></h1>
+<p>To run, <code class="docutils literal notranslate"><span class="pre">ansys.mapdl.core</span></code> must know the location of the MAPDL
+binary. Most of the time this can be automatically determined, but
+the location of MAPDL must be provided for non-standard installations.
+When running for the first time, <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> requests the
 location of the MAPDL executable if it cannot automatically find it.
 You can test your installation of PyMAPDL and set it up by running
-the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>:</p>
+the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Python will automatically attempt to detect your MAPDL binary based on
-environmental variables.  If it is unable to find a copy of MAPDL, you
-will be prompted for the location of the MAPDL executable.  Here is a
-sample input for Linux:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">location</span> <span class="n">of</span> <span class="n">MAPDL</span> <span class="n">executable</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ansys_inc</span><span class="o">/</span><span class="n">v212</span><span class="o">/</span><span class="n">ansys</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ansys212</span>
+<p>Python automatically attempts to detect your MAPDL binary based on
+environmental variables. If it is unable to find a copy of MAPDL, you
+are prompted for the location of the MAPDL executable.</p>
+<p>Here is a sample input for Linux:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">location</span> <span class="n">of</span> <span class="n">MAPDL</span> <span class="n">executable</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ansys_inc</span><span class="o">/</span><span class="n">v222</span><span class="o">/</span><span class="n">ansys</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ansys222</span>
 </pre></div>
 </div>
-<p>and for Windows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">location</span> <span class="n">of</span> <span class="n">MAPDL</span> <span class="n">executable</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Program</span> <span class="n">Files</span>\<span class="n">ANSYS</span> <span class="n">Inc</span>\<span class="n">v212</span>\<span class="n">ANSYS</span>\<span class="nb">bin</span>\<span class="n">winx64</span>\<span class="n">ansys212</span><span class="o">.</span><span class="n">exe</span>
+<p>Here is a sample input for Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">location</span> <span class="n">of</span> <span class="n">MAPDL</span> <span class="n">executable</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Program</span> <span class="n">Files</span>\<span class="n">ANSYS</span> <span class="n">Inc</span>\<span class="n">v222</span>\<span class="n">ANSYS</span>\<span class="nb">bin</span>\<span class="n">winx64</span>\<span class="n">ansys222</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
-<p>The settings file is stored locally and you will not not need to enter
-the path again.  If you need to change the default ansys path
-(i.e. changing the default version of MAPDL), run the following:</p>
+<p>The settings file is stored locally, which means that you are not prompted
+to enter the path again. If you must change the default Ansys path
+(meaning change the default version of MAPDL), run the following:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">core</span> <span class="k">as</span> <span class="n">pymapdl</span>
-<span class="n">new_path</span> <span class="o">=</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Program Files</span><span class="se">\\</span><span class="s1">ANSYS Inc</span><span class="se">\\</span><span class="s1">v212</span><span class="se">\\</span><span class="s1">ANSYS</span><span class="se">\\</span><span class="s1">bin</span><span class="se">\\</span><span class="s1">winx64</span><span class="se">\\</span><span class="s1">ansys212.exe&#39;</span>
+<span class="n">new_path</span> <span class="o">=</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Program Files</span><span class="se">\\</span><span class="s1">ANSYS Inc</span><span class="se">\\</span><span class="s1">v212</span><span class="se">\\</span><span class="s1">ANSYS</span><span class="se">\\</span><span class="s1">bin</span><span class="se">\\</span><span class="s1">winx64</span><span class="se">\\</span><span class="s1">ansys222.exe&#39;</span>
 <span class="n">pymapdl</span><span class="o">.</span><span class="n">change_default_ansys_path</span><span class="p">(</span><span class="n">new_path</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Also see <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.change_default_ansys_path.html#ansys.mapdl.core.change_default_ansys_path" title="ansys.mapdl.core.change_default_ansys_path"><code class="xref py py-func docutils literal notranslate"><span class="pre">change_default_ansys_path()</span></code></a> and
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.find_ansys.html#ansys.mapdl.core.find_ansys" title="ansys.mapdl.core.find_ansys"><code class="xref py py-func docutils literal notranslate"><span class="pre">find_ansys()</span></code></a>.</p>
-<p>Additionally, it is possible to specify the executable using the keyword argument <code class="docutils literal notranslate"><span class="pre">exec_file</span></code>.
-In Linux:</p>
+<p>Also see the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.change_default_ansys_path.html#ansys.mapdl.core.change_default_ansys_path" title="ansys.mapdl.core.change_default_ansys_path"><code class="xref py py-func docutils literal notranslate"><span class="pre">change_default_ansys_path()</span></code></a> method and
+the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.find_ansys.html#ansys.mapdl.core.find_ansys" title="ansys.mapdl.core.find_ansys"><code class="xref py py-func docutils literal notranslate"><span class="pre">find_ansys()</span></code></a> method.</p>
+<p>Additionally, it is possible to specify the executable using the keyword argument <code class="docutils literal notranslate"><span class="pre">exec_file</span></code>.</p>
+<p>In Linux:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">exec_file</span><span class="o">=</span><span class="s1">&#39;/usr/ansys_inc/v212/ansys/bin/ansys212&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>And in Windows:</p>
+<p>In Windows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">exec_file</span><span class="o">=</span><span class="s1">&#39;C://Program Files//ANSYS Inc//v212//ANSYS//bin//winx64//ansys212.exe&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You could also specify a custom executable by adding the correspondent flag (<code class="docutils literal notranslate"><span class="pre">-custom</span></code>) to the additional switches keyword argument.</p>
+<p>You could also specify a custom executable by adding the correspondent flag (<code class="docutils literal notranslate"><span class="pre">-custom</span></code>) to the <code class="docutils literal notranslate"><span class="pre">additional_switches</span></code>
+keyword argument:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">custom_exec</span> <span class="o">=</span> <span class="s1">&#39;/usr/ansys_inc/v212/ansys/bin/ansys212t&#39;</span>
@@ -388,9 +384,9 @@ In Linux:</p>
 </pre></div>
 </div>
 <section id="api-reference">
-<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this heading">#</a></h2>
-<p>For more details for controlling how MAPDL launches locally, see the
-function description of <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>.</p>
+<h2>API reference<a class="headerlink" href="#api-reference" title="Permalink to this heading">#</a></h2>
+<p>For more information on controlling how MAPDL launches locally, see the
+description of the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> function.</p>
 </section>
 </section>
 
@@ -419,7 +415,7 @@ function description of <a class="reference internal" href="../contribution_and_
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
   </div>
   

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Getting Started &#8212; PyMAPDL</title>
+    <title>Getting started &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -55,8 +55,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using PyMAPDL from the Standard Install" href="running_mapdl.html" />
-    <link rel="prev" title="PyMAPDL Documentation 0.64.dev0" href="../index.html" />
+    <link rel="next" title="Use PyMAPDL from the standard installation" href="running_mapdl.html" />
+    <link rel="prev" title="PyMAPDL documentation 0.64.dev0" href="../index.html" />
 <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
 
@@ -104,13 +104,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 current active nav-item">
  <a class="current reference internal nav-link" href="#">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
@@ -190,7 +190,7 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyMAPDL</a> » </li>
     
 
-        <li class="nav-item nav-item-this"><a href="">Getting Started</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Getting started</a></li> 
       </ul>
     </div>
         </div>
@@ -214,27 +214,27 @@
     <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="running_mapdl.html">
-   Using PyMAPDL from the Standard Install
+   Use PyMAPDL from the standard installation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="versioning.html">
-   Versioning and Interfaces
+   Versions and interfaces
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="docker.html">
-   Using MAPDL Through Docker
+   Use MAPDL through Docker
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="using_julia.html">
-   Using PyMAPDL in Julia
+   Use PyMAPDL in Julia
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wsl.html">
-   PyAnsys Libraries on a Windows Subsystem for Linux and Docker
+   PyAnsys libraries on a Windows Subsystem for Linux and Docker
   </a>
  </li>
 </ul>
@@ -269,22 +269,22 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#python-module">
-     Python Module
+     Python module
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#offline-installation">
-     Offline Installation
+     Offline installation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ansys-software-requirements">
-     Ansys Software Requirements
+     Ansys software requirements
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#verify-your-installation">
-     Verify Your Installation
+     Verify your installation
     </a>
    </li>
   </ul>
@@ -309,22 +309,22 @@
               <article class="bd-article" role="main">
                 
   <section id="getting-started">
-<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
-<p>To use PyMAPDL, you need to have a local installation of Ansys.  The
-version of Ansys installed will dictate the interface and features
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
+<p>To use PyMAPDL, you must have a local installation of Ansys. The
+version of Ansys installed dictates the interface and features
 available to you.</p>
-<p>Visit <a class="reference external" href="https://www.ansys.com/">Ansys</a> for more information on
-getting a licensed copy of Ansys.</p>
+<p>For more information on getting a licensed copy of Ansys, visit
+<a class="reference external" href="https://www.ansys.com/">Ansys</a> .</p>
 <p>You can also try the Student Version of Ansys products in
 <a class="reference external" href="https://www.ansys.com/academic/students">Ansys Student Versions</a>.
-These are versions valid during a year and with limited capabilities
-regarding number of nodes, elements, etc.</p>
+The Student Version is valid during a calendar year with limited capabilities,
+such as on the number of nodes and elements.</p>
 <div class="toctree-wrapper compound">
 </div>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
 <section id="python-module">
-<h3>Python Module<a class="headerlink" href="#python-module" title="Permalink to this heading">#</a></h3>
+<h3>Python module<a class="headerlink" href="#python-module" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">ansys.mapdl.core</span></code> package currently supports Python 3.7 through
 Python 3.10 on Windows, Mac OS, and Linux.</p>
 <p>Install the latest release from <a class="reference external" href="https://pypi.org/project/ansys-mapdl-core/">PyPi</a> with:</p>
@@ -341,12 +341,12 @@ Python 3.10 on Windows, Mac OS, and Linux.</p>
 <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
 </pre></div>
 </div>
-<p>This will allow you to install the pymapdl <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> module
+<p>This allows you to install the <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> module
 and modify it locally and have the changes reflected in your setup
 after restarting the Python kernel.</p>
 </section>
 <section id="offline-installation">
-<h3>Offline Installation<a class="headerlink" href="#offline-installation" title="Permalink to this heading">#</a></h3>
+<h3>Offline installation<a class="headerlink" href="#offline-installation" title="Permalink to this heading">#</a></h3>
 <p>If you lack an internet connection on your install machine, the recommended way
 of installing PyMAPDL is downloading the wheelhouse archive from the <a class="reference external" href="https://github.com/pyansys/pymapdl/releases">Releases
 Page</a> for your corresponding
@@ -364,19 +364,19 @@ install using the same command as above.</p>
 <p>Consider installing using a <a class="reference external" href="https://docs.python.org/3/library/venv.html">virtual environment</a>.</p>
 </section>
 <section id="ansys-software-requirements">
-<h3>Ansys Software Requirements<a class="headerlink" href="#ansys-software-requirements" title="Permalink to this heading">#</a></h3>
-<p>For the latest features, you will need a copy of Ansys 2021R1
-installed locally, but PyMAPDL is compatible with Ansys 17.0 and newer
+<h3>Ansys software requirements<a class="headerlink" href="#ansys-software-requirements" title="Permalink to this heading">#</a></h3>
+<p>For the latest features, you must have a copy of Ansys 2021 R1
+installed locally, but PyMAPDL is compatible with Ansys 17.0 and later
 on Windows and 13.0 on Linux.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The latest versions of Ansys provide signifiantly better support
-and features.  Certain features will not be supported by earlier
-versions of Ansys (e.g. APDL Math).</p>
+and features. Certain features are not supported on earlier Ansys versions
+versions such as APDL Math.</p>
 </div>
 </section>
 <section id="verify-your-installation">
-<h3>Verify Your Installation<a class="headerlink" href="#verify-your-installation" title="Permalink to this heading">#</a></h3>
+<h3>Verify your installation<a class="headerlink" href="#verify-your-installation" title="Permalink to this heading">#</a></h3>
 <p>Check that you can start MAPDL from Python by running:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
@@ -387,9 +387,9 @@ versions of Ansys (e.g. APDL Math).</p>
 <span class="go">PyMAPDL Version:     Version: 0.58.0</span>
 </pre></div>
 </div>
-<p>If you see a response from the server, congratulations!  You’re ready
-to get started using MAPDL as a service.  For details regarding the
-PyMAPDL interface, see <a class="reference internal" href="../user_guide/mapdl.html#ref-mapdl-user-guide"><span class="std std-ref">PyMAPDL Language and Usage</span></a>.</p>
+<p>If you see a response from the server, congratulations. You’re ready
+to get started using MAPDL as a service. For information on the
+PyMAPDL interface, see <a class="reference internal" href="../user_guide/mapdl.html#ref-mapdl-user-guide"><span class="std std-ref">PyMAPDL language and usage</span></a>.</p>
 </section>
 </section>
 </section>
@@ -419,7 +419,7 @@ PyMAPDL interface, see <a class="reference internal" href="../user_guide/mapdl.h
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
   </div>
   

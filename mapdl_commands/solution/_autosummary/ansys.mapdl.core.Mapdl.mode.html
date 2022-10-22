@@ -104,13 +104,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
@@ -949,7 +949,7 @@
   <a class="reference internal nav-link" href="#ansys.mapdl.core.Mapdl.mode">
    <code class="docutils literal notranslate">
     <span class="pre">
-     Mapdl.mode()
+     Mapdl.mode
     </span>
    </code>
   </a>
@@ -975,31 +975,10 @@
                 
   <section id="mode">
 <h1>mode<a class="headerlink" href="#mode" title="Permalink to this heading">#</a></h1>
-<dl class="py method">
+<dl class="py property">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.mode">
-<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isym</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.mode" title="Permalink to this definition">#</a></dt>
-<dd><p>Specifies the harmonic loading term for this load step.</p>
-<p>APDL Command: MODE</p>
-<dl class="field-list">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl>
-<dt><strong>mode</strong></dt><dd><p>Number of harmonic waves around circumference for this harmonic
-loading term (defaults to 0).</p>
-</dd>
-<dt><strong>isym</strong></dt><dd><p>Symmetry condition for this harmonic loading term (not used when
-MODE = 0):</p>
-<p>1 - Symmetric (UX, UY, ROTZ, TEMP use cosine terms; UZ uses sine term) (default).</p>
-<p>-1 - Antisymmetric (UX, UY, ROTZ, TEMP use sine terms; UZ uses cosine term).</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>Used with axisymmetric elements having nonaxisymmetric loading
-capability (for example, PLANE25, SHELL61, etc.).  For analysis types
-ANTYPE,MODAL, HARMIC, TRANS, and SUBSTR, the term must be defined in
-the first load step and may not be changed in succeeding load steps.</p>
-<p>This command is also valid in PREP7.</p>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">mode</span></span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.mode" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the type of instance, namely: grpc, corba or console.</p>
 </dd></dl>
 
 </section>
@@ -1029,7 +1008,7 @@ the first load step and may not be changed in succeeding load steps.</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
   </div>
   

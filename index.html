@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>PyMAPDL Documentation 0.64.dev0 &#8212; PyMAPDL</title>
+    <title>PyMAPDL documentation 0.64.dev0 &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -55,7 +55,7 @@
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Started" href="getting_started/index.html" />
+    <link rel="next" title="Getting started" href="getting_started/index.html" />
 <link rel="stylesheet" type="text/css" href="_static/custom.css" />
 
 
@@ -103,13 +103,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
@@ -187,7 +187,7 @@
     
     
 
-        <li class="nav-item nav-item-this"><a href="">PyMAPDL Documentation 0.64.dev0</a></li> 
+        <li class="nav-item nav-item-this"><a href="">PyMAPDL documentation 0.64.dev0</a></li> 
       </ul>
     </div>
         </div>
@@ -234,7 +234,7 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-and-purpose">
-   Introduction and Purpose
+   Introduction and purpose
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -244,7 +244,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quick-code">
-   Quick Code
+   Quick code
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -254,12 +254,12 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#advanced-features">
-     Advanced Features
+     Advanced features
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#project-index">
-       Project Index
+       Project index
       </a>
      </li>
     </ul>
@@ -286,11 +286,11 @@
               <article class="bd-article" role="main">
                 
   <section id="pymapdl-documentation-version">
-<h1>PyMAPDL Documentation 0.64.dev0<a class="headerlink" href="#pymapdl-documentation-version" title="Permalink to this heading">#</a></h1>
+<h1>PyMAPDL documentation 0.64.dev0<a class="headerlink" href="#pymapdl-documentation-version" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <section id="introduction-and-purpose">
-<h2>Introduction and Purpose<a class="headerlink" href="#introduction-and-purpose" title="Permalink to this heading">#</a></h2>
+<h2>Introduction and purpose<a class="headerlink" href="#introduction-and-purpose" title="Permalink to this heading">#</a></h2>
 <p>PyMAPDL is part of the larger <a class="reference external" href="https://docs.pyansys.com">PyAnsys</a>
 effort to facilitate the use of Ansys technologies directly from
 Python. Its primary package, <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>, provides:</p>
@@ -299,19 +299,19 @@ Python. Its primary package, <code class="docutils literal notranslate"><span cl
 Language (APDL) syntax.</p></li>
 <li><p>Plotting of MAPDL geometry and meshes using <a class="reference external" href="https://docs.pyvista.org">PyVista</a> from within a Python script or an
 interactive <a class="reference external" href="https://jupyter.org/">Jupyter notebook</a>.</p></li>
-<li><p>Access to MAPDL arrays as Python objects (e.g. nodes, elements,
+<li><p>Access to MAPDL arrays as Python objects (for example, nodes, elements,
 solution matrices, and results).</p></li>
 </ul>
-<p>With PyMAPDL it is easier than ever to integrate the simulation capabilities
-of the Ansys MAPDL multi-physics solver directly into novel applications
-thanks to an API that will look familiar to APDL and Python users alike.
+<p>Thanks to an API that looks familiar to APDL and Python users alike, PyMAPDL
+makes it is easier than ever to integrate the simulation capabilities
+of the Ansys MAPDL multi-physics solver directly into novel applications.
 The package presents a Python-friendly interface to drive the software
 that manages the submission of low-level APDL commands, while exchanging
 data through high-performance gRPC interfaces.</p>
 <p>Accelerate the preparation of your simulations using PyMAPDL. Combine the
 expressiveness of general-purpose Python code to control the flow in your
 input decks with methods that drive the solver. Explore proof of concept
-studies or capture knowledge using interactive Jupyter notebooks.  Tap
+studies or capture knowledge using interactive Jupyter notebooks. Tap
 the solver as the physics engine in your next Artificial Intelligence
 application. It is now open source: Enjoy it! Contributions are welcome.</p>
 </section>
@@ -331,7 +331,7 @@ commands that can then be transmitted to an MAPDL instance running anywhere,
 while producing network footprints that are compact and efficient.</p>
 </section>
 <section id="quick-code">
-<h2>Quick Code<a class="headerlink" href="#quick-code" title="Permalink to this heading">#</a></h2>
+<h2>Quick code<a class="headerlink" href="#quick-code" title="Permalink to this heading">#</a></h2>
 <p>Here’s a brief example of how PyMAPDL works:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
@@ -342,9 +342,9 @@ while producing network footprints that are compact and efficient.</p>
 <span class="go">PyMAPDL Version:     Version: 0.57.0</span>
 </pre></div>
 </div>
-<p>MAPDL is now active and you can send commands to it as a genuine a
-Python class.  For example, if we wanted to create a surface using
-keypoints we could run:</p>
+<p>MAPDL is now active and you can send commands to it as a genuine
+Python class. For example, if you wanted to create a surface using
+keypoints, you could run:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;/PREP7&#39;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;K, 1, 0, 0, 0&#39;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;K, 2, 1, 0, 0&#39;</span><span class="p">)</span>
@@ -357,19 +357,20 @@ keypoints we could run:</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;AL, 1, 2, 3, 4&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>MAPDL interactively returns the result of each command and it is
-stored to the logging module or can be immediately printed out with
-<code class="docutils literal notranslate"><span class="pre">print(mapdl.run)</span></code>.  Errors are caught immediately and pythonically.</p>
+<p>MAPDL interactively returns the result of each command, which is
+stored to the logging module. The <code class="docutils literal notranslate"><span class="pre">print(mapdl.run)</span></code> method can
+also be used to immediately print out the result. Errors are caught
+immediately and Pythonically.</p>
 <section id="calling-mapdl-pythonically">
 <h3>Calling MAPDL Pythonically<a class="headerlink" href="#calling-mapdl-pythonically" title="Permalink to this heading">#</a></h3>
-<p>MAPDL functions can be called directly from an <a class="reference internal" href="contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> instance in a pythonic manner.  This is to
+<p>MAPDL functions can be called directly from a <a class="reference internal" href="contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> instance in a Pythonic manner. This is to
 simplify calling MAPDL, especially when inputs are variables within
-Python.  For example, the following two commands are equivalent:</p>
+Python. For example, the following two commands are equivalent:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;K, 1, 0, 0, 0&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This approach takes care of the string formatting for you.  For
+<p>This approach takes care of the string formatting for you. For
 example, inputting points from a numpy array:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># make 10 random keypoints in MAPDL</span>
 <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
@@ -379,11 +380,11 @@ example, inputting points from a numpy array:</p>
 </div>
 </section>
 <section id="advanced-features">
-<h3>Advanced Features<a class="headerlink" href="#advanced-features" title="Permalink to this heading">#</a></h3>
+<h3>Advanced features<a class="headerlink" href="#advanced-features" title="Permalink to this heading">#</a></h3>
 <p>All features available to command line MAPDL can be used within
 PyMAPDL, and there are a variety of new features available through
 gRPC.</p>
-<p>For example view the current mesh status with:</p>
+<p>For example, view the current mesh status with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span>
 <span class="go"> ANSYS Mesh</span>
 <span class="go">   Number of Nodes:              7217</span>
@@ -393,7 +394,7 @@ gRPC.</p>
 <span class="go">   Number of Element Components: 0</span>
 </pre></div>
 </div>
-<p>Or save it as vtk with:</p>
+<p>Or save it as a VTK file with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;mymesh.vtk&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -407,13 +408,13 @@ gRPC.</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="_images/eplot_vtk.png"><img alt="_images/eplot_vtk.png" src="_images/eplot_vtk.png" style="width: 400pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Element Plot from MAPDL using <code class="docutils literal notranslate"><span class="pre">PyMAPDL</span></code> and <code class="docutils literal notranslate"><span class="pre">vtk</span></code></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Element pot from MAPDL using <code class="docutils literal notranslate"><span class="pre">PyMAPDL</span></code> and <code class="docutils literal notranslate"><span class="pre">vtk</span></code></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>For a full listing of the additional PyMAPDL features, please see the
-<a class="reference internal" href="user_guide/index.html#ref-user-guide"><span class="std std-ref">User Guide</span></a>.</p>
+<p>For a full listing of PyMAPDL features, see the
+<a class="reference internal" href="user_guide/index.html#ref-user-guide"><span class="std std-ref">User guide</span></a>.</p>
 <section id="project-index">
-<h4>Project Index<a class="headerlink" href="#project-index" title="Permalink to this heading">#</a></h4>
+<h4>Project index<a class="headerlink" href="#project-index" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 </ul>
@@ -447,7 +448,7 @@ gRPC.</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
   </div>
   

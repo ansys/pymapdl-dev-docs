@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>PyMAPDL Language and Usage &#8212; PyMAPDL</title>
+    <title>PyMAPDL language and usage &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -55,8 +55,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ANSYS APDL Interactive Control Examples" href="mapdl_examples.html" />
-    <link rel="prev" title="Initial Setup and Launching MAPDL Locally" href="launcher.html" />
+    <link rel="next" title="ANSYS APDL interactive control examples" href="mapdl_examples.html" />
+    <link rel="prev" title="Initial setup and launch of MAPDL locally" href="launcher.html" />
 <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
 
@@ -104,13 +104,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
@@ -190,8 +190,8 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyMAPDL</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Guide</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">PyMAPDL Language and Usage</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User guide</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">PyMAPDL language and usage</a></li> 
       </ul>
     </div>
         </div>
@@ -215,17 +215,17 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="launcher.html">
-   Initial Setup and Launching MAPDL Locally
+   Initial setup and launch of MAPDL locally
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   PyMAPDL Language and Usage
+   PyMAPDL language and usage
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mapdl_examples.html">
-   ANSYS APDL Interactive Control Examples
+   ANSYS APDL interactive control examples
   </a>
  </li>
  <li class="toctree-l1">
@@ -250,12 +250,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="database.html">
-   Accessing MAPDL Database
+   Access MAPDL database
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="convert.html">
-   Translating Scripts
+   Translate scripts
   </a>
  </li>
  <li class="toctree-l1">
@@ -276,11 +276,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="upf.html">
    Using Python to Code UPF Subroutines
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="krylov.html">
-   Harmonic analysis using the Krylov method
   </a>
  </li>
 </ul>
@@ -315,22 +310,22 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#additional-options-when-running-commands">
-     Additional Options When Running Commands
+     Additional options when running commands
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#running-several-commands-or-an-input-file">
-     Running Several Commands or an Input File
+     Running several commands or an input file
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#conditional-statements-and-loops">
-     Conditional Statements and Loops
+     Conditional statements and loops
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#warnings-and-errors">
-     Warnings and Errors
+     Warnings and errors
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -342,12 +337,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#apdl-command-logging">
-   APDL Command Logging
+   APDL command logging
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-lgwrite">
-     Using
+    <a class="reference internal nav-link" href="#use-lgwrite">
+     Use
      <code class="docutils literal notranslate">
       <span class="pre">
        lgwrite
@@ -359,54 +354,54 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#interactive-breakpoint">
-   Interactive Breakpoint
+   Interactive breakpoint
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#running-a-batch">
-   Running a Batch
+  <a class="reference internal nav-link" href="#run-a-batch">
+   Run a batch
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chaining-commands-in-mapdl">
-   Chaining Commands in MAPDL
+  <a class="reference internal nav-link" href="#chain-commands-in-mapdl">
+   Chain commands in MAPDL
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sending-arrays-to-mapdl">
-   Sending Arrays to MAPDL
+   Sending arrays to MAPDL
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#downloading-a-remote-mapdl-file">
-     Downloading a Remote MAPDL File
+    <a class="reference internal nav-link" href="#download-a-remote-mapdl-file">
+     Download a remote MAPDL file
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#uploading-a-local-mapdl-file">
-     Uploading a Local MAPDL File
+    <a class="reference internal nav-link" href="#upload-a-local-mapdl-file">
+     Upload a local MAPDL file
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#unsupported-mapdl-commands-and-other-considerations">
-   Unsupported MAPDL Commands and Other Considerations
+   Unsupported MAPDL commands and other considerations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#non-available-commands">
-     Non-available Commands
+     Non-available commands
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#unsupported-interactive-commands">
-     Unsupported “Interactive” Commands
+     Unsupported “interactive” commands
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#environment-variables">
-     Environment Variables
+     Environment variables
     </a>
    </li>
   </ul>
@@ -431,34 +426,34 @@
               <article class="bd-article" role="main">
                 
   <section id="pymapdl-language-and-usage">
-<span id="ref-mapdl-user-guide"></span><h1>PyMAPDL Language and Usage<a class="headerlink" href="#pymapdl-language-and-usage" title="Permalink to this heading">#</a></h1>
-<p>This section gives you an overview of the PyMAPDL API for the
+<span id="ref-mapdl-user-guide"></span><h1>PyMAPDL language and usage<a class="headerlink" href="#pymapdl-language-and-usage" title="Permalink to this heading">#</a></h1>
+<p>This page gives you an overview of the PyMAPDL API for the
 <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class.
-For additional reference, see <a class="reference internal" href="../contribution_and_api/mapdl.html#ref-mapdl-api"><span class="std std-ref">Mapdl</span></a>.</p>
+For more information, see <a class="reference internal" href="../contribution_and_api/mapdl.html#ref-mapdl-api"><span class="std std-ref">Mapdl</span></a>.</p>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>When calling MAPDL commands as functions, each command has been
 translated from its original MAPDL all CAPS format to a PEP8
-compatible format.  For example, <code class="docutils literal notranslate"><span class="pre">ESEL</span></code> is now
-<a class="reference internal" href="../mapdl_commands/database/_autosummary/ansys.mapdl.core.Mapdl.esel.html#ansys.mapdl.core.Mapdl.esel" title="ansys.mapdl.core.Mapdl.esel"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.esel()</span></code></a>.
+compatible format. For example, <code class="docutils literal notranslate"><span class="pre">ESEL</span></code> is now the
+<a class="reference internal" href="../mapdl_commands/database/_autosummary/ansys.mapdl.core.Mapdl.esel.html#ansys.mapdl.core.Mapdl.esel" title="ansys.mapdl.core.Mapdl.esel"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.esel()</span></code></a> function.
 Additionally, MAPDL commands
 containing a <code class="docutils literal notranslate"><span class="pre">/</span></code> or <code class="docutils literal notranslate"><span class="pre">*</span></code> have had those characters removed, unless
-this causes a conflict with an existing name.  Most notable is
-<code class="docutils literal notranslate"><span class="pre">/SOLU</span></code> which would conflict with <code class="docutils literal notranslate"><span class="pre">SOLU</span></code>.  Therefore, the
-<code class="docutils literal notranslate"><span class="pre">/SOLU</span></code> has been renamed to <a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.slashsolu.html#ansys.mapdl.core.Mapdl.slashsolu" title="ansys.mapdl.core.Mapdl.slashsolu"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.slashsolu()</span></code></a> to differentiate it from <code class="docutils literal notranslate"><span class="pre">solu</span></code>.
+this causes a conflict with an existing name. Most notable is
+<code class="docutils literal notranslate"><span class="pre">/SOLU</span></code>, which would conflict with <code class="docutils literal notranslate"><span class="pre">SOLU</span></code>. Therefore,
+<code class="docutils literal notranslate"><span class="pre">/SOLU</span></code> is renamed to the <a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.slashsolu.html#ansys.mapdl.core.Mapdl.slashsolu" title="ansys.mapdl.core.Mapdl.slashsolu"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.slashsolu()</span></code></a> function to differentiate it from <code class="docutils literal notranslate"><span class="pre">solu</span></code>.
 Out of the 1500 MAPDL commands, about 15 start with <code class="docutils literal notranslate"><span class="pre">slash</span> <span class="pre">(/)</span></code> and 8
-with <code class="docutils literal notranslate"><span class="pre">star</span> <span class="pre">(*)</span></code>.</p>
+start with <code class="docutils literal notranslate"><span class="pre">star</span> <span class="pre">(*)</span></code>.</p>
 <p>MAPDL commands that normally have an empty space, such as
-<code class="docutils literal notranslate"><span class="pre">ESEL,S,TYPE,,1</span></code> should include an empty string when called by Python:</p>
+<code class="docutils literal notranslate"><span class="pre">ESEL,S,TYPE,,1</span></code>, should include an empty string when called by Python:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">esel</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>or these commands can be called using keyword arguments:</p>
+<p>Or, these commands can be called using keyword arguments:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">esel</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>None of these restrictions apply to commands run with <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.run()</span></code></a>, and it may be easier to run some of
-these commands (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;/SOLU&quot;</span></code>):</p>
+<p>None of these restrictions apply to commands run with <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.run()</span></code></a>. It might be easier to run some of
+these commands, such as <code class="docutils literal notranslate"><span class="pre">&quot;/SOLU&quot;</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;/SOLU&#39;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 </pre></div>
@@ -467,21 +462,21 @@ these commands (e.g. <code class="docutils literal notranslate"><span class="pre
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Some commands can only be run non-interactively from within in a
-script.  PyMAPDL gets around this restriction by writing the commands
-to a temporary input file and then reading the input file.  To run a
+<p>Some commands can only be run non-interactively from within a
+script. PyMAPDL gets around this restriction by writing the commands
+to a temporary input file and then reading the input file. To run a
 group of commands that must be run non-interactively, set the
-<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> to run a series
-of commands as an input file by using
+<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class to run a series
+of commands as an input file by using the
 <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.non_interactive()</span></code></a>
-as in this example:</p>
+function. Here is an example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">non_interactive</span><span class="p">:</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;*VWRITE,LABEL(1),VALUE(1,1),VALUE(1,2),VALUE(1,3)&quot;</span><span class="p">)</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;(1X,A8,&#39;   &#39;,F10.1,&#39;  &#39;,F10.1,&#39;   &#39;,1F5.3)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Also note that macros created within PyMAPDL (rather than loaded from
-a file) do not appear to run correctly.  For example, the macro
+<p>Note that macros created within PyMAPDL (rather than loaded from
+a file) do not appear to run correctly. For example, here is the macro
 <code class="docutils literal notranslate"><span class="pre">DISP</span></code> created using the <code class="docutils literal notranslate"><span class="pre">*CREATE</span></code> command within APDL:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! SELECT NODES AT Z = 10 TO APPLY DISPLACEMENT
 *CREATE,DISP
@@ -498,7 +493,7 @@ SOLVE
 *USE,DISP,-.1
 </pre></div>
 </div>
-<p>Should be written as:</p>
+<p>It should be written as:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">DISP</span><span class="p">(</span><span class="n">ARG1</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG2</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG3</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG4</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG5</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG6</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
          <span class="n">ARG7</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG8</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG9</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG10</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG11</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG12</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
          <span class="n">ARG13</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG14</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG15</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG16</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG17</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ARG18</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
@@ -514,26 +509,26 @@ SOLVE
 <span class="n">DISP</span><span class="p">(</span><span class="o">-</span><span class="mf">.1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If you have an existing input file with a macro, it can be converted
-using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.convert_script.html#ansys.mapdl.core.convert_script" title="ansys.mapdl.core.convert_script"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_script()</span></code></a>
-setting <code class="docutils literal notranslate"><span class="pre">macros_as_functions=True</span></code>:</p>
+<p>If you have an existing input file with a macro, you can convert it
+using the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.convert_script.html#ansys.mapdl.core.convert_script" title="ansys.mapdl.core.convert_script"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_script()</span></code></a>
+function with the setting <code class="docutils literal notranslate"><span class="pre">macros_as_functions=True</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">core</span> <span class="k">as</span> <span class="n">pymapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pymapdl</span><span class="o">.</span><span class="n">convert_script</span><span class="p">(</span><span class="n">apdl_inputfile</span><span class="p">,</span> <span class="n">pyscript</span><span class="p">,</span> <span class="n">macros_as_functions</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <section id="additional-options-when-running-commands">
-<h3>Additional Options When Running Commands<a class="headerlink" href="#additional-options-when-running-commands" title="Permalink to this heading">#</a></h3>
+<h3>Additional options when running commands<a class="headerlink" href="#additional-options-when-running-commands" title="Permalink to this heading">#</a></h3>
 <p>Commands can be run in <code class="docutils literal notranslate"><span class="pre">mute</span></code> or <code class="docutils literal notranslate"><span class="pre">verbose</span></code> mode, which allows you
-to suppress or print the output in as it is being run for any MAPDL
-command.  This can be especially helpful for long-running commands
-like <code class="docutils literal notranslate"><span class="pre">SOLVE</span></code>.  This works for the pythonic wrapping of all commands
-and when using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.run()</span></code></a>.</p>
+to suppress or print the output as it is being run for any MAPDL
+command. This can be especially helpful for long-running commands
+like <code class="docutils literal notranslate"><span class="pre">SOLVE</span></code>. This works for the Pythonic wrapping of all commands
+and when using the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.run()</span></code></a> method.</p>
 <p>Run a command and suppress its output:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;/PREP7&#39;</span><span class="p">,</span> <span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">(</span><span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Run a command and stream its output while it is being run.</p>
+<p>Run a command and stream its output while it is being run:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;SOLVE&#39;</span><span class="p">,</span> <span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -545,11 +540,10 @@ running MAPDL in gRPC mode.</p>
 </div>
 </section>
 <section id="running-several-commands-or-an-input-file">
-<h3>Running Several Commands or an Input File<a class="headerlink" href="#running-several-commands-or-an-input-file" title="Permalink to this heading">#</a></h3>
-<p>You can run several MAPDL commands as a unified block using
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.input_strings.html#ansys.mapdl.core.Mapdl.input_strings" title="ansys.mapdl.core.Mapdl.input_strings"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.input_strings()</span></code></a>.
-This is useful when using PyMAPDL with older MAPDL scripts.  For
-example:</p>
+<h3>Running several commands or an input file<a class="headerlink" href="#running-several-commands-or-an-input-file" title="Permalink to this heading">#</a></h3>
+<p>You can run several MAPDL commands as a unified block using the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.input_strings.html#ansys.mapdl.core.Mapdl.input_strings" title="ansys.mapdl.core.Mapdl.input_strings"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.input_strings()</span></code></a> method.
+This is useful when using PyMAPDL with older MAPDL scripts. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmd</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;/prep7</span>
 <span class="go">! Mat</span>
 <span class="go">MP,EX,1,200000</span>
@@ -600,18 +594,18 @@ example:</p>
 </pre></div>
 </div>
 <p>Alternatively, you can simply write the commands to a file and then
-run it using <a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.input.html#ansys.mapdl.core.Mapdl.input" title="ansys.mapdl.core.Mapdl.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.input()</span></code></a>.  For
-example, if you have a <code class="docutils literal notranslate"><span class="pre">&quot;ds.dat&quot;</span></code> generated from Ansys Mechanical,
-you can run that with:</p>
+run the file using the <a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.input.html#ansys.mapdl.core.Mapdl.input" title="ansys.mapdl.core.Mapdl.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.input()</span></code></a>
+method. For example, if you have a <code class="docutils literal notranslate"><span class="pre">&quot;ds.dat&quot;</span></code> file generated from Ansys
+Mechanical, you can run that with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;ds.dat&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="conditional-statements-and-loops">
-<h3>Conditional Statements and Loops<a class="headerlink" href="#conditional-statements-and-loops" title="Permalink to this heading">#</a></h3>
+<h3>Conditional statements and loops<a class="headerlink" href="#conditional-statements-and-loops" title="Permalink to this heading">#</a></h3>
 <p>APDL conditional statements such as <code class="docutils literal notranslate"><span class="pre">*IF</span></code> must be either implemented
-pythonically or using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a>.
-For example:</p>
+Pythonically or by using the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a>
+attribute. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>*IF,ARG1,EQ,0,THEN
   *GET,ARG4,NX,ARG2     ! RETRIEVE COORDINATE LOCATIONS OF BOTH NODES
   *GET,ARG5,NY,ARG2
@@ -629,7 +623,7 @@ For example:</p>
 *ENDIF
 </pre></div>
 </div>
-<p>Should be implemented as:</p>
+<p>This should be implemented as:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">non_interactive</span><span class="p">:</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;*IF,ARG1,EQ,0,THEN&quot;</span><span class="p">)</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;*GET,ARG4,NX,ARG2     &quot;</span><span class="p">)</span>  <span class="c1"># RETRIEVE COORDINATE LOCATIONS OF BOTH NODES</span>
@@ -648,7 +642,7 @@ For example:</p>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;*ENDIF&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Or pythonically as:</p>
+<p>Or, implemented Ppythonically as:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># MAPDL parameters can be obtained using load_parameters</span>
 <span class="k">if</span> <span class="n">ARG1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;*GET,ARG4,NX,ARG2     &quot;</span><span class="p">)</span>  <span class="c1"># RETRIEVE COORDINATE LOCATIONS OF BOTH NODES</span>
@@ -667,21 +661,21 @@ For example:</p>
 </pre></div>
 </div>
 <p>APDL loops using <code class="docutils literal notranslate"><span class="pre">*DO</span></code> or <code class="docutils literal notranslate"><span class="pre">*DOWHILE</span></code> should also be implemented
-using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a>
-or pythonically.</p>
+using the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a>
+attribute or implemented Pythonically.</p>
 </section>
 <section id="warnings-and-errors">
-<h3>Warnings and Errors<a class="headerlink" href="#warnings-and-errors" title="Permalink to this heading">#</a></h3>
-<p>Errors are handled pythonically.  For example:</p>
+<h3>Warnings and errors<a class="headerlink" href="#warnings-and-errors" title="Permalink to this heading">#</a></h3>
+<p>Errors are handled Pythonically. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 <span class="k">except</span><span class="p">:</span>
     <span class="c1"># do something else with MAPDL</span>
 </pre></div>
 </div>
-<p>Commands that are ignored within MAPDL are flagged as errors.  This is
+<p>Commands that are ignored within MAPDL are flagged as errors. This is
 different than MAPDL’s default behavior where commands that are
-ignored are treated as warnings.  For example, in <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>
+ignored are treated as warnings. For example, in <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>
 running a command in the wrong session raises an error:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">()</span>
@@ -695,8 +689,8 @@ running a command in the wrong session raises an error:</p>
 </pre></div>
 </div>
 <p>You can change this behavior so ignored commands can be logged as
-warnings not raised as an exception by setting
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.allow_ignore.html#ansys.mapdl.core.Mapdl.allow_ignore" title="ansys.mapdl.core.Mapdl.allow_ignore"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.allow_ignore()</span></code></a>.  For
+warnings and not raised as exceptions by using the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.allow_ignore.html#ansys.mapdl.core.Mapdl.allow_ignore" title="ansys.mapdl.core.Mapdl.allow_ignore"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.allow_ignore()</span></code></a> function. For
 example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">allow_ignore</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">()</span>  <span class="c1"># warning silently ignored</span>
@@ -706,18 +700,18 @@ example:</p>
 <section id="prompts">
 <h3>Prompts<a class="headerlink" href="#prompts" title="Permalink to this heading">#</a></h3>
 <p>Prompts from MAPDL automatically continued as if MAPDL is in batch
-mode.  Commands requiring user input, such as <a class="reference internal" href="../mapdl_commands/apdl/_autosummary/ansys.mapdl.core.Mapdl.vwrite.html#ansys.mapdl.core.Mapdl.vwrite" title="ansys.mapdl.core.Mapdl.vwrite"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vwrite()</span></code></a> will fail and must be entered in
+mode. Commands requiring user input, such as the <a class="reference internal" href="../mapdl_commands/apdl/_autosummary/ansys.mapdl.core.Mapdl.vwrite.html#ansys.mapdl.core.Mapdl.vwrite" title="ansys.mapdl.core.Mapdl.vwrite"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vwrite()</span></code></a> method fail and must be entered in
 non-interactively.</p>
 </section>
 </section>
 <section id="apdl-command-logging">
-<h2>APDL Command Logging<a class="headerlink" href="#apdl-command-logging" title="Permalink to this heading">#</a></h2>
+<h2>APDL command logging<a class="headerlink" href="#apdl-command-logging" title="Permalink to this heading">#</a></h2>
 <p>While <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> is designed to make it easier to control an
-APDL session by calling it using Python, it may be necessary to call
-MAPDL again using an input file generated from a PyMAPDL script.  This
+APDL session by calling it using Python, it might be necessary to call
+MAPDL again using an input file generated from a PyMAPDL script. This
 is automatically enabled with the <code class="docutils literal notranslate"><span class="pre">log_apdl='apdl.log'</span></code> parameter.
-Enabling this parameter will cause
-<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> to write each
+Enabling this parameter causes the
+<a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class to write each
 command run into a log file named <code class="docutils literal notranslate"><span class="pre">&quot;apdl.log&quot;</span></code> in the active
 <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.directory.html#ansys.mapdl.core.Mapdl.directory" title="ansys.mapdl.core.Mapdl.directory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.directory</span></code></a>.
 For example:</p>
@@ -731,7 +725,7 @@ For example:</p>
 <span class="n">ansys</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will write the following to <code class="docutils literal notranslate"><span class="pre">&quot;apdl.log&quot;</span></code></p>
+<p>This code writes the following to the <code class="docutils literal notranslate"><span class="pre">&quot;apdl.log&quot;</span></code> file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">PREP7</span><span class="p">,</span>
 <span class="n">K</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
 <span class="n">K</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
@@ -741,21 +735,20 @@ For example:</p>
 </div>
 <p>This allows for the translation of a Python script to an APDL script
 except for conditional statements, loops, or functions.</p>
-<section id="using-lgwrite">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">lgwrite</span></code><a class="headerlink" href="#using-lgwrite" title="Permalink to this heading">#</a></h3>
-<p>Alternatively, if you just want the database command output, you can use
-<code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.lgwrite</span></code> to write all the
-database command log to a file.</p>
+<section id="use-lgwrite">
+<h3>Use <code class="docutils literal notranslate"><span class="pre">lgwrite</span></code><a class="headerlink" href="#use-lgwrite" title="Permalink to this heading">#</a></h3>
+<p>Alternatively, if you just want the database command output, you can use the
+<code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.lgwrite</span></code> method to write the
+entire database command log to a file.</p>
 </section>
 </section>
 <section id="interactive-breakpoint">
-<h2>Interactive Breakpoint<a class="headerlink" href="#interactive-breakpoint" title="Permalink to this heading">#</a></h2>
+<h2>Interactive breakpoint<a class="headerlink" href="#interactive-breakpoint" title="Permalink to this heading">#</a></h2>
 <p>In most circumstances it is necessary or preferable to open up the
-MAPDL GUI.  The <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> module
-has <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.open_gui.html#ansys.mapdl.core.Mapdl.open_gui" title="ansys.mapdl.core.Mapdl.open_gui"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.open_gui()</span></code></a> that
+MAPDL GUI. The <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class
+has the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.open_gui.html#ansys.mapdl.core.Mapdl.open_gui" title="ansys.mapdl.core.Mapdl.open_gui"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.open_gui()</span></code></a> method, which
 allows you to seamlessly open up the GUI without losing work or
-having to restart your session.
-For example:</p>
+having to restart your session. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
 
@@ -784,16 +777,16 @@ For example:</p>
 </pre></div>
 </div>
 <p>This approach avoids the hassle of having to switch back and forth
-between an interactive session and a scripting session.  Instead, you
+between an interactive session and a scripting session. Instead, you
 can have one scripting session and open up a GUI from the scripting
-session without losing work or progress.  Additionally, none of the
-changes made in the GUI will affect the script.  You can experiment in
-the GUI and the script will be left unaffected.</p>
+session without losing work or progress. Additionally, none of the
+changes made in the GUI affect the script. You can experiment in
+the GUI, and the script is left unaffected.</p>
 </section>
-<section id="running-a-batch">
-<h2>Running a Batch<a class="headerlink" href="#running-a-batch" title="Permalink to this heading">#</a></h2>
-<p>Instead of running an MAPDL batch by calling MAPDL with an input file,
-you can instead define a function that runs MAPDL.  This example runs
+<section id="run-a-batch">
+<h2>Run a batch<a class="headerlink" href="#run-a-batch" title="Permalink to this heading">#</a></h2>
+<p>Instead of running a MAPDL batch by calling MAPDL with an input file,
+you can instead define a function that runs MAPDL. This example runs
 a mesh convergence study based on the maximum stress of a cylinder
 with torsional loading.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -929,48 +922,48 @@ with torsional loading.</p>
 </pre></div>
 </div>
 </section>
-<section id="chaining-commands-in-mapdl">
-<h2>Chaining Commands in MAPDL<a class="headerlink" href="#chaining-commands-in-mapdl" title="Permalink to this heading">#</a></h2>
+<section id="chain-commands-in-mapdl">
+<h2>Chain commands in MAPDL<a class="headerlink" href="#chain-commands-in-mapdl" title="Permalink to this heading">#</a></h2>
 <p>MAPDL permits several commands on one line by using the separation
-character <code class="docutils literal notranslate"><span class="pre">&quot;$&quot;</span></code>.  This can be utilized within <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>
-to effectively chain several commands together rather and send them to
-MAPDL for execution rather than executing them individually.  This can
-be helpful when you need to execute thousands of commands in a python
-loop and don’t need the individual results for each command.  For
-example, if you wish to create a 1000 keypoints along the X axis you
+character <code class="docutils literal notranslate"><span class="pre">&quot;$&quot;</span></code>. This can be utilized within <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>
+to effectively chain several commands together and send them to
+MAPDL for execution rather than executing them individually. Chaining
+commands can be helpful when you need to execute thousands of commands in a Python
+loop and don’t need the individual results for each command. For
+example, if you want to create 1000 keypoints along the X axis, you
 would run:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">xloc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xloc</span><span class="p">:</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>However, since each command executes individually and returns a
+<p>However, because each command executes individually and returns a
 response, it is much faster to send the commands to be executed by
-MAPDL in groups and have <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> handle grouping the commands by
-using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.chain_commands.html#ansys.mapdl.core.Mapdl.chain_commands" title="ansys.mapdl.core.Mapdl.chain_commands"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.chain_commands</span></code></a>.</p>
+MAPDL in groups and have the <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class handle grouping the commands by
+using the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.chain_commands.html#ansys.mapdl.core.Mapdl.chain_commands" title="ansys.mapdl.core.Mapdl.chain_commands"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.chain_commands</span></code></a> attribute.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">xloc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="k">with</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">chain_commands</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xloc</span><span class="p">:</span>
         <span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The execution time on this generally 4 to 10 times faster than running
-each command individually.  You can then view the final response of
-the chained commands with <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.last_response.html#ansys.mapdl.core.Mapdl.last_response" title="ansys.mapdl.core.Mapdl.last_response"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.last_response</span></code></a>.</p>
+<p>The execution time using this approach is generally 4 to 10 times faster than running
+each command individually. You can then view the final response of
+the chained commands with the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.last_response.html#ansys.mapdl.core.Mapdl.last_response" title="ansys.mapdl.core.Mapdl.last_response"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.last_response</span></code></a> attribute.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Command chaining is not supported in distributed MAPDL.  To improve
-performances, use <code class="docutils literal notranslate"><span class="pre">mute=True</span></code> or
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a>.</p>
+performances, use the <code class="docutils literal notranslate"><span class="pre">mute=True</span></code> or
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a>
+attribute.</p>
 </div>
 </section>
 <section id="sending-arrays-to-mapdl">
-<h2>Sending Arrays to MAPDL<a class="headerlink" href="#sending-arrays-to-mapdl" title="Permalink to this heading">#</a></h2>
+<h2>Sending arrays to MAPDL<a class="headerlink" href="#sending-arrays-to-mapdl" title="Permalink to this heading">#</a></h2>
 <p>You can send <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays or Python lists directly to MAPDL using
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.Parameters</span></code></a>.
+the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.Parameters</span></code></a> attribute.
 This is far more efficient than individually sending parameters to
-MAPDL through Python with <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.run()</span></code></a>.  It uses <code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vread()</span></code> behind the scenes
-and will be replaced with a faster interface in the future.</p>
+MAPDL through Python with the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.run()</span></code></a> method.  It uses the <code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vread()</span></code> method behind the scenes.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
@@ -978,8 +971,9 @@ and will be replaced with a faster interface in the future.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;MYARR&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span>
 </pre></div>
 </div>
-<p>Verify the data has been properly loaded to MAPDL by indexing
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.Parameters</span></code></a> as if it was a Python dictionary:</p>
+<p>Verify that the data has been properly loaded to MAPDL by indexing the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.parameters.html#ansys.mapdl.core.Mapdl.parameters" title="ansys.mapdl.core.Mapdl.parameters"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.Parameters</span></code></a> attribute as if it
+was a Python dictionary:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">array_from_mapdl</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;MYARR&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">array_from_mapdl</span>
 <span class="go">array([[0.65516567, 0.96977939, 0.3224993 ],</span>
@@ -989,12 +983,12 @@ and will be replaced with a faster interface in the future.</p>
 <span class="go">       [0.33189362, 0.9681039 , 0.47525875]])</span>
 </pre></div>
 </div>
-<section id="downloading-a-remote-mapdl-file">
-<h3>Downloading a Remote MAPDL File<a class="headerlink" href="#downloading-a-remote-mapdl-file" title="Permalink to this heading">#</a></h3>
-<p>When running MAPDL in gRPC mode, remote files can be listed and
-downloaded using <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>
-with <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download.html#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download" title="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.download()</span></code></a> For
-example, to list the remote files and download one of them:</p>
+<section id="download-a-remote-mapdl-file">
+<h3>Download a remote MAPDL file<a class="headerlink" href="#download-a-remote-mapdl-file" title="Permalink to this heading">#</a></h3>
+<p>When running MAPDL in gRPC mode, remote MAPDL files can be listed and
+downloaded using the <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>
+class with the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download.html#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download" title="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.download()</span></code></a>
+function. For example, to list the remote files and download one of them:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">remote_files</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">list_files</span><span class="p">()</span>
 
 <span class="c1"># ensure the result file is one of the remote files</span>
@@ -1006,11 +1000,11 @@ example, to list the remote files and download one of them:</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This feature is only available for MAPDL 2021R1 or newer.</p>
+<p>This feature is only available in MAPDL 2021 R1 and later.</p>
 </div>
 <p>Alternatively, you can download several files at once using the glob pattern
-or list of file names in <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download.html#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download" title="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.download()</span></code></a>.
-For example:</p>
+or a list of file names in the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download.html#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download" title="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.download()</span></code></a>
+method. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using a list of file names</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">([</span><span class="s1">&#39;file0.log&#39;</span><span class="p">,</span> <span class="s1">&#39;file1.out&#39;</span><span class="p">])</span>
 
@@ -1018,20 +1012,20 @@ For example:</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;file*&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can also download all the files in the MAPDL working directory
-(<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.directory.html#ansys.mapdl.core.Mapdl.directory" title="ansys.mapdl.core.Mapdl.directory"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.directory</span></code></a>), using:</p>
+<p>You can also download all files in the MAPDL working directory
+(<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.directory.html#ansys.mapdl.core.Mapdl.directory" title="ansys.mapdl.core.Mapdl.directory"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.directory</span></code></a>) using:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">download_project</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Or filter by extensions, for example:</p>
+<p>Or, filter by extensions. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">download_project</span><span class="p">([</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">],</span> <span class="n">target_dir</span><span class="o">=</span><span class="s1">&#39;myfiles&#39;</span><span class="p">)</span>  <span class="c1"># Download the files to &#39;myfiles&#39; directory</span>
 </pre></div>
 </div>
 </section>
-<section id="uploading-a-local-mapdl-file">
-<h3>Uploading a Local MAPDL File<a class="headerlink" href="#uploading-a-local-mapdl-file" title="Permalink to this heading">#</a></h3>
-<p>You can upload a local file a the remote mapdl instance with
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.mapdl_grpc.MapdlGrpc.upload.html#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.upload" title="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.upload"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.upload()</span></code></a>.
+<section id="upload-a-local-mapdl-file">
+<h3>Upload a local MAPDL file<a class="headerlink" href="#upload-a-local-mapdl-file" title="Permalink to this heading">#</a></h3>
+<p>You can upload a local MAPDL file as the remote MAPDL instance with the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.mapdl_grpc.MapdlGrpc.upload.html#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.upload" title="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.upload"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.upload()</span></code></a> function.
 For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># upload a local file</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="s1">&#39;sample.db&#39;</span><span class="p">)</span>
@@ -1043,37 +1037,39 @@ For example:</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This feature is only available for MAPDL 2021R1 or newer.</p>
+<p>This feature is only available in MAPDL 2021 R1 and later.</p>
 </div>
 </section>
 </section>
 <section id="unsupported-mapdl-commands-and-other-considerations">
-<h2>Unsupported MAPDL Commands and Other Considerations<a class="headerlink" href="#unsupported-mapdl-commands-and-other-considerations" title="Permalink to this heading">#</a></h2>
-<p>Most MAPDl commands have been mapped pythonically into their
-equivalent methods.  Some commands, however, are not supported either
-because they are not applicable to an interactive session, or require
+<h2>Unsupported MAPDL commands and other considerations<a class="headerlink" href="#unsupported-mapdl-commands-and-other-considerations" title="Permalink to this heading">#</a></h2>
+<p>Most MAPDl commands have been mapped Pythonically into their
+equivalent methods. Some commands, however, are not supported, either
+because they are not applicable to an interactive session or require
 additional commands that are incompatible with the way inputs are
-handled in the MAPDL server.</p>
+handled on the MAPDL server.</p>
 <section id="non-available-commands">
-<span id="ref-unsupported-commands"></span><h3>Non-available Commands<a class="headerlink" href="#non-available-commands" title="Permalink to this heading">#</a></h3>
-<p>Some commands are not available in PyMAPDL because of different reasons.</p>
-<p>Some these commands do not make sense in a Python context.
-For example the <code class="docutils literal notranslate"><span class="pre">*ASK</span></code> can be replaced with a Python <code class="docutils literal notranslate"><span class="pre">input</span></code>,
-<code class="docutils literal notranslate"><span class="pre">*IF</span></code> with a Python <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, and instead of <code class="docutils literal notranslate"><span class="pre">*CREATE</span></code> and
-<code class="docutils literal notranslate"><span class="pre">*USE</span></code> can simply call another Python function or module.</p>
-<p>Others do not make sense in a non-GUI session. For example <code class="docutils literal notranslate"><span class="pre">/ERASE</span></code>
-and <code class="docutils literal notranslate"><span class="pre">ERASE</span></code> which clear the graphics screen.</p>
-<p>Others simply are not available or not supported for different reasons.
-Some are quietly ignored by MAPDL but you are still free to
-use them.  For example <code class="docutils literal notranslate"><span class="pre">/BATCH</span></code>, can be run as
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">mapdl.run(&quot;/BATCH&quot;)</span></code></a>
+<span id="ref-unsupported-commands"></span><h3>Non-available commands<a class="headerlink" href="#non-available-commands" title="Permalink to this heading">#</a></h3>
+<p>Some commands are not available in PyMAPDL for a variety of reasons.</p>
+<p>Some of these commands do not make sense in a Python context.
+Some examples follow.</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">*ASK</span></code> command can be replaced with a Python <code class="docutils literal notranslate"><span class="pre">input</span></code>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">*IF</span></code> command can be replaced with a Python <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">*CREATE</span></code> and <code class="docutils literal notranslate"><span class="pre">*USE</span></code> commands can be replaced with calls to another Python function or module.</p></li>
+</ul>
+<p>Other commands do not make sense in a non-GUI session. For example, the <code class="docutils literal notranslate"><span class="pre">/ERASE</span></code>
+and <code class="docutils literal notranslate"><span class="pre">ERASE</span></code> commands that clear the graphics screen are not needed in a non-GUI session.</p>
+<p>Other commands are quietly ignored by MAPDL, but you are still free to
+use them. For example, the <code class="docutils literal notranslate"><span class="pre">/BATCH</span></code> command can be run as the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">mapdl.run(&quot;/BATCH&quot;)</span></code></a> function,
 which returns:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">***</span> <span class="n">WARNING</span> <span class="o">***</span>                         <span class="n">CP</span> <span class="o">=</span>       <span class="mf">0.519</span>   <span class="n">TIME</span><span class="o">=</span> <span class="mi">12</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">16</span>
 <span class="n">The</span> <span class="o">/</span><span class="n">BATCH</span> <span class="n">command</span> <span class="n">must</span> <span class="n">be</span> <span class="n">the</span> <span class="n">first</span> <span class="n">line</span> <span class="n">of</span> <span class="nb">input</span><span class="o">.</span>  <span class="n">The</span> <span class="o">/</span><span class="n">BATCH</span> <span class="n">command</span>
 <span class="ow">is</span> <span class="n">ignored</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>These commands are detailed in <a class="reference internal" href="#table-1">Table-1</a>.</p>
+<p><a class="reference internal" href="#table-1">Table-1</a> provides comprehensive information on the commands that are non-available.</p>
 <p id="table-1"><strong>Table 1. Non-available commands.</strong></p>
 <table class="longtable table">
 <thead>
@@ -1283,12 +1279,12 @@ which returns:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
-<li><p><strong>Interactive</strong> means there is a method in the mapdl such as
+<li><p><strong>Interactive</strong> means there is a method in the MAPDL such as
 <a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.prep7.html#ansys.mapdl.core.Mapdl.prep7" title="ansys.mapdl.core.Mapdl.prep7"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.prep7()</span></code></a>.</p></li>
 <li><p><strong>Non-interactive</strong> means it is run inside a
 <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a> context block,
-<a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.input.html#ansys.mapdl.core.Mapdl.input" title="ansys.mapdl.core.Mapdl.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.input()</span></code></a> or
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.input_strings.html#ansys.mapdl.core.Mapdl.input_strings" title="ansys.mapdl.core.Mapdl.input_strings"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.input_strings()</span></code></a>.
+<a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.input.html#ansys.mapdl.core.Mapdl.input" title="ansys.mapdl.core.Mapdl.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.input()</span></code></a> method, or
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.input_strings.html#ansys.mapdl.core.Mapdl.input_strings" title="ansys.mapdl.core.Mapdl.input_strings"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.input_strings()</span></code></a> method.
 For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">non_interactive</span><span class="p">:</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
@@ -1300,21 +1296,22 @@ method is used to run the MAPDL command.
 For example, <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">mapdl.run(&quot;/PREP7&quot;)</span></code></a>.</p></li>
 </ul>
 </div>
-<p>Note, that running these commands with
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">mapdl.run()</span></code></a> will
-not cause MAPDL to exit, however it might raise runtime exceptions.</p>
-<p>These MAPDL commands can be executed also using
-<a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.input.html#ansys.mapdl.core.Mapdl.input" title="ansys.mapdl.core.Mapdl.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">mapdl.input()</span></code></a>
+<p>Note that running these commands with the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">mapdl.run()</span></code></a> function does
+not cause MAPDL to exit. However, it might raise runtime exceptions.</p>
+<p>These MAPDL commands can also be executed using the
+<a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.input.html#ansys.mapdl.core.Mapdl.input" title="ansys.mapdl.core.Mapdl.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">mapdl.input()</span></code></a> method
 or
 <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.input_strings.html#ansys.mapdl.core.Mapdl.input_strings" title="ansys.mapdl.core.Mapdl.input_strings"><code class="xref py py-func docutils literal notranslate"><span class="pre">mapdl.input_strings()</span></code></a>
-and the results should be same as running them in a normal batch MAPDL session.</p>
+method. The results should be same as running them in a normal batch MAPDL session.</p>
 </section>
 <section id="unsupported-interactive-commands">
-<h3>Unsupported “Interactive” Commands<a class="headerlink" href="#unsupported-interactive-commands" title="Permalink to this heading">#</a></h3>
-<p>The following commands can be only run in non-interactive mode (inside
+<h3>Unsupported “interactive” commands<a class="headerlink" href="#unsupported-interactive-commands" title="Permalink to this heading">#</a></h3>
+<p>The following commands can be only run in non-interactive mode (inside a
 <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a> block or
-using <a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.input.html#ansys.mapdl.core.Mapdl.input" title="ansys.mapdl.core.Mapdl.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">mapdl.input()</span></code></a>).
-These commands are detailed in <a class="reference internal" href="#table-2">Table-2</a>.</p>
+using the <a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.input.html#ansys.mapdl.core.Mapdl.input" title="ansys.mapdl.core.Mapdl.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">mapdl.input()</span></code></a> method).
+<a class="reference internal" href="#table-2">Table-2</a> provides comprehensive information on the “interactive” commands that
+are unsupported.</p>
 <p id="table-2"><strong>Table 2. Non-interactive only commands.</strong></p>
 <table class="table">
 <thead>
@@ -1375,33 +1372,33 @@ These commands are detailed in <a class="reference internal" href="#table-2">Tab
 </table>
 </section>
 <section id="environment-variables">
-<h3>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this heading">#</a></h3>
-<p>There are several PyMAPDL specific environment variables that can be
-used to control the behavior or launching of PyMAPDL and MAPDL.  These
-include:</p>
+<h3>Environment variables<a class="headerlink" href="#environment-variables" title="Permalink to this heading">#</a></h3>
+<p>There are several PyMAPDL-specific environment variables that can be
+used to control the behavior or launching of PyMAPDL and MAPDL, including those
+described in the following table.</p>
 <table class="table">
 <tbody>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ANSYSLMD_LICENSE_FILE</span></code></p></td>
-<td><p>License file or IP address (e.g. 192.168.0.16).
-This is helpful for supplying licencing for
-docker.</p></td>
+<td><p>License file or IP address (192.168.0.16).
+This is helpful for supplying licensing for
+Docker.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PYMAPDL_MAX_MESSAGE_LENGTH</span></code></p></td>
-<td><p>Maximum gRPC message length.  If your
+<td><p>Maximum gRPC message length. If your
 connection terminates when running
-PRNSOL or NLIST, raise this.  In bytes,
-defaults to 256 MB</p></td>
+PRNSOL or NLIST, raise this. In bytes,
+defaults to 256 MB.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">PYMAPDL_PORT</span></code></p></td>
 <td><p>Default port to look for when connecting
-PyMAPDL.  Normally used for unit testing.</p></td>
+PyMAPDL. Normally used for unit testing.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PYMAPDL_START_INSTANCE</span></code></p></td>
-<td><p>Override the behavior of
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.launch_mapdl()</span></code></a> to only
-attempt to connect to existing
-instances of PyMAPDL.  Generally used
-in combination with <code class="docutils literal notranslate"><span class="pre">PYMAPDL_PORT</span></code></p></td>
+<td><p>Override the behavior of the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.launch_mapdl()</span></code></a> function
+to only attempt to connect to existing
+instances of PyMAPDL. Generally used
+in combination with <code class="docutils literal notranslate"><span class="pre">PYMAPDL_PORT</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1434,7 +1431,7 @@ in combination with <code class="docutils literal notranslate"><span class="pre"
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
   </div>
   

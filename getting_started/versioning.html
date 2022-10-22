@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Versioning and Interfaces &#8212; PyMAPDL</title>
+    <title>Versions and interfaces &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -55,8 +55,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using MAPDL Through Docker" href="docker.html" />
-    <link rel="prev" title="Using PyMAPDL from the Standard Install" href="running_mapdl.html" />
+    <link rel="next" title="Use MAPDL through Docker" href="docker.html" />
+    <link rel="prev" title="Use PyMAPDL from the standard installation" href="running_mapdl.html" />
 <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
 
@@ -104,13 +104,13 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../user_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
@@ -190,8 +190,8 @@
         <li class="nav-item nav-item-0"><a href="../index.html">PyMAPDL</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Getting Started</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Versioning and Interfaces</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Getting started</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Versions and interfaces</a></li> 
       </ul>
     </div>
         </div>
@@ -215,27 +215,27 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="running_mapdl.html">
-   Using PyMAPDL from the Standard Install
+   Use PyMAPDL from the standard installation
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Versioning and Interfaces
+   Versions and interfaces
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="docker.html">
-   Using MAPDL Through Docker
+   Use MAPDL through Docker
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="using_julia.html">
-   Using PyMAPDL in Julia
+   Use PyMAPDL in Julia
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wsl.html">
-   PyAnsys Libraries on a Windows Subsystem for Linux and Docker
+   PyAnsys libraries on a Windows Subsystem for Linux and Docker
   </a>
  </li>
 </ul>
@@ -264,18 +264,18 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ansys-2021r1-and-newer">
-   ANSYS 2021R1 and Newer
+  <a class="reference internal nav-link" href="#ansys-2021-r1-and-later">
+   Ansys 2021 R1 and later
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ansys-17-0-to-2020r1-corba">
-   ANSYS 17.0 to 2020R1 - CORBA
+  <a class="reference internal nav-link" href="#ansyss-17-0-to-2020-r1-corba">
+   AnsysS 17.0 to 2020 R1 - CORBA
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#earlier-than-ansys-17-0">
-   Earlier than ANSYS 17.0
+   Earlier than Ansys 17.0
   </a>
  </li>
 </ul>
@@ -297,46 +297,45 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="versioning-and-interfaces">
-<h1>Versioning and Interfaces<a class="headerlink" href="#versioning-and-interfaces" title="Permalink to this heading">#</a></h1>
+  <section id="versions-and-interfaces">
+<h1>Versions and interfaces<a class="headerlink" href="#versions-and-interfaces" title="Permalink to this heading">#</a></h1>
 <p>The PyMAPDL project attempts to maintain compatibility with legacy
 versions of MAPDL while allowing for support of faster and better
 interfaces with the latest versions of MAPDL.</p>
-<section id="ansys-2021r1-and-newer">
-<h2>ANSYS 2021R1 and Newer<a class="headerlink" href="#ansys-2021r1-and-newer" title="Permalink to this heading">#</a></h2>
-<p>ANSYS v2020R1 and newer support the latest gRPC interface, allowing
+<section id="ansys-2021-r1-and-later">
+<h2>Ansys 2021 R1 and later<a class="headerlink" href="#ansys-2021-r1-and-later" title="Permalink to this heading">#</a></h2>
+<p>Ansys 2020 R1 and later support the latest gRPC interface, allowing
 for remote management of MAPDL with rapid streaming of mesh, results,
-and files from the MAPDL service.  Should you have the applicable
-license, you can even install and use MAPDL with docker, enabling you
+and files from the MAPDL service. If you have the applicable
+license, you can install and use MAPDL with Docker, enabling you
 to run and solve even on officially unsupported platforms like Mac
 OS.</p>
 </section>
-<section id="ansys-17-0-to-2020r1-corba">
-<h2>ANSYS 17.0 to 2020R1 - CORBA<a class="headerlink" href="#ansys-17-0-to-2020r1-corba" title="Permalink to this heading">#</a></h2>
-<p>ANSYS 17.0 supports the legacy CORBA interface, enabled with the
-<code class="docutils literal notranslate"><span class="pre">ansys.mapdl.corba</span></code> module.  This interface allows you to send only
+<section id="ansyss-17-0-to-2020-r1-corba">
+<h2>AnsysS 17.0 to 2020 R1 - CORBA<a class="headerlink" href="#ansyss-17-0-to-2020-r1-corba" title="Permalink to this heading">#</a></h2>
+<p>Ansys 17.0 supports the legacy CORBA interface, enabled with the
+<code class="docutils literal notranslate"><span class="pre">ansys.mapdl.corba</span></code> module. This interface allows you to send only
 text to and from the MAPDL service, relying on file IO for all other
-operations.  While not as performant as gRPC, this interface still
-allows you to control a local instance of MAPDL.  These versions of
-MAPDL support specific versions of Windows and Linux.  See <a class="reference external" href="https://www.ansys.com/solutions/solutions-by-role/it-professionals/platform-support">Ansys Platform Support</a>
-for more details on the supported platforms.</p>
+operations. While not as performant as gRPC, this interface still
+allows you to control a local instance of MAPDL. These versions of
+MAPDL support specific versions of Windows and Linux. For more information
+on the supported platforms, see <a class="reference external" href="https://www.ansys.com/solutions/solutions-by-role/it-professionals/platform-support">Ansys Platform Support</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The CORBA interface will likely be phased out from MAPDL at some
-point.  The gRPC interface is faster, more stable, and can run in
+<p>The CORBA interface is likely to be phased out from MAPDL at some
+point. The gRPC interface is faster, more stable, and can run in
 both local and remote connection configurations.</p>
 </div>
 </section>
 <section id="earlier-than-ansys-17-0">
-<h2>Earlier than ANSYS 17.0<a class="headerlink" href="#earlier-than-ansys-17-0" title="Permalink to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">PyMAPDL</span></code> project supports up to ANSYS v13.0 on Linux using a
-console interface.  Like CORBA, it allows for the exchange of text to
-and from the ANSYS instance, but unlike the CORBA</p>
+<h2>Earlier than Ansys 17.0<a class="headerlink" href="#earlier-than-ansys-17-0" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">PyMAPDL</span></code> project supports Ansys versions as early as 13.0 on Linux using a
+console interface. Like CORBA, the console interface allows for the exchange of text to
+and from the Ansys instance.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Console specific support will be depreciated at some point and it
-is recommended to shift to a modern version of Ansys to continue to
-use PyMAPDL.</p>
+<p>Because console-specific support is to be depreciated at some point, you should
+shift to a modern version of Ansys to continue to use PyMAPDL.</p>
 </div>
 </section>
 </section>
@@ -366,7 +365,7 @@ use PyMAPDL.</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
   </div>
   
