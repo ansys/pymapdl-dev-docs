@@ -258,12 +258,12 @@ then performed.
      TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
           SURFACE LOADS  TRANSFERRED FROM AREAS         =     25
 
-     *** NOTE ***                            CP =     211.926   TIME= 04:34:17
+     *** NOTE ***                            CP =     183.681   TIME= 04:36:38
      There is no title defined for this analysis.                            
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:34:17  OCT 22, 2022 CP=    211.928
+     00000000  VERSION=LINUX x64     04:36:38  OCT 23, 2022 CP=    183.682
 
                                                                                
 
@@ -281,7 +281,7 @@ then performed.
        EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE             
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =     211.929   TIME= 04:34:17
+     *** NOTE ***                            CP =     183.683   TIME= 04:36:38
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -341,8 +341,8 @@ then performed.
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       625  SOLID70       0.038   0.000061
-     Time at end of element matrix formulation CP = 211.992096.              
+            1       625  SOLID70       0.027   0.000043
+     Time at end of element matrix formulation CP = 183.738205.              
 
      ALL CURRENT ANSYS DATA WRITTEN TO FILE NAME= file.rdb
       FOR POSSIBLE RESUME FROM THIS POINT
@@ -353,7 +353,7 @@ then performed.
       Memory required for in-core solution     =     1.032 MB
       Memory required for out-of-core solution =     0.575 MB
 
-     *** NOTE ***                            CP =     212.030   TIME= 04:34:17
+     *** NOTE ***                            CP =     183.778   TIME= 04:36:38
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -368,12 +368,12 @@ then performed.
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       625  SOLID70       0.050   0.000080
+            1       625  SOLID70       0.030   0.000047
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       625  SOLID70       0.046   0.000074
+            1       625  SOLID70       0.034   0.000055
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   10.0000         TIME INC =   10.0000      NEW TRIANG MATRIX
      *** RESPONSE EIGENVALUE = 0.2324       OSCILLATION LIMIT =  2.324    
@@ -1291,13 +1291,13 @@ result = mapdl.thermal_result
     FINISH SOLUTION PROCESSING
 
 
-     ***** ROUTINE COMPLETED *****  CP =       222.638
+     ***** ROUTINE COMPLETED *****  CP =       192.685
 
 
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:34:23  OCT 22, 2022 CP=    222.641
+     00000000  VERSION=LINUX x64     04:36:43  OCT 23, 2022 CP=    192.687
 
                                                                                
 
@@ -1414,7 +1414,7 @@ python accessible variable, rather than storing it to a MAPDL value.
  .. code-block:: none
 
 
-    251.05408986663696
+    251.0540898666369
 
 
 
@@ -1444,7 +1444,7 @@ Here, we extract the temperature of the node across for each solution
  .. code-block:: none
 
 
-    [76.27707675716553, 76.81799224351983, 77.42151540097551, 79.04838835561242, 81.19108300049324, 83.56709007016164, 85.35125295387644, 86.23266429275348, 86.97754017604863, 88.31275589884442]
+    [76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561243, 81.19108300049324, 83.56709007016164, 85.35125295387648, 86.23266429275354, 86.97754017604869, 88.31275589884449]
 
 
 
@@ -1480,7 +1480,7 @@ sent back for each result.
  .. code-block:: none
 
 
-    [76.27707675716553, 76.81799224351983, 77.42151540097551, 79.04838835561242, 81.19108300049324, 83.56709007016164, 85.35125295387644, 86.23266429275348, 86.97754017604863, 88.31275589884442]
+    [76.27707675716556, 76.81799224351983, 77.42151540097551, 79.04838835561243, 81.19108300049324, 83.56709007016164, 85.35125295387648, 86.23266429275354, 86.97754017604869, 88.31275589884449]
 
 
 
@@ -1531,7 +1531,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.926 seconds)
+   **Total running time of the script:** ( 0 minutes  8.999 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_transient_thermal.py:

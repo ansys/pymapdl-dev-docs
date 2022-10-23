@@ -801,16 +801,16 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*** NOTE ***                            CP =      77.386   TIME= 04:31:33
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*** NOTE ***                            CP =      67.098   TIME= 04:34:12
  There is no title defined for this analysis.
 
- *** WARNING ***                         CP =      77.401   TIME= 04:31:33
+ *** WARNING ***                         CP =      67.114   TIME= 04:34:12
  No constraints have been defined using the D command.
 
  GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS
 
- *** WARNING ***                         CP =      77.429   TIME= 04:31:33
- There is no high edge node in a position to match low edge node 2545
+ *** WARNING ***                         CP =      67.142   TIME= 04:34:12
+ There is no high edge node in a position to match low edge node 2515
  (location error = 4.55E-04, maximum for all nodes).  Cyclic symmetry
  constraint equations will be generated between the sector edges using
  a mapping procedure similar to the CEINTF command.  This may reduce
@@ -830,7 +830,7 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:31:34  OCT 22, 2022 CP=     77.445
+ 00000000  VERSION=LINUX x64     04:34:12  OCT 23, 2022 CP=     67.159
 
 
 
@@ -853,7 +853,7 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
    NUMBER OF MODES TO EXPAND . . . . . . . . . . .    10
    ELEMENT RESULTS CALCULATION . . . . . . . . . .OFF
 
- *** NOTE ***                            CP =      77.451   TIME= 04:31:34
+ *** NOTE ***                            CP =      67.166   TIME= 04:34:12
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -881,8 +881,8 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
   YC =  0.12186E-01      IYY =   0.1533E-04      IYY =   0.2994E-05
   ZC =  0.15000E-02      IZZ =   0.1891E-04      IZZ =   0.3759E-05
                          IXY =  -0.7303E-05      IXY =  -0.1381E-05
-                         IYZ =  -0.3510E-06      IYZ =   0.1423E-19
-                         IZX =  -0.7289E-06      IZX =   0.2470E-19
+                         IYZ =  -0.3510E-06      IYZ =   0.1396E-19
+                         IZX =  -0.7290E-06      IZX =   0.2536E-19
 
 
   *** MASS SUMMARY BY ELEMENT TYPE ***
@@ -891,27 +891,27 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
      1  0.192050E-01
 
  Range of element maximum matrix coefficients in global coordinates
- Maximum = 267009240 at element 2656.
- Minimum = 160766982 at element 2626.
+ Maximum = 266915922 at element 2608.
+ Minimum = 162779585 at element 2500.
 
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1      2658  SOLID186      1.029   0.000387
- Time at end of element matrix formulation CP = 78.1787415.
+        1      2628  SOLID186      0.787   0.000300
+ Time at end of element matrix formulation CP = 67.7615128.
 
   BLOCK LANCZOS CALCULATION OF UP TO    10 EIGENVECTORS.
-  NUMBER OF EQUATIONS              =        21460
-  MAXIMUM WAVEFRONT                =          264
+  NUMBER OF EQUATIONS              =        21235
+  MAXIMUM WAVEFRONT                =          294
   MAXIMUM MODES STORED             =           10
   MINIMUM EIGENVALUE               =  0.10000E+01
   MAXIMUM EIGENVALUE               =  0.10000E+31
 
-  Memory allocated for solver              =   123.417 MB
-  Memory required for in-core solution     =   117.621 MB
-  Memory required for out-of-core solution =    43.984 MB
+  Memory allocated for solver              =   120.676 MB
+  Memory required for in-core solution     =   115.009 MB
+  Memory required for out-of-core solution =    43.291 MB
 
- *** NOTE ***                            CP =      79.543   TIME= 04:31:35
+ *** NOTE ***                            CP =      69.097   TIME= 04:34:13
  The Sparse Matrix Solver used by the Block Lanczos eigensolver is
  currently running in the in-core memory mode.  This memory mode uses
  the most amount of memory in order to avoid using the hard drive as
@@ -921,7 +921,7 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:31:35  OCT 22, 2022 CP=     80.987
+ 00000000  VERSION=LINUX x64     04:34:14  OCT 23, 2022 CP=     70.420
 
 
 
@@ -937,47 +937,47 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
    FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-    1     1754.771705563
-    2     9255.308230015
-    3     10975.85385570
-    4     11515.65922872
-    5     21840.29237715
-    6     26924.90000624
-    7     33190.68428194
-    8     34449.50116829
-    9     38316.64375786
-   10     56181.29358332
+    1     1754.791678499
+    2     9255.393047773
+    3     10975.87840945
+    4     11515.67510801
+    5     21840.50619970
+    6     26925.16581913
+    7     33190.75904011
+    8     34449.58480690
+    9     38317.00838304
+   10     56181.40845395
 
 
   ***** PARTICIPATION FACTOR AND MODAL MASS CALCULATION *****   HARMONIC INDEX=    0
 
  GLOBAL                GLOBAL      PARTICIPATION
   MODE   FREQUENCY    DIRECTION       FACTOR      EFFECTIVE MASS   MODAL MASS
-     1   1754.77         UZ        -0.19309E-09     0.37282E-19      7.0000
-                       ROTZ        -0.21951E-11     0.48186E-23
-     2   9255.31         UZ         0.45808E-08     0.20984E-16      7.0000
-                       ROTZ        -0.35123E-10     0.12336E-20
-     3   10975.9         UZ        -0.37707E-08     0.14218E-16      7.0000
-                       ROTZ         0.37606E-10     0.14142E-20
-     4   11515.7         UZ         0.12858E-08     0.16532E-17      7.0000
-                       ROTZ        -0.12332E-09     0.15207E-19
-     5   21840.3         UZ         0.19187E-08     0.36815E-17      7.0000
-                       ROTZ        -0.20192E-09     0.40773E-19
-     6   26924.9         UZ        -0.47200E-09     0.22278E-18      7.0000
-                       ROTZ        -0.87186E-10     0.76014E-20
-     7   33190.7         UZ         0.32518E-09     0.10574E-18      7.0000
-                       ROTZ         0.14385E-10     0.20694E-21
-     8   34449.5         UZ         0.14824E-10     0.21975E-21      7.0000
-                       ROTZ        -0.80525E-11     0.64843E-22
-     9   38316.6         UZ        -0.35865E-09     0.12863E-18      7.0000
-                       ROTZ         0.31691E-10     0.10043E-20
-    10   56181.3         UZ        -0.26224E-11     0.68769E-23      7.0000
-                       ROTZ        -0.39749E-11     0.15800E-22
+     1   1754.79         UZ        -0.11374E-09     0.12937E-19      7.0000
+                       ROTZ         0.43201E-12     0.18663E-24
+     2   9255.39         UZ        -0.13703E-08     0.18778E-17      7.0000
+                       ROTZ         0.11881E-10     0.14115E-21
+     3   10975.9         UZ         0.69168E-08     0.47842E-16      7.0000
+                       ROTZ        -0.86707E-10     0.75181E-20
+     4   11515.7         UZ         0.14172E-07     0.20083E-15      7.0000
+                       ROTZ        -0.24615E-09     0.60588E-19
+     5   21840.5         UZ        -0.21351E-07     0.45585E-15      7.0000
+                       ROTZ         0.35939E-09     0.12916E-18
+     6   26925.2         UZ        -0.13755E-07     0.18921E-15      7.0000
+                       ROTZ         0.22800E-09     0.51983E-19
+     7   33190.8         UZ         0.24089E-08     0.58027E-17      7.0000
+                       ROTZ        -0.36418E-10     0.13262E-20
+     8   34449.6         UZ         0.32303E-08     0.10435E-16      7.0000
+                       ROTZ        -0.55678E-10     0.31000E-20
+     9   38317.0         UZ         0.32141E-08     0.10331E-16      7.0000
+                       ROTZ        -0.54440E-10     0.29637E-20
+    10   56181.4         UZ         0.30504E-08     0.93052E-17      7.0000
+                       ROTZ        -0.51112E-10     0.26124E-20
 
 
  *** ANSYS BINARY FILE STATISTICS
   BUFFER SIZE USED= 16384
-       32.688 MB WRITTEN ON ASSEMBLED MATRIX FILE: file.full
+       32.312 MB WRITTEN ON ASSEMBLED MATRIX FILE: file.full
         2.062 MB WRITTEN ON MODAL MATRIX FILE: file.mode
         1.125 MB WRITTEN ON RESULTS FILE: file.rst
 
@@ -990,7 +990,7 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:31:36  OCT 22, 2022 CP=     81.140
+ 00000000  VERSION=LINUX x64     04:34:14  OCT 23, 2022 CP=     70.568
 
 
 
@@ -1009,17 +1009,17 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
 
   BLOCK LANCZOS CALCULATION OF UP TO    10 EIGENVECTORS.
-  NUMBER OF EQUATIONS              =        42920
-  MAXIMUM WAVEFRONT                =          348
+  NUMBER OF EQUATIONS              =        42470
+  MAXIMUM WAVEFRONT                =          384
   MAXIMUM MODES STORED             =           10
   MINIMUM EIGENVALUE               =  0.10000E+01
   MAXIMUM EIGENVALUE               =  0.10000E+31
 
-  Memory allocated for solver              =   262.675 MB
-  Memory required for in-core solution     =   250.330 MB
-  Memory required for out-of-core solution =    88.086 MB
+  Memory allocated for solver              =   258.548 MB
+  Memory required for in-core solution     =   246.396 MB
+  Memory required for out-of-core solution =    85.844 MB
 
- *** NOTE ***                            CP =      83.829   TIME= 04:31:37
+ *** NOTE ***                            CP =      73.162   TIME= 04:34:16
  The Sparse Matrix Solver used by the Block Lanczos eigensolver is
  currently running in the in-core memory mode.  This memory mode uses
  the most amount of memory in order to avoid using the hard drive as
@@ -1027,9 +1027,9 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
  time.  This mode is recommended if enough physical memory is present
  to accommodate all of the solver data.
 
- *** WARNING ***                         CP =      85.138   TIME= 04:31:38
+ *** WARNING ***                         CP =      74.180   TIME= 04:34:16
  The eigenproblem is ill-conditioned (relative residual from test linear
- solve: 1.207754E-03).  The accuracy of the solution may not be
+ solve: 1.039147E-03).  The accuracy of the solution may not be
  satisfactory.  Modifying the initial value of the frequency shift
  (FREQB in the MODOPT command) or changing the boundary conditions of
  the model might solve the problem.
@@ -1037,7 +1037,7 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:31:39  OCT 22, 2022 CP=     87.545
+ 00000000  VERSION=LINUX x64     04:34:17  OCT 23, 2022 CP=     76.094
 
 
 
@@ -1053,62 +1053,62 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
    FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-    1     4016.678964979
-    2     4016.679006414
-    3     4064.701832820
-    4     4064.701850537
-    5     10313.63512641
-    6     10313.63516172
-    7     14213.05730688
-    8     14213.05732944
-    9     19292.87838932
-   10     19292.87872462
+    1     4016.683041283
+    2     4016.683049164
+    3     4064.737829941
+    4     4064.737844930
+    5     10313.66910436
+    6     10313.66919729
+    7     14213.07118058
+    8     14213.07127599
+    9     19293.02840595
+   10     19293.02904593
 
 
   ***** PARTICIPATION FACTOR AND MODAL MASS CALCULATION *****   HARMONIC INDEX=    1
 
  GLOBAL                GLOBAL      PARTICIPATION
   MODE   FREQUENCY    DIRECTION       FACTOR      EFFECTIVE MASS   MODAL MASS
-    11   4016.68         UX         0.10796E-05     0.11655E-11      3.5000
-                         UY         0.12844E-05     0.16496E-11
-                       ROTX         0.16648E-03     0.27715E-07
-                       ROTY         0.34957E-04     0.12220E-08
-    12   4016.68         UX         0.12832E-05     0.16467E-11      3.5000
-                         UY        -0.11164E-05     0.12465E-11
-                       ROTX         0.34957E-04     0.12220E-08
-                       ROTY        -0.16648E-03     0.27715E-07
-    13   4064.70         UX        -0.11547         0.13332E-01      3.5000
-                         UY         0.29642E-01     0.87866E-03
-                       ROTX        -0.44471E-04     0.19777E-08
-                       ROTY        -0.17320E-03     0.29999E-07
-    14   4064.70         UX         0.29642E-01     0.87866E-03      3.5000
-                         UY         0.11547         0.13332E-01
-                       ROTX        -0.17320E-03     0.29999E-07
-                       ROTY         0.44471E-04     0.19777E-08
-    15   10313.6         UX        -0.94889E-06     0.90039E-12      3.5000
-                         UY        -0.29593E-06     0.87573E-13
-                       ROTX        -0.50275E-03     0.25275E-06
-                       ROTY         0.19468E-03     0.37899E-07
-    16   10313.6         UX         0.29466E-06     0.86822E-13      3.5000
-                         UY        -0.94848E-06     0.89962E-12
-                       ROTX        -0.19468E-03     0.37899E-07
-                       ROTY        -0.50275E-03     0.25275E-06
-    17   14213.1         UX        -0.26062E-05     0.67922E-11      3.5000
-                         UY         0.19221E-06     0.36944E-13
-                       ROTX         0.12876E-03     0.16580E-07
-                       ROTY        -0.12231E-03     0.14960E-07
-    18   14213.1         UX         0.19418E-06     0.37706E-13      3.5000
-                         UY         0.26067E-05     0.67951E-11
-                       ROTX        -0.12231E-03     0.14960E-07
-                       ROTY        -0.12876E-03     0.16580E-07
-    19   19292.9         UX        -0.56592E-01     0.32027E-02      3.5000
-                         UY        -0.77020E-01     0.59321E-02
-                       ROTX         0.11553E-03     0.13347E-07
-                       ROTY        -0.84894E-04     0.72070E-08
-    20   19292.9         UX         0.77020E-01     0.59321E-02      3.5000
-                         UY        -0.56592E-01     0.32027E-02
-                       ROTX         0.84894E-04     0.72070E-08
-                       ROTY         0.11553E-03     0.13347E-07
+    11   4016.68         UX        -0.98561E-06     0.97143E-12      3.5000
+                         UY        -0.13681E-05     0.18716E-11
+                       ROTX         0.16330E-03     0.26667E-07
+                       ROTY         0.47670E-04     0.22724E-08
+    12   4016.68         UX        -0.13793E-05     0.19026E-11      3.5000
+                         UY         0.98493E-06     0.97009E-12
+                       ROTX         0.47670E-04     0.22724E-08
+                       ROTY        -0.16330E-03     0.26667E-07
+    13   4064.74         UX        -0.91598E-01     0.83902E-02      3.5000
+                         UY         0.76294E-01     0.58207E-02
+                       ROTX        -0.11443E-03     0.13095E-07
+                       ROTY        -0.13740E-03     0.18878E-07
+    14   4064.74         UX         0.76294E-01     0.58207E-02      3.5000
+                         UY         0.91598E-01     0.83902E-02
+                       ROTX        -0.13740E-03     0.18878E-07
+                       ROTY         0.11443E-03     0.13095E-07
+    15   10313.7         UX        -0.92333E-06     0.85254E-12      3.5000
+                         UY        -0.36486E-06     0.13312E-12
+                       ROTX         0.51579E-03     0.26604E-06
+                       ROTY        -0.15690E-03     0.24618E-07
+    16   10313.7         UX         0.36541E-06     0.13352E-12      3.5000
+                         UY        -0.92402E-06     0.85381E-12
+                       ROTX         0.15690E-03     0.24618E-07
+                       ROTY         0.51579E-03     0.26604E-06
+    17   14213.1         UX        -0.17673E-06     0.31232E-13      3.5000
+                         UY        -0.26079E-05     0.68013E-11
+                       ROTX        -0.12185E-03     0.14848E-07
+                       ROTY        -0.12920E-03     0.16693E-07
+    18   14213.1         UX         0.26080E-05     0.68019E-11      3.5000
+                         UY        -0.17673E-06     0.31234E-13
+                       ROTX         0.12920E-03     0.16693E-07
+                       ROTY        -0.12185E-03     0.14848E-07
+    19   19293.0         UX         0.61752E-01     0.38133E-02      3.5000
+                         UY        -0.72948E-01     0.53215E-02
+                       ROTX         0.10942E-03     0.11972E-07
+                       ROTY         0.92629E-04     0.85801E-08
+    20   19293.0         UX        -0.72948E-01     0.53215E-02      3.5000
+                         UY        -0.61752E-01     0.38133E-02
+                       ROTX         0.92629E-04     0.85801E-08
+                       ROTY        -0.10942E-03     0.11972E-07
 
  GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS
 
@@ -1119,7 +1119,7 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:31:39  OCT 22, 2022 CP=     87.683
+ 00000000  VERSION=LINUX x64     04:34:17  OCT 23, 2022 CP=     76.223
 
 
 
@@ -1138,17 +1138,17 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
 
   BLOCK LANCZOS CALCULATION OF UP TO    10 EIGENVECTORS.
-  NUMBER OF EQUATIONS              =        42906
-  MAXIMUM WAVEFRONT                =          333
+  NUMBER OF EQUATIONS              =        42456
+  MAXIMUM WAVEFRONT                =          384
   MAXIMUM MODES STORED             =           10
   MINIMUM EIGENVALUE               =  0.10000E+01
   MAXIMUM EIGENVALUE               =  0.10000E+31
 
-  Memory allocated for solver              =   263.503 MB
-  Memory required for in-core solution     =   251.119 MB
-  Memory required for out-of-core solution =    88.283 MB
+  Memory allocated for solver              =   262.012 MB
+  Memory required for in-core solution     =   249.696 MB
+  Memory required for out-of-core solution =    87.269 MB
 
- *** NOTE ***                            CP =      90.269   TIME= 04:31:41
+ *** NOTE ***                            CP =      78.716   TIME= 04:34:19
  The Sparse Matrix Solver used by the Block Lanczos eigensolver is
  currently running in the in-core memory mode.  This memory mode uses
  the most amount of memory in order to avoid using the hard drive as
@@ -1158,7 +1158,7 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:31:43  OCT 22, 2022 CP=     93.161
+ 00000000  VERSION=LINUX x64     04:34:20  OCT 23, 2022 CP=     81.134
 
 
 
@@ -1174,31 +1174,31 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
    FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-    1     1057.619328543
-    2     1057.619328566
-    3     3380.530621118
-    4     3380.530621127
-    5     6319.874142949
-    6     6319.874142953
-    7     10091.65459692
-    8     10091.65459693
-    9     18041.41473794
-   10     18041.41473794
+    1     1057.627660219
+    2     1057.627660294
+    3     3380.551787119
+    4     3380.551787120
+    5     6319.916392202
+    6     6319.916392203
+    7     10091.69582739
+    8     10091.69582740
+    9     18041.48697678
+   10     18041.48697678
 
 
    ***** MODAL MASS CALCULATION *****   HARMONIC INDEX=    2
 
   MODE   FREQUENCY       MODAL MASS
-    21   1057.62           3.5000
-    22   1057.62           3.5000
-    23   3380.53           3.5000
-    24   3380.53           3.5000
-    25   6319.87           3.5000
-    26   6319.87           3.5000
+    21   1057.63           3.5000
+    22   1057.63           3.5000
+    23   3380.55           3.5000
+    24   3380.55           3.5000
+    25   6319.92           3.5000
+    26   6319.92           3.5000
     27   10091.7           3.5000
     28   10091.7           3.5000
-    29   18041.4           3.5000
-    30   18041.4           3.5000
+    29   18041.5           3.5000
+    30   18041.5           3.5000
 
  GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS
 
@@ -1209,7 +1209,7 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:31:43  OCT 22, 2022 CP=     93.223
+ 00000000  VERSION=LINUX x64     04:34:20  OCT 23, 2022 CP=     81.191
 
 
 
@@ -1228,17 +1228,17 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
 
   BLOCK LANCZOS CALCULATION OF UP TO    10 EIGENVECTORS.
-  NUMBER OF EQUATIONS              =        42906
-  MAXIMUM WAVEFRONT                =          333
+  NUMBER OF EQUATIONS              =        42456
+  MAXIMUM WAVEFRONT                =          384
   MAXIMUM MODES STORED             =           10
   MINIMUM EIGENVALUE               =  0.10000E+01
   MAXIMUM EIGENVALUE               =  0.10000E+31
 
-  Memory allocated for solver              =   263.503 MB
-  Memory required for in-core solution     =   251.119 MB
-  Memory required for out-of-core solution =    88.283 MB
+  Memory allocated for solver              =   262.012 MB
+  Memory required for in-core solution     =   249.696 MB
+  Memory required for out-of-core solution =    87.269 MB
 
- *** NOTE ***                            CP =      95.828   TIME= 04:31:44
+ *** NOTE ***                            CP =      83.661   TIME= 04:34:22
  The Sparse Matrix Solver used by the Block Lanczos eigensolver is
  currently running in the in-core memory mode.  This memory mode uses
  the most amount of memory in order to avoid using the hard drive as
@@ -1248,7 +1248,7 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:31:46  OCT 22, 2022 CP=     98.723
+ 00000000  VERSION=LINUX x64     04:34:23  OCT 23, 2022 CP=     86.075
 
 
 
@@ -1264,16 +1264,16 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
    FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-    1     1193.646581136
-    2     1193.646581157
-    3     3319.531421338
-    4     3319.531421344
-    5     7336.371613694
-    6     7336.371613696
-    7     9979.948398079
-    8     9979.948398086
-    9     19188.40690290
-   10     19188.40690290
+    1     1193.652629299
+    2     1193.652629370
+    3     3319.553821207
+    4     3319.553821209
+    5     7336.402568777
+    6     7336.402568781
+    7     9979.988874660
+    8     9979.988874668
+    9     19188.49510780
+   10     19188.49510780
 
 
    ***** MODAL MASS CALCULATION *****   HARMONIC INDEX=    3
@@ -1281,14 +1281,14 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
   MODE   FREQUENCY       MODAL MASS
     31   1193.65           3.5000
     32   1193.65           3.5000
-    33   3319.53           3.5000
-    34   3319.53           3.5000
-    35   7336.37           3.5000
-    36   7336.37           3.5000
-    37   9979.95           3.5000
-    38   9979.95           3.5000
-    39   19188.4           3.5000
-    40   19188.4           3.5000
+    33   3319.55           3.5000
+    34   3319.55           3.5000
+    35   7336.40           3.5000
+    36   7336.40           3.5000
+    37   9979.99           3.5000
+    38   9979.99           3.5000
+    39   19188.5           3.5000
+    40   19188.5           3.5000
 </pre></div>
 </div>
 </section>
@@ -1316,8 +1316,8 @@ Units       : User Defined
 Version     : 21.2
 Cyclic      : True
 Result Sets : 40
-Nodes       : 7279
-Elements    : 1329
+Nodes       : 7204
+Elements    : 1314
 
 
 Available Results:
@@ -1351,14 +1351,14 @@ harmonic index for each cumulative mode.</p>
  13       -1
  14       -1
  15        1
- 16        1
- 17       -1
- 18       -1
- 19        1
+ 16       -1
+ 17        1
+ 18        1
+ 19       -1
  20        2
  21       -2
- 22        2
- 23       -2
+ 22       -2
+ 23        2
  24        2
  25       -2
  26        2
@@ -1367,14 +1367,14 @@ harmonic index for each cumulative mode.</p>
  29       -2
  30        3
  31       -3
- 32        3
- 33       -3
+ 32       -3
+ 33        3
  34        3
  35       -3
  36        3
  37       -3
- 38        3
- 39       -3
+ 38       -3
+ 39        3
 </pre></div>
 </div>
 </section>
@@ -1484,52 +1484,52 @@ the number of sectors.</p>
   9      1
  10      1
  11     -1
- 12     -2
- 13      2
- 14     -2
- 15      2
- 16     -2
- 17      2
- 18     -3
- 19      3
- 20     -3
- 21      3
- 22     -3
- 23      3
+ 12      2
+ 13     -2
+ 14      2
+ 15     -2
+ 16      2
+ 17     -2
+ 18      3
+ 19     -3
+ 20      3
+ 21     -3
+ 22      3
+ 23     -3
  24      4
  25     -4
- 26      4
- 27     -4
+ 26     -4
+ 27      4
  28      4
  29     -4
- 30     -5
- 31      5
+ 30      5
+ 31     -5
  32      5
  33     -5
- 34     -5
- 35      5
- 36     -6
- 37      6
+ 34      5
+ 35     -5
+ 36      6
+ 37     -6
  38      6
  39     -6
- 40     -6
- 41      6
- 42     -7
- 43      7
+ 40      6
+ 41     -6
+ 42      7
+ 43     -7
  44      7
  45     -7
- 46     -7
- 47      7
+ 46      7
+ 47     -7
  48      8
  49     -8
- 50     -8
- 51      8
+ 50      8
+ 51     -8
  52      8
  53     -8
  54      9
  55     -9
- 56     -9
- 57      9
+ 56      9
+ 57     -9
  58      9
  59     -9
  60     10
@@ -1568,7 +1568,7 @@ for the 2nd nodal diameter of this example model.</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_cyclic_analysis_006.png" srcset="../../../_images/sphx_glr_cyclic_analysis_006.png" alt="cyclic analysis" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  46.187 seconds)</p>
+<img src="../../../_images/sphx_glr_cyclic_analysis_006.png" srcset="../../../_images/sphx_glr_cyclic_analysis_006.png" alt="cyclic analysis" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  43.628 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-cyclic-analysis-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/c35961b264b74402adb8421df2796884/cyclic_analysis.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">cyclic_analysis.py</span></code></a></p>
