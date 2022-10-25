@@ -251,6 +251,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../00-mapdl-examples/basic_dpf_example.html">
+     Basic DPF-Core Usage with PyMAPDL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00-mapdl-examples/composite_dcb.html">
+     Static simulation of double cantilever beam test via cohesive elements
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../00-mapdl-examples/contact_elements.html">
      Contact Element Example
     </a>
@@ -541,6 +551,11 @@
    UPF in PyMAPDL
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extended_examples/Krylov/krylov_example.html">
+   Harmonic analysis using the frequency-sweep Krylov method
+  </a>
+ </li>
 </ul>
 
     
@@ -651,16 +666,14 @@ properties (e.g. scalar, storage, symmetry…)</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Calling MAPDL to solve the eigenproblem...
-/opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/site-packages/ansys/mapdl/core/math.py:1518: UserWarning: Call to ``sym`` cannot evaluate if this matrix is symmetric with this version of MAPDL.
-  warn(
-Elapsed time to solve this problem: 0.03426837921142578
+Elapsed time to solve this problem: 0.06896328926086426
 </pre></div>
 </div>
 <p>This is the vector of eigenfrequencies.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ev</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>FAHBLF :
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>QDBKYZ :
  Size : 10
   3.381e+02   3.381e+02   6.266e+02   6.266e+02   9.283e+02      &lt;       5
   9.283e+02   1.250e+03   1.250e+03   1.424e+03   1.424e+03      &lt;       10
@@ -712,7 +725,7 @@ factor and finally compute the normalized residual value
 <span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">res</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>6.690004989071278e-11
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>3.4595286266961526e-11
 </pre></div>
 </div>
 <p>This residual can be computed for all eigenmodes</p>
@@ -755,16 +768,16 @@ factor and finally compute the normalized residual value
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="si">}</span><span class="s2">] : Freq = </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">f</span></a><span class="si">}</span><span class="se">\t</span><span class="s2"> - Residual = </span><span class="si">{</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mapdl_acc</span></a><span class="p">[</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.06666355063663  - Residual = 6.690004989071278e-11
-[1] : Freq = 338.06666355063663  - Residual = 2.8721192692572263e-11
-[2] : Freq = 626.6450980927033   - Residual = 2.165523763313473e-11
-[3] : Freq = 626.6450980927036   - Residual = 2.5206465332622557e-11
-[4] : Freq = 928.2598500574524   - Residual = 9.986225278422207e-12
-[5] : Freq = 928.2598500574542   - Residual = 2.035719093975018e-11
-[6] : Freq = 1249.8421074363507  - Residual = 2.7230859722702804e-11
-[7] : Freq = 1249.8421074363534  - Residual = 1.4645487249408918e-11
-[8] : Freq = 1423.9938909416692  - Residual = 1.0726980893777612e-09
-[9] : Freq = 1423.9938909416699  - Residual = 7.315378125333162e-10
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0] : Freq = 338.06666355063646  - Residual = 3.4595286266961526e-11
+[1] : Freq = 338.06666355063663  - Residual = 3.9732093551711175e-11
+[2] : Freq = 626.6450980927032   - Residual = 1.4305110437837002e-11
+[3] : Freq = 626.6450980927036   - Residual = 1.919386302579058e-11
+[4] : Freq = 928.2598500574517   - Residual = 1.2950708187902425e-11
+[5] : Freq = 928.2598500574527   - Residual = 6.217027576809564e-12
+[6] : Freq = 1249.8421074363505  - Residual = 2.3467975902494084e-11
+[7] : Freq = 1249.8421074363519  - Residual = 1.533007801523777e-11
+[8] : Freq = 1423.9938909416674  - Residual = 4.32586896160267e-10
+[9] : Freq = 1423.9938909416692  - Residual = 1.2234771115591097e-09
 </pre></div>
 </div>
 <p>Plot Accuracy of Eigenresults</p>
@@ -784,7 +797,7 @@ factor and finally compute the normalized residual value
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.233 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.591 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-01-apdlmath-examples-eigen-solve-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/ff5a8539a3f0024e3ca927614b521224/eigen_solve.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eigen_solve.py</span></code></a></p>

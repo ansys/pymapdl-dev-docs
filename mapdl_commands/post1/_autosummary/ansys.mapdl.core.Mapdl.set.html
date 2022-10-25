@@ -932,7 +932,7 @@
 <p>N - Read load step N.</p>
 <p>FIRST - Read the first data set (Sbstep and TIME are ignored).</p>
 <p>LAST - Read the last data set (Sbstep and TIME are ignored).</p>
-<dl class="simple">
+<dl>
 <dt>NEXT - Read the next data set (Sbstep and TIME are ignored).  If at the last data set,</dt><dd><p>the first data set will be read as the next.</p>
 </dd>
 <dt>PREVIOUS - Read the previous data set (Sbstep and TIME are ignored).  If at the first data</dt><dd><p>set, the last data set will be read as the previous.</p>
@@ -940,6 +940,10 @@
 <dt>NEAR - Read the data set nearest to TIME (Sbstep is ignored).  If TIME is blank, read</dt><dd><p>the first data set.</p>
 </dd>
 <dt>LIST - Scan the results file and list a summary of each load step.  (KIMG, TIME,</dt><dd><p>ANGLE, and NSET are ignored.)</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.64: </span>From version 0.64 you can use the methods <code class="docutils literal notranslate"><span class="pre">to_list</span></code> and
+<code class="docutils literal notranslate"><span class="pre">to_array</span></code> on the object returning from <code class="docutils literal notranslate"><span class="pre">mapdl.set(&quot;list&quot;)</span></code>.</p>
+</div>
 </dd>
 </dl>
 </dd>

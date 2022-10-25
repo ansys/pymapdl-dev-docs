@@ -278,6 +278,11 @@
    Using Python to Code UPF Subroutines
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="krylov.html">
+   Harmonic analysis using the Krylov method
+  </a>
+ </li>
 </ul>
 
     
@@ -391,7 +396,7 @@ using <a class="reference internal" href="../contribution_and_api/_autosummary/a
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/lplot_vtk.png"><img alt="../_images/lplot_vtk.png" src="../_images/lplot_vtk.png" style="width: 400pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Line Plot from MAPDL using PyMAPDL and <a class="reference external" href="https://docs.pyvista.org/">Pyvista</a></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Line Plot from MAPDL using PyMAPDL and <a class="reference external" href="https://docs.pyvista.org">Pyvista</a></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -411,7 +416,7 @@ area with the 8 circles and then extrude it.</p>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../_images/vplot_vtk.png"><img alt="../_images/vplot_vtk.png" src="../_images/vplot_vtk.png" style="width: 400pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Volume Plot from MAPDL using PyMAPDL and <a class="reference external" href="https://docs.pyvista.org/">Pyvista</a></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Volume Plot from MAPDL using PyMAPDL and <a class="reference external" href="https://docs.pyvista.org">Pyvista</a></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -430,7 +435,7 @@ mesh.</p>
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../_images/eplot_vtk.png"><img alt="../_images/eplot_vtk.png" src="../_images/eplot_vtk.png" style="width: 400pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Element Plot from MAPDL using PyMAPDL and <a class="reference external" href="https://docs.pyvista.org/">Pyvista</a></span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Element Plot from MAPDL using PyMAPDL and <a class="reference external" href="https://docs.pyvista.org">Pyvista</a></span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="plotting-non-interactively-using-mapdl">
@@ -439,7 +444,8 @@ mesh.</p>
 native tools, pass <code class="docutils literal notranslate"><span class="pre">vtk=False</span></code> when running plotting commands such
 as <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.aplot.html#ansys.mapdl.core.Mapdl.aplot" title="ansys.mapdl.core.Mapdl.aplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.aplot</span></code></a>,
 <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.Mapdl.eplot.html#ansys.mapdl.core.Mapdl.eplot" title="ansys.mapdl.core.Mapdl.eplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.eplot</span></code></a>, etc..  Plots will
-be generated within MAPDL and then shown using <a class="reference external" href="https://matplotlib.org/stable/contents.html">matploblib</a>.</p>
+be generated within MAPDL and then shown using
+<a class="reference external" href="https://matplotlib.org">matploblib</a>.</p>
 <p>Start PyMAPDL</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
@@ -473,7 +479,8 @@ be generated within MAPDL and then shown using <a class="reference external" hre
 <figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../_images/aplot.png"><img alt="../_images/aplot.png" src="../_images/aplot.png" style="width: 400pt;" /></a>
 <figcaption>
-<p><span class="caption-text">Area Plot from MAPDL displayed using <a class="reference external" href="https://matplotlib.org/stable/contents.html">matploblib</a></span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Area Plot from MAPDL displayed using
+<a class="reference external" href="https://matplotlib.org">matplotlib</a></span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For more details on the plotting functions, see <a class="reference internal" href="../contribution_and_api/plotting.html#ref-plotting-api"><span class="std std-ref">Plotting</span></a>.</p>

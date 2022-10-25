@@ -279,6 +279,11 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Install CentOS7 WSL distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#install-ansys-products-in-wsl-centos7">
      Install Ansys products in WSL CentOS7
     </a>
@@ -473,10 +478,11 @@
 <p>This page shows you how to use a PyAnsys library, more specifically PyMAPDL,
 in the Windows Subsystem for Linux (WSL). WSL is a compatibility layer for
 running Linux binary executables natively on Windows 10, Windows 11, and
-Windows Server 2019. For more information, see <a class="reference external" href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">Wikipedia-WSL</a>.</p>
+Windows Server 2019. For more information, see <a class="reference external" href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">Wikipedia WSL</a>.</p>
 <p>Sections on this page walk you through the installation of WSL on Windows and then
 show how to use it together with MAPDL, PyMAPDL, and Docker.</p>
-<p>For more information about WSL, see <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/about">What is the Windows Subsystem for Linux?</a>.</p>
+<p>For more information about WSL, see
+<a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/about">What is the Windows Subsystem for Linux</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This approach hasn’t been fully tested with a VPN connection. If you
@@ -487,17 +493,21 @@ disconnect from the VPN.</p>
 <h2>Run PyMAPDL on WSL<a class="headerlink" href="#run-pymapdl-on-wsl" title="Permalink to this heading">#</a></h2>
 <section id="install-wsl">
 <h3>Install WSL<a class="headerlink" href="#install-wsl" title="Permalink to this heading">#</a></h3>
-<p>Install WSL by following Microsoft’s directions at <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install/">Install WSL</a>.</p>
+<p>Install WSL by following Microsoft’s directions at
+<a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install/">Microsoft: Install WSL</a>.</p>
 <p>Currently there are two versions of WSL: WSL1 abd WSL2. Because WSL2 is
 the latest and includes many improvements over WSL1, using WSL2 is highly recommended.</p>
 </section>
 <section id="install-centos7-wsl-distribution">
 <h3>Install CentOS7 WSL distribution<a class="headerlink" href="#install-centos7-wsl-distribution" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="id1">
+<h3>Install CentOS7 WSL distribution<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>You should use the CentOS7 WSL distribution for working with PyAnsys
 libraries.</p>
 <p>You can install it using an unofficial WSL distribution from
-<a class="reference external" href="https://github.com/wsldl-pg/CentWSL/">https://github.com/wsldl-pg/CentWSL/</a> or
-<a class="reference external" href="https://github.com/mishamosher/CentOS-WSL/">https://github.com/mishamosher/CentOS-WSL/</a> .</p>
+<a class="reference external" href="https://github.com/wsldl-pg/CentWSL/">CentOS-WSL</a> or
+<a class="reference external" href="https://github.com/mishamosher/CentOS-WSL/">CentOS WSL</a> .</p>
 <p>Optionally, you can try Ubuntu, but it has not been tested yet in the context of WSL.</p>
 </section>
 <section id="install-ansys-products-in-wsl-centos7">
@@ -509,7 +519,7 @@ required libraries:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo yum install openssl openssh-clients mesa-libGL mesa-libGLU motif libgfortran
 </pre></div>
 </div>
-<p>If you are using Ubuntu, follow the instructions in <a class="reference external" href="https://mapdldocs.pyansys.com/getting_started/running_mapdl.html#ubuntu/">Run MAPDL: Ubuntu</a> .</p>
+<p>If you are using Ubuntu, follow the instructions in <a class="reference external" href="https://mapdl.docs.pyansys.com/troubleshoot/troubleshoot.html?#ubuntu">Run MAPDL: Ubuntu</a> .</p>
 </section>
 <section id="install-ansys-products">
 <h4>Install Ansys products<a class="headerlink" href="#install-ansys-products" title="Permalink to this heading">#</a></h4>
@@ -560,14 +570,14 @@ using a symbolic link, to your Ansys installation directory (<code class="docuti
 <h4>Open ports<a class="headerlink" href="#open-ports" title="Permalink to this heading">#</a></h4>
 <p><strong>Theory:</strong>
 You should open the ports <code class="docutils literal notranslate"><span class="pre">1055</span></code> and <code class="docutils literal notranslate"><span class="pre">2325</span></code> for the license server
-communication in <strong>Windows Firewall Advanced</strong>. You can see the steps in <a class="reference external" href="https://answers.microsoft.com/en-us/windows/forum/all/how-to-open-port-in-windows-10-firewall/f38f67c8-23e8-459d-9552-c1b94cca579a/">How to
-open port in Windows 10 Firewall</a>.</p>
+communication in <strong>Windows Firewall Advanced</strong>. You can see the steps in
+<a class="reference external" href="https://answers.microsoft.com/en-us/windows/forum/all/how-to-open-port-in-windows-10-firewall/f38f67c8-23e8-459d-9552-c1b94cca579a/">How to open port in Windows 10 Firewall</a>.</p>
 <p><strong>Reality:</strong>
 This works if you want to run a Docker image using WSL Linux image to host that
 Docker image. The Docker image successfully communicates with the Windows
 License Server using these ports if you use the <code class="docutils literal notranslate"><span class="pre">'-p'</span></code> flag when running the
-Docker image and these ports are open.  See <a class="reference internal" href="#run-mapdl-on-a-local-docker-image">Run MAPDL on a local Docker
-image</a>.</p>
+Docker image and these ports are open.
+See <a class="reference internal" href="#run-mapdl-on-a-local-docker-image">Run MAPDL on a local Docker image</a>.</p>
 <p>If you want to run MAPDL in the CentOS7 image and use the Windows license
 server, opening the ports might not work properly because the Windows firewall
 seems to block all traffic coming from WSL. For security purposes, you should
@@ -575,7 +585,8 @@ still try to open ports <code class="docutils literal notranslate"><span class="
 MAPDL installation can communicate with the Windows hosts. If you are having
 problems after setting the firewall rules, you might have to disable the Windows
 firewall for the WSL ethernet virtual interface. This might pose some unknown
-side effects and security risk so use it with caution. See <a class="reference internal" href="#disable-firewall-on-wsl-ethernet">Disable Firewall on WSL Ethernet</a>.</p>
+side effects and security risk so use it with caution.
+See <a class="reference external" href="https://github.com/cascadium/wsl-windows-toolbar-launcher#firewall-rules">Disabling Firewall on WSL Ethernet</a>.</p>
 </section>
 <section id="set-up-an-environmental-variable-in-wsl-that-points-to-windows-host-license-server">
 <h4>Set up an environmental variable in WSL that points to Windows host license server<a class="headerlink" href="#set-up-an-environmental-variable-in-wsl-that-points-to-windows-host-license-server" title="Permalink to this heading">#</a></h4>
@@ -638,15 +649,14 @@ environment variable with that IP address:</p>
 file) to run the above commands all at once.</p>
 <p>Notice that the WSL internal gRPC port (<code class="docutils literal notranslate"><span class="pre">50052</span></code>) is being mapped to a
 different Windows host port (<code class="docutils literal notranslate"><span class="pre">50053</span></code>) to avoid ports conflicts.</p>
-<p>This image is ready to be connected to from WSL or a Windows host, but the port
-and IP address should be specified. Here are two methods that you can use.</p>
-<p><strong>Method 1</strong></p>
+<p>This image is ready to be connected to from WSL or Windows Host but the port
+and IP should be specified as:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">50053</span><span class="p">,</span> <span class="n">start_instance</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Method 2</strong></p>
+<p>Or:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">Mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">Mapdl</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">50053</span><span class="p">)</span>
@@ -695,12 +705,11 @@ distribution.</p>
 <section id="other-ansys-installation-flags">
 <h3>Other Ansys installation flags<a class="headerlink" href="#other-ansys-installation-flags" title="Permalink to this heading">#</a></h3>
 <p>You can obtain license server information with one of the following, inspecting
-the last lines of the <code class="docutils literal notranslate"><span class="pre">INSTALL</span></code> file, Here are two methods that you can use.</p>
-<p><strong>Method 1</strong></p>
+the last lines of the <code class="docutils literal notranslate"><span class="pre">INSTALL</span></code> file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./INSTALL --help
 </pre></div>
 </div>
-<p><strong>Method 2</strong></p>
+<p>Or:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat ./INSTALL
 </pre></div>
 </div>
@@ -763,7 +772,7 @@ as mentioned earlier, this issue is solved.</p>
 <div class="highlight-pwsh notranslate"><div class="highlight"><pre><span></span><span class="n">powershell</span><span class="p">.</span><span class="n">exe</span> <span class="n">-Command</span> <span class="s2">&quot;Set-NetFirewallProfile -DisabledInterfaceAliases \&quot;</span><span class="n">vEthernet</span> <span class="p">(</span><span class="n">WSL</span><span class="p">)\</span><span class="s2">&quot;&quot;</span>
 </pre></div>
 </div>
-<p>Link: <a class="reference external" href="https://github.com/cascadium/wsl-windows-toolbar-launcher#firewall-rules/">https://github.com/cascadium/wsl-windows-toolbar-launcher#firewall-rules/</a></p>
+<p>Link: <a class="reference external" href="https://github.com/cascadium/wsl-windows-toolbar-launcher#firewall-rules">Disabling Firewall on WSL Ethernet</a></p>
 </section>
 <section id="windows-10-port-forwarding">
 <h3>Windows 10 port forwarding<a class="headerlink" href="#windows-10-port-forwarding" title="Permalink to this heading">#</a></h3>

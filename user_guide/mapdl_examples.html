@@ -278,6 +278,11 @@
    Using Python to Code UPF Subroutines
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="krylov.html">
+   Harmonic analysis using the Krylov method
+  </a>
+ </li>
 </ul>
 
     
@@ -353,7 +358,8 @@
 <h1>ANSYS APDL interactive control examples<a class="headerlink" href="#ansys-apdl-interactive-control-examples" title="Permalink to this heading">#</a></h1>
 <p>These examples demonstrate how to convert an existing
 ANSYS APDL script to a Python PyMAPDL script. You could also simply
-use the built-in <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.convert_script.html#ansys.mapdl.core.convert_script" title="ansys.mapdl.core.convert_script"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_script()</span></code></a> function within <a class="reference external" href="https://pypi.org/project/ansys-mapdl-core/">ansys-mapdl-core</a> to convert an existing
+use the built-in <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.convert_script.html#ansys.mapdl.core.convert_script" title="ansys.mapdl.core.convert_script"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_script()</span></code></a> function within
+<a class="reference external" href="https://mapdl.docs.pyansys.com/">ansys-mapdl-core</a> to convert an existing
 input file.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">core</span> <span class="k">as</span> <span class="n">pymapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">inputfile</span> <span class="o">=</span> <span class="s1">&#39;ansys_inputfile.inp&#39;</span>
@@ -768,7 +774,8 @@ FINISH
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;spot_weld.inp&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Here is the Python script using <a class="reference external" href="https://pypi.org/project/ansys-mapdl-reader/">ansys-mapdl-reader</a> package to access the results
+<p>Here is the Python script using
+<a class="reference external" href="https://reader.docs.pyansys.com/">ansys-mapdl-reader</a> package to access the results
 after running the MAPDL analysis.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">reader</span> <span class="k">as</span> <span class="n">pymapdl_reader</span>
 

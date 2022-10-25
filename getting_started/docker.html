@@ -321,7 +321,7 @@
               <article class="bd-article" role="main">
                 
   <section id="use-mapdl-through-docker">
-<span id="docker"></span><h1>Use MAPDL through Docker<a class="headerlink" href="#use-mapdl-through-docker" title="Permalink to this heading">#</a></h1>
+<span id="pymapdl-docker"></span><h1>Use MAPDL through Docker<a class="headerlink" href="#use-mapdl-through-docker" title="Permalink to this heading">#</a></h1>
 <p>You can run MAPDL within a container on any OS using <cite>docker</cite> and
 connect to it via PyMAPDL.</p>
 <p>There are several situations in which it is advantageous to run MAPDL
@@ -334,7 +334,8 @@ in a containerized environment (for example, Docker or Singularity):</p>
 </ul>
 <section id="install-the-mapdl-image">
 <h2>Install the MAPDL image<a class="headerlink" href="#install-the-mapdl-image" title="Permalink to this heading">#</a></h2>
-<p>There is a Docker image hosted on the <a class="reference external" href="https://https://github.com/pyansys/pymapdl">PyMAPDL GitHub</a> repository that you
+<p>There is a Docker image hosted on the
+<a class="reference external" href="https://github.com/pyansys/pymapdl">PyMAPDL GitHub</a> repository that you
 can download using your GitHub credentials.</p>
 <p>Assuming that you have docker installed, you can get started by
 authorizing Docker to access this repository using a personal access
@@ -418,7 +419,7 @@ docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -np 4
 </pre></div>
 </div>
 <p>For additional command-line arguments, see the Ansys
-documentation at <a class="reference external" href="https://ansyshelp.ansys.com">ANSYS help</a>. Also,
+documentation at <a class="reference external" href="https://ansyshelp.ansys.com">ANSYS help</a>.  Also,
 be sure to have the appropriate license for additional HPC features.</p>
 </section>
 <section id="use-restart-policy-with-mapdl-products">

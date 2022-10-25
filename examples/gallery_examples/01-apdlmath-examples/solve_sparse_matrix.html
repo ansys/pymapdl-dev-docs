@@ -251,6 +251,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../00-mapdl-examples/basic_dpf_example.html">
+     Basic DPF-Core Usage with PyMAPDL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00-mapdl-examples/composite_dcb.html">
+     Static simulation of double cantilever beam test via cohesive elements
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../00-mapdl-examples/contact_elements.html">
      Contact Element Example
     </a>
@@ -541,6 +551,11 @@
    UPF in PyMAPDL
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extended_examples/Krylov/krylov_example.html">
+   Harmonic analysis using the frequency-sweep Krylov method
+  </a>
+ </li>
 </ul>
 
     
@@ -620,7 +635,7 @@ matrix, mass matrix, and the load vector.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">list_files</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;HexBeam.cdb&#39;, &#39;LatheCutter.anf&#39;, &#39;PRSMEMB.DSP&#39;, &#39;PRSMEMB.emat&#39;, &#39;PRSMEMB.esav&#39;, &#39;PRSMEMB.full&#39;, &#39;PRSMEMB.mntr&#39;, &#39;PRSMEMB.mode&#39;, &#39;PRSMEMB.rst&#39;, &#39;PRSMEMB000.jpg&#39;, &#39;PRSMEMB001.jpg&#39;, &#39;PRSMEMB002.jpg&#39;, &#39;PRSMEMB003.jpg&#39;, &#39;PRSMEMB004.jpg&#39;, &#39;PRSMEMB005.jpg&#39;, &#39;PRSMEMB006.jpg&#39;, &#39;PRSMEMB007.jpg&#39;, &#39;PRSMEMB008.jpg&#39;, &#39;PRSMEMB009.jpg&#39;, &#39;PRSMEMB010.jpg&#39;, &#39;PRSMEMB011.jpg&#39;, &#39;SCRATCH&#39;, &#39;SOLVIT.MAC&#39;, &#39;TABLE_1&#39;, &#39;TABLE_2&#39;, &#39;__tmp_sys_out_bjlatyeqwp__&#39;, &#39;__tmp_sys_out_dkrkupcklp__&#39;, &#39;__tmp_sys_out_ebzlslsnvp__&#39;, &#39;__tmp_sys_out_elanrnoooe__&#39;, &#39;__tmp_sys_out_evdkqhknhw__&#39;, &#39;__tmp_sys_out_foefqccaiw__&#39;, &#39;__tmp_sys_out_fyvbpzibih__&#39;, &#39;__tmp_sys_out_gsnhziwfiq__&#39;, &#39;__tmp_sys_out_hqhhkpstko__&#39;, &#39;__tmp_sys_out_hrmwsuttms__&#39;, &#39;__tmp_sys_out_jxbbcmjhhw__&#39;, &#39;__tmp_sys_out_jzwjiruxid__&#39;, &#39;__tmp_sys_out_kazxsgoogc__&#39;, &#39;__tmp_sys_out_kzpmuphirh__&#39;, &#39;__tmp_sys_out_nyteijoaib__&#39;, &#39;__tmp_sys_out_omcjiykvap__&#39;, &#39;__tmp_sys_out_rfwqgyariz__&#39;, &#39;__tmp_sys_out_riftlnrtyc__&#39;, &#39;__tmp_sys_out_smqsxnsviu__&#39;, &#39;__tmp_sys_out_sqxztwpcmt__&#39;, &#39;__tmp_sys_out_suhjozjxmx__&#39;, &#39;__tmp_sys_out_tnepzppulv__&#39;, &#39;__tmp_sys_out_uebkjcalcg__&#39;, &#39;__tmp_sys_out_vhuvipaubw__&#39;, &#39;__tmp_sys_out_vulcqkumxu__&#39;, &#39;__tmp_sys_out_wsrbilqbqx__&#39;, &#39;__tmp_sys_out_xjkqavvumn__&#39;, &#39;__tmp_sys_out_xxqtltghno__&#39;, &#39;__tmp_sys_out_ybkhqwvbjh__&#39;, &#39;__tmp_sys_out_yllgrdphiu__&#39;, &#39;__tmp_sys_out_yyhsugjygl__&#39;, &#39;__tmp_sys_out_zlkrmojtsk__&#39;, &#39;__tmp_sys_out_zoxwcklmnm__&#39;, &#39;_tmp.iges&#39;, &#39;anaconda-post.log&#39;, &#39;anstmp&#39;, &#39;ansys_inc&#39;, &#39;bin&#39;, &#39;bracket.iges&#39;, &#39;dev&#39;, &#39;etc&#39;, &#39;file.DSP&#39;, &#39;file.ans_log&#39;, &#39;file.emat&#39;, &#39;file.err&#39;, &#39;file.esav&#39;, &#39;file.full&#39;, &#39;file.grph&#39;, &#39;file.ldhi&#39;, &#39;file.log&#39;, &#39;file.mlv&#39;, &#39;file.mntr&#39;, &#39;file.mode&#39;, &#39;file.page&#39;, &#39;file.r001&#39;, &#39;file.rdb&#39;, &#39;file.rsx&#39;, &#39;file.rth&#39;, &#39;file.stat&#39;, &#39;file000.png&#39;, &#39;file001.png&#39;, &#39;gyrzywatxs.txt&#39;, &#39;home&#39;, &#39;lib&#39;, &#39;lib64&#39;, &#39;manifold_geometry.anf&#39;, &#39;media&#39;, &#39;mnt&#39;, &#39;opt&#39;, &#39;proc&#39;, &#39;root&#39;, &#39;run&#39;, &#39;sbin&#39;, &#39;srv&#39;, &#39;sys&#39;, &#39;tmp&#39;, &#39;tmp.cdb&#39;, &#39;tmp_aopsktghek.inp&#39;, &#39;tmp_esaurvcfkb.inp&#39;, &#39;tmp_ghvrnnvnzy.inp&#39;, &#39;tmp_hlwyjkrzuu.inp&#39;, &#39;tmp_huwggkqzhe.inp&#39;, &#39;tmp_iqadnwjysq.inp&#39;, &#39;tmp_iqxfpistbk.inp&#39;, &#39;tmp_lktubxocwc.inp&#39;, &#39;tmp_lzbpoxltrc.inp&#39;, &#39;tmp_ngkvpttquk.inp&#39;, &#39;tmp_ptsvlmxmdg.inp&#39;, &#39;tmp_qvudgzntqk.inp&#39;, &#39;tmp_sqzwjaiztb.inp&#39;, &#39;tmp_wwbvapuxwv.inp&#39;, &#39;tmp_xgrblttyia.inp&#39;, &#39;tryurooudo.txt&#39;, &#39;usr&#39;, &#39;var&#39;, &#39;vm1.dat&#39;, &#39;vm1.vrt&#39;, &#39;vm153.dat&#39;, &#39;vm153.vrt&#39;, &#39;wing.dat&#39;, &#39;wougwbbfte.txt&#39;]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;HexBeam.cdb&#39;, &#39;LatheCutter.anf&#39;, &#39;PRSMEMB.DSP&#39;, &#39;PRSMEMB.emat&#39;, &#39;PRSMEMB.esav&#39;, &#39;PRSMEMB.full&#39;, &#39;PRSMEMB.mntr&#39;, &#39;PRSMEMB.mode&#39;, &#39;PRSMEMB.rst&#39;, &#39;PRSMEMB000.jpg&#39;, &#39;PRSMEMB001.jpg&#39;, &#39;PRSMEMB002.jpg&#39;, &#39;PRSMEMB003.jpg&#39;, &#39;PRSMEMB004.jpg&#39;, &#39;PRSMEMB005.jpg&#39;, &#39;PRSMEMB006.jpg&#39;, &#39;PRSMEMB007.jpg&#39;, &#39;PRSMEMB008.jpg&#39;, &#39;PRSMEMB009.jpg&#39;, &#39;PRSMEMB010.jpg&#39;, &#39;PRSMEMB011.jpg&#39;, &#39;SCRATCH&#39;, &#39;SOLVIT.MAC&#39;, &#39;TABLE_1&#39;, &#39;TABLE_2&#39;, &#39;__tmp_sys_out_bduttvcjzt__&#39;, &#39;__tmp_sys_out_bekzvxlekl__&#39;, &#39;__tmp_sys_out_dcjikczqmz__&#39;, &#39;__tmp_sys_out_fvfmbgwbgy__&#39;, &#39;__tmp_sys_out_ghvfzlnnec__&#39;, &#39;__tmp_sys_out_gncfaeabps__&#39;, &#39;__tmp_sys_out_hemnhvagmo__&#39;, &#39;__tmp_sys_out_hompxxdtlt__&#39;, &#39;__tmp_sys_out_hrfcbskski__&#39;, &#39;__tmp_sys_out_izmqtokmhb__&#39;, &#39;__tmp_sys_out_jbhqsoyrxs__&#39;, &#39;__tmp_sys_out_jbyqdupfdq__&#39;, &#39;__tmp_sys_out_kxfucvbmwm__&#39;, &#39;__tmp_sys_out_kzrtazkpit__&#39;, &#39;__tmp_sys_out_lzyndpxxut__&#39;, &#39;__tmp_sys_out_odffnbryrn__&#39;, &#39;__tmp_sys_out_pcxpwuwtip__&#39;, &#39;__tmp_sys_out_piagnvbpdp__&#39;, &#39;__tmp_sys_out_pkjjoehxrt__&#39;, &#39;__tmp_sys_out_ptlzmbqyoe__&#39;, &#39;__tmp_sys_out_qrttcuseun__&#39;, &#39;__tmp_sys_out_rhycqjyrcd__&#39;, &#39;__tmp_sys_out_rtkeffmbmq__&#39;, &#39;__tmp_sys_out_sjddxmslsx__&#39;, &#39;__tmp_sys_out_skutcrlbqo__&#39;, &#39;__tmp_sys_out_szjqvtpqxw__&#39;, &#39;__tmp_sys_out_trvtiawisl__&#39;, &#39;__tmp_sys_out_uhrndsdqah__&#39;, &#39;__tmp_sys_out_unshthchjx__&#39;, &#39;__tmp_sys_out_utgeyqzvet__&#39;, &#39;__tmp_sys_out_vhsxmurile__&#39;, &#39;__tmp_sys_out_xajnnwjlco__&#39;, &#39;__tmp_sys_out_xdqrsqfbcd__&#39;, &#39;_tmp.iges&#39;, &#39;anaconda-post.log&#39;, &#39;anstmp&#39;, &#39;ansys_inc&#39;, &#39;bin&#39;, &#39;bracket.iges&#39;, &#39;bwpcoxfqfc.txt&#39;, &#39;dev&#39;, &#39;domteunqka.txt&#39;, &#39;etc&#39;, &#39;file.DSP&#39;, &#39;file.ans_log&#39;, &#39;file.emat&#39;, &#39;file.err&#39;, &#39;file.esav&#39;, &#39;file.full&#39;, &#39;file.ldhi&#39;, &#39;file.log&#39;, &#39;file.mlv&#39;, &#39;file.mntr&#39;, &#39;file.mode&#39;, &#39;file.page&#39;, &#39;file.r001&#39;, &#39;file.rdb&#39;, &#39;file.rsx&#39;, &#39;file.rth&#39;, &#39;file.stat&#39;, &#39;file000.jpg&#39;, &#39;file000.png&#39;, &#39;file001.png&#39;, &#39;home&#39;, &#39;hzcxhjyymr.txt&#39;, &#39;lib&#39;, &#39;lib64&#39;, &#39;manifold_geometry.anf&#39;, &#39;media&#39;, &#39;mnt&#39;, &#39;opt&#39;, &#39;proc&#39;, &#39;root&#39;, &#39;run&#39;, &#39;sbin&#39;, &#39;srv&#39;, &#39;sys&#39;, &#39;tmp&#39;, &#39;tmp.cdb&#39;, &#39;tmp_bcdjcdleqk.inp&#39;, &#39;tmp_ednqhpuwbn.inp&#39;, &#39;tmp_eijwwhoari.inp&#39;, &#39;tmp_eioxdtdqdv.inp&#39;, &#39;tmp_gbvhxhunll.inp&#39;, &#39;tmp_gnuohmsjvj.inp&#39;, &#39;tmp_hguhfrbtpb.inp&#39;, &#39;tmp_iwbiwfgrpt.inp&#39;, &#39;tmp_khfoheemud.inp&#39;, &#39;tmp_mcvxanxfgd.inp&#39;, &#39;tmp_msekklergy.inp&#39;, &#39;tmp_oupvyoepwm.inp&#39;, &#39;tmp_oyuuvjdnqm.inp&#39;, &#39;tmp_rhycfpstys.inp&#39;, &#39;tmp_sunxpmmmyr.inp&#39;, &#39;tmp_ytwsajzcid.inp&#39;, &#39;tmp_zmsjltgixo.inp&#39;, &#39;usr&#39;, &#39;var&#39;, &#39;vm1.dat&#39;, &#39;vm1.vrt&#39;, &#39;vm153.dat&#39;, &#39;vm153.vrt&#39;, &#39;vm5.dat&#39;, &#39;vm5.vrt&#39;, &#39;wing.dat&#39;]
 </pre></div>
 </div>
 <p>Extract the Stiffness matrix from the <code class="docutils literal notranslate"><span class="pre">FULL</span></code> file, in a sparse
@@ -668,7 +683,7 @@ matrix format.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5.815928297030127e-08
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5.815928297030219e-08
 </pre></div>
 </div>
 <p>We check the accuracy of the solution, by verifying that</p>
@@ -678,7 +693,7 @@ matrix format.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Residual error:&quot;</span><span class="p">,</span> <span class="n">kx</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span> <span class="o">/</span> <span class="n">b</span><span class="o">.</span><span class="n">norm</span><span class="p">())</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Residual error: 1.5401132003172023e-15
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Residual error: 1.6527505839386827e-15
 </pre></div>
 </div>
 <p>Summary of all allocated APDLMath Objects</p>
@@ -689,11 +704,11 @@ matrix format.</p>
 
   Name                   Type            Mem. (MB)       Dims            Workspace
 
-   ASUTDF                SMAT            0.011           [126:126]               1
-   APTPGW                VEC             0.001           126             1
-   BPEGBL                VEC             0.001           126             1
-   FIMKHY                VEC             0.001           126             1
-   NJQVGI                LSENGINE        --              --              1
+   WVGPLH                SMAT            0.011           [126:126]               1
+   GSUDEB                VEC             0.001           126             1
+   KVSMMD                VEC             0.001           126             1
+   SXAGOM                VEC             0.001           126             1
+   XPOWAL                LSENGINE        --              --              1
 </pre></div>
 </div>
 <p>Delete all APDLMath Objects</p>
@@ -704,7 +719,7 @@ matrix format.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.843 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.076 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-01-apdlmath-examples-solve-sparse-matrix-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/b535d56f0d83809d8b2924158195ccf5/solve_sparse_matrix.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">solve_sparse_matrix.py</span></code></a></p>

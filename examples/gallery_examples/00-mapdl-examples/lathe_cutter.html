@@ -250,6 +250,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="basic_dpf_example.html">
+     Basic DPF-Core Usage with PyMAPDL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="composite_dcb.html">
+     Static simulation of double cantilever beam test via cohesive elements
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="contact_elements.html">
      Contact Element Example
     </a>
@@ -538,6 +548,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../extended_examples/Python_UPF/python_upf_examples.html">
    UPF in PyMAPDL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extended_examples/Krylov/krylov_example.html">
+   Harmonic analysis using the frequency-sweep Krylov method
   </a>
  </li>
 </ul>
@@ -831,7 +846,7 @@ option <code class="docutils literal notranslate"><span class="pre">vtk</span></
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_lathe_cutter_002.png" srcset="../../../_images/sphx_glr_lathe_cutter_002.png" alt="lathe cutter" class = "sphx-glr-single-img"/></section>
+</section>
 <section id="step-4-pressure-load">
 <h2>Step 4: Pressure load<a class="headerlink" href="#step-4-pressure-load" title="Permalink to this heading">#</a></h2>
 <p>Create a pressure load, load it into MAPDL as a table array, verify the load,
@@ -875,7 +890,7 @@ form needed to define the MAPDL table array, you can use
 <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_lathe_cutter_003.png" srcset="../../../_images/sphx_glr_lathe_cutter_003.png" alt="lathe cutter" class = "sphx-glr-single-img"/><p>Solve the model.</p>
+<p>Solve the model.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
 <span class="k">if</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">solution</span><span class="o">.</span><span class="n">converged</span><span class="p">:</span>
@@ -895,7 +910,7 @@ form needed to define the MAPDL table array, you can use
 <span class="n">mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">plot_nodal_principal_stress</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_lathe_cutter_004.png" srcset="../../../_images/sphx_glr_lathe_cutter_004.png" alt="lathe cutter" class = "sphx-glr-single-img"/><section id="plotting-part-of-model">
+<img src="../../../_images/sphx_glr_lathe_cutter_002.png" srcset="../../../_images/sphx_glr_lathe_cutter_002.png" alt="lathe cutter" class = "sphx-glr-single-img"/><section id="plotting-part-of-model">
 <h3>Plotting - Part of Model<a class="headerlink" href="#plotting-part-of-model" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">csys</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;LOC&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.141</span><span class="p">)</span>
@@ -906,7 +921,7 @@ form needed to define the MAPDL table array, you can use
 <span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_lathe_cutter_005.png" srcset="../../../_images/sphx_glr_lathe_cutter_005.png" alt="lathe cutter" class = "sphx-glr-single-img"/></section>
+<img src="../../../_images/sphx_glr_lathe_cutter_003.png" srcset="../../../_images/sphx_glr_lathe_cutter_003.png" alt="lathe cutter" class = "sphx-glr-single-img"/></section>
 <section id="plotting-legend-options">
 <h3>Plotting - Legend Options<a class="headerlink" href="#plotting-legend-options" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">allsel</span><span class="p">()</span>
@@ -927,7 +942,7 @@ form needed to define the MAPDL table array, you can use
 <span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_lathe_cutter_006.png" srcset="../../../_images/sphx_glr_lathe_cutter_006.png" alt="lathe cutter" class = "sphx-glr-single-img"/><p>Let’s try out some scalar bar options from the
+<img src="../../../_images/sphx_glr_lathe_cutter_004.png" srcset="../../../_images/sphx_glr_lathe_cutter_004.png" alt="lathe cutter" class = "sphx-glr-single-img"/><p>Let’s try out some scalar bar options from the
 <a class="reference external" href="https://docs.pyvista.org/">PyVista documentation</a>.
 For example, let’s set black text on a beige background.</p>
 <p>The scalar bar keywords defined as a Python dictionary are an alternate
@@ -961,7 +976,7 @@ Left-click it and hold down the left mouse button while moving the mouse.</p>
 <span class="c1"># cmap names *_r usually reverses values.  Try cmap=&#39;jet_r&#39;</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_lathe_cutter_007.png" srcset="../../../_images/sphx_glr_lathe_cutter_007.png" alt="lathe cutter" class = "sphx-glr-single-img"/></section>
+<img src="../../../_images/sphx_glr_lathe_cutter_005.png" srcset="../../../_images/sphx_glr_lathe_cutter_005.png" alt="lathe cutter" class = "sphx-glr-single-img"/></section>
 </section>
 <section id="step-6-postprocessing">
 <h2>Step 6: Postprocessing<a class="headerlink" href="#step-6-postprocessing" title="Permalink to this heading">#</a></h2>
@@ -1004,17 +1019,8 @@ array([7283.37637597, 7651.99689433, 7308.07851329, 6839.63086963,
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PRINT S    NODAL SOLUTION PER NODE
-
- *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
- Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:48:09  OCT 24, 2022 CP=    146.363
-
- Lathe Cutter
-
-
-
- ** WARNING: PRE-RELEASE VERSION OF ANSYS 21.2BETA
-  ANSYS,INC TESTING IS NOT COMPLETE - CHECK RESULTS CAREFULLY **
+   *****ANSYS VERIFICATION RUN ONLY*****
+     DO NOT USE RESULTS FOR PRODUCTION
 
   ***** POST1 NODAL STRESS LISTING *****
 
@@ -1033,11 +1039,11 @@ array([7283.37637597, 7651.99689433, 7308.07851329, 6839.63086963,
     1163   5994.2      -215.18      -712.68       6706.9       6472.5
 
  MINIMUM VALUES
- NODE       1163         1163         1163          426          426
+ NODE          0            0            0            0            0
  VALUE    5994.2      -215.18      -712.68       6387.0       6255.9
 
  MAXIMUM VALUES
- NODE         85           85          415           85           85
+ NODE          0            0            0            0            0
  VALUE    7652.0       962.92       267.33       7629.0       7205.2
 </pre></div>
 </div>
@@ -1046,7 +1052,7 @@ array([7283.37637597, 7651.99689433, 7308.07851329, 6839.63086963,
 <span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mapdl_s_1_list</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[84.0, 7283.0, 300.35, 212.68, 7070.0, 7027.0], [85.0, 7652.0, 962.92, 23.004, 7629.0, 7205.0], [415.0, 7308.0, 489.51, 267.33, 7040.0, 6932.0], [416.0, 6839.0, 329.26, 133.98, 6705.0, 6610.0], [417.0, 7173.0, 371.75, 119.59, 7053.0, 6931.0], [425.0, 6892.0, 310.35, -121.13, 7013.0, 6808.0], [426.0, 6399.0, 283.26, 12.246, 6387.0, 6255.0], [1104.0, 6607.0, 417.21, 163.29, 6444.0, 6321.0], [1163.0, 5994.0, -215.18, -712.68, 6706.0, 6472.0]]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[84.0, 7283.4, 300.35, 212.68, 7070.7, 7027.3], [85.0, 7652.0, 962.92, 23.004, 7629.0, 7205.2], [415.0, 7308.1, 489.51, 267.33, 7040.7, 6932.3], [416.0, 6839.6, 329.26, 133.98, 6705.7, 6610.2], [417.0, 7173.3, 371.75, 119.59, 7053.7, 6931.1], [425.0, 6892.5, 310.35, -121.13, 7013.7, 6808.2], [426.0, 6399.2, 283.26, 12.246, 6387.0, 6255.9], [1104.0, 6607.4, 417.21, 163.29, 6444.2, 6321.0], [1163.0, 5994.2, -215.18, -712.68, 6706.9, 6472.5]]
 </pre></div>
 </div>
 <p>Use this command to obtain the data as an array:</p>
@@ -1054,15 +1060,15 @@ array([7283.37637597, 7651.99689433, 7308.07851329, 6839.63086963,
 <span class="nb">print</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mapdl_s_1_array</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[  84.    7283.     300.35   212.68  7070.    7027.   ]
- [  85.    7652.     962.92    23.004 7629.    7205.   ]
- [ 415.    7308.     489.51   267.33  7040.    6932.   ]
- [ 416.    6839.     329.26   133.98  6705.    6610.   ]
- [ 417.    7173.     371.75   119.59  7053.    6931.   ]
- [ 425.    6892.     310.35  -121.13  7013.    6808.   ]
- [ 426.    6399.     283.26    12.246 6387.    6255.   ]
- [1104.    6607.     417.21   163.29  6444.    6321.   ]
- [1163.    5994.    -215.18  -712.68  6706.    6472.   ]]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[  84.    7283.4    300.35   212.68  7070.7   7027.3  ]
+ [  85.    7652.     962.92    23.004 7629.    7205.2  ]
+ [ 415.    7308.1    489.51   267.33  7040.7   6932.3  ]
+ [ 416.    6839.6    329.26   133.98  6705.7   6610.2  ]
+ [ 417.    7173.3    371.75   119.59  7053.7   6931.1  ]
+ [ 425.    6892.5    310.35  -121.13  7013.7   6808.2  ]
+ [ 426.    6399.2    283.26    12.246 6387.    6255.9  ]
+ [1104.    6607.4    417.21   163.29  6444.2   6321.   ]
+ [1163.    5994.2   -215.18  -712.68  6706.9   6472.5  ]]
 </pre></div>
 </div>
 <p>or as a DataFrame:</p>
@@ -1101,11 +1107,11 @@ array([7283.37637597, 7651.99689433, 7308.07851329, 6839.63086963,
     <tr>
       <th>0</th>
       <td>84.0</td>
-      <td>7283.0</td>
+      <td>7283.4</td>
       <td>300.35</td>
       <td>212.680</td>
-      <td>7070.0</td>
-      <td>7027.0</td>
+      <td>7070.7</td>
+      <td>7027.3</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1114,34 +1120,34 @@ array([7283.37637597, 7651.99689433, 7308.07851329, 6839.63086963,
       <td>962.92</td>
       <td>23.004</td>
       <td>7629.0</td>
-      <td>7205.0</td>
+      <td>7205.2</td>
     </tr>
     <tr>
       <th>2</th>
       <td>415.0</td>
-      <td>7308.0</td>
+      <td>7308.1</td>
       <td>489.51</td>
       <td>267.330</td>
-      <td>7040.0</td>
-      <td>6932.0</td>
+      <td>7040.7</td>
+      <td>6932.3</td>
     </tr>
     <tr>
       <th>3</th>
       <td>416.0</td>
-      <td>6839.0</td>
+      <td>6839.6</td>
       <td>329.26</td>
       <td>133.980</td>
-      <td>6705.0</td>
-      <td>6610.0</td>
+      <td>6705.7</td>
+      <td>6610.2</td>
     </tr>
     <tr>
       <th>4</th>
       <td>417.0</td>
-      <td>7173.0</td>
+      <td>7173.3</td>
       <td>371.75</td>
       <td>119.590</td>
-      <td>7053.0</td>
-      <td>6931.0</td>
+      <td>7053.7</td>
+      <td>6931.1</td>
     </tr>
   </tbody>
 </table>
@@ -1196,7 +1202,7 @@ Read more about it at <a class="reference external" href="https://docs.pyvista.o
 <span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_lathe_cutter_008.png" srcset="../../../_images/sphx_glr_lathe_cutter_008.png" alt="lathe cutter" class = "sphx-glr-single-img"/><p>Generate a plot with three slice planes.</p>
+<img src="../../../_images/sphx_glr_lathe_cutter_006.png" srcset="../../../_images/sphx_glr_lathe_cutter_006.png" alt="lathe cutter" class = "sphx-glr-single-img"/><p>Generate a plot with three slice planes.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">slices</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.slice_orthogonal.html#pyvista.UnstructuredGrid.slice_orthogonal" title="pyvista.UnstructuredGrid.slice_orthogonal" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">grid</span><span class="o">.</span><span class="n">slice_orthogonal</span></a><span class="p">()</span>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.MultiBlock.plot.html#pyvista.MultiBlock.plot" title="pyvista.MultiBlock.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">slices</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span>
     <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;p1&quot;</span><span class="p">,</span>
@@ -1210,7 +1216,7 @@ Read more about it at <a class="reference external" href="https://docs.pyvista.o
 <span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_lathe_cutter_009.png" srcset="../../../_images/sphx_glr_lathe_cutter_009.png" alt="lathe cutter" class = "sphx-glr-single-img"/><p>Generate a grid with multiple slices in the same plane.</p>
+<img src="../../../_images/sphx_glr_lathe_cutter_007.png" srcset="../../../_images/sphx_glr_lathe_cutter_007.png" alt="lathe cutter" class = "sphx-glr-single-img"/><p>Generate a grid with multiple slices in the same plane.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">slices</span></a> <span class="o">=</span> <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.UnstructuredGrid.slice_along_axis.html#pyvista.UnstructuredGrid.slice_along_axis" title="pyvista.UnstructuredGrid.slice_along_axis" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">grid</span><span class="o">.</span><span class="n">slice_along_axis</span></a><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
 <a href="https://docs.pyvista.org/api/core/_autosummary/pyvista.MultiBlock.plot.html#pyvista.MultiBlock.plot" title="pyvista.MultiBlock.plot" class="sphx-glr-backref-module-pyvista sphx-glr-backref-type-py-method"><span class="n">slices</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span>
     <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;p1&quot;</span><span class="p">,</span>
@@ -1224,11 +1230,11 @@ Read more about it at <a class="reference external" href="https://docs.pyvista.o
 <span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_lathe_cutter_010.png" srcset="../../../_images/sphx_glr_lathe_cutter_010.png" alt="lathe cutter" class = "sphx-glr-single-img"/><p>Finally, exit MAPDL.</p>
+<img src="../../../_images/sphx_glr_lathe_cutter_008.png" srcset="../../../_images/sphx_glr_lathe_cutter_008.png" alt="lathe cutter" class = "sphx-glr-single-img"/><p>Finally, exit MAPDL.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.828 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.907 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-lathe-cutter-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/40e09c69e156638398f7e5b3df296d8f/lathe_cutter.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">lathe_cutter.py</span></code></a></p>

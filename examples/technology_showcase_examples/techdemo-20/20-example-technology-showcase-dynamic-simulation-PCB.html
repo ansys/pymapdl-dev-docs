@@ -249,6 +249,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery_examples/00-mapdl-examples/basic_dpf_example.html">
+     Basic DPF-Core Usage with PyMAPDL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery_examples/00-mapdl-examples/composite_dcb.html">
+     Static simulation of double cantilever beam test via cohesive elements
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../gallery_examples/00-mapdl-examples/contact_elements.html">
      Contact Element Example
     </a>
@@ -539,6 +549,11 @@
    UPF in PyMAPDL
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extended_examples/Krylov/krylov_example.html">
+   Harmonic analysis using the frequency-sweep Krylov method
+  </a>
+ </li>
 </ul>
 
     
@@ -693,7 +708,7 @@ and flexible surface-to-surface contact pairs are used to define the contact
 between the IC packages and the circuit board.</p>
 <section id="starting-mapdl-as-a-service-and-importing-an-external-model">
 <h3>Starting MAPDL as a service and importing an external model<a class="headerlink" href="#starting-mapdl-as-a-service-and-importing-an-external-model" title="Permalink to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">_.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="kn">from</span> <span class="nn">ansys.mapdl.core.examples</span> <span class="kn">import</span> <span class="n">download_tech_demo_data</span>
@@ -2564,7 +2579,7 @@ example of how each module can be used.</p>
 <section id="using-pymapdl-result-reader">
 <h4>Using PyMAPDL result reader<a class="headerlink" href="#using-pymapdl-result-reader" title="Permalink to this heading">#</a></h4>
 <p><em>Not recommended</em> - PyMAPDL reader library is in process to being deprecated.
-It is recommended to use <a class="reference external" href="https://postdocs.pyansys.com/">DPF Post</a>.</p>
+It is recommended to use <a class="reference external" href="https://post.docs.pyansys.com/">DPF Post</a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl_result</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">result</span>
 <span class="n">mapdl_result</span><span class="o">.</span><span class="n">plot_nodal_displacement</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>

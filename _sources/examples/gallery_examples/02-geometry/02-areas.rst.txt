@@ -222,7 +222,7 @@ Return an array of the area IDs
 Area Geometry
 ~~~~~~~~~~~~~
 Get the VTK ``PolyData`` containing lines.  This VTK mesh can be
-saved or plotted.  For more details, visit https://docs.pyvista.com
+saved or plotted.  For more details, visit https://docs.pyvista.org/
 
 Note that this is a method so you can select the quality of the
 areas (mesh density), and if you would like a merged output or
@@ -245,7 +245,7 @@ individual meshes.
  .. code-block:: none
 
 
-    [UnstructuredGrid (0x7fda967e2160)
+    [UnstructuredGrid (0x7fe87afd2d00)
       N Cells:	12
       N Points:	24
       X Bounds:	0.000e+00, 1.000e+00
@@ -489,7 +489,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.258 seconds)
+   **Total running time of the script:** ( 0 minutes  3.905 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_02-geometry_02-areas.py:

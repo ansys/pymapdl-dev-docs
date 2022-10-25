@@ -250,6 +250,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../00-mapdl-examples/basic_dpf_example.html">
+     Basic DPF-Core Usage with PyMAPDL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00-mapdl-examples/composite_dcb.html">
+     Static simulation of double cantilever beam test via cohesive elements
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../00-mapdl-examples/contact_elements.html">
      Contact Element Example
     </a>
@@ -540,6 +550,11 @@
    UPF in PyMAPDL
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extended_examples/Krylov/krylov_example.html">
+   Harmonic analysis using the frequency-sweep Krylov method
+  </a>
+ </li>
 </ul>
 
     
@@ -727,7 +742,7 @@ ansys.mapdl Version: 0.64.dev0
 <section id="area-geometry">
 <h2>Area Geometry<a class="headerlink" href="#area-geometry" title="Permalink to this heading">#</a></h2>
 <p>Get the VTK <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> containing lines.  This VTK mesh can be
-saved or plotted.  For more details, visit <a class="reference external" href="https://docs.pyvista.com">https://docs.pyvista.com</a></p>
+saved or plotted.  For more details, visit <a class="reference external" href="https://docs.pyvista.org/">https://docs.pyvista.org/</a></p>
 <p>Note that this is a method so you can select the quality of the
 areas (mesh density), and if you would like a merged output or
 individual meshes.</p>
@@ -735,7 +750,7 @@ individual meshes.</p>
 <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">areas</span></a>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[UnstructuredGrid (0x7fda967e2160)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[UnstructuredGrid (0x7fe87afd2d00)
   N Cells:  12
   N Points: 24
   X Bounds: 0.000e+00, 1.000e+00
@@ -859,7 +874,7 @@ camera direction from the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.258 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.905 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-02-geometry-02-areas-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/4d6d7a4936327775f97c6ec46d7edc3f/02-areas.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">02-areas.py</span></code></a></p>

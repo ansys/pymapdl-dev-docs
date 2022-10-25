@@ -55,7 +55,7 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="MAPDL Commands" href="../mapdl_commands/index.html" />
+    <link rel="next" title="Harmonic analysis using the Krylov method" href="krylov.html" />
     <link rel="prev" title="File Explorer Overview" href="xpl.html" />
 <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
@@ -278,6 +278,11 @@
    Using Python to Code UPF Subroutines
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="krylov.html">
+   Harmonic analysis using the Krylov method
+  </a>
+ </li>
 </ul>
 
     
@@ -438,7 +443,7 @@ table below). This list will be expanded in the future.</p>
 <section id="python-upf-methodology">
 <h2>Python UPF Methodology<a class="headerlink" href="#python-upf-methodology" title="Permalink to this heading">#</a></h2>
 <p>Coding a Python UPF is different from using a compiled language like C/C++ or Fortran,
-mainly in terms of the API. Because the <a class="reference external" href="https://storage.ansys.com/doclinks/external.html?code=grpc-ELU-N2a">gRPC technology</a>
+mainly in terms of the API. Because the <a class="reference external" href="https://grpc.io/">gRPC technology</a>
 is used to handle the
 communication and the exchange of data between the Python process and the Mechanical APDL
 process, you need to understand the way this feature handles the

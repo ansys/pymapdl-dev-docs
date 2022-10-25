@@ -55,7 +55,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Contact Element Example" href="contact_elements.html" />
+    <link rel="next" title="Basic DPF-Core Usage with PyMAPDL" href="basic_dpf_example.html" />
     <link rel="prev" title="Basic Thermal Analysis with pyMAPDL" href="3d_plate_thermal.html" />
 <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
@@ -247,6 +247,16 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      3D Acoustic Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basic_dpf_example.html">
+     Basic DPF-Core Usage with PyMAPDL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="composite_dcb.html">
+     Static simulation of double cantilever beam test via cohesive elements
     </a>
    </li>
    <li class="toctree-l2">
@@ -540,6 +550,11 @@
    UPF in PyMAPDL
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extended_examples/Krylov/krylov_example.html">
+   Harmonic analysis using the frequency-sweep Krylov method
+  </a>
+ </li>
 </ul>
 
     
@@ -699,7 +714,7 @@ to download the full example code</p>
                 1500.000
 *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:46:21  OCT 24, 2022 CP=     50.101
+ 00000000  VERSION=LINUX x64     14:03:40  OCT 25, 2022 CP=     63.006
 
 
 
@@ -735,7 +750,7 @@ to download the full example code</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PRODUCE ALL TETRAHEDRAL ELEMENTS IN 3D.
 
- *** WARNING ***                         CP =      50.746   TIME= 04:46:22
+ *** WARNING ***                         CP =      63.829   TIME= 14:03:42
  Structural elements without mid nodes usually produce much more
  accurate results in quad or brick shape.
 </pre></div>
@@ -785,12 +800,12 @@ and the option <code class="docutils literal notranslate"><span class="pre">SHLD
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =      51.128   TIME= 04:46:23
+ *** NOTE ***                            CP =      64.271   TIME= 14:03:42
  There is no title defined for this analysis.
 
  *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
  Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:46:23  OCT 24, 2022 CP=     51.132
+ 00000000  VERSION=LINUX x64     14:03:42  OCT 25, 2022 CP=     64.276
 
 
 
@@ -808,19 +823,19 @@ and the option <code class="docutils literal notranslate"><span class="pre">SHLD
    COMPLEX DISPLACEMENT PRINT OPTION . . . . . . .REAL AND IMAGINARY
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** WARNING ***                         CP =      51.134   TIME= 04:46:23
+ *** WARNING ***                         CP =      64.279   TIME= 14:03:43
  No constraints have been defined using the D command.
 
- *** WARNING ***                         CP =      51.135   TIME= 04:46:23
+ *** WARNING ***                         CP =      64.282   TIME= 14:03:43
  Load amplitudes will be ramped over the frequency range.  Use the KBC,1
  command to use a step change.
 
- *** NOTE ***                            CP =      51.135   TIME= 04:46:23
+ *** NOTE ***                            CP =      64.282   TIME= 14:03:43
  The step data was checked and warning messages were found.
   Please review output or errors file ( /file.err ) for these warning
  messages.
 
- *** NOTE ***                            CP =      51.135   TIME= 04:46:23
+ *** NOTE ***                            CP =      64.283   TIME= 14:03:43
  The Solution Control Option is only valid for single field structural,
  single field thermal, single field diffusion, coupled
  thermal-diffusion analyses and coupled-field analyses with structural
@@ -874,8 +889,8 @@ and the option <code class="docutils literal notranslate"><span class="pre">SHLD
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1      1606  FLUID30       0.255   0.000158
- Time at end of element matrix formulation CP = 51.3340034.
+        1      1606  FLUID30       0.425   0.000265
+ Time at end of element matrix formulation CP = 64.6045609.
 
 
 
@@ -885,12 +900,12 @@ and the option <code class="docutils literal notranslate"><span class="pre">SHLD
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1      1606  FLUID30       0.184   0.000114
+        1      1606  FLUID30       0.338   0.000210
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1      1606  FLUID30       0.018   0.000011
+        1      1606  FLUID30       0.031   0.000019
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.  FREQUENCY=   220.000
  *** LOAD STEP     1   SUBSTEP     2  COMPLETED.  FREQUENCY=   240.000
  *** LOAD STEP     1   SUBSTEP     3  COMPLETED.  FREQUENCY=   260.000
@@ -1066,7 +1081,7 @@ and the option <code class="docutils literal notranslate"><span class="pre">SHLD
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.464 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.959 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-acoustic-analysis-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/2855b69d9b05029aa22cf5e1ccf4e476/acoustic_analysis.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">acoustic_analysis.py</span></code></a></p>

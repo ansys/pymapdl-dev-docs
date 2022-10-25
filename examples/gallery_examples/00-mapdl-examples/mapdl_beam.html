@@ -250,6 +250,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="basic_dpf_example.html">
+     Basic DPF-Core Usage with PyMAPDL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="composite_dcb.html">
+     Static simulation of double cantilever beam test via cohesive elements
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="contact_elements.html">
      Contact Element Example
     </a>
@@ -540,6 +550,11 @@
    UPF in PyMAPDL
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extended_examples/Krylov/krylov_example.html">
+   Harmonic analysis using the frequency-sweep Krylov method
+  </a>
+ </li>
 </ul>
 
     
@@ -663,17 +678,8 @@ are sequential</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>LIST ALL SELECTED ELEMENTS.  (LIST NODES)
-
- *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
- Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:48:19  OCT 24, 2022 CP=    147.215
-
-
-
-
-
- ** WARNING: PRE-RELEASE VERSION OF ANSYS 21.2BETA
-  ANSYS,INC TESTING IS NOT COMPLETE - CHECK RESULTS CAREFULLY **
+   *****ANSYS VERIFICATION RUN ONLY*****
+     DO NOT USE RESULTS FOR PRODUCTION
 
     ELEM MAT TYP REL ESY SEC        NODES
 
@@ -757,7 +763,7 @@ individual elements</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*****  ANSYS SOLVE    COMMAND  *****
 
- *** NOTE ***                            CP =     147.223   TIME= 04:48:19
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
  There is no title defined for this analysis.
 
  *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -769,17 +775,8 @@ individual elements</p>
  ELEMENT TYPE         1 IS BEAM188 . KEYOPT(15) IS ALREADY SET AS SUGGESTED.
 
 
-
- *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
- Ansys Mechanical Enterprise
- 00000000  VERSION=LINUX x64     04:48:19  OCT 24, 2022 CP=    147.224
-
-
-
-
-
- ** WARNING: PRE-RELEASE VERSION OF ANSYS 21.2BETA
-  ANSYS,INC TESTING IS NOT COMPLETE - CHECK RESULTS CAREFULLY **
+   *****ANSYS VERIFICATION RUN ONLY*****
+     DO NOT USE RESULTS FOR PRODUCTION
 
                        S O L U T I O N   O P T I O N S
 
@@ -788,11 +785,11 @@ individual elements</p>
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
 
- *** NOTE ***                            CP =     147.224   TIME= 04:48:19
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
  Present time 0 is less than or equal to the previous time.  Time will
  default to 1.
 
- *** NOTE ***                            CP =     147.225   TIME= 04:48:19
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
  The conditions for direct assembly have been met.  No .emat or .erot
  files will be produced.
 
@@ -807,66 +804,48 @@ individual elements</p>
                                                   FOR THE LAST SUBSTEP
 
 
- SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr
-
- *** NOTE ***                            CP =     147.230   TIME= 04:48:19
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
  Predictor is ON by default for structural elements with rotational
  degrees of freedom.  Use the PRED,OFF command to turn the predictor
  OFF if it adversely affects the convergence.
 
 
  Range of element maximum matrix coefficients in global coordinates
- Maximum = 2.504767151E+10 at element 22.
- Minimum = 2.504767151E+10 at element 22.
+ Maximum = 2.504767151E+10 at element 0.
+ Minimum = 2.504767151E+10 at element 0.
 
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.012   0.000542
- Time at end of element matrix formulation CP = 147.237305.
+        1        22  BEAM188       0.000   0.000000
+ Time at end of element matrix formulation CP = 0.
 
  SPARSE MATRIX DIRECT SOLVER.
-  Number of equations =          44,    Maximum wavefront =     12
-  Memory allocated for solver              =     0.065 MB
-  Memory required for in-core solution     =     0.062 MB
-  Memory required for out-of-core solution =     0.062 MB
+  Number of equations =          44,    Maximum wavefront =      0
+  Memory available (MB) =    0.0    ,  Memory required (MB) =    0.0
 
- *** NOTE ***                            CP =     147.241   TIME= 04:48:19
- The Sparse Matrix Solver is currently running in the in-core memory
- mode.  This memory mode uses the most amount of memory in order to
- avoid using the hard drive as much as possible, which most often
- results in the fastest solution time.  This mode is recommended if
- enough physical memory is present to accommodate all of the solver
- data.
- Sparse solver maximum pivot= 5.009534302E+10 at node 8 ROTY.
- Sparse solver minimum pivot= 2691965.06 at node 12 UZ.
- Sparse solver minimum pivot in absolute value= 2691965.06 at node 12
- UZ.
+ Sparse solver maximum pivot= 0 at node 0 .
+ Sparse solver minimum pivot= 0 at node 0 .
+ Sparse solver minimum pivot in absolute value= 0 at node 0 .
 
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.033   0.001485
+        1        22  BEAM188       0.000   0.000000
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1        22  BEAM188       0.001   0.000040
+        1        22  BEAM188       0.000   0.000000
  *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
  *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
-
-
- *** ANSYS BINARY FILE STATISTICS
-  BUFFER SIZE USED= 16384
-        0.062 MB WRITTEN ON ASSEMBLED MATRIX FILE: file.full
-        0.625 MB WRITTEN ON RESULTS FILE: file.rst
 </pre></div>
 </div>
 <p>stop mapdl</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.597 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.722 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-mapdl-beam-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/1e012ec2cca8a7261da18d4caa725113/mapdl_beam.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mapdl_beam.py</span></code></a></p>
