@@ -388,16 +388,16 @@ Let's get the first 10 modes. Note that this will actually compute
 
        FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-        1     1754.791678240    
-        2     9255.393436320    
-        3     10975.87832083    
-        4     11515.67533869    
-        5     21840.50648155    
-        6     26925.16389728    
-        7     33190.75829196    
-        8     34449.58425061    
-        9     38317.00878383    
-       10     56181.40876629    
+        1     1754.791678058    
+        2     9255.393086556    
+        3     10975.87822969    
+        4     11515.67518973    
+        5     21840.50671030    
+        6     26925.16405230    
+        7     33190.75882992    
+        8     34449.58664615    
+        9     38317.00878487    
+       10     56181.41079089    
 
      GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS 
 
@@ -436,16 +436,16 @@ Let's get the first 10 modes. Note that this will actually compute
 
        FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-        1     4016.683043706    
-        2     4016.683051034    
-        3     4064.737845996    
-        4     4064.737849690    
-        5     10313.66912732    
-        6     10313.66927137    
-        7     14213.07141617    
-        8     14213.07173942    
-        9     19293.02849993    
-       10     19293.02909747    
+        1     4016.683039761    
+        2     4016.683044525    
+        3     4064.737842321    
+        4     4064.737847085    
+        5     10313.66919392    
+        6     10313.66921169    
+        7     14213.07118031    
+        8     14213.07125337    
+        9     19293.02847619    
+       10     19293.02903811    
 
      GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS 
 
@@ -484,14 +484,14 @@ Let's get the first 10 modes. Note that this will actually compute
 
        FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-        1     1057.627660212    
+        1     1057.627660215    
         2     1057.627660293    
-        3     3380.551787119    
+        3     3380.551787118    
         4     3380.551787120    
-        5     6319.916392200    
+        5     6319.916392201    
         6     6319.916392203    
         7     10091.69582739    
-        8     10091.69582739    
+        8     10091.69582740    
         9     18041.48697678    
        10     18041.48697678    
 
@@ -532,12 +532,12 @@ Let's get the first 10 modes. Note that this will actually compute
 
        FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-        1     1193.652629297    
+        1     1193.652629299    
         2     1193.652629370    
-        3     3319.553821207    
-        4     3319.553821211    
-        5     7336.402568776    
-        6     7336.402568781    
+        3     3319.553821206    
+        4     3319.553821209    
+        5     7336.402568777    
+        6     7336.402568780    
         7     9979.988874660    
         8     9979.988874668    
         9     19188.49510780    
@@ -635,16 +635,16 @@ harmonic index for each cumulative mode.
       7        0
       8        0
       9        0
-     10        1
-     11       -1
-     12        1
-     13       -1
-     14        1
-     15       -1
+     10       -1
+     11        1
+     12       -1
+     13        1
+     14       -1
+     15        1
      16       -1
      17        1
-     18       -1
-     19        1
+     18        1
+     19       -1
      20        2
      21       -2
      22       -2
@@ -847,8 +847,8 @@ the number of sectors.
       5      0
       6     -1
       7      1
-      8      1
-      9     -1
+      8     -1
+      9      1
      10     -1
      11      1
      12      2
@@ -976,7 +976,7 @@ for the 2nd nodal diameter of this example model.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  32.895 seconds)
+   **Total running time of the script:** ( 0 minutes  43.232 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_cyclic_analysis.py:
