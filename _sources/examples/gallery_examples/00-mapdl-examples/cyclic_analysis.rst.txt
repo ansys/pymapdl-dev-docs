@@ -288,7 +288,7 @@ Let's get the first 10 modes. Note that this will actually compute
      GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS 
 
      *** WARNING ***                         CP =       0.000   TIME= 00:00:00
-     There is no high edge node in a position to match low edge node 2515    
+     There is no high edge node in a position to match low edge node 2545    
      (location error = 4.55E-04, maximum for all nodes).  Cyclic symmetry    
      constraint equations will be generated between the sector edges using   
      a mapping procedure similar to the CEINTF command.  This may reduce     
@@ -350,8 +350,8 @@ Let's get the first 10 modes. Note that this will actually compute
       YC =  0.12186E-01      IYY =   0.1533E-04      IYY =   0.2994E-05
       ZC =  0.15000E-02      IZZ =   0.1891E-04      IZZ =   0.3759E-05
                              IXY =  -0.7303E-05      IXY =  -0.1381E-05
-                             IYZ =  -0.3510E-06      IYZ =   0.1396E-19
-                             IZX =  -0.7290E-06      IZX =   0.2536E-19
+                             IYZ =  -0.3510E-06      IYZ =   0.1423E-19
+                             IZX =  -0.7289E-06      IZX =   0.2470E-19
 
 
       *** MASS SUMMARY BY ELEMENT TYPE ***
@@ -360,17 +360,17 @@ Let's get the first 10 modes. Note that this will actually compute
          1  0.192050E-01
 
      Range of element maximum matrix coefficients in global coordinates
-     Maximum = 266915922 at element 0.                                       
-     Minimum = 162779585 at element 0.                                       
+     Maximum = 267009240 at element 0.                                       
+     Minimum = 160766982 at element 0.                                       
 
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1      2628  SOLID186      0.000   0.000000
+            1      2658  SOLID186      0.000   0.000000
      Time at end of element matrix formulation CP = 0.                       
 
       BLOCK LANCZOS CALCULATION OF UP TO    10 EIGENVECTORS.
-      NUMBER OF EQUATIONS              =        21235
+      NUMBER OF EQUATIONS              =        21460
       MAXIMUM WAVEFRONT                =            0
       MAXIMUM MODES STORED             =           10
       MINIMUM EIGENVALUE               =  0.10000E+01
@@ -388,16 +388,16 @@ Let's get the first 10 modes. Note that this will actually compute
 
        FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-        1     1754.791678058    
-        2     9255.393086556    
-        3     10975.87822969    
-        4     11515.67518973    
-        5     21840.50671030    
-        6     26925.16405230    
-        7     33190.75882992    
-        8     34449.58664615    
-        9     38317.00878487    
-       10     56181.41079089    
+        1     1754.771705238    
+        2     9255.308128687    
+        3     10975.85370209    
+        4     11515.65947295    
+        5     21840.29269369    
+        6     26924.90194797    
+        7     33190.68628535    
+        8     34449.50472041    
+        9     38316.64490811    
+       10     56181.29165383    
 
      GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS 
 
@@ -418,7 +418,7 @@ Let's get the first 10 modes. Note that this will actually compute
 
 
       BLOCK LANCZOS CALCULATION OF UP TO    10 EIGENVECTORS.
-      NUMBER OF EQUATIONS              =        42470
+      NUMBER OF EQUATIONS              =        42920
       MAXIMUM WAVEFRONT                =            0
       MAXIMUM MODES STORED             =           10
       MINIMUM EIGENVALUE               =  0.10000E+01
@@ -436,16 +436,16 @@ Let's get the first 10 modes. Note that this will actually compute
 
        FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-        1     4016.683039761    
-        2     4016.683044525    
-        3     4064.737842321    
-        4     4064.737847085    
-        5     10313.66919392    
-        6     10313.66921169    
-        7     14213.07118031    
-        8     14213.07125337    
-        9     19293.02847619    
-       10     19293.02903811    
+        1     4016.678965167    
+        2     4016.678989774    
+        3     4064.701845591    
+        4     4064.701858835    
+        5     10313.63511490    
+        6     10313.63541909    
+        7     14213.05729505    
+        8     14213.05735520    
+        9     19292.87834624    
+       10     19292.87877618    
 
      GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS 
 
@@ -466,7 +466,7 @@ Let's get the first 10 modes. Note that this will actually compute
 
 
       BLOCK LANCZOS CALCULATION OF UP TO    10 EIGENVECTORS.
-      NUMBER OF EQUATIONS              =        42456
+      NUMBER OF EQUATIONS              =        42906
       MAXIMUM WAVEFRONT                =            0
       MAXIMUM MODES STORED             =           10
       MINIMUM EIGENVALUE               =  0.10000E+01
@@ -484,16 +484,16 @@ Let's get the first 10 modes. Note that this will actually compute
 
        FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-        1     1057.627660215    
-        2     1057.627660293    
-        3     3380.551787118    
-        4     3380.551787120    
-        5     6319.916392201    
-        6     6319.916392203    
-        7     10091.69582739    
-        8     10091.69582740    
-        9     18041.48697678    
-       10     18041.48697678    
+        1     1057.619328544    
+        2     1057.619328565    
+        3     3380.530621118    
+        4     3380.530621126    
+        5     6319.874142949    
+        6     6319.874142953    
+        7     10091.65459692    
+        8     10091.65459693    
+        9     18041.41473794    
+       10     18041.41473794    
 
      GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS 
 
@@ -514,7 +514,7 @@ Let's get the first 10 modes. Note that this will actually compute
 
 
       BLOCK LANCZOS CALCULATION OF UP TO    10 EIGENVECTORS.
-      NUMBER OF EQUATIONS              =        42456
+      NUMBER OF EQUATIONS              =        42906
       MAXIMUM WAVEFRONT                =            0
       MAXIMUM MODES STORED             =           10
       MINIMUM EIGENVALUE               =  0.10000E+01
@@ -532,16 +532,16 @@ Let's get the first 10 modes. Note that this will actually compute
 
        FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-        1     1193.652629299    
-        2     1193.652629370    
-        3     3319.553821206    
-        4     3319.553821209    
-        5     7336.402568777    
-        6     7336.402568780    
-        7     9979.988874660    
-        8     9979.988874668    
-        9     19188.49510780    
-       10     19188.49510780
+        1     1193.646581138    
+        2     1193.646581163    
+        3     3319.531421337    
+        4     3319.531421345    
+        5     7336.371613694    
+        6     7336.371613696    
+        7     9979.948398079    
+        8     9979.948398086    
+        9     19188.40690290    
+       10     19188.40690290
 
 
 
@@ -589,8 +589,8 @@ For more details regarding cyclic result post processing, see:
     Version     : 21.2
     Cyclic      : True
     Result Sets : 40
-    Nodes       : 7204
-    Elements    : 1314
+    Nodes       : 7279
+    Elements    : 1329
 
 
     Available Results:
@@ -643,12 +643,12 @@ harmonic index for each cumulative mode.
      15        1
      16       -1
      17        1
-     18        1
-     19       -1
+     18       -1
+     19        1
      20        2
      21       -2
-     22       -2
-     23        2
+     22        2
+     23       -2
      24        2
      25       -2
      26        2
@@ -657,14 +657,14 @@ harmonic index for each cumulative mode.
      29       -2
      30        3
      31       -3
-     32       -3
-     33        3
+     32        3
+     33       -3
      34        3
      35       -3
      36        3
      37       -3
-     38       -3
-     39        3
+     38        3
+     39       -3
 
 
 
@@ -845,58 +845,58 @@ the number of sectors.
       3      0
       4      0
       5      0
-      6     -1
-      7      1
+      6      1
+      7     -1
       8     -1
       9      1
      10     -1
      11      1
-     12      2
-     13     -2
-     14      2
-     15     -2
-     16      2
-     17     -2
-     18      3
-     19     -3
-     20      3
-     21     -3
-     22      3
-     23     -3
+     12     -2
+     13      2
+     14     -2
+     15      2
+     16     -2
+     17      2
+     18     -3
+     19      3
+     20     -3
+     21      3
+     22     -3
+     23      3
      24      4
      25     -4
-     26     -4
-     27      4
+     26      4
+     27     -4
      28      4
      29     -4
-     30      5
-     31     -5
+     30     -5
+     31      5
      32      5
      33     -5
-     34      5
-     35     -5
-     36      6
-     37     -6
+     34     -5
+     35      5
+     36     -6
+     37      6
      38      6
      39     -6
-     40      6
-     41     -6
-     42      7
-     43     -7
+     40     -6
+     41      6
+     42     -7
+     43      7
      44      7
      45     -7
-     46      7
-     47     -7
+     46     -7
+     47      7
      48      8
      49     -8
-     50      8
-     51     -8
+     50     -8
+     51      8
      52      8
      53     -8
      54      9
      55     -9
-     56      9
-     57     -9
+     56     -9
+     57      9
      58      9
      59     -9
      60     10
@@ -976,7 +976,7 @@ for the 2nd nodal diameter of this example model.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  43.232 seconds)
+   **Total running time of the script:** ( 0 minutes  48.520 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_cyclic_analysis.py:
