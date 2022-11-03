@@ -915,7 +915,7 @@
       
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/pyansys/pymapdl/edit/main/mapdl_commands/database/_autosummary/ansys.mapdl.core.Mapdl.save.rst">
+    <a href="https://github.com/pyansys/pymapdl/edit/main/doc/source/mapdl_commands/database/_autosummary/ansys.mapdl.core.Mapdl.save.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -952,13 +952,16 @@ for the file name.</p>
 </dd>
 <dt><strong>slab</strong></dt><dd><p>Mode for saving the database:</p>
 <dl class="simple">
-<dt>ALL - Save the model data, solution data and post data</dt><dd><p>(element tables, etc.). This value is the default.</p>
+<dt>ALL</dt><dd><p>Save the model data, solution data and post data
+(element tables, etc.). This value is the default.</p>
+</dd>
+<dt>MODEL</dt><dd><p>Save the model data (solid model, finite element
+model, loadings, etc.) only.</p>
+</dd>
+<dt>SOLU</dt><dd><p>Save the model data and the solution data (nodal
+and element results).</p>
 </dd>
 </dl>
-<p>MODEL - Save the model data (solid model, finite element
-model, loadings, etc.) only.</p>
-<p>SOLU - Save the model data and the solution data (nodal
-and element results).</p>
 </dd>
 </dl>
 </dd>

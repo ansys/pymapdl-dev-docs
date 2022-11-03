@@ -724,7 +724,7 @@
       
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/pyansys/pymapdl/edit/main/contribution_and_api/_autosummary/ansys.mapdl.core.post.PostProcessing.plot_nodal_total_strain_intensity.rst">
+    <a href="https://github.com/pyansys/pymapdl/edit/main/doc/source/contribution_and_api/_autosummary/ansys.mapdl.core.post.PostProcessing.plot_nodal_total_strain_intensity.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -748,19 +748,34 @@
 <span class="sig-prename descclassname"><span class="pre">PostProcessing.</span></span><span class="sig-name descname"><span class="pre">plot_nodal_total_strain_intensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show_node_numbering</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.post.PostProcessing.plot_nodal_total_strain_intensity" title="Permalink to this definition">#</a></dt>
 <dd><p>Plot the total nodal strain intensity of the current result.</p>
 <dl class="field-list">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></dt><dd><p>Camera position from plotter.  Can be reused as an input
-parameter to use the same camera position for future
-plots.</p>
-</dd>
 <dt><strong>show_node_numbering</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Plot the node numbers of surface nodes.</p>
 </dd>
 <dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Keyword arguments passed to <a class="reference internal" href="ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">general_plotter</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.plotting.renderer.CameraPosition</span></code></dt><dd><p>Camera position from plotter.  Can be reused as an input
+parameter to use the same camera position for future
+plots.
+Only returned when <code class="docutils literal notranslate"><span class="pre">return_cpos</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+<dt><a class="reference external" href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="(in PyVista v0.37.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a></dt><dd><p>Pyvista Plotter. In this case, the plotter is shown yet, so
+you can still edit it using Pyvista Plotter methods.
+Only when <code class="docutils literal notranslate"><span class="pre">return_plotter</span></code> kwarg is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
 </dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">vkt=True</span></code> (default), this function uses
+<a class="reference internal" href="ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">general_plotter</span></code></a>
+You can pass key arguments to
+<a class="reference internal" href="ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">general_plotter</span></code></a> using
+<code class="docutils literal notranslate"><span class="pre">kwargs</span></code> argument. For example, <code class="docutils literal notranslate"><span class="pre">show_axes</span></code> , <code class="docutils literal notranslate"><span class="pre">background</span></code>, etc.</p>
 <p class="rubric">Examples</p>
 <p>Plot the total strain intensity for the second result</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>

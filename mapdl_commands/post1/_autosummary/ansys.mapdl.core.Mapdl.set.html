@@ -910,7 +910,7 @@
       
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/pyansys/pymapdl/edit/main/mapdl_commands/post1/_autosummary/ansys.mapdl.core.Mapdl.set.rst">
+    <a href="https://github.com/pyansys/pymapdl/edit/main/doc/source/mapdl_commands/post1/_autosummary/ansys.mapdl.core.Mapdl.set.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -938,17 +938,24 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>lstep</strong></dt><dd><p>Load step number of the data set to be read (defaults to 1):</p>
-<p>N - Read load step N.</p>
-<p>FIRST - Read the first data set (Sbstep and TIME are ignored).</p>
-<p>LAST - Read the last data set (Sbstep and TIME are ignored).</p>
 <dl>
-<dt>NEXT - Read the next data set (Sbstep and TIME are ignored).  If at the last data set,</dt><dd><p>the first data set will be read as the next.</p>
+<dt>N</dt><dd><p>Read load step N.</p>
 </dd>
-<dt>PREVIOUS - Read the previous data set (Sbstep and TIME are ignored).  If at the first data</dt><dd><p>set, the last data set will be read as the previous.</p>
+<dt>FIRST</dt><dd><p>Read the first data set (<code class="docutils literal notranslate"><span class="pre">Sbstep</span></code> and <code class="docutils literal notranslate"><span class="pre">TIME</span></code> are ignored).</p>
 </dd>
-<dt>NEAR - Read the data set nearest to TIME (Sbstep is ignored).  If TIME is blank, read</dt><dd><p>the first data set.</p>
+<dt>LAST</dt><dd><p>Read the last data set (<code class="docutils literal notranslate"><span class="pre">Sbstep</span></code> and <code class="docutils literal notranslate"><span class="pre">TIME</span></code> are ignored).</p>
 </dd>
-<dt>LIST - Scan the results file and list a summary of each load step.  (KIMG, TIME,</dt><dd><p>ANGLE, and NSET are ignored.)</p>
+<dt>NEXT</dt><dd><p>Read the next data set (<code class="docutils literal notranslate"><span class="pre">Sbstep</span></code> and <code class="docutils literal notranslate"><span class="pre">TIME</span></code> are ignored). If at the last data set,
+the first data set will be read as the next.</p>
+</dd>
+<dt>PREVIOUS</dt><dd><p>Read the previous data set (<code class="docutils literal notranslate"><span class="pre">Sbstep</span></code> and <code class="docutils literal notranslate"><span class="pre">TIME</span></code> are ignored). If at the first data
+set, the last data set will be read as the previous.</p>
+</dd>
+<dt>NEAR</dt><dd><p>Read the data set nearest to <code class="docutils literal notranslate"><span class="pre">TIME</span></code> (<code class="docutils literal notranslate"><span class="pre">Sbstep</span></code> is ignored). If <code class="docutils literal notranslate"><span class="pre">TIME</span></code> is blank, read
+the first data set.</p>
+</dd>
+<dt>LIST</dt><dd><p>Scan the results file and list a summary of each load step.  (<code class="docutils literal notranslate"><span class="pre">KIMG</span></code>, <code class="docutils literal notranslate"><span class="pre">TIME</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ANGLE</span></code>, and <code class="docutils literal notranslate"><span class="pre">NSET</span></code> are ignored.)</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 0.64: </span>From version 0.64 you can use the methods <code class="docutils literal notranslate"><span class="pre">to_list</span></code> and
 <code class="docutils literal notranslate"><span class="pre">to_array</span></code> on the object returning from <code class="docutils literal notranslate"><span class="pre">mapdl.set(&quot;list&quot;)</span></code>.</p>
@@ -958,10 +965,10 @@
 </dd>
 <dt><strong>sbstep</strong></dt><dd><p>Substep number (within Lstep). Defaults to the last substep of the
 load step (except in a buckling or modal analysis). For a buckling
-(ANTYPE,BUCKLE) or modal (ANTYPE,MODAL) analysis, Sbstep
-corresponds to the mode number. Specify Sbstep = LAST to store the
+(<code class="docutils literal notranslate"><span class="pre">ANTYPE,BUCKLE</span></code>) or modal (<code class="docutils literal notranslate"><span class="pre">ANTYPE,MODAL</span></code>) analysis, <code class="docutils literal notranslate"><span class="pre">Sbstep</span></code>
+corresponds to the mode number. Specify <code class="docutils literal notranslate"><span class="pre">Sbstep</span> <span class="pre">=</span> <span class="pre">LAST</span></code> to store the
 last substep for the specified load step (that is, issue a
-SET,Lstep,LAST command).</p>
+<code class="docutils literal notranslate"><span class="pre">SET,Lstep,LAST</span></code> command).</p>
 </dd>
 <dt><strong>fact</strong></dt><dd><p>Scale factor applied to data read from the file. If zero (or
 blank), a value of 1.0 is used. This scale factor is only applied
@@ -970,11 +977,15 @@ summable items.</p>
 </dd>
 <dt><strong>kimg</strong></dt><dd><p>Used only with complex results (harmonic and complex modal
 analyses).</p>
-<p>0 or REAL - Store the real part of complex solution (default).</p>
-<p>1, 2 or IMAG - Store the imaginary part of a complex solution.</p>
-<p>3 or AMPL - Store the amplitude</p>
 <dl class="simple">
-<dt>4 or PHAS - Store the phase angle. The angle value, expressed in degrees, will be between</dt><dd><p>-180°  and +180°.</p>
+<dt>0 or REAL</dt><dd><p>Store the real part of complex solution (default).</p>
+</dd>
+<dt>1, 2 or IMAG</dt><dd><p>Store the imaginary part of a complex solution.</p>
+</dd>
+<dt>3 or AMPL</dt><dd><p>Store the amplitude</p>
+</dd>
+<dt>4 or PHAS</dt><dd><p>Store the phase angle. The angle value, expressed in degrees,
+will be between -180°  and +180°.</p>
 </dd>
 </dl>
 </dd>
@@ -986,17 +997,19 @@ circumferential location for the harmonic calculations used when
 reading from the results file.</p>
 </dd>
 <dt><strong>nset</strong></dt><dd><p>Data set number of the data set to be read.  If a positive value
-for NSET is entered, Lstep, Sbstep, KIMG, and TIME are ignored.
-Available set numbers can be determined by SET,LIST.</p>
+for <code class="docutils literal notranslate"><span class="pre">NSET</span></code> is entered, <code class="docutils literal notranslate"><span class="pre">Lstep</span></code>, <code class="docutils literal notranslate"><span class="pre">Sbstep</span></code>, <code class="docutils literal notranslate"><span class="pre">KIMG</span></code>, and <code class="docutils literal notranslate"><span class="pre">TIME</span></code> are ignored.
+Available set numbers can be determined by <code class="docutils literal notranslate"><span class="pre">SET,LIST</span></code>.</p>
 </dd>
 <dt><strong>order</strong></dt><dd><p>Key to sort the harmonic index results. This option applies to
 cyclic symmetry buckling and modal analyses only, and is valid only
-when Lstep = FIRST, LAST, NEXT, PREVIOUS, NEAR or LIST.</p>
+when <code class="docutils literal notranslate"><span class="pre">Lstep</span> <span class="pre">=</span> <span class="pre">FIRST,</span> <span class="pre">LAST,</span> <span class="pre">NEXT,</span> <span class="pre">PREVIOUS,</span> <span class="pre">NEAR</span> <span class="pre">or</span> <span class="pre">LIST</span></code>.</p>
 <dl class="simple">
-<dt>ORDER  - Sort the harmonic index results in ascending order of eigenfrequencies or</dt><dd><p>buckling load multipliers.</p>
+<dt>ORDER</dt><dd><p>Sort the harmonic index results in ascending order of eigenfrequencies or
+buckling load multipliers.</p>
+</dd>
+<dt>(blank)</dt><dd><p>No sorting takes place.</p>
 </dd>
 </dl>
-<p>(blank)  - No sorting takes place.</p>
 </dd>
 </dl>
 </dd>
@@ -1005,21 +1018,21 @@ when Lstep = FIRST, LAST, NEXT, PREVIOUS, NEAR or LIST.</p>
 <p>Defines the data set to be read from the results file into the
 database.  Various operations may also be performed during the read
 operation.  The database must have the model geometry available (or use
-the RESUME command before the SET command to restore the geometry from
-Jobname.DB).  Values for applied constraints [D] and loads [F] in the
+the <code class="docutils literal notranslate"><span class="pre">RESUME</span></code> command before the <code class="docutils literal notranslate"><span class="pre">SET</span></code> command to restore the geometry from
+<code class="docutils literal notranslate"><span class="pre">&lt;Jobname.DB&gt;</span></code>).  Values for applied constraints [<code class="docutils literal notranslate"><span class="pre">D</span></code>] and loads [<code class="docutils literal notranslate"><span class="pre">F</span></code>] in the
 database will be replaced by their corresponding values on the results
-file, if available. (See the description of the OUTRES command.)  In a
+file, if available. (See the description of the <code class="docutils literal notranslate"><span class="pre">OUTRES</span></code> command.)  In a
 single load step analysis, these values are usually the same, except
 for results from harmonic elements. (See the description of the ANGLE
 value above.)</p>
-<p>In an interactive run, the sorted list (ORDER option) is also available
+<p>In an interactive run, the sorted list (<code class="docutils literal notranslate"><span class="pre">ORDER</span></code> option) is also available
 for results-set reading via a GUI pick option.</p>
-<p>You can postprocess results without issuing a SET command if the
-solution results were saved to the database file (Jobname.DB).
+<p>You can postprocess results without issuing a <code class="docutils literal notranslate"><span class="pre">SET</span></code> command if the
+solution results were saved to the database file (<code class="docutils literal notranslate"><span class="pre">&lt;Jobname.DB&gt;</span></code>).
 Distributed ANSYS, however, can only postprocess using the results file
-(for example, Jobname.RST) and cannot use the Jobname.DB file since no
+(for example, Jobname.RST) and cannot use the <code class="docutils literal notranslate"><span class="pre">&lt;Jobname.DB&gt;</span></code> file since no
 solution results are written to the database. Therefore, you must issue
-a SET command or a RESCOMBINE command before postprocessing in
+a <code class="docutils literal notranslate"><span class="pre">SET</span></code> command or a <code class="docutils literal notranslate"><span class="pre">RESCOMBINE</span></code> command before postprocessing in
 Distributed ANSYS.</p>
 </dd></dl>
 

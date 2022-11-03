@@ -910,7 +910,7 @@
       
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/pyansys/pymapdl/edit/main/mapdl_commands/post1/_autosummary/ansys.mapdl.core.Mapdl.subset.rst">
+    <a href="https://github.com/pyansys/pymapdl/edit/main/doc/source/mapdl_commands/post1/_autosummary/ansys.mapdl.core.Mapdl.subset.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -938,62 +938,72 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>lstep</strong></dt><dd><p>Load step number of the data set to be read (defaults to 1):</p>
-<p>N - Read load step N.</p>
-<p>FIRST - Read the first data set (SBSTEP and TIME are ignored).</p>
-<p>LAST - Read the last data set (SBSTEP and TIME are ignored).</p>
 <dl class="simple">
-<dt>NEXT - Read the next data set (SBSTEP and TIME are ignored).  If at the last data set,</dt><dd><p>the first data set will be read as the next.</p>
+<dt>N</dt><dd><p>Read load step N.</p>
 </dd>
-<dt>NEAR - Read the data set nearest to TIME (SBSTEP is ignored).  If TIME is blank, read</dt><dd><p>the first data set.</p>
+<dt>FIRST</dt><dd><p>Read the first data set (<code class="docutils literal notranslate"><span class="pre">SBSTEP</span></code> and <code class="docutils literal notranslate"><span class="pre">TIME</span></code> are ignored).</p>
 </dd>
-<dt>LIST - Scan the results file and list a summary of each load step.  (FACT, KIMG, TIME</dt><dd><p>and ANGLE are ignored.)</p>
+<dt>LAST</dt><dd><p>Read the last data set (<code class="docutils literal notranslate"><span class="pre">SBSTEP</span></code> and <code class="docutils literal notranslate"><span class="pre">TIME</span></code> are ignored).</p>
+</dd>
+<dt>NEXT</dt><dd><p>Read the next data set (<code class="docutils literal notranslate"><span class="pre">SBSTEP</span></code> and <code class="docutils literal notranslate"><span class="pre">TIME</span></code> are ignored).  If at the last data set,
+the first data set will be read as the next.</p>
+</dd>
+<dt>NEAR</dt><dd><p>Read the data set nearest to <code class="docutils literal notranslate"><span class="pre">TIME</span></code> (<code class="docutils literal notranslate"><span class="pre">SBSTEP</span></code> is ignored).  If <code class="docutils literal notranslate"><span class="pre">TIME</span></code> is blank, read
+the first data set.</p>
+</dd>
+<dt>LIST</dt><dd><p>Scan the results file and list a summary of each load step.  (<code class="docutils literal notranslate"><span class="pre">FACT</span></code>, <code class="docutils literal notranslate"><span class="pre">KIMG</span></code>, <code class="docutils literal notranslate"><span class="pre">TIME</span></code>
+and <code class="docutils literal notranslate"><span class="pre">ANGLE</span></code> are ignored.)</p>
 </dd>
 </dl>
 </dd>
-<dt><strong>sbstep</strong></dt><dd><p>Substep number (within Lstep).   For the buckling (ANTYPE,BUCKLE)
-analysis or the modal (ANTYPE,MODAL) analysis, the substep
+<dt><strong>sbstep</strong></dt><dd><p>Substep number (within Lstep).   For the buckling (<code class="docutils literal notranslate"><span class="pre">ANTYPE,BUCKLE</span></code>)
+analysis or the modal (<code class="docutils literal notranslate"><span class="pre">ANTYPE,MODAL</span></code>) analysis, the substep
 corresponds to the mode number.  Defaults to last substep of load
-step (except for ANTYPE,BUCKLE or MODAL).  If Lstep = LIST, SBSTEP
-= 0 or 1 lists the basic step information, whereas SBSTEP = 2 also
+step (except for <code class="docutils literal notranslate"><span class="pre">ANTYPE,BUCKLE</span> <span class="pre">or</span> <span class="pre">MODAL</span></code>).  If <code class="docutils literal notranslate"><span class="pre">Lstep</span> <span class="pre">=</span> <span class="pre">LIST,</span> <span class="pre">SBSTEP</span>
+<span class="pre">=</span> <span class="pre">0</span> <span class="pre">or</span> <span class="pre">1</span></code> lists the basic step information, whereas <code class="docutils literal notranslate"><span class="pre">SBSTEP</span> <span class="pre">=</span> <span class="pre">2</span></code> also
 lists the load step title, and labels imaginary data sets if they
 exist.</p>
 </dd>
 <dt><strong>fact</strong></dt><dd><p>Scale factor applied to data read from the file.  If zero (or
 blank), a value of 1.0 is used.  Harmonic velocities or
 accelerations may be calculated from the displacement results from
-a modal (ANTYPE,MODAL) or harmonic (ANTYPE,HARMIC) analyses.  If
-FACT = VELO, the harmonic velocities (v) are calculated from the
+a modal (<code class="docutils literal notranslate"><span class="pre">ANTYPE,MODAL</span></code>) or harmonic (<code class="docutils literal notranslate"><span class="pre">ANTYPE,HARMIC</span></code>) analyses.  If
+<code class="docutils literal notranslate"><span class="pre">FACT</span> <span class="pre">=</span> <span class="pre">VELO</span></code>, the harmonic velocities (v) are calculated from the
 displacements (d) at a particular frequency (f) according to the
-relationship v = 2 πfd.  Similarly, if FACT = ACEL, the harmonic
+relationship v = 2 πfd.  Similarly, if <code class="docutils literal notranslate"><span class="pre">FACT</span> <span class="pre">=</span> <span class="pre">ACEL</span></code>, the harmonic
 accelerations (a) are calculated as a = (2 πf)2d.</p>
 </dd>
 <dt><strong>kimg</strong></dt><dd><p>Used only with results from complex analyses:</p>
-<p>0 - Store real part of complex solution</p>
-<p>1 - Store imaginary part.</p>
+<dl class="simple">
+<dt>0</dt><dd><p>Store real part of complex solution</p>
+</dd>
+<dt>1</dt><dd><p>Store imaginary part.</p>
+</dd>
+</dl>
 </dd>
 <dt><strong>time</strong></dt><dd><p>Time-point identifying the data set to be read.  For harmonic
 analyses, time corresponds to the frequency.  For the buckling
 analysis, time corresponds to the load factor.  Used only in the
-following cases:  If Lstep is NEAR, read the data set nearest to
-TIME.   If both Lstep and SBSTEP are zero (or blank), read data set
-at time = TIME.  If TIME is between two solution time points on the
+following cases:  If Lstep is <code class="docutils literal notranslate"><span class="pre">NEAR</span></code>, read the data set nearest to
+<code class="docutils literal notranslate"><span class="pre">TIME</span></code>.   If both Lstep and <code class="docutils literal notranslate"><span class="pre">SBSTEP</span></code> are zero (or blank), read data set
+at time = <code class="docutils literal notranslate"><span class="pre">TIME</span></code>.  If <code class="docutils literal notranslate"><span class="pre">TIME</span></code> is between two solution time points on the
 results file, a linear interpolation is done between the two data
 sets.  Solution items not written to the results file [OUTRES] for
 either data set will result in a null item after data set
-interpolation.  If TIME is beyond the last time point on the file,
+interpolation.  If <code class="docutils literal notranslate"><span class="pre">TIME</span></code> is beyond the last time point on the file,
 use the last time point.</p>
 </dd>
 <dt><strong>angle</strong></dt><dd><p>Circumferential location (0.0 to 360°).  Defines the
 circumferential location for the harmonic calculations used when
 reading from the results file.  The harmonic factor (based on the
 circumferential angle) is applied to the harmonic elements
-(PLANE25, PLANE75, PLANE78, PLANE83, and SHELL61) of the load case.
+(<code class="docutils literal notranslate"><span class="pre">PLANE25</span></code>, <code class="docutils literal notranslate"><span class="pre">PLANE75</span></code>, <code class="docutils literal notranslate"><span class="pre">PLANE78</span></code>, <code class="docutils literal notranslate"><span class="pre">PLANE83</span></code>, and <code class="docutils literal notranslate"><span class="pre">SHELL61</span></code>) of the load case.
 See the Mechanical APDL Theory Reference for details.  Note that
 factored values of applied constraints and loads will overwrite any
 values existing in the database.</p>
 </dd>
 <dt><strong>nset</strong></dt><dd><p>Data set number of the data set to be read.  If a positive value
-for NSET is entered, Lstep, SBSTEP, KIMG, and TIME are ignored.
+for <code class="docutils literal notranslate"><span class="pre">NSET</span></code> is entered, <code class="docutils literal notranslate"><span class="pre">Lstep</span></code>, <code class="docutils literal notranslate"><span class="pre">SBSTEP</span></code>, <code class="docutils literal notranslate"><span class="pre">KIMG</span></code>, and <code class="docutils literal notranslate"><span class="pre">TIME</span></code> are ignored.
 Available set numbers can be determined by <code class="docutils literal notranslate"><span class="pre">*SET,LIST</span></code>.</p>
 </dd>
 </dl>
@@ -1002,13 +1012,13 @@ Available set numbers can be determined by <code class="docutils literal notrans
 <p class="rubric">Notes</p>
 <p>Reads a data set from the results file into the database for the
 selected portions of the model only.  Data that has not been specified
-for retrieval from the results file by the INRES command will be listed
-as having a zero value.  Each time that the SUBSET command is issued,
+for retrieval from the results file by the <code class="docutils literal notranslate"><span class="pre">INRES</span></code> command will be listed
+as having a zero value.  Each time that the <code class="docutils literal notranslate"><span class="pre">SUBSET</span></code> command is issued,
 the data currently in the database will be overwritten with a new set
 of data.  Various operations may also be performed during the read
 operation.  The database must have the model geometry available (or
-used the RESUME command before the SUBSET command to restore the
-geometry from File.DB).</p>
+used the RESUME command before the <code class="docutils literal notranslate"><span class="pre">SUBSET</span></code> command to restore the
+geometry from <code class="docutils literal notranslate"><span class="pre">File.DB</span></code>).</p>
 </dd></dl>
 
 </section>

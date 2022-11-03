@@ -724,7 +724,7 @@
       
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/pyansys/pymapdl/edit/main/contribution_and_api/_autosummary/ansys.mapdl.core.post.PostProcessing.plot_element_temperature.rst">
+    <a href="https://github.com/pyansys/pymapdl/edit/main/doc/source/contribution_and_api/_autosummary/ansys.mapdl.core.post.PostProcessing.plot_element_temperature.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -763,17 +763,28 @@ specified item component.</p></li>
 specified item component (default).</p></li>
 </ul>
 </dd>
+<dt><strong>show_elem_numbering</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Plot the element numbers of the elements.</p>
+</dd>
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Keyword arguments passed to <a class="reference internal" href="ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">general_plotter</span></code></a></p>
+</dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.plotting.renderer.CameraPosition</span></code></dt><dd><p>Camera position from plotter.  Can be reused as an input
 parameter to use the same camera position for future
-plots.  Only returned when <code class="docutils literal notranslate"><span class="pre">return_cpos</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+plots.
+Only returned when <code class="docutils literal notranslate"><span class="pre">return_cpos</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
 </dl>
 </dd>
 </dl>
+<p class="rubric">Notes</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">vkt=True</span></code> (default), this function uses
+<a class="reference internal" href="ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">general_plotter</span></code></a>
+You can pass key arguments to
+<a class="reference internal" href="ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">general_plotter</span></code></a> using
+<code class="docutils literal notranslate"><span class="pre">kwargs</span></code> argument. For example, <code class="docutils literal notranslate"><span class="pre">show_axes</span></code> , <code class="docutils literal notranslate"><span class="pre">background</span></code>, etc.</p>
 <p class="rubric">Examples</p>
 <p>Plot the average element temperature.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">arr</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">plot_element_temperature</span><span class="p">()</span>
