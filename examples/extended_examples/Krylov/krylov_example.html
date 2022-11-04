@@ -310,39 +310,31 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#problem-description">
+   Problem Description
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#perform-required-imports">
-   Perform required imports
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-parameters">
-   Define parameters
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-element-type-and-materials">
-   Define element type and materials
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-geometry">
-   Define geometry
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-mesh">
-   Create mesh
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-boundary-conditions">
-   Define boundary conditions
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parameters-definition">
+     Parameters definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#element-and-material-definition">
+     Element and material definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geometry-definition">
+     Geometry definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#define-boundary-conditions">
+     Define boundary conditions
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#perform-modal-analysis">
@@ -355,13 +347,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plot-the-pressure-distribution-as-a-function-of-length">
-   Plot the pressure distribution as a function of length
+  <a class="reference internal nav-link" href="#results-pressure-distribution-as-a-function-of-length">
+   Results: Pressure distribution as a function of length
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plot-the-frequency-response-function">
-   Plot the frequency response function
+  <a class="reference internal nav-link" href="#results-plot-frequency-response-function">
+   Results: Plot frequency response function
   </a>
  </li>
 </ul>
@@ -392,32 +384,24 @@
                 
   <section id="harmonic-analysis-using-the-frequency-sweep-krylov-method">
 <span id="krylov-example"></span><h1>Harmonic analysis using the frequency-sweep Krylov method<a class="headerlink" href="#harmonic-analysis-using-the-frequency-sweep-krylov-method" title="Permalink to this heading">#</a></h1>
-<p>This example shows how to use the frequency-sweep Krylov method
-implemented in PyMAPDL. For more information, including the
-theory behind this method, see <a class="reference external" href="https://ansyshelp.ansys.com/account/secured?returnurl=/Views/Secured/corp/v222/en/ans_str/str_Krysweep.html">Frequency-Sweep Harmonic Analysis via the Krylov Method</a>
-in the <strong>Structural Analysis</strong> guide for Mechanical APDL.</p>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
-<p>This example uses the frequency-sweep Krylov method to perform a harmonic analysis
-on a cylindrical acoustic duct and study the response of the system over
-a range of frequencies.</p>
-<p>The model is a cylindrical acoustic duct with pressure load on one end
-and output impedance on the other end.</p>
+<p>This example shows how to use the Krylov method in <a class="reference external" href="https://mapdl.docs.pyansys.com/">PyMAPDL</a> for harmonic
+analysis.</p>
 <p>These are the main steps required:</p>
 <ul class="simple">
-<li><p>Use the <a class="reference internal" href="../../../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.gensubspace.html#ansys.mapdl.core.krylov.KrylovSolver.gensubspace" title="ansys.mapdl.core.krylov.KrylovSolver.gensubspace"><code class="xref py py-func docutils literal notranslate"><span class="pre">KrylovSolver.gensubspace()</span></code></a>
-method to generate a Krylov subspace for model reduction in the harmonic analysis.</p></li>
-<li><p>Use the <a class="reference internal" href="../../../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.solve.html#ansys.mapdl.core.krylov.KrylovSolver.solve" title="ansys.mapdl.core.krylov.KrylovSolver.solve"><code class="xref py py-func docutils literal notranslate"><span class="pre">KrylovSolver.solve()</span></code></a>
-method to reduce the system of equations and solve at each frequency.</p></li>
-<li><p>Use the <a class="reference internal" href="../../../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.expand.html#ansys.mapdl.core.krylov.KrylovSolver.expand" title="ansys.mapdl.core.krylov.KrylovSolver.expand"><code class="xref py py-func docutils literal notranslate"><span class="pre">KrylovSolver.expand()</span></code></a> method
-to expand the reduced solution back to the FE space.</p></li>
+<li><p>Generate a Krylov subspace for model reduction in the harmonic analysis using
+the <a class="reference internal" href="../../../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.gensubspace.html#ansys.mapdl.core.krylov.KrylovSolver.gensubspace" title="ansys.mapdl.core.krylov.KrylovSolver.gensubspace"><code class="xref py py-func docutils literal notranslate"><span class="pre">KrylovSolver.gensubspace()</span></code></a>
+method.</p></li>
+<li><p>Reduce the system of equations and solve at each frequency using the
+<a class="reference internal" href="../../../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.solve.html#ansys.mapdl.core.krylov.KrylovSolver.solve" title="ansys.mapdl.core.krylov.KrylovSolver.solve"><code class="xref py py-func docutils literal notranslate"><span class="pre">KrylovSolver.solve()</span></code></a> method.</p></li>
+<li><p>Expand the reduced solution back to the FE space using the
+<a class="reference internal" href="../../../contribution_and_api/_autosummary/ansys.mapdl.core.krylov.KrylovSolver.expand.html#ansys.mapdl.core.krylov.KrylovSolver.expand" title="ansys.mapdl.core.krylov.KrylovSolver.expand"><code class="xref py py-func docutils literal notranslate"><span class="pre">KrylovSolver.expand()</span></code></a> method.</p></li>
 </ul>
-</section>
-<section id="perform-required-imports">
-<h2>Perform required imports<a class="headerlink" href="#perform-required-imports" title="Permalink to this heading">#</a></h2>
-<blockquote>
-<div><p>Perform required imports and launch mapdl.</p>
-</div></blockquote>
+<section id="problem-description">
+<h2>Problem Description<a class="headerlink" href="#problem-description" title="Permalink to this heading">#</a></h2>
+<p>To perform an harmonic analysis on a cylindrical acoustic duct using the Krylov method
+and study the response of the system over a range of frequencies.</p>
+<p>The model is a cylindrical acoustic duct with pressure load on one end
+and output impedance on the other end.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">math</span>
@@ -429,13 +413,12 @@ to expand the reduced solution back to the FE space.</p></li>
 <span class="n">mm</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">math</span>
 </pre></div>
 </div>
-</section>
-<section id="define-parameters">
-<h2>Define parameters<a class="headerlink" href="#define-parameters" title="Permalink to this heading">#</a></h2>
-<p>Define some geometry parameters and analysis settings. As mentioned earlier, the geometry
-is a cylinder defined by its radius (<code class="docutils literal notranslate"><span class="pre">cyl_r</span></code>) and its length (<code class="docutils literal notranslate"><span class="pre">cyl_L</span></code>). The length
-of the duct is such that three complete wavelengths (<code class="docutils literal notranslate"><span class="pre">no_wl</span></code>) can fit in its length
-and can have ten elements per wavelength.</p>
+<section id="parameters-definition">
+<h3>Parameters definition<a class="headerlink" href="#parameters-definition" title="Permalink to this heading">#</a></h3>
+<p>This section defines some geometry parameters and analysis settings.
+As mentioned earlier, the geometry is a cylinder defined by its radius (<code class="docutils literal notranslate"><span class="pre">cyl_r</span></code>) and its length (<code class="docutils literal notranslate"><span class="pre">cyl_L</span></code>).
+The length of the duct is such that three complete wavelengths (<code class="docutils literal notranslate"><span class="pre">no_wl</span></code>) can fit in its length and can have
+ten elements per wavelength.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Constants</span>
 <span class="n">pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">c0</span> <span class="o">=</span> <span class="mi">340</span>                         <span class="c1"># speed of Sound (m/s)</span>
@@ -458,10 +441,10 @@ and can have ten elements per wavelength.</p>
 </pre></div>
 </div>
 </section>
-<section id="define-element-type-and-materials">
-<h2>Define element type and materials<a class="headerlink" href="#define-element-type-and-materials" title="Permalink to this heading">#</a></h2>
-<p>Assign fluid medium (air) properties to the duct. This example
-uses Fluid 220 (<code class="docutils literal notranslate"><span class="pre">Keyopt(2)=1</span></code>) with one degree of freedom per node (pressure),
+<section id="element-and-material-definition">
+<h3>Element and material definition<a class="headerlink" href="#element-and-material-definition" title="Permalink to this heading">#</a></h3>
+<p>Here we will assign fluid medium (Air) properties to the duct.
+We will use Fluid 220 (Keyopt(2)=1) with one degree of freedom per node : pressure,
 with no FSI interface in the element.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
 
@@ -472,40 +455,38 @@ with no FSI interface in the element.</p>
 </pre></div>
 </div>
 </section>
-<section id="define-geometry">
-<h2>Define geometry<a class="headerlink" href="#define-geometry" title="Permalink to this heading">#</a></h2>
-<p>Create a cylinder of the required dimensions and split it into
-four segments for uniform generation of the mesh in each segment.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set back to default</span>
+<section id="geometry-definition">
+<h3>Geometry definition<a class="headerlink" href="#geometry-definition" title="Permalink to this heading">#</a></h3>
+<p>Here we discuss creating a cylinder of required dimensions and splitting it into
+4 segments for uniform generation of the mesh in each segment.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setting back to default</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">csys</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="c1"># Rotate working plane for the cylinder generation</span>
+<span class="c1"># Rotating working plane for the cylinder generation</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">wpcsys</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">wprota</span><span class="p">(</span><span class="n">thzx</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
 
-<span class="c1"># Generate a circular area with a specified radius</span>
+<span class="c1"># Generating a circular area with specified radius</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">cyl4</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cyl_r</span><span class="p">)</span>
 
 <span class="n">mapdl</span><span class="o">.</span><span class="n">wpcsys</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Extrude the circular area to generate a cylinder of specified length</span>
+<span class="c1"># Extrude the circular area to generate cylinder of specified length</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">vext</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="n">dx</span><span class="o">=</span><span class="n">cyl_L</span><span class="p">)</span>
 
-<span class="c1"># Split the cylinder into four segments to create a more uniform mesh</span>
+<span class="c1"># Segment the cylinder into four quadrants to create a more uniform mesh</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">vsbw</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;DELETE&#39;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">wprota</span><span class="p">(</span><span class="n">thzx</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">vsbw</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;DELETE&#39;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">vsbw</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;DELETE&#39;</span><span class="p">)</span> <span class="c1"># Why this is needed?</span>
 
 <span class="n">mapdl</span><span class="o">.</span><span class="n">wpcsys</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Create a component with the created volume</span>
+<span class="c1"># Creating a component with the created volume</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">cm</span><span class="p">(</span><span class="s1">&#39;cm1&#39;</span><span class="p">,</span> <span class="s1">&#39;volu&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="create-mesh">
-<h2>Create mesh<a class="headerlink" href="#create-mesh" title="Permalink to this heading">#</a></h2>
-<p>Create the mesh and plot the FE model.</p>
+<p>Create mesh:</p>
+<p>Mesh the</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select material and type</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -524,22 +505,24 @@ a length element size constraint to the longitudinal lines.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lsel</span><span class="p">(</span><span class="s2">&quot;U&quot;</span><span class="p">,</span> <span class="s1">&#39;loc&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lsel</span><span class="p">(</span><span class="s2">&quot;U&quot;</span><span class="p">,</span> <span class="s1">&#39;loc&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">cyl_L</span><span class="p">)</span>
 
-<span class="c1"># Apply length constraint</span>
+<span class="c1"># Apply length constraint.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lesize</span><span class="p">(</span><span class="s1">&#39;ALL&#39;</span><span class="p">,</span><span class="n">ndiv</span> <span class="o">=</span> <span class="n">tol_elem</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lsla</span><span class="p">()</span>
 
 <span class="c1"># Mesh</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">vsweep</span><span class="p">(</span><span class="s1">&#39;ALL&#39;</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">allsel</span><span class="p">()</span>
 
-<span class="c1"># Plot the FE model</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">()</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">allsel</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Plot FE model:</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../../_images/Harmonic_Analysis_using_krylov_pymapdl_15_1.png" src="../../../_images/Harmonic_Analysis_using_krylov_pymapdl_15_1.png" />
 </section>
 <section id="define-boundary-conditions">
-<h2>Define boundary conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this heading">#</a></h2>
+<h3>Define boundary conditions<a class="headerlink" href="#define-boundary-conditions" title="Permalink to this heading">#</a></h3>
 <p>Apply pressure load on one end and output impedance on other end of the acoustic duct.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select areas to apply pressure to</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">cmsel</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;cm1&quot;</span><span class="p">)</span>
@@ -564,9 +547,10 @@ a length element size constraint to the longitudinal lines.</p>
 </pre></div>
 </div>
 </section>
+</section>
 <section id="perform-modal-analysis">
 <h2>Perform modal analysis<a class="headerlink" href="#perform-modal-analysis" title="Permalink to this heading">#</a></h2>
-<p>Get the first 10 natural frequency modes of the acoustic duct.</p>
+<p>Get the first 10 natural frequency modes of the acoustic duct</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modal Analysis</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
 <span class="n">nev</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Get the first 10 modes</span>
@@ -598,20 +582,20 @@ a length element size constraint to the longitudinal lines.</p>
 </section>
 <section id="run-harmonic-analysis-using-krylov-method">
 <h2>Run harmonic analysis using Krylov method<a class="headerlink" href="#run-harmonic-analysis-using-krylov-method" title="Permalink to this heading">#</a></h2>
-<p>Perform the following steps to run the harmonic analysis using the
-frequency-sweep Krylov method.</p>
-<p><strong>Step 1</strong>: Generate FULL file and initialize the <code class="docutils literal notranslate"><span class="pre">Krylov</span></code> class object.</p>
+<p><strong>Step 1</strong>: Generate full file.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;/SOLU&#39;</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s1">&#39;HARMIC&#39;</span><span class="p">)</span>  <span class="c1"># Set options for harmonic analysis</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s1">&#39;HARMIC&#39;</span><span class="p">)</span>  <span class="c1"># HARMONIC ANALYSIS</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">hropt</span><span class="p">(</span><span class="s1">&#39;KRYLOV&#39;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">eqslv</span><span class="p">(</span><span class="s1">&#39;SPARSE&#39;</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">harfrq</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>    <span class="c1"># Set beginning and ending frequency</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">nsubst</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>       <span class="c1"># Set the number of frequency increments</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">wrfull</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>         <span class="c1"># Generate FULL file and stop</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">harfrq</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>   <span class="c1"># set beginning and ending frequency</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">nsubst</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>      <span class="c1"># set the number of frequency increments</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">wrfull</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>        <span class="c1"># GENERATE .FULL FILE AND STOP</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
-
-<span class="n">dd</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">krylov</span>       <span class="c1"># Initialize Krylov class object</span>
+</pre></div>
+</div>
+<p>Initialize Krylov class object.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dd</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">krylov</span>
 </pre></div>
 </div>
 <p><strong>Step 2</strong>: Generate a Krylov subspace of size/dimension 10 at frequency
@@ -619,7 +603,7 @@ frequency-sweep Krylov method.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Qz</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">gensubspace</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="n">check_orthogonality</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Obtain the shape of the generated subspace.</p>
+<p>The shape of the generated subspace.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Qz</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -631,7 +615,7 @@ from 0 Hz to 1000 Hz with ramped loading.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Yz</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">ramped_load</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Obtain the shape of the reduced solution generated.</p>
+<p>The shape of the reduced solution generated is.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Yz</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -639,12 +623,12 @@ from 0 Hz to 1000 Hz with ramped loading.</p>
 </pre></div>
 </div>
 <p><strong>Step 4</strong>: Expand the reduced solution back to the FE space.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">residual_computation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">residual_algorithm</span><span class="o">=</span><span class="s2">&quot;l2&quot;</span><span class="p">,</span> <span class="n">return_solution</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">residual_computation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">residual_algorithm</span><span class="o">=</span><span class="s2">&quot;l2&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
-<section id="plot-the-pressure-distribution-as-a-function-of-length">
-<h2>Plot the pressure distribution as a function of length<a class="headerlink" href="#plot-the-pressure-distribution-as-a-function-of-length" title="Permalink to this heading">#</a></h2>
+<section id="results-pressure-distribution-as-a-function-of-length">
+<h2>Results: Pressure distribution as a function of length<a class="headerlink" href="#results-pressure-distribution-as-a-function-of-length" title="Permalink to this heading">#</a></h2>
 <p>Plot the pressure distribution over the length of the duct on nodes where Y, Z coordinates are zero.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select all nodes with Z and Y coordinate 0</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;LOC&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -661,13 +645,13 @@ from 0 Hz to 1000 Hz with ramped loading.</p>
 <span class="n">substep_index</span> <span class="o">=</span> <span class="mi">99</span>
 
 <span class="k">def</span> <span class="nf">get_pressure_at</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Get pressure at a given node at a given step (by default first step)&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Get the pressure at a given node at a given step (by default first step)&quot;&quot;&quot;</span>
     <span class="n">index_num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="n">step</span><span class="p">][</span><span class="s1">&#39;node&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">node</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="n">step</span><span class="p">][</span><span class="n">index_num</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">each_node</span><span class="p">,</span> <span class="n">loc</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ind</span><span class="p">,</span> <span class="n">coords</span><span class="p">):</span>
     <span class="c1"># Get pressure at the node</span>
-    <span class="n">pressure</span> <span class="o">=</span> <span class="n">get_pressure_at</span><span class="p">(</span><span class="n">each_node</span><span class="p">,</span> <span class="n">substep_index</span><span class="p">)[</span><span class="s1">&#39;x&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">pressure</span> <span class="o">=</span> <span class="n">get_pressure</span><span class="p">(</span><span class="n">each_node</span><span class="p">,</span> <span class="n">substep_index</span><span class="p">)[</span><span class="s1">&#39;x&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 
     <span class="c1">#Calculate amplitude at 60 deg</span>
     <span class="n">magnitude</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pressure</span><span class="p">)</span>
@@ -679,11 +663,11 @@ from 0 Hz to 1000 Hz with ramped loading.</p>
     <span class="n">y_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pressure_a</span><span class="p">)</span>  <span class="c1"># Nodal pressure at 60 degrees</span>
 </pre></div>
 </div>
-<p>Sort the results according to the X coordinate.</p>
+<p>Sort the results according to the X-coordinate:</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sorted_x_data</span><span class="p">,</span> <span class="n">sorted_y_data</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span> <span class="n">y_data</span><span class="p">)))</span>
 </pre></div>
 </div>
-<p>Plot the calculated data.</p>
+<p>Plot the calculated data:</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sorted_x_data</span><span class="p">,</span> <span class="n">sorted_y_data</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Krylov method&#39;</span><span class="p">)</span>
 
 <span class="c1"># Name the graph and the x-axis and y-axis</span>
@@ -700,16 +684,16 @@ from 0 Hz to 1000 Hz with ramped loading.</p>
 </div>
 <img alt="../../../_images/Harmonic_Analysis_using_krylov_pymapdl_36_1.png" src="../../../_images/Harmonic_Analysis_using_krylov_pymapdl_36_1.png" />
 </section>
-<section id="plot-the-frequency-response-function">
-<h2>Plot the frequency response function<a class="headerlink" href="#plot-the-frequency-response-function" title="Permalink to this heading">#</a></h2>
+<section id="results-plot-frequency-response-function">
+<h2>Results: Plot frequency response function<a class="headerlink" href="#results-plot-frequency-response-function" title="Permalink to this heading">#</a></h2>
 <p>Plot the frequency response function of any node along the length of the cylindrical duct.
-This code plots the frequency response function for a node along 0.2 in the X direction of the duct.</p>
+For example, let us plot the frequency response function for a node along 0.2 in X-direction of the duct.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick node closest to 0.2 in X direction, Y&amp;Z = 0</span>
 <span class="n">node_number</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">queries</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Get the response of the system for the selected node
-over a range of frequencies, such as 0 to 1000 Hz.</p>
+over a range of frequencies [0-1000 Hz]:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">start_freq</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">end_freq</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">num_steps</span> <span class="o">=</span> <span class="mi">100</span>
@@ -717,25 +701,25 @@ over a range of frequencies, such as 0 to 1000 Hz.</p>
 <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">num_steps</span><span class="p">):</span>
-    <span class="n">pressure</span> <span class="o">=</span> <span class="n">get_pressure_at</span><span class="p">(</span><span class="n">node_number</span><span class="p">,</span> <span class="n">freq</span><span class="p">)[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>
+    <span class="n">pressure</span> <span class="o">=</span> <span class="n">get_pressure</span><span class="p">(</span><span class="n">node_number</span><span class="p">,</span> <span class="n">freq</span><span class="p">)[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>
     <span class="n">abs_pressure</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pressure</span><span class="p">)</span>
 
     <span class="n">dic</span><span class="p">[</span><span class="n">start_freq</span><span class="p">]</span> <span class="o">=</span> <span class="n">abs_pressure</span>
     <span class="n">start_freq</span> <span class="o">+=</span> <span class="n">step_val</span>
 </pre></div>
 </div>
-<p>Sort the results.</p>
+<p>Sort the results:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">frf_List</span> <span class="o">=</span> <span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
 <span class="n">frf_List</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">frf_List</span><span class="p">)</span>
 <span class="n">frf_x</span><span class="p">,</span> <span class="n">frf_y</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">frf_List</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Plot the frequency response function for the selected node.</p>
+<p>Plot the frequency response function for the selected node:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">frf_x</span><span class="p">,</span> <span class="n">frf_y</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
 
 <span class="c1"># Plot the natural frequency as vertical lines on the FRF graph</span>
 <span class="k">for</span> <span class="n">itr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">eigenvalues</span><span class="p">[</span><span class="n">itr</span><span class="p">],</span> <span class="n">ymin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">ymax</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ev</span><span class="p">[</span><span class="n">itr</span><span class="p">],</span> <span class="n">ymin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">ymax</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># Name the graph and the x-axis and y-axis</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Frequency Response Function&quot;</span><span class="p">)</span>
