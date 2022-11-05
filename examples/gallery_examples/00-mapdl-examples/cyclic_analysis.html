@@ -759,16 +759,16 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
    FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-    1     1754.791688408
-    2     9255.393311318
-    3     10975.87821303
-    4     11515.67524648
-    5     21840.50463007
-    6     26925.16580761
-    7     33190.75881956
-    8     34449.58585295
-    9     38317.00843052
-   10     56181.40935435
+    1     1754.791682422
+    2     9255.393121888
+    3     10975.87832913
+    4     11515.67504993
+    5     21840.50632199
+    6     26925.16500498
+    7     33190.75839359
+    8     34449.58750828
+    9     38317.00874584
+   10     56181.41104675
 
  GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS
 
@@ -807,16 +807,16 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
    FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-    1     4016.683042023
-    2     4016.683051859
-    3     4064.737838240
-    4     4064.737847937
-    5     10313.66919358
-    6     10313.66929821
-    7     14213.07131167
-    8     14213.07142264
-    9     19293.02913962
-   10     19293.02999176
+    1     4016.683033370
+    2     4016.683048821
+    3     4064.737838676
+    4     4064.737842506
+    5     10313.66909340
+    6     10313.66919738
+    7     14213.07101577
+    8     14213.07128850
+    9     19293.02823726
+   10     19293.02904114
 
  GENERATE CYCLIC SYMMETRY CONSTRAINT EQUATIONS
 
@@ -855,9 +855,9 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
    FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-    1     1057.627660216
-    2     1057.627660291
-    3     3380.551787119
+    1     1057.627660212
+    2     1057.627660293
+    3     3380.551787118
     4     3380.551787121
     5     6319.916392201
     6     6319.916392203
@@ -903,14 +903,14 @@ USE EXISTING MODEL FOR CYCLIC SYMMETRY
 
    FREQUENCY RANGE REQUESTED=   10 MODES ABOVE   1.00000     HERTZ
 
-    1     1193.652629299
-    2     1193.652629366
-    3     3319.553821207
-    4     3319.553821209
+    1     1193.652629301
+    2     1193.652629367
+    3     3319.553821206
+    4     3319.553821210
     5     7336.402568777
     6     7336.402568780
     7     9979.988874660
-    8     9979.988874667
+    8     9979.988874668
     9     19188.49510780
    10     19188.49510780
 </pre></div>
@@ -969,12 +969,12 @@ harmonic index for each cumulative mode.</p>
   7        0
   8        0
   9        0
- 10        1
- 11       -1
- 12       -1
- 13        1
- 14        1
- 15       -1
+ 10       -1
+ 11        1
+ 12        1
+ 13       -1
+ 14       -1
+ 15        1
  16       -1
  17        1
  18        1
@@ -1008,7 +1008,7 @@ harmonic index for each cumulative mode.</p>
 <p>We can get the first mode (generally first bend for a bladed rotor) for nodal
 diameter 1 with:</p>
 <p><code class="docutils literal notranslate"><span class="pre">mode_num</span> <span class="pre">=</span> <span class="pre">np.nonzero(result.harmonic_indices</span> <span class="pre">==</span> <span class="pre">1)[0][0]</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.themes.DefaultTheme.background.html#pyvista.themes.DefaultTheme.background" title="pyvista.themes.DefaultTheme.background" class="sphx-glr-backref-module-pyvista-themes sphx-glr-backref-type-py-property"><span class="n">pv</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">background</span></a> <span class="o">=</span> <span class="s2">&quot;w&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.themes.DefaultTheme.html#pyvista.themes.DefaultTheme.background" title="pyvista.themes.DefaultTheme.background" class="sphx-glr-backref-module-pyvista-themes sphx-glr-backref-type-py-property"><span class="n">pv</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">background</span></a> <span class="o">=</span> <span class="s2">&quot;w&quot;</span>
 
 <span class="n">_</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">animate_nodal_displacement</span><span class="p">(</span>
     <span class="mi">11</span><span class="p">,</span>
@@ -1102,12 +1102,12 @@ the number of sectors.</p>
   3      0
   4      0
   5      0
-  6     -1
-  7      1
+  6      1
+  7     -1
   8      1
   9     -1
- 10     -1
- 11      1
+ 10      1
+ 11     -1
  12      2
  13     -2
  14      2
@@ -1192,7 +1192,7 @@ for the 2nd nodal diameter of this example model.</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_cyclic_analysis_006.png" srcset="../../../_images/sphx_glr_cyclic_analysis_006.png" alt="cyclic analysis" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  34.416 seconds)</p>
+<img src="../../../_images/sphx_glr_cyclic_analysis_006.png" srcset="../../../_images/sphx_glr_cyclic_analysis_006.png" alt="cyclic analysis" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  32.539 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-cyclic-analysis-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/c35961b264b74402adb8421df2796884/cyclic_analysis.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">cyclic_analysis.py</span></code></a></p>
