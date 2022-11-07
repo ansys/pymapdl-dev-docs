@@ -53,15 +53,13 @@ included examples file.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-34
+.. GENERATED FROM PYTHON SOURCE LINES 29-32
 
-Create model
-~~~~~~~~~~~~~~
-
-Running an example from the MAPDL verification manual
+## Model creation
+Running a verification manual example in MAPDL
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-46
+.. GENERATED FROM PYTHON SOURCE LINES 32-44
 
 .. code-block:: default
 
@@ -181,7 +179,7 @@ Running an example from the MAPDL verification manual
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-67
+.. GENERATED FROM PYTHON SOURCE LINES 45-65
 
 Next, open the generated RST file and print out the
 :class:`Model <ansys.dpf.core.model.Model>` object.
@@ -204,7 +202,7 @@ want to connect to an existing server (either local or remote), use
 In this case, DPF will attempt to connect to a local server at the port 50052
 unless another port is specified.
 
-.. GENERATED FROM PYTHON SOURCE LINES 67-71
+.. GENERATED FROM PYTHON SOURCE LINES 65-69
 
 .. code-block:: default
 
@@ -221,16 +219,16 @@ unless another port is specified.
  .. code-block:: none
 
 
-    <ansys.dpf.core.server_types.GrpcServer object at 0x7fe881f21a90>
+    <ansys.dpf.core.server_types.GrpcServer object at 0x7f833a83acd0>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 72-74
+.. GENERATED FROM PYTHON SOURCE LINES 70-72
 
 If you are working with a remote server, you might need to upload the ``RST``
 file before working with it.
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-77
+.. GENERATED FROM PYTHON SOURCE LINES 72-75
 
 .. code-block:: default
 
@@ -244,12 +242,12 @@ file before working with it.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-80
+.. GENERATED FROM PYTHON SOURCE LINES 76-78
 
 Then you can create the :class:`DPF Model <ansys.dpf.core.model.Model>`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-84
+.. GENERATED FROM PYTHON SOURCE LINES 78-82
 
 .. code-block:: default
 
@@ -303,7 +301,7 @@ Then you can create the :class:`DPF Model <ansys.dpf.core.model.Model>`.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-91
+.. GENERATED FROM PYTHON SOURCE LINES 83-89
 
 Model Metadata
 ~~~~~~~~~~~~~~
@@ -312,7 +310,7 @@ model's :attr:`metadata <ansys.dpf.core.model.Model.metadata>`
 property.  For example, to print only the
 :attr:`result_info <ansys.dpf.core.model.Metadata.result_info>`:
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-95
+.. GENERATED FROM PYTHON SOURCE LINES 89-93
 
 .. code-block:: default
 
@@ -353,11 +351,11 @@ property.  For example, to print only the
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 96-97
+.. GENERATED FROM PYTHON SOURCE LINES 94-95
 
 To print the :class:`mesh region<ansys.dpf.core.meshed_region.MeshedRegion>`:
 
-.. GENERATED FROM PYTHON SOURCE LINES 97-100
+.. GENERATED FROM PYTHON SOURCE LINES 95-98
 
 .. code-block:: default
 
@@ -381,12 +379,12 @@ To print the :class:`mesh region<ansys.dpf.core.meshed_region.MeshedRegion>`:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 101-103
+.. GENERATED FROM PYTHON SOURCE LINES 99-101
 
 To print the time or frequency of the results use
 :class:`time_freq_support <ansys.dpf.core.time_freq_support.TimeFreqSupport>`:
 
-.. GENERATED FROM PYTHON SOURCE LINES 103-106
+.. GENERATED FROM PYTHON SOURCE LINES 101-104
 
 .. code-block:: default
 
@@ -410,7 +408,7 @@ To print the time or frequency of the results use
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 107-123
+.. GENERATED FROM PYTHON SOURCE LINES 105-121
 
 Extracting Displacement Results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -429,7 +427,7 @@ By default, the :class:`displacement <ansys.dpf.core.operators.result.displaceme
 operator is connected to the first result set,
 which for this static result is the only result.
 
-.. GENERATED FROM PYTHON SOURCE LINES 123-132
+.. GENERATED FROM PYTHON SOURCE LINES 121-130
 
 .. code-block:: default
 
@@ -487,14 +485,14 @@ which for this static result is the only result.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 133-137
+.. GENERATED FROM PYTHON SOURCE LINES 131-135
 
 Plot displacements
 ~~~~~~~~~~~~~~~~~~
 
 You can plot the previous displacement field using:
 
-.. GENERATED FROM PYTHON SOURCE LINES 137-140
+.. GENERATED FROM PYTHON SOURCE LINES 135-138
 
 .. code-block:: default
 
@@ -513,12 +511,12 @@ You can plot the previous displacement field using:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 141-143
+.. GENERATED FROM PYTHON SOURCE LINES 139-141
 
 Or using
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 143-146
+.. GENERATED FROM PYTHON SOURCE LINES 141-144
 
 .. code-block:: default
 
@@ -537,20 +535,20 @@ Or using
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 147-149
+.. GENERATED FROM PYTHON SOURCE LINES 145-147
 
 This way is particularly useful if you have used :class:`ansys.dpf.core.scoping.Scoping`
 on the mesh or results.
 
-.. GENERATED FROM PYTHON SOURCE LINES 152-157
+.. GENERATED FROM PYTHON SOURCE LINES 150-155
 
-Close session
-~~~~~~~~~~~~~~
+Clean up
+~~~~~~~~
 
 Stop MAPDL session.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 157-158
+.. GENERATED FROM PYTHON SOURCE LINES 155-156
 
 .. code-block:: default
 
@@ -565,7 +563,7 @@ Stop MAPDL session.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.910 seconds)
+   **Total running time of the script:** ( 0 minutes  0.947 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_basic_dpf_example.py:

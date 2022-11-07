@@ -275,7 +275,7 @@ Solve the static analysis
 
     *****  ANSYS SOLVE    COMMAND  *****
 
-     *** NOTE ***                            CP =       1.850   TIME= 04:19:44
+     *** NOTE ***                            CP =       1.852   TIME= 10:53:19
      There is no title defined for this analysis.                            
 
      *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
@@ -288,7 +288,7 @@ Solve the static analysis
 
      *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2021 R2          21.2BETA ***
      Ansys Mechanical Enterprise                       
-     00000000  VERSION=LINUX x64     04:19:44  NOV 07, 2022 CP=      1.862
+     00000000  VERSION=LINUX x64     10:53:19  NOV 07, 2022 CP=      1.865
 
                                                                                
 
@@ -304,11 +304,11 @@ Solve the static analysis
        ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
        GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
-     *** NOTE ***                            CP =       1.867   TIME= 04:19:44
+     *** NOTE ***                            CP =       1.871   TIME= 10:53:19
      Present time 0 is less than or equal to the previous time.  Time will   
      default to 1.                                                           
 
-     *** NOTE ***                            CP =       1.870   TIME= 04:19:44
+     *** NOTE ***                            CP =       1.875   TIME= 10:53:19
      The conditions for direct assembly have been met.  No .emat or .erot    
      files will be produced.                                                 
 
@@ -357,8 +357,8 @@ Solve the static analysis
        *** ELEMENT MATRIX FORMULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.080   0.000082
-     Time at end of element matrix formulation CP = 1.97125793.              
+            1       977  PLANE183      0.082   0.000084
+     Time at end of element matrix formulation CP = 1.98077989.              
 
      SPARSE MATRIX DIRECT SOLVER.
       Number of equations =        6124,    Maximum wavefront =     48
@@ -366,7 +366,7 @@ Solve the static analysis
       Memory required for in-core solution     =     8.134 MB
       Memory required for out-of-core solution =     4.318 MB
 
-     *** NOTE ***                            CP =       2.196   TIME= 04:19:44
+     *** NOTE ***                            CP =       2.255   TIME= 10:53:20
      The Sparse Matrix Solver is currently running in the in-core memory     
      mode.  This memory mode uses the most amount of memory in order to      
      avoid using the hard drive as much as possible, which most often        
@@ -381,12 +381,12 @@ Solve the static analysis
        *** ELEMENT RESULT CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.092   0.000094
+            1       977  PLANE183      0.100   0.000102
 
        *** NODAL LOAD CALCULATION TIMES
          TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-            1       977  PLANE183      0.029   0.000030
+            1       977  PLANE183      0.032   0.000033
      *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
      *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
 
@@ -438,7 +438,7 @@ result reader.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.9.15/x64/lib/python3.9/site-packages/pyvista/plotting/tools.py:622: PyVistaDeprecationWarning: The usage of `parse_color` is deprecated in favor of the new `Color` class.
+    /opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/site-packages/pyvista/plotting/tools.py:622: PyVistaDeprecationWarning: The usage of `parse_color` is deprecated in favor of the new `Color` class.
       warnings.warn(
 
 
@@ -762,7 +762,7 @@ stop mapdl
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  27.547 seconds)
+   **Total running time of the script:** ( 0 minutes  28.253 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_2d_plate_with_a_hole.py:

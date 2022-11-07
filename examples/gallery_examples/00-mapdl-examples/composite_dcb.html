@@ -491,11 +491,6 @@
      Postprocessing results using PyDPF
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#animate-results-using-pydpf-with-anmiate-method">
-     Animate results using PyDPF with .anmiate() method
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -840,20 +835,13 @@ solved model in form of a table (or an array).</p>
 <h3>Postprocessing results using PyDPF<a class="headerlink" href="#postprocessing-results-using-pydpf" title="Permalink to this heading">#</a></h3>
 <p>Use PyDPF to visualize the crack opening throughout the simulation as
 an animation.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="c1"># ONLY IF DPF SERVER DEPLOYED WITH gRPC COMMUNICATION</span>
-    <span class="c1"># Upload file to DPF server</span>
-    <a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">temp_directory</span></a> <span class="o">=</span> <a href="https://docs.python.org/dev/library/tempfile.html#tempfile.gettempdir" title="tempfile.gettempdir" class="sphx-glr-backref-module-tempfile sphx-glr-backref-type-py-function"><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span></a><span class="p">()</span>
-    <a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">rst_path</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">download_result</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">temp_directory</span></a><span class="p">)</span>
-    <span class="n">dpf</span><span class="o">.</span><span class="n">connect_to_server</span><span class="p">()</span>
-    <a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">server_file_path</span></a> <span class="o">=</span> <span class="n">dpf</span><span class="o">.</span><span class="n">upload_file_in_tmp_folder</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">rst_path</span></a><span class="p">)</span>
-    <span class="n">data_src</span> <span class="o">=</span> <span class="n">dpf</span><span class="o">.</span><span class="n">DataSources</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">server_file_path</span></a><span class="p">)</span>
-<span class="k">except</span><span class="p">:</span>
-    <span class="c1"># Using DPF locally</span>
-    <span class="n">rst</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">download_result</span><span class="p">()</span>
-    <span class="n">data_src</span> <span class="o">=</span> <span class="n">dpf</span><span class="o">.</span><span class="n">DataSources</span><span class="p">(</span><span class="n">rst</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Upload file to DPF server</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">temp_directory</span></a> <span class="o">=</span> <a href="https://docs.python.org/dev/library/tempfile.html#tempfile.gettempdir" title="tempfile.gettempdir" class="sphx-glr-backref-module-tempfile sphx-glr-backref-type-py-function"><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span></a><span class="p">()</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">rst_path</span></a> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">download_result</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">temp_directory</span></a><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">server_file_path</span></a> <span class="o">=</span> <span class="n">dpf</span><span class="o">.</span><span class="n">upload_file_in_tmp_folder</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">rst_path</span></a><span class="p">)</span>
 
 <span class="c1"># Generate the DPF model</span>
+<span class="n">data_src</span> <span class="o">=</span> <span class="n">dpf</span><span class="o">.</span><span class="n">DataSources</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">server_file_path</span></a><span class="p">)</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">data_src</span><span class="p">)</span>
 
 <span class="c1"># Get the mesh of the whole model</span>
@@ -965,22 +953,11 @@ an animation.</p>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_composite_dcb_004.png" srcset="../../../_images/sphx_glr_composite_dcb_004.png" alt="composite dcb" class = "sphx-glr-single-img"/><img src="../../../_images/sphx_glr_composite_dcb_005.png" srcset="../../../_images/sphx_glr_composite_dcb_005.png" alt="composite dcb" class = "sphx-glr-single-img"/></section>
-<section id="animate-results-using-pydpf-with-anmiate-method">
-<h3>Animate results using PyDPF with .anmiate() method<a class="headerlink" href="#animate-results-using-pydpf-with-anmiate-method" title="Permalink to this heading">#</a></h3>
-<p>Use PyDPF method <code class="xref py py-func docutils literal notranslate"><span class="pre">FieldsContainer.animate()</span></code> to visualize the crack opening throughout the simulation as
-an animation.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">displacement</span><span class="o">.</span><span class="n">on_all_time_freqs</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<span class="n">camera_pos</span> <span class="o">=</span> <span class="n">disp</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span>
-    <span class="n">scale_factor</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">save_as</span><span class="o">=</span><span class="s2">&quot;dcb_animate.gif&quot;</span><span class="p">,</span> <span class="n">return_cpos</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_axes</span><span class="o">=</span><span class="kc">True</span>
-<span class="p">)</span>
-</pre></div>
-</div>
-<img src="../../../_images/sphx_glr_composite_dcb_006.png" srcset="../../../_images/sphx_glr_composite_dcb_006.png" alt="composite dcb" class = "sphx-glr-single-img"/><p>Exit MAPDL</p>
+<img src="../../../_images/sphx_glr_composite_dcb_004.png" srcset="../../../_images/sphx_glr_composite_dcb_004.png" alt="composite dcb" class = "sphx-glr-single-img"/><img src="../../../_images/sphx_glr_composite_dcb_005.png" srcset="../../../_images/sphx_glr_composite_dcb_005.png" alt="composite dcb" class = "sphx-glr-single-img"/><p>Exit MAPDL</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  52.059 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  27.863 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-gallery-examples-00-mapdl-examples-composite-dcb-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/6148f2f73253b36896fd7cdebe45fdbe/composite_dcb.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">composite_dcb.py</span></code></a></p>
