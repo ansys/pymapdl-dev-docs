@@ -467,18 +467,25 @@ Postprocessing results using PyDPF
 Use PyDPF to visualize the crack opening throughout the simulation as
 an animation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 306-424
+.. GENERATED FROM PYTHON SOURCE LINES 306-431
 
 .. code-block:: default
 
 
-    # Upload file to DPF server
-    temp_directory = tempfile.gettempdir()
-    rst_path = mapdl.download_result(temp_directory)
-    server_file_path = dpf.upload_file_in_tmp_folder(rst_path)
+    try:
+        # ONLY IF DPF SERVER DEPLOYED WITH gRPC COMMUNICATION
+        # Upload file to DPF server
+        temp_directory = tempfile.gettempdir()
+        rst_path = mapdl.download_result(temp_directory)
+        dpf.connect_to_server()
+        server_file_path = dpf.upload_file_in_tmp_folder(rst_path)
+        data_src = dpf.DataSources(server_file_path)
+    except:
+        # Using DPF locally
+        rst = mapdl.download_result()
+        data_src = dpf.DataSources(rst)
 
     # Generate the DPF model
-    data_src = dpf.DataSources(server_file_path)
     model = Model(data_src)
 
     # Get the mesh of the whole model
@@ -606,11 +613,39 @@ an animation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 425-426
+.. GENERATED FROM PYTHON SOURCE LINES 432-436
+
+Animate results using PyDPF with .anmiate() method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Use PyDPF method :func:`FieldsContainer.animate() <ansys.dpf.core.fields_container.FieldsContainer.animate>` to visualize the crack opening throughout the simulation as
+an animation.
+
+.. GENERATED FROM PYTHON SOURCE LINES 436-441
+
+.. code-block:: default
+
+    disp = model.results.displacement.on_all_time_freqs.eval()
+    camera_pos = disp.animate(
+        scale_factor=10.0, save_as="dcb_animate.gif", return_cpos=True, show_axes=True
+    )
+
+
+
+
+.. image-sg:: /examples/gallery_examples/00-mapdl-examples/images/sphx_glr_composite_dcb_006.png
+   :alt: composite dcb
+   :srcset: /examples/gallery_examples/00-mapdl-examples/images/sphx_glr_composite_dcb_006.png
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 442-443
 
 Exit MAPDL
 
-.. GENERATED FROM PYTHON SOURCE LINES 427-428
+.. GENERATED FROM PYTHON SOURCE LINES 444-445
 
 .. code-block:: default
 
@@ -625,7 +660,7 @@ Exit MAPDL
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  32.333 seconds)
+   **Total running time of the script:** ( 0 minutes  58.965 seconds)
 
 
 .. _sphx_glr_download_examples_gallery_examples_00-mapdl-examples_composite_dcb.py:
