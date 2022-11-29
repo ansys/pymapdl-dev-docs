@@ -116,7 +116,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
-  MAPDL Commands
+  MAPDL commands
  </a>
 </li>
 
@@ -367,7 +367,7 @@ However, because it is a fully working Python environment, you can still use it 
 <span class="s">&quot;C:</span><span class="se">\\</span><span class="s">Users</span><span class="se">\\</span><span class="s">USER</span><span class="se">\\</span><span class="s">.julia</span><span class="se">\\</span><span class="s">conda</span><span class="se">\\</span><span class="s">3</span><span class="se">\\</span><span class="s">python.exe&quot;</span><span class="w"></span>
 </pre></div>
 </div>
-<p>In Linux, the above code prints the following, where <code class="docutils literal notranslate"><span class="pre">python3</span></code> is the default Python3 installation for the operating system.</p>
+<p>In Linux, the preceding code prints the following, where <code class="docutils literal notranslate"><span class="pre">python3</span></code> is the default Python3 installation for the operating system.</p>
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span><span class="w"> </span><span class="n">PyCall</span><span class="o">.</span><span class="n">python</span><span class="w"></span>
 <span class="s">&quot;python3&quot;</span><span class="w"></span>
 </pre></div>
@@ -408,7 +408,7 @@ For example, if you uncompress the source files in <code class="docutils literal
 </section>
 <section id="id1">
 <h2>Use PyMAPDL in Julia<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>Here is a simple example of using PyMAPDL in Julia:</p>
+<p>Here is a simple example of how you use PyMAPDL in Julia:</p>
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">PyCall</span><span class="w"></span>
 <span class="n">julia</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pymapdl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pyimport</span><span class="p">(</span><span class="s">&quot;ansys.mapdl.core&quot;</span><span class="p">)</span><span class="w"></span>
 <span class="n">julia</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mapdl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymapdl</span><span class="o">.</span><span class="n">launch_mapdl</span><span class="p">()</span><span class="w"></span>

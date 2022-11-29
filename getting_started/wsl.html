@@ -116,7 +116,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
-  MAPDL Commands
+  MAPDL commands
  </a>
 </li>
 
@@ -276,18 +276,18 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#install-centos7-wsl-distribution">
-     Install CentOS7 WSL distribution
+    <a class="reference internal nav-link" href="#install-centos-7-wsl-distribution">
+     Install CentOS 7 WSL distribution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     Install CentOS7 WSL distribution
+     Install CentOS 7 WSL distribution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#install-ansys-products-in-wsl-centos7">
-     Install Ansys products in WSL CentOS7
+    <a class="reference internal nav-link" href="#install-ansys-products-in-wsl-centos-7">
+     Install Ansys products in WSL CentOS 7
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -437,14 +437,14 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#install-xvfb-in-centos7">
+    <a class="reference internal nav-link" href="#install-xvfb-in-centos-7">
      Install
      <code class="docutils literal notranslate">
       <span class="pre">
        xvfb
       </span>
      </code>
-     in CentOS7
+     in CentOS 7
     </a>
    </li>
   </ul>
@@ -504,23 +504,23 @@ disconnect from the VPN.</p>
 <h3>Install WSL<a class="headerlink" href="#install-wsl" title="Permalink to this heading">#</a></h3>
 <p>Install WSL by following Microsoft’s directions at
 <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install/">Microsoft: Install WSL</a>.</p>
-<p>Currently there are two versions of WSL: WSL1 abd WSL2. Because WSL2 is
+<p>Currently there are two versions of WSL: WSL1 and WSL2. Because WSL2 is
 the latest and includes many improvements over WSL1, using WSL2 is highly recommended.</p>
 </section>
-<section id="install-centos7-wsl-distribution">
-<h3>Install CentOS7 WSL distribution<a class="headerlink" href="#install-centos7-wsl-distribution" title="Permalink to this heading">#</a></h3>
+<section id="install-centos-7-wsl-distribution">
+<h3>Install CentOS 7 WSL distribution<a class="headerlink" href="#install-centos-7-wsl-distribution" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="id1">
-<h3>Install CentOS7 WSL distribution<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<p>You should use the CentOS7 WSL distribution for working with PyAnsys
+<h3>Install CentOS 7 WSL distribution<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>You should use the CentOS 7 WSL distribution for working with PyAnsys
 libraries.</p>
 <p>You can install it using an unofficial WSL distribution from
 <a class="reference external" href="https://github.com/wsldl-pg/CentWSL/">CentOS-WSL</a> or
 <a class="reference external" href="https://github.com/mishamosher/CentOS-WSL/">CentOS WSL</a> .</p>
 <p>Optionally, you can try Ubuntu, but it has not been tested yet in the context of WSL.</p>
 </section>
-<section id="install-ansys-products-in-wsl-centos7">
-<h3>Install Ansys products in WSL CentOS7<a class="headerlink" href="#install-ansys-products-in-wsl-centos7" title="Permalink to this heading">#</a></h3>
+<section id="install-ansys-products-in-wsl-centos-7">
+<h3>Install Ansys products in WSL CentOS 7<a class="headerlink" href="#install-ansys-products-in-wsl-centos-7" title="Permalink to this heading">#</a></h3>
 <section id="prerequisites">
 <h4>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h4>
 <p>If you are using CentOS 7, before installing MAPDL, you must install some
@@ -587,12 +587,12 @@ Docker image. The Docker image successfully communicates with the Windows
 License Server using these ports if you use the <code class="docutils literal notranslate"><span class="pre">'-p'</span></code> flag when running the
 Docker image and these ports are open.
 See <a class="reference internal" href="#run-mapdl-on-a-local-docker-image">Run MAPDL on a local Docker image</a>.</p>
-<p>If you want to run MAPDL in the CentOS7 image and use the Windows license
+<p>If you want to run MAPDL in the CentOS 7 image and use the Windows license
 server, opening the ports might not work properly because the Windows firewall
 seems to block all traffic coming from WSL. For security purposes, you should
-still try to open ports <code class="docutils literal notranslate"><span class="pre">1055</span></code> and <code class="docutils literal notranslate"><span class="pre">2325</span></code> in the firewall and check if your
+still try to open ports <code class="docutils literal notranslate"><span class="pre">1055</span></code> and <code class="docutils literal notranslate"><span class="pre">2325</span></code> in the firewall and see if your
 MAPDL installation can communicate with the Windows hosts. If you are having
-problems after setting the firewall rules, you might have to disable the Windows
+problems after setting the firewall rules, you might have to turn off the Windows
 firewall for the WSL ethernet virtual interface. This might pose some unknown
 side effects and security risk so use it with caution.
 See <a class="reference external" href="https://github.com/cascadium/wsl-windows-toolbar-launcher#firewall-rules">Disabling Firewall on WSL Ethernet</a>.</p>
@@ -606,7 +606,8 @@ See <a class="reference external" href="https://github.com/cascadium/wsl-windows
 <p>This <code class="docutils literal notranslate"><span class="pre">host.docker.internal</span></code> definition might not be available if Docker is
 not installed.</p>
 </div>
-<p><strong>Example /etc/hosts/ file</strong></p>
+<p><strong>Example /etc/hosts/ file</strong>
+.. vale off</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># This file was automatically generated by WSL.</span>
 <span class="c1"># To stop automatic generation of this file, add the following entry to /etc/wsl.conf:</span>
 <span class="c1"># [network]</span>
@@ -627,7 +628,7 @@ ff02::2 ip6-allrouters
 </pre></div>
 </div>
 <p>You can add the next lines to your WSL <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file to create an
-environment variable with that IP address:</p>
+environment variable with this IP address:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">winhostIP</span><span class="o">=</span><span class="k">$(</span>grep -m <span class="m">1</span> host.docker.internal /etc/hosts <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span><span class="k">)</span>
 <span class="nb">export</span> <span class="nv">ANSYSLMD_LICENSE_FILE</span><span class="o">=</span><span class="m">1055</span>@<span class="nv">$winhostIP</span>
 </pre></div>
@@ -654,8 +655,8 @@ environment variable with that IP address:</p>
 <p class="admonition-title">Note</p>
 <p>Ensure that your port <code class="docutils literal notranslate"><span class="pre">50053</span></code> is open in your firewall.</p>
 </div>
-<p>You shodld use a script (batch <code class="docutils literal notranslate"><span class="pre">'.bat'</span></code> or powershell <code class="docutils literal notranslate"><span class="pre">'.ps'</span></code>
-file) to run the above commands all at once.</p>
+<p>You should use a script file (batch <code class="docutils literal notranslate"><span class="pre">'.bat'</span></code> or PowerShell <code class="docutils literal notranslate"><span class="pre">'.ps'</span></code>)
+to run the preceding commands all at once.</p>
 <p>Notice that the WSL internal gRPC port (<code class="docutils literal notranslate"><span class="pre">50052</span></code>) is being mapped to a
 different Windows host port (<code class="docutils literal notranslate"><span class="pre">50053</span></code>) to avoid ports conflicts.</p>
 <p>This image is ready to be connected to from WSL or Windows Host but the port
@@ -825,8 +826,8 @@ as mentioned earlier, this issue is solved.</p>
 </pre></div>
 </div>
 </section>
-<section id="install-xvfb-in-centos7">
-<h3>Install <code class="docutils literal notranslate"><span class="pre">xvfb</span></code> in CentOS7<a class="headerlink" href="#install-xvfb-in-centos7" title="Permalink to this heading">#</a></h3>
+<section id="install-xvfb-in-centos-7">
+<h3>Install <code class="docutils literal notranslate"><span class="pre">xvfb</span></code> in CentOS 7<a class="headerlink" href="#install-xvfb-in-centos-7" title="Permalink to this heading">#</a></h3>
 <p>If you want to replicate the CI/CD behavior, <code class="docutils literal notranslate"><span class="pre">xvfb</span></code> is needed. For more
 information, see the <code class="docutils literal notranslate"><span class="pre">.ci</span></code> folder.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yum install xorg-x11-server-Xvfb

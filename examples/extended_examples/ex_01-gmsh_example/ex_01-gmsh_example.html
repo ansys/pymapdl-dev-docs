@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Gmsh Example &#8212; PyMAPDL</title>
+    <title>Gmsh example &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -56,7 +56,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="UPF in PyMAPDL" href="../Python_UPF/python_upf_examples.html" />
-    <link rel="prev" title="Friction Stir Welding (FSW) Simulation" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html" />
+    <link rel="prev" title="Bending of a Tee-Shaped Beam" href="../../gallery_examples/06-verif-manual/vm-010-bending_of_a_t-shaped_beam.html" />
 <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
 
@@ -116,7 +116,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../mapdl_commands/index.html">
-  MAPDL Commands
+  MAPDL commands
  </a>
 </li>
 
@@ -195,7 +195,7 @@
     
 
           <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Examples</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Gmsh Example</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Gmsh example</a></li> 
       </ul>
     </div>
         </div>
@@ -247,23 +247,6 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../technology_showcase_examples/techdemo-1/ex_0-tecbrakesqueal.html">
-   Brake Squeal Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../technology_showcase_examples/techdemo-20/20-example-technology-showcase-dynamic-simulation-PCB.html">
-   Dynamic simulation of a printed circuit board assembly
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
-   Friction Stir Welding (FSW) Simulation
-  </a>
- </li>
-</ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference external" href="https://pyansys.github.io/ml-rl-cartpole/ml-rl-notebook.html">
@@ -272,7 +255,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Gmsh Example
+   Gmsh example
   </a>
  </li>
  <li class="toctree-l1">
@@ -330,30 +313,33 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gmsh-generator-py">
+    <a class="reference internal nav-link" href="#gmsh-generator-py-file">
      <code class="docutils literal notranslate">
       <span class="pre">
        gmsh_generator.py
       </span>
      </code>
+     file
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mesh-converter-py">
+    <a class="reference internal nav-link" href="#mesh-converter-py-file">
      <code class="docutils literal notranslate">
       <span class="pre">
        mesh_converter.py
       </span>
      </code>
+     file
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modal-analysis-py">
+    <a class="reference internal nav-link" href="#modal-analysis-py-file">
      <code class="docutils literal notranslate">
       <span class="pre">
        modal_analysis.py
       </span>
      </code>
+     file
     </a>
    </li>
   </ul>
@@ -390,40 +376,37 @@
               <article class="bd-article" role="main">
                 
   <section id="gmsh-example">
-<span id="extended-example01"></span><h1>Gmsh Example<a class="headerlink" href="#gmsh-example" title="Permalink to this heading">#</a></h1>
+<span id="extended-example01"></span><h1>Gmsh example<a class="headerlink" href="#gmsh-example" title="Permalink to this heading">#</a></h1>
 <section id="objective">
 <h2>Objective<a class="headerlink" href="#objective" title="Permalink to this heading">#</a></h2>
-<p>Demonstrate the interoperability of PyAnsys with <code class="docutils literal notranslate"><span class="pre">gmsh</span></code>, a very well known
-open source Python meshing library.</p>
-<p>For more information about <code class="docutils literal notranslate"><span class="pre">gmsh</span></code> please visit its website: <a class="reference external" href="https://gmsh.info/">Gmsh</a>.</p>
+<p>This example demonstrate the interoperability of PyAnsys with Gmsh, a very well known
+open source Python meshing library. For more information, visit the Gmsh website: <a class="reference external" href="https://gmsh.info/">Gmsh</a>.</p>
 </section>
 <section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
-<p>In this example the interoperability of PyAnsys with the open source mesher <code class="docutils literal notranslate"><span class="pre">gmsh</span></code> is demonstrated.
-Using <code class="docutils literal notranslate"><span class="pre">gmsh</span></code> we import an external geometry file in STL format and then the
-geometry is imported into PyMAPDL using the
-<a class="reference external" href="https://reader.docs.pyansys.com/">pymapdl-reader</a> library.</p>
-<p>This example is composed of several files.</p>
+<p>Gmsh is used to import an external geometry file in STL format. The <a class="reference external" href="https://reader.docs.pyansys.com/">pymapdl-reader</a> library
+is then used to import the geometry into PyMAPDL.</p>
+<p>This example makes use of these files:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">gmsh_converter.py</span></code>: Load a STEP file, mesh it, and save it as a gmsh file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mesh_converter</span></code>: Convert the <code class="docutils literal notranslate"><span class="pre">*.msh</span></code> file into an Ansys CDB database format file (archive file).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modal_analysis.py</span></code>: Import CDB database, setup the modal analysis and run
-it. It also shows an animation of the first mode and save it
-to a gif file named <code class="docutils literal notranslate"><span class="pre">animation.gif</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gmsh_converter.py</span></code>: Loads a STEP file, meshes it, and saves it as a Gmsh file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mesh_converter</span></code>: Converts the MSH file into an Ansys CDB database format file (archive file).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modal_analysis.py</span></code>: Imports the CDB database, sets up the modal analysis, and runs
+it. It also shows an animation of the first mode and saves it
+to a GIF file named <code class="docutils literal notranslate"><span class="pre">animation.gif</span></code>.</p></li>
 </ul>
 </section>
 <section id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">#</a></h2>
-<p>You need to have <code class="docutils literal notranslate"><span class="pre">gmsh</span></code> installed. You can install it using <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<p>You must have Gmsh installed. You can install it using <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">gmsh</span>
 </pre></div>
 </div>
 </section>
 <section id="source-code">
 <h2>Source code<a class="headerlink" href="#source-code" title="Permalink to this heading">#</a></h2>
-<section id="gmsh-generator-py">
-<h3><code class="docutils literal notranslate"><span class="pre">gmsh_generator.py</span></code><a class="headerlink" href="#gmsh-generator-py" title="Permalink to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;Using ``gmsh`` read the STEP file, mesh it, and save it as a ``*.msh`` file.&quot;&quot;&quot;</span>
+<section id="gmsh-generator-py-file">
+<h3><code class="docutils literal notranslate"><span class="pre">gmsh_generator.py</span></code> file<a class="headerlink" href="#gmsh-generator-py-file" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;Using ``gmsh``, read the STEP file, mesh it, and save it as a MSH file.&quot;&quot;&quot;</span>
 <span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">gmsh</span>
 <span class="linenos"> 3</span>
 <span class="linenos"> 4</span><span class="n">gmsh</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
@@ -450,8 +433,8 @@ to a gif file named <code class="docutils literal notranslate"><span class="pre"
 </pre></div>
 </div>
 </section>
-<section id="mesh-converter-py">
-<h3><code class="docutils literal notranslate"><span class="pre">mesh_converter.py</span></code><a class="headerlink" href="#mesh-converter-py" title="Permalink to this heading">#</a></h3>
+<section id="mesh-converter-py-file">
+<h3><code class="docutils literal notranslate"><span class="pre">mesh_converter.py</span></code> file<a class="headerlink" href="#mesh-converter-py-file" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos"> 2</span><span class="sd">This script convert the file in `gmsh` format to ANSYS `CDB` format.</span>
 <span class="linenos"> 3</span><span class="sd">&quot;&quot;&quot;</span>
@@ -467,8 +450,8 @@ to a gif file named <code class="docutils literal notranslate"><span class="pre"
 </pre></div>
 </div>
 </section>
-<section id="modal-analysis-py">
-<h3><code class="docutils literal notranslate"><span class="pre">modal_analysis.py</span></code><a class="headerlink" href="#modal-analysis-py" title="Permalink to this heading">#</a></h3>
+<section id="modal-analysis-py-file">
+<h3><code class="docutils literal notranslate"><span class="pre">modal_analysis.py</span></code> file<a class="headerlink" href="#modal-analysis-py-file" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;Import the CDB database, setup modal analysis and run it.&quot;&quot;&quot;</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span>
@@ -538,8 +521,8 @@ to a gif file named <code class="docutils literal notranslate"><span class="pre"
 </section>
 <section id="notes">
 <h2>Notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h2>
-<p>It is recommended that you copy all the files in a separate directory to make it
-easier to run the example.</p>
+<p>You should copy all the files in a separate directory to make running
+the example easier.</p>
 </section>
 </section>
 

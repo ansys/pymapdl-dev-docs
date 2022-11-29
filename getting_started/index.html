@@ -116,7 +116,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
-  MAPDL Commands
+  MAPDL commands
  </a>
 </li>
 
@@ -362,28 +362,28 @@ after restarting the Python kernel.</p>
 of installing PyMAPDL is downloading the wheelhouse archive from the
 <a class="reference external" href="https://github.com/pyansys/pymapdl/releases">Releases Page</a> for your corresponding
 machine architecture.</p>
-<p>Each wheelhouse archive contains all the python wheels necessary to install
+<p>Each wheelhouse archive contains all the Python wheels necessary to install
 PyMAPDL from scratch on Windows and Linux for Python 3.7 and 3.9. You can install
-this on an isolated system with a fresh python or on a virtual environment.</p>
+this on an isolated system with a fresh Python or on a virtual environment.</p>
 <p>For example, on Linux with Python 3.7, unzip it and install it with the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unzip</span> <span class="n">PyMAPDL</span><span class="o">-</span><span class="n">v0</span><span class="mf">.62</span><span class="o">.</span><span class="n">dev1</span><span class="o">-</span><span class="n">wheelhouse</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="mf">3.7</span><span class="o">.</span><span class="n">zip</span> <span class="n">wheelhouse</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="n">ansys</span><span class="o">-</span><span class="n">mapdl</span><span class="o">-</span><span class="n">core</span> <span class="o">-</span><span class="n">f</span> <span class="n">wheelhouse</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">index</span> <span class="o">--</span><span class="n">upgrade</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">installed</span>
 </pre></div>
 </div>
 <p>If you’re on Windows with Python 3.9, unzip to a <code class="docutils literal notranslate"><span class="pre">wheelhouse</span></code> directory and
-install using the same command as above.</p>
+install using the preceding command.</p>
 <p>Consider installing using a <a class="reference external" href="https://docs.python.org/3/library/venv.html">virtual environment</a>.</p>
 </section>
 <section id="ansys-software-requirements">
 <h3>Ansys software requirements<a class="headerlink" href="#ansys-software-requirements" title="Permalink to this heading">#</a></h3>
 <p>For the latest features, you must have a copy of Ansys 2021 R1
-installed locally, but PyMAPDL is compatible with Ansys 17.0 and later
-on Windows and 13.0 on Linux.</p>
+installed locally. However, PyMAPDL is compatible with Ansys 17.0 and later
+on Windows and with Ansys 13.0 on Linux.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The latest versions of Ansys provide signifiantly better support
-and features. Certain features are not supported on earlier Ansys versions
-versions such as APDL Math.</p>
+<p>The latest versions of Ansys provide significantly better support
+and features. Certain features, such as APDL Math, are not supported
+on earlier Ansys versions.</p>
 </div>
 </section>
 <section id="verify-your-installation">

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Mapdl &#8212; PyMAPDL</title>
+    <title>Mapdl module &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -116,7 +116,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
-  MAPDL Commands
+  MAPDL commands
  </a>
 </li>
 
@@ -195,7 +195,7 @@
     
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Contributing and API</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Mapdl</a></li> 
+        <li class="nav-item nav-item-this"><a href=""><code class="docutils literal notranslate"><span class="pre">Mapdl</span></code> module</a></li> 
       </ul>
     </div>
         </div>
@@ -218,7 +218,7 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="commands.html">
-   Commands Output
+   Commands output
   </a>
  </li>
  <li class="toctree-l1">
@@ -233,17 +233,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="helper.html">
-   Helper Functions
+   Helper functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="inline.html">
-   Inline Functions
+   Inline functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="krylov.html">
-   KrylovSolver
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     KrylovSolver
+    </span>
+   </code>
+   module
   </a>
  </li>
  <li class="toctree-l1">
@@ -253,7 +258,12 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   Mapdl
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Mapdl
+    </span>
+   </code>
+   module
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -530,7 +540,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="math.html">
-   MapdlMath
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     MapdlMath
+    </span>
+   </code>
+   module
   </a>
  </li>
  <li class="toctree-l1">
@@ -550,12 +565,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="pool.html">
-   Local MAPDL Pool
+   Local MAPDL pool
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="post.html">
-   Post-Processing
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     PostProcessing
+    </span>
+   </code>
+   class
   </a>
  </li>
  <li class="toctree-l1">
@@ -565,7 +585,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="xpl.html">
-   Database Explorer
+   Database explorer
   </a>
  </li>
  <li class="toctree-l1">
@@ -603,8 +623,13 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mapdl-class-specific-classes-or-attributes">
-   Mapdl Class Specific Classes or Attributes
+  <a class="reference internal nav-link" href="#mapdl-methods-and-attributes">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Mapdl
+    </span>
+   </code>
+   methods and attributes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -624,8 +649,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#latest-2021r1-and-newer-features">
-   Latest 2021R1 and newer features
+  <a class="reference internal nav-link" href="#mapdl-grpc-mapdlgrpc-methods">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     mapdl_grpc.MapdlGrpc
+    </span>
+   </code>
+   methods
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -640,8 +670,13 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mapdl-information-class">
-   Mapdl Information Class
+  <a class="reference internal nav-link" href="#information-class-attributes">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Information
+    </span>
+   </code>
+   class attributes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -681,10 +716,10 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="mapdl">
-<span id="ref-mapdl-api"></span><h1>Mapdl<a class="headerlink" href="#mapdl" title="Permalink to this heading">#</a></h1>
-<section id="mapdl-class-specific-classes-or-attributes">
-<h2>Mapdl Class Specific Classes or Attributes<a class="headerlink" href="#mapdl-class-specific-classes-or-attributes" title="Permalink to this heading">#</a></h2>
+  <section id="mapdl-module">
+<span id="ref-mapdl-api"></span><h1><code class="docutils literal notranslate"><span class="pre">Mapdl</span></code> module<a class="headerlink" href="#mapdl-module" title="Permalink to this heading">#</a></h1>
+<section id="mapdl-methods-and-attributes">
+<h2><code class="docutils literal notranslate"><span class="pre">Mapdl</span></code> methods and attributes<a class="headerlink" href="#mapdl-methods-and-attributes" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.mapdl.core.mapdl._MapdlCore">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.mapdl.</span></span><span class="sig-name descname"><span class="pre">_MapdlCore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loglevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DEBUG'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_vtk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_apdl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_com</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">start_parm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.mapdl._MapdlCore" title="Permalink to this definition">#</a></dt>
@@ -778,8 +813,8 @@
 </tbody>
 </table>
 </section>
-<section id="latest-2021r1-and-newer-features">
-<h2>Latest 2021R1 and newer features<a class="headerlink" href="#latest-2021r1-and-newer-features" title="Permalink to this heading">#</a></h2>
+<section id="mapdl-grpc-mapdlgrpc-methods">
+<h2><code class="docutils literal notranslate"><span class="pre">mapdl_grpc.MapdlGrpc</span></code> methods<a class="headerlink" href="#mapdl-grpc-mapdlgrpc-methods" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.mapdl.core.mapdl_grpc.MapdlGrpc">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.mapdl_grpc.</span></span><span class="sig-name descname"><span class="pre">MapdlGrpc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loglevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'WARNING'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cleanup_on_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_apdl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_no_abort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_temp_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_temp_dir_on_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_com</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_instance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">start_parm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.mapdl_grpc.MapdlGrpc" title="Permalink to this definition">#</a></dt>
@@ -878,8 +913,8 @@ channel with a maximum message length of 8 MB.</p>
 </tbody>
 </table>
 </section>
-<section id="mapdl-information-class">
-<h2>Mapdl Information Class<a class="headerlink" href="#mapdl-information-class" title="Permalink to this heading">#</a></h2>
+<section id="information-class-attributes">
+<h2><code class="docutils literal notranslate"><span class="pre">Information</span></code> class attributes<a class="headerlink" href="#information-class-attributes" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.mapdl.core.misc.Information">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.misc.</span></span><span class="sig-name descname"><span class="pre">Information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapdl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.misc.Information" title="Permalink to this definition">#</a></dt>

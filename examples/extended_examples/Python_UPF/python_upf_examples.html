@@ -56,7 +56,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Harmonic analysis using the frequency-sweep Krylov method" href="../Krylov/krylov_example.html" />
-    <link rel="prev" title="Gmsh Example" href="../ex_01-gmsh_example/ex_01-gmsh_example.html" />
+    <link rel="prev" title="Gmsh example" href="../ex_01-gmsh_example/ex_01-gmsh_example.html" />
 <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
 
 
@@ -116,7 +116,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../../mapdl_commands/index.html">
-  MAPDL Commands
+  MAPDL commands
  </a>
 </li>
 
@@ -247,23 +247,6 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../technology_showcase_examples/techdemo-1/ex_0-tecbrakesqueal.html">
-   Brake Squeal Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../technology_showcase_examples/techdemo-20/20-example-technology-showcase-dynamic-simulation-PCB.html">
-   Dynamic simulation of a printed circuit board assembly
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">
-   Friction Stir Welding (FSW) Simulation
-  </a>
- </li>
-</ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference external" href="https://pyansys.github.io/ml-rl-cartpole/ml-rl-notebook.html">
@@ -272,7 +255,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ex_01-gmsh_example/ex_01-gmsh_example.html">
-   Gmsh Example
+   Gmsh example
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -310,73 +293,85 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-python-usermat-subroutine">
-   1. Example: Python
-   <cite>
-    UserMat
-   </cite>
-   Subroutine
+  <a class="reference internal nav-link" href="#python-usermat-subroutine">
+   Python
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     UserMat
+    </span>
+   </code>
+   subroutine
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#input-data">
-     1.1. Input Data
+     Input data
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#usermat-py">
-     1.2.
-     <cite>
-      usermat.py
-     </cite>
+    <a class="reference internal nav-link" href="#usermat-py-file">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       usermat.py
+      </span>
+     </code>
+     file
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-python-usrshift-subroutine">
-   2. Example: Python
-   <cite>
-    UsrShift
-   </cite>
-   Subroutine
+  <a class="reference internal nav-link" href="#python-usrshift-subroutine">
+   Python
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     `UsrShift
+    </span>
+   </code>
+   subroutine
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     2.1. Input Data
+     Input data
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#usrshift-py">
-     2.2.
-     <cite>
-      usrshift.py
-     </cite>
+    <a class="reference internal nav-link" href="#usrshift-py-file">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       usrshift.py
+      </span>
+     </code>
+     file
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-python-userhyper-subroutine">
-   3. Example: Python
-   <cite>
-    UserHyper
-   </cite>
-   Subroutine
+  <a class="reference internal nav-link" href="#python-userhyper-subroutine">
+   Python
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     UserHyper
+    </span>
+   </code>
+   subroutine
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     3.1. Input Data
+     Input data
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#userhyper-py">
-     3.2.
-     <cite>
-      userhyper.py
-     </cite>
+    <a class="reference internal nav-link" href="#userhyper-py-file">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       userhyper.py
+      </span>
+     </code>
+     file
     </a>
    </li>
   </ul>
@@ -409,22 +404,22 @@
                 
   <section id="upf-in-pymapdl">
 <span id="python-upf-examples"></span><h1>UPF in PyMAPDL<a class="headerlink" href="#upf-in-pymapdl" title="Permalink to this heading">#</a></h1>
-<p>The following Python UPF Examples are available:</p>
+<p>The following Python UPF examples are available:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#example-python-usermat-subroutine">1. Example: Python UserMat Subroutine</a></p></li>
-<li><p><a class="reference internal" href="#example-python-usrshift-subroutine">2. Example: Python UsrShift Subroutine</a></p></li>
-<li><p><a class="reference internal" href="#example-python-userhyper-subroutine">3. Example: Python UserHyper Subroutine</a></p></li>
+<li><p><a class="reference internal" href="#python-usermat-subroutine">Python UserMat subroutine</a></p></li>
+<li><p><a href="#id3"><span class="problematic" id="id4">`Python UsrShift subroutine`_</span></a></p></li>
+<li><p><a class="reference internal" href="#python-userhyper-subroutine">Python UserHyper subroutine</a></p></li>
 </ul>
-<section id="example-python-usermat-subroutine">
-<h2>1. Example: Python <cite>UserMat</cite> Subroutine<a class="headerlink" href="#example-python-usermat-subroutine" title="Permalink to this heading">#</a></h2>
-<p>This example simulates a block modeled with 3-D elements. The
-<cite>usermat.py</cite> user material is equivalent to linear elastic.
-The block is under uniaxial compression. The final deformation is compared with the
-theoretical result.</p>
+<section id="python-usermat-subroutine">
+<h2>Python <code class="docutils literal notranslate"><span class="pre">UserMat</span></code> subroutine<a class="headerlink" href="#python-usermat-subroutine" title="Permalink to this heading">#</a></h2>
+<p>This example simulates a block modeled with 3D elements. The
+user material in the <code class="docutils literal notranslate"><span class="pre">usermat.py</span></code> file is equivalent to linear elastic.
+The block is under uniaxial compression. The final deformation is compared
+with the theoretical result.</p>
 <section id="input-data">
-<h3>1.1. Input Data<a class="headerlink" href="#input-data" title="Permalink to this heading">#</a></h3>
+<h3>Input data<a class="headerlink" href="#input-data" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/batch,list
-/title,upf-py1s, test usermat.py with 3-D elements
+/title,upf-py1s, test usermat.py with 3D elements
 
 /prep7
 /upf,usermat.py
@@ -478,8 +473,8 @@ finish
 </pre></div>
 </div>
 </section>
-<section id="usermat-py">
-<h3>1.2. <cite>usermat.py</cite><a class="headerlink" href="#usermat-py" title="Permalink to this heading">#</a></h3>
+<section id="usermat-py-file">
+<h3><code class="docutils literal notranslate"><span class="pre">usermat.py</span></code> file<a class="headerlink" href="#usermat-py-file" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">grpc</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">math</span>
@@ -614,14 +609,14 @@ finish
 </div>
 </section>
 </section>
-<section id="example-python-usrshift-subroutine">
-<h2>2. Example: Python <cite>UsrShift</cite> Subroutine<a class="headerlink" href="#example-python-usrshift-subroutine" title="Permalink to this heading">#</a></h2>
+<section id="python-usrshift-subroutine">
+<h2>Python <code class="docutils literal notranslate"><span class="pre">`UsrShift</span></code> subroutine<a class="headerlink" href="#python-usrshift-subroutine" title="Permalink to this heading">#</a></h2>
 <p>This example describes a block of Prony viscoplastic material with a user-defined
 shift function following a Tool-Narayanaswamy shift function. Uniaxial tension is
 applied on one end and held for 15 seconds with a constant 280 K uniform
-temperature. The final stress is obtained to check stress relaxation.</p>
+temperature. The final stress is obtained to verify stress relaxation.</p>
 <section id="id1">
-<h3>2.1. Input Data<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Input data<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/batch,list
 /title,upf-py10s, test usrshift.py
 /com
@@ -721,8 +716,8 @@ finish
 </pre></div>
 </div>
 </section>
-<section id="usrshift-py">
-<h3>2.2. <cite>usrshift.py</cite><a class="headerlink" href="#usrshift-py" title="Permalink to this heading">#</a></h3>
+<section id="usrshift-py-file">
+<h3><code class="docutils literal notranslate"><span class="pre">usrshift.py</span></code> file<a class="headerlink" href="#usrshift-py-file" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">grpc</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">math</span>
@@ -769,14 +764,14 @@ finish
 </div>
 </section>
 </section>
-<section id="example-python-userhyper-subroutine">
-<h2>3. Example: Python <cite>UserHyper</cite> Subroutine<a class="headerlink" href="#example-python-userhyper-subroutine" title="Permalink to this heading">#</a></h2>
+<section id="python-userhyper-subroutine">
+<h2>Python <code class="docutils literal notranslate"><span class="pre">UserHyper</span></code> subroutine<a class="headerlink" href="#python-userhyper-subroutine" title="Permalink to this heading">#</a></h2>
 <p>This example models a block under simple uniaxial tension. The block is made of a
-user-defined hyper material that is identical to Arruda-Boyce Hyperelasticity. Large
-deformation effects are included. The final stress is printed out to compare against
+user-defined hyper material that is identical to Arruda-Boyce hyperelasticity. Large
+deformation effects are included. The final stress is printed for comparison against
 the reference.</p>
 <section id="id2">
-<h3>3.1. Input Data<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>Input data<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">BATCH</span><span class="p">,</span><span class="n">LIST</span>
 <span class="o">/</span><span class="n">title</span><span class="p">,</span> <span class="n">upf</span><span class="o">-</span><span class="n">py16s</span><span class="p">,</span> <span class="n">test</span> <span class="n">UserHyper</span><span class="o">.</span><span class="n">py</span> <span class="k">with</span> <span class="n">MAPDL</span>
 <span class="o">/</span><span class="n">com</span>    <span class="n">displacement</span><span class="o">-</span><span class="n">controlled</span> <span class="n">uniaxial</span> <span class="n">tension</span> <span class="n">test</span> <span class="k">for</span> <span class="n">Boyce</span> <span class="n">material</span> <span class="n">model</span>
@@ -837,8 +832,8 @@ the reference.</p>
 </pre></div>
 </div>
 </section>
-<section id="userhyper-py">
-<h3>3.2. <cite>userhyper.py</cite><a class="headerlink" href="#userhyper-py" title="Permalink to this heading">#</a></h3>
+<section id="userhyper-py-file">
+<h3><code class="docutils literal notranslate"><span class="pre">userhyper.py</span></code> file<a class="headerlink" href="#userhyper-py-file" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">grpc</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">mapdl</span> <span class="kn">import</span> <span class="o">*</span>

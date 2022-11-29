@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>APDL Math Overview &#8212; PyMAPDL</title>
+    <title>APDL Math overview &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -55,7 +55,7 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Create a Pool of MAPDL Instances" href="pool.html" />
+    <link rel="next" title="Create a pool of MAPDL instances" href="pool.html" />
     <link rel="prev" title="Translate scripts" href="convert.html" />
 <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
@@ -116,7 +116,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
-  MAPDL Commands
+  MAPDL commands
  </a>
 </li>
 
@@ -195,7 +195,7 @@
     
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User guide</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">APDL Math Overview</a></li> 
+        <li class="nav-item nav-item-this"><a href="">APDL Math overview</a></li> 
       </ul>
     </div>
         </div>
@@ -233,22 +233,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="plotting.html">
-   Interactive Plotting
+   Interactive plotting
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mesh_geometry.html">
-   Mesh and Geometry
+   Mesh and geometry
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="post.html">
-   Post-Processing
+   Postprocessing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="parameters.html">
-   Setting and Retrieving Parameters
+   Setting and retrieving parameters
   </a>
  </li>
  <li class="toctree-l1">
@@ -263,22 +263,22 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   APDL Math Overview
+   APDL Math overview
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="pool.html">
-   Create a Pool of MAPDL Instances
+   Create a pool of MAPDL instances
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="xpl.html">
-   File Explorer Overview
+   File explorer overview
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="upf.html">
-   Using Python to Code UPF Subroutines
+   Using Python to code UPF subroutines
   </a>
  </li>
  <li class="toctree-l1">
@@ -312,12 +312,12 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mapdl-matrix-example">
-   MAPDL Matrix Example
+   MAPDL matrix example
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#apdlmath-reference">
-   APDLMath Reference
+  <a class="reference internal nav-link" href="#apdl-math-reference">
+   APDL Math reference
   </a>
  </li>
 </ul>
@@ -347,9 +347,9 @@
               <article class="bd-article" role="main">
                 
   <section id="apdl-math-overview">
-<span id="mapdl-math-class-ref"></span><h1>APDL Math Overview<a class="headerlink" href="#apdl-math-overview" title="Permalink to this heading">#</a></h1>
+<span id="mapdl-math-class-ref"></span><h1>APDL Math overview<a class="headerlink" href="#apdl-math-overview" title="Permalink to this heading">#</a></h1>
 <p>APDL Math provides the ability to access and manipulate the large
-sparse matrices and solve a variety of eigenproblems.  PyMAPDL classes
+sparse matrices and solve a variety of eigenproblems. PyMAPDL classes
 and bindings present APDL Math in a similar manner to the popular
 <a class="reference external" href="https://numpy.org/doc/stable/">numpy</a> and <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/">scipy</a> libraries.
 The APDL Math command set is based on tools for manipulating large mathematical
@@ -358,14 +358,14 @@ operations, access to the powerful sparse linear solvers of ANSYS
 Mechanical APDL (MAPDL), and the ability to solve eigenproblems.</p>
 <p>Python and MATLAB’s eigensolver is based on the publicly available
 LAPACK libraries and provides reasonable solve time for relatively
-small DOF (degree of freedom) eigenproblems of perhaps 100,000.
-However, ANSYS’s solvers are designed for the scale of 100s of
-millions of DOF and there are a variety of situations where users can
-directly leverage ANSYS’s high performance solvers on a variety of
-eigenproblems.  Fortunately, you can leverage this without relearning
-an entirely new language as this has been written in a similar manner
-as <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">scipy</span></code>.  For example, here is a comparison between
-the <code class="docutils literal notranslate"><span class="pre">scipy</span></code> linear algebra solver and ANSYS’s solver:</p>
+small degrees of freedom (dof) eigenproblems of perhaps 100,000.
+However, Ansys solvers are designed for the scale of 100 s of
+millions of dof, providing a variety of situations where you can
+directly leverage Ansys high-performance solvers on a variety of
+eigenproblems. Fortunately, you can leverage this without relearning
+an entirely new language because APDL Math has been written in a similar manner
+as the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">scipy</span></code> libraries. For example, here is a comparison between
+the NumPy and SciPy linear algebra solvers and the Ansys MAPDL Math solver:</p>
 <table class="table" id="id1">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">numpy</span></code> vs PyMAPDL Math Implementation</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
 <thead>
@@ -392,15 +392,15 @@ the <code class="docutils literal notranslate"><span class="pre">scipy</span></c
 </tbody>
 </table>
 <p>What follows is a basic example and a detailed description of the
-PyMAPDL Math API.  For additional PyMAPDL Math examples, visit
+PyMAPDL Math API. For additional PyMAPDL Math examples, see
 <a class="reference internal" href="../examples/gallery_examples/01-apdlmath-examples/index.html#ref-apdl-math-examples"><span class="std std-ref">PyMAPDL Math Examples</span></a>.</p>
 <section id="mapdl-matrix-example">
-<h2>MAPDL Matrix Example<a class="headerlink" href="#mapdl-matrix-example" title="Permalink to this heading">#</a></h2>
+<h2>MAPDL matrix example<a class="headerlink" href="#mapdl-matrix-example" title="Permalink to this heading">#</a></h2>
 <p>This example demonstrates how to send an MAPDL Math matrix from MAPDL
-to Python and then send it back to be solved.  While this example runs
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> on mass
+to Python and then send it back to be solved. While this example runs the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> method on mass
 and stiffness matrices generated from MAPDL, you could instead use
-mass and stiffness matrices generated from an external FEM tool, or
+mass and stiffness matrices generated from an external FEM tool or
 even modify the mass and stiffness matrices within Python.</p>
 <p>First, solve the first 10 modes of a 1 x 1 x 1 steel meter cube
 in MAPDL.</p>
@@ -431,12 +431,12 @@ in MAPDL.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">w_n</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>We now have solved for the first 10 modes of the cube:</p>
+<p>You now have solved for the first 10 modes of the cube:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">1475.1</span> <span class="mf">1475.1</span> <span class="mf">2018.8</span> <span class="mf">2018.8</span> <span class="mf">2018.8</span> <span class="mf">2024.8</span> <span class="mf">2024.8</span> <span class="mf">2024.8</span> <span class="mf">2242.2</span> <span class="mf">2274.8</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Next, load the mass and stiffness matrices that are stored by default
-at <code class="docutils literal notranslate"><span class="pre">&lt;jobname&gt;.full</span></code>.  First, create an instance of <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.math.MapdlMath.html#ansys.mapdl.core.math.MapdlMath" title="ansys.mapdl.core.math.MapdlMath"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlMath</span></code></a> as <code class="docutils literal notranslate"><span class="pre">mm</span></code>:</p>
+in the <code class="docutils literal notranslate"><span class="pre">&lt;jobname&gt;.full</span></code> file.  First, create an instance of the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.math.MapdlMath.html#ansys.mapdl.core.math.MapdlMath" title="ansys.mapdl.core.math.MapdlMath"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlMath</span></code></a> class as <code class="docutils literal notranslate"><span class="pre">mm</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mm</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">math</span>
 
 <span class="c1"># load by default from file.full</span>
@@ -450,8 +450,8 @@ at <code class="docutils literal notranslate"><span class="pre">&lt;jobname&gt;.
 <span class="nb">print</span><span class="p">(</span><span class="n">k_py</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>These matrices are now solely stored within Python now that we’ve
-run <a class="reference internal" href="../mapdl_commands/database/_autosummary/ansys.mapdl.core.Mapdl.clear.html#ansys.mapdl.core.Mapdl.clear" title="ansys.mapdl.core.Mapdl.clear"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.clear()</span></code></a>.</p>
+<p>After running the <a class="reference internal" href="../mapdl_commands/database/_autosummary/ansys.mapdl.core.Mapdl.clear.html#ansys.mapdl.core.Mapdl.clear" title="ansys.mapdl.core.Mapdl.clear"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.clear()</span></code></a> method,
+these matrices are stored solely within Python.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>      <span class="mf">37019230769.223404</span>
 <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>      <span class="mf">10283119658.117708</span>
 <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>      <span class="mf">10283119658.117706</span>
@@ -462,8 +462,8 @@ run <a class="reference internal" href="../mapdl_commands/database/_autosummary/
 </pre></div>
 </div>
 <p>The final step is to send these matrices back to MAPDL to be solved.
-While we have cleared MAPDL, we could have shutdown MAPDL, or even
-transferred them to a different MAPDL session to be solved.</p>
+While you have cleared MAPDL, you could have shut down MAPDL or even
+transferred the matrices to a different MAPDL session to be solved:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_stiff</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">k_py</span><span class="p">,</span> <span class="n">triu</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">my_mass</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">m_py</span><span class="p">,</span> <span class="n">triu</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -474,17 +474,17 @@ transferred them to a different MAPDL session to be solved.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">eigval</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>As expected, the natural frequencies obtained from
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> is
-identical to the result from <a class="reference internal" href="../mapdl_commands/solution/_autosummary/ansys.mapdl.core.Mapdl.solve.html#ansys.mapdl.core.Mapdl.solve" title="ansys.mapdl.core.Mapdl.solve"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.solve()</span></code></a>
-within MAPDL.</p>
+<p>As expected, the natural frequencies obtained from the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> method is
+identical to the result from the <a class="reference internal" href="../mapdl_commands/solution/_autosummary/ansys.mapdl.core.Mapdl.solve.html#ansys.mapdl.core.Mapdl.solve" title="ansys.mapdl.core.Mapdl.solve"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.solve()</span></code></a>
+method within MAPDL.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">1475.1333421</span>  <span class="mf">1475.1333426</span>  <span class="mf">2018.83737064</span> <span class="mf">2018.83737109</span> <span class="mf">2018.83737237</span>
  <span class="mf">2024.78684466</span> <span class="mf">2024.78684561</span> <span class="mf">2024.7868466</span>  <span class="mf">2242.21532585</span> <span class="mf">2274.82997741</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>If you wish to obtain the eigenvectors as well as the eigenvalues,
-initialize a matrix <code class="docutils literal notranslate"><span class="pre">eigvec</span></code> and send that to
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a>:</p>
+<p>If you want to obtain the eigenvectors as well as the eigenvalues,
+initialize a matrix <code class="docutils literal notranslate"><span class="pre">eigvec</span></code> and send that to the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.math.MapdlMath.eigs.html#ansys.mapdl.core.math.MapdlMath.eigs" title="ansys.mapdl.core.math.MapdlMath.eigs"><code class="xref py py-func docutils literal notranslate"><span class="pre">MapdlMath.eigs()</span></code></a> method:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nmode</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">eigvec</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">my_stiff</span><span class="o">.</span><span class="n">nrow</span><span class="p">,</span> <span class="n">nmode</span><span class="p">)</span>  <span class="c1"># for eigenvectors</span>
 <span class="n">val</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">eigs</span><span class="p">(</span><span class="n">nmode</span><span class="p">,</span> <span class="n">my_stiff</span><span class="p">,</span> <span class="n">my_mass</span><span class="p">,</span> <span class="n">fmin</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -493,9 +493,9 @@ initialize a matrix <code class="docutils literal notranslate"><span class="pre"
 <p>The MAPDL Math matrix <code class="docutils literal notranslate"><span class="pre">eigvec</span></code> now contains the eigenvectors for the
 solution.</p>
 </section>
-<section id="apdlmath-reference">
-<h2>APDLMath Reference<a class="headerlink" href="#apdlmath-reference" title="Permalink to this heading">#</a></h2>
-<p>For additional details, please see the <a class="reference internal" href="../contribution_and_api/math.html#ref-math-api"><span class="std std-ref">MapdlMath</span></a> reference.</p>
+<section id="apdl-math-reference">
+<h2>APDL Math reference<a class="headerlink" href="#apdl-math-reference" title="Permalink to this heading">#</a></h2>
+<p>For more information, see <a class="reference internal" href="../contribution_and_api/math.html#ref-math-api"><span class="std std-ref">MapdlMath module</span></a>.</p>
 </section>
 </section>
 

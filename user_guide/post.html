@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Post-Processing &#8212; PyMAPDL</title>
+    <title>Postprocessing &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -55,8 +55,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Setting and Retrieving Parameters" href="parameters.html" />
-    <link rel="prev" title="Mesh and Geometry" href="mesh_geometry.html" />
+    <link rel="next" title="Setting and retrieving parameters" href="parameters.html" />
+    <link rel="prev" title="Mesh and geometry" href="mesh_geometry.html" />
 <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
 
@@ -116,7 +116,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
-  MAPDL Commands
+  MAPDL commands
  </a>
 </li>
 
@@ -195,7 +195,7 @@
     
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User guide</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Post-Processing</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Postprocessing</a></li> 
       </ul>
     </div>
         </div>
@@ -233,22 +233,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="plotting.html">
-   Interactive Plotting
+   Interactive plotting
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mesh_geometry.html">
-   Mesh and Geometry
+   Mesh and geometry
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Post-Processing
+   Postprocessing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="parameters.html">
-   Setting and Retrieving Parameters
+   Setting and retrieving parameters
   </a>
  </li>
  <li class="toctree-l1">
@@ -263,22 +263,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="math.html">
-   APDL Math Overview
+   APDL Math overview
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="pool.html">
-   Create a Pool of MAPDL Instances
+   Create a pool of MAPDL instances
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="xpl.html">
-   File Explorer Overview
+   File explorer overview
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="upf.html">
-   Using Python to Code UPF Subroutines
+   Using Python to code UPF subroutines
   </a>
  </li>
  <li class="toctree-l1">
@@ -312,7 +312,7 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#enriched-command-output">
-   Enriched Command Output
+   Enriched command output
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -322,12 +322,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#selected-nodes">
-   Selected Nodes
+   Selected nodes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#post-processing-object-methods">
-     Post Processing Object Methods
+    <a class="reference internal nav-link" href="#postprocessing-object-methods">
+     Postprocessing object methods
     </a>
    </li>
   </ul>
@@ -358,41 +358,40 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="post-processing">
-<h1>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this heading">#</a></h1>
-<p>You can post process using an active MAPDL session using the
-<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.post.PostProcessing.html#ansys.mapdl.core.post.PostProcessing" title="ansys.mapdl.core.post.PostProcessing"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl.post_processing</span></code></a>
+  <section id="postprocessing">
+<h1>Postprocessing<a class="headerlink" href="#postprocessing" title="Permalink to this heading">#</a></h1>
+<p>In an active MAPDL session, you can postprocess using the
+<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.post.PostProcessing.html#ansys.mapdl.core.post.PostProcessing" title="ansys.mapdl.core.post.PostProcessing"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl.post_processing</span></code></a> class,
 an attribute of an instance of <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>.
-One advantage of this approach
-is it integrates well with existing MAPDL scripting or automation, but
-can also be carried out on result files generated from other programs,
-including ANSYS Mechanical.</p>
-<p>Perhaps on of the biggest advantages of gRPC based post-processing is
-it can be done remotely without any file exchange.  Multi gigabyte
-result files can remain remote and only the necessary data needs to be
+One advantage of this approach is that it integrates well with existing MAPDL
+scripting or automation. This approach can also be used on result files generated
+from other programs, including ANSYS Mechanical.</p>
+<p>Perhaps one of the biggest advantages of gRPC-based postprocessing is
+that it can be done remotely without any file exchange. Multi gigabyte
+result files can remain remote, with only the necessary data being
 streamed back to the client for review or visualization.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You are encouraged to use the new Data Processing Framework (DPF)
+<p>You are encouraged to use the Data Processing Framework (DPF)
 modules at <a class="reference external" href="https://github.com/pyansys/DPF-Core">DPF-Core</a> and
-<a class="reference external" href="https://github.com/pyansys/DPF-Post">DPF-Post</a> as they provide a
-modern interface to ANSYS result files using a client/server
-interface using the same software used within Ansys Workbench, but
-via a Python client.</p>
+<a class="reference external" href="https://github.com/pyansys/DPF-Post">DPF-Post</a> because they provide a
+modern interface to Ansys result files using a client-server
+interface. They use the same software that is used within Ansys Workbench
+but via a Python client.</p>
 </div>
 <section id="enriched-command-output">
-<h2>Enriched Command Output<a class="headerlink" href="#enriched-command-output" title="Permalink to this heading">#</a></h2>
-<p>All <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> commands output
-a string object which can be parsed to obtain specific data from it.</p>
-<p>In certain <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> commands
+<h2>Enriched command output<a class="headerlink" href="#enriched-command-output" title="Permalink to this heading">#</a></h2>
+<p>All <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class commands output
+a string object that can be parsed to obtain specific data from it.</p>
+<p>In certain <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class commands
 the returned string contains some methods to process the output.
 These commands are listed in <a class="reference internal" href="#table-1">Table-1</a>.</p>
-<p id="table-1"><strong>Table 1. Commands with extra processing methods in the output.</strong></p>
+<p id="table-1"><strong>Table 1. Commands with extra processing methods in the output</strong></p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Category</p></th>
-<th class="head"><p>Extra Methods Available</p></th>
-<th class="head"><p>Mapdl Commands</p></th>
+<th class="head"><p>Extra methods available</p></th>
+<th class="head"><p>MAPDL commands</p></th>
 </tr>
 </thead>
 <tbody>
@@ -403,7 +402,7 @@ These commands are listed in <a class="reference internal" href="#table-1">Table
 <li><p><a class="reference internal" href="../contribution_and_api/commands.html#ansys.mapdl.core.commands.CommandListingOutput" title="ansys.mapdl.core.commands.CommandListingOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">cmd.to_dataframe()</span></code></a></p></li>
 </ul>
 </td>
-<td><p><strong>Results Listing</strong></p>
+<td><p><strong>Results listing</strong></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../mapdl_commands/post1/_autosummary/ansys.mapdl.core.Mapdl.prcint.html#ansys.mapdl.core.Mapdl.prcint" title="ansys.mapdl.core.Mapdl.prcint"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.prcint()</span></code></a></p></li>
 <li><p><a class="reference internal" href="../mapdl_commands/post1/_autosummary/ansys.mapdl.core.Mapdl.prenergy.html#ansys.mapdl.core.Mapdl.prenergy" title="ansys.mapdl.core.Mapdl.prenergy"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.prenergy()</span></code></a></p></li>
@@ -448,7 +447,7 @@ These commands are listed in <a class="reference internal" href="#table-1">Table
 </tr>
 </tbody>
 </table>
-<p>Here’s a simple example demonstrating the the usage:</p>
+<p>Here’s a simple example that demonstrates usage:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">examples</span>
 
@@ -484,8 +483,8 @@ These commands are listed in <a class="reference internal" href="#table-1">Table
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
-<p>Classically, one would request nodal results from MAPDL using the
-<code class="docutils literal notranslate"><span class="pre">PRNSOL</span></code> command.  For example:</p>
+<p>You would typically request nodal results from MAPDL using the
+<code class="docutils literal notranslate"><span class="pre">PRNSOL</span></code> command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST1</span><span class="p">:</span>
 <span class="n">PRNSOL</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">X</span>
 
@@ -511,16 +510,15 @@ These commands are listed in <a class="reference internal" href="#table-1">Table
 <span class="n">MORE</span> <span class="p">(</span><span class="n">YES</span><span class="p">,</span><span class="n">NO</span> <span class="n">OR</span> <span class="n">CONTINUOUS</span><span class="p">)</span><span class="o">=</span>
 </pre></div>
 </div>
-<p>However, using an instance of <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>,
-you can instead request the
-nodal displacement with:</p>
+<p>However, using an instance of the <a class="reference internal" href="../contribution_and_api/mapdl.html#ansys.mapdl.core.mapdl._MapdlCore" title="ansys.mapdl.core.mapdl._MapdlCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>
+class, you can instead request the nodal displacement:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">disp_x</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">nodal_displacement</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
 <span class="go">array([1.07512979e-04, 8.59137773e-05, 5.70690047e-05, ...,</span>
 <span class="go">       5.70333124e-05, 8.58600402e-05, 1.07445726e-04])</span>
 </pre></div>
 </div>
-<p>You could also plot the nodal displacement with:</p>
+<p>You could also plot the nodal displacement with this code:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">plot_nodal_displacement</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -532,22 +530,22 @@ nodal displacement with:</p>
 </figure>
 </section>
 <section id="selected-nodes">
-<h2>Selected Nodes<a class="headerlink" href="#selected-nodes" title="Permalink to this heading">#</a></h2>
-<p>The MAPDL database processes some results independently of if nodes or
-elements are selected.  If you have subselected a certain component
-and wish to also limit the result of a certain output
-(i.e. <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.post.PostProcessing.nodal_displacement.html#ansys.mapdl.core.post.PostProcessing.nodal_displacement" title="ansys.mapdl.core.post.PostProcessing.nodal_displacement"><code class="xref py py-func docutils literal notranslate"><span class="pre">nodal_displacement()</span></code></a>),
+<h2>Selected nodes<a class="headerlink" href="#selected-nodes" title="Permalink to this heading">#</a></h2>
+<p>The MAPDL database processes some results independently if nodes or
+elements are selected. If you have subselected a certain component
+and want to also limit the result of a certain output
+(<a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.post.PostProcessing.nodal_displacement.html#ansys.mapdl.core.post.PostProcessing.nodal_displacement" title="ansys.mapdl.core.post.PostProcessing.nodal_displacement"><code class="xref py py-func docutils literal notranslate"><span class="pre">nodal_displacement()</span></code></a>),
 use the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.post.PostProcessing.selected_nodes.html#ansys.mapdl.core.post.PostProcessing.selected_nodes" title="ansys.mapdl.core.post.PostProcessing.selected_nodes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">selected_nodes</span></code></a> attribute to get
-a mask of the currently selected nodes.</p>
+a mask of the currently selected nodes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;NODE&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">esel</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;ELEM&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mask</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">selected_nodes</span>
 </pre></div>
 </div>
-<section id="post-processing-object-methods">
-<h3>Post Processing Object Methods<a class="headerlink" href="#post-processing-object-methods" title="Permalink to this heading">#</a></h3>
-<p>For a full list of all available post-processing methods, see
-<a class="reference internal" href="../contribution_and_api/post.html#post-processing-api"><span class="std std-ref">Post-Processing</span></a>.</p>
+<section id="postprocessing-object-methods">
+<h3>Postprocessing object methods<a class="headerlink" href="#postprocessing-object-methods" title="Permalink to this heading">#</a></h3>
+<p>For a full list of all available postprocessing methods, see
+<a class="reference internal" href="../contribution_and_api/post.html#post-processing-api"><span class="std std-ref">PostProcessing class</span></a>.</p>
 </section>
 </section>
 </section>

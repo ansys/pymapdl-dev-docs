@@ -116,7 +116,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
-  MAPDL Commands
+  MAPDL commands
  </a>
 </li>
 
@@ -331,22 +331,22 @@
                 
   <section id="use-mapdl-through-docker">
 <span id="pymapdl-docker"></span><h1>Use MAPDL through Docker<a class="headerlink" href="#use-mapdl-through-docker" title="Permalink to this heading">#</a></h1>
-<p>You can run MAPDL within a container on any OS using <cite>docker</cite> and
+<p>You can run MAPDL within a container on any OS using Docker and
 connect to it via PyMAPDL.</p>
 <p>There are several situations in which it is advantageous to run MAPDL
-in a containerized environment (for example, Docker or Singularity):</p>
+in a containerized environment such as Docker or Singularity:</p>
 <ul class="simple">
 <li><p>Run in a consistent environment regardless of the host OS.</p></li>
 <li><p>Portability and ease of install.</p></li>
 <li><p>Large-scale cluster deployment using Kubernetes</p></li>
-<li><p>Genuine application isolation through containerization.</p></li>
+<li><p>Genuine app isolation through containerization.</p></li>
 </ul>
 <section id="install-the-mapdl-image">
 <h2>Install the MAPDL image<a class="headerlink" href="#install-the-mapdl-image" title="Permalink to this heading">#</a></h2>
 <p>There is a Docker image hosted on the
 <a class="reference external" href="https://github.com/pyansys/pymapdl">PyMAPDL GitHub</a> repository that you
 can download using your GitHub credentials.</p>
-<p>Assuming that you have docker installed, you can get started by
+<p>Assuming that you have Docker installed, you can get started by
 authorizing Docker to access this repository using a personal access
 token. Create a GitHub personal access token with <code class="docutils literal notranslate"><span class="pre">packages</span> <span class="pre">read</span></code> permissions
 according to <a class="reference external" href="https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">Creating a personal access token</a></p>
@@ -361,7 +361,7 @@ with:</p>
 cat GH_TOKEN.txt | docker login ghcr.io -u $GH_USERNAME --password-stdin
 </pre></div>
 </div>
-<p>You can now launch MAPDL directly from docker with a short script or
+<p>You can now launch MAPDL directly from Docker with a short script or
 directly from the command line. Because this image contains no license
 server, you must enter your license server IP address in the
 <code class="docutils literal notranslate"><span class="pre">LICENSE_SERVER</span></code> environment variable. With that, you can launch
@@ -377,7 +377,7 @@ docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -smp
 50052 on the host. This makes it possible to launch several MAPDL
 instances with different port mappings to allow for multiple instances
 of MAPDL.</p>
-<p>Once you’ve launched MAPDL you should see:</p>
+<p>Once you have launched MAPDL you should see:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Start</span> <span class="n">GRPC</span> <span class="n">Server</span>
 
 <span class="c1">##############################</span>
@@ -420,9 +420,9 @@ docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -smp
 </pre></div>
 </div>
 <p>You can provide additional command line parameters to MAPDL by simply
-appending to the docker command. For example, you can increase the
+appending to the Docker command. For example, you can increase the
 number of processors (up to the number available on the host machine)
-with the <code class="docutils literal notranslate"><span class="pre">`-np`</span></code> switch. For example:</p>
+with the <code class="docutils literal notranslate"><span class="pre">-np</span></code> switch:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>IMAGE=ghcr.io/pyansys/pymapdl/mapdl:$VERSION
 docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -np 4
 </pre></div>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Mesh and Geometry &#8212; PyMAPDL</title>
+    <title>Mesh and geometry &#8212; PyMAPDL</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -55,8 +55,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Post-Processing" href="post.html" />
-    <link rel="prev" title="Interactive Plotting" href="plotting.html" />
+    <link rel="next" title="Postprocessing" href="post.html" />
+    <link rel="prev" title="Interactive plotting" href="plotting.html" />
 <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
 
@@ -116,7 +116,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
-  MAPDL Commands
+  MAPDL commands
  </a>
 </li>
 
@@ -195,7 +195,7 @@
     
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User guide</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">Mesh and Geometry</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Mesh and geometry</a></li> 
       </ul>
     </div>
         </div>
@@ -233,22 +233,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="plotting.html">
-   Interactive Plotting
+   Interactive plotting
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Mesh and Geometry
+   Mesh and geometry
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="post.html">
-   Post-Processing
+   Postprocessing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="parameters.html">
-   Setting and Retrieving Parameters
+   Setting and retrieving parameters
   </a>
  </li>
  <li class="toctree-l1">
@@ -263,22 +263,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="math.html">
-   APDL Math Overview
+   APDL Math overview
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="pool.html">
-   Create a Pool of MAPDL Instances
+   Create a pool of MAPDL instances
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="xpl.html">
-   File Explorer Overview
+   File explorer overview
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="upf.html">
-   Using Python to Code UPF Subroutines
+   Using Python to code UPF subroutines
   </a>
  </li>
  <li class="toctree-l1">
@@ -312,12 +312,12 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#geometry-commands">
-   Geometry Commands
+   Geometry commands
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#api-reference">
-   API Reference
+   API reference
   </a>
  </li>
 </ul>
@@ -347,16 +347,16 @@
               <article class="bd-article" role="main">
                 
   <section id="mesh-and-geometry">
-<h1>Mesh and Geometry<a class="headerlink" href="#mesh-and-geometry" title="Permalink to this heading">#</a></h1>
+<h1>Mesh and geometry<a class="headerlink" href="#mesh-and-geometry" title="Permalink to this heading">#</a></h1>
 <p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code> class allows you to access
 the mesh and geometry without writing to an intermediate file or
-interpreting the text output from various MAPDL commands.  For
-example, to access the nodes and elements of a model, normally one
-would list the nodes within MAPDL <code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.nlist()</span>
-<span class="pre">&lt;ansys.mapdl.core.Mapdl.nlist()</span></code>, but this generates a string and array
-access either requires cumbersome MAPDL GET commands, or requires the
-nodes be written to a archive file and then read in within other
-software.  For example:</p>
+interpreting the text output from various MAPDL commands. For
+example, to access the nodes and elements of a model, normally you
+would list the nodes within MAPDL using the <code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.nlist()</span>
+<span class="pre">&lt;ansys.mapdl.core.Mapdl.nlist()</span></code> method. However, this generates a string.
+Array access requires either cumbersome MAPDL GET commands or that the
+nodes be written to an archive file and then read in with other
+software:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">NLIST</span>
 
 <span class="n">LIST</span> <span class="n">ALL</span> <span class="n">SELECTED</span> <span class="n">NODES</span><span class="o">.</span>   <span class="n">DSYS</span><span class="o">=</span>      <span class="mi">0</span>
@@ -367,9 +367,9 @@ software.  For example:</p>
        <span class="mi">3</span>   <span class="mf">0.2500</span>        <span class="mf">0.0000</span>        <span class="mf">0.0000</span>          <span class="mf">0.00</span>     <span class="mf">0.00</span>     <span class="mf">0.00</span>
 </pre></div>
 </div>
-<p>However, with <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl.mesh</span></code>
-possible to interface with a current instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code> and access the current nodes coordinates
-with:</p>
+<p>However, with the <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl.mesh</span></code> class,
+you can interface with a current instance of the <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code> class and access the current nodes coordinates
+with this code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">nodes</span>
 <span class="go">[[0.   0.   0.  ]</span>
 <span class="go"> [1.   0.   0.  ]</span>
@@ -382,12 +382,13 @@ with:</p>
 </div>
 <p>Both the <code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.geometry</span> <span class="pre">&lt;ansys.mapdl.core.Mapdl.geometry</span></code> and
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.mesh</span> <span class="pre">&lt;ansys.mapdl.core.Mapdl.mesh</span></code> attributes support
-additional, lower level access to MAPDL data.  Access them with:</p>
+additional, lower-level access to MAPDL data. You can use this code
+to access them:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">geometry</span>
 </pre></div>
 </div>
-<p>View the current mesh status with:</p>
+<p>To view the current mesh status, you can use this code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span>
 <span class="go"> ANSYS Mesh</span>
 <span class="go">   Number of Nodes:              7217</span>
@@ -398,13 +399,13 @@ additional, lower level access to MAPDL data.  Access them with:</p>
 </pre></div>
 </div>
 <section id="geometry-commands">
-<h2>Geometry Commands<a class="headerlink" href="#geometry-commands" title="Permalink to this heading">#</a></h2>
-<p>See the <a class="reference internal" href="../mapdl_commands/index.html#ref-prep-commands"><span class="std std-ref">Preprocessing</span></a> commands for additional MAPDL
-commands for creating geometries.</p>
+<h2>Geometry commands<a class="headerlink" href="#geometry-commands" title="Permalink to this heading">#</a></h2>
+<p>For additional MAPDLcommands for creating geometries, see the
+<a class="reference internal" href="../mapdl_commands/index.html#ref-prep-commands"><span class="std std-ref">Preprocessing</span></a> commands.</p>
 </section>
 <section id="api-reference">
-<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this heading">#</a></h2>
-<p>For a full description of the <code class="docutils literal notranslate"><span class="pre">Mesh</span></code> and <code class="docutils literal notranslate"><span class="pre">Geometry</span></code> classes, please
+<h2>API reference<a class="headerlink" href="#api-reference" title="Permalink to this heading">#</a></h2>
+<p>For a full description of the <code class="docutils literal notranslate"><span class="pre">Mesh</span></code> and <code class="docutils literal notranslate"><span class="pre">Geometry</span></code> classes,
 see <a class="reference internal" href="../contribution_and_api/mesh.html#ref-mesh-api"><span class="std std-ref">Mesh</span></a> and <a class="reference internal" href="../contribution_and_api/geometry.html#ref-geometry-api"><span class="std std-ref">Geometry</span></a>.</p>
 </section>
 </section>

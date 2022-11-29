@@ -116,7 +116,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../mapdl_commands/index.html">
-  MAPDL Commands
+  MAPDL commands
  </a>
 </li>
 
@@ -218,7 +218,7 @@
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="commands.html">
-   Commands Output
+   Commands output
   </a>
  </li>
  <li class="toctree-l1">
@@ -233,17 +233,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="helper.html">
-   Helper Functions
+   Helper functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="inline.html">
-   Inline Functions
+   Inline functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="krylov.html">
-   KrylovSolver
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     KrylovSolver
+    </span>
+   </code>
+   module
   </a>
  </li>
  <li class="toctree-l1">
@@ -253,12 +258,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mapdl.html">
-   Mapdl
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Mapdl
+    </span>
+   </code>
+   module
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="math.html">
-   MapdlMath
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     MapdlMath
+    </span>
+   </code>
+   module
   </a>
  </li>
  <li class="toctree-l1">
@@ -278,12 +293,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="pool.html">
-   Local MAPDL Pool
+   Local MAPDL pool
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="post.html">
-   Post-Processing
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     PostProcessing
+    </span>
+   </code>
+   class
   </a>
  </li>
  <li class="toctree-l1">
@@ -293,7 +313,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="xpl.html">
-   Database Explorer
+   Database explorer
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -391,36 +411,39 @@ following instruction.</p>
 <p>There are three types of examples: dynamic, static, and semi-static.</p>
 <section id="dynamic-examples">
 <h2>Dynamic examples<a class="headerlink" href="#dynamic-examples" title="Permalink to this heading">#</a></h2>
-<p>They are based on Python files and must be run under 3 minutes.</p>
-<p>They are in the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory inside this repository.</p>
-<p>Example: <a class="reference external" href="https://github.com/pyansys/pymapdl/blob/main/examples/00-mapdl-examples/2d_plate_with_a_hole.py">2d_plate_with_a_hole.py</a></p>
-<p>It is published on the following link:
-<a class="reference external" href="https://mapdl.docs.pyansys.com/examples/gallery_examples/00-mapdl-examples/2d_plate_with_a_hole.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-2d-plate-with-a-hole-py">MAPDL 2D Plane Stress Concentration Analysis</a></p>
-<p>They will be executed and the mention <strong>Total running time of the script</strong> will appear at the end of
+<p>The dynamic examples are based on Python files and must be able to run in under three minutes.</p>
+<p>They are in the <a class="reference external" href="https://github.com/pyansys/pymapdl/tree/main/examples">examples</a> directory in this repository.</p>
+<p>Example: <a class="reference external" href="https://github.com/pyansys/pymapdl/blob/main/examples/00-mapdl-examples/2d_plate_with_a_hole.py">2d_plate_with_a_hole.py</a>
+.. vale on</p>
+<p>Here is a link to this dynamic example:
+<a class="reference external" href="https://mapdl.docs.pyansys.com/examples/gallery_examples/00-mapdl-examples/2d_plate_with_a_hole.html">MAPDL 2D Plane Stress Concentration Analysis</a></p>
+<p>When an example is executed, <strong>Total running time of the script</strong> appears at the end of
 the document.</p>
 </section>
 <section id="static-examples">
 <h2>Static examples<a class="headerlink" href="#static-examples" title="Permalink to this heading">#</a></h2>
-<p>They are based on RST files and will not be executed.</p>
-<p>They are in the <code class="docutils literal notranslate"><span class="pre">doc\source</span></code> directory.</p>
-<p>Example: <a class="reference external" href="https://raw.githubusercontent.com/pyansys/pymapdl/main/doc/source/examples/extended_examples/Krylov/krylov_example.rst">krylov_example.rst</a></p>
-<p>It is published on the following link: <a class="reference external" href="https://mapdl.docs.pyansys.com/examples/extended_examples/Krylov/krylov_example.html">Harmonic analysis using the frequency-sweep Krylov method</a></p>
+<p>Static examples are based on RST files and are not executed.</p>
+<p>They are in the <a class="reference external" href="https://github.com/pyansys/pymapdl/tree/main/doc/source">docsource</a> directory.
+.. vale off</p>
+<p>Example: <a class="reference external" href="https://raw.githubusercontent.com/pyansys/pymapdl/main/doc/source/examples/extended_examples/Krylov/krylov_example.rst">krylov_example.rst</a>
+.. vale on</p>
+<p>Here is a link to this static example: <a class="reference external" href="https://dev.mapdl.docs.pyansys.com/examples/extended_examples/Krylov/krylov_example.html">Harmonic analysis using the frequency-sweep Krylov method</a></p>
 </section>
 <section id="semi-dynamic-examples">
 <h2>Semi-dynamic examples<a class="headerlink" href="#semi-dynamic-examples" title="Permalink to this heading">#</a></h2>
-<p>They are RST files which execute Python code using this RST directive:</p>
+<p>Semi-dynamic examples are RST files that execute Python code using this RST directive:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.. jupyter-execute::
 :hide-code:
 </pre></div>
 </div>
-<p>Example: <a class="reference external" href="https://raw.githubusercontent.com/pyansys/pymapdl/main/doc/source/examples/technology_showcase_examples/techdemo-28/ex_28-tecfricstir.rst">tecfricstir.rst</a></p>
-<p>It is visible at the following link: <a class="reference external" href="https://mapdl.docs.pyansys.com/examples/technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">Friction Stir Welding (FSW) Simulation</a></p>
+<p>Example: <a class="reference external" href="https://raw.githubusercontent.com/pyansys/pymapdl-techdemos/main/doc/source/technology_showcase_examples/techdemo-28/ex_28-tecfricstir.rst">tecfricstir.rst</a>
+.. vale on</p>
+<p>Here is a link to this semi-dynamic example: <a class="reference external" href="https://techdemos.mapdl.docs.pyansys.com/technology_showcase_examples/techdemo-28/ex_28-tecfricstir.html">Friction Stir Welding (FSW) Simulation</a></p>
 </section>
 <section id="recommendations">
 <h2>Recommendations<a class="headerlink" href="#recommendations" title="Permalink to this heading">#</a></h2>
-<p>As the dynamic examples are examples that have to be run at each Documentation build, make sure to
-make them very short. To get around the problem of execution time, feel free to use the static or the
-semi-static examples.</p>
+<p>As dynamic examples must run each time documentation is built, make sure that they are very short.
+To get around the problem of execution time, feel free to use static or semi-static examples.</p>
 </section>
 </section>
 
