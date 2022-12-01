@@ -266,9 +266,27 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-the-mapdl-image">
-   Install the MAPDL image
+  <a class="reference internal nav-link" href="#configure-the-docker-registry">
+   Configure the Docker registry
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-the-mapdl-image">
+   Run the MAPDL image
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-docker-compose-to-launch-mapdl">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       docker-compose
+      </span>
+     </code>
+     to launch MAPDL
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#connect-to-the-mapdl-container-from-python">
@@ -341,8 +359,8 @@ in a containerized environment such as Docker or Singularity:</p>
 <li><p>Large-scale cluster deployment using Kubernetes</p></li>
 <li><p>Genuine app isolation through containerization.</p></li>
 </ul>
-<section id="install-the-mapdl-image">
-<h2>Install the MAPDL image<a class="headerlink" href="#install-the-mapdl-image" title="Permalink to this heading">#</a></h2>
+<section id="configure-the-docker-registry">
+<h2>Configure the Docker registry<a class="headerlink" href="#configure-the-docker-registry" title="Permalink to this heading">#</a></h2>
 <p>There is a Docker image hosted on the
 <a class="reference external" href="https://github.com/pyansys/pymapdl">PyMAPDL GitHub</a> repository that you
 can download using your GitHub credentials.</p>
@@ -361,6 +379,9 @@ with:</p>
 cat GH_TOKEN.txt | docker login ghcr.io -u $GH_USERNAME --password-stdin
 </pre></div>
 </div>
+</section>
+<section id="run-the-mapdl-image">
+<h2>Run the MAPDL image<a class="headerlink" href="#run-the-mapdl-image" title="Permalink to this heading">#</a></h2>
 <p>You can now launch MAPDL directly from Docker with a short script or
 directly from the command line. Because this image contains no license
 server, you must enter your license server IP address in the
@@ -373,10 +394,16 @@ IMAGE=ghcr.io/pyansys/pymapdl/mapdl:$VERSION
 docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -smp
 </pre></div>
 </div>
+<p>First time you run it, Docker logins into the <em>ghcr.io</em> registry and
+pulls the image which can take some time.</p>
 <p>Note that port <cite>50052</cite> (local to the container) is being mapped to
 50052 on the host. This makes it possible to launch several MAPDL
 instances with different port mappings to allow for multiple instances
 of MAPDL.</p>
+<p>You can provide additional command line parameters to MAPDL by simply
+appending to the Docker command.
+For example, you can increase the number of processors (up to the
+number available on the host machine) with the <cite>-np</cite> switch.</p>
 <p>Once you have launched MAPDL you should see:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Start</span> <span class="n">GRPC</span> <span class="n">Server</span>
 
@@ -388,6 +415,52 @@ of MAPDL.</p>
 <span class="n">Server</span> <span class="n">listening</span> <span class="n">on</span> <span class="p">:</span> <span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">50052</span>
 </pre></div>
 </div>
+<section id="using-docker-compose-to-launch-mapdl">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> to launch MAPDL<a class="headerlink" href="#using-docker-compose-to-launch-mapdl" title="Permalink to this heading">#</a></h3>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> command to launch MAPDL configured in
+a <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> file.
+This is useful if you want to load an already configured environment, or
+if you want to launch multiple instances of MAPDL or services.</p>
+<p>For you convenience, the directory <a class="reference external" href="https://github.com/pyansys/pymapdl/blob/main/docker">docker</a>
+contains pre-configured <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> files that you can
+use:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/pyansys/pymapdl/blob/main/docker/docker-compose.yml">docker-compose.yml</a>: the <strong>base</strong>
+configuration file which launch a remote instance of MAPDL which you
+can connect to. Similar approach to the one described above.</p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/pymapdl/blob/main/docker/docker-compose.yml">docker-compose.local.yml</a>:
+This file is an extension of the base configuration file which launch
+an Ubuntu Docker image with MAPDL installed in it.
+This is useful if you want to run MAPDL locally inside this container
+for example for debugging purposes.
+You can connect your VSCode instance to this container by selecting
+<code class="docutils literal notranslate"><span class="pre">Attach</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">running</span> <span class="pre">container</span></code> option from the command palette.
+For more details visit <a class="reference external" href="https://code.visualstudio.com/docs/devcontainers/attach-container">Attach to a running container</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/pymapdl/blob/main/docker/docker-compose.license_server.yml">docker-compose.license_server.yml</a>:
+This file is an extension of the base configuration file which launch
+a license server.
+This is useful if you want to run MAPDL remotely and you don’t have
+access to a license server.
+You need a valid license file to run the license server.
+You can use it together with <code class="docutils literal notranslate"><span class="pre">docker-compose.local.yml</span></code> hence you
+can connect to it the same way.
+The call to this docker file should be always the last one in the
+<code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> command. For instance:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.license_server.yml up
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>About the license server image.
+The license server is not intended to be used in production.
+It is only intended for testing/debugging purposes.
+Its access is limited to collaborators of the PyAnsys project.
+If you would like to have access to it, please contact PyAnsys support at
+<a class="reference external" href="mailto:pyansys&#46;support&#37;&#52;&#48;ansys&#46;com">pyansys<span>&#46;</span>support<span>&#64;</span>ansys<span>&#46;</span>com</a>.</p>
+</div>
+</section>
 </section>
 <section id="connect-to-the-mapdl-container-from-python">
 <h2>Connect to the MAPDL container from Python<a class="headerlink" href="#connect-to-the-mapdl-container-from-python" title="Permalink to this heading">#</a></h2>
@@ -427,9 +500,9 @@ with the <code class="docutils literal notranslate"><span class="pre">-np</span>
 docker run -e ANSYSLMD_LICENSE_FILE=$LICENSE_SERVER -p 50052:50052 $IMAGE -np 4
 </pre></div>
 </div>
-<p>For additional command-line arguments, see the Ansys
-documentation at <a class="reference external" href="https://ansyshelp.ansys.com">ANSYS help</a>.  Also,
-be sure to have the appropriate license for additional HPC features.</p>
+<p>For additional command line arguments please see the <em>Notes</em> section
+within <a class="reference external" href="https://mapdl.docs.pyansys.com/contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html">launch_mapdl</a>.
+Also, be sure to have the appropriate license for additional HPC features.</p>
 </section>
 <section id="use-restart-policy-with-mapdl-products">
 <h3>Use <code class="docutils literal notranslate"><span class="pre">--restart</span></code> policy with MAPDL products<a class="headerlink" href="#use-restart-policy-with-mapdl-products" title="Permalink to this heading">#</a></h3>
