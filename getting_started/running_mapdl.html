@@ -285,9 +285,16 @@
      Launch a gRPC MAPDL session
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connect-to-a-grpc-mapdl-session">
+   Connect to a gRPC MAPDL session
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#connect-to-a-grpc-mapdl-session">
-     Connect to a gRPC MAPDL session
+    <a class="reference internal nav-link" href="#connect-to-a-dockerized-mapdl-session">
+     Connect to a dockerized MAPDL session
     </a>
    </li>
   </ul>
@@ -325,7 +332,7 @@ remote instance of MAPDL to communicate with it. This section covers
 launching and interfacing with MAPDL from a local instance by
 launching it from Python.</p>
 <section id="install-mapdl">
-<h2>Install MAPDL<a class="headerlink" href="#install-mapdl" title="Permalink to this heading">#</a></h2>
+<span id="id1"></span><h2>Install MAPDL<a class="headerlink" href="#install-mapdl" title="Permalink to this heading">#</a></h2>
 <p>MAPDL is installed by default from the Ansys standard installer. When
 installing Ansys, verify that the <strong>Mechanical Products</strong> checkbox is
 selected under the <strong>Structural Mechanics</strong> option. While the standard
@@ -333,6 +340,14 @@ installer options can change, see the following figure for reference.</p>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/unified_install_2019R1.jpg"><img alt="../_images/unified_install_2019R1.jpg" src="../_images/unified_install_2019R1.jpg" style="width: 400pt;" /></a>
 </figure>
+<p>If you want to avoid having to install MAPDL locally, you can use Docker.
+This is especially convenient if you are using a non-supported platform such
+as MacOS. For more information, see <a class="reference internal" href="docker.html#pymapdl-docker"><span class="std std-ref">Use MAPDL through Docker</span></a>.</p>
+<p>You can also download and try <a class="reference external" href="https://www.ansys.com/academic/students">Ansys Student Versions</a>.
+A Student Version is valid during a calendar year with limited capabilities. For
+example, there is a limit on the number of nodes and elements.</p>
+<p>If you experience problems installing MAPDL on Linux, see
+<a class="reference internal" href="../troubleshoot/troubleshoot.html#missing-dependencies-on-linux"><span class="std std-ref">Missing dependencies on Linux</span></a>.</p>
 </section>
 <section id="launch-mapdl">
 <h2>Launch MAPDL<a class="headerlink" href="#launch-mapdl" title="Permalink to this heading">#</a></h2>
@@ -380,25 +395,10 @@ port 50005 with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ansys_inc</span><span class="o">/</span><span class="n">v211</span><span class="o">/</span><span class="n">ansys</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ansys211</span> <span class="o">-</span><span class="n">port</span> <span class="mi">50005</span> <span class="o">-</span><span class="n">grpc</span>
 </pre></div>
 </div>
-<p>You can also configure the IP address.
-However, because of an Ansys limitation to receive
-strings from a command line, the IP address must be read from an external file
-named <code class="docutils literal notranslate"><span class="pre">mylocal.ip</span></code>. This file is read automatically from the directory where
-MAPDL is running.</p>
-<p>You can then set up the IP address.</p>
-<p>In Windows PowerShell or Command Prompt, use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;127.0.0.1&quot;</span> <span class="o">&gt;</span> <span class="n">mylocal</span><span class="o">.</span><span class="n">ip</span>
-<span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">Program</span> <span class="n">Files</span><span class="o">/</span><span class="n">ANSYS</span> <span class="n">Inc</span><span class="o">/</span><span class="n">v211</span><span class="o">/</span><span class="n">ansys</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">winx64</span><span class="o">/</span><span class="n">ANSYS211</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">grpc</span>
-</pre></div>
-</div>
-<p>In Linux, use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;127.0.0.1&quot;</span> <span class="o">&gt;</span> <span class="n">mylocal</span><span class="o">.</span><span class="n">ip</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ansys_inc</span><span class="o">/</span><span class="n">v211</span><span class="o">/</span><span class="n">ansys</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ansys211</span> <span class="o">-</span><span class="n">grpc</span>
-</pre></div>
-</div>
+</section>
 </section>
 <section id="connect-to-a-grpc-mapdl-session">
-<h3>Connect to a gRPC MAPDL session<a class="headerlink" href="#connect-to-a-grpc-mapdl-session" title="Permalink to this heading">#</a></h3>
+<h2>Connect to a gRPC MAPDL session<a class="headerlink" href="#connect-to-a-grpc-mapdl-session" title="Permalink to this heading">#</a></h2>
 <p>A MAPDL gRPC server can be connected to from either the same host or an
 external host. For example, you can connect to a MAPDL service
 running <strong>locally</strong> with:</p>
@@ -407,7 +407,7 @@ running <strong>locally</strong> with:</p>
 </pre></div>
 </div>
 <p>This assumes that your MAPDL service is running locally on the default IP address
-(127.0.0.1) and on the default port (50052).</p>
+(<code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code>) and on the default port (<code class="docutils literal notranslate"><span class="pre">50052</span></code>).</p>
 <p>If you want to connect to a <strong>remote</strong> instance of MAPDL and you know the IP
 address of that instance, you can connect to it.
 For example, if on your local network at IP address <code class="docutils literal notranslate"><span class="pre">192.168.0.1</span></code> there is a
@@ -420,10 +420,23 @@ computer running MAPDL on the port 50052, you can connect to it with:</p>
 </pre></div>
 </div>
 <p>Note that you must have started MAPDL in gRPC mode on the computer with
-the mentioned IP address/hostname for this to work.
-If you have MAPDL installed on your local host, you
-can use the <code class="docutils literal notranslate"><span class="pre">launch_mapdl</span></code> method to both start and connect to MAPDL.</p>
-<p>If you have any problem launching PyMAPDL, see <a class="reference internal" href="../troubleshoot/troubleshoot.html#debugging-launch-mapdl"><span class="std std-ref">Troubleshooting PyMAPDL</span></a></p>
+the mentioned IP address/hostname for this to work.</p>
+<p>If you have MAPDL installed on your local host, you
+can use the <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> method to both start and connect to MAPDL.</p>
+<p>If you have any problem launching PyMAPDL, see <a class="reference internal" href="../troubleshoot/troubleshoot.html#debugging-launch-mapdl"><span class="std std-ref">Troubleshooting PyMAPDL</span></a>.</p>
+<section id="connect-to-a-dockerized-mapdl-session">
+<h3>Connect to a dockerized MAPDL session<a class="headerlink" href="#connect-to-a-dockerized-mapdl-session" title="Permalink to this heading">#</a></h3>
+<p>If you work with Docker, for example you use the
+<a class="reference external" href="https://github.com/pyansys/pymapdl/blob/main/docker/docker-compose.yml">docker-compose.yml</a> file provided in the
+directory <a class="reference external" href="https://github.com/pyansys/pymapdl/blob/main/docker">docker</a>, then you must connect to the
+MAPDL instance running on the Docker container as if it was a remote MAPDL
+instance. However, because the ports are exposed to the host via the <code class="docutils literal notranslate"><span class="pre">ports</span></code> field
+in the <a class="reference external" href="https://github.com/pyansys/pymapdl/blob/main/docker/docker-compose.yml">docker-compose.yml</a> file, you can connect
+to this MAPDL instance without specifying the IP address of the Docker container.</p>
+<p>If you are using the local configuration specified in the
+<a class="reference external" href="https://github.com/pyansys/pymapdl/blob/main/docker/docker-compose.local.yml">docker-compose.local.yml</a> file,
+after attaching your VSCode instance, you can work with MAPDL as if it were local.
+This means that you can launch MAPDL instances using <a class="reference internal" href="../contribution_and_api/_autosummary/ansys.mapdl.core.launch_mapdl.html#ansys.mapdl.core.launch_mapdl" title="ansys.mapdl.core.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>.</p>
 </section>
 </section>
 </section>

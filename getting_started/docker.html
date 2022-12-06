@@ -271,8 +271,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-the-mapdl-image">
-   Run the MAPDL image
+  <a class="reference internal nav-link" href="#run-an-mapdl-image">
+   Run an MAPDL image
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -357,7 +357,7 @@ in a containerized environment such as Docker or Singularity:</p>
 <li><p>Run in a consistent environment regardless of the host OS.</p></li>
 <li><p>Portability and ease of install.</p></li>
 <li><p>Large-scale cluster deployment using Kubernetes</p></li>
-<li><p>Genuine app isolation through containerization.</p></li>
+<li><p>Genuine app isolation through containerization</p></li>
 </ul>
 <section id="configure-the-docker-registry">
 <h2>Configure the Docker registry<a class="headerlink" href="#configure-the-docker-registry" title="Permalink to this heading">#</a></h2>
@@ -380,8 +380,8 @@ cat GH_TOKEN.txt | docker login ghcr.io -u $GH_USERNAME --password-stdin
 </pre></div>
 </div>
 </section>
-<section id="run-the-mapdl-image">
-<h2>Run the MAPDL image<a class="headerlink" href="#run-the-mapdl-image" title="Permalink to this heading">#</a></h2>
+<section id="run-an-mapdl-image">
+<h2>Run an MAPDL image<a class="headerlink" href="#run-an-mapdl-image" title="Permalink to this heading">#</a></h2>
 <p>You can now launch MAPDL directly from Docker with a short script or
 directly from the command line. Because this image contains no license
 server, you must enter your license server IP address in the
